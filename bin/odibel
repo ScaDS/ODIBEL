@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+mvn -q scala:run -DmainClass="odibel.Main"
