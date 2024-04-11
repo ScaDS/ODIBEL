@@ -1,4 +1,4 @@
-package odibel
+package ai.scads.odibel
 
 import java.util.concurrent.Callable
 
