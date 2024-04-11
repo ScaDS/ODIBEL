@@ -9,8 +9,9 @@
     <version>1.0-SNAPSHOT</version>
 
     <properties>
-        <java.version>11</java.version>
-        <scala.version>2.13.6</scala.version>
+        <java.version>17</java.version>
+        <scala.version>2.13.12</scala.version>
+        <spark.version>3.5.1</spark.version>
     </properties>
 
     <dependencies>
@@ -24,7 +25,7 @@
         <dependency>
             <groupId>org.apache.spark</groupId>
             <artifactId>spark-sql_2.13</artifactId>
-            <version>3.2.0</version>
+            <version>${spark.version}</version>
             <exclusions>
                 <exclusion>
                     <groupId>org.slf4j</groupId>
@@ -45,6 +46,28 @@
             <artifactId>logback-classic</artifactId>
             <version>1.2.6</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/org.scalatest/scalatest -->
+        <dependency>
+            <groupId>org.scalatest</groupId>
+            <artifactId>scalatest_2.13</artifactId>
+            <version>3.2.18</version>
+            <scope>test</scope>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/junit/junit -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.13.2</version>
+            <scope>test</scope>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/com.databricks/spark-xml -->
+        <dependency>
+            <groupId>com.databricks</groupId>
+            <artifactId>spark-xml_2.13</artifactId>
+            <version>0.18.0</version>
+        </dependency>
+
+
     </dependencies>
 
     <build>
@@ -79,33 +102,33 @@
                     </execution>
                 </executions>
             </plugin>
-<!--            <plugin>-->
-<!--                <groupId>org.codehaus.mojo</groupId>-->
-<!--                <artifactId>exec-maven-plugin</artifactId>-->
-<!--                <version>3.0.0</version>-->
-<!--                <executions>-->
-<!--                    <execution>-->
-<!--                        <id>generate-autocompletion-script</id>-->
-<!--                        <phase>package</phase>-->
-<!--                        <goals>-->
-<!--                            <goal>exec</goal>-->
-<!--                        </goals>-->
-<!--                    </execution>-->
-<!--                </executions>-->
-<!--                <configuration>-->
-<!--                    <executable>java</executable>-->
-<!--                    <arguments>-->
-<!--                        <argument>-Dpicocli.autocomplete.systemExitOnError</argument>-->
-<!--                        <argument>-cp</argument>-->
-<!--                        <classpath/>-->
-<!--                        <argument>picocli.AutoComplete</argument>-->
-<!--                        <argument>&#45;&#45;force</argument>&lt;!&ndash; overwrite if exists &ndash;&gt;-->
-<!--                        <argument>&#45;&#45;completionScript</argument>-->
-<!--                        <argument>${project.build.directory}/mycommand_completion.sh</argument>-->
-<!--                        <argument>odibel.Main</argument>&lt;!&ndash; replace with your class &ndash;&gt;-->
-<!--                    </arguments>-->
-<!--                </configuration>-->
-<!--            </plugin>-->
+            <!--            <plugin>-->
+            <!--                <groupId>org.codehaus.mojo</groupId>-->
+            <!--                <artifactId>exec-maven-plugin</artifactId>-->
+            <!--                <version>3.0.0</version>-->
+            <!--                <executions>-->
+            <!--                    <execution>-->
+            <!--                        <id>generate-autocompletion-script</id>-->
+            <!--                        <phase>package</phase>-->
+            <!--                        <goals>-->
+            <!--                            <goal>exec</goal>-->
+            <!--                        </goals>-->
+            <!--                    </execution>-->
+            <!--                </executions>-->
+            <!--                <configuration>-->
+            <!--                    <executable>java</executable>-->
+            <!--                    <arguments>-->
+            <!--                        <argument>-Dpicocli.autocomplete.systemExitOnError</argument>-->
+            <!--                        <argument>-cp</argument>-->
+            <!--                        <classpath/>-->
+            <!--                        <argument>picocli.AutoComplete</argument>-->
+            <!--                        <argument>&#45;&#45;force</argument>&lt;!&ndash; overwrite if exists &ndash;&gt;-->
+            <!--                        <argument>&#45;&#45;completionScript</argument>-->
+            <!--                        <argument>${project.build.directory}/mycommand_completion.sh</argument>-->
+            <!--                        <argument>odibel.Main</argument>&lt;!&ndash; replace with your class &ndash;&gt;-->
+            <!--                    </arguments>-->
+            <!--                </configuration>-->
+            <!--            </plugin>-->
         </plugins>
     </build>
 </project>
