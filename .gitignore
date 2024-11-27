@@ -2,6 +2,8 @@
 .idea/
 .metals/
 .vscode/
+tmp/
+target/ 
 
 # Created by https://www.toptal.com/developers/gitignore/api/vim,scala,java,intellij
 # Edit at https://www.toptal.com/developers/gitignore?templates=vim,scala,java,intellij
