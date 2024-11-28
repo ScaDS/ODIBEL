@@ -7,10 +7,11 @@
     <groupId>org.example</groupId>
     <artifactId>odibel</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
 
     <properties>
         <java.version>17</java.version>
-        <scala.version>2.13.12</scala.version>
+        <scala.version>2.13.15</scala.version>
         <spark.version>3.5.1</spark.version>
     </properties>
 
@@ -21,6 +22,7 @@
             <artifactId>scala-library</artifactId>
             <version>${scala.version}</version>
         </dependency>
+
         <!-- https://mvnrepository.com/artifact/org.apache.spark/spark-sql -->
         <dependency>
             <groupId>org.apache.spark</groupId>
@@ -61,10 +63,59 @@
             <scope>test</scope>
         </dependency>
         <!-- https://mvnrepository.com/artifact/com.databricks/spark-xml -->
+
         <dependency>
             <groupId>com.databricks</groupId>
             <artifactId>spark-xml_2.13</artifactId>
             <version>0.18.0</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/com.typesafe/config -->
+        <dependency>
+            <groupId>com.typesafe</groupId>
+            <artifactId>config</artifactId>
+            <version>1.4.3</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/com.lihaoyi/upickle -->
+        <dependency>
+            <groupId>com.lihaoyi</groupId>
+            <artifactId>upickle_2.13</artifactId>
+            <version>4.0.2</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.testcontainers/testcontainers -->
+        <dependency>
+            <groupId>org.testcontainers</groupId>
+            <artifactId>testcontainers</artifactId>
+            <version>1.20.2</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-csv -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-csv</artifactId>
+            <version>1.12.0</version>
+        </dependency>
+
+        <!--    <dependency>
+                <groupId>org.sweble.wikitext</groupId>
+                <artifactId>swc-parser-lazy</artifactId>
+                <version>3.1.9</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.sweble.wikitext</groupId>
+                <artifactId>swc-engine</artifactId>
+                <version>3.1.9</version>
+            </dependency>-->
+
+        <!-- https://mvnrepository.com/artifact/com.dimafeng/testcontainers-scala-scalatest -->
+        <dependency>
+            <groupId>com.dimafeng</groupId>
+            <artifactId>testcontainers-scala-scalatest_2.13</artifactId>
+            <version>0.41.4</version>
+            <scope>test</scope>
         </dependency>
 
 
@@ -77,58 +128,42 @@
             <plugin>
                 <groupId>net.alchim31.maven</groupId>
                 <artifactId>scala-maven-plugin</artifactId>
-                <version>4.5.4</version>
+                <version>4.9.2</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>compile</goal>
+                            <goal>testCompile</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <scalaVersion>${scala.version}</scalaVersion>
+                </configuration>
             </plugin>
             <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-assembly-plugin</artifactId>
-                <version>3.3.0</version>
+                <version>3.7.1</version>
                 <configuration>
                     <descriptorRefs>
                         <descriptorRef>jar-with-dependencies</descriptorRef>
                     </descriptorRefs>
                     <archive>
                         <manifest>
-                            <mainClass>odibel.Main</mainClass>
+                            <mainClass>org.example.main.RevSplitter</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
                 <executions>
                     <execution>
-                        <phase>package</phase>
+                        <id>make-assembly</id> <!-- this is used for inheritance merges -->
+                        <phase>package</phase> <!-- bind to the packaging phase -->
                         <goals>
                             <goal>single</goal>
                         </goals>
                     </execution>
                 </executions>
             </plugin>
-            <!--            <plugin>-->
-            <!--                <groupId>org.codehaus.mojo</groupId>-->
-            <!--                <artifactId>exec-maven-plugin</artifactId>-->
-            <!--                <version>3.0.0</version>-->
-            <!--                <executions>-->
-            <!--                    <execution>-->
-            <!--                        <id>generate-autocompletion-script</id>-->
-            <!--                        <phase>package</phase>-->
-            <!--                        <goals>-->
-            <!--                            <goal>exec</goal>-->
-            <!--                        </goals>-->
-            <!--                    </execution>-->
-            <!--                </executions>-->
-            <!--                <configuration>-->
-            <!--                    <executable>java</executable>-->
-            <!--                    <arguments>-->
-            <!--                        <argument>-Dpicocli.autocomplete.systemExitOnError</argument>-->
-            <!--                        <argument>-cp</argument>-->
-            <!--                        <classpath/>-->
-            <!--                        <argument>picocli.AutoComplete</argument>-->
-            <!--                        <argument>&#45;&#45;force</argument>&lt;!&ndash; overwrite if exists &ndash;&gt;-->
-            <!--                        <argument>&#45;&#45;completionScript</argument>-->
-            <!--                        <argument>${project.build.directory}/mycommand_completion.sh</argument>-->
-            <!--                        <argument>odibel.Main</argument>&lt;!&ndash; replace with your class &ndash;&gt;-->
-            <!--                    </arguments>-->
-            <!--                </configuration>-->
-            <!--            </plugin>-->
         </plugins>
     </build>
 </project>
