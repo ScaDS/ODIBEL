@@ -1,0 +1,8 @@
+{"head":"http://dbpedia.org/resource/subject1","rel":"http://dbpedia.org/ontology/relation1","tail":"http://dbpedia.org/resource/tail1>","rFrom":"1001","rUntil":"1002","tFrom":1000,"tUntil":2000}
+{"head":"http://dbpedia.org/resource/subject1","rel":"http://dbpedia.org/ontology/relation1","tail":"http://dbpedia.org/resource/tail2>","rFrom":"1002","rUntil":"1003","tFrom":2000,"tUntil":3000}
+{"head":"http://dbpedia.org/resource/subject1","rel":"http://dbpedia.org/ontology/relation1","tail":"http://dbpedia.org/resource/tail3>","rFrom":"1001","rUntil":"1003","tFrom":1000,"tUntil":3000}
+{"head":"http://dbpedia.org/resource/subject1","rel":"http://dbpedia.org/ontology/relation2","tail":"http://dbpedia.org/resource/tail4>","rFrom":"1003","rUntil":"1004","tFrom":3000,"tUntil":99000}
+{"head":"http://dbpedia.org/resource/subject2","rel":"http://dbpedia.org/ontology/relation1","tail":"\"none\"@en","rFrom":"2001","rUntil":"2002","tFrom":1000,"tUntil":2000}
+{"head":"http://dbpedia.org/resource/subject2","rel":"http://dbpedia.org/ontology/relation1","tail":"http://dbpedia.org/resource/tail1>","rFrom":"2002","rUntil":"2003","tFrom":2000,"tUntil":3000}
+{"head":"http://dbpedia.org/resource/subject2","rel":"http://dbpedia.org/ontology/relation1","tail":"http://dbpedia.org/resource/tail2>","rFrom":"2003","rUntil":"2004","tFrom":3000,"tUntil":4000}
+{"head":"http://dbpedia.org/resource/subject2","rel":"http://dbpedia.org/ontology/relation1","tail":"http://dbpedia.org/resource/tail1>","rFrom":"2004","rUntil":"2005","tFrom":4000,"tUntil":99000}
