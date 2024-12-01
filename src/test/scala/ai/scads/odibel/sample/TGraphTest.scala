@@ -1,6 +1,7 @@
 package ai.scads.odibel.sample
 
 import ai.scads.odibel.datasets.wikitext.TemporalWindowBuilder
+import ai.scads.odibel.graph.Triple
 import org.scalatest.funsuite.AnyFunSuite
 
 class TGraphTest extends AnyFunSuite {
@@ -40,7 +41,7 @@ class TGraphTest extends AnyFunSuite {
 //    tb.buildQuads().foreach(println)
     println("---")
     tb.addGraphVersion(t2g.map(t => s"<${t.s}> <${t.p}> <${t.o}> ."),1)()
-    tb.buildQuads().foreach(println)
+    tb.buildEntries().foreach(println)
   }
 
   test("set test") {
