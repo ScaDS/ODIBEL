@@ -1,8 +1,9 @@
 package ai.scads.odibel.dbpedia.temporal
 
-import org.scalatest.funsuite.AnyFunSuite
+import ai.scads.odibel.datasets.wikitext.TemporalExtractionResult
+import ai.scads.odibel.datasets.wikitext.eval.EvalFunctions
 import org.apache.spark.sql.{Dataset, SparkSession}
-import ai.scads.odibel.datasets.wikitext.eval.{TKGEval, TKGUtils, CSVRow}
+import org.scalatest.funsuite.AnyFunSuite
 
 class TKGTestSuite extends AnyFunSuite {
 
@@ -15,10 +16,10 @@ class TKGTestSuite extends AnyFunSuite {
   import spark.implicits._
 
   // Testdaten laden
-  lazy val testData: Dataset[CSVRow] = spark.read.json("src/test/resources/tkg/")
+  lazy val testData: Dataset[TemporalExtractionResult] = spark.read.json("src/test/resources/tkg/")
     .withColumn("tFrom", $"tFrom".cast("long"))
     .withColumn("tUntil", $"tUntil".cast("long"))
-    .as[CSVRow].as[CSVRow]
+    .as[TemporalExtractionResult]
 
   test("SparkSession is initialized") {
     assert(spark != null, "SparkSession should be initialized")
@@ -29,7 +30,7 @@ class TKGTestSuite extends AnyFunSuite {
   }
 
   test("countAllUniqueWindows computes unique time windows") {
-    val uniqueWindows = TKGUtils.countAllUniqueWindows(testData)
+    val uniqueWindows = EvalFunctions.countAllUniqueWindows(testData)
     assert(uniqueWindows == 8, s"Expected 8 unique time windows, got $uniqueWindows")
   }
 
@@ -42,7 +43,7 @@ class TKGTestSuite extends AnyFunSuite {
       ("http://dbpedia.org/resource/subject3", 5)
     ).toDF("head", "triple_count")
 
-    val actual = TKGUtils.countTriplesPerSubject(testData).orderBy("head").collect()
+    val actual = EvalFunctions.countTriplesPerSubject(testData).orderBy("head").collect()
     val expected = expectedData.orderBy("head").collect()
 
     assert(actual.length == expected.length, s"Expected ${expected.length} rows, but got ${actual.length}")
@@ -59,7 +60,7 @@ class TKGTestSuite extends AnyFunSuite {
       ("http://dbpedia.org/resource/subject3", 5)
     ).toDF("head", "triple_count")
 
-    val actual = TKGUtils.countRevisionsPerPage(testData).orderBy("head").collect()
+    val actual = EvalFunctions.countRevisionsPerPage(testData).orderBy("head").collect()
     val expected = expectedData.orderBy("head").collect()
 
     assert(actual.length == expected.length, s"Expected ${expected.length} rows, but got ${actual.length}")
@@ -81,7 +82,7 @@ class TKGTestSuite extends AnyFunSuite {
       ("http://dbpedia.org/resource/subject3", "http://dbpedia.org/ontology/wikiPageID", 1, 1),
     ).toDF("head", "relation", "unique_changes", "all_changes")
 
-    val actual = TKGUtils.countChangesPerPredicate(testData).orderBy("head", "rel").collect()
+    val actual = EvalFunctions.countChangesPerPredicate(testData).orderBy("head", "rel").collect()
     val expected = expectedData.orderBy("head").collect()
 
     assert(actual.length == expected.length, s"Expected ${expected.length} rows, but got ${actual.length}")
@@ -107,12 +108,12 @@ class TKGTestSuite extends AnyFunSuite {
     ("http://dbpedia.org/resource/subject2","http://dbpedia.org/ontology/relation1","http://dbpedia.org/resource/tail1>","2004","2005",4000,99000)
     ).toDF("head", "rel", "tail", "rFrom", "rUntil", "tFrom", "tUntil")
 
-    TKGUtils.createSnapshot(data = testData, timestamp = timestamp1).orderBy("head", "rel", "rFrom","rUntil").show(false)
-    TKGUtils.createSnapshot(data = testData, timestamp = timestamp2).orderBy("head", "rel", "rFrom","rUntil").show(false)
+    EvalFunctions.createSnapshot(data = testData, timestamp = timestamp1).orderBy("head", "rel", "rFrom","rUntil").show(false)
+    EvalFunctions.createSnapshot(data = testData, timestamp = timestamp2).orderBy("head", "rel", "rFrom","rUntil").show(false)
 
-    val actual1 = TKGUtils.createSnapshot(data = testData, timestamp = timestamp1).orderBy("head", "rel", "rFrom","rUntil").collect()
+    val actual1 = EvalFunctions.createSnapshot(data = testData, timestamp = timestamp1).orderBy("head", "rel", "rFrom","rUntil").collect()
     val expected1 = expectedData1.orderBy("head", "rel", "rFrom","rUntil").collect()
-    val actual2 = TKGUtils.createSnapshot(data = testData, timestamp = timestamp2).orderBy("head", "rel", "rFrom","rUntil").collect()
+    val actual2 = EvalFunctions.createSnapshot(data = testData, timestamp = timestamp2).orderBy("head", "rel", "rFrom","rUntil").collect()
     val expected2 = expectedData2.orderBy("head", "rel", "rFrom","rUntil").collect()
 
     assert(actual1.length == expected1.length, s"Expected ${expected1.length} rows, but got ${actual1.length}")
