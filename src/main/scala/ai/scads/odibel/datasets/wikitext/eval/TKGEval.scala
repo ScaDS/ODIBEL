@@ -1,8 +1,7 @@
 package ai.scads.odibel.datasets.wikitext.eval
 
-import ai.scads.odibel.datasets.wikitext.eval.CSVRow
+
 import org.apache.spark.sql.SparkSession
-import org.apache.spark.sql.functions._
 
 
 object TKGEval extends App {
@@ -11,6 +10,7 @@ object TKGEval extends App {
   val in = args(0)
   val out = args(1)
 
+  // Create Spark Session
   val spark = SparkSession.builder().master("local[*]").getOrCreate()
   val sql = spark.sqlContext
   import sql.implicits._
@@ -20,35 +20,44 @@ object TKGEval extends App {
     .withColumn("tFrom", $"tFrom".cast("long"))
     .withColumn("tUntil", $"tUntil".cast("long"))
     .as[CSVRow]
-  // .select("rel").groupBy("rel").count().show(false)
   data.show(3)
+  println("________________________________________________________________________")
+  println("________________________________________________________________________\n")
 
   // 1. Calculate all unique windows
-  val uniqueWindows = TKGUtils.calculateAllUniqueWindows(data)
+  val uniqueWindows = TKGUtils.countAllUniqueWindows(data)
   println(s"All unique windows: $uniqueWindows")
-  println("_____________")
+  println("________________________________________________________________________")
+  println("________________________________________________________________________\n")
 
   // 2. Count triples per subject
   val triplesPerSubject = TKGUtils.countTriplesPerSubject(data)
-  println("Triples per subject: ")
-  triplesPerSubject.show(false)
-  println("_____________")
+  println("Count triples per subject: ")
+  triplesPerSubject.show(5)
+  println("________________________________________________________________________")
+  println("________________________________________________________________________\n")
 
   // 3. Revisions per page
-  val revisionsPerPage = TKGUtils.calculateRevisionsPerPage(data)
-  revisionsPerPage.show(false)
-  println("_____________")
+  val revisionsPerPage = TKGUtils.countRevisionsPerPage(data)
+  println("Revisions per page: ")
+  revisionsPerPage.show(5)
+  println("________________________________________________________________________")
+  println("________________________________________________________________________\n")
 
   // 4. Changes per predicate
-  val changesPerPredicate = TKGUtils.calculateChangesPerPredicate(data)
-  changesPerPredicate.show(false)
-  println("_____________")
+  val changesPerPredicate = TKGUtils.countChangesPerPredicate(data)
+  println("Changes per predicate: ")
+  changesPerPredicate.show(5)
+  println("________________________________________________________________________")
+  println("________________________________________________________________________\n")
 
   // 5. Create snapshot
   val timestamp = 1094215048000L
   val snapshot = TKGUtils.createSnapshot(data=data, timestamp=timestamp, outputPath=Some(out))
-  snapshot.show(3)
-  println("_____________")
+  println("Create snapshot: ")
+  snapshot.show(5)
+  println("________________________________________________________________________")
+  println("________________________________________________________________________\n")
 
   // Stop SparkSession
   spark.stop()
