@@ -1,5 +1,6 @@
 package ai.scads.odibel.main
 
+import ai.scads.odibel.datasets.wikitext.eval.TKGEval
 import picocli.CommandLine
 import picocli.CommandLine.Command
 
@@ -13,7 +14,7 @@ object Main extends App {
 
 @Command(
   name="odibel",
-  subcommands = Array(classOf[DBpediaTKG]),
+  subcommands = Array(classOf[DBpediaTKG], classOf[TKGEval]),
   mixinStandardHelpOptions = true
 )
 class Main extends Callable[Int] {

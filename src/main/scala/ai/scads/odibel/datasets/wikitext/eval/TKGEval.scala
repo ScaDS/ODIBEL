@@ -1,64 +1,64 @@
 package ai.scads.odibel.datasets.wikitext.eval
 
 
-import org.apache.spark.sql.SparkSession
+import ai.scads.odibel.datasets.wikitext.TemporalExtractionResult
+import org.apache.arrow.vector.types.pojo.ArrowType.Struct
+import org.apache.spark.sql.{DataFrame, Dataset, SparkSession}
+import org.apache.spark.sql.functions.{avg, max, min}
+import org.apache.spark.sql.types.{LongType, StructType}
+import picocli.CommandLine.{Command, Option}
 
+import java.io.File
+import java.util.concurrent.Callable
 
-object TKGEval extends App {
+@Command(name = "eval", mixinStandardHelpOptions = true)
+class TKGEval extends Callable[Int] {
 
-  // Input and Output file path passed as an argument
-  val in = args(0)
-  val out = args(1)
+  @Option(names = Array("--in", "-i"), required = true)
+  var in: File = _
 
-  // Create Spark Session
-  val spark = SparkSession.builder().master("local[*]").getOrCreate()
-  val sql = spark.sqlContext
-  import sql.implicits._
+  @Option(names = Array("--out", "-o"), required = true)
+  var out: File = _
 
-  // Read the JSON files and convert to Dataset[CSVRow]
-  val data = sql.read.json(in)
-    .withColumn("tFrom", $"tFrom".cast("long"))
-    .withColumn("tUntil", $"tUntil".cast("long"))
-    .as[CSVRow]
-  data.show(3)
-  println("________________________________________________________________________")
-  println("________________________________________________________________________\n")
+  @Option(names = Array("--functions", "-f"), required = false)
+  var func: Array[String] = _ // TODO filter by functions
 
-  // 1. Calculate all unique windows
-  val uniqueWindows = TKGUtils.countAllUniqueWindows(data)
-  println(s"All unique windows: $uniqueWindows")
-  println("________________________________________________________________________")
-  println("________________________________________________________________________\n")
+  def writeOut(name: String, ds: DataFrame): Unit = {
+    ds.write.mode("overwrite").option("header", "true")
+              .csv(new File(out, name).getPath)
+  }
 
-  // 2. Count triples per subject
-  val triplesPerSubject = TKGUtils.countTriplesPerSubject(data)
-  println("Count triples per subject: ")
-  triplesPerSubject.show(5)
-  println("________________________________________________________________________")
-  println("________________________________________________________________________\n")
+  override def call(): Int = {
+    // Create Spark Session
+    val spark = SparkSession.builder().master("local[*]").getOrCreate()
+    val sql = spark.sqlContext
 
-  // 3. Revisions per page
-  val revisionsPerPage = TKGUtils.countRevisionsPerPage(data)
-  println("Revisions per page: ")
-  revisionsPerPage.show(5)
-  println("________________________________________________________________________")
-  println("________________________________________________________________________\n")
+    import sql.implicits._
 
-  // 4. Changes per predicate
-  val changesPerPredicate = TKGUtils.countChangesPerPredicate(data)
-  println("Changes per predicate: ")
-  changesPerPredicate.show(5)
-  println("________________________________________________________________________")
-  println("________________________________________________________________________\n")
+    val data = sql.read.json(in.getPath)
+      .withColumn("tFrom", $"tFrom".cast("long"))
+      .withColumn("tUntil", $"tUntil".cast("long"))
+      .as[TemporalExtractionResult]
 
-  // 5. Create snapshot
-  val timestamp = 1094215048000L
-  val snapshot = TKGUtils.createSnapshot(data=data, timestamp=timestamp, outputPath=Some(out))
-  println("Create snapshot: ")
-  snapshot.show(5)
-  println("________________________________________________________________________")
-  println("________________________________________________________________________\n")
+    val uniqueWindows = EvalFunctions.countAllUniqueWindows(data)
+    import scala.jdk.CollectionConverters._
+    writeOut("uniqueWindows", Seq(uniqueWindows).toDF("uniqueWindows"))
 
-  // Stop SparkSession
-  spark.stop()
+    val triplesPerSubject = EvalFunctions.countTriplesPerSubject(data)
+      .agg(
+        min("triple_count").alias("min"),
+        max("triple_count").alias("max"),
+        avg("triple_count").alias("avg")
+      )
+    writeOut("triplesPerSubject", triplesPerSubject)
+
+    val revisionsPerPage = EvalFunctions.countRevisionsPerPage(data)
+    writeOut("revisionsGroupedByPage",revisionsPerPage)
+
+    val changesPerPredicate = EvalFunctions.countChangesPerPredicate(data)
+    writeOut("changesByPredicate", changesPerPredicate)
+
+    spark.stop()
+    0
+  }
 }
