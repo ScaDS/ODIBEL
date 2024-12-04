@@ -1,4 +1,5 @@
 import argparse
+import glob
 import os
 import json
 from pyspark.sql import SparkSession
@@ -7,80 +8,80 @@ from pyspark.sql.window import Window
 import matplotlib.pyplot as plt
 import pandas as pd
 
-# Function to read JSON files from a directory using PySpark
-def load_json_files(input_path):
-    spark = SparkSession.builder.appName("JSONLoader").getOrCreate()
-    # Load all JSON files in the given directory
-    data = spark.read.json(input_path)
-    data.show(5)
-    return data
+def plot_csv_from_folders(input_dir, output_dir, aggregate=None, plot_type="line"):
+    """
+    Plots data from CSV files in subfolders. Automatically detects 'time' and 'count' columns.
 
-# Function to process data for plotting
-def process_data(data):
-    # Convert timestamps to readable format
-    data = data.withColumn("start_time", from_unixtime(col("tFrom") / 1000))
-    data = data.withColumn("end_time", from_unixtime(col("tUntil") / 1000))
+    Parameters:
+    - input_dir: Path to the root folder containing subfolders with CSV files.
+    - output_dir: Directory to save the output plots.
+    """
+    if not os.path.exists(output_dir):
+        os.makedirs(output_dir)
 
-    # Count revisions over time
-    revisions_over_time = data.groupBy("start_time").count().orderBy("start_time")
+    # Suche alle CSV-Dateien in den Unterordnern
+    for folder_name in os.listdir(input_dir):
+        folder_path = os.path.join(input_dir, folder_name)
 
-    # Count changes over time by calculating distinct changes in "tail"
-    window_spec = Window.orderBy("start_time")
-    data = data.withColumn("prev_tail", lag("tail").over(window_spec))
-    data = data.withColumn("is_change", when(col("tail") != col("prev_tail"), 1).otherwise(0))
-    changes_over_time = data.groupBy("start_time").agg(count("is_change").alias("changes"))
+        if os.path.isdir(folder_path):
+            # find all csv files in the subfolders
+            csv_files = glob.glob(os.path.join(folder_path, "*.csv"))
 
-    return revisions_over_time.toPandas(), changes_over_time.toPandas()
+            for file_path in csv_files:
+                # loads csv data
+                data = pd.read_csv(file_path)
 
-# Function to plot data
-def plot_data(revisions, changes, output_path):
-    # Plot revisions over time
-    revisions["start_time"] = pd.to_datetime(revisions["start_time"])
-    revisions = revisions.sort_values("start_time")
-    plt.figure(figsize=(10, 6))
-    plt.plot(revisions["start_time"], revisions["count"], marker="o", label="Revisions")
-    plt.title("Revisions Over Time")
-    plt.xlabel("Time")
-    plt.ylabel("Number of Revisions")
-    plt.legend()
-    plt.grid()
-    plt.savefig(os.path.join(output_path, "revisions_over_time.png"))
-    plt.close()
+                # detect 'time' and 'count'-Columns
+                time_col = next((col for col in data.columns if "time" in col.lower()), None)
+                count_col = next( (col for col in data.columns if ("count" in col.lower() or "changes" in col.lower()) ), None)
 
-    # Plot changes over time
-    changes["start_time"] = pd.to_datetime(changes["start_time"])
-    changes = changes.sort_values("start_time")
-    plt.figure(figsize=(10, 6))
-    plt.plot(changes["start_time"], changes["changes"], marker="x", label="Changes")
-    plt.title("Changes Over Time")
-    plt.xlabel("Time")
-    plt.ylabel("Number of Changes")
-    plt.legend()
-    plt.grid()
-    plt.savefig(os.path.join(output_path, "changes_over_time.png"))
-    plt.close()
+                if not time_col or not count_col:
+                    print(f"Skipping file {file_path}: Unable to detect 'time' or 'count' columns.")
+                    continue
 
-# Main function to orchestrate the process
-def main(input_path, output_path):
-    # Load JSON files
-    data = load_json_files(input_path)
+                # convert 'time' column to datetime
+                data[time_col] = pd.to_datetime(data[time_col])
+                # remove rows with time from 1970
+                data = data[data[time_col].dt.year != 1970]
+                # Aggregate data if specified
+                if aggregate:
+                    data = data.set_index(time_col).resample(aggregate).sum().reset_index()
 
-    # Process data
-    revisions, changes = process_data(data)
 
-    # Ensure output directory exists
-    os.makedirs(output_path, exist_ok=True)
 
-    # Plot and save data
-    plot_data(revisions, changes, output_path)
+                # create plot
+                plt.figure(figsize=(10, 6))
+                if plot_type == "line":
+                    plt.plot(data[time_col], data[count_col], marker='o', linestyle='-', label=f"{folder_name}: {count_col}")
+                elif plot_type == "bar":
+                    plt.bar(data[time_col], data[count_col], label=f"{folder_name}: {count_col}", width=50)
+                else:
+                    print(f"Unknown plot type '{plot_type}' for {file_path}. Defaulting to line plot.")
+                    plt.plot(data[time_col], data[count_col], marker='o', linestyle='-', label=f"{folder_name}: {count_col}")
+
+                plt.xlabel("Time")
+                plt.ylabel("Count")
+                plt.title(f"Plot for {folder_name}")
+                plt.grid(True)
+                plt.legend()
+
+                # save the plot
+                output_file = os.path.join(output_dir, f"{folder_name}.png")
+                plt.savefig(output_file, bbox_inches='tight')
+                plt.close()
+
+                print(f"Plot saved for {file_path} as {output_file}")
+
 
 if __name__ == "__main__":
     # Argument parser to handle input/output paths
-    parser = argparse.ArgumentParser(description="Process and visualize JSON data for DBpedia triples.")
-    parser.add_argument("--input", required=True, help="Path to the directory containing JSON files.")
+    parser = argparse.ArgumentParser(description="Process and visualize CSV data for DBpedia triples.")
+    parser.add_argument("--input", required=True, help="Path to the directory containing the directories of the CSV files.")
     parser.add_argument("--output", required=True, help="Path to the directory for saving output plots.")
+    parser.add_argument("--aggregate", required=False, default="Y", help="Aggregation interval (e.g.,'Y' for year, 'M' for month, 'W' for week).")
+    parser.add_argument("--plot-type", required=False, choices=["line", "bar"], default="line", help="Type of plot: 'line' or 'bar'.")
 
     args = parser.parse_args()
 
-    # Pass the input and output paths to the main function
-    main(args.input, args.output)
+    # Pass the input and output paths, aggregation interval, and plot type to the main function
+    plot_csv_from_folders(args.input, args.output, args.aggregate, args.plot_type)
