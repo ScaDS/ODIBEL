@@ -58,6 +58,22 @@ class TKGEval extends Callable[Int] {
     val changesPerPredicate = EvalFunctions.countChangesPerPredicate(data)
     writeOut("changesByPredicate", changesPerPredicate)
 
+    val startRevisionsOverTime = EvalFunctions.countStartRevisionsOverTime(data)
+    writeOut("start_revisions_over_time", startRevisionsOverTime)
+
+    val endRevisionsOverTime = EvalFunctions.countEndRevisionsOverTime(data)
+    writeOut("end_revisions_over_time", endRevisionsOverTime)
+
+    val startTriplesOverTime = EvalFunctions.countStartTriplesOverTime(data)
+    writeOut("start_triples_over_time", startTriplesOverTime)
+
+    val endfTriplesOverTime = EvalFunctions.countEndTriplesOverTime(data)
+    writeOut("end_triples_over_time", endfTriplesOverTime)
+
+    val countChangesOverTime = EvalFunctions.countChangesOverTime(data)
+    writeOut("count_changes_over_time", countChangesOverTime)
+
+
     spark.stop()
     0
   }
