@@ -1,6 +1,7 @@
 package ai.scads.odibel.datasets.wikitext.eval
 
 import ai.scads.odibel.datasets.wikitext.TemporalExtractionResult
+import org.apache.spark.sql.expressions.Window
 import org.apache.spark.sql.{DataFrame, Dataset}
 import org.apache.spark.sql.functions._
 
@@ -76,5 +77,69 @@ object EvalFunctions {
 //      orderedSnapshot
       snapshot
     }
+
+  // Function: Count revisions over time
+  def countStartRevisionsOverTime(data: Dataset[TemporalExtractionResult]): DataFrame = {
+    import data.sparkSession.implicits._
+    data.withColumn("start_time", from_unixtime($"tFrom" / 1000))
+      .select($"start_time", $"rFrom")
+      .distinct()
+      .groupBy("start_time")
+      .agg(countDistinct("rFrom").alias("count_start_revisions"))
+      .orderBy("start_time")
+  }
+  // Function: Count revisions over time
+  def countEndRevisionsOverTime(data: Dataset[TemporalExtractionResult]): DataFrame = {
+    import data.sparkSession.implicits._
+    data.withColumn("end_time", from_unixtime($"tUntil" / 1000))
+      .select($"end_time", $"rUntil")
+      .distinct()
+      .groupBy("end_time")
+      .agg(countDistinct("rUntil").alias("count_end_revisions"))
+      .orderBy("end_time")
+  }
+
+  def countStartTriplesOverTime(data: Dataset[TemporalExtractionResult]): DataFrame = {
+    import data.sparkSession.implicits._
+    data.withColumn("start_time", from_unixtime($"tFrom" / 1000))
+      .select($"start_time", $"head", $"rel", $"tail")
+      .distinct()
+      .groupBy("start_time")
+      .agg(count("*").alias("count_start_triples"))
+      .orderBy("start_time")
+  }
+  def countEndTriplesOverTime(data: Dataset[TemporalExtractionResult]): DataFrame = {
+    import data.sparkSession.implicits._
+    data.withColumn("end_time", from_unixtime($"tUntil" / 1000))
+      .select($"end_time", $"head", $"rel", $"tail")
+      .distinct()
+      .groupBy("end_time")
+      .agg(count("*").alias("count_end_triples"))
+      .orderBy("end_time")
+  }
+  def countChangesOverTime(data: Dataset[TemporalExtractionResult]): DataFrame = {
+    import data.sparkSession.implicits._
+
+    val dataWithTimestamps = data
+      .withColumn("start_time", from_unixtime($"tFrom" / 1000))
+      .withColumn("end_time", from_unixtime($"tUntil" / 1000))
+
+    // Union of start_time & end_time, to get all relevant timestamps
+    val changes = dataWithTimestamps
+      .select($"head", $"rel", $"tail", $"start_time".as("change_time"), lit(1).as("change_type"))
+      .union(
+        dataWithTimestamps
+          .select($"head", $"rel", $"tail", $"end_time".as("change_time"),
+            lit(-1).as("change_type")
+          )
+      )
+
+    // count all changes
+    changes
+      .groupBy("change_time")
+      .agg(count("*").alias("count_triple_changes"))
+      .orderBy("change_time")
+  }
+
 
 }
