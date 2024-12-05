@@ -28,7 +28,7 @@ class RCDiefServer(endpoint: String) {
     .setDefaultRequestConfig(requestConfig)
     .build()
 
-  def extract(xml: String): String = {
+  def extract(xml: String): Either[String,Exception] = {
     val maxRetries = 3
     var attempt = 0
     var success = false
@@ -85,9 +85,9 @@ class RCDiefServer(endpoint: String) {
 
     if (!success) {
       logger.error(s"All $maxRetries attempts failed.")
-      throw lastException
+      Right(lastException)
+    } else {
+      Left(responseContent)
     }
-
-    responseContent
   }
 }

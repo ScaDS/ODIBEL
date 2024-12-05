@@ -120,8 +120,14 @@ class DBpediaTKGExtraction {
               "<page>\n" + wikitext.pagexml + "<revision>\n" + wikitext.revisionxml + "</revision>\n" + "</page>\n</mediawiki>"
           }
 
-          val triples = rc.extract(body).split("\n").toList
-          tb.addGraphVersion(triples.filter(_.startsWith("<")), timestamp)(revisionId.toString)
+          rc.extract(body) match {
+            case Right(value) =>
+              System.err.println(s"Exception @${wikitext.pId}_${wikitext.rId}: ${value.getMessage} ")
+              println(body)
+            case Left(value) =>
+              val triples = value.split("\n").toList
+              tb.addGraphVersion(triples.filter(_.startsWith("<")), wikitext.rTimestamp)(wikitext.rId.toString)
+          }
       }
 
     val records = tb.buildEntries()
