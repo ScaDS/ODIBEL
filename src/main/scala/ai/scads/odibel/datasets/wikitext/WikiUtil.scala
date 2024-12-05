@@ -49,14 +49,14 @@ object WikiUtil {
     val pageXml = XML.loadString("<page>\n" + flatPageRevision.pagexml + "</page>")
     //    val pageTitle = (pageXml \ "title").text
     val pageID = (pageXml \ "id").text.toLong
-    //    val namespace = (pageXml \ "ns").text.toInt
+    val namespace = (pageXml \ "ns").text.toInt
     //    val redirect_title = (pageXml \ "redirect" \ "@title").text
 
     val revisionXml = XML.loadString("<revision>\n" + flatPageRevision.revisionxml + "</revision>")
     val revisionID = (revisionXml \ "id").text.toLong
-    //    val revisionTimestamp = dateToStamp((revisionXml \ "timestamp").text)
+    val revisionTimestamp = dateToStamp((revisionXml \ "timestamp").text)
     //    val wikitext = (revisionXml \ "text").text
 
-    FlatPageRevision(pageID, revisionID, flatPageRevision.pagexml, flatPageRevision.revisionxml)
+    FlatPageRevision(pageID, revisionID, revisionTimestamp, flatPageRevision.pagexml, flatPageRevision.revisionxml, Some(namespace))
   }
 }
