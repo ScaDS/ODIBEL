@@ -2,7 +2,6 @@ import argparse
 import glob
 import os
 import matplotlib.pyplot as plt
-import matplotlib.colors as mcolors
 import pandas as pd
 
 def filter_outliers(df, column):
