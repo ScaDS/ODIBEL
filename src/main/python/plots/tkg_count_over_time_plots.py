@@ -1,12 +1,7 @@
 import argparse
 import glob
 import os
-import json
-from pyspark.sql import SparkSession
-from pyspark.sql.functions import col, from_unixtime, count, when, lag
-from pyspark.sql.window import Window
 import matplotlib.pyplot as plt
-import matplotlib.colors as mcolors
 import pandas as pd
 
 def plot_count_over_time(input_dir, output_dir, aggregate=None, plot_type="line"):
