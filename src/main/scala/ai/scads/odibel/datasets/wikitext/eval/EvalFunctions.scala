@@ -78,7 +78,7 @@ object EvalFunctions {
       snapshot
     }
 
-  // Function: Count revisions over time
+  // Function: Count starting revisions over time
   def countStartRevisionsOverTime(data: Dataset[TemporalExtractionResult]): DataFrame = {
     import data.sparkSession.implicits._
     data.withColumn("start_time", from_unixtime($"tFrom" / 1000))
@@ -88,7 +88,7 @@ object EvalFunctions {
       .agg(countDistinct("rFrom").alias("count_start_revisions"))
       .orderBy("start_time")
   }
-  // Function: Count revisions over time
+  // Function: Count ending revisions over time
   def countEndRevisionsOverTime(data: Dataset[TemporalExtractionResult]): DataFrame = {
     import data.sparkSession.implicits._
     data.withColumn("end_time", from_unixtime($"tUntil" / 1000))
@@ -98,7 +98,7 @@ object EvalFunctions {
       .agg(countDistinct("rUntil").alias("count_end_revisions"))
       .orderBy("end_time")
   }
-
+  // Function: Count starting triples over time
   def countStartTriplesOverTime(data: Dataset[TemporalExtractionResult]): DataFrame = {
     import data.sparkSession.implicits._
     data.withColumn("start_time", from_unixtime($"tFrom" / 1000))
@@ -108,6 +108,7 @@ object EvalFunctions {
       .agg(count("*").alias("count_start_triples"))
       .orderBy("start_time")
   }
+  // Function: Count ending triples over time
   def countEndTriplesOverTime(data: Dataset[TemporalExtractionResult]): DataFrame = {
     import data.sparkSession.implicits._
     data.withColumn("end_time", from_unixtime($"tUntil" / 1000))
@@ -117,6 +118,7 @@ object EvalFunctions {
       .agg(count("*").alias("count_end_triples"))
       .orderBy("end_time")
   }
+  // Function: Count changes of triples over time (new and deleted triples)
   def countChangesOverTime(data: Dataset[TemporalExtractionResult]): DataFrame = {
     import data.sparkSession.implicits._
 
@@ -139,6 +141,38 @@ object EvalFunctions {
       .groupBy("change_time")
       .agg(count("*").alias("count_triple_changes"))
       .orderBy("change_time")
+  }
+
+  // Function: Calculate In-Degree Distribution per Year
+  def calculateInDegreeDistributionPerYear(data: Dataset[TemporalExtractionResult], filterBySubject: Boolean = false) = {
+    import data.sparkSession.implicits._
+    // filter to ensure only URIs are considered as 'tail'
+    val uris = data.filter($"tail".startsWith("http://"))
+
+    // Optionally filter to ensure only resources that also appear as 'head' are considered
+    val filteredResources = if (filterBySubject) {
+      val subjects = data.select("head").distinct()
+      uris.join(subjects, uris("tail") === subjects("head"))
+    } else {
+      uris
+    }
+
+    // calculate In-Degree
+    filteredResources
+      .withColumn("year", year(from_unixtime($"tFrom" / 1000)))
+      .groupBy($"year", $"tail")
+      .agg(count($"head").as("in_degree")) // Count the number of incoming edges for each tail
+      .orderBy("year", "tail")
+  }
+
+  // Function: Calculate Out-Degree Distribution per Year
+  def calculateOutDegreeDistributionPerYear(data: Dataset[TemporalExtractionResult]) = {
+    import data.sparkSession.implicits._
+    data
+      .withColumn("year", year(from_unixtime($"tFrom" / 1000)))
+      .groupBy($"year", $"head")
+      .agg(count($"tail").as("out_degree")) // Count the number of outgoing edges for each head
+      .orderBy("year", "head")
   }
 
 
