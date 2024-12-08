@@ -1,15 +1,12 @@
 package ai.scads.odibel.datasets.wikitext
 
-import ai.scads.odibel.datasets.wikitext.WikiUtil.dateToStamp
 import org.apache.spark.sql.SparkSession
-
-import scala.xml.XML
 
 class FlatPageRevisionPartitioner {
 
-  def run(in: String, out: String) = {
+  def run(in: String, out: String, parts: Int) = {
 
-    val spark = SparkSession.builder().master("local[*]").getOrCreate()
+    val spark = SparkSession.builder().getOrCreate()
 
     val sparkSql = spark.sqlContext
     import sparkSql.implicits._
@@ -18,7 +15,7 @@ class FlatPageRevisionPartitioner {
       .json(in)
       .as[FlatRawPageRevision]
       .map(WikiUtil.enrichFlatRawPageRevision)
-      .repartition(64,$"pid")
+      .repartition(parts,$"pid")
       .sortWithinPartitions($"pid",$"rid")
       .write.json(out)
   }

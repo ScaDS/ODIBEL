@@ -2,7 +2,8 @@ package ai.scads.odibel.main
 
 import ai.scads.odibel.datasets.wikitext.{DBpediaTKGExtraction, FlatPageRevisionPartitioner, WikiDumpFlatter}
 import ai.scads.odibel.main.DBpediaTKG.{FlatRepartitioner, TemporalExtraction, WikidumpRevisionSplit}
-import picocli.CommandLine.{Command, Option, executeHelpRequest, printHelpIfRequested}
+import ai.scads.odibel.utils.HDFSUtil
+import picocli.CommandLine.{Command, Option}
 
 import java.io.File
 import java.util.concurrent.Callable
@@ -31,38 +32,44 @@ object DBpediaTKG {
   class TemporalExtraction extends Callable[Int] {
 
     @Option(names = Array("-i"))
-    var inFile: File = _
+    var in: String = _
 
     @Option(names = Array("-o"))
-    var outFile: File = _
+    var out: String = _
 
-    @Option(names = Array("-e"))
-    var diefEndpoint: String = _
+    @Option(names = Array("-e"), split = ",")
+    var diefEndpoints: java.util.ArrayList[String] = _
 
     override def call(): Int = {
-      System.err.println(s"in: ${inFile.getPath} out: ${outFile.getPath}")
+      System.err.println(s"in: ${in} out: ${out}")
 
       val portRegex = ":(\\d+)-(\\d+)".r
-      val matches = portRegex.findFirstMatchIn(diefEndpoint)
-      val urls: List[String] =
-        if (matches.isDefined) {
-          val startPort = matches.get.group(1).trim.toInt
-          val urlPrefix = diefEndpoint.substring(0,matches.get.start)
-          val urlSuffix = diefEndpoint.substring(matches.get.end)
-          val endPort = matches.get.group(2).trim.toInt
-          (startPort to endPort).map({
-            port => urlPrefix +":"+ port + urlSuffix
-          }).toList
-        } else {
-          List(diefEndpoint)
-        }
 
-      outFile.mkdir()
+
+      val urls = diefEndpoints.toArray.flatMap({
+        case diefEndpoint: String =>
+          val matches = portRegex.findFirstMatchIn(diefEndpoint)
+          if (matches.isDefined) {
+            val startPort = matches.get.group(1).trim.toInt
+            val urlPrefix = diefEndpoint.substring(0, matches.get.start)
+            val urlSuffix = diefEndpoint.substring(matches.get.end)
+            val endPort = matches.get.group(2).trim.toInt
+            (startPort to endPort).map({
+              port => urlPrefix + ":" + port + urlSuffix
+            }).toList
+          } else {
+            List(diefEndpoint)
+          }
+      }).toList
+
+      val hdfs = new HDFSUtil(out)
+      hdfs.createDir(out)
+      hdfs.getFs.close()
 
       System.err.println(urls)
 
       val extraction = new DBpediaTKGExtraction
-      extraction.runPath(inFile.getPath, outFile.getPath, urls)
+      extraction.run(in, out, urls)
       0
     }
   }
@@ -70,17 +77,20 @@ object DBpediaTKG {
   @Command(name = "partition")
   class FlatRepartitioner extends Callable[Int] {
 
-    @Option(names = Array("-i"))
+    @Option(names = Array("-i"), required = true)
     var inFile: File = _
 
-    @Option(names = Array("-o"))
+    @Option(names = Array("-o"), required = true)
     var outFile: File = _
+
+    @Option(names = Array("-p"), required = true)
+    var numberOfPartitions: Int = _
 
     override def call(): Int = {
       System.err.println(s"in: ${inFile.getPath} out: ${outFile.getPath}")
 
       val repartitioner = new FlatPageRevisionPartitioner
-      repartitioner.run(inFile.getPath, outFile.getPath)
+      repartitioner.run(inFile.getPath, outFile.getPath, numberOfPartitions)
       0
     }
   }
