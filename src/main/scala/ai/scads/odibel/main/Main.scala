@@ -14,7 +14,7 @@ object Main extends App {
 
 @Command(
   name="odibel",
-  subcommands = Array(classOf[DBpediaTKG], classOf[TKGEval]),
+  subcommands = Array(classOf[DBpediaTKG], classOf[TKGEval], classOf[SparkDummy]),
   mixinStandardHelpOptions = true
 )
 class Main extends Callable[Int] {

@@ -14,6 +14,11 @@ import scala.xml.XML
  */
 object DBpediaTKGExtractionSpark extends App {
 
+  val inpath=args(0)
+  val sinkpath=args(1)
+  val diefStartPort=(2)
+  val parallelism=128
+
   case class SplitRow(pagexml: String, revisionxml: String)
   case class InfoObj(stageId: Int, partitionId: Int, executorId: Long)
 
@@ -39,12 +44,14 @@ object DBpediaTKGExtractionSpark extends App {
   val session = SparkSession.builder().config(Config.Spark.getConfig).getOrCreate()
 
   val sparkcontext = session.sparkContext
+  sparkcontext.setLogLevel("WARN")
   val sparksql = session.sqlContext
 
   import sparksql.implicits._
 
+  val gloobpath = inpath
   //  val df = sparksql.read.json("/home/marvin/workspace/data/pages_with_5_rev.split").as[SplitRow]
-  val df = sparksql.read.json("/home/marvin/workspace/data/wikidumps/enwiki-20240801-pages-meta-history1.xml-p17910p18672.split").as[FlatRawPageRevision]
+  val df = sparksql.read.json(gloobpath).as[FlatRawPageRevision]
 //  val df = sparksql.read.json("/home/marvin/workspace/data/test.split").as[FlatRawPageRevision]
 
   val now = System.currentTimeMillis()
@@ -52,7 +59,7 @@ object DBpediaTKGExtractionSpark extends App {
   val temporalRecords = df.map(WikiUtil.enrichFlatRawPageRevision)
     .filter(_.ns.get == 0) // TODO
 //    .filter(_.pId > 18247 )
-    .repartition(8, partitionExprs = $"pId")
+    .repartition(parallelism,partitionExprs = $"pId")
     .groupBy("pId")
     .as[Long,FlatPageRevision]
     .flatMapSortedGroups($"rId".asc)((x, revisions) => {
@@ -67,7 +74,7 @@ object DBpediaTKGExtractionSpark extends App {
 
 
       val tgb = new TemporalWindowBuilder()
-      val rc = new RCDiefServer(s"http://127.0.0.1:${9500+partId}/server/extraction/en/")
+      val rc = new RCDiefServer(s"http://127.0.0.1:${diefStartPort+partId}/server/extraction/en/")
 
       revisions.foreach({
         revision =>
@@ -88,7 +95,7 @@ object DBpediaTKGExtractionSpark extends App {
       tgb.buildEntries()
     })
 
-  temporalRecords.write.mode("overwrite").json("/home/marvin/workspace/data/test.split.tkg2")
+  temporalRecords.write.parquet(sinkpath)
 
   val end = System.currentTimeMillis()
   println(Duration.ofMillis(end-now))

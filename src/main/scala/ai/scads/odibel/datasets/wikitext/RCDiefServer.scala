@@ -58,6 +58,9 @@ class RCDiefServer(endpoint: String) {
           // Handle non-successful status codes
           logger.error(s"Attempt $attempt: Received status code $statusCode from $endpoint")
           lastException = new IOException(s"Unexpected response status: $statusCode")
+          val responseEntity = response.getEntity
+          responseContent = EntityUtils.toString(responseEntity, StandardCharsets.UTF_8)
+//          println(responseContent) // TODO
         }
       } catch {
         case e: IOException =>
