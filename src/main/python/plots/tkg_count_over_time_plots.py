@@ -1,14 +1,10 @@
 import argparse
 import glob
 import os
-import json
-from pyspark.sql import SparkSession
-from pyspark.sql.functions import col, from_unixtime, count, when, lag
-from pyspark.sql.window import Window
 import matplotlib.pyplot as plt
 import pandas as pd
 
-def plot_csv_from_folders(input_dir, output_dir, aggregate=None, plot_type="line"):
+def plot_count_over_time(input_dir, output_dir, aggregate=None, plot_type="line"):
     """
     Plots data from CSV files in subfolders. Automatically detects 'time' and 'count' columns.
 
@@ -19,7 +15,7 @@ def plot_csv_from_folders(input_dir, output_dir, aggregate=None, plot_type="line
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
 
-    # Suche alle CSV-Dateien in den Unterordnern
+    # iterate over subfolders
     for folder_name in os.listdir(input_dir):
         folder_path = os.path.join(input_dir, folder_name)
 
@@ -46,8 +42,6 @@ def plot_csv_from_folders(input_dir, output_dir, aggregate=None, plot_type="line
                 # Aggregate data if specified
                 if aggregate:
                     data = data.set_index(time_col).resample(aggregate).sum().reset_index()
-
-
 
                 # create plot
                 plt.figure(figsize=(10, 6))
@@ -76,12 +70,17 @@ def plot_csv_from_folders(input_dir, output_dir, aggregate=None, plot_type="line
 if __name__ == "__main__":
     # Argument parser to handle input/output paths
     parser = argparse.ArgumentParser(description="Process and visualize CSV data for DBpedia triples.")
-    parser.add_argument("--input", required=True, help="Path to the directory containing the directories of the CSV files.")
-    parser.add_argument("--output", required=True, help="Path to the directory for saving output plots.")
-    parser.add_argument("--aggregate", required=False, default="Y", help="Aggregation interval (e.g.,'Y' for year, 'M' for month, 'W' for week).")
-    parser.add_argument("--plot-type", required=False, choices=["line", "bar"], default="line", help="Type of plot: 'line' or 'bar'.")
+    parser.add_argument("--input", required=True,
+                        help="Path to the directory containing the directories of the CSV files.")
+    parser.add_argument("--output", required=True,
+                        help="Path to the directory for saving output plots.")
+    parser.add_argument("--aggregate", required=False, default="Y",
+                        help="Aggregation interval (e.g.,'Y' for year, 'M' for month, 'W' for week).")
+    parser.add_argument("--plot-type", required=False, choices=["line", "bar"], default="line",
+                        help="Type of plot: 'line' or 'bar'.")
 
     args = parser.parse_args()
 
     # Pass the input and output paths, aggregation interval, and plot type to the main function
-    plot_csv_from_folders(args.input, args.output, args.aggregate, args.plot_type)
+    plot_count_over_time(input_dir=args.input, output_dir=args.output,
+                         aggregate=args.aggregate, plot_type=args.plot_type)
