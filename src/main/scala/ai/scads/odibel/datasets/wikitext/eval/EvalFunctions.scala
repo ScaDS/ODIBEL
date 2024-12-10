@@ -83,7 +83,6 @@ object EvalFunctions {
     import data.sparkSession.implicits._
     data.withColumn("start_time", from_unixtime($"tFrom" / 1000))
       .select($"start_time", $"rFrom")
-      .distinct()
       .groupBy("start_time")
       .agg(countDistinct("rFrom").alias("count_start_revisions"))
       .orderBy("start_time")
@@ -93,7 +92,6 @@ object EvalFunctions {
     import data.sparkSession.implicits._
     data.withColumn("end_time", from_unixtime($"tUntil" / 1000))
       .select($"end_time", $"rUntil")
-      .distinct()
       .groupBy("end_time")
       .agg(countDistinct("rUntil").alias("count_end_revisions"))
       .orderBy("end_time")
