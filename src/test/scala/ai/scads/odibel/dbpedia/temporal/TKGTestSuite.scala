@@ -127,4 +127,139 @@ class TKGTestSuite extends AnyFunSuite {
     }
   }
 
+  test("countStartRevisionsOverTime") {
+    val data = spark.read.json(spark.createDataset(Seq(
+      "{\"head\": \"http://dbpedia.org/resource/subject1\", \"rel\": \"http://dbpedia.org/ontology/relation1\", \"tail\": \"http://dbpedia.org/resource/tail1>\", \"rFrom\": \"1000\", \"rUntil\": \"1001\", \"tFrom\": 1607558400000, \"tUntil\": 1702166400000}",
+      "{\"head\": \"http://dbpedia.org/resource/subject2\", \"rel\": \"http://dbpedia.org/ontology/relation1\", \"tail\": \"\\\"none\\\"@en\", \"rFrom\": \"1000\", \"rUntil\": \"1002\", \"tFrom\": 1607558400000, \"tUntil\": 1607558400000}",
+      "{\"head\": \"http://dbpedia.org/resource/subject2\", \"rel\": \"http://dbpedia.org/ontology/relation1\", \"tail\": \"\\\"none\\\"@en\", \"rFrom\": \"1002\", \"rUntil\": \"1003\", \"tFrom\": 1607558400000, \"tUntil\": 1702166400000}",
+      "{\"head\": \"http://dbpedia.org/resource/subject2\", \"rel\": \"http://dbpedia.org/ontology/relation1\", \"tail\": \"\\\"none\\\"@en\", \"rFrom\": \"1003\", \"rUntil\": \"1004\", \"tFrom\": 1702166400000, \"tUntil\": 1733788800000}",
+      "{\"head\": \"http://dbpedia.org/resource/subject2\", \"rel\": \"http://dbpedia.org/ontology/relation1\", \"tail\": \"\\\"none\\\"@en\", \"rFrom\": \"1002\", \"rUntil\": \"1004\", \"tFrom\": 1702166400000, \"tUntil\": 1733788800000}"
+    ))).as[TemporalExtractionResult]
+    val result = EvalFunctions.countStartRevisionsOverTime(data).collect()
+    val expected = Array(
+      ("2020-12-10 01:00:00", 2),
+      ("2023-12-10 01:00:00", 2)
+    )
+    assert(result.map(row => (row.getString(0), row.getLong(1))) === expected)
+  }
+
+  test("countEndRevisionsOverTime") {
+    val data = spark.read.json(spark.createDataset(Seq(
+      "{\"head\": \"http://dbpedia.org/resource/subject1\", \"rel\": \"http://dbpedia.org/ontology/relation1\", \"tail\": \"http://dbpedia.org/resource/tail1>\", \"rFrom\": \"1000\", \"rUntil\": \"1001\", \"tFrom\": 1607558400000, \"tUntil\": 1702166400000}",
+      "{\"head\": \"http://dbpedia.org/resource/subject2\", \"rel\": \"http://dbpedia.org/ontology/relation1\", \"tail\": \"\\\"none\\\"@en\", \"rFrom\": \"1000\", \"rUntil\": \"1002\", \"tFrom\": 1607558400000, \"tUntil\": 1607558400000}",
+      "{\"head\": \"http://dbpedia.org/resource/subject2\", \"rel\": \"http://dbpedia.org/ontology/relation1\", \"tail\": \"\\\"none\\\"@en\", \"rFrom\": \"1002\", \"rUntil\": \"1003\", \"tFrom\": 1607558400000, \"tUntil\": 1702166400000}",
+      "{\"head\": \"http://dbpedia.org/resource/subject2\", \"rel\": \"http://dbpedia.org/ontology/relation1\", \"tail\": \"\\\"none\\\"@en\", \"rFrom\": \"1003\", \"rUntil\": \"1004\", \"tFrom\": 1702166400000, \"tUntil\": 1733788800000}",
+      "{\"head\": \"http://dbpedia.org/resource/subject2\", \"rel\": \"http://dbpedia.org/ontology/relation1\", \"tail\": \"\\\"none\\\"@en\", \"rFrom\": \"1002\", \"rUntil\": \"1004\", \"tFrom\": 1702166400000, \"tUntil\": 1733788800000}"
+    ))).as[TemporalExtractionResult]
+    val result = EvalFunctions.countEndRevisionsOverTime(data).collect()
+    val expected = Array(
+      ("2020-12-10 01:00:00", 1),
+      ("2023-12-10 01:00:00", 2),
+      ("2024-12-10 01:00:00", 1)
+    )
+    assert(result.map(row => (row.getString(0), row.getLong(1))) === expected)
+  }
+
+  test("countStartTriplesOverTime") {
+    val data = spark.read.json(spark.createDataset(Seq(
+      "{\"head\": \"http://dbpedia.org/resource/subject1\", \"rel\": \"http://dbpedia.org/ontology/relation1\", \"tail\": \"http://dbpedia.org/resource/tail1>\", \"rFrom\": \"1000\", \"rUntil\": \"1001\", \"tFrom\": 1607558400000, \"tUntil\": 1702166400000}",
+      "{\"head\": \"http://dbpedia.org/resource/subject2\", \"rel\": \"http://dbpedia.org/ontology/relation1\", \"tail\": \"\\\"none\\\"@en\", \"rFrom\": \"1000\", \"rUntil\": \"1002\", \"tFrom\": 1607558400000, \"tUntil\": 1607558400000}",
+      "{\"head\": \"http://dbpedia.org/resource/subject2\", \"rel\": \"http://dbpedia.org/ontology/relation1\", \"tail\": \"\\\"none\\\"@en\", \"rFrom\": \"1002\", \"rUntil\": \"1003\", \"tFrom\": 1607558400000, \"tUntil\": 1702166400000}",
+      "{\"head\": \"http://dbpedia.org/resource/subject2\", \"rel\": \"http://dbpedia.org/ontology/relation1\", \"tail\": \"\\\"none\\\"@en\", \"rFrom\": \"1003\", \"rUntil\": \"1004\", \"tFrom\": 1702166400000, \"tUntil\": 1733788800000}",
+      "{\"head\": \"http://dbpedia.org/resource/subject2\", \"rel\": \"http://dbpedia.org/ontology/relation1\", \"tail\": \"\\\"none\\\"@en\", \"rFrom\": \"1002\", \"rUntil\": \"1004\", \"tFrom\": 1702166400000, \"tUntil\": 1733788800000}"
+    ))).as[TemporalExtractionResult]
+    val result = EvalFunctions.countStartTriplesOverTime(data).collect()
+    val expected = Array(
+      ("2020-12-10 01:00:00", 2),
+      ("2023-12-10 01:00:00", 1)
+    )
+    assert(result.map(row => (row.getString(0), row.getLong(1))) === expected)
+  }
+
+  test("countEndTriplesOverTime") {
+    val data = spark.read.json(spark.createDataset(Seq(
+      "{\"head\": \"http://dbpedia.org/resource/subject1\", \"rel\": \"http://dbpedia.org/ontology/relation1\", \"tail\": \"http://dbpedia.org/resource/tail1>\", \"rFrom\": \"1000\", \"rUntil\": \"1001\", \"tFrom\": 1607558400000, \"tUntil\": 1702166400000}",
+      "{\"head\": \"http://dbpedia.org/resource/subject2\", \"rel\": \"http://dbpedia.org/ontology/relation1\", \"tail\": \"\\\"none\\\"@en\", \"rFrom\": \"1000\", \"rUntil\": \"1002\", \"tFrom\": 1607558400000, \"tUntil\": 1607558400000}",
+      "{\"head\": \"http://dbpedia.org/resource/subject2\", \"rel\": \"http://dbpedia.org/ontology/relation1\", \"tail\": \"\\\"none\\\"@en\", \"rFrom\": \"1002\", \"rUntil\": \"1003\", \"tFrom\": 1607558400000, \"tUntil\": 1702166400000}",
+      "{\"head\": \"http://dbpedia.org/resource/subject2\", \"rel\": \"http://dbpedia.org/ontology/relation1\", \"tail\": \"\\\"none\\\"@en\", \"rFrom\": \"1003\", \"rUntil\": \"1004\", \"tFrom\": 1702166400000, \"tUntil\": 1733788800000}",
+      "{\"head\": \"http://dbpedia.org/resource/subject2\", \"rel\": \"http://dbpedia.org/ontology/relation1\", \"tail\": \"\\\"none\\\"@en\", \"rFrom\": \"1002\", \"rUntil\": \"1004\", \"tFrom\": 1702166400000, \"tUntil\": 1733788800000}"
+    ))).as[TemporalExtractionResult]
+    val result = EvalFunctions.countEndTriplesOverTime(data).collect()
+    val expected = Array(
+      ("2020-12-10 01:00:00", 1),
+      ("2023-12-10 01:00:00", 2),
+      ("2024-12-10 01:00:00", 1),
+    )
+    assert(result.map(row => (row.getString(0), row.getLong(1))) === expected)
+  }
+
+  test("countChangesOverTime") {
+    val data = spark.read.json(spark.createDataset(Seq(
+      "{\"head\": \"http://dbpedia.org/resource/subject1\", \"rel\": \"http://dbpedia.org/ontology/relation1\", \"tail\": \"http://dbpedia.org/resource/tail1>\", \"rFrom\": \"1000\", \"rUntil\": \"1001\", \"tFrom\": 1607558400000, \"tUntil\": 1702166400000}",
+      "{\"head\": \"http://dbpedia.org/resource/subject2\", \"rel\": \"http://dbpedia.org/ontology/relation1\", \"tail\": \"\\\"none\\\"@en\", \"rFrom\": \"1000\", \"rUntil\": \"1002\", \"tFrom\": 1607558400000, \"tUntil\": 1607558400000}",
+      "{\"head\": \"http://dbpedia.org/resource/subject2\", \"rel\": \"http://dbpedia.org/ontology/relation1\", \"tail\": \"\\\"none\\\"@en\", \"rFrom\": \"1002\", \"rUntil\": \"1003\", \"tFrom\": 1607558400000, \"tUntil\": 1702166400000}",
+      "{\"head\": \"http://dbpedia.org/resource/subject2\", \"rel\": \"http://dbpedia.org/ontology/relation1\", \"tail\": \"\\\"none\\\"@en\", \"rFrom\": \"1003\", \"rUntil\": \"1004\", \"tFrom\": 1702166400000, \"tUntil\": 1733788800000}",
+      "{\"head\": \"http://dbpedia.org/resource/subject2\", \"rel\": \"http://dbpedia.org/ontology/relation1\", \"tail\": \"\\\"none\\\"@en\", \"rFrom\": \"1002\", \"rUntil\": \"1004\", \"tFrom\": 1702166400000, \"tUntil\": 1733788800000}"
+    ))).as[TemporalExtractionResult]
+    val result = EvalFunctions.countChangesOverTime(data).collect()
+    val expected = Array(
+      ("2020-12-10 01:00:00", 4),
+      ("2023-12-10 01:00:00", 4),
+      ("2024-12-10 01:00:00", 2),
+    )
+    assert(result.map(row => (row.getString(0), row.getLong(1))) === expected)
+  }
+
+  test("calculateInDegreeDistributionPerYear") {
+    val data = spark.read.json(spark.createDataset(Seq(
+      "{\"head\": \"http://dbpedia.org/resource/subject1\", \"rel\": \"http://dbpedia.org/ontology/relation1\", \"tail\": \"http://dbpedia.org/resource/tail1\", \"rFrom\": \"1000\", \"rUntil\": \"1001\", \"tFrom\": 1607558400000, \"tUntil\": 1702166400000}",
+      "{\"head\": \"http://dbpedia.org/resource/subject2\", \"rel\": \"http://dbpedia.org/ontology/relation1\", \"tail\": \"http://dbpedia.org/resource/subject1\", \"rFrom\": \"1000\", \"rUntil\": \"1002\", \"tFrom\": 1607558400000, \"tUntil\": 1607558400000}",
+      "{\"head\": \"http://dbpedia.org/resource/subject2\", \"rel\": \"http://dbpedia.org/ontology/relation1\", \"tail\": \"http://dbpedia.org/resource/subject2\", \"rFrom\": \"1002\", \"rUntil\": \"1003\", \"tFrom\": 1607558400000, \"tUntil\": 1702166400000}",
+      "{\"head\": \"http://dbpedia.org/resource/subject2\", \"rel\": \"http://dbpedia.org/ontology/relation2\", \"tail\": \"http://dbpedia.org/resource/subject2\", \"rFrom\": \"1003\", \"rUntil\": \"1004\", \"tFrom\": 1702166400000, \"tUntil\": 1733788800000}",
+      "{\"head\": \"http://dbpedia.org/resource/subject2\", \"rel\": \"http://dbpedia.org/ontology/relation3\", \"tail\": \"http://dbpedia.org/resource/subject3\", \"rFrom\": \"1002\", \"rUntil\": \"1004\", \"tFrom\": 1702166400000, \"tUntil\": 1733788800000}",
+      "{\"head\": \"http://dbpedia.org/resource/subject3\", \"rel\": \"http://dbpedia.org/ontology/relation3\", \"tail\": \"http://dbpedia.org/resource/subject3\", \"rFrom\": \"1002\", \"rUntil\": \"1004\", \"tFrom\": 1702166400000, \"tUntil\": 1733788800000}"
+    ))).as[TemporalExtractionResult]
+    val actual = EvalFunctions.calculateInDegreeDistributionPerYear(data).collect()
+
+    val expected = Seq(
+      (2020, "http://dbpedia.org/resource/subject1", 1),
+      (2020, "http://dbpedia.org/resource/subject2", 1),
+      (2020, "http://dbpedia.org/resource/tail1", 1),
+      (2023, "http://dbpedia.org/resource/subject2", 1),
+      (2023, "http://dbpedia.org/resource/subject3", 2),
+    ).toDF("year", "entity", "degree").orderBy("year", "entity", "degree")
+    val expectedRows = expected.collect()
+
+    assert(actual.length == expectedRows.length, s"Expected ${expectedRows.length} rows, but got ${actual.length}")
+    actual.zip(expectedRows).foreach { case (actualRow, expectedRow) =>
+      assert(actualRow == expectedRow, s"Row mismatch: expected $expectedRow, got $actualRow")
+    }
+  }
+
+  test("calculateOutDegreeDistributionPerYear") {
+    val data = spark.read.json(spark.createDataset(Seq(
+      "{\"head\": \"http://dbpedia.org/resource/subject1\", \"rel\": \"http://dbpedia.org/ontology/relation1\", \"tail\": \"http://dbpedia.org/resource/tail1\", \"rFrom\": \"1000\", \"rUntil\": \"1001\", \"tFrom\": 1607558400000, \"tUntil\": 1702166400000}",
+      "{\"head\": \"http://dbpedia.org/resource/subject2\", \"rel\": \"http://dbpedia.org/ontology/relation1\", \"tail\": \"http://dbpedia.org/resource/subject1\", \"rFrom\": \"1000\", \"rUntil\": \"1002\", \"tFrom\": 1607558400000, \"tUntil\": 1607558400000}",
+      "{\"head\": \"http://dbpedia.org/resource/subject2\", \"rel\": \"http://dbpedia.org/ontology/relation1\", \"tail\": \"http://dbpedia.org/resource/subject2\", \"rFrom\": \"1002\", \"rUntil\": \"1003\", \"tFrom\": 1607558400000, \"tUntil\": 1702166400000}",
+      "{\"head\": \"http://dbpedia.org/resource/subject2\", \"rel\": \"http://dbpedia.org/ontology/relation2\", \"tail\": \"http://dbpedia.org/resource/subject2\", \"rFrom\": \"1003\", \"rUntil\": \"1004\", \"tFrom\": 1702166400000, \"tUntil\": 1733788800000}",
+      "{\"head\": \"http://dbpedia.org/resource/subject2\", \"rel\": \"http://dbpedia.org/ontology/relation3\", \"tail\": \"http://dbpedia.org/resource/subject3\", \"rFrom\": \"1002\", \"rUntil\": \"1004\", \"tFrom\": 1702166400000, \"tUntil\": 1733788800000}",
+      "{\"head\": \"http://dbpedia.org/resource/subject3\", \"rel\": \"http://dbpedia.org/ontology/relation3\", \"tail\": \"http://dbpedia.org/resource/subject3\", \"rFrom\": \"1002\", \"rUntil\": \"1004\", \"tFrom\": 1702166400000, \"tUntil\": 1733788800000}",
+      "{\"head\": \"http://dbpedia.org/resource/subject3\", \"rel\": \"http://dbpedia.org/ontology/relation4\", \"tail\": \"http://dbpedia.org/resource/subject3\", \"rFrom\": \"1002\", \"rUntil\": \"1004\", \"tFrom\": 1702166400000, \"tUntil\": 1733788800000}"
+    ))).as[TemporalExtractionResult]
+    val actual = EvalFunctions.calculateOutDegreeDistributionPerYear(data).collect()
+
+    val expected = Seq(
+      (2020, "http://dbpedia.org/resource/subject1", 1),
+      (2020, "http://dbpedia.org/resource/subject2", 2),
+      (2023, "http://dbpedia.org/resource/subject2", 2),
+      (2023, "http://dbpedia.org/resource/subject3", 2),
+    ).toDF("year", "entity", "degree").orderBy("year", "entity", "degree")
+    val expectedRows = expected.collect()
+
+    assert(actual.length == expectedRows.length, s"Expected ${expectedRows.length} rows, but got ${actual.length}")
+    actual.zip(expectedRows).foreach { case (actualRow, expectedRow) =>
+      assert(actualRow == expectedRow, s"Row mismatch: expected $expectedRow, got $actualRow")
+    }
+  }
+
 }
