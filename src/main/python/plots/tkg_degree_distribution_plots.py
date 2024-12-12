@@ -22,35 +22,9 @@ def filter_outliers(df, column):
 
     return df[df[column] <= upper_bound]
 
-def plot_yearly_instance_scatter(data, output_path, year_col, degree_col, title):
-    """
-    Creates a scatter plot with year on the x-axis and each instance/resource
-    on the y-axis, visualized by in/out degrees.
-
-    Parameters:
-    - data: The DataFrame containing the data.
-    - output_path: Path to save the output plot.
-    - year_col: The column representing the year.
-    - degree_col: The degree column (in_degree or out_degree).
-    - title: Title for the plot.
-    """
-    # Generate a scatter plot
-    plt.figure(figsize=(12, 8))
-    plt.scatter(data[year_col], data[degree_col], alpha=0.7, color="blue", edgecolor="k", linewidth=0.5)
-    plt.xlabel("Year")
-    plt.ylabel("Degree (In/Out)")
-    plt.title(title)
-    plt.grid(True, linestyle="--", linewidth=0.5)
-
-    # Save the scatter plot
-    plt.tight_layout()
-    plt.savefig(output_path, bbox_inches="tight")
-    plt.close()
-
-    print(f"Yearly instance scatter plot saved as {output_path}")
 
 
-def plot_degree_csv(input_dir, output_dir, scale_type="log", remove_outliers=False):
+def plot_degree_distribution(input_dir, output_dir, scale_type="log", remove_outliers=False):
     """
     Processes CSV files and generates scatter plots for degree distributions with frequency on the y-axis
     and degree on the x-axis, with years as colors.
@@ -66,45 +40,90 @@ def plot_degree_csv(input_dir, output_dir, scale_type="log", remove_outliers=Fal
     for folder_name in os.listdir(input_dir):
         folder_path = os.path.join(input_dir, folder_name)
 
-        if os.path.isdir(folder_path) and "degree" in folder_name.lower():
+        if os.path.isdir(folder_path) and "degree_per_year" in folder_name.lower():
             csv_files = glob.glob(os.path.join(folder_path, "*.csv"))
-
             for file_path in csv_files:
-                data = pd.read_csv(file_path)
-
+                # Read the data
+                try:
+                    data = pd.read_csv(file_path)
+                except FileNotFoundError:
+                    print(f"Error: File not found at {file_path}")
+                    return
                 # identify degree column and year column
-                if "in_degree" in data.columns and "tail" in data.columns:
+                if "in_degree" in folder_name.lower():
+                    degree_col = "in_degree"
+                elif "out_degree" in folder_name.lower():
+                    degree_col = "out_degree"
+                else:
+                    print(f"Skipping file {file_path}: folder_name.lower() do not match expected 'degree' format.")
+
+                    print(data.columns)
+                    print("in_degree" in data.columns)
+                    continue
+                # Extract relevant columns for boxplot
+                years = data['year']
+                # Create the plot
+                plt.figure(figsize=(12, 8))
+                # Create boxplots for each year and visualize them clearly
+                data_list = []
+                for _, row in data.iterrows():
+                    data_list.append([row['min'], row['q25'], row['median'], row['q75'], row['max']])
+                plt.boxplot(data_list, positions=years, widths=0.6, showfliers=False, patch_artist=True,
+                            boxprops=dict(facecolor="lightblue", color="blue"),
+                            medianprops=dict(color="red"))
+                # Adjust x-axis labels to be more readable
+                plt.xticks(ticks=years, labels=years, rotation=45, fontsize=10)
+                # Use logarithmic scale for y-axis to handle extreme values
+                plt.yscale("linear")
+                # Add titles and labels
+                plt.title(f"{degree_col} Distribution Boxplot Over Time", fontsize=14)
+                plt.xlabel("Year", fontsize=12)
+                plt.ylabel(f"{degree_col} (Log Scale)", fontsize=12)
+                plt.grid(axis='y', linestyle="--", alpha=0.7)
+                # Save the plot
+                output_file = os.path.join(output_dir, f"{degree_col}_distribution_per_year.png")
+                plt.tight_layout()
+                plt.savefig(output_file)
+                print(f"Boxplot saved at {output_file}")
+                plt.close()
+
+
+        if os.path.isdir(folder_path) and "degree_frequency" in folder_name.lower():
+            csv_files = glob.glob(os.path.join(folder_path, "*.csv"))
+            for file_path in csv_files:
+                try:
+                    data = pd.read_csv(file_path)
+                except FileNotFoundError:
+                    print(f"Error: File not found at {file_path}")
+                    return
+                # identify degree column and year column
+                if "in_degree" in data.columns:
                     degree_col = "in_degree"
                     year_col = "year"
-                elif "out_degree" in data.columns and "head" in data.columns:
+                elif "out_degree" in data.columns:
                     degree_col = "out_degree"
                     year_col = "year"
                 else:
                     print(f"Skipping file {file_path}: Columns do not match expected 'degree' format.")
                     continue
-
-                # calculate frequency of degrees per year
-                grouped_data = data.groupby([year_col, degree_col]).size().reset_index(name="frequency")
                 # Remove outliers from the degree column if specified
-                grouped_data = filter_outliers(grouped_data, degree_col)
-
+                if remove_outliers:
+                    data = filter_outliers(data, degree_col)
                 # normalize years for a color gradient
-                years = grouped_data[year_col].unique()
+                years = data[year_col].unique()
                 cmap = plt.cm.coolwarm  # use a blue-to-red color map
-
                 # create scatter plot
                 plt.figure(figsize=(12, 8))
                 scatter = plt.scatter(
-                    grouped_data[degree_col],
-                    grouped_data["frequency"],
-                    c=grouped_data[year_col],
+                    data[degree_col],
+                    data["frequency"],
+                    c=data[year_col],
                     cmap=cmap,
                     alpha=0.7,
                     edgecolor="k",
                     linewidth=0.1,
                     s=20  # Adjust marker size
                 )
-
                 # handle scale types
                 if scale_type == "log":
                     plt.xscale("log")
@@ -119,36 +138,23 @@ def plot_degree_csv(input_dir, output_dir, scale_type="log", remove_outliers=Fal
                     print(f"Unknown scale type '{scale_type}', defaulting to log.")
                     plt.xscale("log")
                     plt.yscale("log")
-
                 # label and grid
                 plt.xlabel("Degree (Number of Connections)")
                 plt.ylabel("Frequency (Count of Occurrences)")
                 plt.title(f"Degree Distribution for {folder_name} ({scale_type.capitalize()} Scale)")
                 plt.grid(True, linestyle="--", linewidth=0.5)
-
                 # add color bar with year labels
                 cbar = plt.colorbar(scatter, ax=plt.gca(), orientation="vertical")
                 cbar.set_label("Year")
                 cbar.set_ticks(years)
                 cbar.ax.set_yticklabels([str(year) for year in years])
-
                 # save the plot
                 output_file = os.path.join(output_dir, f"{folder_name}_count_on_{scale_type}_scala.png")
                 plt.tight_layout()
                 plt.savefig(output_file, bbox_inches='tight')
                 plt.close()
-
                 print(f"Degree distribution plot saved for {file_path} as {output_file}")
 
-                # yearly instance scatter plot
-                instance_scatter_output = os.path.join(output_dir, f"{folder_name}_distribution.png")
-                plot_yearly_instance_scatter(
-                    data,
-                    output_path=instance_scatter_output,
-                    year_col=year_col,
-                    degree_col=degree_col,
-                    title=f"Scatter Plot of Instances vs Year ({degree_col})"
-                )
 
 if __name__ == "__main__":
     # Argument parser to handle input/output paths
@@ -157,13 +163,13 @@ if __name__ == "__main__":
                         help="Path to the directory containing the directories of the CSV files.")
     parser.add_argument("--output", required=True,
                         help="Path to the directory for saving output plots.")
-    parser.add_argument("--scale-type", required=False, choices=["log", "symlog", "linear"], default="linear",
+    parser.add_argument("--scale-type", required=False, choices=["log", "symlog", "linear"], default="log",
                         help="Scale Type for the Plots: 'log', 'lin' or 'symlog'.")
-    parser.add_argument("--remove-outliers", required=False, choices=[True, False], default=False,
+    parser.add_argument("--remove-outliers", required=False, choices=[True, False], default=True,
                         help="Removes Outliers based on IQR from the Plots: True or False.")
 
     args = parser.parse_args()
 
     # Pass the input and output paths, scale type to the main function
-    plot_degree_csv(input_dir=args.input, output_dir=args.output,
-                    scale_type=args.scale_type, remove_outliers=args.remove_outliers)
+    plot_degree_distribution(input_dir=args.input, output_dir=args.output,
+                             scale_type=args.scale_type, remove_outliers=args.remove_outliers)
