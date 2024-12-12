@@ -81,7 +81,7 @@ object EvalFunctions {
   // Function: Count starting revisions over time
   def countStartRevisionsOverTime(data: Dataset[TemporalExtractionResult]): DataFrame = {
     import data.sparkSession.implicits._
-    data.withColumn("start_time", from_unixtime($"tFrom" / 1000))
+    data.withColumn("start_time", from_unixtime($"tFrom"))
       .select($"start_time", $"rFrom")
       .groupBy("start_time")
       .agg(countDistinct("rFrom").alias("count_start_revisions"))
@@ -90,7 +90,7 @@ object EvalFunctions {
   // Function: Count ending revisions over time
   def countEndRevisionsOverTime(data: Dataset[TemporalExtractionResult]): DataFrame = {
     import data.sparkSession.implicits._
-    data.withColumn("end_time", from_unixtime($"tUntil" / 1000))
+    data.withColumn("end_time", from_unixtime($"tUntil"))
       .select($"end_time", $"rUntil")
       .groupBy("end_time")
       .agg(countDistinct("rUntil").alias("count_end_revisions"))
@@ -99,7 +99,7 @@ object EvalFunctions {
   // Function: Count starting triples over time
   def countStartTriplesOverTime(data: Dataset[TemporalExtractionResult]): DataFrame = {
     import data.sparkSession.implicits._
-    data.withColumn("start_time", from_unixtime($"tFrom" / 1000))
+    data.withColumn("start_time", from_unixtime($"tFrom"))
       .select($"start_time", $"head", $"rel", $"tail")
       .distinct()
       .groupBy("start_time")
@@ -109,7 +109,7 @@ object EvalFunctions {
   // Function: Count ending triples over time
   def countEndTriplesOverTime(data: Dataset[TemporalExtractionResult]): DataFrame = {
     import data.sparkSession.implicits._
-    data.withColumn("end_time", from_unixtime($"tUntil" / 1000))
+    data.withColumn("end_time", from_unixtime($"tUntil"))
       .select($"end_time", $"head", $"rel", $"tail")
       .distinct()
       .groupBy("end_time")
@@ -121,8 +121,8 @@ object EvalFunctions {
     import data.sparkSession.implicits._
 
     val dataWithTimestamps = data
-      .withColumn("start_time", from_unixtime($"tFrom" / 1000))
-      .withColumn("end_time", from_unixtime($"tUntil" / 1000))
+      .withColumn("start_time", from_unixtime($"tFrom"))
+      .withColumn("end_time", from_unixtime($"tUntil"))
 
     // Union of start_time & end_time, to get all relevant timestamps
     val changes = dataWithTimestamps
@@ -161,7 +161,7 @@ object EvalFunctions {
     import data.sparkSession.implicits._
     val filteredResources = this.filterForResources(data = data, filterBySubject = filterBySubject)
     filteredResources
-      .withColumn("year", year(from_unixtime($"tFrom" / 1000)))
+      .withColumn("year", year(from_unixtime($"tFrom")))
       .groupBy($"year", $"tail")
       .agg(count($"head").as("in_degree"))
       .groupBy($"in_degree", $"year")
@@ -173,7 +173,7 @@ object EvalFunctions {
     import data.sparkSession.implicits._
     val filteredResources = this.filterForResources(data = data, filterBySubject = filterBySubject)
     filteredResources
-      .withColumn("year", year(from_unixtime($"tFrom" / 1000)))
+      .withColumn("year", year(from_unixtime($"tFrom")))
       .groupBy($"year", $"tail")
       .agg(count($"head").as("in_degree"))
       .groupBy($"year")
@@ -193,7 +193,7 @@ object EvalFunctions {
   def calculateOutDegreeFrequency(data: Dataset[TemporalExtractionResult]) = {
     import data.sparkSession.implicits._
     data
-      .withColumn("year", year(from_unixtime($"tFrom" / 1000)))
+      .withColumn("year", year(from_unixtime($"tFrom")))
       .groupBy($"year", $"head")
       .agg(count($"tail").as("out_degree"))
       .groupBy($"out_degree", $"year")
@@ -205,7 +205,7 @@ object EvalFunctions {
   def calculateOutDegreeDistributionPerYear(data: Dataset[TemporalExtractionResult]) = {
     import data.sparkSession.implicits._
     data
-      .withColumn("year", year(from_unixtime($"tFrom" / 1000)))
+      .withColumn("year", year(from_unixtime($"tFrom")))
       .groupBy($"year", $"head")
       .agg(count($"tail").as("out_degree"))
       .groupBy($"year")
@@ -231,7 +231,7 @@ object EvalFunctions {
     val validData = data.filter(F.col("tFrom") <= F.col("tUntil"))
 
     // Add a year column based on tFrom
-    val dataWithYear = validData.withColumn("year", F.year(F.from_unixtime(F.col("tFrom") / 1000)))
+    val dataWithYear = validData.withColumn("year", F.year(F.from_unixtime(F.col("tFrom"))))
 
     // Calculate the duration for each triple (in milliseconds)
     val dataWithDuration = dataWithYear.withColumn("duration", F.col("tUntil") - F.col("tFrom"))
