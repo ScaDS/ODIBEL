@@ -5,12 +5,11 @@ import glob
 import argparse
 
 def create_boxplots(input_dir, output_dir):
-    print(input_dir)
     folder_path = os.path.join(input_dir, "calculate_temporal_activity_span_over_time")
-    print(folder_path)
+
     # Find all CSV files in the subfolders
     csv_files = glob.glob(os.path.join(folder_path, "*.csv"))
-    print(csv_files)
+
     for input_file in csv_files:
 
         # Read the data
