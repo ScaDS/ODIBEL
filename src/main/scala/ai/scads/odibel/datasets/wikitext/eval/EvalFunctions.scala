@@ -2,7 +2,7 @@ package ai.scads.odibel.datasets.wikitext.eval
 
 import ai.scads.odibel.datasets.wikitext.TemporalExtractionResult
 import org.apache.spark.sql.expressions.Window
-import org.apache.spark.sql.{DataFrame, Dataset}
+import org.apache.spark.sql.{DataFrame, Dataset, functions => F}
 import org.apache.spark.sql.functions._
 
 
@@ -141,8 +141,7 @@ object EvalFunctions {
       .orderBy("change_time")
   }
 
-  // Function: Calculate In-Degree Distribution per Year
-  def calculateInDegreeDistributionPerYear(data: Dataset[TemporalExtractionResult], filterBySubject: Boolean = false) = {
+  def filterForResources(data: Dataset[TemporalExtractionResult], filterBySubject: Boolean) = {
     import data.sparkSession.implicits._
     // filter to ensure only URIs are considered as 'tail'
     val uris = data.filter($"tail".startsWith("http://"))
@@ -154,13 +153,52 @@ object EvalFunctions {
     } else {
       uris
     }
+    filteredResources
+  }
 
-    // calculate In-Degree
+  // Function: Calculate In-Degree Frequency Distribution per Year
+  def calculateInDegreeFrequency(data: Dataset[TemporalExtractionResult], filterBySubject: Boolean = false, filterOutliers: Boolean = false) = {
+    import data.sparkSession.implicits._
+    val filteredResources = this.filterForResources(data = data, filterBySubject = filterBySubject)
     filteredResources
       .withColumn("year", year(from_unixtime($"tFrom" / 1000)))
       .groupBy($"year", $"tail")
-      .agg(count($"head").as("in_degree")) // Count the number of incoming edges for each tail
-      .orderBy("year", "tail")
+      .agg(count($"head").as("in_degree"))
+      .groupBy($"in_degree", $"year")
+      .agg(count("*").as("frequency"))
+      .orderBy("in_degree", "year")
+  }
+  // Function: Calculate In-Degree Distribution per Year
+  def calculateInDegreeDistributionPerYear(data: Dataset[TemporalExtractionResult], filterBySubject: Boolean = false) = {
+    import data.sparkSession.implicits._
+    val filteredResources = this.filterForResources(data = data, filterBySubject = filterBySubject)
+    filteredResources
+      .withColumn("year", year(from_unixtime($"tFrom" / 1000)))
+      .groupBy($"year", $"tail")
+      .agg(count($"head").as("in_degree"))
+      .groupBy($"year")
+      .agg(
+        avg("in_degree").as("mean"),
+        expr("percentile_approx(in_degree, 0.5)").as("median"),
+        stddev("in_degree").as("std"),
+        min("in_degree").as("min"),
+        max("in_degree").as("max"),
+        F.expr("percentile_approx(in_degree, 0.25)").as("q25"),
+        F.expr("percentile_approx(in_degree, 0.75)").as("q75")
+      )
+      .orderBy("year")
+  }
+
+  // Function: Calculate Out-Degree Frequency per Year
+  def calculateOutDegreeFrequency(data: Dataset[TemporalExtractionResult]) = {
+    import data.sparkSession.implicits._
+    data
+      .withColumn("year", year(from_unixtime($"tFrom" / 1000)))
+      .groupBy($"year", $"head")
+      .agg(count($"tail").as("out_degree"))
+      .groupBy($"out_degree", $"year")
+      .agg(count("*").as("frequency"))
+      .orderBy("out_degree", "year")
   }
 
   // Function: Calculate Out-Degree Distribution per Year
@@ -169,8 +207,78 @@ object EvalFunctions {
     data
       .withColumn("year", year(from_unixtime($"tFrom" / 1000)))
       .groupBy($"year", $"head")
-      .agg(count($"tail").as("out_degree")) // Count the number of outgoing edges for each head
-      .orderBy("year", "head")
+      .agg(count($"tail").as("out_degree"))
+      .groupBy($"year")
+      .agg(
+        avg("out_degree").as("mean"),
+        expr("percentile_approx(out_degree, 0.5)").as("median"),
+        stddev("out_degree").as("std"),
+        min("out_degree").as("min"),
+        max("out_degree").as("max"),
+        F.expr("percentile_approx(out_degree, 0.25)").as("q25"),
+        F.expr("percentile_approx(out_degree, 0.75)").as("q75")
+      )
+      .orderBy("year")
+  }
+
+
+  // Function: Calculate Temporal Activity Span
+  // Computes median, mean, std, min, max, and quantiles of the time span (tFrom to tUntil) for RDF triples
+  def calculateTemporalActivitySpanOverTime(data: Dataset[TemporalExtractionResult]) = {
+    import data.sparkSession.implicits._
+
+    // Filter out invalid entries where tFrom > tUntil
+    val validData = data.filter(F.col("tFrom") <= F.col("tUntil"))
+
+    // Add a year column based on tFrom
+    val dataWithYear = validData.withColumn("year", F.year(F.from_unixtime(F.col("tFrom") / 1000)))
+
+    // Calculate the duration for each triple (in milliseconds)
+    val dataWithDuration = dataWithYear.withColumn("duration", F.col("tUntil") - F.col("tFrom"))
+
+    // Group by year and calculate statistics for the duration
+    val stats = dataWithDuration
+      .groupBy("year")
+      .agg(
+        F.avg("duration").as("mean"),
+        F.expr("percentile_approx(duration, 0.5)").as("median"),
+        F.stddev("duration").as("std"),
+        F.min("duration").as("min"),
+        F.max("duration").as("max"),
+        F.expr("percentile_approx(duration, 0.25)").as("q25"),
+        F.expr("percentile_approx(duration, 0.75)").as("q75")
+      )
+      .orderBy("year")
+
+    // Return the statistics
+    stats
+  }
+
+  // Function: Calculate Temporal Activity Span
+  // Computes median, mean, std, min, max, and quantiles of the time span (tFrom to tUntil) for RDF triples
+  def calculateTemporalActivitySpan(data: Dataset[TemporalExtractionResult]) = {
+    import data.sparkSession.implicits._
+
+    // Filter out invalid entries where tFrom > tUntil
+    val validData = data.filter(F.col("tFrom") <= F.col("tUntil"))
+
+    // Calculate the duration for each triple (in milliseconds)
+    val dataWithDuration = validData.withColumn("duration", F.col("tUntil") - F.col("tFrom"))
+
+    // Group by year and calculate statistics for the duration
+    val stats = dataWithDuration
+      .agg(
+        avg("duration").as("mean"),
+        expr("percentile_approx(duration, 0.5)").as("median"),
+        stddev("duration").as("std"),
+        min("duration").as("min"),
+        max("duration").as("max"),
+        F.expr("percentile_approx(duration, 0.25)").as("q25"),
+        F.expr("percentile_approx(duration, 0.75)").as("q75")
+      )
+
+    // Return the statistics
+    stats
   }
 
 

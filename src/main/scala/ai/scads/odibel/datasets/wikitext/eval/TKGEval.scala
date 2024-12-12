@@ -73,11 +73,25 @@ class TKGEval extends Callable[Int] {
     val countChangesOverTime = EvalFunctions.countChangesOverTime(data)
     writeOut("count_changes_over_time", countChangesOverTime)
 
+
+    val calculateInDegreeFrequency = EvalFunctions.calculateInDegreeFrequency(data)
+    writeOut("calculate_in_degree_frequency", calculateInDegreeFrequency)
+
     val calculateInDegreeDistributionPerYear = EvalFunctions.calculateInDegreeDistributionPerYear(data)
     writeOut("calculate_in_degree_per_year", calculateInDegreeDistributionPerYear)
 
+    val calculateOutDegreeFrequency = EvalFunctions.calculateOutDegreeFrequency(data)
+    writeOut("calculate_out_degree_frequency", calculateOutDegreeFrequency)
+
     val calculateOutDegreeDistributionPerYear = EvalFunctions.calculateOutDegreeDistributionPerYear(data)
     writeOut("calculate_out_degree_per_year", calculateOutDegreeDistributionPerYear)
+
+
+    val calculateTemporalActivitySpanOverTime = EvalFunctions.calculateTemporalActivitySpanOverTime(data)
+    writeOut("calculate_temporal_activity_span_over_time", calculateTemporalActivitySpanOverTime)
+
+    val calculateTemporalActivitySpan = EvalFunctions.calculateTemporalActivitySpan(data)
+    writeOut("calculate_temporal_activity_span", calculateTemporalActivitySpan)
 
 
     spark.stop()
