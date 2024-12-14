@@ -281,5 +281,120 @@ object EvalFunctions {
     stats
   }
 
+  // Function: Calculate Subject Over Time
+  def countPartsOfTriplesOverTime(data: Dataset[TemporalExtractionResult], count_triple_part: String = "subject", time_resolution: String = "yearly") = {
+    import data.sparkSession.implicits._
+
+    // Zeitauflösung für Starts: Basierend auf tFrom
+    val startsWithTime = time_resolution match {
+      case "monthly" => data.withColumn("time", F.date_format(F.from_unixtime(F.col("tFrom") / 1000), "yyyy-MM"))
+      case _         => data.withColumn("time", F.year(F.from_unixtime(F.col("tFrom")/ 1000)))
+    }
+
+    // Zeitauflösung für Ends: Basierend auf tUntil
+    val endsWithTime = time_resolution match {
+      case "monthly" => data.withColumn("time", F.date_format(F.from_unixtime(F.col("tUntil")/ 1000), "yyyy-MM"))
+      case _         => data.withColumn("time", F.year(F.from_unixtime(F.col("tUntil")/ 1000)))
+    }
+
+    val triple_part = count_triple_part.toLowerCase() match {
+      case "subject"    => "head"
+      case "predicate"  => "rel"
+      case "object"     => "tail"
+      case _            => count_triple_part.toLowerCase()
+    }
+
+    val starts = startsWithTime
+      .select(F.col("time"), F.col(triple_part))
+      .distinct()
+      .groupBy("time")
+      .agg(F.count(triple_part).alias(s"new_$triple_part"))
+
+    val ends = endsWithTime
+      .select(F.col("time"), F.col(triple_part))
+      .distinct()
+      .groupBy("time")
+      .agg(F.count(triple_part).alias(s"ended_$triple_part"))
+
+    val valid = data
+      .withColumn("time", time_resolution match {
+        case "monthly" => F.date_format(F.from_unixtime(F.col("tFrom") / 1000), "yyyy-MM")
+        case _          => F.year(F.from_unixtime(F.col("tFrom") / 1000))
+      })
+      .select(F.col("time"), F.col(triple_part))
+      .distinct()
+      .groupBy("time")
+      .agg(F.count(triple_part).alias(s"valid_$triple_part"))
+
+    val combined = starts
+      .join(ends, Seq("time"), "outer")
+      .join(valid, Seq("time"), "outer")
+      .withColumn(s"new_$triple_part", F.coalesce(F.col(s"new_$triple_part"), F.lit(0)))
+      .withColumn(s"ended_$triple_part", F.coalesce(F.col(s"ended_$triple_part"), F.lit(0)))
+      .withColumn(s"valid_$triple_part", F.coalesce(F.col(s"valid_$triple_part"), F.lit(0)))
+      .withColumn("changes", F.col(s"new_$triple_part") + F.col(s"ended_$triple_part"))
+      .orderBy("time")
+
+    combined
+  }
+
+  // Function: Generate Dataset Statistics like the Benchmark Image
+  def calculateSnapshotStatistics(data: Dataset[TemporalExtractionResult], granularities: Seq[String] = Seq("yearly", "monthly", "instant")) = {
+    import data.sparkSession.implicits._
+
+    // Helper function to group data by a given granularity
+    def groupByGranularity(data: Dataset[TemporalExtractionResult], granularity: String) = {
+      granularity match {
+        case "instant" => data.withColumn("time", F.lit("instant"))
+        case "hourly" => data.withColumn("time", F.date_format(F.from_unixtime(F.col("tFrom") / 1000), "yyyy-MM-dd HH"))
+        case "daily" => data.withColumn("time", F.date_format(F.from_unixtime(F.col("tFrom") / 1000), "yyyy-MM-dd"))
+        case "monthly" => data.withColumn("time", F.date_format(F.from_unixtime(F.col("tFrom") / 1000), "yyyy-MM"))
+        case "yearly" => data.withColumn("time", F.year(F.from_unixtime(F.col("tFrom") / 1000)))
+        case _ => data.withColumn("time", F.lit("unknown"))
+      }
+    }
+
+    // Aggregate statistics for each granularity
+    val statsByGranularity = granularities.map { granularity =>
+      val groupedData = groupByGranularity(data, granularity)
+
+      // Calculate total triples in the first and last version using tFrom and tUntil
+      val dataWithDate = data.withColumn("date", F.from_unixtime(F.col("tFrom")).cast("date"))
+        .withColumn("year", F.year(F.col("date")))
+      val filteredData = dataWithDate.filter(F.col("year") > 1970)
+      val sortedData = filteredData.orderBy(F.asc("tFrom"))
+      val secondMin = sortedData.limit(2).collect() // Collect the first two rows
+      val min_tFrom = if (secondMin.length == 2) secondMin(1).getAs[Long]("tFrom") else null
+      val max_tFrom = data.agg(F.max("tFrom")).as[Long].first()
+
+      val triplesInFirstVersion = data.filter(F.col("tFrom") === min_tFrom).count()
+      val triplesInLastVersion = data.filter(F.col("tFrom") === max_tFrom).count()
+
+      // Calculate growth percentage
+      val growth = (triplesInLastVersion.toDouble / triplesInFirstVersion.toDouble) * 100
+
+      // Calculate change ratios
+      val totalTriples = data.count().toDouble
+      val changeRatioAdds = (data.filter(F.col("tFrom") > min_tFrom).count().toDouble / totalTriples) * 100
+      val changeRatioDeletes = (data.filter(F.col("tUntil") < max_tFrom).count().toDouble / totalTriples) * 100
+
+      // Static core: Triples that exist throughout all versions
+      val staticCore = data.filter(F.col("tFrom") === min_tFrom && F.col("tUntil") === max_tFrom).count()
+
+      // Version-oblivious triples: All unique triples regardless of their time span
+      val versionObliviousTriples = data.filter(F.col("tFrom") =!= min_tFrom || F.col("tUntil") =!= max_tFrom).count()
+
+      // Count the number of versions for the current granularity
+      val versions = groupedData.select("time").distinct().count()
+
+      (granularity, versions, triplesInFirstVersion, triplesInLastVersion, growth, changeRatioAdds, changeRatioDeletes, staticCore, versionObliviousTriples)
+    }
+
+    // Convert the results into a DataFrame
+    val statsDF = statsByGranularity.toDF("Granularity", "Versions", "Triples in First Version", "Triples in Last Version", "Growth", "Change ratio adds", "Change ratio deletes", "Static core", "Version-oblivious triples")
+
+    statsDF
+  }
+
 
 }

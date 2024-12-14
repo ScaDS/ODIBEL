@@ -24,8 +24,11 @@ class TKGEval extends Callable[Int] {
   var func: Array[String] = _ // TODO filter by functions
 
   def writeOut(name: String, ds: DataFrame): Unit = {
-    ds.write.mode("overwrite").option("header", "true")
-              .csv(new File(out, name).getPath)
+    ds.coalesce(1)
+      .write
+      .mode("overwrite")
+      .option("header", "true")
+      .csv(new File(out, name).getPath)
   }
 
   override def call(): Int = {
@@ -94,7 +97,20 @@ class TKGEval extends Callable[Int] {
     writeOut("calculate_temporal_activity_span", calculateTemporalActivitySpan)
 
 
+    val countSubjectsOverTime = EvalFunctions.countPartsOfTriplesOverTime(data, count_triple_part = "subject", time_resolution = "monthly")
+    writeOut("countSubjectsOverTime", countSubjectsOverTime)
+    val countPredicatesOverTime = EvalFunctions.countPartsOfTriplesOverTime(data, count_triple_part = "predicate", time_resolution = "monthly")
+    writeOut("countPredicatesOverTime", countPredicatesOverTime)
+    val countObjectsOverTime = EvalFunctions.countPartsOfTriplesOverTime(data, count_triple_part = "object", time_resolution = "monthly")
+    writeOut("countObjectsOverTime", countObjectsOverTime)
+
+
+    val calculateSnapshotStatistics = EvalFunctions.calculateSnapshotStatistics(data)
+    writeOut("calculateSnapshotStatistics", calculateSnapshotStatistics)
+
     spark.stop()
     0
   }
+
+
 }
