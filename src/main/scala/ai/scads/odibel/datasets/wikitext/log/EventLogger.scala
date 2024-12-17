@@ -9,8 +9,7 @@ class EventLogger(monitor: HeartbeatMonitor) {
 
   def logEvent(event: Event): Unit = {
     monitor.registerEvent(event)
-
-//    log.info(event.toString)
+    log.info(event.toString)
   }
 
   // has monitor

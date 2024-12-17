@@ -44,6 +44,7 @@ class WikiDumpFlatter {
 
     val source = Source.fromFile(in)
     //    Iterator.continually(scala.io.StdIn.readLine()).takeWhile(_ != null).flatMap({
+
     source.getLines().takeWhile(_ != null).flatMap({
       line =>
         line.trim match {
@@ -68,6 +69,7 @@ class WikiDumpFlatter {
             None
         }
     }).foreach(record => {
+//      println(record)
       buffererdWriter.write(record)
       //      buffererdWriter.flush()
     })

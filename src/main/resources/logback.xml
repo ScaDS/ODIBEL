@@ -1,20 +1,27 @@
 <configuration>
-
-    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
-        <!-- encoders are assigned the type
-             ch.qos.logback.classic.encoder.PatternLayoutEncoder by default -->
-        <target>System.err</target>
+    <!-- Console appender for debugging during development -->
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
         <encoder>
-            <pattern>%d{HH:mm:ss.SSS} | [%thread] | %-5level | %logger{36} - %msg%n</pattern>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n</pattern>
         </encoder>
     </appender>
 
-    <logger name="org.sparkproject" level="ERROR"/>
-    <logger name="org.apache.spark" level="ERROR"/>
-    <logger name="org.apache.hadoop" level="ERROR"/>
+    <!-- File appender for logging to the file system -->
+    <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+        <file>logs/event-logger.log</file>
+        <append>true</append>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
 
-    <root level="INFO">
-        <appender-ref ref="STDOUT" />
+    <!-- Specific logger configuration for EventLogger -->
+    <logger name="ai.scads.odibel.datasets.wikitext.log.EventLogger" level="debug" additivity="false">
+        <appender-ref ref="FILE" />
+    </logger>
+
+    <!-- Root logger configuration -->
+    <root level="info">
+        <appender-ref ref="CONSOLE" />
     </root>
-
 </configuration>

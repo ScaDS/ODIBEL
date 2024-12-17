@@ -1,9 +1,13 @@
 package ai.scads.odibel.datasets.wikitext.eval
 
 import ai.scads.odibel.datasets.wikitext.TemporalExtractionResult
+import ai.scads.odibel.datasets.wikitext.eval.rows.{ElementDate, ElementWindow}
 import org.apache.spark.sql.expressions.Window
-import org.apache.spark.sql.{DataFrame, Dataset, functions => F}
+import org.apache.spark.sql.{Column, DataFrame, Dataset, functions => F}
 import org.apache.spark.sql.functions._
+
+import java.time.temporal.ChronoUnit
+import java.time.{Instant, ZoneId}
 
 
 object EvalFunctions {
@@ -96,6 +100,7 @@ object EvalFunctions {
       .agg(countDistinct("rUntil").alias("count_end_revisions"))
       .orderBy("end_time")
   }
+
   // Function: Count starting triples over time
   def countStartTriplesOverTime(data: Dataset[TemporalExtractionResult]): DataFrame = {
     import data.sparkSession.implicits._
@@ -116,6 +121,7 @@ object EvalFunctions {
       .agg(count("*").alias("count_end_triples"))
       .orderBy("end_time")
   }
+
   // Function: Count changes of triples over time (new and deleted triples)
   def countChangesOverTime(data: Dataset[TemporalExtractionResult]): DataFrame = {
     import data.sparkSession.implicits._
@@ -140,6 +146,7 @@ object EvalFunctions {
       .agg(count("*").alias("count_triple_changes"))
       .orderBy("change_time")
   }
+
 
   def filterForResources(data: Dataset[TemporalExtractionResult], filterBySubject: Boolean) = {
     import data.sparkSession.implicits._
@@ -168,6 +175,7 @@ object EvalFunctions {
       .agg(count("*").as("frequency"))
       .orderBy("in_degree", "year")
   }
+
   // Function: Calculate In-Degree Distribution per Year
   def calculateInDegreeDistributionPerYear(data: Dataset[TemporalExtractionResult], filterBySubject: Boolean = false) = {
     import data.sparkSession.implicits._
@@ -287,14 +295,14 @@ object EvalFunctions {
 
     // Zeitauflösung für Starts: Basierend auf tFrom
     val startsWithTime = time_resolution match {
-      case "monthly" => data.withColumn("time", F.date_format(F.from_unixtime(F.col("tFrom") / 1000), "yyyy-MM"))
-      case _         => data.withColumn("time", F.year(F.from_unixtime(F.col("tFrom")/ 1000)))
+      case "monthly" => data.withColumn("time", F.date_format(F.from_unixtime(F.col("tFrom") ), "yyyy-MM"))
+      case _         => data.withColumn("time", F.year(F.from_unixtime(F.col("tFrom"))))
     }
 
     // Zeitauflösung für Ends: Basierend auf tUntil
     val endsWithTime = time_resolution match {
-      case "monthly" => data.withColumn("time", F.date_format(F.from_unixtime(F.col("tUntil")/ 1000), "yyyy-MM"))
-      case _         => data.withColumn("time", F.year(F.from_unixtime(F.col("tUntil")/ 1000)))
+      case "monthly" => data.withColumn("time", F.date_format(F.from_unixtime(F.col("tUntil")), "yyyy-MM"))
+      case _         => data.withColumn("time", F.year(F.from_unixtime(F.col("tUntil"))))
     }
 
     val triple_part = count_triple_part.toLowerCase() match {
@@ -339,17 +347,17 @@ object EvalFunctions {
   }
 
   // Function: Generate Dataset Statistics like the Benchmark Image
-  def calculateSnapshotStatistics(data: Dataset[TemporalExtractionResult], granularities: Seq[String] = Seq("yearly", "monthly", "instant")) = {
+    def calculateSnapshotStatistics(data: Dataset[TemporalExtractionResult], granularities: Seq[String] = Seq("yearly", "monthly", "instant")) = {
     import data.sparkSession.implicits._
 
     // Helper function to group data by a given granularity
     def groupByGranularity(data: Dataset[TemporalExtractionResult], granularity: String) = {
       granularity match {
         case "instant" => data.withColumn("time", F.lit("instant"))
-        case "hourly" => data.withColumn("time", F.date_format(F.from_unixtime(F.col("tFrom") / 1000), "yyyy-MM-dd HH"))
-        case "daily" => data.withColumn("time", F.date_format(F.from_unixtime(F.col("tFrom") / 1000), "yyyy-MM-dd"))
-        case "monthly" => data.withColumn("time", F.date_format(F.from_unixtime(F.col("tFrom") / 1000), "yyyy-MM"))
-        case "yearly" => data.withColumn("time", F.year(F.from_unixtime(F.col("tFrom") / 1000)))
+        case "hourly" => data.withColumn("time", F.date_format(F.from_unixtime(F.col("tFrom")), "yyyy-MM-dd HH"))
+        case "daily" => data.withColumn("time", F.date_format(F.from_unixtime(F.col("tFrom")), "yyyy-MM-dd"))
+        case "monthly" => data.withColumn("time", F.date_format(F.from_unixtime(F.col("tFrom")), "yyyy-MM"))
+        case "yearly" => data.withColumn("time", F.year(F.from_unixtime(F.col("tFrom"))))
         case _ => data.withColumn("time", F.lit("unknown"))
       }
     }
@@ -396,5 +404,34 @@ object EvalFunctions {
     statsDF
   }
 
+  def datesByColumn(df: DataFrame, column: Column): Dataset[ElementDate] = {
+    import df.sparkSession.implicits._
+    df.withColumn("tFrom", $"tFrom".cast("long"))
+      .withColumn("tUntil", $"tUntil".cast("long"))
+      .as[TemporalExtractionResult]
+      .select(column.as("element"),$"tFrom",$"tUntil")
+      .as[ElementWindow]
+      .map(ew => if(ew.tUntil == Long.MaxValue) ew.copy(tUntil = 1767351600) else ew)
+      .flatMap(ew => {
+        val dates = CronUtil.findCronOccurrencesBetween(ew.tFrom, ew.tUntil)
+        dates.map(date => ElementDate(ew.element,date.getYear.toString))
+      })
+  }
+
+  def intervalToYearMonthDay(startUnix: Long, endUnix: Long, zoneId: ZoneId = ZoneId.systemDefault()): Seq[String] = {
+    // Convert UNIX timestamps (in seconds) to LocalDates
+    val startDate = Instant.ofEpochSecond(startUnix).atZone(zoneId).toLocalDate
+    val endDate   = Instant.ofEpochSecond(endUnix).atZone(zoneId).toLocalDate
+
+    // Calculate the number of days between the start and end dates, inclusive
+    val daysBetween = ChronoUnit.YEARS.between(startDate, endDate).toInt
+
+    // Generate a sequence of (year, month, day) tuples
+    (0 to daysBetween).map { i =>
+      val currentDay = startDate.plusYears(i)
+      //      (currentDay.getYear.toString, 1) // currentDay.getMonthValue, currentDay.getDayOfMonth)
+      currentDay.getYear.toString
+    }
+  }
 
 }

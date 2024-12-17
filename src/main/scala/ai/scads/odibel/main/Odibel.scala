@@ -1,9 +1,9 @@
-package ai.scads.odibel
-
-import java.util.concurrent.Callable
+package ai.scads.odibel.main
 
 import picocli.AutoComplete.GenerateCompletion
 import picocli.CommandLine.{Command, Option}
+
+import java.util.concurrent.Callable
 
 @Command(name = "odibel", mixinStandardHelpOptions = true, version = Array("alpha-0.1"), subcommands = Array(classOf[GenerateCompletion]))
 class Odibel extends Callable[Int] {
