@@ -98,6 +98,13 @@
             <version>1.12.0</version>
         </dependency>
 
+        <!-- https://mvnrepository.com/artifact/com.cronutils/cron-utils -->
+        <dependency>
+            <groupId>com.cronutils</groupId>
+            <artifactId>cron-utils</artifactId>
+            <version>9.2.1</version>
+        </dependency>
+
         <!--    <dependency>
                 <groupId>org.sweble.wikitext</groupId>
                 <artifactId>swc-parser-lazy</artifactId>

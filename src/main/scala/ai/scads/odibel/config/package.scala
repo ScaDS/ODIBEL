@@ -1,6 +1,8 @@
+package ai.scads.odibel
+
 import org.apache.spark.SparkConf
 
-package object odibel {
+package object config {
 
   val availHyperThreads: Int = Runtime.getRuntime.availableProcessors()
 
