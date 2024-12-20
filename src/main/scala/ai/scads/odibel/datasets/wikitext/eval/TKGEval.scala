@@ -1,7 +1,6 @@
 package ai.scads.odibel.datasets.wikitext.eval
 
 
-import ai.scads.odibel.datasets.wikitext.eval.sql.OutputEval
 import picocli.CommandLine.Command
 
 import java.util.concurrent.Callable

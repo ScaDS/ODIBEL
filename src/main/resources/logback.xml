@@ -20,6 +20,13 @@
         <appender-ref ref="FILE" />
     </logger>
 
+    <logger name="org.apache.spark" level="warn" additivity="false">
+        <appender-ref ref="CONSOLE" />
+    </logger>
+    <logger name="org.sparkproject.jetty" level="warn" additivity="false">
+        <appender-ref ref="CONSOLE" />
+    </logger>
+
     <!-- Root logger configuration -->
     <root level="info">
         <appender-ref ref="CONSOLE" />

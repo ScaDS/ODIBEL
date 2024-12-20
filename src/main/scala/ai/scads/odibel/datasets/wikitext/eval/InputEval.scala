@@ -53,25 +53,26 @@ class InputEval extends Callable[Int] {
 
 
   def namespaceRevisionCount(): DataFrame = {
-    val df = sql.read.json(in.getPath).select(col("id").as("rid"),col("pageid").as("pid"),col("timestamp"),col("namespace").as("ns"))
+    val df = sql.read.parquet(in.getPath).select(col("id").as("rid"),col("pageid").as("pid"),col("timestamp"),col("namespace").as("ns"))
     df.select("rid", "ns").distinct().select("ns").groupBy("ns").count()
   }
 
   def namespacePageCount(): DataFrame = {
-    val df = sql.read.json(in.getPath).select(col("id").as("rid"),col("pageid").as("pid"),col("timestamp"),col("namespace").as("ns"))
+    val df = sql.read.parquet(in.getPath).select(col("id").as("rid"),col("pageid").as("pid"),col("timestamp"),col("namespace").as("ns"))
     df.select("pid", "ns").distinct().select("ns").groupBy("ns").count()
   }
 
   def revisionsPerYear(): DataFrame = {
-    val df = sql.read.json(in.getPath).select(col("id").as("rid"),col("pageid").as("pid"),col("timestamp"),col("namespace").as("ns"))
+    val df = sql.read.parquet(in.getPath).select(col("id").as("rid"),col("pageid").as("pid"),col("timestamp"),col("namespace").as("ns"))
       .withColumn("year", date_format(to_date(to_timestamp($"timestamp"),timestampFormat), "yyyy"))
-    df.select("year").select("year").groupBy("year").count()
+    df.select("year","ns").groupBy("year","ns").count()
   }
 
   def pagesPerYear(): DataFrame = {
-    val df = sql.read.json(in.getPath).select(col("id").as("rid"),col("pageid").as("pid"),col("timestamp"),col("namespace").as("ns"))
+    val df = sql.read.parquet(in.getPath).select(col("id").as("rid"),col("pageid").as("pid"),col("timestamp"),col("namespace").as("ns"))
       .withColumn("year", date_format(to_date(to_timestamp($"timestamp"),timestampFormat), "yyyy"))
-    df.select("pid", "year").groupBy("pid").agg(min("year").alias("min_year")).select(col("min_year").as("year")).groupBy("year").count()
+    df.select("pid", "year", "ns").groupBy("pid", "ns").agg(min("year").alias("min_year")).select(col("min_year").as("year"),col("ns")).groupBy("year", "ns").count()
+
   }
 
   override def call(): Int = {

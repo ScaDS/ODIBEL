@@ -37,7 +37,7 @@ class SnapshotEval extends Callable[Int] {
   }
 
   def genWPLsubgraph(): Dataset[TemporalExtractionResult] = {
-    val df = sql.read.json(in.getPath)
+    val df = sql.read.parquet(in.getPath)
     df.withColumn("tFrom", $"tFrom".cast("long"))
       .withColumn("tUntil", $"tUntil".cast("long"))
       .as[TemporalExtractionResult]
@@ -45,15 +45,23 @@ class SnapshotEval extends Callable[Int] {
   }
 
   def genDBOsubgraph(): Dataset[TemporalExtractionResult] = {
-    val df = sql.read.json(in.getPath)
+    val df = sql.read.parquet(in.getPath)
     df.withColumn("tFrom", $"tFrom".cast("long"))
       .withColumn("tUntil", $"tUntil".cast("long"))
       .as[TemporalExtractionResult]
       .filter(ter => (ter.rel == RDFType && ter.tail.startsWith(DBO)) || ter.rel.startsWith(DBO))
   }
 
+  def genDBOsubgraphNoWPL(): Dataset[TemporalExtractionResult] = {
+    val df = sql.read.parquet(in.getPath)
+    df.withColumn("tFrom", $"tFrom".cast("long"))
+      .withColumn("tUntil", $"tUntil".cast("long"))
+      .as[TemporalExtractionResult]
+      .filter(ter => ((ter.rel == RDFType && ter.tail.startsWith(DBO)) || ter.rel.startsWith(DBO) && ter.rel != VOCAB.DBO_WPWL))
+  }
+
   def genCATsubgraph(): Dataset[TemporalExtractionResult] = {
-    val df = sql.read.json(in.getPath)
+    val df = sql.read.parquet(in.getPath)
     df.withColumn("tFrom", $"tFrom".cast("long"))
       .withColumn("tUntil", $"tUntil".cast("long"))
       .as[TemporalExtractionResult]
@@ -75,7 +83,7 @@ class SnapshotEval extends Callable[Int] {
   }
 
   def genYearlySnapshots(start: Int, end: Int, monthDayPart: String = "-06-01"): Unit = {
-    val df = sql.read.json(in.getPath)
+    val df = sql.read.parquet(in.getPath)
       .withColumn("tFrom", $"tFrom".cast("long"))
       .withColumn("tUntil", $"tUntil".cast("long"))
       .as[TemporalExtractionResult]
@@ -184,6 +192,9 @@ class SnapshotEval extends Callable[Int] {
       }),
       "genDBOsubgraph" -> (() => {
         genDBOsubgraph().write.parquet(out.getPath+"/DBO")
+      }),
+      "genDBOsubgraphNoWPL" -> (() => {
+        genDBOsubgraphNoWPL().write.parquet(out.getPath+"/DBOnoWPL")
       }),
       "genCATsubgraph" -> (() => {
         genCATsubgraph().write.parquet(out.getPath+"/CAT")
