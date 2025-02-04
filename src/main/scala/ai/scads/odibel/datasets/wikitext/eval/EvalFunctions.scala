@@ -1,7 +1,8 @@
 package ai.scads.odibel.datasets.wikitext.eval
 
-import ai.scads.odibel.datasets.wikitext.TemporalExtractionResult
-import ai.scads.odibel.datasets.wikitext.eval.rows.{ElementDate, ElementWindow}
+import ai.scads.odibel.datasets.wikitext.data.TemporalExtractionResult
+import ai.scads.odibel.datasets.wikitext.eval.metricsdata.{ElementDate, ElementWindow}
+import ai.scads.odibel.datasets.wikitext.utils.CronUtil
 import org.apache.spark.sql.expressions.Window
 import org.apache.spark.sql.{Column, DataFrame, Dataset, functions => F}
 import org.apache.spark.sql.functions._
@@ -9,7 +10,7 @@ import org.apache.spark.sql.functions._
 import java.time.temporal.ChronoUnit
 import java.time.{Instant, ZoneId}
 
-
+@Deprecated
 object EvalFunctions {
 
   //   Function: Calculate all unique windows

@@ -5,7 +5,18 @@ import java.nio.file.{Files, Paths, Path => NioPath, StandardOpenOption}
 import org.apache.hadoop.conf.Configuration
 import org.apache.hadoop.fs.{FileSystem, Path}
 
+/**
+ * Handles IO from and to different locations/protoocls
+ * - file://
+ * - hdfs://
+ * @param uriString
+ */
 class IOUtil(uriString: String) {
+
+  // TODO list files
+  // TODO read
+  // TODO write
+  // TODO abstract layers and handle file:/// and hdfs:///
 
   private val uri = new URI(uriString)
   private val scheme = Option(uri.getScheme)
@@ -68,6 +79,10 @@ class IOUtil(uriString: String) {
       fs.close()
     }
   }
+}
+
+object IOUtil {
+
 }
 
 // Example Usage

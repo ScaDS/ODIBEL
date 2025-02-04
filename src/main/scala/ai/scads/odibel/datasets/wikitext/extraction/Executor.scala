@@ -6,12 +6,18 @@ import java.nio.file.Paths
 import java.util.concurrent.{Executors, LinkedBlockingQueue, TimeUnit}
 import scala.collection.mutable.ListBuffer
 
-// Creates all Extraction Runners
+/**
+ * Non SPARK extraction
+ * Sets up an dump extraction on a single java instance
+ * @param extractionJobs
+ * @param endpoints
+ * @param eventLog
+ *
+ */
 class Executor(extractionJobs: List[ExtractionJob], endpoints: List[String], eventLog: EventLogger) {
 
   val threads = new ListBuffer[Thread]()
   val jobQueue = new LinkedBlockingQueue[ExtractionJob]()
-
 
   extractionJobs.foreach(jobQueue.put)
 

@@ -1,8 +1,8 @@
 package ai.scads.odibel.datasets.wikitext.tansform
 
-import ai.scads.odibel.datasets.wikitext.TemporalExtractionResult
-import ai.scads.odibel.datasets.wikitext.eval.EvalSpark
+import ai.scads.odibel.datasets.wikitext.data.TemporalExtractionResult
 import ai.scads.odibel.datasets.wikitext.tansform.Json2CSV.{args, sql}
+import ai.scads.odibel.datasets.wikitext.utils.SparkSessionUtil
 import java.time.{Instant, ZoneOffset}
 import java.time.format.DateTimeFormatter
 
@@ -10,19 +10,24 @@ object ToNQuads extends App {
 
   val TKG = "http://dbpedia.org/temporal"
 
-  val sql = EvalSpark.sql
+  val sql = SparkSessionUtil.sql
 
   import sql.implicits._
 
   if (args.length != 3)
     System.err.println("usage -- inputPath OutputPath")
 
-  lazy val formatter = DateTimeFormatter.ofPattern("YYYY-MM-DD'T'hh:mm:ss")
+  lazy val formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss")
 
   def formatDate(timestamp: Long): String = {
-    Instant.ofEpochSecond(timestamp)
-      .atOffset(ZoneOffset.UTC)
-      .format(formatter)
+    try {
+      Instant.ofEpochSecond(timestamp)
+        .atOffset(ZoneOffset.UTC)
+        .format(formatter)
+    } catch {
+      case e: Exception =>
+      "9999-12-31T23:59:59"
+    }
   }
 
   def buildQuad(s: String, p: String, o: String, g: String): String = {
@@ -36,7 +41,7 @@ object ToNQuads extends App {
     List(
       buildQuad(ter.head, ter.rel, ter.tail, s"${ter.rFrom}-${ter.rUntil}"),
       buildQuad(s"$TKG/${ter.rFrom}-${ter.rUntil}", s"$TKG/start", s"\"${formatDate(ter.tFrom)}\"^^<http://www.w3.org/2001/XMLSchema#dateTime>", ""),
-      buildQuad(s"$TKG/${ter.rFrom}-${ter.rUntil}", s"$TKG/end", s"\"${formatDate(ter.tFrom)}\"^^<http://www.w3.org/2001/XMLSchema#dateTime>", "")
+      buildQuad(s"$TKG/${ter.rFrom}-${ter.rUntil}", s"$TKG/end", s"\"${formatDate(ter.tUntil)}\"^^<http://www.w3.org/2001/XMLSchema#dateTime>", "")
     )
   }
 

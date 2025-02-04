@@ -5,6 +5,9 @@ import ai.scads.odibel.utils.ThroughputMonitor
 
 import java.util.concurrent.atomic.AtomicLong
 
+/**
+ * Regularly updates of the total process
+ */
 class HeartbeatMonitor extends Runnable {
 
   val tm = new ThroughputMonitor
