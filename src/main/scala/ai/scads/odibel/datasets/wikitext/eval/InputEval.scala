@@ -1,7 +1,8 @@
 package ai.scads.odibel.datasets.wikitext.eval
 
-import ai.scads.odibel.datasets.wikitext.eval.rows.RevisionMetadata
-import ai.scads.odibel.datasets.wikitext.{FlatRawPageRevision, WikiUtil}
+import ai.scads.odibel.datasets.wikitext.eval.metricsdata.RevisionMetadata
+import ai.scads.odibel.datasets.wikitext.data.PageRevisionXmlSplit
+import ai.scads.odibel.datasets.wikitext.utils.{SparkSessionUtil, WikiUtil}
 import org.apache.spark.sql.{DataFrame, SparkSession}
 import org.apache.spark.sql.functions._
 import picocli.CommandLine.{Command, Option}
@@ -27,7 +28,7 @@ class InputEval extends Callable[Int] {
   @Option(names = Array("--functions", "-f"), split = ",", required = false)
   var functionNamesToExecute: java.util.ArrayList[String] = _
 
-  private val sql = EvalSpark.sql
+  private val sql = SparkSessionUtil.sql
 
   import sql.implicits._
 
@@ -41,7 +42,7 @@ class InputEval extends Callable[Int] {
 
   def extractPageMetaTable(): Unit = {
     val df = sql.read.json(in.getPath)
-    val mapped = df.as[FlatRawPageRevision].map({
+    val mapped = df.as[PageRevisionXmlSplit].map({
       raw =>
         val enriched = WikiUtil.enrichFlatRawPageRevision(raw)
         RevisionMetadata(enriched.pId, enriched.rId, enriched.rTimestamp, enriched.ns.get)

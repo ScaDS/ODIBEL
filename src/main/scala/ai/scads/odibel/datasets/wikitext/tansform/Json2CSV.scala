@@ -1,11 +1,11 @@
 package ai.scads.odibel.datasets.wikitext.tansform
 
-import ai.scads.odibel.datasets.wikitext.TemporalExtractionResult
-import ai.scads.odibel.datasets.wikitext.eval.EvalSpark
+import ai.scads.odibel.datasets.wikitext.data.TemporalExtractionResult
+import ai.scads.odibel.datasets.wikitext.utils.SparkSessionUtil
 
 object Json2CSV extends App {
 
-  val sql = EvalSpark.sql
+  val sql = SparkSessionUtil.sql
   import sql.implicits._
 
   if(args.length != 3)
@@ -21,8 +21,5 @@ object Json2CSV extends App {
         else ter.copy(tail = ter.tail.dropRight(1))
     })
     .show(truncate = false)
-//    .repartition(args(2).toInt,$"head",$"tFrom")
-//    .sortWithinPartitions($"head",$"tFrom")
-//    .write.mode("overwrite").option("compression", "bzip2").option("header","false").csv(args(1))
 }
 

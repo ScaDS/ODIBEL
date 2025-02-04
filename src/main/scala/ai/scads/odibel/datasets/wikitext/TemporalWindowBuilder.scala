@@ -1,6 +1,7 @@
 package ai.scads.odibel.datasets.wikitext
 
 
+import ai.scads.odibel.datasets.wikitext.data.TemporalExtractionResult
 import org.apache.commons.csv.{CSVFormat, CSVPrinter}
 
 import java.util
@@ -8,14 +9,13 @@ import scala.collection.mutable.ListBuffer
 import scala.jdk.CollectionConverters._
 
 /**
- * Takes a set of graphs streams and builds a Temporal Graph using Named Graph (Quad-based) annotation
+ * Takes a set of graph with version and builds a Temporal Graph using Named Graph (Quad-based) annotation
  */
 class TemporalWindowBuilder {
 
   //  private val metaTriples = ListBuffer[MetaTriple]()
   private val temporalExtractionResults = ListBuffer[TemporalExtractionResult]()
   private val currentTriplesWithStart = new util.HashMap[String, MetaObject]()
-
 
   def addGraphVersion(triples: List[String], timestamp: Long)(version: String = timestamp.toString): Unit = {
 
@@ -30,7 +30,7 @@ class TemporalWindowBuilder {
   }
 
   // This is the important function
-  // assumes distinct lists so the diff is already berformed
+  // assumes distinct lists so the diff is already performed
   // (s,p,o,b,e)
   private def addDiff(add: List[String], del: List[String], timestamp: Long)(implicit version: String = timestamp.toString): Unit = {
 
@@ -46,9 +46,9 @@ class TemporalWindowBuilder {
     // Use references on current triple
   }
 
-  case class MetaTriple(ntstring: String, startTime: String, endTime: String, version: String, idx: Int)
-  case class MetaObject(timestamp:Long, version:String)
-
+  // TODO remove unused
+  //  case class MetaTriple(ntstring: String, startTime: String, endTime: String, version: String, idx: Int)
+  case class MetaObject(timestamp: Long, version: String)
 
   def unwrapNTriple(ntstring: String): (String, String, String) = {
     val Array(s, p, o) = ntstring.split(" ", 3)
@@ -92,24 +92,4 @@ class TemporalWindowBuilder {
     // TODO twice?
     temporalExtractionResults.toList
   }
-
-  //  def buildQuads(): List[String] = {
-  //    // writeOut cut end time
-  //
-  //    val temporalMetaGraphName = "<http://ex.org/t/>"
-  //
-  //    val finalTimestamp = Long.MaxValue
-  //    // TODO has to be temporal !!! so dont use add Diff
-  //    addDiff(List(),currentTriplesWithStart.asScala.keys.toList,finalTimestamp)
-  //
-  //    val doneQuads = new ListBuffer[String]
-  //    metaTriples.foreach{
-  //      metaTriple =>
-  //        val metaGraphName = s"<http://ex.org/t/${metaTriple.version}#${metaTriple.idx}>"
-  //        doneQuads.append(metaTriple.ntstring.dropRight(1) + metaGraphName + " .")
-  //        doneQuads.append(metaGraphName + " <http://ex.org/p/begin> " + "\"" + metaTriple.startTime + s"\" $temporalMetaGraphName .")
-  //        doneQuads.append(metaGraphName + " <http://ex.org/p/end> " + "\"" + metaTriple.endTime + s"\" $temporalMetaGraphName .")
-  //    }
-  //    doneQuads.toList
-  //  }
 }

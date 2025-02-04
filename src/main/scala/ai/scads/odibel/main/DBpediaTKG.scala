@@ -1,6 +1,7 @@
 package ai.scads.odibel.main
 
-import ai.scads.odibel.datasets.wikitext.{DBpediaTKGExtraction, FlatPageRevisionPartitioner, WikiDumpFlatter}
+import ai.scads.odibel.datasets.wikitext.utils.{FlatPageRevisionPartitioner, WikiDumpFlatter}
+import ai.scads.odibel.datasets.wikitext.{DBpediaTKGExtraction, DBpediaTKGExtractionSpark}
 import ai.scads.odibel.main.DBpediaTKG.{FlatRepartitioner, TemporalExtraction, WikidumpRevisionSplit}
 import ai.scads.odibel.utils.HDFSUtil
 import picocli.CommandLine.{Command, Option}
@@ -28,6 +29,50 @@ object DBpediaTKG {
     }
   }
 
+
+
+  @Command(name = "extractSpark")
+  class TemporalExtractionSpark extends Callable[Int] {
+
+    @Option(names = Array("-i"))
+    var in: String = _
+
+    @Option(names = Array("-o"))
+    var out: String = _
+
+    @Option(names = Array("-e"), split = ",")
+    var diefEndpoints: java.util.ArrayList[String] = _
+
+
+    override def call(): Int = {
+
+      val urls = parseEndpointPatternList(diefEndpoints)
+
+      val extraction = DBpediaTKGExtractionSpark
+      extraction.call(List(in), out, urls)
+    }
+  }
+
+  def parseEndpointPatternList(diefEndpoints: java.util.ArrayList[String]): List[String] = {
+    val portRegex = ":(\\d+)-(\\d+)".r
+
+    diefEndpoints.toArray.flatMap({
+      case diefEndpoint: String =>
+        val matches = portRegex.findFirstMatchIn(diefEndpoint)
+        if (matches.isDefined) {
+          val startPort = matches.get.group(1).trim.toInt
+          val urlPrefix = diefEndpoint.substring(0, matches.get.start)
+          val urlSuffix = diefEndpoint.substring(matches.get.end)
+          val endPort = matches.get.group(2).trim.toInt
+          (startPort to endPort).map({
+            port => urlPrefix + ":" + port + urlSuffix
+          }).toList
+        } else {
+          List(diefEndpoint)
+        }
+    }).toList
+  }
+
   @Command(name = "extract")
   class TemporalExtraction extends Callable[Int] {
 
@@ -43,24 +88,7 @@ object DBpediaTKG {
     override def call(): Int = {
       System.err.println(s"in: ${in} out: ${out}")
 
-      val portRegex = ":(\\d+)-(\\d+)".r
-
-
-      val urls = diefEndpoints.toArray.flatMap({
-        case diefEndpoint: String =>
-          val matches = portRegex.findFirstMatchIn(diefEndpoint)
-          if (matches.isDefined) {
-            val startPort = matches.get.group(1).trim.toInt
-            val urlPrefix = diefEndpoint.substring(0, matches.get.start)
-            val urlSuffix = diefEndpoint.substring(matches.get.end)
-            val endPort = matches.get.group(2).trim.toInt
-            (startPort to endPort).map({
-              port => urlPrefix + ":" + port + urlSuffix
-            }).toList
-          } else {
-            List(diefEndpoint)
-          }
-      }).toList
+      val urls = parseEndpointPatternList(diefEndpoints)
 
       val hdfs = new HDFSUtil(out)
       hdfs.createDir(out)
