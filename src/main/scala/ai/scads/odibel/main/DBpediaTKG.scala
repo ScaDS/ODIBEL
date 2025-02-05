@@ -1,13 +1,18 @@
 package ai.scads.odibel.main
 
+import ai.scads.odibel.datasets.wikitext.data.TemporalExtractionResult
+import ai.scads.odibel.datasets.wikitext.tansform.SerUtil
 import ai.scads.odibel.datasets.wikitext.utils.{FlatPageRevisionPartitioner, WikiDumpFlatter}
 import ai.scads.odibel.datasets.wikitext.{DBpediaTKGExtraction, DBpediaTKGExtractionSpark}
 import ai.scads.odibel.main.DBpediaTKG.{FlatRepartitioner, TemporalExtraction, WikidumpRevisionSplit}
 import ai.scads.odibel.utils.HDFSUtil
 import picocli.CommandLine.{Command, Option}
 
-import java.io.File
+import java.io.{File, OutputStreamWriter, StringWriter}
+import java.nio.charset.StandardCharsets
 import java.util.concurrent.Callable
+import scala.io.Source
+import scala.jdk.CollectionConverters._
 
 object DBpediaTKG {
 
@@ -28,7 +33,6 @@ object DBpediaTKG {
       0
     }
   }
-
 
 
   @Command(name = "extractSpark")
@@ -82,22 +86,60 @@ object DBpediaTKG {
     @Option(names = Array("-o"))
     var out: String = _
 
+    @Option(names = Array("-f"))
+    var format: String = "csv"
+
     @Option(names = Array("-e"), split = ",")
     var diefEndpoints: java.util.ArrayList[String] = _
 
     override def call(): Int = {
       System.err.println(s"in: ${in} out: ${out}")
 
-      val urls = parseEndpointPatternList(diefEndpoints)
-
-      val hdfs = new HDFSUtil(out)
-      hdfs.createDir(out)
-      hdfs.getFs.close()
-
-      System.err.println(urls)
-
       val extraction = new DBpediaTKGExtraction
-      extraction.run(in, out, urls)
+
+      if (in == "-") {
+        val inSource = Source.stdin
+        val ters: Iterator[TemporalExtractionResult] = extraction.processStream(inSource.getLines(), diefEndpoints.asScala.head)
+
+        format match {
+          case "csv" =>
+            import com.univocity.parsers.csv._
+            // Create a CSV writer
+            val writerSettings = new CsvWriterSettings()
+            writerSettings.setHeaderWritingEnabled(true) // Include headers
+
+            //        val stringWriter = new OutputStreamWriter(System.out)
+            val csvWriter = new CsvWriter(System.out, writerSettings)
+
+            // Write header row
+            csvWriter.writeHeaders("head", "rel", "tail", "rStart", "rEnd", "tStart", "tEnd")
+
+            ters.foreach(ter => {
+              csvWriter.writeRow(ter.head, ter.rel, ter.tail, ter.rFrom, ter.rUntil, ter.tFrom, ter.tUntil)
+            })
+            csvWriter.flush()
+          case "ngraph" =>
+            val os = System.out
+            ters.flatMap(SerUtil.buildQuads).grouped(100).foreach(rows => {
+              os.write((rows.mkString("\n")+"\n").getBytes(StandardCharsets.UTF_8))
+              os.flush()
+            })
+          case value =>
+            System.err.println(s"format ${value} not implemented")
+        }
+
+      } else {
+        val urls = parseEndpointPatternList(diefEndpoints)
+
+        val hdfs = new HDFSUtil(out)
+        hdfs.createDir(out)
+        hdfs.getFs.close()
+
+        System.err.println(urls)
+
+        val extraction = new DBpediaTKGExtraction
+        extraction.process(in, out, urls)
+      }
       0
     }
   }

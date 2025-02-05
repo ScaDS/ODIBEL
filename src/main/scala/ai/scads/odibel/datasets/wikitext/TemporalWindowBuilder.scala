@@ -11,13 +11,13 @@ import scala.jdk.CollectionConverters._
 /**
  * Takes a set of graph with version and builds a Temporal Graph using Named Graph (Quad-based) annotation
  */
-class TemporalWindowBuilder {
+class TemporalWindowBuilder(trackResults: Boolean = false) {
 
   //  private val metaTriples = ListBuffer[MetaTriple]()
   private val temporalExtractionResults = ListBuffer[TemporalExtractionResult]()
   private val currentTriplesWithStart = new util.HashMap[String, MetaObject]()
 
-  def addGraphVersion(triples: List[String], timestamp: Long)(version: String = timestamp.toString): Unit = {
+  def addGraphVersion(triples: List[String], timestamp: Long)(version: String = timestamp.toString): List[TemporalExtractionResult] = {
 
     val newGraphSet: Set[String] = triples.toSet
     val curGraphSet: Set[String] = currentTriplesWithStart.keySet().asScala.toSet
@@ -26,15 +26,17 @@ class TemporalWindowBuilder {
     val deletedTriples = curGraphSet &~ newGraphSet
 
     // TODO timestamp and version
-    addDiff(addedTriples.toList, deletedTriples.toList, timestamp)(version)
+    val lastTers = addDiff(addedTriples.toList, deletedTriples.toList, timestamp)(version)
+    if (trackResults) temporalExtractionResults.appendAll(lastTers)
+    lastTers
   }
 
   // This is the important function
   // assumes distinct lists so the diff is already performed
   // (s,p,o,b,e)
-  private def addDiff(add: List[String], del: List[String], timestamp: Long)(implicit version: String = timestamp.toString): Unit = {
+  private def addDiff(add: List[String], del: List[String], timestamp: Long)(implicit version: String = timestamp.toString): List[TemporalExtractionResult] = {
 
-    del.zipWithIndex.foreach {
+    val ters = del.zipWithIndex.map {
       case (t, idx) =>
         // todo timestamp format
         closeWindow(t, timestamp, version)
@@ -43,6 +45,7 @@ class TemporalWindowBuilder {
       case (t) =>
         currentTriplesWithStart.put(t, MetaObject(timestamp, version))
     }
+    ters
     // Use references on current triple
   }
 
@@ -52,23 +55,25 @@ class TemporalWindowBuilder {
 
   def unwrapNTriple(ntstring: String): (String, String, String) = {
     val Array(s, p, o) = ntstring.split(" ", 3)
-    val parsedOElement =
+    val parsedOElement = {
       if (o.startsWith("<")) {
-        o.substring(1, o.length - 2)
+        o.substring(1, o.length - 3)
       } else {
         o.substring(0, o.length - 2)
       }
+    }
     (s.substring(1, s.length - 1), p.substring(1, p.length - 1), parsedOElement)
   }
 
-  def closeWindow(ntstring: String, timestamp: Long, version: String): Unit = {
+  def closeWindow(ntstring: String, timestamp: Long, version: String): TemporalExtractionResult = {
     val metaObject = currentTriplesWithStart.remove(ntstring)
     val rUntil = version
     val tUntil = timestamp
 
     val (head, rel, tail) = unwrapNTriple(ntstring)
 
-    val ter = TemporalExtractionResult(
+    //    val ter =
+    TemporalExtractionResult(
       head = head,
       rel = rel,
       tail = tail,
@@ -77,7 +82,7 @@ class TemporalWindowBuilder {
       tFrom = metaObject.timestamp,
       tUntil = tUntil
     )
-    temporalExtractionResults.append(ter)
+    //    temporalExtractionResults.append(ter)
     // TODO stream as output?
   }
 

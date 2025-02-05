@@ -1,9 +1,15 @@
 package ai.scads.odibel.datasets.wikitext.io
 
+import ai.scads.odibel.datasets.wikitext.data.PageRevision
+import ai.scads.odibel.datasets.wikitext.utils.WikiUtil
+
 import java.net.URI
-import java.nio.file.{Files, Paths, Path => NioPath, StandardOpenOption}
+import java.nio.file.{Files, Paths, StandardOpenOption, Path => NioPath}
 import org.apache.hadoop.conf.Configuration
 import org.apache.hadoop.fs.{FileSystem, Path}
+
+import java.io.File
+import scala.io.Source
 
 /**
  * Handles IO from and to different locations/protoocls
@@ -83,6 +89,42 @@ class IOUtil(uriString: String) {
 
 object IOUtil {
 
+  class FileLinesIterator(file: File) extends Iterator[String] {
+
+    private val source = Source.fromFile(file)
+    private val lines = source.getLines()
+    private var closed = false
+
+    override def hasNext: Boolean = {
+      if (closed) false
+      else if (lines.hasNext) true
+      else {
+        close()
+        false
+      }
+    }
+
+    override def next(): String = {
+      if (!hasNext) throw new NoSuchElementException("No more lines in file")
+      val line = lines.next()
+      if (!lines.hasNext) close() // Ensure file closes after last line
+      line
+    }
+
+    private def close(): Unit = {
+      if (!closed) {
+        closed = true
+        source.close()
+      }
+    }
+  }
+
+  def readFilesSequentially(filenames: List[String]): Iterator[PageRevision] = {
+    filenames.iterator.flatMap { filename =>
+      val fileLinesIterator = new FileLinesIterator(new File(filename))
+      WikiUtil.splitToItem(fileLinesIterator).map(WikiUtil.enrichFlatRawPageRevision)
+    }
+  }
 }
 
 // Example Usage

@@ -9,7 +9,7 @@ class ExtractionTest extends AnyFunSuite {
   test("extract leipzig") {
 
 //    val path = "/home/marvin/paper/dbpedia-tkg/testdata/dump_with_leipzig/page_Leipzig.xml"
-    val path = "/home/marvin/paper/dbpedia-tkg/testdata/dump_with_leipzig/page_Leipzig_last50.xml"
+    val path = "/home/marvin/paper/dbpedia-tkg/testdata/dump_with_leipzig/page_Leipzig.xml"
 
     val diefURL = "http://localhost:59001/server/extraction/en"
 

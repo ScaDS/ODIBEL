@@ -105,6 +105,28 @@
             <version>9.2.1</version>
         </dependency>
 
+<!--        &lt;!&ndash; https://mvnrepository.com/artifact/com.nrinaudo/kantan.csv &ndash;&gt;-->
+<!--        <dependency>-->
+<!--            <groupId>com.nrinaudo</groupId>-->
+<!--            <artifactId>kantan.csv_2.13</artifactId>-->
+<!--            <version>0.8.0</version>-->
+<!--        </dependency>-->
+
+<!--        &lt;!&ndash; https://mvnrepository.com/artifact/com.nrinaudo/kantan.csv-generic &ndash;&gt;-->
+<!--        <dependency>-->
+<!--            <groupId>com.nrinaudo</groupId>-->
+<!--            <artifactId>kantan.csv-generic_2.13</artifactId>-->
+<!--            <version>0.8.0</version>-->
+<!--        </dependency>-->
+
+        <!-- https://mvnrepository.com/artifact/com.univocity/univocity-parsers -->
+        <dependency>
+            <groupId>com.univocity</groupId>
+            <artifactId>univocity-parsers</artifactId>
+            <version>2.9.1</version>
+        </dependency>
+
+
         <!--    <dependency>
                 <groupId>org.sweble.wikitext</groupId>
                 <artifactId>swc-parser-lazy</artifactId>
