@@ -1,9 +1,11 @@
 package ai.scads.odibel.datasets.wikitext
 
+import ai.scads.odibel.datasets.wikitext.DBpediaTKGExtraction.processPageRevisionIterator
 import ai.scads.odibel.datasets.wikitext.config.ProfileConfig
 import ai.scads.odibel.datasets.wikitext.data.{PageRevision, TemporalExtractionResult}
 import ai.scads.odibel.datasets.wikitext.extraction.{Executor, ExtractionJob}
 import ai.scads.odibel.datasets.wikitext.log.{EventLogger, HeartbeatMonitor}
+import ai.scads.odibel.datasets.wikitext.utils.WikiUtil
 import ai.scads.odibel.utils.HDFSUtil
 
 import java.nio.file.{Path, Paths}
@@ -14,7 +16,11 @@ import scala.collection.mutable.ListBuffer
  */
 class DBpediaTKGExtraction {
 
-  def run(source: String, sink: String, endpoints: List[String]): Unit = {
+  def processStream(iterator: Iterator[String], diefUrl: String): Iterator[TemporalExtractionResult] = {
+    processPageRevisionIterator(WikiUtil.splitToItem(iterator).map(WikiUtil.enrichFlatRawPageRevision), diefUrl)
+  }
+
+  def process(source: String, sink: String, endpoints: List[String]): Unit = {
 
     val sourceFiles =
       if(source.startsWith("hdfs")){
@@ -60,26 +66,26 @@ object DBpediaTKGExtraction {
           if (oPageId != pageRevision.pId) {
             // TODO eventLog.logEvent(SucceededPageEvent(pageId,Map()))
             oPageId = pageRevision.pId
-            val temporalResults: List[TemporalExtractionResult] = twb.buildEntries()
+            val temporalResults: List[TemporalExtractionResult] = twb.addGraphVersion(List(),Long.MaxValue)(Long.MaxValue.toString) // twb.buildEntries()
             twb = new TemporalWindowBuilder()
             diffAndAppendWindow(tripleDoc, pageRevision)
             temporalResults
           } else {
             diffAndAppendWindow(tripleDoc, pageRevision)
-            None
           }
         } else {
           None
         }
-    }) ++ twb.buildEntries() // TODO check
+    }) ++ twb.addGraphVersion(List(),Long.MaxValue)(Long.MaxValue.toString) // TODO check
   }
 
-  def diffAndAppendWindow(triples: Option[List[String]],pageRevision: PageRevision)(implicit twb: TemporalWindowBuilder): Unit = {
+  def diffAndAppendWindow(triples: Option[List[String]],pageRevision: PageRevision)(implicit twb: TemporalWindowBuilder): List[TemporalExtractionResult] = {
     if(triples.isDefined) {
-      println(pageRevision.rTimestamp)
-      twb.addGraphVersion(triples.get,pageRevision.rTimestamp)(pageRevision.rId.toString)
+      val ters = twb.addGraphVersion(triples.get,pageRevision.rTimestamp)(pageRevision.rId.toString)
+      ters
     } else {
       // TODO this is where we skip bad revisions
+      List()
     }
   }
 
