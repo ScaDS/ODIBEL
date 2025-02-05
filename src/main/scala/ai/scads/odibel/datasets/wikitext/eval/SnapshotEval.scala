@@ -1,8 +1,9 @@
 package ai.scads.odibel.datasets.wikitext.eval
 
-import ai.scads.odibel.datasets.wikitext.TemporalExtractionResult
+import ai.scads.odibel.datasets.wikitext.data.TemporalExtractionResult
 import ai.scads.odibel.datasets.wikitext.eval.VOCAB.{DBO, DBO_WPWL, RDFType, SKOS_BROADER, SKOS_CONCEPT, SKOS_PREFLABEL, SKOS_SUBJECT}
-import ai.scads.odibel.datasets.wikitext.eval.rows.DiffStatYearly
+import ai.scads.odibel.datasets.wikitext.eval.metricsdata.DiffStatYearly
+import ai.scads.odibel.datasets.wikitext.utils.SparkSessionUtil
 import org.apache.spark.sql.functions.{col, count, from_unixtime, lit, when, year}
 import org.apache.spark.sql.{DataFrame, Dataset}
 import picocli.CommandLine.{Command, Option}
@@ -15,7 +16,7 @@ import scala.jdk.CollectionConverters._
 @Command(name = "snapshot")
 class SnapshotEval extends Callable[Int] {
 
-  private val sql = EvalSpark.sql
+  private val sql = SparkSessionUtil.sql
 
   import sql.implicits._
 
@@ -117,7 +118,7 @@ class SnapshotEval extends Callable[Int] {
         DiffStatYearly(prev, curr, previousSize, currentSize, numberOfAdds, numberOfDels)
     })
 
-    EvalSpark.spark.sparkContext.parallelize(stat.toSeq).toDS()
+    SparkSessionUtil.spark.sparkContext.parallelize(stat.toSeq).toDS()
   }
 
   def calculateDiffDF(currentDF: DataFrame, previousDF: DataFrame, joinColumns: Seq[String]): DataFrame = {

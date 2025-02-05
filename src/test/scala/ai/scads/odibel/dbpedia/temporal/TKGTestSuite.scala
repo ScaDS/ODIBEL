@@ -1,6 +1,6 @@
 package ai.scads.odibel.dbpedia.temporal
 
-import ai.scads.odibel.datasets.wikitext.TemporalExtractionResult
+import ai.scads.odibel.datasets.wikitext.data.TemporalExtractionResult
 import ai.scads.odibel.datasets.wikitext.eval.EvalFunctions
 import org.apache.spark.sql.{Dataset, SparkSession}
 import org.scalatest.funsuite.AnyFunSuite
