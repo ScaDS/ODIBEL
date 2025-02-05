@@ -3,6 +3,10 @@ package ai.scads.odibel.datasets.wikitext.log
 import org.slf4j.LoggerFactory
 import scala.collection.mutable
 
+/**
+ * Stopwatch util to measures duration of nameable steps
+ * @param taskName
+ */
 class StepTimer(taskName: String) {
 
   private val log = LoggerFactory.getLogger(classOf[StepTimer])

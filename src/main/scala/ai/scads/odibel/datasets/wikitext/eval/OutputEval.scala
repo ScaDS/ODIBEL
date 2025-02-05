@@ -1,8 +1,9 @@
 package ai.scads.odibel.datasets.wikitext.eval
 
-import ai.scads.odibel.datasets.wikitext.TemporalExtractionResult
-import ai.scads.odibel.datasets.wikitext.eval.rows.TKGSummary
-import ai.scads.odibel.datasets.wikitext.eval.{EvalFunctions, EvalSpark, VOCAB}
+import ai.scads.odibel.datasets.wikitext.data.TemporalExtractionResult
+import ai.scads.odibel.datasets.wikitext.eval.metricsdata.TKGSummary
+import ai.scads.odibel.datasets.wikitext.eval.{EvalFunctions, VOCAB}
+import ai.scads.odibel.datasets.wikitext.utils.SparkSessionUtil
 import org.apache.spark.sql.DataFrame
 import org.apache.spark.sql.functions.{col, date_format, datediff, desc, floor, from_unixtime, to_date}
 import picocli.CommandLine.{Command, Option}
@@ -26,7 +27,7 @@ class OutputEval extends Callable[Int] {
   @Option(names = Array("--functions", "-f"), split = ",", required = false)
   var functionNamesToExecute: java.util.ArrayList[String] = _
 
-  private val sql = EvalSpark.sql
+  private val sql = SparkSessionUtil.sql
   import sql.implicits._
 
   def writeOut(name: String, ds: DataFrame): Unit = {

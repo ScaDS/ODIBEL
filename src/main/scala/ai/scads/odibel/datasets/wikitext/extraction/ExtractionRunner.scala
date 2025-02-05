@@ -1,7 +1,8 @@
 package ai.scads.odibel.datasets.wikitext.extraction
 
+import ai.scads.odibel.datasets.wikitext.data.{PageRevision, TemporalExtractionResult}
 import ai.scads.odibel.datasets.wikitext.log.{EventLogger, FailedRevisionEvent, SkippedRevisionEvent, SucceededPageEvent, SucceededRevisionEvent}
-import ai.scads.odibel.datasets.wikitext.{FlatPageRevision, RCDiefServer, TemporalExtractionResult, TemporalWindowBuilder}
+import ai.scads.odibel.datasets.wikitext.{RCDiefServer, TemporalWindowBuilder}
 import org.apache.hadoop.conf.Configuration
 import org.apache.hadoop.fs.{FileSystem, Path}
 import org.apache.hadoop.io.compress.CompressionCodecFactory
@@ -103,7 +104,7 @@ class ExtractionRunner(extractionJob: ExtractionJob, endpoint: String, eventLog:
     sourceIterator
       .foreach {
         line =>
-          val wikitext = read[FlatPageRevision](line)(macroRW[FlatPageRevision])
+          val wikitext = read[PageRevision](line)(macroRW[PageRevision])
           val pageId = wikitext.pId
           if (oPageId != pageId) {
             eventLog.logEvent(SucceededPageEvent(pageId,Map()))
@@ -133,8 +134,8 @@ class ExtractionRunner(extractionJob: ExtractionJob, endpoint: String, eventLog:
                 eventLog.logEvent(FailedRevisionEvent(wikitext.rId, "ERROR"))
 //                println(body) TODO
               case Left(value) =>
-                val triples = value.split("\n").toList
-                tb.addGraphVersion(triples.filter(_.startsWith("<")), wikitext.rTimestamp)(wikitext.rId.toString)
+                val triples = value.split("\n").toList.filter(_.startsWith("<"))
+                tb.addGraphVersion(triples, wikitext.rTimestamp)(wikitext.rId.toString)
                 eventLog.logEvent(SucceededRevisionEvent(wikitext.rId, Map()))
             }
           } else {
