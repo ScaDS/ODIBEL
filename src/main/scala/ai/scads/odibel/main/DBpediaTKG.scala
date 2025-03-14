@@ -1,10 +1,11 @@
 package ai.scads.odibel.main
 
 import ai.scads.odibel.datasets.wikitext.data.TemporalExtractionResult
+import ai.scads.odibel.datasets.wikitext.io.TKGDataMgr
 import ai.scads.odibel.datasets.wikitext.tansform.SerUtil
 import ai.scads.odibel.datasets.wikitext.utils.{FlatPageRevisionPartitioner, WikiDumpFlatter}
 import ai.scads.odibel.datasets.wikitext.{DBpediaTKGExtraction, DBpediaTKGExtractionSpark}
-import ai.scads.odibel.main.DBpediaTKG.{FlatRepartitioner, TemporalExtraction, WikidumpRevisionSplit}
+import ai.scads.odibel.main.DBpediaTKG.{FlatRepartitioner, TKGResultParserSpark, TemporalExtraction, TemporalExtractionSpark, WikidumpRevisionSplit}
 import ai.scads.odibel.utils.HDFSUtil
 import picocli.CommandLine.{Command, Option}
 
@@ -144,6 +145,25 @@ object DBpediaTKG {
     }
   }
 
+  @Command(name = "parseSpark")
+  class TKGResultParserSpark extends Callable[Int] {
+
+    @Option(names = Array("-i"))
+    var in: String = _
+
+    @Option(names = Array("-o"))
+    var out: String = _
+
+    @Option(names = Array("-f"))
+    var format: String = "nquads"
+
+    override def call(): Int = {
+        val mgr = new TKGDataMgr
+        mgr.parseSpark(in,out,format)
+      0
+    }
+  }
+
   @Command(name = "partition")
   class FlatRepartitioner extends Callable[Int] {
 
@@ -168,7 +188,7 @@ object DBpediaTKG {
 
 @Command(
   name = "dbpedia-tkg",
-  subcommands = Array(classOf[WikidumpRevisionSplit], classOf[TemporalExtraction], classOf[FlatRepartitioner]),
+  subcommands = Array(classOf[WikidumpRevisionSplit], classOf[TemporalExtraction], classOf[FlatRepartitioner], classOf[TKGResultParserSpark], classOf[TemporalExtractionSpark]),
   mixinStandardHelpOptions = true
 )
 class DBpediaTKG extends Callable[Int] {
