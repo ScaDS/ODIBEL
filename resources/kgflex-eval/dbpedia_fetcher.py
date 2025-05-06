@@ -130,7 +130,10 @@ if __name__ == "__main__":
     for film_uri in film_uris:
         name = film_uri.split("/")[-1]
         film_graph = fetch_film_data(film_uri)
-        persons, companies = extract_entities(film_graph)
+        film_persons, film_companies = extract_entities(film_graph)
+
+        persons.update(film_persons)
+        companies.update(film_companies)
 
     fetch_entities(persons, PERSON_PROPERTIES, "Person")
     fetch_entities(companies, ORG_PROPERTIES, "Company")
