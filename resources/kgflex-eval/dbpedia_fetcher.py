@@ -2,9 +2,13 @@ import requests
 import os
 import sys
 from rdflib import Graph, URIRef
+from urllib.parse import urlencode
 
-SPARQL_ENDPOINT = "https://dbpedia.org/sparql"
-HEADERS = {'Accept': 'application/rdf+xml'}
+SPARQL_ENDPOINT = "http://localhost:8890/sparql"
+HEADERS = {
+    "Content-Type": "application/x-www-form-urlencoded",
+    "Accept": "application/rdf+xml"
+}
 OUTPUT_DIR = "entities"
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
@@ -54,32 +58,32 @@ ORG_PROPERTIES = [
 ]
 
 def construct_query(subject_uri, properties):
-    triple_patterns = "\n".join([f"<{subject_uri}> <{p}> ?o{i} ." for i, p in enumerate(properties)])
-    return f"""
-    CONSTRUCT {{
-        {triple_patterns}
-    }} WHERE {{
-        {triple_patterns}
-    }}
-    """
+    construct_triples = "\n".join([f"<{subject_uri}> <{p}> ?o{i} ." for i, p in enumerate(properties)])
+    optional_blocks = "\n".join([f"OPTIONAL {{ <{subject_uri}> <{p}> ?o{i} . }}" for i, p in enumerate(properties)])
 
-def construct_entity_query(entity_uri, properties):
-    triple_patterns = "\n".join([f"<{entity_uri}> <{p}> ?o{i} ." for i, p in enumerate(properties)])
-    return f"""
+    query = f"""
     CONSTRUCT {{
-        {triple_patterns}
-    }} WHERE {{
-        {triple_patterns}
+    {construct_triples}
+    }}
+    WHERE {{
+    {optional_blocks}
     }}
     """
+    print(query)
+    return query
 
 def run_query(query):
-    response = requests.get(SPARQL_ENDPOINT, headers=HEADERS, params={
-        "query": query,
-        "format": "application/rdf+xml"
-    })
+
+    payload = urlencode({'query': query})
+
+    response = requests.post(
+        SPARQL_ENDPOINT,
+        data=payload,
+        headers=HEADERS
+    )
+    print("Response= " + response.text)
     graph = Graph()
-    graph.parse(data=response.text)
+    graph.parse(data=response.text, format="application/rdf+xml")
     return graph
 
 def save_graph(graph, name):
@@ -89,7 +93,7 @@ def save_graph(graph, name):
 def fetch_film_data(film_uri):
     print(f"Fetching film data: {film_uri}")
     graph = run_query(construct_query(film_uri, FILM_PROPERTIES))
-    save_graph(graph, "Film_"+ uri.split("/")[-1])
+    save_graph(graph, "Film_"+ film_uri.split("/")[-1])
     return graph
 
 def extract_entities(graph):
@@ -108,7 +112,7 @@ def fetch_entities(uris, properties, label):
     for uri in uris:
         name = uri.split("/")[-1]
         print(f"Fetching {label}: {uri}")
-        graph = run_query(construct_entity_query(uri, properties))
+        graph = run_query(construct_query(uri, properties))
         save_graph(graph, f"{label}_{name}")
 
 if __name__ == "__main__":
@@ -126,3 +130,4 @@ if __name__ == "__main__":
         persons, companies = extract_entities(film_graph)
         fetch_entities(persons, PERSON_PROPERTIES, "Person")
         fetch_entities(companies, ORG_PROPERTIES, "Company")
+
