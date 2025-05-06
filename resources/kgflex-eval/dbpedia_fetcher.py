@@ -89,7 +89,7 @@ def save_graph(graph, name):
 def fetch_film_data(film_uri):
     print(f"Fetching film data: {film_uri}")
     graph = run_query(construct_query(film_uri, FILM_PROPERTIES))
-    save_graph(graph, "Film_Titanic")
+    save_graph(graph, "Film_"+ uri.split("/")[-1])
     return graph
 
 def extract_entities(graph):
