@@ -124,10 +124,14 @@ if __name__ == "__main__":
     with open(uri_file_path, "r", encoding="utf-8") as f:
         film_uris = [line.strip() for line in f if line.strip()]
 
+    persons = set()
+    companies = set()
+
     for film_uri in film_uris:
         name = film_uri.split("/")[-1]
         film_graph = fetch_film_data(film_uri)
         persons, companies = extract_entities(film_graph)
-        fetch_entities(persons, PERSON_PROPERTIES, "Person")
-        fetch_entities(companies, ORG_PROPERTIES, "Company")
+
+    fetch_entities(persons, PERSON_PROPERTIES, "Person")
+    fetch_entities(companies, ORG_PROPERTIES, "Company")
 
