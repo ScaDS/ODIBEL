@@ -28,6 +28,7 @@ for key, base in BASE_DIRS.items():
             os.makedirs(os.path.join(base, sub), exist_ok=True)
 
 FILM_PROPERTIES = {
+    "http://xmlns.com/foaf/0.1/name": "",
     "http://dbpedia.org/property/genre": "",
     "http://dbpedia.org/ontology/runtime": "",
     "http://dbpedia.org/ontology/budget": "",
@@ -44,6 +45,7 @@ FILM_PROPERTIES = {
 }
 
 PERSON_PROPERTIES = {
+    "http://xmlns.com/foaf/0.1/name": "",
     "http://dbpedia.org/ontology/birthDate": "",
     "http://dbpedia.org/ontology/deathDate": "",
     "http://dbpedia.org/ontology/birthPlace": "Place",
@@ -56,6 +58,7 @@ PERSON_PROPERTIES = {
 }
 
 ORG_PROPERTIES = {
+    "http://xmlns.com/foaf/0.1/name": "",
     "http://dbpedia.org/property/name": "",
     "http://dbpedia.org/ontology/foundingYear": "",
     "http://dbpedia.org/ontology/foundingDate": "",
@@ -88,7 +91,7 @@ def construct_query(subject_uri, properties):
     where_lines = [
         f"<{subject_uri}> <http://www.w3.org/2000/01/rdf-schema#label> ?label .",
         f"<{subject_uri}> ?p ?o .",
-        "FILTER( strstarts(str(?p),'http://dbpedia.org/ontology/') || strstarts(str(?p),'http://dbpedia.org/property/') )"
+        "FILTER( strstarts(str(?p),'http://dbpedia.org/ontology/') || strstarts(str(?p),'http://dbpedia.org/property/') || strstarts(str(?p),'http://xmlns.com/foaf/0.1/name'))"
     ]
     # Für Properties, die Pfadnavigation benötigen
     for prop in properties:
@@ -161,6 +164,10 @@ def fetch_entity_data(uri, properties, category, recursive=False):
                 dbo_graph.add((s, p, o))
             elif str(p).startswith(dbp_ns):
                 dbp_graph.add((s, p, o))
+            else:
+                dbp_graph.add((s, p, o))
+                dbo_graph.add((s, p, o))
+            
 
     save_graph(dbo_graph, name, category, "dbo")
     save_graph(dbp_graph, name, category, "dbp")
