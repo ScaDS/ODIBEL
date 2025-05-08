@@ -71,7 +71,8 @@ PATH_NAV_PROPERTIES = {
     "http://dbpedia.org/ontology/birthPlace",
     "http://dbpedia.org/ontology/deathPlace",
     "http://dbpedia.org/ontology/nationality",
-    "http://dbpedia.org/ontology/headquarter"
+    "http://dbpedia.org/ontology/headquarter",
+    "http://dbpedia.org/ontology/occupation"
 }
 
 
@@ -155,10 +156,11 @@ def fetch_entity_data(uri, properties, category, recursive=False):
     dbp_graph = Graph()
 
     for s, p, o in graph:
-        if str(p).startswith(dbo_ns):
-            dbo_graph.add((s, p, o))
-        elif str(p).startswith(dbp_ns):
-            dbp_graph.add((s, p, o))
+        if str(p) in properties.keys():
+            if str(p).startswith(dbo_ns):
+                dbo_graph.add((s, p, o))
+            elif str(p).startswith(dbp_ns):
+                dbp_graph.add((s, p, o))
 
     save_graph(dbo_graph, name, category, "dbo")
     save_graph(dbp_graph, name, category, "dbp")
