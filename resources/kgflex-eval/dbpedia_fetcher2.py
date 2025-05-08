@@ -30,9 +30,22 @@ for key, base in BASE_DIRS.items():
 FILM_PROPERTIES = {
     "http://xmlns.com/foaf/0.1/name": "",
     "http://dbpedia.org/property/genre": "",
+    "http://dbpedia.org/property/writer": "",
+    "http://dbpedia.org/property/starring": "",
+    "http://dbpedia.org/property/productionCompany": "",
+    "http://dbpedia.org/property/production": "",
+    "https://dbpedia.org/property/director": "",
+    "https://dbpedia.org/property/distributor": "",
+    "http://dbpedia.org/property/runtime": "",
+    "http://dbpedia.org/property/producer": "",
+    "http://dbpedia.org/property/budget": "",
+    "http://dbpedia.org/property/gross": "",
+    "http://dbpedia.org/property/cinematography": "",
+    "http://dbpedia.org/property/musicComposer": "",
+    "http://dbpedia.org/property/composer": "",
+    "http://dbpedia.org/property/title": "",
     "http://dbpedia.org/ontology/runtime": "",
     "http://dbpedia.org/ontology/budget": "",
-    "http://dbpedia.org/property/gross": "",
     "http://dbpedia.org/ontology/title": "",
     "http://dbpedia.org/ontology/writer": "Person",
     "http://dbpedia.org/ontology/starring": "Person",
@@ -47,27 +60,43 @@ FILM_PROPERTIES = {
 PERSON_PROPERTIES = {
     "http://xmlns.com/foaf/0.1/name": "",
     "http://dbpedia.org/ontology/birthDate": "",
+    "http://dbpedia.org/property/birthDate": "",
     "http://dbpedia.org/ontology/deathDate": "",
+    "http://dbpedia.org/property/deathDate": "",
     "http://dbpedia.org/ontology/birthPlace": "Place",
+    "http://dbpedia.org/property/birthPlace": "",
     "http://dbpedia.org/ontology/deathPlace": "Place",
+    "http://dbpedia.org/property/deathPlace": "",
     "http://dbpedia.org/ontology/occupation": "",
+    "http://dbpedia.org/property/occupation": "",
     "http://dbpedia.org/ontology/nationality": "Place",
+    "http://dbpedia.org/property/nationality": "",
     "http://dbpedia.org/ontology/spouse": "Person",
+    "http://dbpedia.org/property/spouse": "",
     "http://dbpedia.org/ontology/child": "Person",
-    "http://dbpedia.org/ontology/award": ""
+    "http://dbpedia.org/property/child": "",
+    "http://dbpedia.org/ontology/award": "",
+    "http://dbpedia.org/property/award": ""
 }
 
 ORG_PROPERTIES = {
     "http://xmlns.com/foaf/0.1/name": "",
     "http://dbpedia.org/property/name": "",
     "http://dbpedia.org/ontology/foundingYear": "",
+    "http://dbpedia.org/property/foundingYear": "",
     "http://dbpedia.org/ontology/foundingDate": "",
+    "http://dbpedia.org/property/foundingDate": "",
     "https://dbpedia.org/property/products": "",
     "http://dbpedia.org/ontology/industry": "",
+    "http://dbpedia.org/property/industry": "",
     "http://dbpedia.org/ontology/revenue": "",
+    "http://dbpedia.org/property/revenue": "",
     "http://dbpedia.org/ontology/numberOfEmployees": "",
-    "http://dbpedia.org/ontology/headquarter": "Place"
+    "http://dbpedia.org/property/numberOfEmployees": "",
+    "http://dbpedia.org/ontology/headquarter": "Place",
+    "http://dbpedia.org/property/headquarter": ""
 }
+
 
 PATH_NAV_PROPERTIES = {
     "http://dbpedia.org/ontology/genre",
