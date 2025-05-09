@@ -7,6 +7,22 @@ pip install -r requirements.txt
 get sameas and raw files #TODO
 
 ```
+data
+|- dbpedia
+|  |- raw
+|     |- film
+|     |  |- $URI_LAST_SEGMENT
+|     |- person
+|     |- company
+|- wikdiata
+   |- raw
+      |- film
+      |- person
+      |- company
+```
+
+
+```
 bash execute_post_fetch.sh 
 ```
 
