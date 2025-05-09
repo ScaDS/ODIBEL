@@ -55,6 +55,8 @@ filter_ntriples_dir_tree(
     properties=definition.WIKIDATA_PROPS
 )
 
+
+
 #######################################
 
 # from rdflib import Graph, FOAF, RDF, RDFS, Literal

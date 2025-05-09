@@ -100,6 +100,7 @@ DBPEDIA_ONTOLOGY_PROPS=[
 DBPEDIA_SPECIAL_PROPS=[
     #foafname
     "http://foaf.org/0.1/name",
+    "http://dbpedia.org/ontology/abstract",
 ]
 
 DBPEDIA_PROPS=DBPEDIA_GENERIC_PROPS+DBPEDIA_ONTOLOGY_PROPS+DBPEDIA_SPECIAL_PROPS
