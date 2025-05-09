@@ -266,7 +266,7 @@ def expand_subgraph(split_entities: Set[str], uri_file_map: dict, out_dir: str):
     parsed = set()
     queue = deque(split_entities)
 
-    os.makedirs(out_dir, exist_ok=True)
+    
 
     while queue:
         uri = queue.popleft()
@@ -275,7 +275,8 @@ def expand_subgraph(split_entities: Set[str], uri_file_map: dict, out_dir: str):
 
         parsed.add(uri)
         src_path = uri_file_map[uri]
-        dst_path = os.path.join(out_dir, os.path.basename(src_path))
+        dst_path = os.path.join(out_dir, src_path.split("/")[-2] + "/" + src_path.split("/")[-1])
+        os.makedirs(os.path.dirname(dst_path), exist_ok=True)
         shutil.copy(src_path, dst_path)
 
         with open(src_path, 'r', encoding='utf-8') as f:
