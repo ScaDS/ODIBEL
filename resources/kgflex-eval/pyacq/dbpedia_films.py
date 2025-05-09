@@ -39,7 +39,7 @@ FILM_PROPERTIES = {
     "http://dbpedia.org/ontology/producer": "Person",
     "http://dbpedia.org/ontology/cinematography": "Person",
     "http://dbpedia.org/ontology/musicComposer": "Person"
-}AJa 
+}
 
 PERSON_PROPERTIES = [
     str(FOAF.name),
