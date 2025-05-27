@@ -5,7 +5,7 @@ from rdflib import Graph, URIRef, Literal, RDFS
 from urllib.parse import quote
 from tqdm import tqdm
 
-WIKIDATA_DIR = "entities/wikidata"
+WIKIDATA_DIR = "/data/benchmark/3500/wikidata"
 SUBCATEGORIES = ["film", "person", "company"]
 
 for sub in SUBCATEGORIES:
@@ -161,7 +161,7 @@ def fetch_entity_data(uri, properties, category, recursive=False):
 
 def main(uri_file_path):
     with open(uri_file_path, "r", encoding="utf-8") as f:
-        film_uris = [line.strip().split()[0] for line in f if line.strip()]
+        film_uris = [line.strip().split()[1] for line in f if line.strip()]
 
     all_persons = set()
     all_companies = set()
