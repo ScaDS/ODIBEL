@@ -16,6 +16,12 @@
     </properties>
 
     <dependencies>
+        <dependency>
+            <groupId>com.opencsv</groupId>
+            <artifactId>opencsv</artifactId>
+            <version>5.9</version>
+        </dependency>
+
         <!-- https://mvnrepository.com/artifact/org.scala-lang/scala-library -->
         <dependency>
             <groupId>org.scala-lang</groupId>
