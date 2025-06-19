@@ -1,6 +1,50 @@
 
 # TODOs
 
+- [~] pre-fusion JSON-LD to NT format
+- [ ] Implement Partitioner on PreFusion Dump (JSON-LD line files)
+      load all data into pyspark
+      pyspark provides partition function
+      use this and write to disk
+- [ ] Implement a selector function that gets a file list based on vocab or types
+      Example e.g., type=Person predicates=birthDate,name
+      => file list based on partition scheme (./type=Person/predicate=birthDate/prefusion.jsonld, ./type=Person/predicate=name/prefusion.jsonld)
+- [ ] load data
+- [ ] Calculate some statistics (correctness, load time, query time, size)
+- [ ] Execute SPARQL query
+
+# Worst Case (Base Line)
+
+Load everything
+And execute stats
+and execute queries
+
+# Partition Schemas
+
+By Type and Predicate
+```
+/tmp/partitioned_sales/
+  ├── type=2023/
+  │   └── predicate=USA/
+  │       └── part-*.parquet
+  └── type=2024/
+      ├── predicate=Mexico/
+      │   └── part-*.parquet
+      └── predicate=USA/
+          └── part-*.parquet
+```
+
+By Predicate
+```
+# file 1 predicate p
+<s> <p> <o> .
+<s2> <p> <o> . 
+
+# file 2 predicate p2
+<s> <p2> <o> . 
+<s3> <p2> <o3> .
+```
+
 # [TOPIC] Improving Data Partitioning withing the DBpedia FlexiFusion
 
 ## Introduction
