@@ -2,11 +2,12 @@ package ai.scads.odibel.datasets.wikitext.transform
 
 trait CSVToRDF {
 
-  private val PREFIXES: String = """
-                                   |@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-                                   |@prefix rel: <http://example.org/relation/> .
-                                   |@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-                                   |""".stripMargin
+  val prefixes: Map[String, String] = Map(
+    "rdf" -> "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rel" -> "http://example.org/relation/",
+    "graph" -> "http://example.org/graph/",
+    "xsd" -> "http://www.w3.org/2001/XMLSchema#"
+  )
 
   def convertRowToRDF(line: String): String
 
@@ -43,8 +44,6 @@ trait CSVToRDF {
       val rdfData = df.rdd.mapPartitions { rows =>
         rows.map(row => convert(row.mkString(",")))
       }
-
-      spark.sparkContext.parallelize(Seq(PREFIXES)).saveAsTextFile(outputPath + "_prefixes")
       rdfData.saveAsTextFile(outputPath + "_data")
       println(s"Spark output saved to $outputPath (merge with hadoop fs -cat)")
     } finally {
@@ -63,7 +62,6 @@ trait CSVToRDF {
     val converted = lines.map(convert)
     val pw = new java.io.PrintWriter(outputPath)
     try {
-      pw.println(PREFIXES)
       converted.filter(_.nonEmpty).foreach(pw.println)
     } finally pw.close()
   }
