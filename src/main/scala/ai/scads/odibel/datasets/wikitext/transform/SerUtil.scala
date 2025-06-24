@@ -42,8 +42,7 @@ object SerUtil {
   case class RDFTriple(
                         head: String,
                         rel: String,
-                        literal: String,
-                        langTag: Option[String],
+                        obj: String,
                         tStart: String,
                         tEnd: String,
                         rStart: String,
@@ -78,7 +77,11 @@ object SerUtil {
       .replace("\\t", "\t")
       .replace("\\\"", "\"")
 
-    Some(RDFTriple(head, rel, literal, langTagOpt, formatDate(tStart.toLong), formatDate(tEnd.toLong), formatDate(rStart.toLong), formatDate(rEnd.toLong)))
+
+    val langTagStr = langTagOpt.getOrElse("")
+    val obj = if (literal.contains("http")) s"<$literal>" else s""""$literal"$langTagStr"""
+
+    Some(RDFTriple(head, rel, obj, formatDate(tStart.toLong), formatDate(tEnd.toLong), formatDate(rStart.toLong), formatDate(rEnd.toLong)))
   }
 
   private def parseCsvLine(line: String): Array[String] = {
