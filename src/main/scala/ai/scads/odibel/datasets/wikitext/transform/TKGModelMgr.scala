@@ -1,5 +1,8 @@
 package ai.scads.odibel.datasets.wikitext.transform
 
+import ai.scads.odibel.datasets.wikitext.data.TemporalExtractionResult
+import ai.scads.odibel.datasets.wikitext.utils.SparkSessionUtil
+
 object TKGModelMgr {
 
   sealed trait TKGModel { val format: String }
@@ -15,7 +18,7 @@ trait CSVToRDF {
 
   val prefixes: Map[String, String] = Map(
     "rdf" -> "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-    "rel" -> "http://example.org/relation/",
+    "rel" -> "http://dbpedia.org/temporal/",
     "graph" -> "http://example.org/graph/",
     "xsd" -> "http://www.w3.org/2001/XMLSchema#"
   )
@@ -130,4 +133,28 @@ object CSVToRDFStar extends CSVToRDF {
       case None => ""
     }
   }
+}
+
+object ToNQuads extends App {
+
+  val sql = SparkSessionUtil.sql
+
+  import sql.implicits._
+
+  if (args.length != 3)
+    System.err.println("usage -- inputPath OutputPath")
+
+  sql.read.parquet(args(0))
+    .withColumn("tFrom", $"tFrom".cast("long"))
+    .withColumn("tUntil", $"tUntil".cast("long"))
+    .repartition(2048,$"head", $"tFrom")
+    .as[TemporalExtractionResult]
+    .flatMap({
+      ter =>
+        SerUtil.buildQuads(
+          if (ter.tail.startsWith("\"")) ter
+          else ter.copy(tail = ter.tail.dropRight(1))
+        )
+    })
+    .write.mode("overwrite").option("compression", "bzip2").text(args(1))
 }
