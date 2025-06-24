@@ -11,8 +11,8 @@ object CSVToRDFReification extends CSVToRDF {
            |    rdf:object "$literal"$langTagStr ;
            |    rel:tStart "$tStart"^^xsd:dateTime ;
            |    rel:tEnd "$tEnd"^^xsd:dateTime ;
-           |    rel:rStart $rStart^^xsd:dateTime ;
-           |    rel:rEnd $rEnd^^xsd:dateTime .
+           |    rel:rStart "$rStart"^^xsd:dateTime ;
+           |    rel:rEnd "$rEnd"^^xsd:dateTime .
            |""".stripMargin
       case None => ""
     }
