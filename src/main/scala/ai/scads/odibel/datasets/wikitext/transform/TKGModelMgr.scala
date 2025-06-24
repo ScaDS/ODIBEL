@@ -1,4 +1,4 @@
-package ai.scads.odibel.datasets.wikitext.tansform
+package ai.scads.odibel.datasets.wikitext.transform
 
 object TKGModelMgr {
 

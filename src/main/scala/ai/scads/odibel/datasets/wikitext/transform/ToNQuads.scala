@@ -1,7 +1,7 @@
-package ai.scads.odibel.datasets.wikitext.tansform
+package ai.scads.odibel.datasets.wikitext.transform
 
 import ai.scads.odibel.datasets.wikitext.data.TemporalExtractionResult
-import ai.scads.odibel.datasets.wikitext.tansform.Json2CSV.{args, sql}
+import ai.scads.odibel.datasets.wikitext.transform.Json2CSV.{args, sql}
 import ai.scads.odibel.datasets.wikitext.utils.SparkSessionUtil
 import java.time.{Instant, ZoneOffset}
 import java.time.format.DateTimeFormatter
