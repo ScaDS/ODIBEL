@@ -1,7 +1,7 @@
 package ai.scads.odibel.main
 
 import ai.scads.odibel.datasets.wikitext.data.TemporalExtractionResult
-import ai.scads.odibel.datasets.wikitext.tansform.SerUtil
+import ai.scads.odibel.datasets.wikitext.transform.SerUtil
 import ai.scads.odibel.datasets.wikitext.utils.{FlatPageRevisionPartitioner, WikiDumpFlatter}
 import ai.scads.odibel.datasets.wikitext.{DBpediaTKGExtraction, DBpediaTKGExtractionSpark}
 import ai.scads.odibel.main.DBpediaTKG.{FlatRepartitioner, TemporalExtraction, WikidumpRevisionSplit}

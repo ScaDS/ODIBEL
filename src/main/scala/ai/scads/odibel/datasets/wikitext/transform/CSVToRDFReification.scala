@@ -1,6 +1,6 @@
-package ai.scads.odibel.datasets.wikitext.tansform
+package ai.scads.odibel.datasets.wikitext.transform
 
-import ai.scads.odibel.datasets.wikitext.tansform.SerUtil
+import ai.scads.odibel.datasets.wikitext.transform.SerUtil
 
 import java.io.{BufferedReader, FileReader}
 

@@ -1,6 +1,6 @@
 package ai.scads.odibel.datasets.wikitext
 
-import ai.scads.odibel.datasets.wikitext.tansform.{SerUtil, ToNQuads}
+import ai.scads.odibel.datasets.wikitext.transform.{SerUtil, ToNQuads}
 import org.scalatest.funsuite.AnyFunSuite
 
 class UtilTest extends AnyFunSuite {
