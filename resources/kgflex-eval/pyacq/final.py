@@ -3,8 +3,9 @@ import rdflib
 from typing import Callable
 from filter import filter_ntriples_file_by_properties
 from definition import *
+from typing import List
 
-def extract_abstracts(input_file: str, output_file: str):
+def extract_abstracts(input_file: str, output_file: str, dumy = []):
     with open(input_file, 'r', encoding='utf-8') as infile, \
         open(output_file, 'w', encoding='utf-8') as outfile:
         for line in infile:
@@ -23,9 +24,17 @@ def extract_abstracts(input_file: str, output_file: str):
                 continue  # skip malformed lines
 
 def process_dir_tree(input_root: str, output_root: str, func):
-    print(f"Processing {input_root}")
-    for dirpath, _, filenames in os.walk(input_root):
+    print(f"Processing {input_root} > {output_root}")
+    for dirpath, x, filenames in os.walk(input_root):
         for filename in filenames:
+            dirname = os.path.basename(dirpath)
+
+            entity_type = TYPE_MAP.get(dirname, None)
+            entity_types = [entity_type] if entity_type is not None else []
+
+            # if entity_type is not None:
+            #     func = globals()[f"filter_{entity_type}"]
+
             input_file = os.path.join(dirpath, filename)
             relative_path = os.path.relpath(input_file, input_root)
             output_file = os.path.join(output_root, relative_path)
@@ -34,13 +43,13 @@ def process_dir_tree(input_root: str, output_root: str, func):
             os.makedirs(os.path.dirname(output_file), exist_ok=True)
 
             # Filter and write the file
-            func(input_file, output_file)
+            func(input_file, output_file, []) #  is [] as moved to filter.py in the filter step
 
-def filter_dbp(input_file, output_file):
-    filter_ntriples_file_by_properties(input_file, output_file, DBPEDIA_GENERIC_PROPS)
+def filter_dbp(input_file, output_file, entity_types: List[str] = []):
+    filter_ntriples_file_by_properties(input_file, output_file, DBPEDIA_GENERIC_PROPS, entity_types)
 
-def filter_dbo(input_file, output_file):
-    filter_ntriples_file_by_properties(input_file, output_file, DBPEDIA_ONTOLOGY_PROPS)
+def filter_dbo(input_file, output_file, entity_types: List[str] = []):
+    filter_ntriples_file_by_properties(input_file, output_file, DBPEDIA_ONTOLOGY_PROPS, entity_types)
 
 if __name__ == "__main__":
     root = "data/splits"

@@ -1,7 +1,8 @@
 import os
 import definition
+from typing import List
 
-def filter_ntriples_file_by_properties(input_file: str, output_file: str, properties: list):
+def filter_ntriples_file_by_properties(input_file: str, output_file: str, properties: list, entity_types: List[str] = []):
     """
     Reads an N-Triples file, filters triples by given predicate properties, and writes to a new file.
 
@@ -15,16 +16,24 @@ def filter_ntriples_file_by_properties(input_file: str, output_file: str, proper
 
     with open(input_file, 'r', encoding='utf-8') as infile, \
          open(output_file, 'w', encoding='utf-8') as outfile:
+        subs = set()
         for line in infile:
             line = line.strip()
             if not line or line.startswith('#'):
                 continue
             try:
-                _, predicate, _ = line.split(maxsplit=2)
+                subj, predicate, _ = line.split(maxsplit=2)
+                subs.add(subj)
                 if predicate in prop_set:
-                    outfile.write(line + '\n')
+                    if predicate == "<http://www.w3.org/2000/01/rdf-schema#label>" and line.endswith("@en .") and (subj.endswith(input_file.split("/")[-1].split(".")[0]+">") or subj.startswith("<http://dbpedia.org/resource/")):
+                        outfile.write(line + '\n')
+                    elif predicate != "<http://www.w3.org/2000/01/rdf-schema#label>":
+                        outfile.write(line + '\n')
             except ValueError:
                 continue  # skip malformed lines
+        for entity_type in entity_types:
+            for sub in subs:
+                outfile.write(f"{sub} <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <{entity_type}> .\n")
 
 
 def filter_ntriples_dir_tree(input_root: str, output_root: str, properties: list):
@@ -33,6 +42,11 @@ def filter_ntriples_dir_tree(input_root: str, output_root: str, properties: list
 
     for dirpath, _, filenames in os.walk(input_root):
         for filename in filenames:
+
+            dirname = os.path.basename(dirpath)
+            entity_type = definition.TYPE_MAP.get(dirname, None)
+            entity_types = [entity_type] if entity_type is not None else []
+
             input_file = os.path.join(dirpath, filename)
             relative_path = os.path.relpath(input_file, input_root)
             output_file = os.path.join(output_root, relative_path[0:-3])
@@ -41,7 +55,7 @@ def filter_ntriples_dir_tree(input_root: str, output_root: str, properties: list
             os.makedirs(os.path.dirname(output_file), exist_ok=True)
 
             # Filter and write the file
-            filter_ntriples_file_by_properties(input_file, output_file, properties_set)
+            filter_ntriples_file_by_properties(input_file, output_file, properties_set, entity_types)
 
 filter_ntriples_dir_tree(
     input_root="data/dbpedia/raw",

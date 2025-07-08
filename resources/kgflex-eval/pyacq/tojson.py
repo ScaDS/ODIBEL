@@ -1,6 +1,7 @@
 from rdflib import Graph, URIRef, RDFS
 from urllib.parse import unquote, quote
 import json, os
+from hashlib import sha256
 
 def build_recursive_json(subject, graph, visited=None):
     if visited is None:
@@ -43,6 +44,8 @@ def build_recursive_json(subject, graph, visited=None):
         else:
             if value and value != "" and value != {}:
                 result[key] = value
+
+        result["provenance_hash"] = sha256(subject.encode("utf-8")).hexdigest()
 
     return result
 

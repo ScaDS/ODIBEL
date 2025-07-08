@@ -1,5 +1,7 @@
 
 WIKIDATA_PROPS=[
+    "http://www.w3.org/2000/01/rdf-schema#label",
+
     "http://www.wikidata.org/prop/direct/P136",
     "http://www.wikidata.org/prop/direct/P58",
     "http://www.wikidata.org/prop/direct/P161",
@@ -30,10 +32,13 @@ WIKIDATA_PROPS=[
     "http://www.wikidata.org/prop/direct/P452",
     "http://www.wikidata.org/prop/direct/P2139",
     "http://www.wikidata.org/prop/direct/P1128",
-    "http://www.wikidata.org/prop/direct/P159"
+    "http://www.wikidata.org/prop/direct/P159",
 ]
 
 DBPEDIA_GENERIC_PROPS=[
+    "http://www.w3.org/2000/01/rdf-schema#label",
+
+
     "http://dbpedia.org/property/genre",
     "http://dbpedia.org/property/writer",
     "http://dbpedia.org/property/starring",
@@ -67,6 +72,8 @@ DBPEDIA_GENERIC_PROPS=[
 ]
 
 DBPEDIA_ONTOLOGY_PROPS=[
+    "http://www.w3.org/2000/01/rdf-schema#label",
+
     "http://dbpedia.org/ontology/writer",
     "http://dbpedia.org/ontology/starring",
     "http://dbpedia.org/ontology/productionCompany",
@@ -99,8 +106,17 @@ DBPEDIA_ONTOLOGY_PROPS=[
 
 DBPEDIA_SPECIAL_PROPS=[
     #foafname
+    "http://xmlns.com/foaf/0.1/name",
+    "http://www.w3.org/2000/01/rdf-schema#label",
     "http://foaf.org/0.1/name",
     "http://dbpedia.org/ontology/abstract",
+#    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
 ]
 
 DBPEDIA_PROPS=DBPEDIA_GENERIC_PROPS+DBPEDIA_ONTOLOGY_PROPS+DBPEDIA_SPECIAL_PROPS
+
+TYPE_MAP = {
+    'film': "http://dbpedia.org/ontology/Movie",
+    'person': "http://dbpedia.org/ontology/Person",
+    'company': "http://dbpedia.org/ontology/Company",
+}

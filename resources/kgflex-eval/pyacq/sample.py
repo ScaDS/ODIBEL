@@ -3,6 +3,7 @@ import shutil
 from collections import defaultdict
 from typing import Dict, Set, List
 import random
+import csv
 
 def get_film_dependencies(film_dir: str, namespace: str) -> Dict[str, Set[str]]:
     film_to_entities = {}
@@ -324,6 +325,23 @@ def compute_overlap_stats(parsed_sets: List[Set[str]], label="DBpedia"):
     print(f"Total overlap (all pairs): {total_overlap} entities")
 
 
+def write_split_entity_matches(
+    parsed_sets_dbp: List[Set[str]],
+    parsed_sets_wd: List[Set[str]],
+    sameas_map: Dict[str, str],
+    output_root: str
+):
+    for i, (dbp_set, wd_set) in enumerate(zip(parsed_sets_dbp, parsed_sets_wd)):
+        split_name = f"split_{i+1}"
+        out_file = os.path.join(output_root, split_name + "_matches.csv")
+        
+        with open(out_file, 'w', encoding='utf-8', newline='') as f:
+            writer = csv.writer(f)
+            writer.writerow(["dbpedia_uri", "wikidata_uri"])
+            for dbp_uri in dbp_set:
+                wd_uri = sameas_map.get(dbp_uri)
+                # if wd_uri and wd_uri in wd_set:
+                writer.writerow([dbp_uri, wd_uri])
 
 def main():
     film_dir = "data/dbpedia/clean/film"
@@ -363,9 +381,16 @@ def main():
 
         parsed_dbp = expand_subgraph(starting_dbp, uri_file_map_dbp, out_dbp)
         parsed_wd = expand_subgraph(starting_wd, uri_file_map_wd, out_wd)
-
+        
         parsed_sets_dbp.append(parsed_dbp)
         parsed_sets_wd.append(parsed_wd)
+
+    write_split_entity_matches(
+        parsed_sets_dbp=parsed_sets_dbp,
+        parsed_sets_wd=parsed_sets_wd,
+        sameas_map=sameas_map,
+        output_root="data/splits"
+    )
 
     compute_overlap_stats(parsed_sets_dbp, "DBpedia")
     compute_overlap_stats(parsed_sets_wd, "Wikidata")

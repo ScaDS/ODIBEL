@@ -7,7 +7,7 @@ python pyacq/sample.py
 python pyacq/final.py
 
 # create init KG
-cat $(find data/splits/split_1/ -type f | grep wikidata) > data/final/seed.nt
+cat $(find data/splits/split_1/ -type f | grep wikidata) | grep -P '^<http://www\.wikidata\.org/entity/' | sed 's@http://dbpedia.org/ontology/@http://mykg.org/wikidata/ontology/@g' > data/final/seed.nt
 
 # create wikidata eval file
 cat $(find data/splits/ -type f | grep wikidata) > data/final/eval.nt
@@ -25,7 +25,7 @@ done
 
 rm $ABS_FILE_LIST
 
-# create rdf source
+# create json source
 DBP_FILE_LIST=$(mktemp)
 find data/final/split_1/ -type f | grep dbp/ > $DBP_FILE_LIST
 find data/final/split_2/ -type f | grep dbp/ >> $DBP_FILE_LIST
