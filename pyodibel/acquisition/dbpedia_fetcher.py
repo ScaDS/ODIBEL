@@ -4,12 +4,12 @@ import sys
 from rdflib import Graph, URIRef, OWL, RDF, RDFS, FOAF
 from urllib.parse import urlencode
 
-SPARQL_ENDPOINT = "http://localhost:8890/sparql"
+SPARQL_ENDPOINT = "https://dbpedia.org/sparql"
 HEADERS = {
     "Content-Type": "application/x-www-form-urlencoded",
     "Accept": "application/rdf+xml"
 }
-OUTPUT_DIR = "entities"
+OUTPUT_DIR = "/home/marvin/project/data/mini/acq"
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 FILM_PROPERTIES = {
