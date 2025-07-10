@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pyodible"
+version = "0.1.0"
+description = "Ontology and acquisition utilities for movie knowledge graphs."
+authors = [
+    {name = "Odibel Team", email = "team@odibel.org"}
+]
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "pyyaml>=6.0",
+    "pydantic>=2.0.0",
+    "requests>=2.25.0",
+    "rdflib>=6.0.0"
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest>=7.0.0",
+    "pytest-mock>=3.10.0"
+]
+
+[project.scripts]
+pyodibel = "pyodibel.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-dir]
+"" = "src" 

@@ -9,3 +9,13 @@ Currently it contains code to:
 # DBpedia Temporal Graph Extraction
 
 Documentation was moved to [dbpedia/dbpedia-temporal](https://github.com/dbpedia/dbpedia-temporal).
+
+# Multi Source KG Benchmark
+
+Steps
+1. fetching data
+2. deriving a stable graph
+
+
+## Issues
+-
