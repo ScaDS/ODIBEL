@@ -3,13 +3,17 @@ package ai.scads.odibel.datasets.wikitext
 import ai.scads.odibel.datasets.wikitext.DBpediaTKGExtraction.processPageRevisionIterator
 import ai.scads.odibel.datasets.wikitext.config.ProfileConfig
 import ai.scads.odibel.datasets.wikitext.data.{PageRevision, TemporalExtractionResult}
+import ai.scads.odibel.datasets.wikitext.extraction.{Executor, ExtractionJob}
+import ai.scads.odibel.datasets.wikitext.log.{EventLogger, HeartbeatMonitor}
 import ai.scads.odibel.datasets.wikitext.utils.WikiUtil
 import ai.scads.odibel.utils.HDFSUtil
 import org.apache.hadoop.conf.Configuration
-import org.apache.hadoop.fs.{FileSystem, Path}
+import org.apache.hadoop.fs.{FileStatus, FileSystem, Path}
 import org.apache.hadoop.io.compress.CompressionCodecFactory
 
-import java.io.{File, InputStream}
+import java.io.{BufferedReader, File, InputStream}
+import java.nio.file.Paths
+import scala.collection.mutable.ListBuffer
 import scala.io.{BufferedSource, Source}
 
 /**
@@ -42,11 +46,7 @@ class DBpediaTKGExtraction {
           if (codec != null) codec.createInputStream(inputStream) else inputStream
         }
 
-        files.iterator.flatMap { p =>
-          val src: BufferedSource = Source.fromInputStream(openStream(p))
-          try src.getLines().toList.iterator
-          finally src.close()
-        }
+        files.iterator.flatMap(p => safelyIterate(Source.fromInputStream(openStream(p))))
 
       } else {
         val file = new File(source)
@@ -56,11 +56,8 @@ class DBpediaTKGExtraction {
           Array(file)
         }
 
-        files.iterator.flatMap { f =>
-          val src: BufferedSource = Source.fromFile(f)
-          try src.getLines().toList.iterator
-          finally src.close()
-        }
+        files.iterator.flatMap(f => safelyIterate(Source.fromFile(f))
+        )
 
       }
 
@@ -103,6 +100,21 @@ class DBpediaTKGExtraction {
     })
     csvWriter.flush()
   }
+
+  private def safelyIterate(source: BufferedSource): Iterator[String] = {
+    val it = source.getLines()
+    new Iterator[String] {
+      override def hasNext: Boolean = {
+        val hn = it.hasNext
+        if (!hn) {
+          source.close()
+        }
+        hn
+      }
+      override def next(): String = it.next()
+    }
+  }
+
 }
 
 object DBpediaTKGExtraction {
