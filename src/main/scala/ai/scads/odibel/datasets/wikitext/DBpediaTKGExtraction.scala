@@ -7,8 +7,9 @@ import ai.scads.odibel.datasets.wikitext.extraction.{Executor, ExtractionJob}
 import ai.scads.odibel.datasets.wikitext.log.{EventLogger, HeartbeatMonitor}
 import ai.scads.odibel.datasets.wikitext.utils.WikiUtil
 import ai.scads.odibel.utils.HDFSUtil
+import org.apache.hadoop.fs.{FileStatus, FileSystem, Path}
 
-import java.nio.file.{Path, Paths}
+import java.nio.file.Paths
 import scala.collection.mutable.ListBuffer
 
 /**
@@ -25,7 +26,14 @@ class DBpediaTKGExtraction {
     val sourceFiles =
       if(source.startsWith("hdfs")){
         val hdfs = new HDFSUtil(source)
-        val files = hdfs.listHDFSFiles(source)
+        val fs: FileSystem = hdfs.getFs
+        val status: FileStatus = fs.getFileStatus(new Path(source))
+
+        val files = if (status.isFile) {
+          List(source) // Single File
+        } else {
+          hdfs.listHDFSFiles(source) // Alle Files in Directory
+        }
         hdfs.getFs.close()
         files
       } else {
