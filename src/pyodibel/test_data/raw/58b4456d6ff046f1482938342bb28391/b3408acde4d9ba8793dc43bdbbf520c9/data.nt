@@ -1,0 +1,316 @@
+# started 2025-06-30T11:11:32Z
+<http://dbpedia.org/resource/Laurence_Fishburne> <http://www.w3.org/2000/01/rdf-schema#label> "Laurence Fishburne"@en .
+<http://dbpedia.org/resource/Laurence_Fishburne> <http://dbpedia.org/ontology/wikiPageID> "156006"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://dbpedia.org/resource/Laurence_Fishburne> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://en.wikipedia.org/wiki/Laurence_Fishburne?oldid=1295935029&ns=0> .
+<http://dbpedia.org/resource/Laurence_Fishburne> <http://dbpedia.org/ontology/wikiPageRevisionID> "1295935029"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://dbpedia.org/resource/Laurence_Fishburne> <http://dbpedia.org/ontology/wikiPageLength> "40399"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://dbpedia.org/resource/Laurence_Fishburne> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:1961_births> .
+<http://dbpedia.org/resource/Laurence_Fishburne> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:20th-century_American_male_actors> .
+<http://dbpedia.org/resource/Laurence_Fishburne> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:21st-century_American_male_actors> .
+<http://dbpedia.org/resource/Laurence_Fishburne> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:African-American_male_child_actors> .
+<http://dbpedia.org/resource/Laurence_Fishburne> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:21st-century_African-American_male_actors> .
+<http://dbpedia.org/resource/Laurence_Fishburne> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:20th-century_African-American_male_actors> .
+<http://dbpedia.org/resource/Laurence_Fishburne> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:American_male_child_actors> .
+<http://dbpedia.org/resource/Laurence_Fishburne> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:American_male_film_actors> .
+<http://dbpedia.org/resource/Laurence_Fishburne> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:American_male_soap_opera_actors> .
+<http://dbpedia.org/resource/Laurence_Fishburne> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:American_male_stage_actors> .
+<http://dbpedia.org/resource/Laurence_Fishburne> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:American_male_television_actors> .
+<http://dbpedia.org/resource/Laurence_Fishburne> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:American_male_voice_actors> .
+<http://dbpedia.org/resource/Laurence_Fishburne> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Drama_Desk_Award_winners> .
+<http://dbpedia.org/resource/Laurence_Fishburne> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Film_producers_from_New_York_(state)> .
+<http://dbpedia.org/resource/Laurence_Fishburne> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Living_people> .
+<http://dbpedia.org/resource/Laurence_Fishburne> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Male_actors_from_Augusta,_Georgia> .
+<http://dbpedia.org/resource/Laurence_Fishburne> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Male_actors_from_Georgia_(U.S._state)> .
+<http://dbpedia.org/resource/Laurence_Fishburne> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Male_actors_from_Manhattan> .
+<http://dbpedia.org/resource/Laurence_Fishburne> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:People_from_Washington_Heights,_Manhattan> .
+<http://dbpedia.org/resource/Laurence_Fishburne> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Primetime_Emmy_Award_winners> .
+<http://dbpedia.org/resource/Laurence_Fishburne> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Theatre_World_Award_winners> .
+<http://dbpedia.org/resource/Laurence_Fishburne> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Tony_Award_winners> .
+<http://dbpedia.org/resource/Laurence_Fishburne> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Writers_from_Augusta,_Georgia> .
+<http://dbpedia.org/resource/Laurence_Fishburne> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Children's_and_Family_Emmy_Award_winners> .
+<http://dbpedia.org/resource/Laurence_Fishburne> <http://xmlns.com/foaf/0.1/isPrimaryTopicOf> <http://en.wikipedia.org/wiki/Laurence_Fishburne> .
+<http://en.wikipedia.org/wiki/Laurence_Fishburne> <http://xmlns.com/foaf/0.1/primaryTopic> <http://dbpedia.org/resource/Laurence_Fishburne> .
+<http://en.wikipedia.org/wiki/Laurence_Fishburne> <http://purl.org/dc/elements/1.1/language> "en" .
+<http://en.wikipedia.org/wiki/Laurence_Fishburne> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Document> .
+<http://dbpedia.org/resource/Laurence_Fishburne> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Pp-semi-indef> .
+<http://dbpedia.org/resource/Laurence_Fishburne> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Short_description> .
+<http://dbpedia.org/resource/Laurence_Fishburne> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Use_American_English> .
+<http://dbpedia.org/resource/Laurence_Fishburne> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Use_mdy_dates> .
+<http://dbpedia.org/resource/Laurence_Fishburne> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Infobox_person> .
+<http://dbpedia.org/resource/Laurence_Fishburne> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Efn> .
+<http://dbpedia.org/resource/Laurence_Fishburne> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Née> .
+<http://dbpedia.org/resource/Laurence_Fishburne> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Main> .
+<http://dbpedia.org/resource/Laurence_Fishburne> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Main> .
+<http://dbpedia.org/resource/Laurence_Fishburne> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Notelist> .
+<http://dbpedia.org/resource/Laurence_Fishburne> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Reflist> .
+<http://dbpedia.org/resource/Laurence_Fishburne> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Wikimedia> .
+<http://dbpedia.org/resource/Laurence_Fishburne> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:IMDb_name> .
+<http://dbpedia.org/resource/Laurence_Fishburne> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:IBDB_name> .
+<http://dbpedia.org/resource/Laurence_Fishburne> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:IOBDB_name> .
+<http://dbpedia.org/resource/Laurence_Fishburne> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Emmys_person> .
+<http://dbpedia.org/resource/Laurence_Fishburne> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Playbill_person> .
+<http://dbpedia.org/resource/Laurence_Fishburne> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Navboxes> .
+<http://dbpedia.org/resource/Laurence_Fishburne> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Portal_bar> .
+<http://dbpedia.org/resource/Laurence_Fishburne> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Authority_control> .
+<http://dbpedia.org/resource/Laurence_Fishburne> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Birth_date_and_age> .
+<http://dbpedia.org/resource/Laurence_Fishburne> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Official_URL> .
+<http://dbpedia.org/resource/Laurence_Fishburne> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:DramaDesk_PlayFeaturedActor> .
+<http://dbpedia.org/resource/Laurence_Fishburne> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:DramaDesk_One-PersonShow> .
+<http://dbpedia.org/resource/Laurence_Fishburne> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:EmmyAward_DramaGuestActor> .
+<http://dbpedia.org/resource/Laurence_Fishburne> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Primetime_Emmy_Award_for_Outstanding_Actor_in_a_Short_Form_Comedy_or_Drama_Series> .
+<http://dbpedia.org/resource/Laurence_Fishburne> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:MTV_Movie_Award_for_Best_Fight> .
+<http://dbpedia.org/resource/Laurence_Fishburne> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:NAACP_Image_Award_for_Outstanding_Supporting_Actor_in_a_Motion_Picture> .
+<http://dbpedia.org/resource/Laurence_Fishburne> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:NAACP_Image_Award_for_Outstanding_Actor_in_a_Television_Movie,_Mini-Series_or_Dramatic_Special> .
+<http://dbpedia.org/resource/Laurence_Fishburne> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:NAACP_Image_Award_for_Outstanding_Supporting_Actor_in_a_Comedy_Series> .
+<http://dbpedia.org/resource/Laurence_Fishburne> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Saturn_Award_for_Best_Supporting_Actor_on_Television> .
+<http://dbpedia.org/resource/Laurence_Fishburne> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:TonyAward_PlayFeaturedActor> .
+<http://dbpedia.org/resource/Laurence_Fishburne> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Gregory_Peck_Award> .
+<http://dbpedia.org/resource/Laurence_Fishburne> <http://dbpedia.org/property/name> "Laurence Fishburne"@en .
+<http://dbpedia.org/resource/Laurence_Fishburne> <http://dbpedia.org/property/caption> "Fishburne in 2017"@en .
+<http://dbpedia.org/resource/Laurence_Fishburne> <http://dbpedia.org/property/birthName> "Laurence John Fishburne III"@en .
+<http://dbpedia.org/resource/Laurence_Fishburne> <http://dbpedia.org/property/birthDate> "1961-07-30"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://dbpedia.org/resource/Laurence_Fishburne> <http://dbpedia.org/property/birthPlace> "Augusta, Georgia, U.S."@en .
+<http://dbpedia.org/resource/Laurence_Fishburne> <http://dbpedia.org/property/occupation> "Actor"@en .
+<http://dbpedia.org/resource/Laurence_Fishburne> <http://dbpedia.org/property/occupation> "producer"@en .
+<http://dbpedia.org/resource/Laurence_Fishburne> <http://dbpedia.org/property/occupation> ""@en .
+<http://dbpedia.org/resource/Laurence_Fishburne> <http://dbpedia.org/property/yearsActive> "1972"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://dbpedia.org/resource/Laurence_Fishburne> <http://dbpedia.org/property/spouse> ""@en .
+<http://dbpedia.org/resource/Laurence_Fishburne> <http://dbpedia.org/property/spouse> "1985"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://dbpedia.org/resource/Laurence_Fishburne> <http://dbpedia.org/property/spouse> "Hajna O. Moss"@en .
+<http://dbpedia.org/resource/Laurence_Fishburne> <http://dbpedia.org/property/spouse> ""@en .
+<http://dbpedia.org/resource/Laurence_Fishburne> <http://dbpedia.org/property/spouse> ""@en .
+<http://dbpedia.org/resource/Laurence_Fishburne> <http://dbpedia.org/property/spouse> "2018"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://dbpedia.org/resource/Laurence_Fishburne> <http://dbpedia.org/property/spouse> "2002"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://dbpedia.org/resource/Laurence_Fishburne> <http://dbpedia.org/property/spouse> <http://dbpedia.org/resource/Gina_Torres> .
+<http://dbpedia.org/resource/Laurence_Fishburne> <http://dbpedia.org/property/spouse> ""@en .
+<http://dbpedia.org/resource/Laurence_Fishburne> <http://dbpedia.org/property/spouse> ""@en .
+<http://dbpedia.org/resource/Laurence_Fishburne> <http://dbpedia.org/property/children> "3"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://dbpedia.org/resource/Laurence_Fishburne> <http://dbpedia.org/property/awards> <http://dbpedia.org/resource/List_of_awards_and_nominations_received_by_Laurence_Fishburne> .
+<http://dbpedia.org/resource/Laurence_Fishburne> <http://dbpedia.org/property/title> "Awards for Laurence Fishburne"@en .
+<http://dbpedia.org/resource/Laurence_Fishburne> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Person> .
+<http://dbpedia.org/resource/Laurence_Fishburne> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q5> .
+<http://dbpedia.org/resource/Laurence_Fishburne> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://dbpedia.org/resource/Laurence_Fishburne> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Thing> .
+<http://dbpedia.org/resource/Laurence_Fishburne> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Person> .
+<http://dbpedia.org/resource/Laurence_Fishburne> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q215627> .
+<http://dbpedia.org/resource/Laurence_Fishburne> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#NaturalPerson> .
+<http://dbpedia.org/resource/Laurence_Fishburne> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Animal> .
+<http://dbpedia.org/resource/Laurence_Fishburne> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q729> .
+<http://dbpedia.org/resource/Laurence_Fishburne> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Eukaryote> .
+<http://dbpedia.org/resource/Laurence_Fishburne> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q19088> .
+<http://dbpedia.org/resource/Laurence_Fishburne> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Species> .
+<http://dbpedia.org/resource/Laurence_Fishburne> <http://xmlns.com/foaf/0.1/name> "Laurence Fishburne"@en .
+<http://dbpedia.org/resource/Laurence_Fishburne> <http://dbpedia.org/ontology/birthDate> "1961-07-30"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://dbpedia.org/resource/Laurence_Fishburne> <http://dbpedia.org/ontology/birthYear> "1961"^^<http://www.w3.org/2001/XMLSchema#gYear> .
+<http://dbpedia.org/resource/Laurence_Fishburne> <http://dbpedia.org/ontology/birthPlace> <http://dbpedia.org/resource/Augusta,_Georgia> .
+<http://dbpedia.org/resource/Laurence_Fishburne> <http://dbpedia.org/ontology/occupation> <http://dbpedia.org/resource/Laurence_Fishburne__PersonFunction__1> .
+<http://dbpedia.org/resource/Laurence_Fishburne__PersonFunction__1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/PersonFunction> .
+<http://dbpedia.org/resource/Laurence_Fishburne__PersonFunction__1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Thing> .
+<http://dbpedia.org/resource/Laurence_Fishburne__PersonFunction__1> <http://dbpedia.org/ontology/title> "Actor"@en .
+<http://dbpedia.org/resource/Laurence_Fishburne> <http://dbpedia.org/ontology/occupation> <http://dbpedia.org/resource/Laurence_Fishburne__PersonFunction__1> .
+<http://dbpedia.org/resource/Laurence_Fishburne__PersonFunction__1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/PersonFunction> .
+<http://dbpedia.org/resource/Laurence_Fishburne__PersonFunction__1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Thing> .
+<http://dbpedia.org/resource/Laurence_Fishburne__PersonFunction__1> <http://dbpedia.org/ontology/title> "producer"@en .
+<http://dbpedia.org/resource/Laurence_Fishburne> <http://dbpedia.org/ontology/activeYearsStartYear> "1972"^^<http://www.w3.org/2001/XMLSchema#gYear> .
+<http://dbpedia.org/resource/Laurence_Fishburne> <http://dbpedia.org/ontology/birthName> "Laurence John Fishburne III"@en .
+<http://dbpedia.org/resource/Laurence_Fishburne> <http://dbpedia.org/ontology/spouse> <http://dbpedia.org/resource/Gina_Torres> .
+<http://dbpedia.org/resource/Laurence_Fishburne> <http://dbpedia.org/ontology/child> <http://dbpedia.org/resource/Langston_Fishburne> .
+<http://dbpedia.org/resource/Laurence_Fishburne> <http://dbpedia.org/ontology/award> <http://dbpedia.org/resource/List_of_awards_and_nominations_received_by_Laurence_Fishburne> .
+<http://dbpedia.org/resource/Laurence_Fishburne> <http://dbpedia.org/ontology/wikiPageOutDegree> "207"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://dbpedia.org/resource/Augusta,_Georgia> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Augusta, Georgia"@en .
+<http://dbpedia.org/resource/Gina_Torres> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Gina Torres"@en .
+<http://dbpedia.org/resource/Langston_Fishburne> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Langston Fishburne"@en .
+<http://dbpedia.org/resource/List_of_awards_and_nominations_received_by_Laurence_Fishburne> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Full list"@en .
+<http://dbpedia.org/resource/List_of_awards_and_nominations_received_by_Laurence_Fishburne> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "His accolades"@en .
+<http://dbpedia.org/resource/Emmy_Awards> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Emmy Awards"@en .
+<http://dbpedia.org/resource/Tony_Award> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Tony Award"@en .
+<http://dbpedia.org/resource/Academy_Award> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Academy Award"@en .
+<http://dbpedia.org/resource/Golden_Globe_Award> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Golden Globe Award"@en .
+<http://dbpedia.org/resource/Apocalypse_Now> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Apocalypse Now"@en .
+<http://dbpedia.org/resource/Boyz_n_the_Hood> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Boyz n the Hood"@en .
+<http://dbpedia.org/resource/Morpheus_(The_Matrix)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Morpheus"@en .
+<http://dbpedia.org/resource/The_Matrix_(franchise)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "''The Matrix'' trilogy"@en .
+<http://dbpedia.org/resource/John_Wick> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "''John Wick'' film series"@en .
+<http://dbpedia.org/resource/Ike_Turner> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Ike Turner"@en .
+<http://dbpedia.org/resource/What's_Love_Got_to_Do_with_It_(1993_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "What's Love Got to Do with It"@en .
+<http://dbpedia.org/resource/Academy_Award_for_Best_Actor> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Academy Award for Best Actor"@en .
+<http://dbpedia.org/resource/Emmy_Awards> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Emmy Awards"@en .
+<http://dbpedia.org/resource/Tony_Award_for_Best_Featured_Actor_in_a_Play> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Tony Award for Best Featured Actor in a Play"@en .
+<http://dbpedia.org/resource/Two_Trains_Running> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Two Trains Running"@en .
+<http://dbpedia.org/resource/Golden_Globe_Award> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Golden Globe Award"@en .
+<http://dbpedia.org/resource/Screen_Actors_Guild_Awards> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Screen Actors Guild Awards"@en .
+<http://dbpedia.org/resource/The_Color_Purple_(1985_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Color Purple"@en .
+<http://dbpedia.org/resource/A_Nightmare_on_Elm_Street_3:_Dream_Warriors> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "A Nightmare on Elm Street 3: Dream Warriors"@en .
+<http://dbpedia.org/resource/School_Daze> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "School Daze"@en .
+<http://dbpedia.org/resource/King_of_New_York> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "King of New York"@en .
+<http://dbpedia.org/resource/Deep_Cover_(1992_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Deep Cover"@en .
+<http://dbpedia.org/resource/Searching_for_Bobby_Fischer> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Searching for Bobby Fischer"@en .
+<http://dbpedia.org/resource/Higher_Learning> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Higher Learning"@en .
+<http://dbpedia.org/resource/Event_Horizon_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Event Horizon"@en .
+<http://dbpedia.org/resource/Mystic_River_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Mystic River"@en .
+<http://dbpedia.org/resource/Akeelah_and_the_Bee> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Akeelah and the Bee"@en .
+<http://dbpedia.org/resource/Mission:_Impossible_III> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Mission: Impossible III"@en .
+<http://dbpedia.org/resource/Predators_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Predators"@en .
+<http://dbpedia.org/resource/Contagion_(2011_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Contagion"@en .
+<http://dbpedia.org/resource/The_Mule_(2018_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Mule"@en .
+<http://dbpedia.org/resource/Perry_White> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Perry White"@en .
+<http://dbpedia.org/resource/DC_Extended_Universe> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "DC Extended Universe"@en .
+<http://dbpedia.org/resource/Bill_Foster_(Marvel_Cinematic_Universe)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Bill Foster / Goliath"@en .
+<http://dbpedia.org/resource/Marvel_Cinematic_Universe> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Marvel Cinematic Universe"@en .
+<http://dbpedia.org/resource/Pee-wee's_Playhouse> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Pee-wee's Playhouse"@en .
+<http://dbpedia.org/resource/CBS> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "CBS"@en .
+<http://dbpedia.org/resource/CSI:_Crime_Scene_Investigation> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "CSI: Crime Scene Investigation"@en .
+<http://dbpedia.org/resource/Jack_Crawford_(character)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Jack Crawford"@en .
+<http://dbpedia.org/resource/NBC> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "NBC"@en .
+<http://dbpedia.org/resource/Hannibal_(TV_series)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Hannibal"@en .
+<http://dbpedia.org/resource/American_Broadcasting_Company> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "ABC"@en .
+<http://dbpedia.org/resource/Black-ish> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Black-ish"@en .
+<http://dbpedia.org/resource/Augusta,_Georgia> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Augusta, Georgia"@en .
+<http://dbpedia.org/resource/Brooklyn,_New_York> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Brooklyn, New York"@en .
+<http://dbpedia.org/resource/Finding_Your_Roots> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Finding Your Roots"@en .
+<http://dbpedia.org/resource/Fort_Gordon> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Fort Gordon"@en .
+<http://dbpedia.org/resource/USO> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "USO"@en .
+<http://dbpedia.org/resource/ABC_Theater> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "ABC Theater"@en .
+<http://dbpedia.org/resource/If_You_Give_a_Dance_You_Gotta_Pay_the_Band> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "If You Give a Dance You Gotta Pay the Band"@en .
+<http://dbpedia.org/resource/Josh_Hall_(One_Life_to_Live)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Joshua Hall"@en .
+<http://dbpedia.org/resource/American_Broadcasting_Company> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "ABC"@en .
+<http://dbpedia.org/resource/One_Life_to_Live> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "One Life to Live"@en .
+<http://dbpedia.org/resource/Cornbread,_Earl_and_Me> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Cornbread, Earl and Me"@en .
+<http://dbpedia.org/resource/Apocalypse_Now> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Apocalypse Now"@en .
+<http://dbpedia.org/resource/Cathay_de_Grande> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Cathay de Grande"@en .
+<http://dbpedia.org/resource/Band_of_the_Hand> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Band of the Hand"@en .
+<http://dbpedia.org/resource/Death_Wish_2> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Death Wish 2"@en .
+<http://dbpedia.org/resource/The_Cotton_Club_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Cotton Club"@en .
+<http://dbpedia.org/resource/The_Color_Purple_(1985_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Color Purple"@en .
+<http://dbpedia.org/resource/Cowboy_Curtis> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Cowboy Curtis"@en .
+<http://dbpedia.org/resource/Paul_Reubens> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Paul Reubens"@en .
+<http://dbpedia.org/resource/CBS> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "CBS"@en .
+<http://dbpedia.org/resource/Pee-wee's_Playhouse> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Pee-wee's Playhouse"@en .
+<http://dbpedia.org/resource/M*A*S*H_(TV_series)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "M*A*S*H"@en .
+<http://dbpedia.org/resource/List_of_M*A*S*H_episodes_(Season_10)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "\"The Tooth Shall Set You Free\""@en .
+<http://dbpedia.org/resource/Spenser:_For_Hire> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Spenser: For Hire"@en .
+<http://dbpedia.org/resource/Kevin_Bacon> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Kevin Bacon"@en .
+<http://dbpedia.org/resource/Quicksilver_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Quicksilver"@en .
+<http://dbpedia.org/resource/Short_Eyes_(play)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Short Eyes"@en .
+<http://dbpedia.org/resource/Second_Stage_Theatre> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Second Stage Theatre"@en .
+<http://dbpedia.org/resource/A_Nightmare_on_Elm_Street_3:_Dream_Warriors> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "the third ''A Nightmare on Elm Street'' film"@en .
+<http://dbpedia.org/resource/Red_Heat_(1988_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Red Heat"@en .
+<http://dbpedia.org/resource/Arnold_Schwarzenegger> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Arnold Schwarzenegger"@en .
+<http://dbpedia.org/resource/James_Belushi> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "James Belushi"@en .
+<http://dbpedia.org/resource/Spike_Lee> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Spike Lee"@en .
+<http://dbpedia.org/resource/School_Daze> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "School Daze"@en .
+<http://dbpedia.org/resource/Historically_black_colleges_and_universities> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "historically black college"@en .
+<http://dbpedia.org/resource/King_of_New_York> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "King of New York"@en .
+<http://dbpedia.org/resource/Boyz_n_the_Hood> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Boyz n the Hood"@en .
+<http://dbpedia.org/resource/Tony_Award> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Tony Award"@en .
+<http://dbpedia.org/resource/August_Wilson> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "August Wilson"@en .
+<http://dbpedia.org/resource/Two_Trains_Running> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Two Trains Running"@en .
+<http://dbpedia.org/resource/Emmy_Award> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Emmy Award"@en .
+<http://dbpedia.org/resource/Anthology_series> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "anthology series"@en .
+<http://dbpedia.org/resource/TriBeCa_(TV_series)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "TriBeCa"@en .
+<http://dbpedia.org/resource/Deep_Cover_(1992_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Deep Cover"@en .
+<http://dbpedia.org/resource/Academy_Awards> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Oscar"@en .
+<http://dbpedia.org/resource/Ike_Turner> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Ike Turner"@en .
+<http://dbpedia.org/resource/What's_Love_Got_to_Do_with_It_(1993_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "What's Love Got to Do With It"@en .
+<http://dbpedia.org/resource/Higher_Learning> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Higher Learning"@en .
+<http://dbpedia.org/resource/Othello_(1995_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Othello"@en .
+<http://dbpedia.org/resource/Paul_Robeson> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Paul Robeson"@en .
+<http://dbpedia.org/resource/Circle_Repertory_Company> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Off-Broadway Circle Rep Theater"@en .
+<http://dbpedia.org/resource/Titus_Welliver> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Titus Welliver"@en .
+<http://dbpedia.org/resource/Heavy_D> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Heavy D"@en .
+<http://dbpedia.org/resource/Event_Horizon_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Event Horizon"@en .
+<http://dbpedia.org/resource/Sam_Neill> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Sam Neill"@en .
+<http://dbpedia.org/resource/Morpheus_(The_Matrix)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Morpheus"@en .
+<http://dbpedia.org/resource/Hacker_(computer_security)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "hacker"@en .
+<http://dbpedia.org/resource/Neo_(The_Matrix)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Neo"@en .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Keanu Reeves"@en .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Matrix"@en .
+<http://dbpedia.org/resource/Osmosis_Jones> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Osmosis Jones"@en .
+<http://dbpedia.org/resource/The_Matrix_Reloaded> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Matrix Reloaded"@en .
+<http://dbpedia.org/resource/The_Matrix_Revolutions> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Matrix Revolutions"@en .
+<http://dbpedia.org/resource/The_Spooks> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Spooks"@en .
+<http://dbpedia.org/resource/Things_I've_Seen> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Things I've Seen"@en .
+<http://dbpedia.org/resource/Tom_Cruise> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Tom Cruise"@en .
+<http://dbpedia.org/resource/Impossible_Missions_Force> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "IMF"@en .
+<http://dbpedia.org/resource/Mission:_Impossible_III> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Mission: Impossible III"@en .
+<http://dbpedia.org/resource/Angela_Bassett> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Angela Bassett"@en .
+<http://dbpedia.org/resource/Pasadena_Playhouse> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Pasadena Playhouse"@en .
+<http://dbpedia.org/resource/August_Wilson> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "August Wilson"@en .
+<http://dbpedia.org/resource/Fences_(play)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Fences"@en .
+<http://dbpedia.org/resource/Alfred_Uhry> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Alfred Uhry's"@en .
+<http://dbpedia.org/resource/Five_Fingers_(2006_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Five Fingers"@en .
+<http://dbpedia.org/resource/Teenage_Mutant_Ninja_Turtles> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Teenage Mutant Ninja Turtles"@en .
+<http://dbpedia.org/resource/TMNT_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "TMNT"@en .
+<http://dbpedia.org/resource/Silver_Surfer> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Silver Surfer"@en .
+<http://dbpedia.org/resource/Fantastic_Four:_Rise_of_the_Silver_Surfer> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Fantastic Four: Rise of the Silver Surfer"@en .
+<http://dbpedia.org/resource/UNICEF> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "UNICEF"@en .
+<http://dbpedia.org/resource/Thurgood_(play)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Thurgood"@en .
+<http://dbpedia.org/resource/Drama_Desk_Award_for_Outstanding_One-Person_Show> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Drama Desk Award for Outstanding One-Person Show"@en .
+<http://dbpedia.org/resource/HBO> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "HBO"@en .
+<http://dbpedia.org/resource/John_F._Kennedy_Center_for_the_Performing_Arts> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "John F. Kennedy Center for the Performing Arts"@en .
+<http://dbpedia.org/resource/White_House> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "White House"@en .
+<http://dbpedia.org/resource/Black_History_Month> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Black History Month"@en .
+<http://dbpedia.org/resource/CSI:_Crime_Scene_Investigation> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "CSI: Crime Scene Investigation"@en .
+<http://dbpedia.org/resource/William_Petersen> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "William Petersen"@en .
+<http://dbpedia.org/resource/Gil_Grissom> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Gil Grissom"@en .
+<http://dbpedia.org/resource/John_Malkovich> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "John Malkovich"@en .
+<http://dbpedia.org/resource/National_Memorial_Day_Concert> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "National Memorial Day Concert"@en .
+<http://dbpedia.org/resource/Predators_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Predators"@en .
+<http://dbpedia.org/resource/Contagion_(2011_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Contagion"@en .
+<http://dbpedia.org/resource/Perry_White> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Perry White"@en .
+<http://dbpedia.org/resource/Zack_Snyder> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Zack Snyder"@en .
+<http://dbpedia.org/resource/Superman> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Superman"@en .
+<http://dbpedia.org/resource/Man_of_Steel_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Man of Steel"@en .
+<http://dbpedia.org/resource/Hannibal_(TV_series)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Hannibal"@en .
+<http://dbpedia.org/resource/Kia_Motors> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Kia"@en .
+<http://dbpedia.org/resource/Kia_K9> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "K900"@en .
+<http://dbpedia.org/resource/Black-ish> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Black-ish"@en .
+<http://dbpedia.org/resource/Grown-ish> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Grown-ish"@en .
+<http://dbpedia.org/resource/Batman_v_Superman:_Dawn_of_Justice> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Batman v Superman: Dawn of Justice"@en .
+<http://dbpedia.org/resource/Passengers_(2016_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "''Passengers''"@en .
+<http://dbpedia.org/resource/ABC_Studios> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "ABC Studios"@en .
+<http://dbpedia.org/resource/Neo-noir> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "neo-noir"@en .
+<http://dbpedia.org/resource/Action_film> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "action"@en .
+<http://dbpedia.org/resource/Thriller_(genre)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "thriller film"@en .
+<http://dbpedia.org/resource/John_Wick:_Chapter_2> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "John Wick: Chapter 2"@en .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Keanu Reeves"@en .
+<http://dbpedia.org/resource/The_Matrix_(franchise)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "''The Matrix'' trilogy"@en .
+<http://dbpedia.org/resource/Comedy_film> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "comedy"@en .
+<http://dbpedia.org/resource/Drama_film> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "drama"@en .
+<http://dbpedia.org/resource/Last_Flag_Flying> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Last Flag Flying"@en .
+<http://dbpedia.org/resource/Bill_Foster_(comics)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Bill Foster"@en .
+<http://dbpedia.org/resource/Marvel_Studios> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Marvel"@en .
+<http://dbpedia.org/resource/Ant-Man_and_the_Wasp> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Ant-Man and the Wasp"@en .
+<http://dbpedia.org/resource/Peyton_Reed> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Peyton Reed"@en .
+<http://dbpedia.org/resource/Marvel_Animation> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Marvel Animation"@en .
+<http://dbpedia.org/resource/Disney_Television_Animation> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Disney Television Animation"@en .
+<http://dbpedia.org/resource/Moon_Girl_and_Devil_Dinosaur> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Moon Girl and Devil Dinosaur"@en .
+<http://dbpedia.org/resource/Beyonder> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Beyonder"@en .
+<http://dbpedia.org/resource/The_Witcher_(TV_series)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Witcher"@en .
+<http://dbpedia.org/resource/The_Amateur_(2025_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Amateur"@en .
+<http://dbpedia.org/resource/Langston_Fishburne> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Langston"@en .
+<http://dbpedia.org/resource/Victoria_Dillard> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Victoria Dillard"@en .
+<http://dbpedia.org/resource/Gina_Torres> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Gina Torres"@en .
+<http://dbpedia.org/resource/The_Cloisters> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "the Cloisters"@en .
+<http://dbpedia.org/resource/New_York_City> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "New York City"@en .
+<http://dbpedia.org/resource/Castle_Village,_Manhattan> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Castle Village"@en .
+<http://dbpedia.org/resource/Co-Op> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Co-Op"@en .
+<http://dbpedia.org/resource/Hudson_Heights_(Manhattan)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Hudson Heights"@en .
+<http://dbpedia.org/resource/Washington_Heights,_Manhattan> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Washington Heights"@en .
+<http://dbpedia.org/resource/Paulo_Coelho> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Paulo Coelho"@en .
+<http://dbpedia.org/resource/The_Alchemist_(novel)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Alchemist"@en .
+<http://dbpedia.org/resource/Laurence_Fishburne> <http://xmlns.com/foaf/0.1/depiction> <http://commons.wikimedia.org/wiki/Special:FilePath/National_Memorial_Day_Concert_2017_(34117818524)_(cropped).jpg> .
+<http://dbpedia.org/resource/Laurence_Fishburne> <http://dbpedia.org/ontology/thumbnail> <http://commons.wikimedia.org/wiki/Special:FilePath/National_Memorial_Day_Concert_2017_(34117818524)_(cropped).jpg?width=300> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/National_Memorial_Day_Concert_2017_(34117818524)_(cropped).jpg> <http://xmlns.com/foaf/0.1/thumbnail> <http://commons.wikimedia.org/wiki/Special:FilePath/National_Memorial_Day_Concert_2017_(34117818524)_(cropped).jpg?width=300> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/National_Memorial_Day_Concert_2017_(34117818524)_(cropped).jpg> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Image> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/National_Memorial_Day_Concert_2017_(34117818524)_(cropped).jpg?width=300> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Image> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/National_Memorial_Day_Concert_2017_(34117818524)_(cropped).jpg> <http://purl.org/dc/elements/1.1/rights> <http://en.wikipedia.org/wiki/File:National_Memorial_Day_Concert_2017_(34117818524)_(cropped).jpg> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/National_Memorial_Day_Concert_2017_(34117818524)_(cropped).jpg?width=300> <http://purl.org/dc/elements/1.1/rights> <http://en.wikipedia.org/wiki/File:National_Memorial_Day_Concert_2017_(34117818524)_(cropped).jpg> .
+<http://dbpedia.org/resource/Laurence_Fishburne> <http://xmlns.com/foaf/0.1/depiction> <http://commons.wikimedia.org/wiki/Special:FilePath/National_Memorial_Day_Concert_2017_(34573574790).jpg> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/National_Memorial_Day_Concert_2017_(34573574790).jpg> <http://xmlns.com/foaf/0.1/thumbnail> <http://commons.wikimedia.org/wiki/Special:FilePath/National_Memorial_Day_Concert_2017_(34573574790).jpg?width=300> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/National_Memorial_Day_Concert_2017_(34573574790).jpg> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Image> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/National_Memorial_Day_Concert_2017_(34573574790).jpg?width=300> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Image> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/National_Memorial_Day_Concert_2017_(34573574790).jpg> <http://purl.org/dc/elements/1.1/rights> <http://en.wikipedia.org/wiki/File:National_Memorial_Day_Concert_2017_(34573574790).jpg> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/National_Memorial_Day_Concert_2017_(34573574790).jpg?width=300> <http://purl.org/dc/elements/1.1/rights> <http://en.wikipedia.org/wiki/File:National_Memorial_Day_Concert_2017_(34573574790).jpg> .
+<http://dbpedia.org/resource/Laurence_Fishburne> <http://xmlns.com/foaf/0.1/depiction> <http://commons.wikimedia.org/wiki/Special:FilePath/National_Memorial_Day_Concert_2017_(34117818524)_(cropped).jpg> .
+# completed 2025-06-30T11:11:32Z

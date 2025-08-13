@@ -1,0 +1,830 @@
+# started 2025-06-30T10:57:54Z
+<http://dbpedia.org/resource/Keanu_Reeves> <http://www.w3.org/2000/01/rdf-schema#label> "Keanu Reeves"@en .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://dbpedia.org/ontology/wikiPageID> "16603"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://en.wikipedia.org/wiki/Keanu_Reeves?oldid=1295721032&ns=0> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://dbpedia.org/ontology/wikiPageRevisionID> "1295721032"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://dbpedia.org/ontology/wikiPageLength> "213644"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Keanu_Reeves> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:1964_births> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Living_people> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:20th-century_Canadian_bass_guitarists> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:20th-century_Canadian_male_actors> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:20th-century_Canadian_male_musicians> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:21st-century_Canadian_bass_guitarists> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:21st-century_Canadian_male_actors> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:21st-century_Canadian_male_musicians> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Actors_with_dyslexia> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Alternative_rock_bass_guitarists> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Canadian_alternative_rock_musicians> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Canadian_comics_writers> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Canadian_documentary_film_producers> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Canadian_expatriate_male_actors_in_the_United_States> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Canadian_male_actors_of_Chinese_descent> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Canadian_male_film_actors> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Canadian_male_television_actors> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Canadian_male_voice_actors> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Canadian_musicians_of_Chinese_descent> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Canadian_people_of_American_descent> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Canadian_people_of_Chinese_descent> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Canadian_people_of_English_descent> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Canadian_people_of_Native_Hawaiian_descent> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Canadian_people_of_Portuguese_descent> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Canadian_actors_with_disabilities> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Canadian_philanthropists> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Canadian_practitioners_of_Brazilian_jiu-jitsu> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Canadian_rock_bass_guitarists> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Canadian_spiritualists> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Dogstar_(band)_members> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Film_producers_from_Ontario> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Grunge_musicians> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Male_actors_from_Beirut> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Male_actors_from_Ontario> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Canadian_male_bass_guitarists> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Musicians_from_Beirut> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Musicians_from_Toronto> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Naturalized_citizens_of_Canada> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Etobicoke_School_of_the_Arts_alumni> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://xmlns.com/foaf/0.1/isPrimaryTopicOf> <http://en.wikipedia.org/wiki/Keanu_Reeves> .
+<http://en.wikipedia.org/wiki/Keanu_Reeves> <http://xmlns.com/foaf/0.1/primaryTopic> <http://dbpedia.org/resource/Keanu_Reeves> .
+<http://en.wikipedia.org/wiki/Keanu_Reeves> <http://purl.org/dc/elements/1.1/language> "en" .
+<http://en.wikipedia.org/wiki/Keanu_Reeves> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Document> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Short_description> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Redirect> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Good_article> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Pp-blp> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Pp-move> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Use_Canadian_English> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Use_mdy_dates> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Infobox_person> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:IPAc-en> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Respell> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Refn> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Efn> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Main> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Nbsp> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Snd> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Quote_box> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:'> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:'> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:'> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:'> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:'> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:'> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:'> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:'> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Main> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Nbsp> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Snd> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Snd> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Cite_book> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Cite_book> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:ISBN> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:ISBN> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:ISBN> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Cite_book> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Notelist> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Reflist> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Cite_book> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Cite_news> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Cite_news> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Cite_web> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Commons-inline> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Wikiquote-inline> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:IMDb_name> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Rotten_Tomatoes_person> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:People.com> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Discogs_artist> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Keanu_Reeves> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Navboxes> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Portal_bar> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Authority_control> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Birth_date_and_age> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Circa> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Efn> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Efn> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Infobox_musical_artist> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:MTV_Movie_Award_for_Best_Fight> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:MTV_Movie_Award_for_Best_Actor_in_a_Movie> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:MTV_Movie_Award_for_Best_On-Screen_Duo> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:MTV_Movie_Award_for_Most_Desirable_Male> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://dbpedia.org/ontology/wikiPageExternalLink> <http://www.cnn.com/2003/SHOWBIZ/Movies/11/05/sprj.caf03.film.keanureeves.ap> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://dbpedia.org/ontology/wikiPageExternalLink> <https://web.archive.org/web/20080430121543/http:/www.cnn.com/2003/SHOWBIZ/Movies/11/05/sprj.caf03.film.keanureeves.ap> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://dbpedia.org/ontology/wikiPageExternalLink> <http://www.se7enmagazine.org/film/film_27.htm> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://dbpedia.org/ontology/wikiPageExternalLink> <https://web.archive.org/web/20110108154406/http:/se7enmagazine.org/film/film_27.htm> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://dbpedia.org/ontology/wikiPageExternalLink> <https://www.thecanadianencyclopedia.ca/en/article/keanu-reeves> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://dbpedia.org/ontology/wikiPageExternalLink> <https://www.youtube.com/watch%3Fv=Z4RE6I%20lV0M> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://dbpedia.org/property/name> "Keanu Reeves"@en .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://dbpedia.org/property/caption> "Reeves at Primavera Sound 2024"@en .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://dbpedia.org/property/birthName> "Keanu Charles Reeves"@en .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://dbpedia.org/property/birthDate> "1964-09-02"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://dbpedia.org/property/birthPlace> "Beirut, Lebanon"@en .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://dbpedia.org/property/occupation> "Actor"@en .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://dbpedia.org/property/occupation> "musician"@en .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://dbpedia.org/property/occupation> ""@en .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://dbpedia.org/property/citizenship> "Canada"@en .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://dbpedia.org/property/yearsActive> "1984"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://dbpedia.org/property/works> <http://dbpedia.org/resource/Keanu_Reeves_filmography> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://dbpedia.org/property/partner> "Alexandra Grant"@en .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://dbpedia.org/property/partner> <http://dbpedia.org/resource/Jennifer_Syme> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://dbpedia.org/property/partner> ""@en .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://dbpedia.org/property/children> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://dbpedia.org/property/awards> <http://dbpedia.org/resource/List_of_awards_and_nominations_received_by_Keanu_Reeves> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://dbpedia.org/property/relatives> <http://dbpedia.org/resource/Paul_Aaron> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://dbpedia.org/property/signature> "Keanu Reeves Signature .png"@en .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://dbpedia.org/property/align> "right"@en .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://dbpedia.org/property/width> "25"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://dbpedia.org/property/quote> "I do love it [Shakespeare]. It's like this kind of code that once you start to inhabit it with breath and sound and feeling and thought, it is the most powerful and consuming and freeing at the same time. Just, literally, elemental in sound, consonants and vowels. What I found out in doing it [Hamlet] was that it brought up for me all the anger that was inside me for my mother. I mean, it surprised me, just what was there, and I hadn't seen that before."@en .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://dbpedia.org/property/source> "—Reeves on his Hamlet performance"@en .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://dbpedia.org/property/title> <http://dbpedia.org/resource/List_of_awards_and_nominations_received_by_Keanu_Reeves> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Person> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q5> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Thing> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Person> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q215627> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#NaturalPerson> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Animal> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q729> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Eukaryote> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q19088> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Species> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://xmlns.com/foaf/0.1/name> "Keanu Reeves"@en .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://dbpedia.org/ontology/birthDate> "1964-09-02"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://dbpedia.org/ontology/birthYear> "1964"^^<http://www.w3.org/2001/XMLSchema#gYear> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://dbpedia.org/ontology/birthPlace> <http://dbpedia.org/resource/Beirut> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://dbpedia.org/ontology/occupation> <http://dbpedia.org/resource/Keanu_Reeves__PersonFunction__1> .
+<http://dbpedia.org/resource/Keanu_Reeves__PersonFunction__1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/PersonFunction> .
+<http://dbpedia.org/resource/Keanu_Reeves__PersonFunction__1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Thing> .
+<http://dbpedia.org/resource/Keanu_Reeves__PersonFunction__1> <http://dbpedia.org/ontology/title> "Actor"@en .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://dbpedia.org/ontology/occupation> <http://dbpedia.org/resource/Keanu_Reeves__PersonFunction__1> .
+<http://dbpedia.org/resource/Keanu_Reeves__PersonFunction__1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/PersonFunction> .
+<http://dbpedia.org/resource/Keanu_Reeves__PersonFunction__1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Thing> .
+<http://dbpedia.org/resource/Keanu_Reeves__PersonFunction__1> <http://dbpedia.org/ontology/title> "musician"@en .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://dbpedia.org/ontology/activeYearsStartYear> "1984"^^<http://www.w3.org/2001/XMLSchema#gYear> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://dbpedia.org/ontology/birthName> "Keanu Charles Reeves"@en .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://dbpedia.org/ontology/partner> <http://dbpedia.org/resource/Alexandra_Grant> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://dbpedia.org/ontology/partner> <http://dbpedia.org/resource/Jennifer_Syme> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://dbpedia.org/ontology/relative> <http://dbpedia.org/resource/Paul_Aaron> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://dbpedia.org/ontology/award> <http://dbpedia.org/resource/List_of_awards_and_nominations_received_by_Keanu_Reeves> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://dbpedia.org/ontology/wikiPageOutDegree> "635"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://dbpedia.org/resource/Primavera_Sound_2024> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Primavera Sound 2024"@en .
+<http://dbpedia.org/resource/Beirut> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Beirut"@en .
+<http://dbpedia.org/resource/Keanu_Reeves_filmography> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Full list"@en .
+<http://dbpedia.org/resource/Alexandra_Grant> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Alexandra Grant"@en .
+<http://dbpedia.org/resource/Meg_Tilly> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Meg Tilly"@en .
+<http://dbpedia.org/resource/Jennifer_Syme> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Jennifer Syme"@en .
+<http://dbpedia.org/resource/List_of_awards_and_nominations_received_by_Keanu_Reeves> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Full list"@en .
+<http://dbpedia.org/resource/Paul_Aaron> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Paul Aaron"@en .
+<http://dbpedia.org/resource/Rock_music> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Rock"@en .
+<http://dbpedia.org/resource/Dogstar_(band)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Dogstar"@en .
+<http://dbpedia.org/resource/List_of_awards_and_nominations_received_by_Keanu_Reeves> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "numerous accolades"@en .
+<http://dbpedia.org/resource/Keanu_Reeves_filmography> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "a career on screen"@en .
+<http://dbpedia.org/resource/Action_films> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "action films"@en .
+<http://dbpedia.org/resource/The_New_York_Times> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The New York Times"@en .
+<http://dbpedia.org/resource/Time_(magazine)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Time"@en .
+<http://dbpedia.org/resource/Time_100> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "100 most influential people in the world"@en .
+<http://dbpedia.org/resource/Beirut> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Beirut"@en .
+<http://dbpedia.org/resource/Toronto> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Toronto"@en .
+<http://dbpedia.org/resource/Hangin'_In> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Hangin' In"@en .
+<http://dbpedia.org/resource/Youngblood_(1986_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Youngblood"@en .
+<http://dbpedia.org/resource/Bill_&_Ted's_Excellent_Adventure> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Bill & Ted's Excellent Adventure"@en .
+<http://dbpedia.org/resource/Bill_&_Ted's_Bogus_Journey> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Bill & Ted's Bogus Journey"@en .
+<http://dbpedia.org/resource/My_Own_Private_Idaho> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "My Own Private Idaho"@en .
+<http://dbpedia.org/resource/Action_hero> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "action hero"@en .
+<http://dbpedia.org/resource/Point_Break> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Point Break"@en .
+<http://dbpedia.org/resource/Speed_(1994_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Speed"@en .
+<http://dbpedia.org/resource/The_Devil's_Advocate_(1997_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Devil's Advocate"@en .
+<http://dbpedia.org/resource/Neo_(The_Matrix)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Neo"@en .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Matrix"@en .
+<http://dbpedia.org/resource/List_of_highest-paid_film_actors> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "highest paid actor for a single production"@en .
+<http://dbpedia.org/resource/The_Matrix_Reloaded> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Reloaded"@en .
+<http://dbpedia.org/resource/The_Matrix_Revolutions> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Revolutions"@en .
+<http://dbpedia.org/resource/John_Constantine> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "John Constantine"@en .
+<http://dbpedia.org/resource/Constantine_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Constantine"@en .
+<http://dbpedia.org/resource/Man_of_Tai_Chi> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Man of Tai Chi"@en .
+<http://dbpedia.org/resource/John_Wick_(character)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "titular assassin"@en .
+<http://dbpedia.org/resource/John_Wick> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "''John Wick''"@en .
+<http://dbpedia.org/resource/Duke_Caboom> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Duke Caboom"@en .
+<http://dbpedia.org/resource/Toy_Story_4> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Toy Story 4"@en .
+<http://dbpedia.org/resource/Johnny_Silverhand> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Johnny Silverhand"@en .
+<http://dbpedia.org/resource/Cyberpunk_2077> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Cyberpunk 2077"@en .
+<http://dbpedia.org/resource/Cyberpunk_2077:_Phantom_Liberty> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "its expansion"@en .
+<http://dbpedia.org/resource/Bill_&_Ted_Face_the_Music> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Bill & Ted Face the Music"@en .
+<http://dbpedia.org/resource/The_Matrix:_Resurrections> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Matrix: Resurrections"@en .
+<http://dbpedia.org/resource/Shadow_the_Hedgehog> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Shadow the Hedgehog"@en .
+<http://dbpedia.org/resource/Sonic_the_Hedgehog_3_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Sonic the Hedgehog 3"@en .
+<http://dbpedia.org/resource/Dogstar_(band)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Dogstar"@en .
+<http://dbpedia.org/resource/Somewhere_Between_the_Power_Lines_and_Palm_Trees> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Somewhere Between the Power Lines and Palm Trees"@en .
+<http://dbpedia.org/resource/BRZRKR_(franchise)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "''BRZRKR'' franchise"@en .
+<http://dbpedia.org/resource/BRZRKR> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "the original comic book"@en .
+<http://dbpedia.org/resource/The_Book_of_Elsewhere> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Book of Elsewhere"@en .
+<http://dbpedia.org/resource/ARCH_Motorcycle> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "ARCH Motorcycle"@en .
+<http://dbpedia.org/resource/Beirut> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Beirut"@en .
+<http://dbpedia.org/resource/Costume_designer> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "costume designer"@en .
+<http://dbpedia.org/resource/Essex> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Essex"@en .
+<http://dbpedia.org/resource/Native_Hawaiians> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Native Hawaiian"@en .
+<http://dbpedia.org/resource/Native_Hawaiians> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Hawaiian"@en .
+<http://dbpedia.org/resource/Chinese_immigration_to_Hawaii> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Chinese"@en .
+<http://dbpedia.org/resource/Kauai> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Kauai"@en .
+<http://dbpedia.org/resource/Sydney> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Sydney"@en .
+<http://dbpedia.org/resource/Paul_Aaron> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Paul Aaron"@en .
+<http://dbpedia.org/resource/Broadway_theatre> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Broadway"@en .
+<http://dbpedia.org/resource/Hollywood_(film_industry)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Hollywood"@en .
+<http://dbpedia.org/resource/Toronto> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Toronto"@en .
+<http://dbpedia.org/resource/Damn_Yankees> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Damn Yankees"@en .
+<http://dbpedia.org/resource/Hedgerow_Theatre> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Hedgerow Theatre"@en .
+<http://dbpedia.org/resource/Yorkville,_Toronto> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Yorkville"@en .
+<http://dbpedia.org/resource/The_Two_Ronnies> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Two Ronnies"@en .
+<http://dbpedia.org/resource/Chinese_art> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Chinese art"@en .
+<http://dbpedia.org/resource/Chinese_furniture> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "furniture"@en .
+<http://dbpedia.org/resource/Chinese_cuisine> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "cuisine"@en .
+<http://dbpedia.org/resource/Etobicoke_School_of_the_Arts> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Etobicoke School of the Arts"@en .
+<http://dbpedia.org/resource/Dyslexia> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "dyslexia"@en .
+<http://dbpedia.org/resource/De_La_Salle_College_(Toronto)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "De La Salle College"@en .
+<http://dbpedia.org/resource/Ice_hockey> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "ice hockey"@en .
+<http://dbpedia.org/resource/Ontario_Hockey_League> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "OHL"@en .
+<http://dbpedia.org/resource/Avondale_Secondary_Alternative_School> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Avondale Secondary Alternative School"@en .
+<http://dbpedia.org/resource/Green_card> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "green card"@en .
+<http://dbpedia.org/resource/Canadian_Broadcasting_Corporation> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Canadian Broadcasting Corporation"@en .
+<http://dbpedia.org/resource/Going_Great> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Going Great"@en .
+<http://dbpedia.org/resource/Hangin'_In> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Hangin' In"@en .
+<http://dbpedia.org/resource/Mercutio> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Mercutio"@en .
+<http://dbpedia.org/resource/Romeo_and_Juliet> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Romeo and Juliet"@en .
+<http://dbpedia.org/resource/Brad_Fraser> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Brad Fraser"@en .
+<http://dbpedia.org/resource/Wolfboy> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Wolfboy"@en .
+<http://dbpedia.org/resource/Coca-Cola> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Coca-Cola"@en .
+<http://dbpedia.org/resource/National_Film_Board_of_Canada> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "National Film Board of Canada"@en .
+<http://dbpedia.org/resource/Coming-of-age_story> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "coming-of-age"@en .
+<http://dbpedia.org/resource/NBC> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "NBC"@en .
+<http://dbpedia.org/resource/Babes_in_Toyland_(1986_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Babes in Toyland"@en .
+<http://dbpedia.org/resource/Act_of_Vengeance_(1986_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Act of Vengeance"@en .
+<http://dbpedia.org/resource/Brotherhood_of_Justice> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Brotherhood of Justice"@en .
+<http://dbpedia.org/resource/Peter_Markle> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Peter Markle"@en .
+<http://dbpedia.org/resource/Youngblood_(1986_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Youngblood"@en .
+<http://dbpedia.org/resource/Goaltender> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "goalkeeper"@en .
+<http://dbpedia.org/resource/Flying_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Flying"@en .
+<http://dbpedia.org/resource/River's_Edge> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "River's Edge"@en .
+<http://dbpedia.org/resource/Murder_of_Marcy_Renee_Conrad> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "1981 murder of Marcy Renee Conrad"@en .
+<http://dbpedia.org/resource/Toronto_International_Film_Festival> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Toronto International Film Festival"@en .
+<http://dbpedia.org/resource/Janet_Maslin> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Janet Maslin"@en .
+<http://dbpedia.org/resource/The_New_York_Times> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The New York Times"@en .
+<http://dbpedia.org/resource/The_Night_Before_(1988_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Night Before"@en .
+<http://dbpedia.org/resource/Lori_Loughlin> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Lori Loughlin"@en .
+<http://dbpedia.org/resource/The_Prince_of_Pennsylvania> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Prince of Pennsylvania"@en .
+<http://dbpedia.org/resource/Permanent_Record_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Permanent Record"@en .
+<http://dbpedia.org/resource/Variety_(magazine)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "''Variety''"@en .
+<http://dbpedia.org/resource/Supporting_character> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "supporting role"@en .
+<http://dbpedia.org/resource/Dangerous_Liaisons> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Dangerous Liaisons"@en .
+<http://dbpedia.org/resource/61st_Academy_Awards> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "61st Academy Awards"@en .
+<http://dbpedia.org/resource/Academy_Award_for_Best_Adapted_Screenplay> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Best Adapted Screenplay"@en .
+<http://dbpedia.org/resource/Academy_Award_for_Best_Costume_Design> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Best Costume Design"@en .
+<http://dbpedia.org/resource/Academy_Award_for_Best_Production_Design> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Best Production Design"@en .
+<http://dbpedia.org/resource/Bill_&_Ted's_Excellent_Adventure> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Bill & Ted's Excellent Adventure"@en .
+<http://dbpedia.org/resource/Time_travel> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "travels through time"@en .
+<http://dbpedia.org/resource/Alex_Winter> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Alex Winter"@en .
+<http://dbpedia.org/resource/Review_aggregator> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "review aggregator"@en .
+<http://dbpedia.org/resource/Rotten_Tomatoes> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Rotten Tomatoes"@en .
+<http://dbpedia.org/resource/Parenthood_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Parenthood"@en .
+<http://dbpedia.org/resource/Ron_Howard> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Ron Howard"@en .
+<http://dbpedia.org/resource/BBC> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "BBC"@en .
+<http://dbpedia.org/resource/Contract_killing> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "hitman"@en .
+<http://dbpedia.org/resource/Black_comedy> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "black comedy"@en .
+<http://dbpedia.org/resource/I_Love_You_to_Death> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "I Love You to Death"@en .
+<http://dbpedia.org/resource/Radio_broadcasting> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "radio station"@en .
+<http://dbpedia.org/resource/Tune_in_Tomorrow> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Tune in Tomorrow"@en .
+<http://dbpedia.org/resource/Paula_Abdul> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Paula Abdul"@en .
+<http://dbpedia.org/resource/Rush_Rush_(Paula_Abdul_song)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Rush Rush"@en .
+<http://dbpedia.org/resource/Rebel_Without_a_Cause> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Rebel Without a Cause"@en .
+<http://dbpedia.org/resource/Motif_(visual_arts)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "motif"@en .
+<http://dbpedia.org/resource/James_Dean> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "James Dean"@en .
+<http://dbpedia.org/resource/Bill_&_Ted's_Bogus_Journey> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Bill & Ted's Bogus Journey"@en .
+<http://dbpedia.org/resource/Alex_Winter> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Alex Winter"@en .
+<http://dbpedia.org/resource/Los_Angeles_Times> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Los Angeles Times"@en .
+<http://dbpedia.org/resource/Roger_Ebert> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Roger Ebert"@en .
+<http://dbpedia.org/resource/Slapstick> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "slapstick"@en .
+<http://dbpedia.org/resource/River_Phoenix> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "River Phoenix"@en .
+<http://dbpedia.org/resource/My_Own_Private_Idaho> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "My Own Private Idaho"@en .
+<http://dbpedia.org/resource/Gus_Van_Sant> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Gus Van Sant"@en .
+<http://dbpedia.org/resource/Shakespeare> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Shakespeare"@en .
+<http://dbpedia.org/resource/Henry_IV,_Part_1> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Henry IV, Part 1"@en .
+<http://dbpedia.org/resource/Henry_IV,_Part_2> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Henry IV, Part 2"@en .
+<http://dbpedia.org/resource/Henry_V_(play)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Henry V"@en .
+<http://dbpedia.org/resource/48th_Venice_International_Film_Festival> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "48th Venice International Film Festival"@en .
+<http://dbpedia.org/resource/Owen_Gleiberman> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Owen Gleiberman"@en .
+<http://dbpedia.org/resource/Entertainment_Weekly> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Entertainment Weekly"@en .
+<http://dbpedia.org/resource/Patrick_Swayze> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Patrick Swayze"@en .
+<http://dbpedia.org/resource/Lori_Petty> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Lori Petty"@en .
+<http://dbpedia.org/resource/Gary_Busey> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Gary Busey"@en .
+<http://dbpedia.org/resource/Point_Break> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Point Break"@en .
+<http://dbpedia.org/resource/Kathryn_Bigelow> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Kathryn Bigelow"@en .
+<http://dbpedia.org/resource/Federal_Bureau_of_Investigation> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "FBI"@en .
+<http://dbpedia.org/resource/Surfing> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "surfing"@en .
+<http://dbpedia.org/resource/The_Washington_Post> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Washington Post"@en .
+<http://dbpedia.org/resource/Hal_Hinson> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Hal Hinson"@en .
+<http://dbpedia.org/resource/1992_MTV_Movie_Awards> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "1992 MTV Movie Awards"@en .
+<http://dbpedia.org/resource/Alternative_rock> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "alternative rock"@en .
+<http://dbpedia.org/resource/Dogstar_(band)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Dogstar"@en .
+<http://dbpedia.org/resource/Robert_Mailhouse> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Robert Mailhouse"@en .
+<http://dbpedia.org/resource/Jonathan_Harker> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Jonathan Harker"@en .
+<http://dbpedia.org/resource/Francis_Ford_Coppola> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Francis Ford Coppola"@en .
+<http://dbpedia.org/resource/Gothic_horror> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Gothic horror"@en .
+<http://dbpedia.org/resource/Bram_Stoker's_Dracula_(1992_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Bram Stoker's Dracula"@en .
+<http://dbpedia.org/resource/Bram_Stoker> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Stoker's"@en .
+<http://dbpedia.org/resource/Dracula> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Dracula"@en .
+<http://dbpedia.org/resource/Gary_Oldman> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Gary Oldman"@en .
+<http://dbpedia.org/resource/Winona_Ryder> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Winona Ryder"@en .
+<http://dbpedia.org/resource/Anthony_Hopkins> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Anthony Hopkins"@en .
+<http://dbpedia.org/resource/Virgin_Media> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Virgin Media"@en .
+<http://dbpedia.org/resource/Academy_Award_for_Best_Sound_Editing> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Best Sound Editing"@en .
+<http://dbpedia.org/resource/Academy_Award_for_Best_Makeup_and_Hairstyling> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Best Makeup"@en .
+<http://dbpedia.org/resource/British_Academy_Film_Awards> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "British Academy Film Awards"@en .
+<http://dbpedia.org/resource/Much_Ado_About_Nothing_(1993_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Much Ado About Nothing"@en .
+<http://dbpedia.org/resource/William_Shakespeare> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Shakespeare"@en .
+<http://dbpedia.org/resource/Much_Ado_About_Nothing> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "play of the same name"@en .
+<http://dbpedia.org/resource/Golden_Raspberry_Award> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Golden Raspberry Award"@en .
+<http://dbpedia.org/resource/Golden_Raspberry_Award_for_Worst_Supporting_Actor> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Worst Supporting Actor"@en .
+<http://dbpedia.org/resource/The_New_Republic> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The New Republic"@en .
+<http://dbpedia.org/resource/Even_Cowgirls_Get_the_Blues_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Even Cowgirls Get the Blues"@en .
+<http://dbpedia.org/resource/Little_Buddha> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Little Buddha"@en .
+<http://dbpedia.org/resource/The_Independent> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Independent"@en .
+<http://dbpedia.org/resource/Speed_(1994_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Speed"@en .
+<http://dbpedia.org/resource/Sandra_Bullock> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Sandra Bullock"@en .
+<http://dbpedia.org/resource/Dennis_Hopper> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Dennis Hopper"@en .
+<http://dbpedia.org/resource/List_of_directorial_debuts> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "directorial debut"@en .
+<http://dbpedia.org/resource/Jan_de_Bont> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Jan de Bont"@en .
+<http://dbpedia.org/resource/River_Phoenix> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "River Phoenix"@en .
+<http://dbpedia.org/resource/Gene_Siskel> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Gene Siskel"@en .
+<http://dbpedia.org/resource/Chicago_Tribune> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Chicago Tribune"@en .
+<http://dbpedia.org/resource/David_Ansen> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "David Ansen"@en .
+<http://dbpedia.org/resource/Newsweek> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Newsweek"@en .
+<http://dbpedia.org/resource/Academy_Award_for_Best_Sound_Mixing> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Best Sound"@en .
+<http://dbpedia.org/resource/Cyberpunk> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "cyberpunk"@en .
+<http://dbpedia.org/resource/Johnny_Mnemonic_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Johnny Mnemonic"@en .
+<http://dbpedia.org/resource/Robert_Longo> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Robert Longo"@en .
+<http://dbpedia.org/resource/Johnny_Mnemonic> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "same name"@en .
+<http://dbpedia.org/resource/William_Gibson> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "William Gibson"@en .
+<http://dbpedia.org/resource/Cybernetic> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "cybernetic"@en .
+<http://dbpedia.org/resource/Brain_implant> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "brain implant"@en .
+<http://dbpedia.org/resource/Yakuza> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "yakuza"@en .
+<http://dbpedia.org/resource/Casting_(performing_arts)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "miscast"@en .
+<http://dbpedia.org/resource/CD-ROM> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "CD-ROM"@en .
+<http://dbpedia.org/resource/A_Walk_in_the_Clouds> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "A Walk in the Clouds"@en .
+<http://dbpedia.org/resource/World_War_II> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "World War&nbsp;II"@en .
+<http://dbpedia.org/resource/Mick_LaSalle> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Mick LaSalle"@en .
+<http://dbpedia.org/resource/Kodak> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Kodak"@en .
+<http://dbpedia.org/resource/Bo_Derek> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Bo Derek"@en .
+<http://dbpedia.org/resource/Prince_Hamlet> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Prince Hamlet"@en .
+<http://dbpedia.org/resource/Manitoba_Theatre_Centre> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Manitoba Theatre Centre"@en .
+<http://dbpedia.org/resource/Hamlet> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Hamlet"@en .
+<http://dbpedia.org/resource/Winnipeg> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Winnipeg"@en .
+<http://dbpedia.org/resource/The_Sunday_Times> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Sunday Times"@en .
+<http://dbpedia.org/resource/Roger_Lewis_(biographer)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Roger Lewis"@en .
+<http://dbpedia.org/resource/Chain_Reaction_(1996_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Chain Reaction"@en .
+<http://dbpedia.org/resource/Morgan_Freeman> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Morgan Freeman"@en .
+<http://dbpedia.org/resource/Rachel_Weisz> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Rachel Weisz"@en .
+<http://dbpedia.org/resource/Fred_Ward> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Fred Ward"@en .
+<http://dbpedia.org/resource/Kevin_Dunn> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Kevin Dunn"@en .
+<http://dbpedia.org/resource/Brian_Cox_(actor)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Brian Cox"@en .
+<http://dbpedia.org/resource/Sustainable_energy> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "green energy"@en .
+<http://dbpedia.org/resource/Frameup> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "framed"@en .
+<http://dbpedia.org/resource/Feeling_Minnesota> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Feeling Minnesota"@en .
+<http://dbpedia.org/resource/Vincent_D'Onofrio> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Vincent D'Onofrio"@en .
+<http://dbpedia.org/resource/Cameron_Diaz> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Cameron Diaz"@en .
+<http://dbpedia.org/resource/Speed_2:_Cruise_Control> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Speed 2: Cruise Control"@en .
+<http://dbpedia.org/resource/20th_Century_Fox> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "20th Century Fox"@en .
+<http://dbpedia.org/resource/The_Last_Time_I_Committed_Suicide> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Last Time I Committed Suicide"@en .
+<http://dbpedia.org/resource/Neal_Cassady> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Neal Cassady"@en .
+<http://dbpedia.org/resource/Jack_Kerouac> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Jack Kerouac"@en .
+<http://dbpedia.org/resource/CNN> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "CNN"@en .
+<http://dbpedia.org/resource/Empire_(film_magazine)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Empire"@en .
+<http://dbpedia.org/resource/Supernatural> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "supernatural"@en .
+<http://dbpedia.org/resource/The_Devil's_Advocate_(1997_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Devil's Advocate"@en .
+<http://dbpedia.org/resource/Al_Pacino> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Al Pacino"@en .
+<http://dbpedia.org/resource/Charlize_Theron> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Charlize Theron"@en .
+<http://dbpedia.org/resource/Film_studio> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "film studio"@en .
+<http://dbpedia.org/resource/Andrew_Neiderman> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Andrew Neiderman"@en .
+<http://dbpedia.org/resource/Devil_in_Christianity> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "devil"@en .
+<http://dbpedia.org/resource/James_Berardinelli> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "James Berardinelli"@en .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Matrix"@en .
+<http://dbpedia.org/resource/The_Matrix_(franchise)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "''The Matrix'' franchise"@en .
+<http://dbpedia.org/resource/Security_hacker> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "hacker"@en .
+<http://dbpedia.org/resource/Neo_(The_Matrix)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Neo"@en .
+<http://dbpedia.org/resource/Artificial_intelligence> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "intelligent machines"@en .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "the Wachowskis"@en .
+<http://dbpedia.org/resource/Kevin_Kelly_(editor)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Kevin Kelly"@en .
+<http://dbpedia.org/resource/Out_of_Control:_The_New_Biology_of_Machines,_Social_Systems,_and_the_Economic_World> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Out of Control: The New Biology of Machines, Social Systems, and the Economic World"@en .
+<http://dbpedia.org/resource/Dylan_Evans> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Dylan Evans"@en .
+<http://dbpedia.org/resource/Evolutionary_psychology> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "evolutionary psychology"@en .
+<http://dbpedia.org/resource/Fight_choreography> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "martial arts choreographer"@en .
+<http://dbpedia.org/resource/Yuen_Woo-ping> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Yuen Woo-ping"@en .
+<http://dbpedia.org/resource/List_of_films_considered_the_best> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "best science fiction films of all time"@en .
+<http://dbpedia.org/resource/Kenneth_Turan> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Kenneth Turan"@en .
+<http://dbpedia.org/resource/Prada> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Prada"@en .
+<http://dbpedia.org/resource/Academy_Award_for_Best_Film_Editing> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Best Film Editing"@en .
+<http://dbpedia.org/resource/Academy_Award_for_Best_Visual_Effects> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Best Visual Effects"@en .
+<http://dbpedia.org/resource/The_Replacements_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Replacements"@en .
+<http://dbpedia.org/resource/Gene_Hackman> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Gene Hackman"@en .
+<http://dbpedia.org/resource/The_Watcher_(2000_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Watcher"@en .
+<http://dbpedia.org/resource/Sam_Raimi> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Sam Raimi"@en .
+<http://dbpedia.org/resource/The_Gift_(2000_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Gift"@en .
+<http://dbpedia.org/resource/Cate_Blanchett> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Cate Blanchett"@en .
+<http://dbpedia.org/resource/Extrasensory_perception> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "extrasensory perception"@en .
+<http://dbpedia.org/resource/Paul_Clinton> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Paul Clinton"@en .
+<http://dbpedia.org/resource/Sweet_November_(2001_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Sweet November"@en .
+<http://dbpedia.org/resource/Sweet_November_(1968_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "same name"@en .
+<http://dbpedia.org/resource/Desson_Thomson> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Desson Thompson"@en .
+<http://dbpedia.org/resource/Cliché> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "cliches"@en .
+<http://dbpedia.org/resource/Tragicomedy> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "tragicomedy"@en .
+<http://dbpedia.org/resource/Hardball_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Hardball"@en .
+<http://dbpedia.org/resource/Brian_Robbins> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Brian Robbins"@en .
+<http://dbpedia.org/resource/Little_League_Baseball> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Little League"@en .
+<http://dbpedia.org/resource/Cabrini–Green_Homes> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Cabrini Green"@en .
+<http://dbpedia.org/resource/The_Matrix_Reloaded> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Matrix Reloaded"@en .
+<http://dbpedia.org/resource/The_Matrix_Revolutions> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Matrix Revolutions"@en .
+<http://dbpedia.org/resource/Principal_photography> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Principal photography"@en .
+<http://dbpedia.org/resource/Back-to-back_film_production> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "back-to-back"@en .
+<http://dbpedia.org/resource/Fox_Studios_Australia> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Fox Studios"@en .
+<http://dbpedia.org/resource/LA_Weekly> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "LA Weekly"@en .
+<http://dbpedia.org/resource/Evening_Standard> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Evening Standard"@en .
+<http://dbpedia.org/resource/Cinematography> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "cinematography"@en .
+<http://dbpedia.org/resource/Variety_store> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "dime-store"@en .
+<http://dbpedia.org/resource/Special_effect> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "special effect"@en .
+<http://dbpedia.org/resource/San_Francisco_Chronicle> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "San Francisco Chronicle"@en .
+<http://dbpedia.org/resource/Computer-generated_imagery> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "computer-generated imagery"@en .
+<http://dbpedia.org/resource/Something's_Gotta_Give_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Something's Gotta Give"@en .
+<http://dbpedia.org/resource/Jack_Nicholson> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Jack Nicholson"@en .
+<http://dbpedia.org/resource/Diane_Keaton> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Diane Keaton"@en .
+<http://dbpedia.org/resource/Title_character> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "title role"@en .
+<http://dbpedia.org/resource/Constantine_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Constantine"@en .
+<http://dbpedia.org/resource/Occult_detective_fiction> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "occult detective"@en .
+<http://dbpedia.org/resource/The_Sydney_Morning_Herald> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Sydney Morning Herald"@en .
+<http://dbpedia.org/resource/Thumbsucker_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Thumbsucker"@en .
+<http://dbpedia.org/resource/Sundance_Film_Festival> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Sundance Film Festival"@en .
+<http://dbpedia.org/resource/Walter_Kirn> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Walter Kirn"@en .
+<http://dbpedia.org/resource/Thumbsucker_(novel)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "novel of the same name"@en .
+<http://dbpedia.org/resource/Thumb_sucking> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "thumb-sucking"@en .
+<http://dbpedia.org/resource/Richard_Linklater> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Richard Linklater"@en .
+<http://dbpedia.org/resource/A_Scanner_Darkly_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "A Scanner Darkly"@en .
+<http://dbpedia.org/resource/2006_Cannes_Film_Festival> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "2006 Cannes Film Festival"@en .
+<http://dbpedia.org/resource/Dystopia> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "dystopia"@en .
+<http://dbpedia.org/resource/Surveillance> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "surveillance"@en .
+<http://dbpedia.org/resource/A_Scanner_Darkly> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "novel of the same name"@en .
+<http://dbpedia.org/resource/Philip_K._Dick> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Philip K. Dick"@en .
+<http://dbpedia.org/resource/Robert_Downey_Jr.> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Robert Downey Jr"@en .
+<http://dbpedia.org/resource/The_Lake_House_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Lake House"@en .
+<http://dbpedia.org/resource/South_Korean_language> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "South Korean"@en .
+<http://dbpedia.org/resource/Il_Mare> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Il Mare"@en .
+<http://dbpedia.org/resource/Mark_Kermode> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Mark Kermode"@en .
+<http://dbpedia.org/resource/The_Guardian> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Guardian"@en .
+<http://dbpedia.org/resource/The_Great_Warming> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Great Warming"@en .
+<http://dbpedia.org/resource/Alanis_Morissette> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Alanis Morissette"@en .
+<http://dbpedia.org/resource/Climate_change_mitigation> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "climate change mitigation"@en .
+<http://dbpedia.org/resource/David_Ayer> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "David Ayer"@en .
+<http://dbpedia.org/resource/Street_Kings> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Street Kings"@en .
+<http://dbpedia.org/resource/The_Day_the_Earth_Stood_Still_(2008_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Day the Earth Stood Still"@en .
+<http://dbpedia.org/resource/The_Day_the_Earth_Stood_Still> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "1951 film of the same name"@en .
+<http://dbpedia.org/resource/Klaatu_(The_Day_the_Earth_Stood_Still)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Klaatu"@en .
+<http://dbpedia.org/resource/Environmental_degradation> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "environmental impact"@en .
+<http://dbpedia.org/resource/Golden_Raspberry_Awards> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Razzie Awards"@en .
+<http://dbpedia.org/resource/Golden_Raspberry_Award_for_Worst_Prequel,_Remake,_Rip-off_or_Sequel> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Worst Prequel, Remake, Rip-off or Sequel"@en .
+<http://dbpedia.org/resource/The_Daily_Telegraph> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Telegraph"@en .
+<http://dbpedia.org/resource/Al_Gore> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Al-Gore"@en .
+<http://dbpedia.org/resource/Rebecca_Miller> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Rebecca Miller"@en .
+<http://dbpedia.org/resource/The_Private_Lives_of_Pippa_Lee> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Private Lives of Pippa Lee"@en .
+<http://dbpedia.org/resource/59th_Berlin_International_Film_Festival> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "59th Berlin International Film Festival"@en .
+<http://dbpedia.org/resource/Ensemble_cast> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "ensemble"@en .
+<http://dbpedia.org/resource/Henry's_Crime> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Henry's Crime"@en .
+<http://dbpedia.org/resource/Alexandra_Grant> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Alexandra Grant"@en .
+<http://dbpedia.org/resource/Side_by_Side_(2012_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Side by Side"@en .
+<http://dbpedia.org/resource/James_Cameron> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "James Cameron"@en .
+<http://dbpedia.org/resource/Martin_Scorsese> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Martin Scorsese"@en .
+<http://dbpedia.org/resource/Christopher_Nolan> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Christopher Nolan"@en .
+<http://dbpedia.org/resource/Digital_cinema> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "digital"@en .
+<http://dbpedia.org/resource/Photochemistry> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "photochemical"@en .
+<http://dbpedia.org/resource/Generation_Um...> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Generation Um..."@en .
+<http://dbpedia.org/resource/Man_of_Tai_Chi> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Man of Tai Chi"@en .
+<http://dbpedia.org/resource/Multilingualism> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "multilingual"@en .
+<http://dbpedia.org/resource/Tiger_Chen> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Tiger Chen"@en .
+<http://dbpedia.org/resource/John_Woo> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "John Woo"@en .
+<http://dbpedia.org/resource/Bilge_Ebiri> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Bilge Ebiri"@en .
+<http://dbpedia.org/resource/New_York_(magazine)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "''Vulture''"@en .
+<http://dbpedia.org/resource/The_Globe_and_Mail> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Globe and Mail"@en .
+<http://dbpedia.org/resource/3D_film> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "3D"@en .
+<http://dbpedia.org/resource/47_Ronin_(2013_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "47 Ronin"@en .
+<http://dbpedia.org/resource/Fable> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "fable"@en .
+<http://dbpedia.org/resource/Samurai> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "samurai"@en .
+<http://dbpedia.org/resource/Universal_Pictures> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Universal Pictures"@en .
+<http://dbpedia.org/resource/Box-office_bomb> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "box office flop"@en .
+<http://dbpedia.org/resource/John_Wick_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "John Wick"@en .
+<http://dbpedia.org/resource/Chad_Stahelski> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Chad Stahelski"@en .
+<http://dbpedia.org/resource/John_Wick> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "John Wick"@en .
+<http://dbpedia.org/resource/The_Hollywood_Reporter> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Hollywood Reporter"@en .
+<http://dbpedia.org/resource/Knock_Knock_(2015_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Knock Knock"@en .
+<http://dbpedia.org/resource/Death_Game> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Death Game"@en .
+<http://dbpedia.org/resource/Toronto_Star> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Toronto Star"@en .
+<http://dbpedia.org/resource/Cat_and_mouse> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "cat and mouse"@en .
+<http://dbpedia.org/resource/Deep_Web_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Deep Web"@en .
+<http://dbpedia.org/resource/Dark_web> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "dark web"@en .
+<http://dbpedia.org/resource/Mifune:_The_Last_Samurai> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Mifune: The Last Samurai"@en .
+<http://dbpedia.org/resource/Toshiro_Mifune> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Toshiro Mifune"@en .
+<http://dbpedia.org/resource/Narration> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "narrated"@en .
+<http://dbpedia.org/resource/Exposed_(2016_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Exposed"@en .
+<http://dbpedia.org/resource/Keanu_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Keanu"@en .
+<http://dbpedia.org/resource/The_Neon_Demon> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Neon Demon"@en .
+<http://dbpedia.org/resource/Nicolas_Winding_Refn> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Nicolas Winding Refn"@en .
+<http://dbpedia.org/resource/Elle_Fanning> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Elle Fanning"@en .
+<http://dbpedia.org/resource/The_Bad_Batch_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Bad Batch"@en .
+<http://dbpedia.org/resource/The_Whole_Truth_(2016_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Whole Truth"@en .
+<http://dbpedia.org/resource/Gabriel_Basso> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Gabriel Basso"@en .
+<http://dbpedia.org/resource/Gugu_Mbatha-Raw> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Gugu Mbatha-Raw"@en .
+<http://dbpedia.org/resource/Renée_Zellweger> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Renée Zellweger"@en .
+<http://dbpedia.org/resource/Jim_Belushi> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Jim Belushi"@en .
+<http://dbpedia.org/resource/Criminal_defense_lawyer> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "defence attorney"@en .
+<http://dbpedia.org/resource/The_A.V._Club> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The A.V. Club"@en .
+<http://dbpedia.org/resource/Swedish_Dicks> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Swedish Dicks"@en .
+<http://dbpedia.org/resource/Web_television> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "web television"@en .
+<http://dbpedia.org/resource/John_Wick:_Chapter_2> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "John Wick: Chapter 2"@en .
+<http://dbpedia.org/resource/Bounty_(reward)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "bounty"@en .
+<http://dbpedia.org/resource/Justin_Chang> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Justin Chang"@en .
+<http://dbpedia.org/resource/B_movie> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "B-picture"@en .
+<http://dbpedia.org/resource/To_the_Bone_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "To the Bone"@en .
+<http://dbpedia.org/resource/Anorexia_nervosa> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "anorexia"@en .
+<http://dbpedia.org/resource/Sundance_Film_Festival> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Sundance Film Festival"@en .
+<http://dbpedia.org/resource/Netflix> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Netflix"@en .
+<http://dbpedia.org/resource/New_Statesman> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "New Statesman"@en .
+<http://dbpedia.org/resource/Cameo_appearance> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "cameo"@en .
+<http://dbpedia.org/resource/A_Happening_of_Monumental_Proportions> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "A Happening of Monumental Proportions"@en .
+<http://dbpedia.org/resource/SPF-18> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "SPF-18"@en .
+<http://dbpedia.org/resource/Destination_Wedding> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Destination Wedding"@en .
+<http://dbpedia.org/resource/Siberia_(2018_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Siberia"@en .
+<http://dbpedia.org/resource/Siberia> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Siberia"@en .
+<http://dbpedia.org/resource/Replicas_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Replicas"@en .
+<http://dbpedia.org/resource/Neuroscientist> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "neuroscientist"@en .
+<http://dbpedia.org/resource/Bioethics> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "bioethics"@en .
+<http://dbpedia.org/resource/Ana_Ularu> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Ana Ularu"@en .
+<http://dbpedia.org/resource/John_Wick:_Chapter_3_–_Parabellum> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "John Wick: Chapter 3 – Parabellum"@en .
+<http://dbpedia.org/resource/Halle_Berry> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Halle Berry"@en .
+<http://dbpedia.org/resource/People's_Choice_Awards> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "People's Choice Awards"@en .
+<http://dbpedia.org/resource/Art_Directors_Guild_Award_for_Excellence_in_Production_Design_for_a_Contemporary_Film> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Best Contemporary Film"@en .
+<http://dbpedia.org/resource/ADG_Excellence_in_Production_Design_Award> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Art Directors Guild Awards"@en .
+<http://dbpedia.org/resource/Toy_Story_4> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Toy Story 4"@en .
+<http://dbpedia.org/resource/Pixar> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Pixar"@en .
+<http://dbpedia.org/resource/Toy_Story_(franchise)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "''Toy Story''"@en .
+<http://dbpedia.org/resource/Ali_Wong> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Ali Wong"@en .
+<http://dbpedia.org/resource/Always_Be_My_Maybe> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Always Be My Maybe"@en .
+<http://dbpedia.org/resource/São_Paulo> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "São Paulo"@en .
+<http://dbpedia.org/resource/Development_hell> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "development hell"@en .
+<http://dbpedia.org/resource/Carl_Rinsch> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Carl Rinsch"@en .
+<http://dbpedia.org/resource/Alex_Winter> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Alex Winter"@en .
+<http://dbpedia.org/resource/Bill_&_Ted> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Bill & Ted"@en .
+<http://dbpedia.org/resource/Bill_&_Ted_Face_the_Music> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Bill & Ted Face the Music"@en .
+<http://dbpedia.org/resource/Salon_(website)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Salon"@en .
+<http://dbpedia.org/resource/The_SpongeBob_Movie:_Sponge_on_the_Run> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The SpongeBob Movie: Sponge on the Run"@en .
+<http://dbpedia.org/resource/Tumbleweed> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "tumbleweed"@en .
+<http://dbpedia.org/resource/Cyberpunk_2077> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Cyberpunk 2077"@en .
+<http://dbpedia.org/resource/The_Matrix_Resurrections> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Matrix Resurrections"@en .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Carrie-Anne Moss"@en .
+<http://dbpedia.org/resource/Lionsgate_Films> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Lionsgate"@en .
+<http://dbpedia.org/resource/John_Wick:_Chapter_4> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "John Wick: Chapter 4"@en .
+<http://dbpedia.org/resource/Cyberpunk_2077:_Phantom_Liberty> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Phantom Liberty"@en .
+<http://dbpedia.org/resource/BRZRKR> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "BRZRKR"@en .
+<http://dbpedia.org/resource/Star_Wars_comics> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Star Wars"@en .
+<http://dbpedia.org/resource/COVID-19_pandemic> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "COVID-19 pandemic"@en .
+<http://dbpedia.org/resource/Somewhere_Between_the_Power_Lines_and_Palm_Trees> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Somewhere Between the Power Lines and Palm Trees"@en .
+<http://dbpedia.org/resource/BottleRock_Napa_Valley> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "BottleRock Napa Valley"@en .
+<http://dbpedia.org/resource/Hermosa_Beach,_California> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Hermosa Beach, California"@en .
+<http://dbpedia.org/resource/BRZRKR:_Poetry_of_Madness> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Poetry of Madness"@en .
+<http://dbpedia.org/resource/Ride_with_Norman_Reedus> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Ride with Norman Reedus"@en .
+<http://dbpedia.org/resource/CinemaBlend> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "CinemaBlend"@en .
+<http://dbpedia.org/resource/Hulu> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Hulu"@en .
+<http://dbpedia.org/resource/Disney+> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Disney+"@en .
+<http://dbpedia.org/resource/The_Guardian> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Guardian"@en .
+<http://dbpedia.org/resource/BRZRKR:_Fallen_Empire> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Fallen Empire"@en .
+<http://dbpedia.org/resource/The_Book_of_Elsewhere> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Book of Elsewhere"@en .
+<http://dbpedia.org/resource/China_Miéville> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "China Miéville"@en .
+<http://dbpedia.org/resource/Jason_Aaron> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Jason Aaron"@en .
+<http://dbpedia.org/resource/Graham_Hancock> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Graham Hancock"@en .
+<http://dbpedia.org/resource/Ancient_Apocalypse> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Ancient Apocalypse"@en .
+<http://dbpedia.org/resource/Armored_Core> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Armored Core"@en .
+<http://dbpedia.org/resource/Secret_Level> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Secret Level"@en .
+<http://dbpedia.org/resource/Shadow_the_Hedgehog> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Shadow the Hedgehog"@en .
+<http://dbpedia.org/resource/Sonic_the_Hedgehog_(film_series)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Sonic the Hedgehog"@en .
+<http://dbpedia.org/resource/Sonic_the_Hedgehog_3_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Sonic the Hedgehog 3"@en .
+<http://dbpedia.org/resource/Downloadable_content> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "DLC"@en .
+<http://dbpedia.org/resource/Shadow_Generations> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Shadow Generations"@en .
+<http://dbpedia.org/resource/Severance_(TV_series)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Severance"@en .
+<http://dbpedia.org/resource/John_Wick_(character)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "John Wick"@en .
+<http://dbpedia.org/resource/Ballerina_(2025_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Ballerina"@en .
+<http://dbpedia.org/resource/Ana_de_Armas> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Ana de Armas"@en .
+<http://dbpedia.org/resource/Seth_Rogen> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Seth Rogen"@en .
+<http://dbpedia.org/resource/Aziz_Ansari> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Aziz Ansari"@en .
+<http://dbpedia.org/resource/Good_Fortune_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Good Fortune"@en .
+<http://dbpedia.org/resource/Jonah_Hill> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Jonah Hill"@en .
+<http://dbpedia.org/resource/Black_comedy> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "black comedy"@en .
+<http://dbpedia.org/resource/Outcome_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Outcome"@en .
+<http://dbpedia.org/resource/Apple_TV+> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Apple TV+"@en .
+<http://dbpedia.org/resource/Ruben_Östlund> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Ruben Östlund"@en .
+<http://dbpedia.org/resource/Satire_film> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "satire film"@en .
+<http://dbpedia.org/resource/The_Entertainment_System_Is_Down> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Entertainment System Is Down"@en .
+<http://dbpedia.org/resource/Benny_Urquidez> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Benny Urquidez"@en .
+<http://dbpedia.org/resource/Broadway_theatre> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Broadway"@en .
+<http://dbpedia.org/resource/Waiting_for_Godot> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Waiting for Godot"@en .
+<http://dbpedia.org/resource/Jamie_Lloyd_(director)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Jamie Lloyd"@en .
+<http://dbpedia.org/resource/Mattson_Tomlin> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Mattson Tomlin"@en .
+<http://dbpedia.org/resource/Production_I.G> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Production I.G"@en .
+<http://dbpedia.org/resource/David_Lynch> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "David Lynch"@en .
+<http://dbpedia.org/resource/Jennifer_Syme> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Jennifer Syme"@en .
+<http://dbpedia.org/resource/Stillborn> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "stillborn"@en .
+<http://dbpedia.org/resource/Side_collision> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "collided"@en .
+<http://dbpedia.org/resource/Cahuenga_Boulevard> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Cahuenga Boulevard"@en .
+<http://dbpedia.org/resource/Brunch> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "brunch"@en .
+<http://dbpedia.org/resource/Pallbearer> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "pallbearer"@en .
+<http://dbpedia.org/resource/China_Chow> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "China Chow"@en .
+<http://dbpedia.org/resource/Alexandra_Grant> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Alexandra Grant"@en .
+<http://dbpedia.org/resource/Keanumycin> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "keanumycin"@en .
+<http://dbpedia.org/resource/Fungi> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "fungi"@en .
+<http://dbpedia.org/resource/Death> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "mortality"@en .
+<http://dbpedia.org/resource/Indianapolis_Motor_Speedway> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Indianapolis Motor Speedway"@en .
+<http://dbpedia.org/resource/Leukemia> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "leukemia"@en .
+<http://dbpedia.org/resource/The_Matrix_Reloaded> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Matrix Reloaded"@en .
+<http://dbpedia.org/resource/Harley-Davidson_Motorcycles> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Harley-Davidson"@en .
+<http://dbpedia.org/resource/Motorcycle> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "motorcycle"@en .
+<http://dbpedia.org/resource/Chad_Stahelski> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Chad Stahelski"@en .
+<http://dbpedia.org/resource/Brazilian_jiu-jitsu> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Brazilian jiu-jitsu"@en .
+<http://dbpedia.org/resource/Keikogi> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "training uniform"@en .
+<http://dbpedia.org/resource/St._Jude_Children's_Research_Hospital> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "St. Jude Children's Research Hospital"@en .
+<http://dbpedia.org/resource/Rolex> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Rolex"@en .
+<http://dbpedia.org/resource/Rolex_Submariner> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Submariner"@en .
+<http://dbpedia.org/resource/Windsor_Spitfires> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Windsor Spitfires"@en .
+<http://dbpedia.org/resource/Canadian_Mental_Health_Association> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Canadian Mental Health Association"@en .
+<http://dbpedia.org/resource/ARCH_Motorcycle> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "ARCH Motorcycle Company"@en .
+<http://dbpedia.org/resource/Custom_motorcycle> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "custom motorcycle"@en .
+<http://dbpedia.org/resource/Beat_Generation> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Beat"@en .
+<http://dbpedia.org/resource/Pull_My_Daisy_(poem)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Pull My Daisy"@en .
+<http://dbpedia.org/resource/Tibet_House_US> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Tibet House US"@en .
+<http://dbpedia.org/resource/Tibetan_people> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Tibetan"@en .
+<http://dbpedia.org/resource/14th_Dalai_Lama> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Dalai Lama"@en .
+<http://dbpedia.org/resource/Censorship_in_China> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "banned"@en .
+<http://dbpedia.org/resource/Film_censorship_in_China> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "streaming platforms"@en .
+<http://dbpedia.org/resource/IQIYI> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "iQiyi"@en .
+<http://dbpedia.org/resource/Tencent_Video> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Tencent Video"@en .
+<http://dbpedia.org/resource/Youku> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Youku"@en .
+<http://dbpedia.org/resource/Time_(magazine)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Time"@en .
+<http://dbpedia.org/resource/Lev_Grossman> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Lev Grossman"@en .
+<http://dbpedia.org/resource/Workaholic> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "workaholic"@en .
+<http://dbpedia.org/resource/Francis_Lawrence> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Francis Lawrence"@en .
+<http://dbpedia.org/resource/Shia_LaBeouf> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Shia LaBeouf"@en .
+<http://dbpedia.org/resource/Erwin_Stoff> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Erwin Stoff"@en .
+<http://dbpedia.org/resource/3_Arts_Entertainment> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "3 Arts Entertainment"@en .
+<http://dbpedia.org/resource/Laurence_Fishburne> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Laurence Fishburne"@en .
+<http://dbpedia.org/resource/Aziz_Ansari> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Aziz Ansari"@en .
+<http://dbpedia.org/resource/People_(magazine)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "People"@en .
+<http://dbpedia.org/resource/Hiroyuki_Sanada> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Hiroyuki Sanada"@en .
+<http://dbpedia.org/resource/Internet_meme> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "internet meme"@en .
+<http://dbpedia.org/resource/4chan> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "4chan"@en .
+<http://dbpedia.org/resource/Viral_phenomenon> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "spread"@en .
+<http://dbpedia.org/resource/Vox_(website)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Vox"@en .
+<http://dbpedia.org/resource/Nerd_culture> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "nerd culture"@en .
+<http://dbpedia.org/resource/Screen_Rant> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Screen Rant"@en .
+<http://dbpedia.org/resource/The_Guardian> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Guardian"@en .
+<http://dbpedia.org/resource/BBC> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "BBC"@en .
+<http://dbpedia.org/resource/Time_(magazine)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Time"@en .
+<http://dbpedia.org/resource/Snopes> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Snopes"@en .
+<http://dbpedia.org/resource/Cultural_icon> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "cultural fixture"@en .
+<http://dbpedia.org/resource/United_Airlines> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "United Airlines"@en .
+<http://dbpedia.org/resource/Burbank,_California> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Burbank, California"@en .
+<http://dbpedia.org/resource/Bakersfield,_California> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Bakersfield"@en .
+<http://dbpedia.org/resource/YouTube> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "YouTube"@en .
+<http://dbpedia.org/resource/Country_music> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "country music"@en .
+<http://dbpedia.org/resource/Time_(magazine)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Time"@en .
+<http://dbpedia.org/resource/The_Late_Show_With_Stephen_Colbert> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Late Show With Stephen Colbert"@en .
+<http://dbpedia.org/resource/Vice_(website)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Vice"@en .
+<http://dbpedia.org/resource/The_New_Yorker> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The New Yorker"@en .
+<http://dbpedia.org/resource/Koan> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "koan"@en .
+<http://dbpedia.org/resource/Twitter> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Twitter"@en .
+<http://dbpedia.org/resource/Hank_Green> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Hank Green"@en .
+<http://dbpedia.org/resource/Hodgkin's_Lymphoma> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Hodgkin's Lymphoma"@en .
+<http://dbpedia.org/resource/Human_experience> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "human experience"@en .
+<http://dbpedia.org/resource/E3_2019> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Electronic Entertainment Expo 2019"@en .
+<http://dbpedia.org/resource/Business_Insider> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Business Insider"@en .
+<http://dbpedia.org/resource/Northamptonshire> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Northamptonshire"@en .
+<http://dbpedia.org/resource/Dogstar_(band)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Dogstar"@en .
+<http://dbpedia.org/resource/The_Independent> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Independent"@en .
+<http://dbpedia.org/resource/Forbes> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Forbes"@en .
+<http://dbpedia.org/resource/Forbes_Celebrity_100> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Celebrity 100"@en .
+<http://dbpedia.org/resource/Hollywood_Walk_of_Fame> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Hollywood Walk of Fame"@en .
+<http://dbpedia.org/resource/List_of_highest_paid_film_actors> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "highest-paid actors"@en .
+<http://dbpedia.org/resource/The_New_York_Times> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The New York Times"@en .
+<http://dbpedia.org/resource/Internet_meme> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "meme"@en .
+<http://dbpedia.org/resource/Charlemagne> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Charlemagne"@en .
+<http://dbpedia.org/resource/Paul_Mounet> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Paul Mounet"@en .
+<http://dbpedia.org/resource/Jimmy_Fallon> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Jimmy Fallon"@en .
+<http://dbpedia.org/resource/The_Tonight_Show_Starring_Jimmy_Fallon> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Tonight Show"@en .
+<http://dbpedia.org/resource/Time_(magazine)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Time"@en .
+<http://dbpedia.org/resource/Time_100> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "100 most influential people in the world"@en .
+<http://dbpedia.org/resource/MTV_Movie_&_TV_Awards> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "MTV Movie Awards"@en .
+<http://dbpedia.org/resource/Saturn_Awards> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Saturn Awards"@en .
+<http://dbpedia.org/resource/People_(magazine)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "People"@en .
+<http://dbpedia.org/resource/Tae_Kwon_Do_Life_Magazine> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Tae Kwon Do Life Magazine"@en .
+<http://dbpedia.org/resource/Gold_House> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Gold House"@en .
+<http://dbpedia.org/resource/Gold_House> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Most Impactful Asians A100 list"@en .
+<http://dbpedia.org/resource/Inkpot_Award> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Inkpot Award"@en .
+<http://dbpedia.org/resource/San_Diego_Comic-Con> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "San Diego Comic-Con"@en .
+<http://dbpedia.org/resource/Steidl> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Steidl Publishers"@en .
+<http://dbpedia.org/resource/BRZRKR> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "BRZRKR"@en .
+<http://dbpedia.org/resource/Matt_Kindt> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Matt Kindt"@en .
+<http://dbpedia.org/resource/Ron_Garney> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Ron Garney"@en .
+<http://dbpedia.org/resource/Boom!_Studios> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Boom! Studios"@en .
+<http://dbpedia.org/resource/BRZRKR> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "BRZRKR"@en .
+<http://dbpedia.org/resource/Matt_Kindt> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Matt Kindt"@en .
+<http://dbpedia.org/resource/Ron_Garney> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Ron Garney"@en .
+<http://dbpedia.org/resource/Boom!_Studios> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Boom! Studios"@en .
+<http://dbpedia.org/resource/BRZRKR> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "BRZRKR"@en .
+<http://dbpedia.org/resource/Matt_Kindt> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Matt Kindt"@en .
+<http://dbpedia.org/resource/Ron_Garney> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Ron Garney"@en .
+<http://dbpedia.org/resource/Boom!_Studios> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Boom! Studios"@en .
+<http://dbpedia.org/resource/The_Book_of_Elsewhere> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Book of Elsewhere"@en .
+<http://dbpedia.org/resource/Boom!_Studios> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Boom! Studios"@en .
+<http://dbpedia.org/resource/Del_Rey_Books> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Del Rey Books"@en .
+<http://dbpedia.org/resource/Durham,_North_Carolina> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Durham"@en .
+<http://dbpedia.org/resource/Duke_University_Press> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Duke University Press"@en .
+<http://dbpedia.org/resource/The_Straits_Times> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Straits Times"@en .
+<http://dbpedia.org/resource/Singapore> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Singapore"@en .
+<http://dbpedia.org/resource/CNN> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "CNN"@en .
+<http://dbpedia.org/resource/List_of_awards_and_nominations_received_by_Keanu_Reeves> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Awards for Keanu Reeves"@en .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://xmlns.com/foaf/0.1/depiction> <http://commons.wikimedia.org/wiki/Special:FilePath/LanaDRPrimavera310524_(10_of_155)_(cropped).jpg> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://dbpedia.org/ontology/thumbnail> <http://commons.wikimedia.org/wiki/Special:FilePath/LanaDRPrimavera310524_(10_of_155)_(cropped).jpg?width=300> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/LanaDRPrimavera310524_(10_of_155)_(cropped).jpg> <http://xmlns.com/foaf/0.1/thumbnail> <http://commons.wikimedia.org/wiki/Special:FilePath/LanaDRPrimavera310524_(10_of_155)_(cropped).jpg?width=300> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/LanaDRPrimavera310524_(10_of_155)_(cropped).jpg> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Image> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/LanaDRPrimavera310524_(10_of_155)_(cropped).jpg?width=300> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Image> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/LanaDRPrimavera310524_(10_of_155)_(cropped).jpg> <http://purl.org/dc/elements/1.1/rights> <http://en.wikipedia.org/wiki/File:LanaDRPrimavera310524_(10_of_155)_(cropped).jpg> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/LanaDRPrimavera310524_(10_of_155)_(cropped).jpg?width=300> <http://purl.org/dc/elements/1.1/rights> <http://en.wikipedia.org/wiki/File:LanaDRPrimavera310524_(10_of_155)_(cropped).jpg> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://xmlns.com/foaf/0.1/depiction> <http://commons.wikimedia.org/wiki/Special:FilePath/Keanu_Reeves_Signature_(cropped).png> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Keanu_Reeves_Signature_(cropped).png> <http://xmlns.com/foaf/0.1/thumbnail> <http://commons.wikimedia.org/wiki/Special:FilePath/Keanu_Reeves_Signature_(cropped).png?width=300> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Keanu_Reeves_Signature_(cropped).png> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Image> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Keanu_Reeves_Signature_(cropped).png?width=300> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Image> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Keanu_Reeves_Signature_(cropped).png> <http://purl.org/dc/elements/1.1/rights> <http://en.wikipedia.org/wiki/File:Keanu_Reeves_Signature_(cropped).png> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Keanu_Reeves_Signature_(cropped).png?width=300> <http://purl.org/dc/elements/1.1/rights> <http://en.wikipedia.org/wiki/File:Keanu_Reeves_Signature_(cropped).png> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://xmlns.com/foaf/0.1/depiction> <http://commons.wikimedia.org/wiki/Special:FilePath/Keanu_reeves_anthony_griffith_(cropped2).jpg> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Keanu_reeves_anthony_griffith_(cropped2).jpg> <http://xmlns.com/foaf/0.1/thumbnail> <http://commons.wikimedia.org/wiki/Special:FilePath/Keanu_reeves_anthony_griffith_(cropped2).jpg?width=300> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Keanu_reeves_anthony_griffith_(cropped2).jpg> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Image> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Keanu_reeves_anthony_griffith_(cropped2).jpg?width=300> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Image> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Keanu_reeves_anthony_griffith_(cropped2).jpg> <http://purl.org/dc/elements/1.1/rights> <http://en.wikipedia.org/wiki/File:Keanu_reeves_anthony_griffith_(cropped2).jpg> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Keanu_reeves_anthony_griffith_(cropped2).jpg?width=300> <http://purl.org/dc/elements/1.1/rights> <http://en.wikipedia.org/wiki/File:Keanu_reeves_anthony_griffith_(cropped2).jpg> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://xmlns.com/foaf/0.1/depiction> <http://commons.wikimedia.org/wiki/Special:FilePath/Keanu_Reves_in_Mexico_2.jpg> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Keanu_Reves_in_Mexico_2.jpg> <http://xmlns.com/foaf/0.1/thumbnail> <http://commons.wikimedia.org/wiki/Special:FilePath/Keanu_Reves_in_Mexico_2.jpg?width=300> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Keanu_Reves_in_Mexico_2.jpg> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Image> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Keanu_Reves_in_Mexico_2.jpg?width=300> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Image> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Keanu_Reves_in_Mexico_2.jpg> <http://purl.org/dc/elements/1.1/rights> <http://en.wikipedia.org/wiki/File:Keanu_Reves_in_Mexico_2.jpg> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Keanu_Reves_in_Mexico_2.jpg?width=300> <http://purl.org/dc/elements/1.1/rights> <http://en.wikipedia.org/wiki/File:Keanu_Reves_in_Mexico_2.jpg> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://xmlns.com/foaf/0.1/depiction> <http://commons.wikimedia.org/wiki/Special:FilePath/Keanu_Reeves_(Berlin_Film_Festival_2009)_2.jpg> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Keanu_Reeves_(Berlin_Film_Festival_2009)_2.jpg> <http://xmlns.com/foaf/0.1/thumbnail> <http://commons.wikimedia.org/wiki/Special:FilePath/Keanu_Reeves_(Berlin_Film_Festival_2009)_2.jpg?width=300> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Keanu_Reeves_(Berlin_Film_Festival_2009)_2.jpg> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Image> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Keanu_Reeves_(Berlin_Film_Festival_2009)_2.jpg?width=300> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Image> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Keanu_Reeves_(Berlin_Film_Festival_2009)_2.jpg> <http://purl.org/dc/elements/1.1/rights> <http://en.wikipedia.org/wiki/File:Keanu_Reeves_(Berlin_Film_Festival_2009)_2.jpg> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Keanu_Reeves_(Berlin_Film_Festival_2009)_2.jpg?width=300> <http://purl.org/dc/elements/1.1/rights> <http://en.wikipedia.org/wiki/File:Keanu_Reeves_(Berlin_Film_Festival_2009)_2.jpg> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://xmlns.com/foaf/0.1/depiction> <http://commons.wikimedia.org/wiki/Special:FilePath/Keanu_Reeves_and_Tiger_Chen,_red_carpet_for_Man_of_Tai_Chi_(10614803564)_(cropped).jpg> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Keanu_Reeves_and_Tiger_Chen,_red_carpet_for_Man_of_Tai_Chi_(10614803564)_(cropped).jpg> <http://xmlns.com/foaf/0.1/thumbnail> <http://commons.wikimedia.org/wiki/Special:FilePath/Keanu_Reeves_and_Tiger_Chen,_red_carpet_for_Man_of_Tai_Chi_(10614803564)_(cropped).jpg?width=300> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Keanu_Reeves_and_Tiger_Chen,_red_carpet_for_Man_of_Tai_Chi_(10614803564)_(cropped).jpg> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Image> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Keanu_Reeves_and_Tiger_Chen,_red_carpet_for_Man_of_Tai_Chi_(10614803564)_(cropped).jpg?width=300> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Image> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Keanu_Reeves_and_Tiger_Chen,_red_carpet_for_Man_of_Tai_Chi_(10614803564)_(cropped).jpg> <http://purl.org/dc/elements/1.1/rights> <http://en.wikipedia.org/wiki/File:Keanu_Reeves_and_Tiger_Chen,_red_carpet_for_Man_of_Tai_Chi_(10614803564)_(cropped).jpg> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Keanu_Reeves_and_Tiger_Chen,_red_carpet_for_Man_of_Tai_Chi_(10614803564)_(cropped).jpg?width=300> <http://purl.org/dc/elements/1.1/rights> <http://en.wikipedia.org/wiki/File:Keanu_Reeves_and_Tiger_Chen,_red_carpet_for_Man_of_Tai_Chi_(10614803564)_(cropped).jpg> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://xmlns.com/foaf/0.1/depiction> <http://commons.wikimedia.org/wiki/Special:FilePath/Reunião_com_o_ator_norte-americano_Keanu_Reeves_(46806576944)_(cropped).jpg> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Reunião_com_o_ator_norte-americano_Keanu_Reeves_(46806576944)_(cropped).jpg> <http://xmlns.com/foaf/0.1/thumbnail> <http://commons.wikimedia.org/wiki/Special:FilePath/Reunião_com_o_ator_norte-americano_Keanu_Reeves_(46806576944)_(cropped).jpg?width=300> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Reunião_com_o_ator_norte-americano_Keanu_Reeves_(46806576944)_(cropped).jpg> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Image> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Reunião_com_o_ator_norte-americano_Keanu_Reeves_(46806576944)_(cropped).jpg?width=300> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Image> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Reunião_com_o_ator_norte-americano_Keanu_Reeves_(46806576944)_(cropped).jpg> <http://purl.org/dc/elements/1.1/rights> <http://en.wikipedia.org/wiki/File:Reunião_com_o_ator_norte-americano_Keanu_Reeves_(46806576944)_(cropped).jpg> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Reunião_com_o_ator_norte-americano_Keanu_Reeves_(46806576944)_(cropped).jpg?width=300> <http://purl.org/dc/elements/1.1/rights> <http://en.wikipedia.org/wiki/File:Reunião_com_o_ator_norte-americano_Keanu_Reeves_(46806576944)_(cropped).jpg> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://xmlns.com/foaf/0.1/depiction> <http://commons.wikimedia.org/wiki/Special:FilePath/DogstarKentish190624_(19_of_69)_(53803219643)_Cropped.jpg> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/DogstarKentish190624_(19_of_69)_(53803219643)_Cropped.jpg> <http://xmlns.com/foaf/0.1/thumbnail> <http://commons.wikimedia.org/wiki/Special:FilePath/DogstarKentish190624_(19_of_69)_(53803219643)_Cropped.jpg?width=300> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/DogstarKentish190624_(19_of_69)_(53803219643)_Cropped.jpg> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Image> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/DogstarKentish190624_(19_of_69)_(53803219643)_Cropped.jpg?width=300> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Image> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/DogstarKentish190624_(19_of_69)_(53803219643)_Cropped.jpg> <http://purl.org/dc/elements/1.1/rights> <http://en.wikipedia.org/wiki/File:DogstarKentish190624_(19_of_69)_(53803219643)_Cropped.jpg> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/DogstarKentish190624_(19_of_69)_(53803219643)_Cropped.jpg?width=300> <http://purl.org/dc/elements/1.1/rights> <http://en.wikipedia.org/wiki/File:DogstarKentish190624_(19_of_69)_(53803219643)_Cropped.jpg> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://xmlns.com/foaf/0.1/depiction> <http://commons.wikimedia.org/wiki/Special:FilePath/Alexandra_Grant_2014.jpg> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Alexandra_Grant_2014.jpg> <http://xmlns.com/foaf/0.1/thumbnail> <http://commons.wikimedia.org/wiki/Special:FilePath/Alexandra_Grant_2014.jpg?width=300> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Alexandra_Grant_2014.jpg> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Image> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Alexandra_Grant_2014.jpg?width=300> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Image> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Alexandra_Grant_2014.jpg> <http://purl.org/dc/elements/1.1/rights> <http://en.wikipedia.org/wiki/File:Alexandra_Grant_2014.jpg> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Alexandra_Grant_2014.jpg?width=300> <http://purl.org/dc/elements/1.1/rights> <http://en.wikipedia.org/wiki/File:Alexandra_Grant_2014.jpg> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://xmlns.com/foaf/0.1/depiction> <http://commons.wikimedia.org/wiki/Special:FilePath/Keanu_Reeves_representado_en_un_mural_en_el_exterior_del_GAM_de_Santiago_de_Chile.jpg> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Keanu_Reeves_representado_en_un_mural_en_el_exterior_del_GAM_de_Santiago_de_Chile.jpg> <http://xmlns.com/foaf/0.1/thumbnail> <http://commons.wikimedia.org/wiki/Special:FilePath/Keanu_Reeves_representado_en_un_mural_en_el_exterior_del_GAM_de_Santiago_de_Chile.jpg?width=300> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Keanu_Reeves_representado_en_un_mural_en_el_exterior_del_GAM_de_Santiago_de_Chile.jpg> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Image> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Keanu_Reeves_representado_en_un_mural_en_el_exterior_del_GAM_de_Santiago_de_Chile.jpg?width=300> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Image> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Keanu_Reeves_representado_en_un_mural_en_el_exterior_del_GAM_de_Santiago_de_Chile.jpg> <http://purl.org/dc/elements/1.1/rights> <http://en.wikipedia.org/wiki/File:Keanu_Reeves_representado_en_un_mural_en_el_exterior_del_GAM_de_Santiago_de_Chile.jpg> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Keanu_Reeves_representado_en_un_mural_en_el_exterior_del_GAM_de_Santiago_de_Chile.jpg?width=300> <http://purl.org/dc/elements/1.1/rights> <http://en.wikipedia.org/wiki/File:Keanu_Reeves_representado_en_un_mural_en_el_exterior_del_GAM_de_Santiago_de_Chile.jpg> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://xmlns.com/foaf/0.1/depiction> <http://commons.wikimedia.org/wiki/Special:FilePath/Keanu_Reeves_Star.jpg> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Keanu_Reeves_Star.jpg> <http://xmlns.com/foaf/0.1/thumbnail> <http://commons.wikimedia.org/wiki/Special:FilePath/Keanu_Reeves_Star.jpg?width=300> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Keanu_Reeves_Star.jpg> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Image> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Keanu_Reeves_Star.jpg?width=300> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Image> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Keanu_Reeves_Star.jpg> <http://purl.org/dc/elements/1.1/rights> <http://en.wikipedia.org/wiki/File:Keanu_Reeves_Star.jpg> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Keanu_Reeves_Star.jpg?width=300> <http://purl.org/dc/elements/1.1/rights> <http://en.wikipedia.org/wiki/File:Keanu_Reeves_Star.jpg> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://xmlns.com/foaf/0.1/depiction> <http://commons.wikimedia.org/wiki/Special:FilePath/Keanu_Reeves_SDCC_2024_10.jpg> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Keanu_Reeves_SDCC_2024_10.jpg> <http://xmlns.com/foaf/0.1/thumbnail> <http://commons.wikimedia.org/wiki/Special:FilePath/Keanu_Reeves_SDCC_2024_10.jpg?width=300> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Keanu_Reeves_SDCC_2024_10.jpg> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Image> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Keanu_Reeves_SDCC_2024_10.jpg?width=300> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Image> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Keanu_Reeves_SDCC_2024_10.jpg> <http://purl.org/dc/elements/1.1/rights> <http://en.wikipedia.org/wiki/File:Keanu_Reeves_SDCC_2024_10.jpg> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Keanu_Reeves_SDCC_2024_10.jpg?width=300> <http://purl.org/dc/elements/1.1/rights> <http://en.wikipedia.org/wiki/File:Keanu_Reeves_SDCC_2024_10.jpg> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://xmlns.com/foaf/0.1/depiction> <http://commons.wikimedia.org/wiki/Special:FilePath/LanaDRPrimavera310524_(10_of_155)_(cropped).jpg> .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://xmlns.com/foaf/0.1/depiction> <http://commons.wikimedia.org/wiki/Special:FilePath/Keanu_Reeves_Signature_(cropped).png> .
+# completed 2025-06-30T10:57:55Z

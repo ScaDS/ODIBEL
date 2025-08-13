@@ -1,0 +1,14 @@
+<http://dbpedia.org/resource/Bill_Pope> <http://dbpedia.org/property/occupation> "Cinematographer"@en .
+<http://dbpedia.org/resource/Bill_Pope> <http://dbpedia.org/ontology/occupation> <http://dbpedia.org/resource/Bill_Pope__PersonFunction__1> .
+<http://dbpedia.org/resource/Bill_Pope> <http://dbpedia.org/property/birthDate> "1952-06-19"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://dbpedia.org/resource/Bill_Pope> <http://dbpedia.org/ontology/occupation> <http://dbpedia.org/resource/Cinematographer> .
+<http://dbpedia.org/resource/Bill_Pope> <http://dbpedia.org/property/spouse> <http://dbpedia.org/resource/Sharon_Oreck> .
+<http://dbpedia.org/resource/Bill_Pope> <http://dbpedia.org/property/children> "2"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://dbpedia.org/resource/Bill_Pope> <http://dbpedia.org/ontology/birthDate> "1952-06-19"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://dbpedia.org/resource/Bill_Pope> <http://dbpedia.org/ontology/birthPlace> <http://dbpedia.org/resource/Bowling_Green,_Kentucky> .
+<http://dbpedia.org/resource/Bill_Pope> <http://www.w3.org/2000/01/rdf-schema#label> "Bill Pope"@en .
+<http://dbpedia.org/resource/Bill_Pope> <http://dbpedia.org/property/name> "Bill Pope"@en .
+<http://dbpedia.org/resource/Bill_Pope> <http://dbpedia.org/ontology/spouse> <http://dbpedia.org/resource/Sharon_Oreck> .
+<http://dbpedia.org/resource/Bill_Pope__PersonFunction__1> <http://dbpedia.org/ontology/title> "Cinematographer"@en .
+<http://dbpedia.org/resource/Bill_Pope> <http://dbpedia.org/property/birthPlace> "Bowling Green, Kentucky, U.S."@en .
+<http://dbpedia.org/resource/Bill_Pope> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Person> .

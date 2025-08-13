@@ -1,0 +1,22 @@
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/spouse> "Alisa Blasingame"@en .
+<http://dbpedia.org/resource/The_Wachowskis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Person> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/name> "The Wachowskis"@en .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/ontology/occupation> <http://dbpedia.org/resource/The_Wachowskis__PersonFunction__1> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/birthPlace> "Chicago, Illinois, U.S."@en .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/spouse> "Karin Winslow"@en .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/spouse> "Thea Bloom"@en .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/spouse> "----\nLilly:"@en .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/spouse> "Lana:"@en .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/spouse> "1991"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/birthDate> "1965-06-21"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://www.w3.org/2000/01/rdf-schema#label> "The Wachowskis"@en .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/ontology/birthPlace> <http://dbpedia.org/resource/Chicago> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/ontology/birthDate> "1965-06-21"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/spouse> "2002"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/occupation> "Film and television directors, writers, producers"@en .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/birthDate> "1967-12-29"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://dbpedia.org/resource/The_Wachowskis__PersonFunction__1> <http://dbpedia.org/ontology/title> "Film and television directors, writers, producers"@en .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/spouse> "2009"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/ontology/occupation> <http://dbpedia.org/resource/Screenwriter> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/spouse> "1993"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/spouse> ""@en .
