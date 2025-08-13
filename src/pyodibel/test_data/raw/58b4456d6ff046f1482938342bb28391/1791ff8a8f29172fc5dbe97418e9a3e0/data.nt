@@ -1,0 +1,422 @@
+# started 2025-06-30T12:23:22Z
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://www.w3.org/2000/01/rdf-schema#label> "Don Davis (composer)"@en .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://dbpedia.org/ontology/wikiPageID> "1765748"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://en.wikipedia.org/wiki/Don_Davis_(composer)?oldid=1284241748&ns=0> .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://dbpedia.org/ontology/wikiPageRevisionID> "1284241748"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://dbpedia.org/ontology/wikiPageLength> "20899"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:1957_births> .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:20th-century_American_classical_composers> .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:20th-century_American_conductors_(music)> .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:20th-century_American_LGBTQ_people> .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:21st-century_American_classical_composers> .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:21st-century_American_conductors_(music)> .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:21st-century_American_LGBTQ_people> .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Albany_Records_artists> .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:American_contemporary_classical_composers> .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:American_film_score_composers> .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:American_LGBTQ_composers> .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:American_male_conductors_(music)> .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:American_male_film_score_composers> .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:American_male_opera_composers> .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:American_male_television_composers> .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:American_opera_composers> .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:American_television_composers> .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Classical_musicians_from_California> .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Concert_band_composers> .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:La-La_Land_Records_artists> .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:LGBTQ_classical_composers> .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:LGBTQ_film_score_composers> .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Living_people> .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Musicians_from_Anaheim,_California> .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:University_of_California,_Los_Angeles_alumni> .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Varèse_Sarabande_Records_artists> .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://xmlns.com/foaf/0.1/isPrimaryTopicOf> <http://en.wikipedia.org/wiki/Don_Davis_(composer)> .
+<http://en.wikipedia.org/wiki/Don_Davis_(composer)> <http://xmlns.com/foaf/0.1/primaryTopic> <http://dbpedia.org/resource/Don_Davis_(composer)> .
+<http://en.wikipedia.org/wiki/Don_Davis_(composer)> <http://purl.org/dc/elements/1.1/language> "en" .
+<http://en.wikipedia.org/wiki/Don_Davis_(composer)> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Document> .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Short_description> .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Infobox_musical_artist> .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:N/A> .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Div_col> .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Div_col_end> .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Reflist> .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:IMDb_name> .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:EmmyAward_MusicCompositionSeries> .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Authority_control> .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Birth_date_and_age> .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://dbpedia.org/ontology/wikiPageExternalLink> <http://www.dondavis.net/> .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://dbpedia.org/ontology/wikiPageExternalLink> <https://www.imdb.com/title/tt0094771/> .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://dbpedia.org/ontology/wikiPageExternalLink> <https://www.imdb.com/title/tt0097520/> .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://dbpedia.org/ontology/wikiPageExternalLink> <https://www.imdb.com/title/tt0105022/> .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://dbpedia.org/ontology/wikiPageExternalLink> <https://www.imdb.com/title/tt0105834/> .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://dbpedia.org/ontology/wikiPageExternalLink> <https://www.imdb.com/title/tt0233489/> .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://dbpedia.org/ontology/wikiPageExternalLink> <https://www.imdb.com/title/tt0107620> .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://dbpedia.org/ontology/wikiPageExternalLink> <https://www.imdb.com/title/tt0110318/> .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://dbpedia.org/ontology/wikiPageExternalLink> <https://www.imdb.com/title/tt0114471/> .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://dbpedia.org/ontology/wikiPageExternalLink> <https://www.imdb.com/title/tt0164029/> .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://dbpedia.org/ontology/wikiPageExternalLink> <https://www.imdb.com/title/tt0116624/> .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://dbpedia.org/ontology/wikiPageExternalLink> <https://www.imdb.com/title/tt0117321/> .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://dbpedia.org/ontology/wikiPageExternalLink> <https://www.imdb.com/title/tt0118580> .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://dbpedia.org/ontology/wikiPageExternalLink> <https://www.imdb.com/title/tt0119805> .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://dbpedia.org/ontology/wikiPageExternalLink> <https://www.imdb.com/title/tt0130423> .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://dbpedia.org/ontology/wikiPageExternalLink> <https://www.imdb.com/title/tt0160468> .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://dbpedia.org/ontology/wikiPageExternalLink> <https://www.imdb.com/title/tt0157297/> .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://dbpedia.org/ontology/wikiPageExternalLink> <https://www.imdb.com/title/tt0222171/> .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://dbpedia.org/ontology/wikiPageExternalLink> <https://www.imdb.com/title/tt0262682/> .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://dbpedia.org/ontology/wikiPageExternalLink> <http://www.dondavis.net/> .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://dbpedia.org/ontology/wikiPageExternalLink> <http://www.riodesangre.com/> .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://dbpedia.org/property/name> "Don Davis"@en .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://dbpedia.org/property/caption> "Davis in 2017"@en .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://dbpedia.org/property/birthName> "Donald Romain Davis"@en .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://dbpedia.org/property/birthDate> "1957-02-04"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://dbpedia.org/property/birthPlace> "Anaheim, California, U.S."@en .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://dbpedia.org/property/occupation> "Composer"@en .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://dbpedia.org/property/occupation> "conductor"@en .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://dbpedia.org/property/occupation> "orchestrator"@en .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://dbpedia.org/property/occupation> ""@en .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://dbpedia.org/property/genre> "Neo-classical"@en .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://dbpedia.org/property/genre> "film score"@en .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://dbpedia.org/property/genre> "television score"@en .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://dbpedia.org/property/genre> "avant-garde"@en .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://dbpedia.org/property/genre> ""@en .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://dbpedia.org/property/yearsActive> "1979"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://dbpedia.org/property/label> "Varèse Sarabande\nLa-La Land Records\nAlbany Records"@en .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://dbpedia.org/property/associatedActs> "Randy Newman"@en .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://dbpedia.org/property/associatedActs> "James Horner"@en .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://dbpedia.org/property/associatedActs> "Bruce Broughton"@en .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://dbpedia.org/property/associatedActs> "Michael Kamen"@en .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://dbpedia.org/property/associatedActs> "John Williams"@en .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://dbpedia.org/property/associatedActs> ""@en .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://dbpedia.org/property/website> <http://www.dondavis.net/> .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/MusicalArtist> .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Artist> .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q483501> .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Person> .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q5> .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Thing> .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Person> .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q215627> .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#NaturalPerson> .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Animal> .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q729> .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Eukaryote> .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q19088> .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Species> .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/MusicGroup> .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://xmlns.com/foaf/0.1/name> "Don Davis"@en .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://xmlns.com/foaf/0.1/givenName> "Donald Romain Davis"@en .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://dbpedia.org/ontology/birthDate> "1957-02-04"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://dbpedia.org/ontology/birthPlace> <http://dbpedia.org/resource/Anaheim> .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://dbpedia.org/ontology/birthPlace> <http://dbpedia.org/resource/California> .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://dbpedia.org/ontology/genre> <http://dbpedia.org/resource/Neo-classical_music> .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://dbpedia.org/ontology/genre> <http://dbpedia.org/resource/Film_score> .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://dbpedia.org/ontology/genre> <http://dbpedia.org/resource/Television_score> .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://dbpedia.org/ontology/genre> <http://dbpedia.org/resource/Avant_garde_music> .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://dbpedia.org/ontology/occupation> <http://dbpedia.org/resource/Composer> .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://dbpedia.org/ontology/occupation> <http://dbpedia.org/resource/Conducting> .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://dbpedia.org/ontology/occupation> <http://dbpedia.org/resource/Orchestrator> .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://dbpedia.org/ontology/activeYearsStartYear> "1979"^^<http://www.w3.org/2001/XMLSchema#gYear> .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://dbpedia.org/ontology/recordLabel> <http://dbpedia.org/resource/Varèse_Sarabande> .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://dbpedia.org/ontology/recordLabel> <http://dbpedia.org/resource/Albany_Records> .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://dbpedia.org/ontology/associatedBand> <http://dbpedia.org/resource/Randy_Newman> .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://dbpedia.org/ontology/associatedBand> <http://dbpedia.org/resource/James_Horner> .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://dbpedia.org/ontology/associatedBand> <http://dbpedia.org/resource/Bruce_Broughton> .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://dbpedia.org/ontology/associatedBand> <http://dbpedia.org/resource/Michael_Kamen> .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://dbpedia.org/ontology/associatedBand> <http://dbpedia.org/resource/John_Williams> .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://dbpedia.org/ontology/associatedMusicalArtist> <http://dbpedia.org/resource/Randy_Newman> .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://dbpedia.org/ontology/associatedMusicalArtist> <http://dbpedia.org/resource/James_Horner> .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://dbpedia.org/ontology/associatedMusicalArtist> <http://dbpedia.org/resource/Bruce_Broughton> .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://dbpedia.org/ontology/associatedMusicalArtist> <http://dbpedia.org/resource/Michael_Kamen> .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://dbpedia.org/ontology/associatedMusicalArtist> <http://dbpedia.org/resource/John_Williams> .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://xmlns.com/foaf/0.1/homepage> <http://www.dondavis.net/> .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://dbpedia.org/ontology/wikiPageOutDegree> "305"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://dbpedia.org/resource/Anaheim> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Anaheim"@en .
+<http://dbpedia.org/resource/California> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "California"@en .
+<http://dbpedia.org/resource/Neo-classical_music> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Neo-classical"@en .
+<http://dbpedia.org/resource/Film_score> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "film score"@en .
+<http://dbpedia.org/resource/Television_score> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "television score"@en .
+<http://dbpedia.org/resource/Avant_garde_music> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "avant-garde"@en .
+<http://dbpedia.org/resource/Varèse_Sarabande> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Varèse Sarabande"@en .
+<http://dbpedia.org/resource/Albany_Records> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Albany Records"@en .
+<http://dbpedia.org/resource/Randy_Newman> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Randy Newman"@en .
+<http://dbpedia.org/resource/James_Horner> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "James Horner"@en .
+<http://dbpedia.org/resource/Bruce_Broughton> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Bruce Broughton"@en .
+<http://dbpedia.org/resource/Michael_Kamen> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Michael Kamen"@en .
+<http://dbpedia.org/resource/John_Williams> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "John Williams"@en .
+<http://dbpedia.org/resource/Composer> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "composer"@en .
+<http://dbpedia.org/resource/Conducting> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "conductor"@en .
+<http://dbpedia.org/resource/Orchestrator> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "orchestrator"@en .
+<http://dbpedia.org/resource/Screen_composition> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "film and television scores"@en .
+<http://dbpedia.org/resource/Opera> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "opera"@en .
+<http://dbpedia.org/resource/Orchestral_music> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "concert"@en .
+<http://dbpedia.org/resource/Chamber_music> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "chamber music"@en .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "the Wachowskis"@en .
+<http://dbpedia.org/resource/Ronny_Yu> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Ronny Yu"@en .
+<http://dbpedia.org/resource/Jonathan_Hensleigh> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Jonathan Hensleigh"@en .
+<http://dbpedia.org/resource/Horror_film> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "horror"@en .
+<http://dbpedia.org/resource/Action_film> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "action"@en .
+<http://dbpedia.org/resource/Comedy_film> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "comedy"@en .
+<http://dbpedia.org/resource/Beauty_and_the_Beast_(1987_TV_series)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Beauty and the Beast"@en .
+<http://dbpedia.org/resource/My_Life_and_Times> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "My Life and Times"@en .
+<http://dbpedia.org/resource/Lies_Before_Kisses> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Lies Before Kisses"@en .
+<http://dbpedia.org/resource/A_Little_Piece_of_Heaven_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "A Little Piece of Heaven"@en .
+<http://dbpedia.org/resource/SeaQuest_DSV> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "seaQuest 2032"@en .
+<http://dbpedia.org/resource/A_Goofy_Movie> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "A Goofy Movie"@en .
+<http://dbpedia.org/resource/Bound_(1996_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Bound"@en .
+<http://dbpedia.org/resource/House_of_Frankenstein_(miniseries)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "House of Frankenstein"@en .
+<http://dbpedia.org/resource/Universal_Soldier:_The_Return> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Universal Soldier: The Return"@en .
+<http://dbpedia.org/resource/House_on_Haunted_Hill_(1999_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "House on Haunted Hill"@en .
+<http://dbpedia.org/resource/Behind_Enemy_Lines_(2001_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Behind Enemy Lines"@en .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Matrix"@en .
+<http://dbpedia.org/resource/The_Matrix_Reloaded> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Matrix Reloaded"@en .
+<http://dbpedia.org/resource/The_Animatrix> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Animatrix"@en .
+<http://dbpedia.org/resource/The_Matrix_Revolutions> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Matrix Revolutions"@en .
+<http://dbpedia.org/resource/Primetime_Emmy_Award> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Primetime Emmy Award"@en .
+<http://dbpedia.org/resource/Primetime_Emmy_Award_for_Outstanding_Music_Composition_for_a_Series> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Outstanding Music Composition for a Series"@en .
+<http://dbpedia.org/resource/BMI_Awards> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "BMI Film Music Awards"@en .
+<http://dbpedia.org/resource/Anaheim,_California> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Anaheim"@en .
+<http://dbpedia.org/resource/California> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "California"@en .
+<http://dbpedia.org/resource/University_of_California,_Los_Angeles> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "UCLA"@en .
+<http://dbpedia.org/resource/Henri_Lazarof> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Henri Lazarof"@en .
+<http://dbpedia.org/resource/Albert_Harris_(composer)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Albert Harris"@en .
+<http://dbpedia.org/resource/Joe_Harnell> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Joe Harnell"@en .
+<http://dbpedia.org/resource/Mark_Snow> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Mark Snow"@en .
+<http://dbpedia.org/resource/Hart_to_Hart> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Hart to Hart"@en .
+<http://dbpedia.org/resource/Michael_Kamen> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Michael Kamen"@en .
+<http://dbpedia.org/resource/Alan_Silvestri> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Alan Silvestri"@en .
+<http://dbpedia.org/resource/James_Horner> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "James Horner"@en .
+<http://dbpedia.org/resource/Randy_Newman> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Randy Newman"@en .
+<http://dbpedia.org/resource/Primetime_Emmy_Awards> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Primetime Emmy Awards"@en .
+<http://dbpedia.org/resource/Primetime_Emmy_Award_for_Outstanding_Music_Composition_for_a_Series> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Primetime Emmy Award for Outstanding Music Composition for a Series"@en .
+<http://dbpedia.org/resource/Beauty_and_the_Beast_(1987_TV_series)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Beauty and the Beast"@en .
+<http://dbpedia.org/resource/My_Life_and_Times> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "My Life and Times"@en .
+<http://dbpedia.org/resource/Primetime_Emmy_Award_for_Outstanding_Music_Composition_for_a_Limited_or_Anthology_Series,_Movie_or_Special_(Original_Dramatic_Score)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Primetime Emmy Award for Outstanding Music Composition for a Limited or Anthology Series, Movie or Special (Original Dramatic Score)"@en .
+<http://dbpedia.org/resource/Lies_Before_Kisses> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Lies Before Kisses"@en .
+<http://dbpedia.org/resource/A_Little_Piece_of_Heaven_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "A Little Piece of Heaven"@en .
+<http://dbpedia.org/resource/House_of_Frankenstein_(miniseries)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "House of Frankenstein"@en .
+<http://dbpedia.org/resource/Primetime_Emmy_Award_for_Outstanding_Music_Composition_for_a_Series> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Primetime Emmy Award for Outstanding Music Composition for a Series"@en .
+<http://dbpedia.org/resource/SeaQuest_DSV> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "SeaQuest DSV"@en .
+<http://dbpedia.org/resource/Walt_Disney_Pictures> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Disney"@en .
+<http://dbpedia.org/resource/A_Goofy_Movie> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "A Goofy Movie"@en .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "the Wachowskis"@en .
+<http://dbpedia.org/resource/Neo-noir> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "neo-noir"@en .
+<http://dbpedia.org/resource/Bound_(1996_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Bound"@en .
+<http://dbpedia.org/resource/Universal_Soldier:_The_Return> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Universal Soldier: The Return"@en .
+<http://dbpedia.org/resource/Hulk_(2003_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Hulk"@en .
+<http://dbpedia.org/resource/House_on_Haunted_Hill_(1999_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "House on Haunted Hill"@en .
+<http://dbpedia.org/resource/Behind_Enemy_Lines_(2001_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Behind Enemy Lines"@en .
+<http://dbpedia.org/resource/Space_Odyssey_(TV_series)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Space Odyssey: Voyage to the Planets"@en .
+<http://dbpedia.org/resource/Masterpiece> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "magnum opus"@en .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Matrix"@en .
+<http://dbpedia.org/resource/The_Matrix_Reloaded> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Matrix Reloaded"@en .
+<http://dbpedia.org/resource/The_Matrix_Revolutions> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Matrix Revolutions"@en .
+<http://dbpedia.org/resource/The_Animatrix> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Animatrix"@en .
+<http://dbpedia.org/resource/Atonality> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "atonality"@en .
+<http://dbpedia.org/resource/Avant_garde> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "avant garde"@en .
+<http://dbpedia.org/resource/Polytonal> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "polytonal"@en .
+<http://dbpedia.org/resource/Minimalist> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "minimalist"@en .
+<http://dbpedia.org/resource/John_Coolidge_Adams> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "John Adams"@en .
+<http://dbpedia.org/resource/Tone_cluster> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "cluster"@en .
+<http://dbpedia.org/resource/Witold_Lutosławski> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Witold Lutosławski"@en .
+<http://dbpedia.org/resource/Flowers_in_the_Attic_(1987_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Flowers in the Attic"@en .
+<http://dbpedia.org/resource/Christopher_Young> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Christopher Young"@en .
+<http://dbpedia.org/resource/86th_Academy_Awards> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The 86th Academy Awards"@en .
+<http://dbpedia.org/resource/Randy_Newman> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Randy Newman"@en .
+<http://dbpedia.org/resource/Río_de_Sangre> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Río de Sangre"@en .
+<http://dbpedia.org/resource/Florentine_Opera_Company> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Florentine Opera Company"@en .
+<http://dbpedia.org/resource/Los_Angeles_Master_Chorale> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Los Angeles Master Chorale"@en .
+<http://dbpedia.org/resource/New_York_City_Opera> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "New York City Opera"@en .
+<http://dbpedia.org/resource/British_Columbia> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "British Columbia"@en .
+<http://dbpedia.org/resource/Hyperspace_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Hyperspace"@en .
+<http://dbpedia.org/resource/Blackout_(1988_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Blackout"@en .
+<http://dbpedia.org/resource/Session_Man_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Session Man"@en .
+<http://dbpedia.org/resource/Tiny_Toon_Adventures:_How_I_Spent_My_Vacation> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Tiny Toon Adventures: How I Spent My Vacation"@en .
+<http://dbpedia.org/resource/Steven_Bramson> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Steven Bramson"@en .
+<http://dbpedia.org/resource/Bruce_Broughton> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Bruce Broughton"@en .
+<http://dbpedia.org/resource/Richard_Stone_(composer)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Richard Stone"@en .
+<http://dbpedia.org/resource/Stephen_James_Taylor> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Stephen James Taylor"@en .
+<http://dbpedia.org/resource/Mark_Watters> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Mark Watters"@en .
+<http://dbpedia.org/resource/Allan_Rich> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Allan Rich"@en .
+<http://dbpedia.org/resource/Bound_(1996_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Bound"@en .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Wachowskis"@en .
+<http://dbpedia.org/resource/Warriors_of_Virtue> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Warriors of Virtue"@en .
+<http://dbpedia.org/resource/Ronny_Yu> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Ronny Yu"@en .
+<http://dbpedia.org/resource/The_Lesser_Evil_(1998_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Lesser Evil"@en .
+<http://dbpedia.org/resource/Turbulence_2:_Fear_of_Flying> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Turbulence 2: Fear of Flying"@en .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Matrix"@en .
+<http://dbpedia.org/resource/Universal_Soldier:_The_Return> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Universal Soldier: The Return"@en .
+<http://dbpedia.org/resource/House_on_Haunted_Hill_(1999_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "House on Haunted Hill"@en .
+<http://dbpedia.org/resource/William_Malone_(director)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "William Malone"@en .
+<http://dbpedia.org/resource/Antitrust_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Antitrust"@en .
+<http://dbpedia.org/resource/Peter_Howitt> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Peter Howitt"@en .
+<http://dbpedia.org/resource/Valentine_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Valentine"@en .
+<http://dbpedia.org/resource/Jamie_Blanks> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Jamie Blanks"@en .
+<http://dbpedia.org/resource/Jurassic_Park_III> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Jurassic Park III"@en .
+<http://dbpedia.org/resource/Joe_Johnston> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Joe Johnston"@en .
+<http://dbpedia.org/resource/John_Williams> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "John Williams"@en .
+<http://dbpedia.org/resource/The_Unsaid> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Unsaid"@en .
+<http://dbpedia.org/resource/Tom_McLoughlin> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Tom McLoughlin"@en .
+<http://dbpedia.org/resource/Behind_Enemy_Lines_(2001_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Behind Enemy Lines"@en .
+<http://dbpedia.org/resource/John_Moore_(director)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "John Moore"@en .
+<http://dbpedia.org/resource/Long_Time_Dead> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Long Time Dead"@en .
+<http://dbpedia.org/resource/Marcus_Adams_(director)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Marcus Adams"@en .
+<http://dbpedia.org/resource/The_Animatrix> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Animatrix"@en .
+<http://dbpedia.org/resource/Machine_Head_(band)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Machine Head"@en .
+<http://dbpedia.org/resource/Photek> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Photek"@en .
+<http://dbpedia.org/resource/Ballistic:_Ecks_vs._Sever> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Ballistic: Ecks vs. Sever"@en .
+<http://dbpedia.org/resource/Wych_Kaosayananda> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Kaos"@en .
+<http://dbpedia.org/resource/The_Matrix_Reloaded> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Matrix Reloaded"@en .
+<http://dbpedia.org/resource/The_Matrix_Revolutions> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Matrix Revolutions"@en .
+<http://dbpedia.org/resource/Mighty_Times:_The_Children's_March> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Mighty Times: The Children's March"@en .
+<http://dbpedia.org/resource/Robert_Houston_(actor)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Robert Houston"@en .
+<http://dbpedia.org/resource/The_Marine> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Marine"@en .
+<http://dbpedia.org/resource/The_Good_Life_(2007_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Good Life"@en .
+<http://dbpedia.org/resource/Steve_Berra> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Steve Berra"@en .
+<http://dbpedia.org/resource/Tokyo_Ghoul_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Tokyo Ghoul"@en .
+<http://dbpedia.org/resource/Documentary_film> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Documentary film"@en .
+<http://dbpedia.org/resource/Beyond_the_Sky_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Beyond the Sky"@en .
+<http://dbpedia.org/resource/1986_in_film> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "1986"@en .
+<http://dbpedia.org/resource/Police_Academy_3:_Back_in_Training> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Police Academy 3: Back in Training"@en .
+<http://dbpedia.org/resource/Robert_Folk> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Robert Folk"@en .
+<http://dbpedia.org/resource/1987_in_film> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "1987"@en .
+<http://dbpedia.org/resource/Police_Academy_4:_Citizens_On_Patrol> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Police Academy 4: Citizens On Patrol"@en .
+<http://dbpedia.org/resource/1988_in_film> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "1988"@en .
+<http://dbpedia.org/resource/The_In_Crowd_(1988_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The In Crowd"@en .
+<http://dbpedia.org/resource/Mark_Snow> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Mark Snow"@en .
+<http://dbpedia.org/resource/1990_in_film> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "1990"@en .
+<http://dbpedia.org/resource/Die_Hard_2> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Die Hard 2"@en .
+<http://dbpedia.org/resource/Michael_Kamen> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Michael Kamen"@en .
+<http://dbpedia.org/resource/1991_in_film> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "1991"@en .
+<http://dbpedia.org/resource/If_Looks_Could_Kill_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "If Looks Could Kill"@en .
+<http://dbpedia.org/resource/David_Foster> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "David Foster"@en .
+<http://dbpedia.org/resource/Hudson_Hawk> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Hudson Hawk"@en .
+<http://dbpedia.org/resource/Robin_Hood:_Prince_Of_Thieves> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Robin Hood: Prince Of Thieves"@en .
+<http://dbpedia.org/resource/Ricochet_(1991_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Ricochet"@en .
+<http://dbpedia.org/resource/Alan_Silvestri> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Alan Silvestri"@en .
+<http://dbpedia.org/resource/1992_in_film> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "1992"@en .
+<http://dbpedia.org/resource/Death_Becomes_Her> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Death Becomes Her"@en .
+<http://dbpedia.org/resource/The_Muppet_Christmas_Carol> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Muppet Christmas Carol"@en .
+<http://dbpedia.org/resource/Miles_Goodman> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Miles Goodman"@en .
+<http://dbpedia.org/resource/Paul_Williams_(songwriter)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Paul Williams"@en .
+<http://dbpedia.org/resource/1993_in_film> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "1993"@en .
+<http://dbpedia.org/resource/Cop_and_a_Half> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Cop and a Half"@en .
+<http://dbpedia.org/resource/Alan_Silvestri> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Alan Silvestri"@en .
+<http://dbpedia.org/resource/Last_Action_Hero> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Last Action Hero"@en .
+<http://dbpedia.org/resource/Hocus_Pocus_(1993_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Hocus Pocus"@en .
+<http://dbpedia.org/resource/John_Debney> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "John Debney"@en .
+<http://dbpedia.org/resource/We're_Back!_A_Dinosaur's_Story_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "We're Back! A Dinosaur's Story"@en .
+<http://dbpedia.org/resource/James_Horner> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "James Horner"@en .
+<http://dbpedia.org/resource/The_Pelican_Brief_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Pelican Brief"@en .
+<http://dbpedia.org/resource/1994_in_film> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "1994"@en .
+<http://dbpedia.org/resource/When_a_Man_Loves_a_Woman_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "When a Man Loves a Woman"@en .
+<http://dbpedia.org/resource/Zbigniew_Preisner> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Zbigniew Preisner"@en .
+<http://dbpedia.org/resource/Clean_Slate_(1994_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Clean Slate"@en .
+<http://dbpedia.org/resource/Maverick_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Maverick"@en .
+<http://dbpedia.org/resource/Randy_Newman> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Randy Newman"@en .
+<http://dbpedia.org/resource/Thumbelina_(1994_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Thumbelina"@en .
+<http://dbpedia.org/resource/Barry_Manilow> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Barry Manilow"@en .
+<http://dbpedia.org/resource/William_Ross_(composer)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "William Ross"@en .
+<http://dbpedia.org/resource/I_Love_Trouble_(1994_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "I Love Trouble"@en .
+<http://dbpedia.org/resource/David_Newman_(composer)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "David Newman"@en .
+<http://dbpedia.org/resource/Clear_And_Present_Danger> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Clear And Present Danger"@en .
+<http://dbpedia.org/resource/The_Pagemaster> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Pagemaster"@en .
+<http://dbpedia.org/resource/Legends_of_the_Fall> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Legends of the Fall"@en .
+<http://dbpedia.org/resource/1995_in_film> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "1995"@en .
+<http://dbpedia.org/resource/A_Goofy_Movie> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "A Goofy Movie"@en .
+<http://dbpedia.org/resource/Carter_Burwell> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Carter Burwell"@en .
+<http://dbpedia.org/resource/Casper_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Casper"@en .
+<http://dbpedia.org/resource/Apollo_13_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Apollo 13"@en .
+<http://dbpedia.org/resource/Toy_Story> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Toy Story"@en .
+<http://dbpedia.org/resource/Balto_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Balto"@en .
+<http://dbpedia.org/resource/1996_in_film> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "1996"@en .
+<http://dbpedia.org/resource/James_and_the_Giant_Peach_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "James And The Giant Peach"@en .
+<http://dbpedia.org/resource/The_Phantom_(1996_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Phantom"@en .
+<http://dbpedia.org/resource/Courage_Under_Fire> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Courage Under Fire"@en .
+<http://dbpedia.org/resource/Ransom_(1996_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Ransom"@en .
+<http://dbpedia.org/resource/Michael_(1996_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Michael"@en .
+<http://dbpedia.org/resource/1997_in_film> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "1997"@en .
+<http://dbpedia.org/resource/Titanic_(1997_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Titanic"@en .
+<http://dbpedia.org/resource/Air_Force_One_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Air Force One"@en .
+<http://dbpedia.org/resource/1998_in_film> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "1998"@en .
+<http://dbpedia.org/resource/Pleasantville_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Pleasantville"@en .
+<http://dbpedia.org/resource/A_Bug's_Life> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "A Bug's Life"@en .
+<http://dbpedia.org/resource/Lost_in_Space_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "''Lost in Space''"@en .
+<http://dbpedia.org/resource/Bruce_Broughton> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Bruce Broughton"@en .
+<http://dbpedia.org/resource/2000_in_film> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "2000"@en .
+<http://dbpedia.org/resource/Meet_The_Parents> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Meet The Parents"@en .
+<http://dbpedia.org/resource/2010_in_film> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "2010"@en .
+<http://dbpedia.org/resource/Toy_Story_3> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Toy Story 3"@en .
+<http://dbpedia.org/resource/2017_in_film> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "2017"@en .
+<http://dbpedia.org/resource/Cars_3> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Cars 3"@en .
+<http://dbpedia.org/resource/2019_in_film> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "2019"@en .
+<http://dbpedia.org/resource/Toy_Story_4> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Toy Story 4"@en .
+<http://dbpedia.org/resource/Marriage_Story> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Marriage Story"@en .
+<http://dbpedia.org/resource/Square_Pegs> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Square Pegs"@en .
+<http://dbpedia.org/resource/Hart_to_Hart> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Hart to Hart"@en .
+<http://dbpedia.org/resource/Kay_O'Brien> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Kay O'Brien"@en .
+<http://dbpedia.org/resource/Sledge_Hammer!> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Sledge Hammer!"@en .
+<http://dbpedia.org/resource/Beauty_and_the_Beast_(1987_TV_series)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Beauty and the Beast"@en .
+<http://dbpedia.org/resource/Matlock_(1986_TV_series)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Matlock"@en .
+<http://dbpedia.org/resource/My_Life_and_Times> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "My Life and Times"@en .
+<http://dbpedia.org/resource/Tiny_Toon_Adventures> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Tiny Toon Adventures"@en .
+<http://dbpedia.org/resource/The_Plucky_Duck_Show> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Plucky Duck Show"@en .
+<http://dbpedia.org/resource/Star_Trek:_The_Next_Generation> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Star Trek: The Next Generation"@en .
+<http://dbpedia.org/resource/Face_of_the_Enemy_(Star_Trek:_The_Next_Generation)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Face of the Enemy"@en .
+<http://dbpedia.org/resource/Capitol_Critters> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Capitol Critters"@en .
+<http://dbpedia.org/resource/Taz-Mania> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Taz-Mania"@en .
+<http://dbpedia.org/resource/SeaQuest_DSV> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "SeaQuest 2032"@en .
+<http://dbpedia.org/resource/CBS_Schoolbreak_Special> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "CBS Schoolbreak Special"@en .
+<http://dbpedia.org/resource/Simon_Wincer> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Simon Wincer"@en .
+<http://dbpedia.org/resource/A_Stoning_in_Fulham_County> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "A Stoning in Fulham County"@en .
+<http://dbpedia.org/resource/Quiet_Victory:_The_Charlie_Wedemeyer_Story> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Quiet Victory: The Charlie Wedemeyer Story"@en .
+<http://dbpedia.org/resource/Roy_Campanella_II> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Roy Campanella II"@en .
+<http://dbpedia.org/resource/Glenn_Jordan> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Glenn Jordan"@en .
+<http://dbpedia.org/resource/Running_Against_Time> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Running Against Time"@en .
+<http://dbpedia.org/resource/Bruce_Seth_Green> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Bruce Seth Green"@en .
+<http://dbpedia.org/resource/Lies_Before_Kisses> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Lies Before Kisses"@en .
+<http://dbpedia.org/resource/Lou_Antonio> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Lou Antonio"@en .
+<http://dbpedia.org/resource/A_Little_Piece_of_Heaven_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "A Little Piece of Heaven"@en .
+<http://dbpedia.org/resource/Mimi_Leder> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Mimi Leder"@en .
+<http://dbpedia.org/resource/Colin_Bucksey> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Colin Bucksey"@en .
+<http://dbpedia.org/resource/Donald_Petrie> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Donald Petrie"@en .
+<http://dbpedia.org/resource/Tom_McLoughlin> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Tom McLoughlin"@en .
+<http://dbpedia.org/resource/In_the_Best_of_Families:_Marriage,_Pride_&_Madness> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "In the Best of Families: Marriage, Pride & Madness"@en .
+<http://dbpedia.org/resource/Jeff_Bleckner> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Jeff Bleckner"@en .
+<http://dbpedia.org/resource/Armand_Mastroianni> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Armand Mastroianni"@en .
+<http://dbpedia.org/resource/Michael_Lindsay-Hogg> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Michael Lindsay-Hogg"@en .
+<http://dbpedia.org/resource/Carl_Schenkel> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Carl Schenkel"@en .
+<http://dbpedia.org/resource/The_Beast_(1996_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Beast"@en .
+<http://dbpedia.org/resource/Jeff_Bleckner> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Jeff Bleckner"@en .
+<http://dbpedia.org/resource/Doomsday_Virus> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Doomsday Virus"@en .
+<http://dbpedia.org/resource/Eric_Laneuville> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Eric Laneuville"@en .
+<http://dbpedia.org/resource/Andy_Wolk> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Andy Wolk"@en .
+<http://dbpedia.org/resource/Donald_Wrye> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Donald Wrye"@en .
+<http://dbpedia.org/resource/A_Match_Made_in_Heaven> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "A Match Made in Heaven"@en .
+<http://dbpedia.org/resource/Paul_Wendkos> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Paul Wendkos"@en .
+<http://dbpedia.org/resource/Weapons_of_Mass_Distraction> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Weapons of Mass Distraction"@en .
+<http://dbpedia.org/resource/Stephen_Surjik> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Stephen Surjik"@en .
+<http://dbpedia.org/resource/House_of_Frankenstein_(miniseries)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "''House of Frankenstein''"@en .
+<http://dbpedia.org/resource/Peter_Werner> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Peter Werner"@en .
+<http://dbpedia.org/resource/The_Lake_(1998_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Lake"@en .
+<http://dbpedia.org/resource/David_Jackson_(director)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "David Jackson"@en .
+<http://dbpedia.org/resource/Waris_Hussein> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Waris Hussein"@en .
+<http://dbpedia.org/resource/Route_9_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Route 9"@en .
+<http://dbpedia.org/resource/Tim_Matheson> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Tim Matheson"@en .
+<http://dbpedia.org/resource/Race_Against_Time_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Race Against Time"@en .
+<http://dbpedia.org/resource/Geoff_Murphy> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Geoff Murphy"@en .
+<http://dbpedia.org/resource/Jeffrey_Reiner> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Jeffrey Reiner"@en .
+<http://dbpedia.org/resource/Murder_in_Greenwich_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Murder in Greenwich"@en .
+<http://dbpedia.org/resource/Space_Odyssey_(TV_series)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Space Odyssey"@en .
+<http://dbpedia.org/resource/Joe_Ahearne> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Joe Ahearne"@en .
+<http://dbpedia.org/resource/Río_de_Sangre> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Río de Sangre"@en .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://xmlns.com/foaf/0.1/homepage> <http://www.dondavis.net/> .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://xmlns.com/foaf/0.1/depiction> <http://commons.wikimedia.org/wiki/Special:FilePath/Don_Davis_in_2017.jpg> .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://dbpedia.org/ontology/thumbnail> <http://commons.wikimedia.org/wiki/Special:FilePath/Don_Davis_in_2017.jpg?width=300> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Don_Davis_in_2017.jpg> <http://xmlns.com/foaf/0.1/thumbnail> <http://commons.wikimedia.org/wiki/Special:FilePath/Don_Davis_in_2017.jpg?width=300> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Don_Davis_in_2017.jpg> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Image> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Don_Davis_in_2017.jpg?width=300> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Image> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Don_Davis_in_2017.jpg> <http://purl.org/dc/elements/1.1/rights> <http://en.wikipedia.org/wiki/File:Don_Davis_in_2017.jpg> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Don_Davis_in_2017.jpg?width=300> <http://purl.org/dc/elements/1.1/rights> <http://en.wikipedia.org/wiki/File:Don_Davis_in_2017.jpg> .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://xmlns.com/foaf/0.1/depiction> <http://commons.wikimedia.org/wiki/Special:FilePath/Don_Davis_in_2017.jpg> .
+# completed 2025-06-30T12:23:22Z

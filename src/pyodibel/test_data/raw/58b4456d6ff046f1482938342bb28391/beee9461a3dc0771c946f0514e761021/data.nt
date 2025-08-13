@@ -1,0 +1,90 @@
+# started 2025-06-30T12:18:39Z
+<http://dbpedia.org/resource/Silver_Pictures> <http://www.w3.org/2000/01/rdf-schema#label> "Silver Pictures"@en .
+<http://dbpedia.org/resource/Silver_Pictures> <http://dbpedia.org/ontology/wikiPageID> "1618945"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://dbpedia.org/resource/Silver_Pictures> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://en.wikipedia.org/wiki/Silver_Pictures?oldid=1292056045&ns=0> .
+<http://dbpedia.org/resource/Silver_Pictures> <http://dbpedia.org/ontology/wikiPageRevisionID> "1292056045"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://dbpedia.org/resource/Silver_Pictures> <http://dbpedia.org/ontology/wikiPageLength> "9657"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://dbpedia.org/resource/Silver_Pictures> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:American_companies_established_in_1980> .
+<http://dbpedia.org/resource/Silver_Pictures> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Companies_based_in_Los_Angeles> .
+<http://dbpedia.org/resource/Silver_Pictures> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Film_production_companies_of_the_United_States> .
+<http://dbpedia.org/resource/Silver_Pictures> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Mass_media_companies_established_in_1980> .
+<http://dbpedia.org/resource/Silver_Pictures> <http://xmlns.com/foaf/0.1/isPrimaryTopicOf> <http://en.wikipedia.org/wiki/Silver_Pictures> .
+<http://en.wikipedia.org/wiki/Silver_Pictures> <http://xmlns.com/foaf/0.1/primaryTopic> <http://dbpedia.org/resource/Silver_Pictures> .
+<http://en.wikipedia.org/wiki/Silver_Pictures> <http://purl.org/dc/elements/1.1/language> "en" .
+<http://en.wikipedia.org/wiki/Silver_Pictures> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Document> .
+<http://dbpedia.org/resource/Silver_Pictures> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Short_description> .
+<http://dbpedia.org/resource/Silver_Pictures> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:More_citations_needed> .
+<http://dbpedia.org/resource/Silver_Pictures> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Infobox_company> .
+<http://dbpedia.org/resource/Silver_Pictures> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Main> .
+<http://dbpedia.org/resource/Silver_Pictures> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Reflist> .
+<http://dbpedia.org/resource/Silver_Pictures> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Dark_Castle_Entertainment> .
+<http://dbpedia.org/resource/Silver_Pictures> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Film_Studio> .
+<http://dbpedia.org/resource/Silver_Pictures> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Authority_control> .
+<http://dbpedia.org/resource/Silver_Pictures> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Start_date_and_age> .
+<http://dbpedia.org/resource/Silver_Pictures> <http://dbpedia.org/property/name> "Silver Pictures"@en .
+<http://dbpedia.org/resource/Silver_Pictures> <http://dbpedia.org/property/logo> <http://dbpedia.org/resource/File:Silver_Pictures_2_without_wordmark.svg> .
+<http://dbpedia.org/resource/Silver_Pictures> <http://dbpedia.org/property/foundation> "1980-06-24"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://dbpedia.org/resource/Silver_Pictures> <http://dbpedia.org/property/founder> <http://dbpedia.org/resource/Joel_Silver> .
+<http://dbpedia.org/resource/Silver_Pictures> <http://dbpedia.org/property/locationCountry> "Los Angeles, California, United States"@en .
+<http://dbpedia.org/resource/Silver_Pictures> <http://dbpedia.org/property/industry> "Motion pictures"@en .
+<http://dbpedia.org/resource/Silver_Pictures> <http://dbpedia.org/property/keyPeople> "Ethan Erwin"@en .
+<http://dbpedia.org/resource/Silver_Pictures> <http://dbpedia.org/property/keyPeople> "Hal Sadoff"@en .
+<http://dbpedia.org/resource/Silver_Pictures> <http://dbpedia.org/property/keyPeople> <http://dbpedia.org/resource/Susan_Downey> .
+<http://dbpedia.org/resource/Silver_Pictures> <http://dbpedia.org/property/divisions> "Silver Pictures Television"@en .
+<http://dbpedia.org/resource/Silver_Pictures> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Company> .
+<http://dbpedia.org/resource/Silver_Pictures> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q4830453> .
+<http://dbpedia.org/resource/Silver_Pictures> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Organisation> .
+<http://dbpedia.org/resource/Silver_Pictures> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Organization> .
+<http://dbpedia.org/resource/Silver_Pictures> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#SocialPerson> .
+<http://dbpedia.org/resource/Silver_Pictures> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q43229> .
+<http://dbpedia.org/resource/Silver_Pictures> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Agent> .
+<http://dbpedia.org/resource/Silver_Pictures> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent> .
+<http://dbpedia.org/resource/Silver_Pictures> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q24229398> .
+<http://dbpedia.org/resource/Silver_Pictures> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Thing> .
+<http://dbpedia.org/resource/Silver_Pictures> <http://xmlns.com/foaf/0.1/name> "Silver Pictures"@en .
+<http://dbpedia.org/resource/Silver_Pictures> <http://dbpedia.org/ontology/foundingDate> "1980-06-24"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://dbpedia.org/resource/Silver_Pictures> <http://dbpedia.org/ontology/foundingYear> "1980"^^<http://www.w3.org/2001/XMLSchema#gYear> .
+<http://dbpedia.org/resource/Silver_Pictures> <http://dbpedia.org/ontology/foundedBy> <http://dbpedia.org/resource/Joel_Silver> .
+<http://dbpedia.org/resource/Silver_Pictures> <http://dbpedia.org/ontology/keyPerson> <http://dbpedia.org/resource/Susan_Downey> .
+<http://dbpedia.org/resource/Silver_Pictures> <http://dbpedia.org/ontology/industry> <http://dbpedia.org/resource/Motion_picture> .
+<http://dbpedia.org/resource/Silver_Pictures> <http://dbpedia.org/ontology/wikiPageOutDegree> "36"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://dbpedia.org/resource/Joel_Silver> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Joel Silver"@en .
+<http://dbpedia.org/resource/Los_Angeles,_California> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Los Angeles, California"@en .
+<http://dbpedia.org/resource/Motion_picture> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Motion picture"@en .
+<http://dbpedia.org/resource/Susan_Downey> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Susan Downey"@en .
+<http://dbpedia.org/resource/Production_company> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "production company"@en .
+<http://dbpedia.org/resource/Cinema_of_the_United_States> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Hollywood"@en .
+<http://dbpedia.org/resource/Joel_Silver> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Joel Silver"@en .
+<http://dbpedia.org/resource/20th_Century-Fox> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "20th Century-Fox"@en .
+<http://dbpedia.org/resource/Warner_Bros.> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Warner Bros."@en .
+<http://dbpedia.org/resource/Tales_from_the_Crypt_(TV_series)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Tales from the Crypt"@en .
+<http://dbpedia.org/resource/Robert_Zemeckis> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Robert Zemeckis"@en .
+<http://dbpedia.org/resource/Dark_Castle_Entertainment> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Dark Castle Entertainment"@en .
+<http://dbpedia.org/resource/The_Nice_Guys> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Nice Guys"@en .
+<http://dbpedia.org/resource/Universal_Pictures> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Universal Studios"@en .
+<http://dbpedia.org/resource/Liam_Neeson> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Liam Neeson"@en .
+<http://dbpedia.org/resource/Non-Stop_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Non-Stop"@en .
+<http://dbpedia.org/resource/The_Loft_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Loft"@en .
+<http://dbpedia.org/resource/Splice_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Splice"@en .
+<http://dbpedia.org/resource/Legendary_Pictures> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Legendary Pictures"@en .
+<http://dbpedia.org/resource/As_Above,_So_Below_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "As Above, So Below"@en .
+<http://dbpedia.org/resource/Open_Road_Films> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Open Road Films"@en .
+<http://dbpedia.org/resource/Film_producer> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "producer"@en .
+<http://dbpedia.org/resource/Daryl_Katz> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Daryl Katz"@en .
+<http://dbpedia.org/resource/Katz_Group_of_Companies> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Katz Group of Companies"@en .
+<http://dbpedia.org/resource/Daryl_Katz> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Daryl Katz"@en .
+<http://dbpedia.org/resource/Chief_executive_officer> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "chief executive officer"@en .
+<http://dbpedia.org/resource/ICM_Partners> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "ICM"@en .
+<http://dbpedia.org/resource/Lionsgate_Television> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Lionsgate Television"@en .
+<http://dbpedia.org/resource/Gothika> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Gothika"@en .
+<http://dbpedia.org/resource/Thirteen_Ghosts> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Thirteen Ghosts"@en .
+<http://dbpedia.org/resource/House_on_Haunted_Hill_(1999_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "House on Haunted Hill"@en .
+<http://dbpedia.org/resource/Silver_Pictures> <http://xmlns.com/foaf/0.1/depiction> <http://commons.wikimedia.org/wiki/Special:FilePath/Silver_Pictures_2_without_wordmark.svg> .
+<http://dbpedia.org/resource/Silver_Pictures> <http://dbpedia.org/ontology/thumbnail> <http://commons.wikimedia.org/wiki/Special:FilePath/Silver_Pictures_2_without_wordmark.svg?width=300> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Silver_Pictures_2_without_wordmark.svg> <http://xmlns.com/foaf/0.1/thumbnail> <http://commons.wikimedia.org/wiki/Special:FilePath/Silver_Pictures_2_without_wordmark.svg?width=300> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Silver_Pictures_2_without_wordmark.svg> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Image> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Silver_Pictures_2_without_wordmark.svg?width=300> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Image> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Silver_Pictures_2_without_wordmark.svg> <http://purl.org/dc/elements/1.1/rights> <http://en.wikipedia.org/wiki/File:Silver_Pictures_2_without_wordmark.svg> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Silver_Pictures_2_without_wordmark.svg?width=300> <http://purl.org/dc/elements/1.1/rights> <http://en.wikipedia.org/wiki/File:Silver_Pictures_2_without_wordmark.svg> .
+<http://dbpedia.org/resource/Silver_Pictures> <http://xmlns.com/foaf/0.1/depiction> <http://commons.wikimedia.org/wiki/Special:FilePath/Silver_Pictures_2_without_wordmark.svg> .
+# completed 2025-06-30T12:18:39Z

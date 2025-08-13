@@ -1,0 +1,18 @@
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://dbpedia.org/property/birthPlace> <http://dbpedia.org/resource/Canada> .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://dbpedia.org/property/spouse> "1999"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://dbpedia.org/ontology/occupation> <http://dbpedia.org/resource/Carrie-Anne_Moss__PersonFunction__1> .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://dbpedia.org/property/title> "Awards for Carrie-Anne Moss"@en .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://dbpedia.org/property/birthPlace> <http://dbpedia.org/resource/Burnaby> .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Person> .
+<http://dbpedia.org/resource/Carrie-Anne_Moss__PersonFunction__1> <http://dbpedia.org/ontology/title> "Actress"@en .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://dbpedia.org/ontology/birthPlace> <http://dbpedia.org/resource/British_Columbia> .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://dbpedia.org/property/birthPlace> <http://dbpedia.org/resource/British_Columbia> .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://dbpedia.org/property/spouse> "Steven Roy"@en .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://dbpedia.org/property/birthDate> "1967-08-21"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://dbpedia.org/ontology/birthPlace> <http://dbpedia.org/resource/Canada> .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://www.w3.org/2000/01/rdf-schema#label> "Carrie-Anne Moss"@en .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://dbpedia.org/ontology/birthDate> "1967-08-21"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://dbpedia.org/property/occupation> "Actress"@en .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://dbpedia.org/ontology/birthPlace> <http://dbpedia.org/resource/Burnaby> .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://dbpedia.org/property/spouse> ""@en .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://dbpedia.org/property/children> "3"^^<http://www.w3.org/2001/XMLSchema#integer> .

@@ -1,0 +1,191 @@
+# started 2025-06-30T13:45:34Z
+<http://dbpedia.org/resource/Bill_Pope> <http://www.w3.org/2000/01/rdf-schema#label> "Bill Pope"@en .
+<http://dbpedia.org/resource/Bill_Pope> <http://dbpedia.org/ontology/wikiPageID> "4910741"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://dbpedia.org/resource/Bill_Pope> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://en.wikipedia.org/wiki/Bill_Pope?oldid=1294006105&ns=0> .
+<http://dbpedia.org/resource/Bill_Pope> <http://dbpedia.org/ontology/wikiPageRevisionID> "1294006105"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://dbpedia.org/resource/Bill_Pope> <http://dbpedia.org/ontology/wikiPageLength> "7409"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://dbpedia.org/resource/Bill_Pope> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:1952_births> .
+<http://dbpedia.org/resource/Bill_Pope> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:American_cinematographers> .
+<http://dbpedia.org/resource/Bill_Pope> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Living_people> .
+<http://dbpedia.org/resource/Bill_Pope> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:People_from_Bowling_Green,_Kentucky> .
+<http://dbpedia.org/resource/Bill_Pope> <http://xmlns.com/foaf/0.1/isPrimaryTopicOf> <http://en.wikipedia.org/wiki/Bill_Pope> .
+<http://en.wikipedia.org/wiki/Bill_Pope> <http://xmlns.com/foaf/0.1/primaryTopic> <http://dbpedia.org/resource/Bill_Pope> .
+<http://en.wikipedia.org/wiki/Bill_Pope> <http://purl.org/dc/elements/1.1/language> "en" .
+<http://en.wikipedia.org/wiki/Bill_Pope> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Document> .
+<http://dbpedia.org/resource/Bill_Pope> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Short_description> .
+<http://dbpedia.org/resource/Bill_Pope> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Infobox_person> .
+<http://dbpedia.org/resource/Bill_Pope> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Dagger> .
+<http://dbpedia.org/resource/Bill_Pope> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Pending_film> .
+<http://dbpedia.org/resource/Bill_Pope> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Nom> .
+<http://dbpedia.org/resource/Bill_Pope> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Nom> .
+<http://dbpedia.org/resource/Bill_Pope> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Nom> .
+<http://dbpedia.org/resource/Bill_Pope> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Nom> .
+<http://dbpedia.org/resource/Bill_Pope> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Nom> .
+<http://dbpedia.org/resource/Bill_Pope> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Reflist> .
+<http://dbpedia.org/resource/Bill_Pope> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:IMDb_name> .
+<http://dbpedia.org/resource/Bill_Pope> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:MTV_Video_Music_Award_for_Best_Cinematography> .
+<http://dbpedia.org/resource/Bill_Pope> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Satellite_Award_Best_Cinematography> .
+<http://dbpedia.org/resource/Bill_Pope> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Authority_control> .
+<http://dbpedia.org/resource/Bill_Pope> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:US-cinematographer-stub> .
+<http://dbpedia.org/resource/Bill_Pope> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Birth_date_and_age> .
+<http://dbpedia.org/resource/Bill_Pope> <http://dbpedia.org/property/name> "Bill Pope"@en .
+<http://dbpedia.org/resource/Bill_Pope> <http://dbpedia.org/property/birthDate> "1952-06-19"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://dbpedia.org/resource/Bill_Pope> <http://dbpedia.org/property/birthPlace> "Bowling Green, Kentucky, U.S."@en .
+<http://dbpedia.org/resource/Bill_Pope> <http://dbpedia.org/property/occupation> "Cinematographer"@en .
+<http://dbpedia.org/resource/Bill_Pope> <http://dbpedia.org/property/yearsactive> "1983"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://dbpedia.org/resource/Bill_Pope> <http://dbpedia.org/property/spouse> <http://dbpedia.org/resource/Sharon_Oreck> .
+<http://dbpedia.org/resource/Bill_Pope> <http://dbpedia.org/property/children> "2"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://dbpedia.org/resource/Bill_Pope> <http://dbpedia.org/property/relatives> <http://dbpedia.org/resource/Leslie_Pope> .
+<http://dbpedia.org/resource/Bill_Pope> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Person> .
+<http://dbpedia.org/resource/Bill_Pope> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q5> .
+<http://dbpedia.org/resource/Bill_Pope> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://dbpedia.org/resource/Bill_Pope> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Thing> .
+<http://dbpedia.org/resource/Bill_Pope> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Person> .
+<http://dbpedia.org/resource/Bill_Pope> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q215627> .
+<http://dbpedia.org/resource/Bill_Pope> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#NaturalPerson> .
+<http://dbpedia.org/resource/Bill_Pope> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Animal> .
+<http://dbpedia.org/resource/Bill_Pope> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q729> .
+<http://dbpedia.org/resource/Bill_Pope> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Eukaryote> .
+<http://dbpedia.org/resource/Bill_Pope> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q19088> .
+<http://dbpedia.org/resource/Bill_Pope> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Species> .
+<http://dbpedia.org/resource/Bill_Pope> <http://xmlns.com/foaf/0.1/name> "Bill Pope"@en .
+<http://dbpedia.org/resource/Bill_Pope> <http://dbpedia.org/ontology/birthDate> "1952-06-19"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://dbpedia.org/resource/Bill_Pope> <http://dbpedia.org/ontology/birthYear> "1952"^^<http://www.w3.org/2001/XMLSchema#gYear> .
+<http://dbpedia.org/resource/Bill_Pope> <http://dbpedia.org/ontology/birthPlace> <http://dbpedia.org/resource/Bowling_Green,_Kentucky> .
+<http://dbpedia.org/resource/Bill_Pope> <http://dbpedia.org/ontology/occupation> <http://dbpedia.org/resource/Cinematographer> .
+<http://dbpedia.org/resource/Bill_Pope> <http://dbpedia.org/ontology/occupation> <http://dbpedia.org/resource/Bill_Pope__PersonFunction__1> .
+<http://dbpedia.org/resource/Bill_Pope__PersonFunction__1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/PersonFunction> .
+<http://dbpedia.org/resource/Bill_Pope__PersonFunction__1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Thing> .
+<http://dbpedia.org/resource/Bill_Pope__PersonFunction__1> <http://dbpedia.org/ontology/title> "Cinematographer"@en .
+<http://dbpedia.org/resource/Bill_Pope> <http://dbpedia.org/ontology/activeYearsStartYear> "1983"^^<http://www.w3.org/2001/XMLSchema#gYear> .
+<http://dbpedia.org/resource/Bill_Pope> <http://dbpedia.org/ontology/spouse> <http://dbpedia.org/resource/Sharon_Oreck> .
+<http://dbpedia.org/resource/Bill_Pope> <http://dbpedia.org/ontology/relative> <http://dbpedia.org/resource/Leslie_Pope> .
+<http://dbpedia.org/resource/Bill_Pope> <http://dbpedia.org/ontology/wikiPageOutDegree> "131"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://dbpedia.org/resource/Bowling_Green,_Kentucky> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Bowling Green, Kentucky"@en .
+<http://dbpedia.org/resource/Sharon_Oreck> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Sharon Oreck"@en .
+<http://dbpedia.org/resource/Leslie_Pope> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Leslie Pope"@en .
+<http://dbpedia.org/resource/American_Society_of_Cinematographers> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "A.S.C."@en .
+<http://dbpedia.org/resource/Cinematographer> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "cinematographer"@en .
+<http://dbpedia.org/resource/Sam_Raimi> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Sam Raimi"@en .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Wachowskis"@en .
+<http://dbpedia.org/resource/Edgar_Wright> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Edgar Wright"@en .
+<http://dbpedia.org/resource/Music_video> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "music videos"@en .
+<http://dbpedia.org/resource/Chris_Isaak> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Chris Isaak"@en .
+<http://dbpedia.org/resource/Metallica> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Metallica"@en .
+<http://dbpedia.org/resource/Drake_(musician)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Drake"@en .
+<http://dbpedia.org/resource/Documentary_series> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "documentary series"@en .
+<http://dbpedia.org/resource/Cosmos:_A_Spacetime_Odyssey> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Cosmos: A Spacetime Odyssey"@en .
+<http://dbpedia.org/resource/Bowling_Green,_Kentucky> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Bowling Green, Kentucky"@en .
+<http://dbpedia.org/resource/New_York_University> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "New York University"@en .
+<http://dbpedia.org/resource/Student_Academy_Awards> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Student Academy Awards"@en .
+<http://dbpedia.org/resource/Darkman> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Darkman"@en .
+<http://dbpedia.org/resource/Sam_Raimi> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Sam Raimi"@en .
+<http://dbpedia.org/resource/Closet_Land> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Closet Land"@en .
+<http://dbpedia.org/resource/Radha_Bharadwaj> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Radha Bharadwaj"@en .
+<http://dbpedia.org/resource/Army_of_Darkness> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Army of Darkness"@en .
+<http://dbpedia.org/resource/Fire_in_the_Sky> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Fire in the Sky"@en .
+<http://dbpedia.org/resource/Robert_Lieberman> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Robert Lieberman"@en .
+<http://dbpedia.org/resource/Blank_Check_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Blank Check"@en .
+<http://dbpedia.org/resource/Rupert_Wainwright> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Rupert Wainwright"@en .
+<http://dbpedia.org/resource/Clueless> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Clueless"@en .
+<http://dbpedia.org/resource/Amy_Heckerling> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Amy Heckerling"@en .
+<http://dbpedia.org/resource/Bound_(1996_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Bound"@en .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Wachowskis"@en .
+<http://dbpedia.org/resource/Gridlock'd> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Gridlock'd"@en .
+<http://dbpedia.org/resource/Vondie_Curtis-Hall> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Vondie Curtis-Hall"@en .
+<http://dbpedia.org/resource/Zero_Effect> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Zero Effect"@en .
+<http://dbpedia.org/resource/Jake_Kasdan> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Jake Kasdan"@en .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Matrix"@en .
+<http://dbpedia.org/resource/Bedazzled_(2000_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Bedazzled"@en .
+<http://dbpedia.org/resource/Harold_Ramis> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Harold Ramis"@en .
+<http://dbpedia.org/resource/The_Matrix_Reloaded> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Matrix Reloaded"@en .
+<http://dbpedia.org/resource/Back-to-back_film_production> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "back-to-back"@en .
+<http://dbpedia.org/resource/The_Matrix_Revolutions> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Matrix Revolutions"@en .
+<http://dbpedia.org/resource/Spider-Man_2> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Spider-Man 2"@en .
+<http://dbpedia.org/resource/Team_America:_World_Police> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Team America: World Police"@en .
+<http://dbpedia.org/resource/Trey_Parker> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Trey Parker"@en .
+<http://dbpedia.org/resource/Fur_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Fur"@en .
+<http://dbpedia.org/resource/Steven_Shainberg> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Steven Shainberg"@en .
+<http://dbpedia.org/resource/Spider-Man_3> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Spider-Man 3"@en .
+<http://dbpedia.org/resource/The_Spirit_(2008_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Spirit"@en .
+<http://dbpedia.org/resource/Frank_Miller_(comics)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Frank Miller"@en .
+<http://dbpedia.org/resource/Scott_Pilgrim_vs._the_World> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Scott Pilgrim vs. the World"@en .
+<http://dbpedia.org/resource/Edgar_Wright> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Edgar Wright"@en .
+<http://dbpedia.org/resource/Chasing_Mavericks> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Chasing Mavericks"@en .
+<http://dbpedia.org/resource/Michael_Apted> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Michael Apted"@en .
+<http://dbpedia.org/resource/Curtis_Hanson> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Curtis Hanson"@en .
+<http://dbpedia.org/resource/Men_in_Black_3> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Men in Black 3"@en .
+<http://dbpedia.org/resource/Barry_Sonnenfeld> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Barry Sonnenfeld"@en .
+<http://dbpedia.org/resource/The_World's_End_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The World's End"@en .
+<http://dbpedia.org/resource/The_Jungle_Book_(2016_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Jungle Book"@en .
+<http://dbpedia.org/resource/Jon_Favreau> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Jon Favreau"@en .
+<http://dbpedia.org/resource/Baby_Driver> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Baby Driver"@en .
+<http://dbpedia.org/resource/The_Kid_Who_Would_Be_King> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Kid Who Would Be King"@en .
+<http://dbpedia.org/resource/Joe_Cornish> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Joe Cornish"@en .
+<http://dbpedia.org/resource/Alita:_Battle_Angel> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Alita: Battle Angel"@en .
+<http://dbpedia.org/resource/Robert_Rodriguez> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Robert Rodriguez"@en .
+<http://dbpedia.org/resource/Charlie's_Angels_(2019_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Charlie's Angels"@en .
+<http://dbpedia.org/resource/Elizabeth_Banks> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Elizabeth Banks"@en .
+<http://dbpedia.org/resource/The_Boys_in_the_Band_(2020_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Boys in the Band"@en .
+<http://dbpedia.org/resource/Joe_Mantello> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Joe Mantello"@en .
+<http://dbpedia.org/resource/Shang-Chi_and_the_Legend_of_the_Ten_Rings> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Shang-Chi and the Legend of the Ten Rings"@en .
+<http://dbpedia.org/resource/Destin_Daniel_Cretton> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Destin Daniel Cretton"@en .
+<http://dbpedia.org/resource/Ant-Man_and_the_Wasp:_Quantumania> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Ant-Man and the Wasp: Quantumania"@en .
+<http://dbpedia.org/resource/Peyton_Reed> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Peyton Reed"@en .
+<http://dbpedia.org/resource/Y2K_(2024_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Y2K"@en .
+<http://dbpedia.org/resource/Kyle_Mooney> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Kyle Mooney"@en .
+<http://dbpedia.org/resource/Unfrosted> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Unfrosted"@en .
+<http://dbpedia.org/resource/Jerry_Seinfeld> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Jerry Seinfeld"@en .
+<http://dbpedia.org/resource/How_to_Train_Your_Dragon_(2025_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "How to Train Your Dragon"@en .
+<http://dbpedia.org/resource/Dean_DeBlois> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Dean DeBlois"@en .
+<http://dbpedia.org/resource/Send_Help> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Send Help"@en .
+<http://dbpedia.org/resource/American_Playhouse> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "American Playhouse"@en .
+<http://dbpedia.org/resource/Robert_Allan_Ackerman> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Robert Allan Ackerman"@en .
+<http://dbpedia.org/resource/Maximum_Bob_(TV_series)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Maximum Bob"@en .
+<http://dbpedia.org/resource/Barry_Sonnenfeld> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Barry Sonnenfeld"@en .
+<http://dbpedia.org/resource/Freaks_and_Geeks> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Freaks and Geeks"@en .
+<http://dbpedia.org/resource/Jake_Kasdan> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Jake Kasdan"@en .
+<http://dbpedia.org/resource/Cosmos:_A_Spacetime_Odyssey> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Cosmos: A Spacetime Odyssey"@en .
+<http://dbpedia.org/resource/Brannon_Braga> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Brannon Braga"@en .
+<http://dbpedia.org/resource/Ann_Druyan> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Ann Druyan"@en .
+<http://dbpedia.org/resource/Preacher_(TV_series)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Preacher"@en .
+<http://dbpedia.org/resource/Seth_Rogen> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Seth Rogen"@en .
+<http://dbpedia.org/resource/Evan_Goldberg> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Evan Goldberg"@en .
+<http://dbpedia.org/resource/Pilot_(Preacher)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Pilot"@en .
+<http://dbpedia.org/resource/Enter_the_Matrix> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Enter the Matrix"@en .
+<http://dbpedia.org/resource/Aldo_Nova> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Aldo Nova"@en .
+<http://dbpedia.org/resource/Nasty_(Janet_Jackson_song)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Nasty"@en .
+<http://dbpedia.org/resource/Janet_Jackson> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Janet Jackson"@en .
+<http://dbpedia.org/resource/Mercy_Street> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Mercy Street"@en .
+<http://dbpedia.org/resource/Peter_Gabriel> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Peter Gabriel"@en .
+<http://dbpedia.org/resource/Red_Rain_(song)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Red Rain"@en .
+<http://dbpedia.org/resource/We'll_Be_Together_(Sting_song)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "We'll Be Together"@en .
+<http://dbpedia.org/resource/Sting_(musician)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Sting"@en .
+<http://dbpedia.org/resource/The_Replacements_(band)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Replacements"@en .
+<http://dbpedia.org/resource/In_Your_Room_(The_Bangles_song)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "In Your Room"@en .
+<http://dbpedia.org/resource/The_Bangles> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Bangles"@en .
+<http://dbpedia.org/resource/Night_Ranger> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Night Ranger"@en .
+<http://dbpedia.org/resource/Michael_Johnson_(singer)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Michael Johnson"@en .
+<http://dbpedia.org/resource/One_(Metallica_song)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "One"@en .
+<http://dbpedia.org/resource/Metallica> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Metallica"@en .
+<http://dbpedia.org/resource/After_All_This_Time_(Rodney_Crowell_song)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "After All This Time"@en .
+<http://dbpedia.org/resource/Rodney_Crowell> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Rodney Crowell"@en .
+<http://dbpedia.org/resource/Without_You_(Mötley_Crüe_song)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Without You"@en .
+<http://dbpedia.org/resource/Mötley_Crüe> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Mötley Crüe"@en .
+<http://dbpedia.org/resource/Somebody's_Crying> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Somebody's Crying"@en .
+<http://dbpedia.org/resource/Chris_Isaak> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Chris Isaak"@en .
+<http://dbpedia.org/resource/Hold_On,_We're_Going_Home> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Hold On, We're Going Home"@en .
+<http://dbpedia.org/resource/Drake_(musician)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Drake"@en .
+<http://dbpedia.org/resource/Gust_of_Wind> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Gust of Wind"@en .
+<http://dbpedia.org/resource/Pharrell_Williams> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Pharrell Williams"@en .
+<http://dbpedia.org/resource/Beck> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Beck"@en .
+<http://dbpedia.org/resource/Independent_Spirit_Awards> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Independent Spirit Awards"@en .
+<http://dbpedia.org/resource/Independent_Spirit_Award_for_Best_Cinematography> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Best Cinematography"@en .
+<http://dbpedia.org/resource/BAFTA_Awards> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "BAFTA Awards"@en .
+<http://dbpedia.org/resource/BAFTA_Award_for_Best_Cinematography> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Best Cinematography"@en .
+<http://dbpedia.org/resource/Satellite_Awards> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Satellite Awards"@en .
+<http://dbpedia.org/resource/Satellite_Award_for_Best_Cinematography> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Best Cinematography"@en .
+<http://dbpedia.org/resource/Primetime_Emmy_Awards> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Primetime Emmy Awards"@en .
+<http://dbpedia.org/resource/Primetime_Emmy_Award_for_Outstanding_Cinematography_for_a_Nonfiction_Program> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Outstanding Cinematography"@en .
+<http://dbpedia.org/resource/Standing_Up_in_the_Milky_Way> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Standing Up in the Milky Way"@en .
+# completed 2025-06-30T13:45:34Z

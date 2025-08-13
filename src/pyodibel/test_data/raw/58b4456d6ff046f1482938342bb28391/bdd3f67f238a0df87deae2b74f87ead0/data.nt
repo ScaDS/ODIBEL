@@ -1,0 +1,353 @@
+# started 2025-06-30T11:17:14Z
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://www.w3.org/2000/01/rdf-schema#label> "Carrie-Anne Moss"@en .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://dbpedia.org/ontology/wikiPageID> "245318"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://en.wikipedia.org/wiki/Carrie-Anne_Moss?oldid=1295678489&ns=0> .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://dbpedia.org/ontology/wikiPageRevisionID> "1295678489"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://dbpedia.org/ontology/wikiPageLength> "39182"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:1967_births> .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Living_people> .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:20th-century_Canadian_actresses> .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:21st-century_Canadian_actresses> .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Actors_from_Burnaby> .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Actresses_from_British_Columbia> .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:American_Academy_of_Dramatic_Arts_alumni> .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Best_Actress_Genie_and_Canadian_Screen_Award_winners> .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Best_Supporting_Actress_Genie_and_Canadian_Screen_Award_winners> .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Canadian_expatriate_actresses_in_the_United_States> .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Canadian_film_actresses> .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Canadian_television_actresses> .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Canadian_video_game_actresses> .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Canadian_voice_actresses> .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Independent_Spirit_Award_for_Best_Supporting_Female_winners> .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Naturalized_citizens_of_the_United_States> .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://xmlns.com/foaf/0.1/isPrimaryTopicOf> <http://en.wikipedia.org/wiki/Carrie-Anne_Moss> .
+<http://en.wikipedia.org/wiki/Carrie-Anne_Moss> <http://xmlns.com/foaf/0.1/primaryTopic> <http://dbpedia.org/resource/Carrie-Anne_Moss> .
+<http://en.wikipedia.org/wiki/Carrie-Anne_Moss> <http://purl.org/dc/elements/1.1/language> "en" .
+<http://en.wikipedia.org/wiki/Carrie-Anne_Moss> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Document> .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Short_description> .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Use_Canadian_English> .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Use_mdy_dates> .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Infobox_person> .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Sortname> .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Sortname> .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Sortname> .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Sortname> .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Sortname> .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Sortname> .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Sortname> .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Small> .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Small> .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Small> .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Small> .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Small> .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Small> .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Small> .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Abbr> .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Nom> .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Won> .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Nom> .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Nom> .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Nom> .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Nom> .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Won> .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Nom> .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Nom> .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Nom> .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Sortname> .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Nom> .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Won> .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Won> .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Nom> .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Reflist> .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Commons_category> .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:IMDb_name> .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Better_source_needed> .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:DFDb_name> .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Navboxes> .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Authority_control> .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Birth_date_and_age> .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:ACCT_Best_Supporting_Actress> .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Empire_Award_for_Best_Newcomer> .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:IndependentSpiritBestSupportingFemale> .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:VFCC_Award_for_Best_Actress_in_a_Canadian_Film> .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://dbpedia.org/ontology/wikiPageExternalLink> <https://web.archive.org/web/20160311221800/http:/www.bfi.org.uk/films-tv-people/4ce2bb20eecad> .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://dbpedia.org/ontology/wikiPageExternalLink> <https://collections-search.bfi.org.uk/web/search/expert> .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://dbpedia.org/property/caption> "Moss at the 2016 Peabody Awards"@en .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://dbpedia.org/property/birthDate> "1967-08-21"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://dbpedia.org/property/birthPlace> <http://dbpedia.org/resource/Burnaby> .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://dbpedia.org/property/birthPlace> <http://dbpedia.org/resource/British_Columbia> .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://dbpedia.org/property/birthPlace> <http://dbpedia.org/resource/Canada> .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://dbpedia.org/property/spouse> "1999"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://dbpedia.org/property/spouse> "Steven Roy"@en .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://dbpedia.org/property/spouse> ""@en .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://dbpedia.org/property/children> "3"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://dbpedia.org/property/occupation> "Actress"@en .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://dbpedia.org/property/yearsActive> "1989"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://dbpedia.org/property/reason> "Help request: a live link can be searched for at https://collections-search.bfi.org.uk/web/search/expert - if available, replace the archive URL with the live link. Or if none found, remove this 'better source needed' template."@en .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://dbpedia.org/property/date> "October 2023"@en .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://dbpedia.org/property/title> "Awards for Carrie-Anne Moss"@en .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Person> .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q5> .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Thing> .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Person> .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q215627> .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#NaturalPerson> .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Animal> .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q729> .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Eukaryote> .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q19088> .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Species> .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://dbpedia.org/ontology/birthDate> "1967-08-21"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://dbpedia.org/ontology/birthYear> "1967"^^<http://www.w3.org/2001/XMLSchema#gYear> .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://dbpedia.org/ontology/birthPlace> <http://dbpedia.org/resource/Burnaby> .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://dbpedia.org/ontology/birthPlace> <http://dbpedia.org/resource/British_Columbia> .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://dbpedia.org/ontology/birthPlace> <http://dbpedia.org/resource/Canada> .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://dbpedia.org/ontology/occupation> <http://dbpedia.org/resource/Carrie-Anne_Moss__PersonFunction__1> .
+<http://dbpedia.org/resource/Carrie-Anne_Moss__PersonFunction__1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/PersonFunction> .
+<http://dbpedia.org/resource/Carrie-Anne_Moss__PersonFunction__1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Thing> .
+<http://dbpedia.org/resource/Carrie-Anne_Moss__PersonFunction__1> <http://dbpedia.org/ontology/title> "Actress"@en .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://dbpedia.org/ontology/activeYearsStartYear> "1989"^^<http://www.w3.org/2001/XMLSchema#gYear> .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://dbpedia.org/ontology/wikiPageOutDegree> "244"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://dbpedia.org/resource/Peabody_Award> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Peabody Award"@en .
+<http://dbpedia.org/resource/Burnaby> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Burnaby"@en .
+<http://dbpedia.org/resource/British_Columbia> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "British Columbia"@en .
+<http://dbpedia.org/resource/Canada> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Canada"@en .
+<http://dbpedia.org/resource/Trinity_(The_Matrix)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Trinity"@en .
+<http://dbpedia.org/resource/The_Matrix_(franchise)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "''The Matrix'' series"@en .
+<http://dbpedia.org/resource/Memento_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Memento"@en .
+<http://dbpedia.org/resource/Independent_Spirit_Award_for_Best_Supporting_Female> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Independent Spirit Award for Best Supporting Female"@en .
+<http://dbpedia.org/resource/Red_Planet_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Red Planet"@en .
+<http://dbpedia.org/resource/Chocolat_(2000_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Chocolat"@en .
+<http://dbpedia.org/resource/Fido_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Fido"@en .
+<http://dbpedia.org/resource/Snow_Cake> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Snow Cake"@en .
+<http://dbpedia.org/resource/Genie_Award_for_Best_Performance_by_an_Actress_in_a_Supporting_Role> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Genie Award for Best Performance by an Actress in a Supporting Role"@en .
+<http://dbpedia.org/resource/Disturbia_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Disturbia"@en .
+<http://dbpedia.org/resource/Unthinkable> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Unthinkable"@en .
+<http://dbpedia.org/resource/Silent_Hill:_Revelation> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Silent Hill: Revelation"@en .
+<http://dbpedia.org/resource/Pompeii_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Pompeii"@en .
+<http://dbpedia.org/resource/Jeri_Hogarth> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Jeri Hogarth"@en .
+<http://dbpedia.org/resource/Marvel_Television> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Marvel Television"@en .
+<http://dbpedia.org/resource/Netflix> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Netflix"@en .
+<http://dbpedia.org/resource/Jessica_Jones_(TV_series)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Jessica Jones"@en .
+<http://dbpedia.org/resource/Burnaby> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Burnaby"@en .
+<http://dbpedia.org/resource/The_Hollies> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "the Hollies"@en .
+<http://dbpedia.org/resource/Carrie_Anne> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Carrie Anne"@en .
+<http://dbpedia.org/resource/Magee_Secondary_School> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Magee Secondary School"@en .
+<http://dbpedia.org/resource/Dark_Justice> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Dark Justice"@en .
+<http://dbpedia.org/resource/Barcelona> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Barcelona"@en .
+<http://dbpedia.org/resource/American_Academy_of_Dramatic_Arts> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "American Academy of Dramatic Arts"@en .
+<http://dbpedia.org/resource/Fox_Broadcasting_Company> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Fox"@en .
+<http://dbpedia.org/resource/Models_Inc.> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Models Inc."@en .
+<http://dbpedia.org/resource/Melrose_Place> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Melrose Place"@en .
+<http://dbpedia.org/resource/Matrix_(TV_series)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Matrix"@en .
+<http://dbpedia.org/resource/Street_Justice> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Street Justice"@en .
+<http://dbpedia.org/resource/Baywatch> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Baywatch"@en .
+<http://dbpedia.org/resource/F/X:_The_Series> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "F/X: The Series"@en .
+<http://dbpedia.org/resource/Due_South> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Due South"@en .
+<http://dbpedia.org/resource/Gemini_Award> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Gemini Award"@en .
+<http://dbpedia.org/resource/B_movie> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "B movie"@en .
+<http://dbpedia.org/resource/The_Secret_Life_of_Algernon> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Secret Life of Algernon"@en .
+<http://dbpedia.org/resource/Breakthrough_role> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "breakthrough role"@en .
+<http://dbpedia.org/resource/Trinity_(The_Matrix)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Trinity"@en .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Matrix"@en .
+<http://dbpedia.org/resource/New_York_Daily_News> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "New York Daily News"@en .
+<http://dbpedia.org/resource/Saturn_Award_for_Best_Actress> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Saturn Award for Best Actress"@en .
+<http://dbpedia.org/resource/MTV_Movie_Award_for_Best_Breakthrough_Performance> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "MTV Movie Award for Breakthrough Female Performance"@en .
+<http://dbpedia.org/resource/Chocolat_(2000_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Chocolat"@en .
+<http://dbpedia.org/resource/Red_Planet_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Red Planet"@en .
+<http://dbpedia.org/resource/The_Crew_(2000_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Crew"@en .
+<http://dbpedia.org/resource/Memento_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Memento"@en .
+<http://dbpedia.org/resource/The_New_York_Times> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The New York Times"@en .
+<http://dbpedia.org/resource/Mars> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Mars"@en .
+<http://dbpedia.org/resource/Black_comedy> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "black comedy"@en .
+<http://dbpedia.org/resource/Michael_Dinner> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Michael Dinner"@en .
+<http://dbpedia.org/resource/Christopher_Nolan> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Christopher Nolan"@en .
+<http://dbpedia.org/resource/Neo-noir> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "neo-noir"@en .
+<http://dbpedia.org/resource/Anterograde_amnesia> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "anterograde amnesia"@en .
+<http://dbpedia.org/resource/Jennifer_Todd> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Jennifer Todd"@en .
+<http://dbpedia.org/resource/Sleeper_hit> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "sleeper hit"@en .
+<http://dbpedia.org/resource/Independent_Spirit_Award_for_Best_Supporting_Female> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Independent Spirit Award for Best Supporting Female"@en .
+<http://dbpedia.org/resource/Back-to-back_film_production> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "back-to-back"@en .
+<http://dbpedia.org/resource/The_Matrix_Reloaded> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Matrix Reloaded"@en .
+<http://dbpedia.org/resource/The_Matrix_Revolutions> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Matrix Revolutions"@en .
+<http://dbpedia.org/resource/BBC_Online> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "BBC Online"@en .
+<http://dbpedia.org/resource/Suspect_Zero> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Suspect Zero"@en .
+<http://dbpedia.org/resource/FBI> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "FBI"@en .
+<http://dbpedia.org/resource/Ensemble_cast> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "ensemble cast"@en .
+<http://dbpedia.org/resource/The_Chumscrubber> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Chumscrubber"@en .
+<http://dbpedia.org/resource/Sundance_Film_Festival> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Sundance Film Festival"@en .
+<http://dbpedia.org/resource/Fido_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Fido"@en .
+<http://dbpedia.org/resource/Parallel_universes_in_fiction> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "alternate universe"@en .
+<http://dbpedia.org/resource/Toronto_International_Film_Festival> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Toronto International Film Festival"@en .
+<http://dbpedia.org/resource/Los_Angeles_Times> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Los Angeles Times"@en .
+<http://dbpedia.org/resource/George_A._Romero> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "George A. Romero"@en .
+<http://dbpedia.org/resource/Douglas_Sirk> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Douglas Sirk"@en .
+<http://dbpedia.org/resource/Autistic> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "autistic"@en .
+<http://dbpedia.org/resource/Snow_Cake> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Snow Cake"@en .
+<http://dbpedia.org/resource/Genie_Award_for_Best_Performance_by_an_Actress_in_a_Supporting_Role> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Genie Award for Best Performance by an Actress in a Supporting Role"@en .
+<http://dbpedia.org/resource/Disturbia_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Disturbia"@en .
+<http://dbpedia.org/resource/Normal_(2007_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Normal"@en .
+<http://dbpedia.org/resource/Fireflies_in_the_Garden> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Fireflies in the Garden"@en .
+<http://dbpedia.org/resource/Berlin_International_Film_Festival> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Berlin International Film Festival"@en .
+<http://dbpedia.org/resource/Love_Hurts_(2009_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Love Hurts"@en .
+<http://dbpedia.org/resource/Unthinkable> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Unthinkable"@en .
+<http://dbpedia.org/resource/Gregor_Jordan> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Gregor Jordan"@en .
+<http://dbpedia.org/resource/Silent_Hill_3> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Claudia Wolf"@en .
+<http://dbpedia.org/resource/Silent_Hill_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Silent Hill"@en .
+<http://dbpedia.org/resource/Silent_Hill:_Revelation> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Silent Hill: Revelation"@en .
+<http://dbpedia.org/resource/Mass_Effect_2> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Mass Effect 2"@en .
+<http://dbpedia.org/resource/Mass_Effect_3> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Mass Effect 3"@en .
+<http://dbpedia.org/resource/Chuck_(TV_series)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Chuck"@en .
+<http://dbpedia.org/resource/CBS> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "CBS"@en .
+<http://dbpedia.org/resource/Vegas_(2012_TV_series)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Vegas"@en .
+<http://dbpedia.org/resource/Knife_Fight_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Knife Fight"@en .
+<http://dbpedia.org/resource/Bill_Guttentag> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Bill Guttentag"@en .
+<http://dbpedia.org/resource/Tribeca_Film_Festival> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Tribeca Film Festival"@en .
+<http://dbpedia.org/resource/Dark_comedy> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "dark comedy"@en .
+<http://dbpedia.org/resource/Compulsion_(2013_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Compulsion"@en .
+<http://dbpedia.org/resource/The_Clockwork_Girl_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Clockwork Girl"@en .
+<http://dbpedia.org/resource/3D_film> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "3D"@en .
+<http://dbpedia.org/resource/Pompeii_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Pompeii"@en .
+<http://dbpedia.org/resource/Paul_W._S._Anderson> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Paul W. S. Anderson"@en .
+<http://dbpedia.org/resource/Eruption_of_Mount_Vesuvius_in_79> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "eruption of Mount Vesuvius in 79"@en .
+<http://dbpedia.org/resource/Roman_Empire> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Roman Empire"@en .
+<http://dbpedia.org/resource/Pompeii> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Pompeii"@en .
+<http://dbpedia.org/resource/Elephant_Song_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Elephant Song"@en .
+<http://dbpedia.org/resource/Charles_Binamé> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Charles Binamé"@en .
+<http://dbpedia.org/resource/Toronto_International_Film_Festival> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Toronto International Film Festival"@en .
+<http://dbpedia.org/resource/Variety_(magazine)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Variety"@en .
+<http://dbpedia.org/resource/Pirate's_Passage> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Pirate's Passage"@en .
+<http://dbpedia.org/resource/Unity_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Unity"@en .
+<http://dbpedia.org/resource/Victor_Frankenstein> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Victor Frankenstein"@en .
+<http://dbpedia.org/resource/Frankenstein_(2015_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Frankenstein"@en .
+<http://dbpedia.org/resource/Mary_Shelley> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Mary Shelley"@en .
+<http://dbpedia.org/resource/Jessica_Jones_(TV_series)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Jessica Jones"@en .
+<http://dbpedia.org/resource/Jeri_Hogarth> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Jeri Hogarth"@en .
+<http://dbpedia.org/resource/Jeph_Loeb> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Jeph Loeb"@en .
+<http://dbpedia.org/resource/Melissa_Rosenberg> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Melissa Rosenberg"@en .
+<http://dbpedia.org/resource/Web_series> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "web series"@en .
+<http://dbpedia.org/resource/Daredevil_(TV_series)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Daredevil"@en .
+<http://dbpedia.org/resource/Iron_Fist_(TV_series)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Iron Fist"@en .
+<http://dbpedia.org/resource/The_Defenders_(miniseries)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Defenders"@en .
+<http://dbpedia.org/resource/AI> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "AI"@en .
+<http://dbpedia.org/resource/Humans_(TV_series)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Humans"@en .
+<http://dbpedia.org/resource/The_Bye_Bye_Man> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Bye Bye Man"@en .
+<http://dbpedia.org/resource/The_Matrix_(franchise)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Matrix film series"@en .
+<http://dbpedia.org/resource/The_Matrix_Resurrections> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Matrix Resurrections"@en .
+<http://dbpedia.org/resource/HBO_Max> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "HBO Max"@en .
+<http://dbpedia.org/resource/New_Hampshire> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "New Hampshire"@en .
+<http://dbpedia.org/resource/Lifestyle_brand> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "lifestyle brand"@en .
+<http://dbpedia.org/resource/Mindfulness> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "mindfulness"@en .
+<http://dbpedia.org/resource/Meditation> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "meditation"@en .
+<http://dbpedia.org/resource/Flashfire_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Flashfire"@en .
+<http://dbpedia.org/resource/The_Secret_Life_of_Algernon> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Secret Life of Algernon"@en .
+<http://dbpedia.org/resource/New_Blood_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "New Blood"@en .
+<http://dbpedia.org/resource/Trinity_(The_Matrix)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Trinity"@en .
+<http://dbpedia.org/resource/Chocolat_(2000_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Chocolat"@en .
+<http://dbpedia.org/resource/Red_Planet_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Red Planet"@en .
+<http://dbpedia.org/resource/Memento_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Memento"@en .
+<http://dbpedia.org/resource/Suspect_Zero> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Suspect Zero"@en .
+<http://dbpedia.org/resource/Confessions_of_an_Action_Star> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Confessions of an Action Star"@en .
+<http://dbpedia.org/resource/Fido_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Fido"@en .
+<http://dbpedia.org/resource/Snow_Cake> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Snow Cake"@en .
+<http://dbpedia.org/resource/Mini's_First_Time> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Mini's First Time"@en .
+<http://dbpedia.org/resource/Disturbia_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Disturbia"@en .
+<http://dbpedia.org/resource/Normal_(2007_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Normal"@en .
+<http://dbpedia.org/resource/Fireflies_in_the_Garden> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Fireflies in the Garden"@en .
+<http://dbpedia.org/resource/Love_Hurts_(2009_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Love Hurts"@en .
+<http://dbpedia.org/resource/Unthinkable> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Unthinkable"@en .
+<http://dbpedia.org/resource/Silent_Hill:_Revelation> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Silent Hill: Revelation"@en .
+<http://dbpedia.org/resource/Claudia_Wolf> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Claudia Wolf"@en .
+<http://dbpedia.org/resource/Knife_Fight_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Knife Fight"@en .
+<http://dbpedia.org/resource/The_Clockwork_Girl_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Clockwork Girl"@en .
+<http://dbpedia.org/resource/Treading_Water_(2013_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Treading Water"@en .
+<http://dbpedia.org/resource/Compulsion_(2013_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Compulsion"@en .
+<http://dbpedia.org/resource/Dragon_Nest:_Warriors'_Dawn> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Dragon Nest: Warriors' Dawn"@en .
+<http://dbpedia.org/resource/Pompeii_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Pompeii"@en .
+<http://dbpedia.org/resource/Elephant_Song_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Elephant Song"@en .
+<http://dbpedia.org/resource/Pirate's_Passage> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Pirate's Passage"@en .
+<http://dbpedia.org/resource/Unity_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Unity"@en .
+<http://dbpedia.org/resource/Frankenstein_(2015_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Frankenstein"@en .
+<http://dbpedia.org/resource/Brain_on_Fire_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Brain on Fire"@en .
+<http://dbpedia.org/resource/The_Bye_Bye_Man> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Bye Bye Man"@en .
+<http://dbpedia.org/resource/The_Matrix_Resurrections> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Matrix Resurrections"@en .
+<http://dbpedia.org/resource/Accidental_Texan> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Accidental Texan"@en .
+<http://dbpedia.org/resource/Die_Alone> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Die Alone"@en .
+<http://dbpedia.org/resource/Dark_Justice> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Dark Justice"@en .
+<http://dbpedia.org/resource/Street_Justice> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Street Justice"@en .
+<http://dbpedia.org/resource/Forever_Knight> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Forever Knight"@en .
+<http://dbpedia.org/resource/Down_the_Shore> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Down the Shore"@en .
+<http://dbpedia.org/resource/Matrix_(TV_series)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Matrix"@en .
+<http://dbpedia.org/resource/Doorways> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Doorways"@en .
+<http://dbpedia.org/resource/Silk_Stalkings> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Silk Stalkings"@en .
+<http://dbpedia.org/resource/List_of_Silk_Stalkings_episodes> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Perfect Alibi"@en .
+<http://dbpedia.org/resource/Models_Inc.> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Models Inc."@en .
+<http://dbpedia.org/resource/Baywatch> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Baywatch"@en .
+<http://dbpedia.org/resource/Nowhere_Man_(American_TV_series)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Nowhere Man"@en .
+<http://dbpedia.org/resource/F/X:_The_Series> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "F/X: The Series"@en .
+<http://dbpedia.org/resource/Due_South> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Due South"@en .
+<http://dbpedia.org/resource/Viper_(TV_series)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Viper"@en .
+<http://dbpedia.org/resource/Pretty/Handsome> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Pretty/Handsome"@en .
+<http://dbpedia.org/resource/Chuck_(TV_series)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Chuck"@en .
+<http://dbpedia.org/resource/Vegas_(2012_TV_series)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Vegas"@en .
+<http://dbpedia.org/resource/Crossing_Lines> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Crossing Lines"@en .
+<http://dbpedia.org/resource/Jessica_Jones_(TV_series)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Jessica Jones"@en .
+<http://dbpedia.org/resource/Jeri_Hogarth> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Jeri Hogarth"@en .
+<http://dbpedia.org/resource/Daredevil_(TV_series)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Daredevil"@en .
+<http://dbpedia.org/resource/Humans_(TV_series)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Humans"@en .
+<http://dbpedia.org/resource/Man_Seeking_Woman> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Man Seeking Woman"@en .
+<http://dbpedia.org/resource/Iron_Fist_(TV_series)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Iron Fist"@en .
+<http://dbpedia.org/resource/The_Defenders_(miniseries)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Defenders"@en .
+<http://dbpedia.org/resource/Wisting_(TV_series)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Wisting"@en .
+<http://dbpedia.org/resource/Tell_Me_a_Story_(TV_series)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Tell Me a Story"@en .
+<http://dbpedia.org/resource/The_Acolyte_(TV_series)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Acolyte"@en .
+<http://dbpedia.org/resource/FUBAR_(TV_series)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "FUBAR"@en .
+<http://dbpedia.org/resource/Enter_the_Matrix> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Enter the Matrix"@en .
+<http://dbpedia.org/resource/Trinity_(The_Matrix)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Trinity"@en .
+<http://dbpedia.org/resource/Full-motion_video> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "FMV"@en .
+<http://dbpedia.org/resource/Motion_capture> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Motion capture"@en .
+<http://dbpedia.org/resource/Mass_Effect_2> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Mass Effect 2"@en .
+<http://dbpedia.org/resource/List_of_Mass_Effect_characters> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Aria T'Loak"@en .
+<http://dbpedia.org/resource/Mass_Effect_3> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Mass Effect 3"@en .
+<http://dbpedia.org/resource/Mass_Effect_3_downloadable_content> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Omega"@en .
+<http://dbpedia.org/resource/Mass_Effect:_Legendary_Edition> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Mass Effect: Legendary Edition"@en .
+<http://dbpedia.org/resource/The_Matrix_Awakens> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Matrix Awakens"@en .
+<http://dbpedia.org/resource/Horizon_Forbidden_West> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Horizon Forbidden West"@en .
+<http://dbpedia.org/resource/Due_South> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Due South"@en .
+<http://dbpedia.org/resource/Gemini_Award> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Gemini Award"@en .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Matrix"@en .
+<http://dbpedia.org/resource/Empire_Award_for_Best_Newcomer> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Empire Award for Best Newcomer"@en .
+<http://dbpedia.org/resource/Damien_O'Donnell> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Damien O'Donnell"@en .
+<http://dbpedia.org/resource/MTV_Movie_Award_for_Best_Breakthrough_Performance> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "MTV Movie Award for Breakthrough Female Performance"@en .
+<http://dbpedia.org/resource/Saturn_Award_for_Best_Actress> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Saturn Award for Best Actress"@en .
+<http://dbpedia.org/resource/Blockbuster_Entertainment_Award> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Blockbuster Entertainment Award"@en .
+<http://dbpedia.org/resource/Chocolat_(2000_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Chocolat"@en .
+<http://dbpedia.org/resource/Screen_Actors_Guild_Award_for_Outstanding_Performance_by_a_Cast_in_a_Motion_Picture> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Screen Actors Guild Award for Outstanding Performance by a Cast in a Motion Picture"@en .
+<http://dbpedia.org/resource/Memento_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Memento"@en .
+<http://dbpedia.org/resource/Independent_Spirit_Award_for_Best_Supporting_Female> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Independent Spirit Award for Best Supporting Female"@en .
+<http://dbpedia.org/resource/Chlotrudis_Award> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Chlotrudis Award"@en .
+<http://dbpedia.org/resource/Golden_Schmoes_Award> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Golden Schmoes Award"@en .
+<http://dbpedia.org/resource/Teen_Choice_Award> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Teen Choice Award"@en .
+<http://dbpedia.org/resource/Fido_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Fido"@en .
+<http://dbpedia.org/resource/Vancouver_Film_Critics_Circle_Award_for_Best_Actress_in_a_Canadian_Film> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Vancouver Film Critics Circle Award for Best Actress in a Canadian Film"@en .
+<http://dbpedia.org/resource/Snow_Cake> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Snow Cake"@en .
+<http://dbpedia.org/resource/Genie_Award_for_Best_Performance_by_an_Actress_in_a_Supporting_Role> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Genie Award for Best Performance by an Actress in a Supporting Role"@en .
+<http://dbpedia.org/resource/Die_Alone> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Die Alone"@en .
+<http://dbpedia.org/resource/Canadian_Screen_Award_for_Best_Lead_Performance_in_a_Drama_Film> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Canadian Screen Award for Best Lead Performance in a Drama Film"@en .
+<http://dbpedia.org/resource/British_Film_Institute> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "British Film Institute"@en .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://xmlns.com/foaf/0.1/depiction> <http://commons.wikimedia.org/wiki/Special:FilePath/Carrie-Anne_Moss_May_2016.jpg> .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://dbpedia.org/ontology/thumbnail> <http://commons.wikimedia.org/wiki/Special:FilePath/Carrie-Anne_Moss_May_2016.jpg?width=300> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Carrie-Anne_Moss_May_2016.jpg> <http://xmlns.com/foaf/0.1/thumbnail> <http://commons.wikimedia.org/wiki/Special:FilePath/Carrie-Anne_Moss_May_2016.jpg?width=300> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Carrie-Anne_Moss_May_2016.jpg> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Image> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Carrie-Anne_Moss_May_2016.jpg?width=300> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Image> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Carrie-Anne_Moss_May_2016.jpg> <http://purl.org/dc/elements/1.1/rights> <http://en.wikipedia.org/wiki/File:Carrie-Anne_Moss_May_2016.jpg> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Carrie-Anne_Moss_May_2016.jpg?width=300> <http://purl.org/dc/elements/1.1/rights> <http://en.wikipedia.org/wiki/File:Carrie-Anne_Moss_May_2016.jpg> .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://xmlns.com/foaf/0.1/depiction> <http://commons.wikimedia.org/wiki/Special:FilePath/Carrie-Anne_Moss_07_TIFF.jpg> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Carrie-Anne_Moss_07_TIFF.jpg> <http://xmlns.com/foaf/0.1/thumbnail> <http://commons.wikimedia.org/wiki/Special:FilePath/Carrie-Anne_Moss_07_TIFF.jpg?width=300> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Carrie-Anne_Moss_07_TIFF.jpg> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Image> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Carrie-Anne_Moss_07_TIFF.jpg?width=300> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Image> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Carrie-Anne_Moss_07_TIFF.jpg> <http://purl.org/dc/elements/1.1/rights> <http://en.wikipedia.org/wiki/File:Carrie-Anne_Moss_07_TIFF.jpg> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Carrie-Anne_Moss_07_TIFF.jpg?width=300> <http://purl.org/dc/elements/1.1/rights> <http://en.wikipedia.org/wiki/File:Carrie-Anne_Moss_07_TIFF.jpg> .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://xmlns.com/foaf/0.1/depiction> <http://commons.wikimedia.org/wiki/Special:FilePath/Carrie-Anne_Moss_May_2016.jpg> .
+# completed 2025-06-30T11:17:14Z

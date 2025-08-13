@@ -1,0 +1,8 @@
+<http://dbpedia.org/resource/Roadshow_Entertainment> <http://www.w3.org/2000/01/rdf-schema#label> "Roadshow Entertainment"@en .
+<http://dbpedia.org/resource/Roadshow_Entertainment> <http://dbpedia.org/ontology/industry> <http://dbpedia.org/resource/Film_distribution> .
+<http://dbpedia.org/resource/Roadshow_Entertainment> <http://dbpedia.org/property/industry> <http://dbpedia.org/resource/Film_distribution> .
+<http://dbpedia.org/resource/Roadshow_Entertainment> <http://dbpedia.org/property/name> "Roadshow Entertainment"@en .
+<http://dbpedia.org/resource/Roadshow_Entertainment> <http://dbpedia.org/property/products> <http://dbpedia.org/resource/Home_video> .
+<http://dbpedia.org/resource/Roadshow_Entertainment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Organisation> .
+<http://dbpedia.org/resource/Roadshow_Entertainment> <http://dbpedia.org/property/products> <http://dbpedia.org/resource/Film> .
+<http://dbpedia.org/resource/Roadshow_Entertainment> <http://dbpedia.org/ontology/foundingDate> "1982-04-16"^^<http://www.w3.org/2001/XMLSchema#date> .

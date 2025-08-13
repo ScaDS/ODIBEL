@@ -1,0 +1,769 @@
+# started 2025-06-30T11:00:08Z
+<http://dbpedia.org/resource/The_Wachowskis> <http://www.w3.org/2000/01/rdf-schema#label> "The Wachowskis"@en .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/ontology/wikiPageID> "33126"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://en.wikipedia.org/wiki/The_Wachowskis?oldid=1295440716&ns=0> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/ontology/wikiPageRevisionID> "1295440716"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/ontology/wikiPageLength> "157954"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Living_people> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:20th-century_American_screenwriters> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:21st-century_American_screenwriters> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:21st-century_American_women_writers> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:American_action_film_directors> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:American_comics_writers> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:American_film_producers> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:American_people_of_Polish_descent> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:American_video_game_directors> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:American_women_film_directors> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:American_women_screenwriters> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:English-language_film_directors> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:American_LGBTQ_film_directors> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:LGBTQ_people_from_Illinois> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:LGBTQ_film_producers> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:LGBTQ_comics_creators> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:American_science_fiction_film_directors> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Screenwriting_duos> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:American_showrunners> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Sibling_filmmakers> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:American_transgender_women> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:American_video_game_writers> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Whitney_M._Young_Magnet_High_School_alumni> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Women_and_video_games> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:American_women_science_fiction_and_fantasy_writers> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Writers_from_Chicago> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Marvel_Comics_people> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:American_women_film_producers> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Screenwriters_from_Illinois> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:American_women_television_producers> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:American_women_television_writers> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:American_female_comics_writers> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Filmmaking_duos> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:American_television_writers> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:1965_births> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:1967_births> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:LGBTQ_television_directors> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:LGBTQ_television_producers> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Postmodernist_filmmakers> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:American_transgender_writers> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://xmlns.com/foaf/0.1/isPrimaryTopicOf> <http://en.wikipedia.org/wiki/The_Wachowskis> .
+<http://en.wikipedia.org/wiki/The_Wachowskis> <http://xmlns.com/foaf/0.1/primaryTopic> <http://dbpedia.org/resource/The_Wachowskis> .
+<http://en.wikipedia.org/wiki/The_Wachowskis> <http://purl.org/dc/elements/1.1/language> "en" .
+<http://en.wikipedia.org/wiki/The_Wachowskis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Document> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Pp> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Short_description> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Use_American_English> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Use_mdy_dates> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Infobox_person> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Efn> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:IPAc-en> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Main> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Center> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:'> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Main> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:'> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Blockquote> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Clear> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:No> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:No> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Partial> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Partial> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:No> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:No> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Partial> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:No> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Partial> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Partial> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:No> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:No> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Partial> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:No> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:No> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:No> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:No> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:No> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Partial> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:No> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:No> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Yes> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Notelist> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Reflist> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Commons_category> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:IMDb_name> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:IMDb_name> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:The_Wachowskis> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Saturn_Award_for_Best_Director> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Authority_control> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Birth_date_and_age> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Birth_date_and_age> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Ubl> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/name> "The Wachowskis"@en .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/caption> "Lana Wachowski in 2025 at the opening of the 75th Berlin International Film Festival"@en .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/birthName> "Laurence Wachowski"@en .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/birthName> "Andrew Paul Wachowski"@en .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/birthDate> "1965-06-21"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/birthDate> "1967-12-29"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/birthPlace> "Chicago, Illinois, U.S."@en .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/otherNames> "Collectively:"@en .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/occupation> "Film and television directors, writers, producers"@en .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/yearsActive> "1994"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/spouse> "Lana:"@en .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/spouse> ""@en .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/spouse> "2002"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/spouse> "1993"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/spouse> "Thea Bloom"@en .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/spouse> ""@en .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/spouse> ""@en .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/spouse> "2009"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/spouse> "Karin Winslow"@en .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/spouse> ""@en .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/spouse> "----\nLilly:"@en .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/spouse> "1991"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/spouse> "Alisa Blasingame"@en .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/spouse> ""@en .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/relatives> <http://dbpedia.org/resource/Laurence_Luckinbill> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/notableWorks> "Bound"@en .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/notableWorks> "The Matrix series"@en .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/notableWorks> "V for Vendetta"@en .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/notableWorks> "Speed Racer"@en .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/notableWorks> "Cloud Atlas"@en .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/notableWorks> "Jupiter Ascending"@en .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/notableWorks> "Sense8"@en .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/property/notableWorks> ""@en .
+<http://dbpedia.org/resource/The_Wachowskis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Person> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q5> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Thing> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Person> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q215627> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#NaturalPerson> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Animal> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q729> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Eukaryote> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q19088> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Species> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://xmlns.com/foaf/0.1/name> "The Wachowskis"@en .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/ontology/birthDate> "1965-06-21"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/ontology/birthYear> "1965"^^<http://www.w3.org/2001/XMLSchema#gYear> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/ontology/birthPlace> <http://dbpedia.org/resource/Chicago> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/ontology/alias> "Collectively:"@en .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/ontology/occupation> <http://dbpedia.org/resource/Screenwriter> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/ontology/occupation> <http://dbpedia.org/resource/The_Wachowskis__PersonFunction__1> .
+<http://dbpedia.org/resource/The_Wachowskis__PersonFunction__1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/PersonFunction> .
+<http://dbpedia.org/resource/The_Wachowskis__PersonFunction__1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Thing> .
+<http://dbpedia.org/resource/The_Wachowskis__PersonFunction__1> <http://dbpedia.org/ontology/title> "Film and television directors, writers, producers"@en .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/ontology/activeYearsStartYear> "1994"^^<http://www.w3.org/2001/XMLSchema#gYear> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/ontology/birthName> "Laurence Wachowski"@en .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/ontology/birthName> "Andrew Paul Wachowski"@en .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/ontology/relative> <http://dbpedia.org/resource/Laurence_Luckinbill> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/ontology/wikiPageOutDegree> "478"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://dbpedia.org/resource/75th_Berlin_International_Film_Festival> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "75th Berlin International Film Festival"@en .
+<http://dbpedia.org/resource/Chicago> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Chicago"@en .
+<http://dbpedia.org/resource/Laurence_Luckinbill> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Laurence Luckinbill"@en .
+<http://dbpedia.org/resource/Bound_(1996_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Bound"@en .
+<http://dbpedia.org/resource/The_Matrix_(franchise)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "''The Matrix'' series"@en .
+<http://dbpedia.org/resource/V_for_Vendetta_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "V for Vendetta"@en .
+<http://dbpedia.org/resource/Speed_Racer_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Speed Racer"@en .
+<http://dbpedia.org/resource/Cloud_Atlas_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Cloud Atlas"@en .
+<http://dbpedia.org/resource/Jupiter_Ascending> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Jupiter Ascending"@en .
+<http://dbpedia.org/resource/Sense8> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Sense8"@en .
+<http://dbpedia.org/resource/Trans_women> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "trans women"@en .
+<http://dbpedia.org/resource/Bound_(1996_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Bound"@en .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Matrix"@en .
+<http://dbpedia.org/resource/Saturn_Award_for_Best_Director> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Saturn Award for Best Director"@en .
+<http://dbpedia.org/resource/The_Matrix_Reloaded> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Matrix Reloaded"@en .
+<http://dbpedia.org/resource/The_Matrix_Revolutions> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Matrix Revolutions"@en .
+<http://dbpedia.org/resource/The_Matrix_(franchise)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "''Matrix'' franchise"@en .
+<http://dbpedia.org/resource/V_for_Vendetta_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "V for Vendetta"@en .
+<http://dbpedia.org/resource/V_for_Vendetta> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "the graphic novel"@en .
+<http://dbpedia.org/resource/Alan_Moore> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Alan Moore"@en .
+<http://dbpedia.org/resource/David_Lloyd_(comics)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "David Lloyd"@en .
+<http://dbpedia.org/resource/Speed_Racer_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Speed Racer"@en .
+<http://dbpedia.org/resource/Speed_Racer> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "the Japanese anime series"@en .
+<http://dbpedia.org/resource/Cloud_Atlas_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Cloud Atlas"@en .
+<http://dbpedia.org/resource/Cloud_Atlas_(novel)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "the novel"@en .
+<http://dbpedia.org/resource/David_Mitchell_(author)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "David Mitchell"@en .
+<http://dbpedia.org/resource/Tom_Tykwer> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Tom Tykwer"@en .
+<http://dbpedia.org/resource/Jupiter_Ascending> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Jupiter Ascending"@en .
+<http://dbpedia.org/resource/Netflix> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Netflix"@en .
+<http://dbpedia.org/resource/Sense8> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Sense8"@en .
+<http://dbpedia.org/resource/J._Michael_Straczynski> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "J. Michael Straczynski"@en .
+<http://dbpedia.org/resource/Series_finale> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "series finale"@en .
+<http://dbpedia.org/resource/Showtime_(TV_network)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Showtime"@en .
+<http://dbpedia.org/resource/Work_in_Progress_(TV_series)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Work in Progress"@en .
+<http://dbpedia.org/resource/The_Matrix_Resurrections> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Matrix Resurrections"@en .
+<http://dbpedia.org/resource/Aleksandar_Hemon> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Aleksandar Hemon"@en .
+<http://dbpedia.org/resource/Chicago> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Chicago"@en .
+<http://dbpedia.org/resource/Née> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "née"@en .
+<http://dbpedia.org/resource/Polish_American> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Polish"@en .
+<http://dbpedia.org/resource/Primetime_Emmy_Award> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Primetime Emmy Award"@en .
+<http://dbpedia.org/resource/Laurence_Luckinbill> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Laurence Luckinbill"@en .
+<http://dbpedia.org/resource/Bound_(1996_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Bound"@en .
+<http://dbpedia.org/resource/Beverly,_Chicago> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Beverly"@en .
+<http://dbpedia.org/resource/Whitney_Young_Magnet_High_School> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Whitney Young High School"@en .
+<http://dbpedia.org/resource/Dungeons_&_Dragons> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Dungeons & Dragons"@en .
+<http://dbpedia.org/resource/Bard_College> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Bard College"@en .
+<http://dbpedia.org/resource/Emerson_College> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Emerson College"@en .
+<http://dbpedia.org/resource/Boston> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Boston"@en .
+<http://dbpedia.org/resource/Ectokid> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Ectokid"@en .
+<http://dbpedia.org/resource/Marvel_Comics> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Marvel Comics"@en .
+<http://dbpedia.org/resource/Razorline> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Razorline"@en .
+<http://dbpedia.org/resource/Clive_Barker> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Clive Barker"@en .
+<http://dbpedia.org/resource/Hellraiser_(comics)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Clive Barker's Hellraiser"@en .
+<http://dbpedia.org/resource/Nightbreed_(comics)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Clive Barker's Nightbreed"@en .
+<http://dbpedia.org/resource/Epic_Comics> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Epic Comics"@en .
+<http://dbpedia.org/resource/Assassins_(1995_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Assassins"@en .
+<http://dbpedia.org/resource/Richard_Donner> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Richard Donner"@en .
+<http://dbpedia.org/resource/Warner_Bros.> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Warner Bros."@en .
+<http://dbpedia.org/resource/Brian_Helgeland> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Brian Helgeland"@en .
+<http://dbpedia.org/resource/Neo-noir> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "neo-noir"@en .
+<http://dbpedia.org/resource/Bound_(1996_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Bound"@en .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Matrix"@en .
+<http://dbpedia.org/resource/Science_fiction_film> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "science fiction"@en .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Keanu Reeves"@en .
+<http://dbpedia.org/resource/Neo_(The_Matrix)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Neo"@en .
+<http://dbpedia.org/resource/Simulated_reality> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "simulated reality"@en .
+<http://dbpedia.org/resource/Laurence_Fishburne> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Laurence Fishburne"@en .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Carrie-Anne Moss"@en .
+<http://dbpedia.org/resource/Hugo_Weaving> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Hugo Weaving"@en .
+<http://dbpedia.org/resource/Joe_Pantoliano> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Joe Pantoliano"@en .
+<http://dbpedia.org/resource/Academy_Award_for_Best_Visual_Effects> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "\"Best Visual Effects\""@en .
+<http://dbpedia.org/resource/Bullet_time> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "bullet time"@en .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "major influence for action movies"@en .
+<http://dbpedia.org/resource/National_Film_Registry> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "National Film Registry"@en .
+<http://dbpedia.org/resource/Library_of_Congress> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Library of Congress"@en .
+<http://dbpedia.org/resource/Back_to_back_film_production> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "back-to-back"@en .
+<http://dbpedia.org/resource/The_Matrix_Reloaded> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Matrix Reloaded"@en .
+<http://dbpedia.org/resource/The_Matrix_Revolutions> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Matrix Revolutions"@en .
+<http://dbpedia.org/resource/R_rating_(Motion_Picture_Association_of_America)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "R-rated film"@en .
+<http://dbpedia.org/resource/Deadpool_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Deadpool"@en .
+<http://dbpedia.org/resource/Geof_Darrow> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Geof Darrow"@en .
+<http://dbpedia.org/resource/Neil_Gaiman> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Neil Gaiman"@en .
+<http://dbpedia.org/resource/Dave_Gibbons> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Dave Gibbons"@en .
+<http://dbpedia.org/resource/Paul_Chadwick> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Paul Chadwick"@en .
+<http://dbpedia.org/resource/Ted_McKeever> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Ted McKeever"@en .
+<http://dbpedia.org/resource/Poppy_Z._Brite> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Poppy Z. Brite"@en .
+<http://dbpedia.org/resource/Steve_Skroce> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Steve Skroce"@en .
+<http://dbpedia.org/resource/V_for_Vendetta_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "V for Vendetta"@en .
+<http://dbpedia.org/resource/Alan_Moore> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Alan Moore"@en .
+<http://dbpedia.org/resource/David_Lloyd_(comics)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "David Lloyd"@en .
+<http://dbpedia.org/resource/V_for_Vendetta> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "of the same name"@en .
+<http://dbpedia.org/resource/Natalie_Portman> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Natalie Portman"@en .
+<http://dbpedia.org/resource/Hugo_Weaving> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Hugo Weaving"@en .
+<http://dbpedia.org/resource/Joel_Silver> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Joel Silver"@en .
+<http://dbpedia.org/resource/James_McTeigue> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "James McTeigue"@en .
+<http://dbpedia.org/resource/Guy_Fawkes_mask> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Guy Fawkes mask"@en .
+<http://dbpedia.org/resource/David_Lloyd_(comics)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "David Lloyd"@en .
+<http://dbpedia.org/resource/Hacktivist> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "hacktivist"@en .
+<http://dbpedia.org/resource/Anonymous_(group)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Anonymous"@en .
+<http://dbpedia.org/resource/The_Invasion_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Invasion"@en .
+<http://dbpedia.org/resource/Oliver_Hirschbiegel> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Oliver Hirschbiegel"@en .
+<http://dbpedia.org/resource/The_Body_Snatchers> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Body Snatchers"@en .
+<http://dbpedia.org/resource/Speed_Racer_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Speed Racer"@en .
+<http://dbpedia.org/resource/Emile_Hirsch> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Emile Hirsch"@en .
+<http://dbpedia.org/resource/Speed_Racer> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "1960s Japanese manga series"@en .
+<http://dbpedia.org/resource/Speed_Racer> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "anime television series"@en .
+<http://dbpedia.org/resource/David_Tattersall> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "David Tattersall"@en .
+<http://dbpedia.org/resource/Digital_cinematography> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "digitally"@en .
+<http://dbpedia.org/resource/Digital_backlot> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "digital backlot"@en .
+<http://dbpedia.org/resource/Box-office_bomb> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "commercial failure"@en .
+<http://dbpedia.org/resource/29th_Golden_Raspberry_Awards> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "29th Golden Raspberry Awards"@en .
+<http://dbpedia.org/resource/Cult_film> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "cult film"@en .
+<http://dbpedia.org/resource/Ninja_Assassin> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Ninja Assassin"@en .
+<http://dbpedia.org/resource/Martial_arts_film> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "martial arts film"@en .
+<http://dbpedia.org/resource/Rain_(entertainer)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Rain"@en .
+<http://dbpedia.org/resource/J._Michael_Straczynski> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "J. Michael Straczynski"@en .
+<http://dbpedia.org/resource/Cloud_Atlas_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Cloud Atlas"@en .
+<http://dbpedia.org/resource/David_Mitchell_(author)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "David Mitchell"@en .
+<http://dbpedia.org/resource/Cloud_Atlas_(novel)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "2004 novel"@en .
+<http://dbpedia.org/resource/Ensemble_cast> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "ensemble cast"@en .
+<http://dbpedia.org/resource/Tom_Hanks> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Tom Hanks"@en .
+<http://dbpedia.org/resource/Halle_Berry> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Halle Berry"@en .
+<http://dbpedia.org/resource/Tom_Tykwer> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Tom Tykwer"@en .
+<http://dbpedia.org/resource/2012_Toronto_International_Film_Festival> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "37th annual Toronto International Film Festival"@en .
+<http://dbpedia.org/resource/German_Film_Award> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "German Film Award"@en .
+<http://dbpedia.org/resource/Saturn_Award> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Saturn Award"@en .
+<http://dbpedia.org/resource/Jupiter_Ascending> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Jupiter Ascending"@en .
+<http://dbpedia.org/resource/Space_opera> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "space opera"@en .
+<http://dbpedia.org/resource/Channing_Tatum> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Channing Tatum"@en .
+<http://dbpedia.org/resource/Mila_Kunis> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Mila Kunis"@en .
+<http://dbpedia.org/resource/John_Gaeta> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "John Gaeta"@en .
+<http://dbpedia.org/resource/Kym_Barrett> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Kym Barrett"@en .
+<http://dbpedia.org/resource/Deadline_Hollywood> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Deadline"@en .
+<http://dbpedia.org/resource/Netflix> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Netflix"@en .
+<http://dbpedia.org/resource/Sense8> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Sense8"@en .
+<http://dbpedia.org/resource/Ensemble_cast> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "ensemble cast"@en .
+<http://dbpedia.org/resource/LGBT> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "LGBT"@en .
+<http://dbpedia.org/resource/GLAAD_Media_Award> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "GLAAD Media Award"@en .
+<http://dbpedia.org/resource/GLAAD_Media_Award> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Outstanding Drama Series"@en .
+<http://dbpedia.org/resource/Primetime_Emmy_Award> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Primetime Emmy Award"@en .
+<http://dbpedia.org/resource/Primetime_Emmy_Award_for_Outstanding_Main_Title_Theme_Music> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Outstanding Original Main Title Theme Music"@en .
+<http://dbpedia.org/resource/Christmas_by_medium> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Christmas special"@en .
+<http://dbpedia.org/resource/Academy_of_Motion_Picture_Arts_and_Sciences> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Academy of Motion Picture Arts and Sciences"@en .
+<http://dbpedia.org/resource/Showrunner> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "showrun"@en .
+<http://dbpedia.org/resource/Comedy_drama> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "drama-comedy"@en .
+<http://dbpedia.org/resource/Work_in_Progress_(TV_series)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Work in Progress"@en .
+<http://dbpedia.org/resource/Showtime_(TV_network)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Showtime"@en .
+<http://dbpedia.org/resource/The_Matrix_Resurrections> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Matrix Resurrections"@en .
+<http://dbpedia.org/resource/Collider_(website)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Collider"@en .
+<http://dbpedia.org/resource/Gay> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "gay"@en .
+<http://dbpedia.org/resource/Missouri> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Missouri"@en .
+<http://dbpedia.org/resource/Caleb_Hearon> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Caleb Hearon"@en .
+<http://dbpedia.org/resource/Colin_Trevorrow> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Colin Trevorrow"@en .
+<http://dbpedia.org/resource/Drew_Goddard> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Drew Goddard"@en .
+<http://dbpedia.org/resource/J._Michael_Straczynski> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "J. Michael Straczynski"@en .
+<http://dbpedia.org/resource/Writer's_Digest> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Writer's Digest"@en .
+<http://dbpedia.org/resource/Roger_Corman> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Roger Corman"@en .
+<http://dbpedia.org/resource/Coen_brothers> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Coen brothers"@en .
+<http://dbpedia.org/resource/The_New_York_Times> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The New York Times"@en .
+<http://dbpedia.org/resource/John_Woo> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "John Woo"@en .
+<http://dbpedia.org/resource/Odyssey> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Odyssey"@en .
+<http://dbpedia.org/resource/John_Huston> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "John Huston"@en .
+<http://dbpedia.org/resource/Stanley_Kubrick> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Stanley Kubrick"@en .
+<http://dbpedia.org/resource/Fritz_Lang> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Fritz Lang"@en .
+<http://dbpedia.org/resource/George_Lucas> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "George Lucas"@en .
+<http://dbpedia.org/resource/Ridley_Scott> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Ridley Scott"@en .
+<http://dbpedia.org/resource/Billy_Wilder> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Billy Wilder"@en .
+<http://dbpedia.org/resource/Homer> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Homer"@en .
+<http://dbpedia.org/resource/Hermann_Hesse> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Hermann Hesse"@en .
+<http://dbpedia.org/resource/Fyodor_Dostoyevsky> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Fyodor Dostoyevsky"@en .
+<http://dbpedia.org/resource/Cornel_West> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Cornel West"@en .
+<http://dbpedia.org/resource/Gadfly_Online> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Gadfly"@en .
+<http://dbpedia.org/resource/The_Treasure_of_the_Sierra_Madre_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Treasure of the Sierra Madre"@en .
+<http://dbpedia.org/resource/Sunset_Boulevard_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Sunset Boulevard"@en .
+<http://dbpedia.org/resource/The_Lost_Weekend_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Lost Weekend"@en .
+<http://dbpedia.org/resource/Alfred_Hitchcock> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Alfred Hitchcock"@en .
+<http://dbpedia.org/resource/Strangers_on_a_Train_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Strangers on a Train"@en .
+<http://dbpedia.org/resource/Psycho_(1960_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Psycho"@en .
+<http://dbpedia.org/resource/Roman_Polanski> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Roman Polanski"@en .
+<http://dbpedia.org/resource/Repulsion_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Repulsion"@en .
+<http://dbpedia.org/resource/Francis_Ford_Coppola> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Francis Ford Coppola"@en .
+<http://dbpedia.org/resource/The_Godfather_(film_series)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "''Godfather'' movies"@en .
+<http://dbpedia.org/resource/The_Conversation> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Conversation"@en .
+<http://dbpedia.org/resource/Ken_Wilber> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Ken Wilber"@en .
+<http://dbpedia.org/resource/J._R._R._Tolkien> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Tolkien"@en .
+<http://dbpedia.org/resource/The_Lord_of_the_Rings> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "trilogy"@en .
+<http://dbpedia.org/resource/Geof_Darrow> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Geof Darrow"@en .
+<http://dbpedia.org/resource/Ghost_in_the_Shell> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Ghost in the Shell"@en .
+<http://dbpedia.org/resource/Ninja_Scroll> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Ninja Scroll"@en .
+<http://dbpedia.org/resource/Akira_(1988_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Akira"@en .
+<http://dbpedia.org/resource/Stanley_Kubrick> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Stanley Kubrick"@en .
+<http://dbpedia.org/resource/2001:_A_Space_Odyssey_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "2001: A Space Odyssey"@en .
+<http://dbpedia.org/resource/Blade_Runner> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Blade Runner"@en .
+<http://dbpedia.org/resource/Ma_vie_en_rose> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Ma vie en rose"@en .
+<http://dbpedia.org/resource/My_Neighbor_Totoro> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "My Neighbor Totoro"@en .
+<http://dbpedia.org/resource/Wicked_City_(1987_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Wicked City"@en .
+<http://dbpedia.org/resource/Fist_of_the_North_Star_(1986_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Fist of the North Star"@en .
+<http://dbpedia.org/resource/Anime> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "anime"@en .
+<http://dbpedia.org/resource/Home_video> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "home video"@en .
+<http://dbpedia.org/resource/Deleted_scene> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "deleted scene"@en .
+<http://dbpedia.org/resource/Director's_cut> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "director's"@en .
+<http://dbpedia.org/resource/Extended_cut> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "extended cut"@en .
+<http://dbpedia.org/resource/Audio_commentary> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "audio commentary"@en .
+<http://dbpedia.org/resource/LaserDisc> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "LaserDisc"@en .
+<http://dbpedia.org/resource/Film_crew> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "film crew"@en .
+<http://dbpedia.org/resource/Television_crew> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "television crew"@en .
+<http://dbpedia.org/resource/Netflix> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Netflix"@en .
+<http://dbpedia.org/resource/Sense8> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Sense8"@en .
+<http://dbpedia.org/resource/Bound_(1996_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Bound"@en .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Matrix"@en .
+<http://dbpedia.org/resource/The_Matrix_Reloaded> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Matrix Reloaded"@en .
+<http://dbpedia.org/resource/The_Matrix_Revolutions> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Matrix Revolutions"@en .
+<http://dbpedia.org/resource/Speed_Racer_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Speed Racer"@en .
+<http://dbpedia.org/resource/Cloud_Atlas_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Cloud Atlas"@en .
+<http://dbpedia.org/resource/Jupiter_Ascending> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Jupiter Ascending"@en .
+<http://dbpedia.org/resource/Sense8> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Sense8"@en .
+<http://dbpedia.org/resource/Kym_Barrett> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Kym Barrett"@en .
+<http://dbpedia.org/resource/Costume_designer> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Costume designer"@en .
+<http://dbpedia.org/resource/Enter_the_Matrix> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Enter the Matrix"@en .
+<http://dbpedia.org/resource/Production_designer> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Production designer"@en .
+<http://dbpedia.org/resource/Art_director> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "(supervising) art director"@en .
+<http://dbpedia.org/resource/Geof_Darrow> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Geof Darrow"@en .
+<http://dbpedia.org/resource/Concept_art> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Conceptual designer, conceptual artist"@en .
+<http://dbpedia.org/resource/Speed_Racer_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Speed Racer"@en .
+<http://dbpedia.org/resource/Cloud_Atlas_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Cloud Atlas"@en .
+<http://dbpedia.org/resource/Jupiter_Ascending> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Jupiter Ascending"@en .
+<http://dbpedia.org/resource/Burlyman_Entertainment> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Burlyman Entertainment"@en .
+<http://dbpedia.org/resource/Steve_Skroce> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Steve Skroce"@en .
+<http://dbpedia.org/resource/Shaolin_Cowboy> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Shaolin Cowboy"@en .
+<http://dbpedia.org/resource/Doc_Frankenstein> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Doc Frankenstein"@en .
+<http://dbpedia.org/resource/The_Matrix_Comics> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Matrix Comics"@en .
+<http://dbpedia.org/resource/Dane_Davis> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Dane Davis"@en .
+<http://dbpedia.org/resource/Sound_design> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Sound designer"@en .
+<http://dbpedia.org/resource/Sound_editor_(filmmaking)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "supervising sound editor"@en .
+<http://dbpedia.org/resource/The_Animatrix> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Animatrix"@en .
+<http://dbpedia.org/resource/Ninja_Assassin> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Ninja Assassin"@en .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Don Davis"@en .
+<http://dbpedia.org/resource/The_Matrix_Online> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Matrix Online"@en .
+<http://dbpedia.org/resource/John_Gaeta> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "John Gaeta"@en .
+<http://dbpedia.org/resource/Visual_effects_supervisor> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Visual effects supervisor"@en .
+<http://dbpedia.org/resource/VFX_creative_director> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "visual effects designer"@en .
+<http://dbpedia.org/resource/Method_Studios> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Dan Glass"@en .
+<http://dbpedia.org/resource/Television_director> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "TV episode director"@en .
+<http://dbpedia.org/resource/V_for_Vendetta_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "V for Vendetta"@en .
+<http://dbpedia.org/resource/Michael_Giacchino> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Michael Giacchino"@en .
+<http://dbpedia.org/resource/Grant_Hill_(film_producer)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Grant Hill"@en .
+<http://dbpedia.org/resource/Unit_production_manager> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "unit production manager"@en .
+<http://dbpedia.org/resource/James_McTeigue> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "James McTeigue"@en .
+<http://dbpedia.org/resource/Assistant_director> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "First assistant director"@en .
+<http://dbpedia.org/resource/Second_unit> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "second unit director"@en .
+<http://dbpedia.org/resource/The_Invasion_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Invasion"@en .
+<http://dbpedia.org/resource/Owen_Paterson_(production_designer)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Owen Paterson"@en .
+<http://dbpedia.org/resource/Bill_Pope> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Bill Pope"@en .
+<http://dbpedia.org/resource/Director_of_photography> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Director of photography"@en .
+<http://dbpedia.org/resource/Joel_Silver> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Joel Silver"@en .
+<http://dbpedia.org/resource/Assassins_(1995_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Assassins"@en .
+<http://dbpedia.org/resource/The_Hollywood_Reporter> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Hollywood Reporter"@en .
+<http://dbpedia.org/resource/Steve_Skroce> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Steve Skroce"@en .
+<http://dbpedia.org/resource/Storyboard_artist> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Storyboard artist"@en .
+<http://dbpedia.org/resource/Burlyman_Entertainment> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Burlyman Entertainment"@en .
+<http://dbpedia.org/resource/Geof_Darrow> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Geof Darrow"@en .
+<http://dbpedia.org/resource/Ectokid> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Ectokid"@en .
+<http://dbpedia.org/resource/Zach_Staenberg> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Zach Staenberg"@en .
+<http://dbpedia.org/resource/The_Matrix:_Path_of_Neo> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Matrix: Path of Neo"@en .
+<http://dbpedia.org/resource/Ethan_Stoller> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Ethan Stoller"@en .
+<http://dbpedia.org/resource/Music_editor_(filmmaking)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "music editor"@en .
+<http://dbpedia.org/resource/John_Toll> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "John Toll"@en .
+<http://dbpedia.org/resource/Tom_Tykwer> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Tom Tykwer"@en .
+<http://dbpedia.org/resource/Screenwriter> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "co-writer"@en .
+<http://dbpedia.org/resource/Film_director> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "co-director"@en .
+<http://dbpedia.org/resource/Make-up_artist> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Makeup, hair and prosthetics designer"@en .
+<http://dbpedia.org/resource/Bound_(1996_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Bound"@en .
+<http://dbpedia.org/resource/The_Matrix_(franchise)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "''The Matrix'' trilogy"@en .
+<http://dbpedia.org/resource/Speed_Racer_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Speed Racer"@en .
+<http://dbpedia.org/resource/Cloud_Atlas_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Cloud Atlas"@en .
+<http://dbpedia.org/resource/Jupiter_Ascending> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Jupiter Ascending"@en .
+<http://dbpedia.org/resource/Sense8> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Sense8"@en .
+<http://dbpedia.org/resource/James_D'Arcy> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "James D'Arcy"@en .
+<http://dbpedia.org/resource/Bae_Doona> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Bae Doona"@en .
+<http://dbpedia.org/resource/Kick_Gurry> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Kick Gurry"@en .
+<http://dbpedia.org/resource/Tuppence_Middleton> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Tuppence Middleton"@en .
+<http://dbpedia.org/resource/Christian_Oliver> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Christian Oliver"@en .
+<http://dbpedia.org/resource/Joe_Pantoliano> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Joe Pantoliano"@en .
+<http://dbpedia.org/resource/Susan_Sarandon> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Susan Sarandon"@en .
+<http://dbpedia.org/resource/Hugo_Weaving> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Hugo Weaving"@en .
+<http://dbpedia.org/resource/The_Animatrix> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Animatrix"@en .
+<http://dbpedia.org/resource/Enter_the_Matrix> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Enter the Matrix"@en .
+<http://dbpedia.org/resource/Eon_Productions> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Eon Productions"@en .
+<http://dbpedia.org/resource/Visual_effects> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "FX"@en .
+<http://dbpedia.org/resource/Venus_Castina> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Venus Castina"@en .
+<http://dbpedia.org/resource/Ravenswood,_Chicago> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Ravenswood"@en .
+<http://dbpedia.org/resource/Environmentally_friendly> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "green-friendly"@en .
+<http://dbpedia.org/resource/Roger_Ebert> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Roger Ebert"@en .
+<http://dbpedia.org/resource/The_Godfather> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Godfather"@en .
+<http://dbpedia.org/resource/Chicago_Tribune> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Chicago Tribune"@en .
+<http://dbpedia.org/resource/Burlyman_Entertainment> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Burlyman Entertainment"@en .
+<http://dbpedia.org/resource/Shaolin_Cowboy> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Shaolin Cowboy"@en .
+<http://dbpedia.org/resource/Geof_Darrow> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Geof Darrow"@en .
+<http://dbpedia.org/resource/Doc_Frankenstein> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Doc Frankenstein"@en .
+<http://dbpedia.org/resource/Steve_Skroce> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Steve Skroce"@en .
+<http://dbpedia.org/resource/Roger_Corman> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Corman"@en .
+<http://dbpedia.org/resource/Human_cannibalism> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "cannibalism"@en .
+<http://dbpedia.org/resource/Variety_(magazine)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Variety"@en .
+<http://dbpedia.org/resource/Trimark> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Trimark"@en .
+<http://dbpedia.org/resource/George_A._Romero> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "George A. Romero"@en .
+<http://dbpedia.org/resource/Lionsgate_Studios> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Lionsgate"@en .
+<http://dbpedia.org/resource/Bill_Pope> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Bill Pope"@en .
+<http://dbpedia.org/resource/Plastic_Man> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "superhero of the same name"@en .
+<http://dbpedia.org/resource/Joseph_R._Garber> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Joseph R. Garber"@en .
+<http://dbpedia.org/resource/Frank_Miller> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Frank Miller"@en .
+<http://dbpedia.org/resource/Hard_Boiled_(comics)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Hard Boiled"@en .
+<http://dbpedia.org/resource/Conan_the_Barbarian> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Conan the Barbarian"@en .
+<http://dbpedia.org/resource/John_Milius> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "John Milius"@en .
+<http://dbpedia.org/resource/Arnold_Schwarzenegger> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Arnold Schwarzenegger"@en .
+<http://dbpedia.org/resource/Conan_the_Barbarian_(1982_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Conan the Barbarian"@en .
+<http://dbpedia.org/resource/Madhouse_(company)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Madhouse"@en .
+<http://dbpedia.org/resource/Burlyman_Entertainment> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "comic book company"@en .
+<http://dbpedia.org/resource/Seiji_Mizushima> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Seiji Mizushima"@en .
+<http://dbpedia.org/resource/Arianna_Huffington> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Arianna Huffington"@en .
+<http://dbpedia.org/resource/CHUD.com> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "CHUD.com"@en .
+<http://dbpedia.org/resource/Red_Digital_Cinema_Camera_Company> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Red digital camera"@en .
+<http://dbpedia.org/resource/Jesse_Ventura> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Jesse Ventura"@en .
+<http://dbpedia.org/resource/Iraq_War> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Iraq War"@en .
+<http://dbpedia.org/resource/Found_footage_(film_technique)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "found footage-style"@en .
+<http://dbpedia.org/resource/Data_archaeology> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "digital archaeologists"@en .
+<http://dbpedia.org/resource/The_Hollywood_Reporter> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Hollywood Reporter"@en .
+<http://dbpedia.org/resource/Salman_Rushdie> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Salman Rushdie"@en .
+<http://dbpedia.org/resource/Cornel_West> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Cornel West"@en .
+<http://dbpedia.org/resource/Aleksandar_Hemon> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Aleksandar Hemon"@en .
+<http://dbpedia.org/resource/Robin_Hood> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Robin Hood"@en .
+<http://dbpedia.org/resource/Will_Smith> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Will Smith"@en .
+<http://dbpedia.org/resource/Trans_man> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "trans man"@en .
+<http://dbpedia.org/resource/BDSM> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "BDSM"@en .
+<http://dbpedia.org/resource/Dominatrix> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "dominatrix"@en .
+<http://dbpedia.org/resource/Atheist> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "atheist"@en .
+<http://dbpedia.org/resource/Catholic> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Catholic"@en .
+<http://dbpedia.org/resource/Shamanist> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Shamanist"@en .
+<http://dbpedia.org/resource/Non-denominational> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "non-denominational"@en .
+<http://dbpedia.org/resource/Vegetarianism> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "vegetarian"@en .
+<http://dbpedia.org/resource/Democratic_Party_presidential_primaries,_2016> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Democratic Party presidential primaries of 2016"@en .
+<http://dbpedia.org/resource/The_Advocate_(LGBT_magazine)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Advocate"@en .
+<http://dbpedia.org/resource/Bernie_Sanders> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Bernie Sanders"@en .
+<http://dbpedia.org/resource/Transitioning_(transgender)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "transitioning"@en .
+<http://dbpedia.org/resource/Gothamist> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Gothamist"@en .
+<http://dbpedia.org/resource/Joel_Silver> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Joel Silver"@en .
+<http://dbpedia.org/resource/Aleksandar_Hemon> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Aleksandar Hemon"@en .
+<http://dbpedia.org/resource/The_New_Yorker> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The New Yorker"@en .
+<http://dbpedia.org/resource/Human_Rights_Campaign> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Human Rights Campaign"@en .
+<http://dbpedia.org/resource/Gender_identity> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "gender identity"@en .
+<http://dbpedia.org/resource/Equality_Illinois> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Equality Illinois"@en .
+<http://dbpedia.org/resource/Windy_City_Times> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Windy City Times"@en .
+<http://dbpedia.org/resource/Daily_Mail> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Daily Mail"@en .
+<http://dbpedia.org/resource/27th_GLAAD_Media_Awards> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "27th GLAAD Media Awards"@en .
+<http://dbpedia.org/resource/Gamer> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "gamer"@en .
+<http://dbpedia.org/resource/Dungeons_&_Dragons> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Dungeons & Dragons"@en .
+<http://dbpedia.org/resource/Role-playing_game> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "role-playing game"@en .
+<http://dbpedia.org/resource/Hideo_Kojima> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Hideo Kojima"@en .
+<http://dbpedia.org/resource/Famitsu> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Famitsu"@en .
+<http://dbpedia.org/resource/Metal_Gear_Solid_(1998_video_game)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Metal Gear Solid"@en .
+<http://dbpedia.org/resource/Bungie> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Bungie"@en .
+<http://dbpedia.org/resource/Shiny_Entertainment> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Shiny Entertainment"@en .
+<http://dbpedia.org/resource/Messiah_(video_game)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Messiah"@en .
+<http://dbpedia.org/resource/PC_game> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "PC game"@en .
+<http://dbpedia.org/resource/David_Perry_(game_developer)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "David Perry"@en .
+<http://dbpedia.org/resource/Enter_the_Matrix> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Enter the Matrix"@en .
+<http://dbpedia.org/resource/The_Matrix:_Path_of_Neo> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Matrix: Path of Neo"@en .
+<http://dbpedia.org/resource/PlayStation_2> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "PlayStation 2"@en .
+<http://dbpedia.org/resource/Xbox_(console)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Xbox"@en .
+<http://dbpedia.org/resource/Video_game_console> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "video game console"@en .
+<http://dbpedia.org/resource/Splinter_Cell> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Splinter Cell"@en .
+<http://dbpedia.org/resource/Halo_2> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Halo 2"@en .
+<http://dbpedia.org/resource/Deathmatch_(video_games)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "deathmatch"@en .
+<http://dbpedia.org/resource/Collin_Chou> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Collin Chou"@en .
+<http://dbpedia.org/resource/Death_Jr.> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Death Jr."@en .
+<http://dbpedia.org/resource/PlayStation_Portable> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "PlayStation Portable"@en .
+<http://dbpedia.org/resource/Massively_multiplayer_online_game> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "MMORPG"@en .
+<http://dbpedia.org/resource/The_Matrix_Online> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Matrix Online"@en .
+<http://dbpedia.org/resource/Assassins_(1995_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Assassins"@en .
+<http://dbpedia.org/resource/Bound_(1996_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Bound"@en .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Matrix"@en .
+<http://dbpedia.org/resource/The_Matrix_Reloaded> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Matrix Reloaded"@en .
+<http://dbpedia.org/resource/The_Matrix_Revolutions> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Matrix Revolutions"@en .
+<http://dbpedia.org/resource/V_for_Vendetta_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "V for Vendetta"@en .
+<http://dbpedia.org/resource/The_Invasion_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Invasion"@en .
+<http://dbpedia.org/resource/Speed_Racer_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Speed Racer"@en .
+<http://dbpedia.org/resource/Cloud_Atlas_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Cloud Atlas"@en .
+<http://dbpedia.org/resource/Jupiter_Ascending> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Jupiter Ascending"@en .
+<http://dbpedia.org/resource/The_Matrix_Resurrections> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Matrix Resurrections"@en .
+<http://dbpedia.org/resource/Assassins_(1995_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Assassins"@en .
+<http://dbpedia.org/resource/Bound_(1996_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Bound"@en .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Matrix"@en .
+<http://dbpedia.org/resource/The_Matrix_Revisited> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Matrix Revisited"@en .
+<http://dbpedia.org/resource/The_Animatrix> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Animatrix"@en .
+<http://dbpedia.org/resource/The_Matrix_Reloaded> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Matrix Reloaded"@en .
+<http://dbpedia.org/resource/The_Matrix_Revolutions> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Matrix Revolutions"@en .
+<http://dbpedia.org/resource/V_for_Vendetta_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "V for Vendetta"@en .
+<http://dbpedia.org/resource/The_Invasion_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Invasion"@en .
+<http://dbpedia.org/resource/Speed_Racer_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Speed Racer"@en .
+<http://dbpedia.org/resource/Ninja_Assassin> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Ninja Assassin"@en .
+<http://dbpedia.org/resource/Cloud_Atlas_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Cloud Atlas"@en .
+<http://dbpedia.org/resource/Tom_Tykwer> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Tom Tykwer"@en .
+<http://dbpedia.org/resource/Jupiter_Ascending> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Jupiter Ascending"@en .
+<http://dbpedia.org/resource/The_Matrix_Resurrections> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Matrix Resurrections"@en .
+<http://dbpedia.org/resource/Television_program_creators> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Creators"@en .
+<http://dbpedia.org/resource/Showrunner> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Showrunner"@en .
+<http://dbpedia.org/resource/Sense8> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Sense8"@en .
+<http://dbpedia.org/resource/J._Michael_Straczynski> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "J. Michael Straczynski"@en .
+<http://dbpedia.org/resource/Work_in_Progress_(TV_series)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Work in Progress"@en .
+<http://dbpedia.org/resource/Video_game_creative_director> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Directors"@en .
+<http://dbpedia.org/resource/Screenwriter> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Writers"@en .
+<http://dbpedia.org/resource/Enter_the_Matrix> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Enter the Matrix"@en .
+<http://dbpedia.org/resource/The_Matrix_Online> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Matrix Online"@en .
+<http://dbpedia.org/resource/The_Matrix:_Path_of_Neo> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Matrix: Path of Neo"@en .
+<http://dbpedia.org/resource/The_Matrix_Awakens> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Matrix Awakens"@en .
+<http://dbpedia.org/resource/Script_(comics)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Writers"@en .
+<http://dbpedia.org/resource/List_of_comics_publishing_companies> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Publishers"@en .
+<http://dbpedia.org/resource/Hellraiser_(comics)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Clive Barker's Hellraiser"@en .
+<http://dbpedia.org/resource/Nightbreed_(comics)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Clive Barker's Nightbreed"@en .
+<http://dbpedia.org/resource/Hellraiser_(comics)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Clive Barker's Book of the Damned"@en .
+<http://dbpedia.org/resource/Ectokid> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Ectokid"@en .
+<http://dbpedia.org/resource/The_Matrix_Comics> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Matrix Comics"@en .
+<http://dbpedia.org/resource/Doc_Frankenstein> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Doc Frankenstein"@en .
+<http://dbpedia.org/resource/Shaolin_Cowboy> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Shaolin Cowboy"@en .
+<http://dbpedia.org/resource/Antony_and_the_Johnsons> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Antony and the Johnsons"@en .
+<http://dbpedia.org/resource/The_Matrix_(franchise)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Art of the Matrix"@en .
+<http://dbpedia.org/resource/Ex_Machina_(comics)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Vol. 2: Tag"@en .
+<http://dbpedia.org/resource/Trade_paperback_(comics)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "trade paperback"@en .
+<http://dbpedia.org/resource/Ex_Machina_(comics)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Ex Machina"@en .
+<http://dbpedia.org/resource/No_Straight_Lines> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "No Straight Lines"@en .
+<http://dbpedia.org/resource/LGBTQ> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "LGBTQ"@en .
+<http://dbpedia.org/resource/Chicago_Bulls> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Chicago Bulls"@en .
+<http://dbpedia.org/resource/2006–07_NBA_season> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "2006–2007 regular season"@en .
+<http://dbpedia.org/resource/List_of_transgender_film_and_television_directors> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "List of transgender film and television directors"@en .
+<http://dbpedia.org/resource/The_Wachowskis> <http://xmlns.com/foaf/0.1/depiction> <http://commons.wikimedia.org/wiki/Special:FilePath/Lana_Wachowski-2787_(3x4_cropped).jpg> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/ontology/thumbnail> <http://commons.wikimedia.org/wiki/Special:FilePath/Lana_Wachowski-2787_(3x4_cropped).jpg?width=300> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Lana_Wachowski-2787_(3x4_cropped).jpg> <http://xmlns.com/foaf/0.1/thumbnail> <http://commons.wikimedia.org/wiki/Special:FilePath/Lana_Wachowski-2787_(3x4_cropped).jpg?width=300> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Lana_Wachowski-2787_(3x4_cropped).jpg> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Image> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Lana_Wachowski-2787_(3x4_cropped).jpg?width=300> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Image> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Lana_Wachowski-2787_(3x4_cropped).jpg> <http://purl.org/dc/elements/1.1/rights> <http://en.wikipedia.org/wiki/File:Lana_Wachowski-2787_(3x4_cropped).jpg> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Lana_Wachowski-2787_(3x4_cropped).jpg?width=300> <http://purl.org/dc/elements/1.1/rights> <http://en.wikipedia.org/wiki/File:Lana_Wachowski-2787_(3x4_cropped).jpg> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://xmlns.com/foaf/0.1/depiction> <http://commons.wikimedia.org/wiki/Special:FilePath/Wachowskis.jpg> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Wachowskis.jpg> <http://xmlns.com/foaf/0.1/thumbnail> <http://commons.wikimedia.org/wiki/Special:FilePath/Wachowskis.jpg?width=300> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Wachowskis.jpg> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Image> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Wachowskis.jpg?width=300> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Image> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Wachowskis.jpg> <http://purl.org/dc/elements/1.1/rights> <http://en.wikipedia.org/wiki/File:Wachowskis.jpg> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Wachowskis.jpg?width=300> <http://purl.org/dc/elements/1.1/rights> <http://en.wikipedia.org/wiki/File:Wachowskis.jpg> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://xmlns.com/foaf/0.1/depiction> <http://commons.wikimedia.org/wiki/Special:FilePath/Wachowskis,_Fantastic_Fest,_Cloud_Atlas.jpg> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Wachowskis,_Fantastic_Fest,_Cloud_Atlas.jpg> <http://xmlns.com/foaf/0.1/thumbnail> <http://commons.wikimedia.org/wiki/Special:FilePath/Wachowskis,_Fantastic_Fest,_Cloud_Atlas.jpg?width=300> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Wachowskis,_Fantastic_Fest,_Cloud_Atlas.jpg> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Image> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Wachowskis,_Fantastic_Fest,_Cloud_Atlas.jpg?width=300> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Image> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Wachowskis,_Fantastic_Fest,_Cloud_Atlas.jpg> <http://purl.org/dc/elements/1.1/rights> <http://en.wikipedia.org/wiki/File:Wachowskis,_Fantastic_Fest,_Cloud_Atlas.jpg> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Wachowskis,_Fantastic_Fest,_Cloud_Atlas.jpg?width=300> <http://purl.org/dc/elements/1.1/rights> <http://en.wikipedia.org/wiki/File:Wachowskis,_Fantastic_Fest,_Cloud_Atlas.jpg> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://xmlns.com/foaf/0.1/depiction> <http://commons.wikimedia.org/wiki/Special:FilePath/Theanimatrix-logo.svg> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Theanimatrix-logo.svg> <http://xmlns.com/foaf/0.1/thumbnail> <http://commons.wikimedia.org/wiki/Special:FilePath/Theanimatrix-logo.svg?width=300> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Theanimatrix-logo.svg> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Image> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Theanimatrix-logo.svg?width=300> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Image> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Theanimatrix-logo.svg> <http://purl.org/dc/elements/1.1/rights> <http://en.wikipedia.org/wiki/File:Theanimatrix-logo.svg> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Theanimatrix-logo.svg?width=300> <http://purl.org/dc/elements/1.1/rights> <http://en.wikipedia.org/wiki/File:Theanimatrix-logo.svg> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://xmlns.com/foaf/0.1/depiction> <http://commons.wikimedia.org/wiki/Special:FilePath/Lana_Wachowski-2763.jpg> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Lana_Wachowski-2763.jpg> <http://xmlns.com/foaf/0.1/thumbnail> <http://commons.wikimedia.org/wiki/Special:FilePath/Lana_Wachowski-2763.jpg?width=300> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Lana_Wachowski-2763.jpg> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Image> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Lana_Wachowski-2763.jpg?width=300> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Image> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Lana_Wachowski-2763.jpg> <http://purl.org/dc/elements/1.1/rights> <http://en.wikipedia.org/wiki/File:Lana_Wachowski-2763.jpg> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Lana_Wachowski-2763.jpg?width=300> <http://purl.org/dc/elements/1.1/rights> <http://en.wikipedia.org/wiki/File:Lana_Wachowski-2763.jpg> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://xmlns.com/foaf/0.1/depiction> <http://commons.wikimedia.org/wiki/Special:FilePath/Lana_Wachowski-2787_(3x4_cropped).jpg> .
+# completed 2025-06-30T11:00:08Z

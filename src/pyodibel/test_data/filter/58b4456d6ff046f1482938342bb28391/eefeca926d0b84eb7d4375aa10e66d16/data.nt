@@ -1,0 +1,9 @@
+<http://dbpedia.org/resource/Warner_Bros._Pictures> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Organisation> .
+<http://dbpedia.org/resource/Warner_Bros._Pictures> <http://dbpedia.org/property/founded> "1923-04-04"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://dbpedia.org/resource/Warner_Bros._Pictures> <http://dbpedia.org/ontology/headquarter> <http://dbpedia.org/resource/Warner_Bros._Studios_Burbank> .
+<http://dbpedia.org/resource/Warner_Bros._Pictures> <http://www.w3.org/2000/01/rdf-schema#label> "Warner Bros. Pictures"@en .
+<http://dbpedia.org/resource/Warner_Bros._Pictures> <http://dbpedia.org/ontology/foundingDate> "1923-04-04"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://dbpedia.org/resource/Warner_Bros._Pictures> <http://dbpedia.org/ontology/industry> <http://dbpedia.org/resource/Film_industry> .
+<http://dbpedia.org/resource/Warner_Bros._Pictures> <http://dbpedia.org/property/name> "Warner Bros. Pictures"@en .
+<http://dbpedia.org/resource/Warner_Bros._Pictures> <http://dbpedia.org/property/products> <http://dbpedia.org/resource/Film> .
+<http://dbpedia.org/resource/Warner_Bros._Pictures> <http://dbpedia.org/property/industry> <http://dbpedia.org/resource/Film_industry> .

@@ -1,0 +1,246 @@
+# started 2025-06-30T11:48:42Z
+<http://dbpedia.org/resource/Joel_Silver> <http://www.w3.org/2000/01/rdf-schema#label> "Joel Silver"@en .
+<http://dbpedia.org/resource/Joel_Silver> <http://dbpedia.org/ontology/wikiPageID> "875882"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://dbpedia.org/resource/Joel_Silver> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://en.wikipedia.org/wiki/Joel_Silver?oldid=1274329529&ns=0> .
+<http://dbpedia.org/resource/Joel_Silver> <http://dbpedia.org/ontology/wikiPageRevisionID> "1274329529"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://dbpedia.org/resource/Joel_Silver> <http://dbpedia.org/ontology/wikiPageLength> "18255"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://dbpedia.org/resource/Joel_Silver> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:1952_births> .
+<http://dbpedia.org/resource/Joel_Silver> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Living_people> .
+<http://dbpedia.org/resource/Joel_Silver> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:20th-century_American_Jews> .
+<http://dbpedia.org/resource/Joel_Silver> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:21st-century_American_Jews> .
+<http://dbpedia.org/resource/Joel_Silver> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:American_animated_film_producers> .
+<http://dbpedia.org/resource/Joel_Silver> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:American_entertainment_industry_businesspeople> .
+<http://dbpedia.org/resource/Joel_Silver> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:American_film_producers> .
+<http://dbpedia.org/resource/Joel_Silver> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:American_television_producers> .
+<http://dbpedia.org/resource/Joel_Silver> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:American_male_voice_actors> .
+<http://dbpedia.org/resource/Joel_Silver> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Columbia_High_School_(New_Jersey)_alumni> .
+<http://dbpedia.org/resource/Joel_Silver> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Lafayette_College_alumni> .
+<http://dbpedia.org/resource/Joel_Silver> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:People_from_South_Orange,_New_Jersey> .
+<http://dbpedia.org/resource/Joel_Silver> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:People_from_Yemassee,_South_Carolina> .
+<http://dbpedia.org/resource/Joel_Silver> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Tisch_School_of_the_Arts_alumni> .
+<http://dbpedia.org/resource/Joel_Silver> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Ultimate_(sport)_players> .
+<http://dbpedia.org/resource/Joel_Silver> <http://xmlns.com/foaf/0.1/isPrimaryTopicOf> <http://en.wikipedia.org/wiki/Joel_Silver> .
+<http://en.wikipedia.org/wiki/Joel_Silver> <http://xmlns.com/foaf/0.1/primaryTopic> <http://dbpedia.org/resource/Joel_Silver> .
+<http://en.wikipedia.org/wiki/Joel_Silver> <http://purl.org/dc/elements/1.1/language> "en" .
+<http://en.wikipedia.org/wiki/Joel_Silver> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Document> .
+<http://dbpedia.org/resource/Joel_Silver> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Short_description> .
+<http://dbpedia.org/resource/Joel_Silver> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Use_mdy_dates> .
+<http://dbpedia.org/resource/Joel_Silver> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Infobox_person> .
+<http://dbpedia.org/resource/Joel_Silver> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Reflist> .
+<http://dbpedia.org/resource/Joel_Silver> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Commons_category> .
+<http://dbpedia.org/resource/Joel_Silver> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:IMDb_name> .
+<http://dbpedia.org/resource/Joel_Silver> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:The_Life_Career_Award> .
+<http://dbpedia.org/resource/Joel_Silver> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Dark_Castle_Entertainment> .
+<http://dbpedia.org/resource/Joel_Silver> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Authority_control> .
+<http://dbpedia.org/resource/Joel_Silver> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Birth_date_and_age> .
+<http://dbpedia.org/resource/Joel_Silver> <http://dbpedia.org/ontology/wikiPageExternalLink> <http://whatisthematrix.warnerbros.com/rl_cmp/rl_bios_silver.html=> .
+<http://dbpedia.org/resource/Joel_Silver> <http://dbpedia.org/property/name> "Joel Silver"@en .
+<http://dbpedia.org/resource/Joel_Silver> <http://dbpedia.org/property/caption> "Silver at the Tribeca Film Festival in May 2008"@en .
+<http://dbpedia.org/resource/Joel_Silver> <http://dbpedia.org/property/birthDate> "1952-07-14"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://dbpedia.org/resource/Joel_Silver> <http://dbpedia.org/property/birthPlace> "South Orange, New Jersey, U.S."@en .
+<http://dbpedia.org/resource/Joel_Silver> <http://dbpedia.org/property/yearsActive> "1976"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://dbpedia.org/resource/Joel_Silver> <http://dbpedia.org/property/occupation> "Film producer"@en .
+<http://dbpedia.org/resource/Joel_Silver> <http://dbpedia.org/property/spouse> "divorced"@en .
+<http://dbpedia.org/resource/Joel_Silver> <http://dbpedia.org/property/spouse> "2020"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://dbpedia.org/resource/Joel_Silver> <http://dbpedia.org/property/spouse> "1999"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://dbpedia.org/resource/Joel_Silver> <http://dbpedia.org/property/spouse> "Karyn Fields"@en .
+<http://dbpedia.org/resource/Joel_Silver> <http://dbpedia.org/property/spouse> ""@en .
+<http://dbpedia.org/resource/Joel_Silver> <http://dbpedia.org/property/children> "2"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://dbpedia.org/resource/Joel_Silver> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Person> .
+<http://dbpedia.org/resource/Joel_Silver> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q5> .
+<http://dbpedia.org/resource/Joel_Silver> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://dbpedia.org/resource/Joel_Silver> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Thing> .
+<http://dbpedia.org/resource/Joel_Silver> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Person> .
+<http://dbpedia.org/resource/Joel_Silver> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q215627> .
+<http://dbpedia.org/resource/Joel_Silver> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#NaturalPerson> .
+<http://dbpedia.org/resource/Joel_Silver> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Animal> .
+<http://dbpedia.org/resource/Joel_Silver> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q729> .
+<http://dbpedia.org/resource/Joel_Silver> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Eukaryote> .
+<http://dbpedia.org/resource/Joel_Silver> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q19088> .
+<http://dbpedia.org/resource/Joel_Silver> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Species> .
+<http://dbpedia.org/resource/Joel_Silver> <http://xmlns.com/foaf/0.1/name> "Joel Silver"@en .
+<http://dbpedia.org/resource/Joel_Silver> <http://dbpedia.org/ontology/birthDate> "1952-07-14"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://dbpedia.org/resource/Joel_Silver> <http://dbpedia.org/ontology/birthYear> "1952"^^<http://www.w3.org/2001/XMLSchema#gYear> .
+<http://dbpedia.org/resource/Joel_Silver> <http://dbpedia.org/ontology/birthPlace> <http://dbpedia.org/resource/South_Orange,_New_Jersey> .
+<http://dbpedia.org/resource/Joel_Silver> <http://dbpedia.org/ontology/occupation> <http://dbpedia.org/resource/Film_producer> .
+<http://dbpedia.org/resource/Joel_Silver> <http://dbpedia.org/ontology/occupation> <http://dbpedia.org/resource/Joel_Silver__PersonFunction__1> .
+<http://dbpedia.org/resource/Joel_Silver__PersonFunction__1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/PersonFunction> .
+<http://dbpedia.org/resource/Joel_Silver__PersonFunction__1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Thing> .
+<http://dbpedia.org/resource/Joel_Silver__PersonFunction__1> <http://dbpedia.org/ontology/title> "Film producer"@en .
+<http://dbpedia.org/resource/Joel_Silver> <http://dbpedia.org/ontology/activeYearsStartYear> "1976"^^<http://www.w3.org/2001/XMLSchema#gYear> .
+<http://dbpedia.org/resource/Joel_Silver> <http://dbpedia.org/ontology/wikiPageOutDegree> "181"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://dbpedia.org/resource/Tribeca_Film_Festival> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Tribeca Film Festival"@en .
+<http://dbpedia.org/resource/South_Orange,_New_Jersey> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "South Orange, New Jersey"@en .
+<http://dbpedia.org/resource/Film_producer> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "film producer"@en .
+<http://dbpedia.org/resource/South_Orange,_New_Jersey> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "South Orange, New Jersey"@en .
+<http://dbpedia.org/resource/American_Jews> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Jewish"@en .
+<http://dbpedia.org/resource/Columbia_High_School_(New_Jersey)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Columbia High School"@en .
+<http://dbpedia.org/resource/Maplewood,_New_Jersey> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Maplewood, New Jersey"@en .
+<http://dbpedia.org/resource/Buzzy_Hellring> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Buzzy Hellring"@en .
+<http://dbpedia.org/resource/Ultimate_(sport)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Ultimate Frisbee"@en .
+<http://dbpedia.org/resource/USA_Ultimate> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "USA Ultimate"@en .
+<http://dbpedia.org/resource/Hall_of_Fame> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Hall of Fame"@en .
+<http://dbpedia.org/resource/New_York_University> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "New York University"@en .
+<http://dbpedia.org/resource/Tisch_School_of_the_Arts> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Tisch School of the Arts"@en .
+<http://dbpedia.org/resource/Lawrence_Gordon_Productions> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Lawrence Gordon Productions"@en .
+<http://dbpedia.org/resource/The_Warriors_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Warriors"@en .
+<http://dbpedia.org/resource/48_Hrs.> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "48 Hrs."@en .
+<http://dbpedia.org/resource/Streets_of_Fire> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Streets of Fire"@en .
+<http://dbpedia.org/resource/Brewster's_Millions_(1985_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Brewster's Millions"@en .
+<http://dbpedia.org/resource/Silver_Pictures> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Silver Pictures"@en .
+<http://dbpedia.org/resource/Commando_(1985_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Commando"@en .
+<http://dbpedia.org/resource/Lethal_Weapon_(franchise)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Lethal Weapon"@en .
+<http://dbpedia.org/resource/Die_Hard_(franchise)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Die Hard"@en .
+<http://dbpedia.org/resource/Predator_(franchise)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Predator"@en .
+<http://dbpedia.org/resource/The_Matrix_(franchise)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Matrix"@en .
+<http://dbpedia.org/resource/Who_Framed_Roger_Rabbit> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Who Framed Roger Rabbit"@en .
+<http://dbpedia.org/resource/Steven_Spielberg> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Steven Spielberg"@en .
+<http://dbpedia.org/resource/Robert_Zemeckis> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Robert Zemeckis"@en .
+<http://dbpedia.org/resource/Michael_Eisner> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Michael Eisner"@en .
+<http://dbpedia.org/resource/Paramount_Pictures> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Paramount Pictures"@en .
+<http://dbpedia.org/resource/48_Hrs.> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "48 Hrs"@en .
+<http://dbpedia.org/resource/List_of_Tales_from_the_Crypt_episodes> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Split Personality"@en .
+<http://dbpedia.org/resource/HBO> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "HBO"@en .
+<http://dbpedia.org/resource/Tales_from_the_Crypt_(TV_series)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Tales from the Crypt"@en .
+<http://dbpedia.org/resource/Silver_Pictures> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Silver Pictures"@en .
+<http://dbpedia.org/resource/Dark_Castle_Entertainment> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Dark Castle Entertainment"@en .
+<http://dbpedia.org/resource/Robert_Zemeckis> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Robert Zemeckis"@en .
+<http://dbpedia.org/resource/Grand_Canyon_(1991_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Grand Canyon"@en .
+<http://dbpedia.org/resource/True_Romance> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "True Romance"@en .
+<http://dbpedia.org/resource/I'll_Do_Anything> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "I'll Do Anything"@en .
+<http://dbpedia.org/resource/Tom_Cruise> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Tom Cruise"@en .
+<http://dbpedia.org/resource/Tropic_Thunder> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Tropic Thunder"@en .
+<http://dbpedia.org/resource/Rick_Moranis> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Rick Moranis"@en .
+<http://dbpedia.org/resource/Second_City_Television> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "SCTV"@en .
+<http://dbpedia.org/resource/Osmosis_Jones> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Osmosis Jones"@en .
+<http://dbpedia.org/resource/The_Hollywood_Reporter> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Hollywood Reporter"@en .
+<http://dbpedia.org/resource/Daryl_Katz> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Daryl Katz"@en .
+<http://dbpedia.org/resource/Amazon_Studios> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Amazon Studios"@en .
+<http://dbpedia.org/resource/Frank_Lloyd_Wright> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Frank Lloyd Wright"@en .
+<http://dbpedia.org/resource/Storer_House_(Los_Angeles)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Storer House"@en .
+<http://dbpedia.org/resource/Auldbrass_Plantation> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Auldbrass Plantation"@en .
+<http://dbpedia.org/resource/Yemassee,_South_Carolina> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Yemassee, South Carolina"@en .
+<http://dbpedia.org/resource/Eric_Lloyd_Wright> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Eric Lloyd Wright"@en .
+<http://dbpedia.org/resource/Lincoln_Continental> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Lincoln Continental"@en .
+<http://dbpedia.org/resource/Automobile_repair_shop> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "body shop"@en .
+<http://dbpedia.org/resource/Bora_Bora> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Bora Bora"@en .
+<http://dbpedia.org/resource/Xanadu_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Xanadu"@en .
+<http://dbpedia.org/resource/48_Hrs.> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "48 Hrs."@en .
+<http://dbpedia.org/resource/Streets_of_Fire> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Streets of Fire"@en .
+<http://dbpedia.org/resource/Brewster's_Millions_(1985_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Brewster's Millions"@en .
+<http://dbpedia.org/resource/Weird_Science_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Weird Science"@en .
+<http://dbpedia.org/resource/Commando_(1985_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Commando"@en .
+<http://dbpedia.org/resource/Jumpin'_Jack_Flash_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Jumpin' Jack Flash"@en .
+<http://dbpedia.org/resource/Lethal_Weapon> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Lethal Weapon"@en .
+<http://dbpedia.org/resource/Predator_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Predator"@en .
+<http://dbpedia.org/resource/Action_Jackson_(1988_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Action Jackson"@en .
+<http://dbpedia.org/resource/Die_Hard> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Die Hard"@en .
+<http://dbpedia.org/resource/Road_House_(1989_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Road House"@en .
+<http://dbpedia.org/resource/Lethal_Weapon_2> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Lethal Weapon 2"@en .
+<http://dbpedia.org/resource/Die_Hard_2> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Die Hard 2"@en .
+<http://dbpedia.org/resource/The_Adventures_of_Ford_Fairlane> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Adventures of Ford Fairlane"@en .
+<http://dbpedia.org/resource/Predator_2> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Predator 2"@en .
+<http://dbpedia.org/resource/Hudson_Hawk> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Hudson Hawk"@en .
+<http://dbpedia.org/resource/Ricochet_(1991_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Ricochet"@en .
+<http://dbpedia.org/resource/The_Last_Boy_Scout> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Last Boy Scout"@en .
+<http://dbpedia.org/resource/Lethal_Weapon_3> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Lethal Weapon 3"@en .
+<http://dbpedia.org/resource/Demolition_Man_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Demolition Man"@en .
+<http://dbpedia.org/resource/Richie_Rich_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Richie Rich"@en .
+<http://dbpedia.org/resource/Assassins_(1995_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Assassins"@en .
+<http://dbpedia.org/resource/Fair_Game_(1995_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Fair Game"@en .
+<http://dbpedia.org/resource/Executive_Decision> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Executive Decision"@en .
+<http://dbpedia.org/resource/Fathers'_Day_(1997_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Fathers' Day"@en .
+<http://dbpedia.org/resource/Conspiracy_Theory_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Conspiracy Theory"@en .
+<http://dbpedia.org/resource/Lethal_Weapon_4> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Lethal Weapon 4"@en .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Matrix"@en .
+<http://dbpedia.org/resource/Made_Men_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Made Men"@en .
+<http://dbpedia.org/resource/House_on_Haunted_Hill_(1999_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "House on Haunted Hill"@en .
+<http://dbpedia.org/resource/Romeo_Must_Die> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Romeo Must Die"@en .
+<http://dbpedia.org/resource/Exit_Wounds> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Exit Wounds"@en .
+<http://dbpedia.org/resource/Swordfish_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Swordfish"@en .
+<http://dbpedia.org/resource/Thirteen_Ghosts> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Thirteen Ghosts"@en .
+<http://dbpedia.org/resource/Ghost_Ship_(2002_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Ghost Ship"@en .
+<http://dbpedia.org/resource/Cradle_2_the_Grave> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Cradle 2 the Grave"@en .
+<http://dbpedia.org/resource/The_Matrix_Reloaded> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Matrix Reloaded"@en .
+<http://dbpedia.org/resource/The_Matrix_Revolutions> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Matrix Revolutions"@en .
+<http://dbpedia.org/resource/Gothika> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Gothika"@en .
+<http://dbpedia.org/resource/House_of_Wax_(2005_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "House of Wax"@en .
+<http://dbpedia.org/resource/Kiss_Kiss_Bang_Bang> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Kiss Kiss Bang Bang"@en .
+<http://dbpedia.org/resource/V_for_Vendetta_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "V for Vendetta"@en .
+<http://dbpedia.org/resource/The_Reaping> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Reaping"@en .
+<http://dbpedia.org/resource/The_Invasion_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Invasion"@en .
+<http://dbpedia.org/resource/The_Brave_One_(2007_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Brave One"@en .
+<http://dbpedia.org/resource/Fred_Claus> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Fred Claus"@en .
+<http://dbpedia.org/resource/Speed_Racer_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Speed Racer"@en .
+<http://dbpedia.org/resource/RocknRolla> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "RocknRolla"@en .
+<http://dbpedia.org/resource/Orphan_(2009_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Orphan"@en .
+<http://dbpedia.org/resource/Whiteout_(2009_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Whiteout"@en .
+<http://dbpedia.org/resource/Ninja_Assassin> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Ninja Assassin"@en .
+<http://dbpedia.org/resource/Sherlock_Holmes_(2009_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Sherlock Holmes"@en .
+<http://dbpedia.org/resource/The_Book_of_Eli> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Book of Eli"@en .
+<http://dbpedia.org/resource/The_Losers_(2010_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Losers"@en .
+<http://dbpedia.org/resource/Unknown_(2011_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Unknown"@en .
+<http://dbpedia.org/resource/Sherlock_Holmes:_A_Game_of_Shadows> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Sherlock Holmes: A Game of Shadows"@en .
+<http://dbpedia.org/resource/Dragon_Eyes> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Dragon Eyes"@en .
+<http://dbpedia.org/resource/Stash_House> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Stash House"@en .
+<http://dbpedia.org/resource/The_Apparition_(2012_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Apparition"@en .
+<http://dbpedia.org/resource/The_Factory_(2012_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Factory"@en .
+<http://dbpedia.org/resource/Getaway_(2013_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Getaway"@en .
+<http://dbpedia.org/resource/Non-Stop_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Non-Stop"@en .
+<http://dbpedia.org/resource/The_Nice_Guys> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Nice Guys"@en .
+<http://dbpedia.org/resource/Collide_(2016_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Collide"@en .
+<http://dbpedia.org/resource/Superfly_(2018_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Superfly"@en .
+<http://dbpedia.org/resource/Road_House_(2024_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Road House"@en .
+<http://dbpedia.org/resource/Jekyll_and_Hyde..._Together_Again> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Jekyll and Hyde... Together Again"@en .
+<http://dbpedia.org/resource/Streets_of_Fire> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Streets of Fire"@en .
+<http://dbpedia.org/resource/Demon_Knight> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Demon Knight"@en .
+<http://dbpedia.org/resource/Bordello_of_Blood> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Bordello of Blood"@en .
+<http://dbpedia.org/resource/Dungeons_&_Dragons_(2000_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Dungeons & Dragons"@en .
+<http://dbpedia.org/resource/Proximity_(2000_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Proximity"@en .
+<http://dbpedia.org/resource/Ritual_(2002_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Ritual"@en .
+<http://dbpedia.org/resource/The_Animatrix> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Animatrix"@en .
+<http://dbpedia.org/resource/Direct-to-video> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "direct-to-video"@en .
+<http://dbpedia.org/resource/Return_to_House_on_Haunted_Hill> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Return to House on Haunted Hill"@en .
+<http://dbpedia.org/resource/The_Hills_Run_Red_(2009_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Hills Run Red"@en .
+<http://dbpedia.org/resource/Splice_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Splice"@en .
+<http://dbpedia.org/resource/Transit_(2012_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Transit"@en .
+<http://dbpedia.org/resource/Project_X_(2012_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Project X"@en .
+<http://dbpedia.org/resource/The_Philly_Kid> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Philly Kid"@en .
+<http://dbpedia.org/resource/El_Gringo> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "El Gringo"@en .
+<http://dbpedia.org/resource/Bullet_to_the_Head> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Bullet to the Head"@en .
+<http://dbpedia.org/resource/Getaway_(2013_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Getaway"@en .
+<http://dbpedia.org/resource/Enemies_Closer> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Enemies Closer"@en .
+<http://dbpedia.org/resource/Veronica_Mars_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Veronica Mars"@en .
+<http://dbpedia.org/resource/Suburbicon> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Suburbicon"@en .
+<http://dbpedia.org/resource/Tales_from_the_Crypt_(TV_series)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Tales from the Crypt"@en .
+<http://dbpedia.org/resource/Secrets_of_the_Cryptkeeper's_Haunted_House> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Secrets of the Cryptkeeper's Haunted House"@en .
+<http://dbpedia.org/resource/Perversions_of_Science> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Perversions of Science"@en .
+<http://dbpedia.org/resource/The_Strip_(American_TV_series)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Strip"@en .
+<http://dbpedia.org/resource/Action_(TV_series)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Action"@en .
+<http://dbpedia.org/resource/Freedom_(TV_series)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Freedom"@en .
+<http://dbpedia.org/resource/Next_Action_Star> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Next Action Star"@en .
+<http://dbpedia.org/resource/Veronica_Mars> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Veronica Mars"@en .
+<http://dbpedia.org/resource/Moonlight_(American_TV_series)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Moonlight"@en .
+<http://dbpedia.org/resource/Jane_Doe_(2001_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Jane Doe"@en .
+<http://dbpedia.org/resource/Who_Framed_Roger_Rabbit> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Who Framed Roger Rabbit"@en .
+<http://dbpedia.org/resource/Osmosis_Jones> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Osmosis Jones"@en .
+<http://dbpedia.org/resource/Tales_from_the_Crypt_(TV_series)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Tales from the Crypt"@en .
+<http://dbpedia.org/resource/Entourage_(American_TV_series)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Entourage"@en .
+<http://dbpedia.org/resource/Less_Than_30> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Less Than 30"@en .
+<http://dbpedia.org/resource/The_End_(1978_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The End"@en .
+<http://dbpedia.org/resource/Hooper_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Hooper"@en .
+<http://dbpedia.org/resource/The_Warriors_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Warriors"@en .
+<http://dbpedia.org/resource/The_Pursuit_of_D._B._Cooper> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Pursuit of D. B. Cooper"@en .
+<http://dbpedia.org/resource/The_Bette_Midler_Show> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Bette Midler Show"@en .
+<http://dbpedia.org/resource/The_Renegades_(TV_series)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Renegades"@en .
+<http://dbpedia.org/resource/Tales_from_the_Crypt_(TV_series)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Tales from the Crypt"@en .
+<http://dbpedia.org/resource/Tales_from_the_Cryptkeeper> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Tales from the Cryptkeeper"@en .
+<http://dbpedia.org/resource/Joel_Silver> <http://xmlns.com/foaf/0.1/depiction> <http://commons.wikimedia.org/wiki/Special:FilePath/Joel_Silver_in_New_York_City_2008.jpg> .
+<http://dbpedia.org/resource/Joel_Silver> <http://dbpedia.org/ontology/thumbnail> <http://commons.wikimedia.org/wiki/Special:FilePath/Joel_Silver_in_New_York_City_2008.jpg?width=300> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Joel_Silver_in_New_York_City_2008.jpg> <http://xmlns.com/foaf/0.1/thumbnail> <http://commons.wikimedia.org/wiki/Special:FilePath/Joel_Silver_in_New_York_City_2008.jpg?width=300> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Joel_Silver_in_New_York_City_2008.jpg> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Image> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Joel_Silver_in_New_York_City_2008.jpg?width=300> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Image> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Joel_Silver_in_New_York_City_2008.jpg> <http://purl.org/dc/elements/1.1/rights> <http://en.wikipedia.org/wiki/File:Joel_Silver_in_New_York_City_2008.jpg> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Joel_Silver_in_New_York_City_2008.jpg?width=300> <http://purl.org/dc/elements/1.1/rights> <http://en.wikipedia.org/wiki/File:Joel_Silver_in_New_York_City_2008.jpg> .
+<http://dbpedia.org/resource/Joel_Silver> <http://xmlns.com/foaf/0.1/depiction> <http://commons.wikimedia.org/wiki/Special:FilePath/Joel_Silver_in_New_York_City_2008.jpg> .
+# completed 2025-06-30T11:48:42Z

@@ -1,0 +1,569 @@
+# started 2025-06-30T11:12:41Z
+<http://dbpedia.org/resource/Hugo_Weaving> <http://www.w3.org/2000/01/rdf-schema#label> "Hugo Weaving"@en .
+<http://dbpedia.org/resource/Hugo_Weaving> <http://dbpedia.org/ontology/wikiPageID> "170977"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://dbpedia.org/resource/Hugo_Weaving> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://en.wikipedia.org/wiki/Hugo_Weaving?oldid=1295693383&ns=0> .
+<http://dbpedia.org/resource/Hugo_Weaving> <http://dbpedia.org/ontology/wikiPageRevisionID> "1295693383"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://dbpedia.org/resource/Hugo_Weaving> <http://dbpedia.org/ontology/wikiPageLength> "59821"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://dbpedia.org/resource/Hugo_Weaving> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:1960_births> .
+<http://dbpedia.org/resource/Hugo_Weaving> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Living_people> .
+<http://dbpedia.org/resource/Hugo_Weaving> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:20th-century_British_male_actors> .
+<http://dbpedia.org/resource/Hugo_Weaving> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:21st-century_British_male_actors> .
+<http://dbpedia.org/resource/Hugo_Weaving> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Audiobook_narrators> .
+<http://dbpedia.org/resource/Hugo_Weaving> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Best_Actor_AACTA_Award_winners> .
+<http://dbpedia.org/resource/Hugo_Weaving> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Best_Supporting_Actor_AACTA_Award_winners> .
+<http://dbpedia.org/resource/Hugo_Weaving> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:British_emigrants_to_Australia> .
+<http://dbpedia.org/resource/Hugo_Weaving> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:British_male_film_actors> .
+<http://dbpedia.org/resource/Hugo_Weaving> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:British_male_radio_actors> .
+<http://dbpedia.org/resource/Hugo_Weaving> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:British_male_Shakespearean_actors> .
+<http://dbpedia.org/resource/Hugo_Weaving> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:British_male_stage_actors> .
+<http://dbpedia.org/resource/Hugo_Weaving> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:British_male_television_actors> .
+<http://dbpedia.org/resource/Hugo_Weaving> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:British_male_video_game_actors> .
+<http://dbpedia.org/resource/Hugo_Weaving> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:British_male_voice_actors> .
+<http://dbpedia.org/resource/Hugo_Weaving> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:British_people_of_Belgian_descent> .
+<http://dbpedia.org/resource/Hugo_Weaving> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Helpmann_Award_winners> .
+<http://dbpedia.org/resource/Hugo_Weaving> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Honorary_officers_of_the_Order_of_Australia> .
+<http://dbpedia.org/resource/Hugo_Weaving> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Male_actors_from_Ibadan> .
+<http://dbpedia.org/resource/Hugo_Weaving> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Musicians_from_Ibadan> .
+<http://dbpedia.org/resource/Hugo_Weaving> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:National_Institute_of_Dramatic_Art_alumni> .
+<http://dbpedia.org/resource/Hugo_Weaving> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Outstanding_Performance_by_a_Cast_in_a_Motion_Picture_Screen_Actors_Guild_Award_winners> .
+<http://dbpedia.org/resource/Hugo_Weaving> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:People_educated_at_Knox_Grammar_School> .
+<http://dbpedia.org/resource/Hugo_Weaving> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:People_educated_at_Queen_Elizabeth's_Hospital,_Bristol> .
+<http://dbpedia.org/resource/Hugo_Weaving> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:People_from_Ibadan> .
+<http://dbpedia.org/resource/Hugo_Weaving> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:People_with_epilepsy> .
+<http://dbpedia.org/resource/Hugo_Weaving> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:British_actors_with_disabilities> .
+<http://dbpedia.org/resource/Hugo_Weaving> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Weaving–Greenwood_family> .
+<http://dbpedia.org/resource/Hugo_Weaving> <http://xmlns.com/foaf/0.1/isPrimaryTopicOf> <http://en.wikipedia.org/wiki/Hugo_Weaving> .
+<http://en.wikipedia.org/wiki/Hugo_Weaving> <http://xmlns.com/foaf/0.1/primaryTopic> <http://dbpedia.org/resource/Hugo_Weaving> .
+<http://en.wikipedia.org/wiki/Hugo_Weaving> <http://purl.org/dc/elements/1.1/language> "en" .
+<http://en.wikipedia.org/wiki/Hugo_Weaving> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Document> .
+<http://dbpedia.org/resource/Hugo_Weaving> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Short_description> .
+<http://dbpedia.org/resource/Hugo_Weaving> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Use_Australian_English> .
+<http://dbpedia.org/resource/Hugo_Weaving> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Use_dmy_dates> .
+<http://dbpedia.org/resource/Hugo_Weaving> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Infobox_person> .
+<http://dbpedia.org/resource/Hugo_Weaving> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Post-nominals> .
+<http://dbpedia.org/resource/Hugo_Weaving> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:As_of> .
+<http://dbpedia.org/resource/Hugo_Weaving> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Webarchive> .
+<http://dbpedia.org/resource/Hugo_Weaving> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Sortname> .
+<http://dbpedia.org/resource/Hugo_Weaving> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Sort> .
+<http://dbpedia.org/resource/Hugo_Weaving> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Sortname> .
+<http://dbpedia.org/resource/Hugo_Weaving> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Sortname> .
+<http://dbpedia.org/resource/Hugo_Weaving> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Sortname> .
+<http://dbpedia.org/resource/Hugo_Weaving> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Sortname> .
+<http://dbpedia.org/resource/Hugo_Weaving> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Sortname> .
+<http://dbpedia.org/resource/Hugo_Weaving> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Sortname> .
+<http://dbpedia.org/resource/Hugo_Weaving> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Sortname> .
+<http://dbpedia.org/resource/Hugo_Weaving> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Sortname> .
+<http://dbpedia.org/resource/Hugo_Weaving> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Sortname> .
+<http://dbpedia.org/resource/Hugo_Weaving> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Sortname> .
+<http://dbpedia.org/resource/Hugo_Weaving> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Sortname> .
+<http://dbpedia.org/resource/Hugo_Weaving> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Sortname> .
+<http://dbpedia.org/resource/Hugo_Weaving> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Sort> .
+<http://dbpedia.org/resource/Hugo_Weaving> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Sortname> .
+<http://dbpedia.org/resource/Hugo_Weaving> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Reflist> .
+<http://dbpedia.org/resource/Hugo_Weaving> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Refbegin> .
+<http://dbpedia.org/resource/Hugo_Weaving> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Refend> .
+<http://dbpedia.org/resource/Hugo_Weaving> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Commons_category> .
+<http://dbpedia.org/resource/Hugo_Weaving> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Wikiquote> .
+<http://dbpedia.org/resource/Hugo_Weaving> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:IMDb_name> .
+<http://dbpedia.org/resource/Hugo_Weaving> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Navboxes> .
+<http://dbpedia.org/resource/Hugo_Weaving> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Authority_control> .
+<http://dbpedia.org/resource/Hugo_Weaving> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Post-nominals> .
+<http://dbpedia.org/resource/Hugo_Weaving> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Birth_date_and_age> .
+<http://dbpedia.org/resource/Hugo_Weaving> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Nbnd> .
+<http://dbpedia.org/resource/Hugo_Weaving> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:AACTA_Award_Best_Actor_in_a_Leading_Role_2000–2019> .
+<http://dbpedia.org/resource/Hugo_Weaving> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:AACTAAward_BestActor_SupportingRole_2011-2030> .
+<http://dbpedia.org/resource/Hugo_Weaving> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:AACTA_Award_for_Best_Lead_Actor_in_a_Television_Drama> .
+<http://dbpedia.org/resource/Hugo_Weaving> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:EquityAward_TVMiniSeriesTeleMovieCast> .
+<http://dbpedia.org/resource/Hugo_Weaving> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:HelpmannAward_PlayLeadActor> .
+<http://dbpedia.org/resource/Hugo_Weaving> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Satellite_Award_Best_Supporting_Actor_Series_Miniseries_or_Television_Film> .
+<http://dbpedia.org/resource/Hugo_Weaving> <http://dbpedia.org/ontology/wikiPageExternalLink> <http://www.sydneytheatreawards.com/2010.php> .
+<http://dbpedia.org/resource/Hugo_Weaving> <http://dbpedia.org/ontology/wikiPageExternalLink> <https://web.archive.org/web/20110821231309/http:/www.sydneytheatreawards.com/2010.php> .
+<http://dbpedia.org/resource/Hugo_Weaving> <http://dbpedia.org/ontology/wikiPageExternalLink> <https://variety.com/2012/legit/news/hayes-names-theater-award-winners-1118053056/> .
+<http://dbpedia.org/resource/Hugo_Weaving> <http://dbpedia.org/ontology/wikiPageExternalLink> <https://www.tcm.com/tcmdb/person/203060%7C174550/Hugo-Weaving/%23overview> .
+<http://dbpedia.org/resource/Hugo_Weaving> <http://dbpedia.org/property/name> "Hugo Weaving"@en .
+<http://dbpedia.org/resource/Hugo_Weaving> <http://dbpedia.org/property/caption> "Weaving in 2018"@en .
+<http://dbpedia.org/resource/Hugo_Weaving> <http://dbpedia.org/property/birthDate> "1960-04-04"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://dbpedia.org/resource/Hugo_Weaving> <http://dbpedia.org/property/birthPlace> <http://dbpedia.org/resource/Ibadan> .
+<http://dbpedia.org/resource/Hugo_Weaving> <http://dbpedia.org/property/birthPlace> <http://dbpedia.org/resource/British_Nigeria> .
+<http://dbpedia.org/resource/Hugo_Weaving> <http://dbpedia.org/property/birthName> "Hugo Wallace Weaving"@en .
+<http://dbpedia.org/resource/Hugo_Weaving> <http://dbpedia.org/property/citizenship> "UK"@en .
+<http://dbpedia.org/resource/Hugo_Weaving> <http://dbpedia.org/property/occupation> "Actor"@en .
+<http://dbpedia.org/resource/Hugo_Weaving> <http://dbpedia.org/property/education> "National Institute of Dramatic Art"@en .
+<http://dbpedia.org/resource/Hugo_Weaving> <http://dbpedia.org/property/yearsActive> "1980"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://dbpedia.org/resource/Hugo_Weaving> <http://dbpedia.org/property/partner> "Katrina Greenwood"@en .
+<http://dbpedia.org/resource/Hugo_Weaving> <http://dbpedia.org/property/children> "2"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://dbpedia.org/resource/Hugo_Weaving> <http://dbpedia.org/property/relatives> <http://dbpedia.org/resource/Samara_Weaving> .
+<http://dbpedia.org/resource/Hugo_Weaving> <http://dbpedia.org/property/url> <https://web.archive.org/web/20110821231309/http:/www.sydneytheatreawards.com/2010.php> .
+<http://dbpedia.org/resource/Hugo_Weaving> <http://dbpedia.org/property/date> "2011-08-21"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://dbpedia.org/resource/Hugo_Weaving> <http://dbpedia.org/property/title> "Awards for Hugo Weaving"@en .
+<http://dbpedia.org/resource/Hugo_Weaving> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Person> .
+<http://dbpedia.org/resource/Hugo_Weaving> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q5> .
+<http://dbpedia.org/resource/Hugo_Weaving> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://dbpedia.org/resource/Hugo_Weaving> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Thing> .
+<http://dbpedia.org/resource/Hugo_Weaving> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Person> .
+<http://dbpedia.org/resource/Hugo_Weaving> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q215627> .
+<http://dbpedia.org/resource/Hugo_Weaving> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#NaturalPerson> .
+<http://dbpedia.org/resource/Hugo_Weaving> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Animal> .
+<http://dbpedia.org/resource/Hugo_Weaving> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q729> .
+<http://dbpedia.org/resource/Hugo_Weaving> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Eukaryote> .
+<http://dbpedia.org/resource/Hugo_Weaving> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q19088> .
+<http://dbpedia.org/resource/Hugo_Weaving> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Species> .
+<http://dbpedia.org/resource/Hugo_Weaving> <http://xmlns.com/foaf/0.1/name> "Hugo Weaving"@en .
+<http://dbpedia.org/resource/Hugo_Weaving> <http://dbpedia.org/ontology/birthDate> "1960-04-04"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://dbpedia.org/resource/Hugo_Weaving> <http://dbpedia.org/ontology/birthYear> "1960"^^<http://www.w3.org/2001/XMLSchema#gYear> .
+<http://dbpedia.org/resource/Hugo_Weaving> <http://dbpedia.org/ontology/birthPlace> <http://dbpedia.org/resource/Ibadan> .
+<http://dbpedia.org/resource/Hugo_Weaving> <http://dbpedia.org/ontology/birthPlace> <http://dbpedia.org/resource/British_Nigeria> .
+<http://dbpedia.org/resource/Hugo_Weaving> <http://dbpedia.org/ontology/occupation> <http://dbpedia.org/resource/Hugo_Weaving__PersonFunction__1> .
+<http://dbpedia.org/resource/Hugo_Weaving__PersonFunction__1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/PersonFunction> .
+<http://dbpedia.org/resource/Hugo_Weaving__PersonFunction__1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Thing> .
+<http://dbpedia.org/resource/Hugo_Weaving__PersonFunction__1> <http://dbpedia.org/ontology/title> "Actor"@en .
+<http://dbpedia.org/resource/Hugo_Weaving> <http://dbpedia.org/ontology/activeYearsStartYear> "1980"^^<http://www.w3.org/2001/XMLSchema#gYear> .
+<http://dbpedia.org/resource/Hugo_Weaving> <http://dbpedia.org/ontology/birthName> "Hugo Wallace Weaving"@en .
+<http://dbpedia.org/resource/Hugo_Weaving> <http://dbpedia.org/ontology/education> <http://dbpedia.org/resource/National_Institute_of_Dramatic_Art> .
+<http://dbpedia.org/resource/Hugo_Weaving> <http://dbpedia.org/ontology/child> <http://dbpedia.org/resource/Harry_Greenwood_(actor)> .
+<http://dbpedia.org/resource/Hugo_Weaving> <http://dbpedia.org/ontology/relative> <http://dbpedia.org/resource/Samara_Weaving> .
+<http://dbpedia.org/resource/Hugo_Weaving> <http://dbpedia.org/ontology/wikiPageOutDegree> "448"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://dbpedia.org/resource/Ibadan> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Ibadan"@en .
+<http://dbpedia.org/resource/British_Nigeria> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "British Nigeria"@en .
+<http://dbpedia.org/resource/National_Institute_of_Dramatic_Art> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "National Institute of Dramatic Art"@en .
+<http://dbpedia.org/resource/Bachelor_of_Fine_Arts> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "BFA"@en .
+<http://dbpedia.org/resource/Harry_Greenwood_(actor)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Harry Greenwood"@en .
+<http://dbpedia.org/resource/Samara_Weaving> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Samara Weaving"@en .
+<http://dbpedia.org/resource/AACTA_Awards> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Australian Academy of Cinema and Television Arts Awards"@en .
+<http://dbpedia.org/resource/Order_of_Australia> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Order of Australia"@en .
+<http://dbpedia.org/resource/Colonial_Nigeria> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Colonial Nigeria"@en .
+<http://dbpedia.org/resource/England_cricket_team> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "English"@en .
+<http://dbpedia.org/resource/Douglas_Jardine> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Douglas Jardine"@en .
+<http://dbpedia.org/resource/Bodyline_(miniseries)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Bodyline"@en .
+<http://dbpedia.org/resource/Proof_(1991_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "''Proof''"@en .
+<http://dbpedia.org/resource/The_Adventures_of_Priscilla,_Queen_of_the_Desert> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Adventures of Priscilla, Queen of the Desert"@en .
+<http://dbpedia.org/resource/AACTA_Award_for_Best_Actor_in_a_Leading_Role> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Best Actor in a Leading Role"@en .
+<http://dbpedia.org/resource/Agent_Smith> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Agent Smith"@en .
+<http://dbpedia.org/resource/The_Matrix_(franchise)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "''The Matrix'' films"@en .
+<http://dbpedia.org/resource/Elrond> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Elrond"@en .
+<http://dbpedia.org/resource/The_Lord_of_the_Rings_(film_series)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Lord of the Rings"@en .
+<http://dbpedia.org/resource/The_Hobbit_(film_series)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Hobbit"@en .
+<http://dbpedia.org/resource/V_(character)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "title character"@en .
+<http://dbpedia.org/resource/V_for_Vendetta_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "V for Vendetta"@en .
+<http://dbpedia.org/resource/Johann_Schmidt_(Marvel_Cinematic_Universe)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Johann Schmidt / Red Skull"@en .
+<http://dbpedia.org/resource/Marvel_Cinematic_Universe> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Marvel Cinematic Universe"@en .
+<http://dbpedia.org/resource/Captain_America:_The_First_Avenger> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Captain America: The First Avenger"@en .
+<http://dbpedia.org/resource/Voice_acting> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "voice over"@en .
+<http://dbpedia.org/resource/Babe_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Babe"@en .
+<http://dbpedia.org/resource/Happy_Feet> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Happy Feet"@en .
+<http://dbpedia.org/resource/Happy_Feet_Two> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Happy Feet Two"@en .
+<http://dbpedia.org/resource/Transformers_(film_series)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "''Transformers''"@en .
+<http://dbpedia.org/resource/Megatron> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Megatron"@en .
+<http://dbpedia.org/resource/University_College_Hospital,_Ibadan> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "University of Ibadan Teaching Hospital"@en .
+<http://dbpedia.org/resource/Ibadan> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Ibadan"@en .
+<http://dbpedia.org/resource/Colonial_Nigeria> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Nigeria"@en .
+<http://dbpedia.org/resource/Seismologist> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "seismologist"@en .
+<http://dbpedia.org/resource/University_of_Bristol> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "University of Bristol"@en .
+<http://dbpedia.org/resource/Bedford> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Bedford"@en .
+<http://dbpedia.org/resource/Brighton> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Brighton"@en .
+<http://dbpedia.org/resource/Melbourne> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Melbourne"@en .
+<http://dbpedia.org/resource/Sydney> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Sydney"@en .
+<http://dbpedia.org/resource/Johannesburg> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Johannesburg"@en .
+<http://dbpedia.org/resource/Charlton_House,_Wraxall> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Downs School"@en .
+<http://dbpedia.org/resource/Wraxall,_Somerset> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Wraxall"@en .
+<http://dbpedia.org/resource/Bristol> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Bristol"@en .
+<http://dbpedia.org/resource/Queen_Elizabeth's_Hospital> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Queen Elizabeth's Hospital"@en .
+<http://dbpedia.org/resource/Robert_Bolt> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Robert Bolt"@en .
+<http://dbpedia.org/resource/Knox_Grammar_School> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Knox Grammar School"@en .
+<http://dbpedia.org/resource/National_Institute_of_Dramatic_Art> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "National Institute of Dramatic Art"@en .
+<http://dbpedia.org/resource/Bodyline_(miniseries)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Bodyline"@en .
+<http://dbpedia.org/resource/England_cricket_team> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "English"@en .
+<http://dbpedia.org/resource/Douglas_Jardine> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Douglas Jardine"@en .
+<http://dbpedia.org/resource/The_Dirtwater_Dynasty> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Dirtwater Dynasty"@en .
+<http://dbpedia.org/resource/Geoffrey_Chambers> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Geoffrey Chambers"@en .
+<http://dbpedia.org/resource/Dadah_Is_Death> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Barlow and Chambers: A Long Way From Home"@en .
+<http://dbpedia.org/resource/Nicole_Kidman> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Nicole Kidman"@en .
+<http://dbpedia.org/resource/Bangkok_Hilton> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Bangkok Hilton"@en .
+<http://dbpedia.org/resource/Australian_Film_Institute> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Australian Film Institute"@en .
+<http://dbpedia.org/resource/Proof_(1991_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Proof"@en .
+<http://dbpedia.org/resource/Yahoo_Serious> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Yahoo Serious"@en .
+<http://dbpedia.org/resource/Reckless_Kelly> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Reckless Kelly"@en .
+<http://dbpedia.org/resource/Ned_Kelly> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Ned Kelly"@en .
+<http://dbpedia.org/resource/Drag_queen> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "drag queen"@en .
+<http://dbpedia.org/resource/The_Adventures_of_Priscilla,_Queen_of_the_Desert> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Adventures of Priscilla, Queen of the Desert"@en .
+<http://dbpedia.org/resource/Babe_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Babe"@en .
+<http://dbpedia.org/resource/Babe:_Pig_in_the_City> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Babe: Pig in the City"@en .
+<http://dbpedia.org/resource/Montreal_World_Film_Festival> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Montreal World Film Festival"@en .
+<http://dbpedia.org/resource/Serial_killer> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "serial killer"@en .
+<http://dbpedia.org/resource/The_Interview_(1998_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Interview"@en .
+<http://dbpedia.org/resource/Agent_Smith> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Agent Smith"@en .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Matrix"@en .
+<http://dbpedia.org/resource/The_Matrix_Reloaded> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Matrix Reloaded"@en .
+<http://dbpedia.org/resource/The_Matrix_Revolutions> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Matrix Revolutions"@en .
+<http://dbpedia.org/resource/The_Magic_Pudding_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Magic Pudding"@en .
+<http://dbpedia.org/resource/Half-elf> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "half-elven"@en .
+<http://dbpedia.org/resource/Elrond> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Elrond"@en .
+<http://dbpedia.org/resource/Peter_Jackson> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Peter Jackson"@en .
+<http://dbpedia.org/resource/The_Lord_of_the_Rings> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Lord of the Rings"@en .
+<http://dbpedia.org/resource/Everything_Goes_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Everything Goes"@en .
+<http://dbpedia.org/resource/Rugby_league> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "rugby league"@en .
+<http://dbpedia.org/resource/Indie_film> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "indie film"@en .
+<http://dbpedia.org/resource/Little_Fish_(2005_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Little Fish"@en .
+<http://dbpedia.org/resource/Cate_Blanchett> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Cate Blanchett"@en .
+<http://dbpedia.org/resource/V_(comics)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "V"@en .
+<http://dbpedia.org/resource/V_for_Vendetta_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "V for Vendetta"@en .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "the Wachowskis"@en .
+<http://dbpedia.org/resource/James_Purefoy> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "James Purefoy"@en .
+<http://dbpedia.org/resource/The_Lord_of_the_Rings:_The_Battle_for_Middle-Earth_II> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Lord of the Rings: The Battle for Middle-Earth II"@en .
+<http://dbpedia.org/resource/Sydney_Theatre_Company> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Sydney Theatre Company"@en .
+<http://dbpedia.org/resource/Hedda_Gabler> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Hedda Gabler"@en .
+<http://dbpedia.org/resource/Michael_Bay> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Michael Bay"@en .
+<http://dbpedia.org/resource/Decepticon> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Decepticon"@en .
+<http://dbpedia.org/resource/Megatron_(Transformers)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Megatron"@en .
+<http://dbpedia.org/resource/Transformers_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Transformers"@en .
+<http://dbpedia.org/resource/Megatron_(Transformers)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "original version of the character"@en .
+<http://dbpedia.org/resource/Frank_Welker> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Frank Welker"@en .
+<http://dbpedia.org/resource/The_Age> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Age"@en .
+<http://dbpedia.org/resource/Collider_(website)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Collider"@en .
+<http://dbpedia.org/resource/Joe_Johnston> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Joe Johnston"@en .
+<http://dbpedia.org/resource/The_Wolfman_(2010_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Wolfman"@en .
+<http://dbpedia.org/resource/Benicio_del_Toro> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Benicio del Toro"@en .
+<http://dbpedia.org/resource/Last_Ride_(2009_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Last Ride"@en .
+<http://dbpedia.org/resource/Guillermo_del_Toro> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Guillermo del Toro"@en .
+<http://dbpedia.org/resource/The_Hobbit_(film_series)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "''The Hobbit'' films"@en .
+<http://dbpedia.org/resource/Elrond> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Elrond"@en .
+<http://dbpedia.org/resource/Rivendell> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Rivendell"@en .
+<http://dbpedia.org/resource/Melbourne_Theatre_Company> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Melbourne Theatre Company"@en .
+<http://dbpedia.org/resource/God_of_Carnage> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "God of Carnage"@en .
+<http://dbpedia.org/resource/Uncle_Vanya> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Uncle Vanya"@en .
+<http://dbpedia.org/resource/Richard_Roxburgh> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Richard Roxburgh"@en .
+<http://dbpedia.org/resource/Rake_(2010_TV_series)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Rake"@en .
+<http://dbpedia.org/resource/Oranges_and_Sunshine> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Oranges and Sunshine"@en .
+<http://dbpedia.org/resource/Nottingham> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Nottingham"@en .
+<http://dbpedia.org/resource/Adelaide> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Adelaide"@en .
+<http://dbpedia.org/resource/Rome_International_Film_Festival> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Rome International Film Festival"@en .
+<http://dbpedia.org/resource/Legend_of_the_Guardians:_The_Owls_of_Ga'Hoole> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Legend of the Guardians"@en .
+<http://dbpedia.org/resource/Zack_Snyder> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Zack Snyder"@en .
+<http://dbpedia.org/resource/Kathryn_Lasky> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Kathryn Lasky"@en .
+<http://dbpedia.org/resource/Marvel_Studios> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Marvel Studios"@en .
+<http://dbpedia.org/resource/Nazi> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Nazi"@en .
+<http://dbpedia.org/resource/Red_Skull> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Red Skull"@en .
+<http://dbpedia.org/resource/Captain_America:_The_First_Avenger> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Captain America: The First Avenger"@en .
+<http://dbpedia.org/resource/Marvel_Cinematic_Universe> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Marvel Cinematic Universe"@en .
+<http://dbpedia.org/resource/Baltimore_Sun> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Baltimore Sun"@en .
+<http://dbpedia.org/resource/South_By_Southwest> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "South By Southwest"@en .
+<http://dbpedia.org/resource/Austin,_Texas> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Austin, Texas"@en .
+<http://dbpedia.org/resource/Oranges_and_Sunshine> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Oranges and Sunshine"@en .
+<http://dbpedia.org/resource/Sydney_Theatre_Company> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Sydney Theatre Company"@en .
+<http://dbpedia.org/resource/John_F._Kennedy_Center_for_the_Performing_Arts> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "John F. Kennedy Center for the Performing Arts"@en .
+<http://dbpedia.org/resource/Uncle_Vanya> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Uncle Vanya"@en .
+<http://dbpedia.org/resource/The_Hobbit_(film_series)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "''The Hobbit''"@en .
+<http://dbpedia.org/resource/David_Mitchell_(author)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "David Mitchell"@en .
+<http://dbpedia.org/resource/Cloud_Atlas_(novel)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Cloud Atlas"@en .
+<http://dbpedia.org/resource/Tom_Hanks> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Tom Hanks"@en .
+<http://dbpedia.org/resource/Ben_Whishaw> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Ben Whishaw"@en .
+<http://dbpedia.org/resource/Halle_Berry> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Halle Berry"@en .
+<http://dbpedia.org/resource/Jim_Broadbent> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Jim Broadbent"@en .
+<http://dbpedia.org/resource/Susan_Sarandon> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Susan Sarandon"@en .
+<http://dbpedia.org/resource/Christopher_Hampton> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Christopher Hampton"@en .
+<http://dbpedia.org/resource/Les_Liaisons_Dangereuses> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Les Liaisons Dangereuses"@en .
+<http://dbpedia.org/resource/Pamela_Rabe> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Pamela Rabe"@en .
+<http://dbpedia.org/resource/Cate_Blanchett> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Cate Blanchett"@en .
+<http://dbpedia.org/resource/New_York_City> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "New York's"@en .
+<http://dbpedia.org/resource/Lincoln_Center> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Lincoln Center"@en .
+<http://dbpedia.org/resource/Mystery_Road_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Mystery Road"@en .
+<http://dbpedia.org/resource/Ivan_Sen> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Ivan Sen"@en .
+<http://dbpedia.org/resource/Healing_(2014_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Healing"@en .
+<http://dbpedia.org/resource/The_Turning_(2013_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Turning"@en .
+<http://dbpedia.org/resource/Tim_Winton> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Tim Winton"@en .
+<http://dbpedia.org/resource/David_Wenham> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "David Wenham"@en .
+<http://dbpedia.org/resource/Richard_Roxburgh> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Richard Roxburgh"@en .
+<http://dbpedia.org/resource/Philip_Quast> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Philip Quast"@en .
+<http://dbpedia.org/resource/Samuel_Beckett> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Samuel Beckett"@en .
+<http://dbpedia.org/resource/Waiting_For_Godot> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Waiting For Godot"@en .
+<http://dbpedia.org/resource/Agent_Smith> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Agent Smith"@en .
+<http://dbpedia.org/resource/General_Electric> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "General Electric"@en .
+<http://dbpedia.org/resource/Saturday_Night_Live> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Saturday Night Live"@en .
+<http://dbpedia.org/resource/Sydney_Theatre_Company> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Sydney Theatre Company"@en .
+<http://dbpedia.org/resource/Macbeth> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Macbeth"@en .
+<http://dbpedia.org/resource/Kip_Williams> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Kip Williams"@en .
+<http://dbpedia.org/resource/Craig_Silvey> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Craig Silvey"@en .
+<http://dbpedia.org/resource/Jasper_Jones> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Jasper Jones"@en .
+<http://dbpedia.org/resource/Mortal_Engines_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Mortal Engines"@en .
+<http://dbpedia.org/resource/Benedict_Cumberbatch> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Benedict Cumberbatch"@en .
+<http://dbpedia.org/resource/Patrick_Melrose_(miniseries)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "''Patrick Melrose''"@en .
+<http://dbpedia.org/resource/Tony_Kushner> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Tony Kushner"@en .
+<http://dbpedia.org/resource/The_Visit_(play)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Visit"@en .
+<http://dbpedia.org/resource/Love_Me_(Australian_TV_series)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "''Love Me''"@en .
+<http://dbpedia.org/resource/Slow_Horses> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Slow Horses"@en .
+<http://dbpedia.org/resource/Animal_rights> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "animal rights"@en .
+<http://dbpedia.org/resource/Voiceless_(animal_rights_group)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Voiceless"@en .
+<http://dbpedia.org/resource/Adelaide_Film_Festival> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Adelaide Film Festival"@en .
+<http://dbpedia.org/resource/Epilepsy> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "epilepsy"@en .
+<http://dbpedia.org/resource/Harry_Greenwood_(actor)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Harry Greenwood"@en .
+<http://dbpedia.org/resource/Samara_Weaving> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Samara Weaving"@en .
+<http://dbpedia.org/resource/Mystery_Road_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Mystery Road"@en .
+<http://dbpedia.org/resource/Home_and_Away> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Home and Away"@en .
+<http://dbpedia.org/resource/Australian_Film_Institute_Awards> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Australian Film Institute Awards"@en .
+<http://dbpedia.org/resource/Proof_(1991_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Proof"@en .
+<http://dbpedia.org/resource/The_Interview_(1998_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Interview"@en .
+<http://dbpedia.org/resource/Little_Fish_(2005_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Little Fish"@en .
+<http://dbpedia.org/resource/V_for_Vendetta_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "V for Vendetta"@en .
+<http://dbpedia.org/resource/Helpmann_Award_for_Best_Male_Actor_in_a_Play> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Helpmann Award for Best Male Actor in a Play"@en .
+<http://dbpedia.org/resource/The_Resistible_Rise_of_Arturo_Ui> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Resistible Rise of Arturo Ui"@en .
+<http://dbpedia.org/resource/Satellite_Award_for_Best_Supporting_Actor_–_Series,_Miniseries_or_Television_Film> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Satellite Award for Best Supporting Actor – Series, Miniseries or Television Film"@en .
+<http://dbpedia.org/resource/Patrick_Melrose_(TV_series)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Patrick Melrose"@en .
+<http://dbpedia.org/resource/Fargo_Film_Festival> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Fargo Film Festival"@en .
+<http://dbpedia.org/resource/Hearts_and_Bones_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Hearts and Bones"@en .
+<http://dbpedia.org/resource/Order_of_Australia> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Order of Australia"@en .
+<http://dbpedia.org/resource/AACTA_Award_for_Best_Lead_Actor_in_a_Television_Drama> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "AACTA Award for Best Lead Actor in a Television Drama"@en .
+<http://dbpedia.org/resource/AACTA_Award_for_Best_Actor_in_a_Supporting_Role> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "AACTA Award for Best Actor in a Supporting Role"@en .
+<http://dbpedia.org/resource/Maybe_This_Time_(1980_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "''...Maybe This Time''"@en .
+<http://dbpedia.org/resource/The_City's_Edge> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The City's Edge"@en .
+<http://dbpedia.org/resource/For_Love_Alone> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "For Love Alone"@en .
+<http://dbpedia.org/resource/Wendy_Cracked_a_Walnut> <http://dbpedia.org/ontology/wikiPageWikiLinkText> ""@en .
+<http://dbpedia.org/resource/Proof_(1991_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Proof"@en .
+<http://dbpedia.org/resource/AACTA_Award_for_Best_Actor_in_a_Leading_Role> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "AACTA Award for Best Actor in a Leading Role"@en .
+<http://dbpedia.org/resource/Frauds_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Frauds"@en .
+<http://dbpedia.org/resource/Reckless_Kelly> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Reckless Kelly"@en .
+<http://dbpedia.org/resource/Exile_(1994_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Exile"@en .
+<http://dbpedia.org/resource/AACTA_Award_for_Best_Actor_in_a_Leading_Role> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "AACTA Award for Best Actor in a Leading Role"@en .
+<http://dbpedia.org/resource/Babe_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Babe"@en .
+<http://dbpedia.org/resource/True_Love_and_Chaos> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "True Love and Chaos"@en .
+<http://dbpedia.org/resource/Babe:_Pig_in_the_City> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Babe: Pig in the City"@en .
+<http://dbpedia.org/resource/Cameo_appearance> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Cameo"@en .
+<http://dbpedia.org/resource/Bedrooms_and_Hallways> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Bedrooms and Hallways"@en .
+<http://dbpedia.org/resource/AACTA_Award_for_Best_Actor_in_a_Leading_Role> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "AACTA Award for Best Actor in a Leading Role"@en .
+<http://dbpedia.org/resource/Montreal_World_Film_Festival> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Montreal World Film Festival"@en .
+<http://dbpedia.org/resource/Film_Critics_Circle_of_Australia> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "FCCA Award"@en .
+<http://dbpedia.org/resource/Strange_Planet> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Strange Planet"@en .
+<http://dbpedia.org/resource/Agent_Smith> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Agent Smith"@en .
+<http://dbpedia.org/resource/Blockbuster_Inc.> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Blockbuster Entertainment Award"@en .
+<http://dbpedia.org/resource/The_Magic_Pudding_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Magic Pudding"@en .
+<http://dbpedia.org/resource/Russian_Doll_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Russian Doll"@en .
+<http://dbpedia.org/resource/The_Old_Man_Who_Read_Love_Stories> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Old Man Who Read Love Stories"@en .
+<http://dbpedia.org/resource/AACTA_Award_for_Best_Actor_in_a_Supporting_Role> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "AACTA Award for Best Actor in a Supporting Role"@en .
+<http://dbpedia.org/resource/Film_Critics_Circle_of_Australia> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "FCCA Award"@en .
+<http://dbpedia.org/resource/Elrond> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Elrond"@en .
+<http://dbpedia.org/resource/Screen_Actors_Guild_Award_for_Outstanding_Performance_by_a_Cast_in_a_Motion_Picture> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Screen Actors Guild Award for Outstanding Performance by a Cast in a Motion Picture"@en .
+<http://dbpedia.org/resource/MTV_Movie_Award_for_Best_Fight> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "MTV Movie Award for Best Fight"@en .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Keanu Reeves"@en .
+<http://dbpedia.org/resource/Broadcast_Film_Critics_Association_Award_for_Best_Cast> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Broadcast Film Critics Association Award for Best Cast"@en .
+<http://dbpedia.org/resource/National_Board_of_Review_Award_for_Best_Cast> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "National Board of Review Award for Best Cast"@en .
+<http://dbpedia.org/resource/Screen_Actors_Guild_Award_for_Outstanding_Performance_by_a_Cast_in_a_Motion_Picture> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Screen Actors Guild Award for Outstanding Performance by a Cast in a Motion Picture"@en .
+<http://dbpedia.org/resource/Everything_Goes_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Everything Goes"@en .
+<http://dbpedia.org/resource/Inside_Film_Awards> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Inside Film Awards"@en .
+<http://dbpedia.org/resource/Peaches_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Peaches"@en .
+<http://dbpedia.org/resource/Little_Fish_(2005_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Little Fish"@en .
+<http://dbpedia.org/resource/AACTA_Award_for_Best_Actor_in_a_Leading_Role> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "AACTA Award for Best Actor in a Leading Role"@en .
+<http://dbpedia.org/resource/Film_Critics_Circle_of_Australia> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "FCCA Award"@en .
+<http://dbpedia.org/resource/Inside_Film_Awards> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Inside Film Award"@en .
+<http://dbpedia.org/resource/V_for_Vendetta_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "V for Vendetta"@en .
+<http://dbpedia.org/resource/V_(character)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "V"@en .
+<http://dbpedia.org/resource/International_Award_Association> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "International Award"@en .
+<http://dbpedia.org/resource/Happy_Feet> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Happy Feet"@en .
+<http://dbpedia.org/resource/Transformers_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Transformers"@en .
+<http://dbpedia.org/resource/Megatron> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Megatron"@en .
+<http://dbpedia.org/resource/Teen_Choice_Award_for_Choice_Movie_Villain> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Teen Choice Award for Choice Movie Villain"@en .
+<http://dbpedia.org/resource/In_the_Company_of_Actors> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "In the Company of Actors"@en .
+<http://dbpedia.org/resource/Transformers:_Revenge_of_the_Fallen> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Transformers: Revenge of the Fallen"@en .
+<http://dbpedia.org/resource/Last_Ride_(2009_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Last Ride"@en .
+<http://dbpedia.org/resource/AACTA_Award_for_Best_Actor_in_a_Leading_Role> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "AACTA Award for Best Actor in a Leading Role"@en .
+<http://dbpedia.org/resource/Oranges_and_Sunshine> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Oranges and Sunshine"@en .
+<http://dbpedia.org/resource/AACTA_Award_for_Best_Actor_in_a_Supporting_Role> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "AACTA Award for Best Actor in a Supporting Role"@en .
+<http://dbpedia.org/resource/Satellite_Award> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Satellite Award"@en .
+<http://dbpedia.org/resource/Legend_of_the_Guardians:_The_Owls_of_Ga'Hoole> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Legend of the Guardians: The Owls of Ga'Hoole"@en .
+<http://dbpedia.org/resource/Transformers:_Dark_of_the_Moon> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Transformers: Dark of the Moon"@en .
+<http://dbpedia.org/resource/Captain_America:_The_First_Avenger> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Captain America: The First Avenger"@en .
+<http://dbpedia.org/resource/Red_Skull_(Marvel_Cinematic_Universe)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Johann Schmidt / Red Skull"@en .
+<http://dbpedia.org/resource/Teen_Choice_Award> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Teen Choice Award"@en .
+<http://dbpedia.org/resource/Chris_Evans_(actor)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Chris Evans"@en .
+<http://dbpedia.org/resource/Scream_Award> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Scream Award"@en .
+<http://dbpedia.org/resource/Happy_Feet_Two> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Happy Feet Two"@en .
+<http://dbpedia.org/resource/Cloud_Atlas_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Cloud Atlas"@en .
+<http://dbpedia.org/resource/The_Hobbit:_An_Unexpected_Journey> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Hobbit: An Unexpected Journey"@en .
+<http://dbpedia.org/resource/Mystery_Road_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Mystery Road"@en .
+<http://dbpedia.org/resource/The_Turning_(2013_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Turning"@en .
+<http://dbpedia.org/resource/AACTA_Award_for_Best_Actor_in_a_Leading_Role> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "AACTA Award for Best Actor in a Leading Role"@en .
+<http://dbpedia.org/resource/Healing_(2014_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Healing"@en .
+<http://dbpedia.org/resource/The_Mule_(2014_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Mule"@en .
+<http://dbpedia.org/resource/Australian_Film_Critics_Association> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "AFCA Award"@en .
+<http://dbpedia.org/resource/The_Hobbit:_The_Battle_of_the_Five_Armies> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Hobbit: The Battle of the Five Armies"@en .
+<http://dbpedia.org/resource/Strangerland> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Strangerland"@en .
+<http://dbpedia.org/resource/The_Dressmaker_(2015_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Dressmaker"@en .
+<http://dbpedia.org/resource/AACTA_Award_for_Best_Actor_in_a_Supporting_Role> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "AACTA Award for Best Actor in a Supporting Role"@en .
+<http://dbpedia.org/resource/Australian_Film_Critics_Association> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "AFCA Award"@en .
+<http://dbpedia.org/resource/Film_Critics_Circle_of_Australia> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Film Critics Circle of Australia"@en .
+<http://dbpedia.org/resource/Hacksaw_Ridge> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Hacksaw Ridge"@en .
+<http://dbpedia.org/resource/AACTA_Award_for_Best_Actor_in_a_Supporting_Role> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "AACTA Award for Best Actor in a Supporting Role"@en .
+<http://dbpedia.org/resource/Jasper_Jones_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Jasper Jones"@en .
+<http://dbpedia.org/resource/AACTA_Award_for_Best_Actor_in_a_Supporting_Role> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "AACTA Award for Best Actor in a Supporting Role"@en .
+<http://dbpedia.org/resource/Black_'47_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Black '47"@en .
+<http://dbpedia.org/resource/Mortal_Engines_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Mortal Engines"@en .
+<http://dbpedia.org/resource/Hearts_and_Bones_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Hearts and Bones"@en .
+<http://dbpedia.org/resource/AACTA_Award_for_Best_Actor_in_a_Leading_Role> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "AACTA Award for Best Actor in a Leading Role"@en .
+<http://dbpedia.org/resource/Fargo_Film_Festival> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Fargo Film Festival"@en .
+<http://dbpedia.org/resource/Measure_for_Measure_(2020_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Measure for Measure"@en .
+<http://dbpedia.org/resource/Lone_Wolf_(2021_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Lone Wolf"@en .
+<http://dbpedia.org/resource/Expired_(2022_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Expired"@en .
+<http://dbpedia.org/resource/The_Royal_Hotel_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Royal Hotel"@en .
+<http://dbpedia.org/resource/The_Rooster_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Rooster"@en .
+<http://dbpedia.org/resource/Mark_Leonard_Winter> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Mark Leonard Winter"@en .
+<http://dbpedia.org/resource/How_to_Make_Gravy_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "How to Make Gravy"@en .
+<http://dbpedia.org/resource/Bodyline_(miniseries)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Bodyline"@en .
+<http://dbpedia.org/resource/Douglas_Jardine> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Douglas Jardine"@en .
+<http://dbpedia.org/resource/Melba_(miniseries)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Melba"@en .
+<http://dbpedia.org/resource/Dadah_Is_Death> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Dadah Is Death"@en .
+<http://dbpedia.org/resource/Geoffrey_Chambers> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Geoffrey Chambers"@en .
+<http://dbpedia.org/resource/Television_film> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Television film"@en .
+<http://dbpedia.org/resource/Bangkok_Hilton> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Bangkok Hilton"@en .
+<http://dbpedia.org/resource/Seven_Deadly_Sins_(miniseries)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Seven Deadly Sins"@en .
+<http://dbpedia.org/resource/Bordertown_(Australian_TV_series)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Bordertown"@en .
+<http://dbpedia.org/resource/The_Bite_(miniseries)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Bite"@en .
+<http://dbpedia.org/resource/Naked:_Stories_of_Men> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Naked: Stories of Men"@en .
+<http://dbpedia.org/resource/Halifax_f.p.> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Halifax f.p."@en .
+<http://dbpedia.org/resource/After_the_Deluge_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "After the Deluge"@en .
+<http://dbpedia.org/resource/Rake_(Australian_TV_series)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Rake"@en .
+<http://dbpedia.org/resource/Narrator> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Narrator"@en .
+<http://dbpedia.org/resource/Documentary_film> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Documentary"@en .
+<http://dbpedia.org/resource/Seven_Types_of_Ambiguity_(TV_series)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Seven Types of Ambiguity"@en .
+<http://dbpedia.org/resource/Patrick_Melrose_(miniseries)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Patrick Melrose"@en .
+<http://dbpedia.org/resource/Mr._Corman> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Mr. Corman"@en .
+<http://dbpedia.org/resource/Love_Me_(Australian_TV_series)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Love Me"@en .
+<http://dbpedia.org/resource/Koala_Man> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Koala Man"@en .
+<http://dbpedia.org/resource/Slow_Horses> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Slow Horses"@en .
+<http://dbpedia.org/resource/Enter_the_Matrix> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Enter the Matrix"@en .
+<http://dbpedia.org/resource/The_Lord_of_the_Rings:_The_Battle_for_Middle-earth_II> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Lord of the Rings: The Battle for Middle-earth II"@en .
+<http://dbpedia.org/resource/The_Lord_of_the_Rings:_Conquest> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Lord of the Rings: Conquest"@en .
+<http://dbpedia.org/resource/Robert_Bolt> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Robert Bolt's"@en .
+<http://dbpedia.org/resource/Charlton_House,_Wraxall> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Downs School"@en .
+<http://dbpedia.org/resource/Wraxall,_Somerset> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Wraxall"@en .
+<http://dbpedia.org/resource/You_Can't_Take_It_with_You_(play)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "You Can't Take It with You"@en .
+<http://dbpedia.org/resource/Sydney_Theatre_Company> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Sydney Theatre Company"@en .
+<http://dbpedia.org/resource/Geoffrey_Rush> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Geoffrey Rush"@en .
+<http://dbpedia.org/resource/Heather_Mitchell> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Heather Mitchell"@en .
+<http://dbpedia.org/resource/Sydney_Theatre_Company> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Sydney Theatre Company"@en .
+<http://dbpedia.org/resource/David_Hare_(playwright)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "David Hare"@en .
+<http://dbpedia.org/resource/Sydney_Theatre_Company> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Sydney Theatre Company"@en .
+<http://dbpedia.org/resource/John_Bell_(Australian_actor)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "John Bell"@en .
+<http://dbpedia.org/resource/Robyn_Nevin> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Robyn Nevin"@en .
+<http://dbpedia.org/resource/Colin_Friels> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Colin Friels"@en .
+<http://dbpedia.org/resource/Heather_Mitchell> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Heather Mitchell"@en .
+<http://dbpedia.org/resource/Richard_Wherrett> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Richard Wherrett"@en .
+<http://dbpedia.org/resource/Stefano_Pirandello> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Pirandello's"@en .
+<http://dbpedia.org/resource/Sydney_Theatre_Company> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Sydney Theatre Company"@en .
+<http://dbpedia.org/resource/The_Way_of_the_World> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Way of the World"@en .
+<http://dbpedia.org/resource/Sydney_Theatre_Company> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Sydney Theatre Company"@en .
+<http://dbpedia.org/resource/Ruth_Cracknell> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Ruth Cracknell"@en .
+<http://dbpedia.org/resource/Drew_Forsythe> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Drew Forsythe"@en .
+<http://dbpedia.org/resource/Gossip_from_the_Forest> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Gossip from the Forest"@en .
+<http://dbpedia.org/resource/Sydney_Theatre_Company> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Sydney Theatre Company"@en .
+<http://dbpedia.org/resource/Sydney_Theatre_Company> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Sydney Theatre Company"@en .
+<http://dbpedia.org/resource/Geoff_Morrell_(actor)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Geoff Morrell"@en .
+<http://dbpedia.org/resource/Les_Liaisons_Dangereuses_(play)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Les Liaisons Dangereuses"@en .
+<http://dbpedia.org/resource/Nimrod_Theatre_Company> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Nimrod Theatre Company"@en .
+<http://dbpedia.org/resource/The_Secret_Rapture_(play)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Secret Rapture"@en .
+<http://dbpedia.org/resource/Sydney_Theatre_Company> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Sydney Theatre Company"@en .
+<http://dbpedia.org/resource/Pamela_Rabe> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Pamela Rabe"@en .
+<http://dbpedia.org/resource/Heather_Mitchell> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Heather Mitchell"@en .
+<http://dbpedia.org/resource/The_Cherry_Orchard> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Cherry Orchard"@en .
+<http://dbpedia.org/resource/Sydney_Theatre_Company> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Sydney Theatre Company"@en .
+<http://dbpedia.org/resource/That_Eye,_The_Sky> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "That Eye, The Sky"@en .
+<http://dbpedia.org/resource/Sydney_Festival> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Sydney Arts Festival"@en .
+<http://dbpedia.org/resource/Arts_Centre_Melbourne> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Playhouse, Melbourne"@en .
+<http://dbpedia.org/resource/Arcadia_(play)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Arcadia"@en .
+<http://dbpedia.org/resource/Sydney_Theatre_Company> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Sydney Theatre Company"@en .
+<http://dbpedia.org/resource/Helen_Thomson_(actress)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Helen Thomson"@en .
+<http://dbpedia.org/resource/The_White_Devil> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The White Devil"@en .
+<http://dbpedia.org/resource/Theatre_Royal,_Sydney> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Theatre Royal, Sydney"@en .
+<http://dbpedia.org/resource/Sydney_Theatre_Company> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Sydney Theatre Company"@en .
+<http://dbpedia.org/resource/Angie_Milliken> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Angie Milliken"@en .
+<http://dbpedia.org/resource/Paula_Arundell> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Paula Arundell"@en .
+<http://dbpedia.org/resource/Bruce_Spence> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Bruce Spence"@en .
+<http://dbpedia.org/resource/Heather_Mitchell> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Heather Mitchell"@en .
+<http://dbpedia.org/resource/The_Real_Thing_(play)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Real Thing"@en .
+<http://dbpedia.org/resource/Sydney_Theatre_Company> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Sydney Theatre Company"@en .
+<http://dbpedia.org/resource/Angie_Milliken> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Angie Milliken"@en .
+<http://dbpedia.org/resource/Hedda_Gabler> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Hedda Gabler"@en .
+<http://dbpedia.org/resource/Brooklyn_Academy_of_Music> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Brooklyn Academy of Music"@en .
+<http://dbpedia.org/resource/Sydney_Theatre_Company> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Sydney Theatre Company"@en .
+<http://dbpedia.org/resource/Cate_Blanchett> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Cate Blanchett"@en .
+<http://dbpedia.org/resource/Justine_Clarke> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Justine Clarke"@en .
+<http://dbpedia.org/resource/Aden_Young> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Aden Young"@en .
+<http://dbpedia.org/resource/Robyn_Nevin> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Robyn Nevin"@en .
+<http://dbpedia.org/resource/In_the_Company_of_Actors> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "In the Company of Actors"@en .
+<http://dbpedia.org/resource/Sydney_Theatre_Company> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Sydney Theatre Company"@en .
+<http://dbpedia.org/resource/Philip_Seymour_Hoffman> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Philip Seymour Hoffman"@en .
+<http://dbpedia.org/resource/Andrew_Upton> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Andrew Upton"@en .
+<http://dbpedia.org/resource/God_of_Carnage> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "God of Carnage"@en .
+<http://dbpedia.org/resource/Melbourne_Theatre_Company> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Melbourne Theatre Company"@en .
+<http://dbpedia.org/resource/Uncle_Vanya> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Uncle Vanya"@en .
+<http://dbpedia.org/resource/Sydney_Theatre_Company> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Sydney Theatre Company"@en .
+<http://dbpedia.org/resource/Cate_Blanchett> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Cate Blanchett"@en .
+<http://dbpedia.org/resource/Richard_Roxburgh> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Richard Roxburgh"@en .
+<http://dbpedia.org/resource/Uncle_Vanya> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Uncle Vanya"@en .
+<http://dbpedia.org/resource/Sydney_Theatre_Company> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Sydney Theatre Company"@en .
+<http://dbpedia.org/resource/John_F._Kennedy_Center_for_the_Performing_Arts> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "John F. Kennedy Center for the Performing Arts"@en .
+<http://dbpedia.org/resource/Cate_Blanchett> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Cate Blanchett"@en .
+<http://dbpedia.org/resource/Richard_Roxburgh> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Richard Roxburgh"@en .
+<http://dbpedia.org/resource/Les_Liaisons_Dangereuses_(play)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Les Liaisons Dangereuses"@en .
+<http://dbpedia.org/resource/Sydney_Theatre_Company> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Sydney Theatre Company"@en .
+<http://dbpedia.org/resource/Pamela_Rabe> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Pamela Rabe"@en .
+<http://dbpedia.org/resource/Justine_Clarke> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Justine Clarke"@en .
+<http://dbpedia.org/resource/Uncle_Vanya> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Uncle Vanya"@en .
+<http://dbpedia.org/resource/New_York_City> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "New York's"@en .
+<http://dbpedia.org/resource/Lincoln_Center> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Lincoln Center"@en .
+<http://dbpedia.org/resource/Sydney_Theatre_Company> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Sydney Theatre Company"@en .
+<http://dbpedia.org/resource/Cate_Blanchett> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Cate Blanchett"@en .
+<http://dbpedia.org/resource/Richard_Roxburgh> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Richard Roxburgh"@en .
+<http://dbpedia.org/resource/Waiting_For_Godot> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Waiting For Godot"@en .
+<http://dbpedia.org/resource/Sydney_Theatre_Company> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Sydney Theatre Company"@en .
+<http://dbpedia.org/resource/Richard_Roxburgh> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Richard Roxburgh"@en .
+<http://dbpedia.org/resource/Philip_Quast> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Philip Quast"@en .
+<http://dbpedia.org/resource/Andrew_Upton> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Andrew Upton"@en .
+<http://dbpedia.org/resource/Macbeth> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Macbeth"@en .
+<http://dbpedia.org/resource/Macbeth_(character)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Macbeth"@en .
+<http://dbpedia.org/resource/Sydney_Theatre_Company> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Sydney Theatre Company"@en .
+<http://dbpedia.org/resource/Waiting_For_Godot> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Waiting For Godot"@en .
+<http://dbpedia.org/resource/Barbican_Centre> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Barbican Centre, London"@en .
+<http://dbpedia.org/resource/Sydney_Theatre_Company> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Sydney Theatre Company"@en .
+<http://dbpedia.org/resource/Richard_Roxburgh> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Richard Roxburgh"@en .
+<http://dbpedia.org/resource/Philip_Quast> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Philip Quast"@en .
+<http://dbpedia.org/resource/Andrew_Upton> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Andrew Upton"@en .
+<http://dbpedia.org/resource/Endgame_(play)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Endgame"@en .
+<http://dbpedia.org/resource/Sydney_Theatre_Company> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Sydney Theatre Company"@en .
+<http://dbpedia.org/resource/Andrew_Upton> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Andrew Upton"@en .
+<http://dbpedia.org/resource/The_Resistible_Rise_of_Arturo_Ui> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Resistible Rise of Arturo Ui"@en .
+<http://dbpedia.org/resource/Sydney_Theatre_Company> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Sydney Theatre Company"@en .
+<http://dbpedia.org/resource/Helpmann_Awards> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Helpmann award"@en .
+<http://dbpedia.org/resource/Cat_on_a_Hot_Tin_Roof> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Cat on a Hot Tin Roof"@en .
+<http://dbpedia.org/resource/Sydney_Theatre_Company> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Sydney Theatre Company"@en .
+<http://dbpedia.org/resource/The_Visit_(play)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Visit"@en .
+<http://dbpedia.org/resource/Tony_Kushner> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Tony Kushner"@en .
+<http://dbpedia.org/resource/Royal_National_Theatre> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "National Theatre, London"@en .
+<http://dbpedia.org/resource/Sydney_Theatre_Company> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Sydney Theatre Company"@en .
+<http://dbpedia.org/resource/The_President_(play)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The President"@en .
+<http://dbpedia.org/resource/Gate_Theatre,_Dublin> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Gate Theatre, Dublin"@en .
+<http://dbpedia.org/resource/Sydney_Theatre_Company> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Sydney Theatre Company"@en .
+<http://dbpedia.org/resource/Hugo_Weaving> <http://xmlns.com/foaf/0.1/depiction> <http://commons.wikimedia.org/wiki/Special:FilePath/MJK_08925_Hugo_Weaving_(Berlinale_2018)_bw43.jpg> .
+<http://dbpedia.org/resource/Hugo_Weaving> <http://dbpedia.org/ontology/thumbnail> <http://commons.wikimedia.org/wiki/Special:FilePath/MJK_08925_Hugo_Weaving_(Berlinale_2018)_bw43.jpg?width=300> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/MJK_08925_Hugo_Weaving_(Berlinale_2018)_bw43.jpg> <http://xmlns.com/foaf/0.1/thumbnail> <http://commons.wikimedia.org/wiki/Special:FilePath/MJK_08925_Hugo_Weaving_(Berlinale_2018)_bw43.jpg?width=300> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/MJK_08925_Hugo_Weaving_(Berlinale_2018)_bw43.jpg> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Image> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/MJK_08925_Hugo_Weaving_(Berlinale_2018)_bw43.jpg?width=300> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Image> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/MJK_08925_Hugo_Weaving_(Berlinale_2018)_bw43.jpg> <http://purl.org/dc/elements/1.1/rights> <http://en.wikipedia.org/wiki/File:MJK_08925_Hugo_Weaving_(Berlinale_2018)_bw43.jpg> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/MJK_08925_Hugo_Weaving_(Berlinale_2018)_bw43.jpg?width=300> <http://purl.org/dc/elements/1.1/rights> <http://en.wikipedia.org/wiki/File:MJK_08925_Hugo_Weaving_(Berlinale_2018)_bw43.jpg> .
+<http://dbpedia.org/resource/Hugo_Weaving> <http://xmlns.com/foaf/0.1/depiction> <http://commons.wikimedia.org/wiki/Special:FilePath/Hugo_Weaving.jpg> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Hugo_Weaving.jpg> <http://xmlns.com/foaf/0.1/thumbnail> <http://commons.wikimedia.org/wiki/Special:FilePath/Hugo_Weaving.jpg?width=300> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Hugo_Weaving.jpg> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Image> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Hugo_Weaving.jpg?width=300> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Image> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Hugo_Weaving.jpg> <http://purl.org/dc/elements/1.1/rights> <http://en.wikipedia.org/wiki/File:Hugo_Weaving.jpg> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Hugo_Weaving.jpg?width=300> <http://purl.org/dc/elements/1.1/rights> <http://en.wikipedia.org/wiki/File:Hugo_Weaving.jpg> .
+<http://dbpedia.org/resource/Hugo_Weaving> <http://xmlns.com/foaf/0.1/depiction> <http://commons.wikimedia.org/wiki/Special:FilePath/Hugo_w_(cropped).jpg> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Hugo_w_(cropped).jpg> <http://xmlns.com/foaf/0.1/thumbnail> <http://commons.wikimedia.org/wiki/Special:FilePath/Hugo_w_(cropped).jpg?width=300> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Hugo_w_(cropped).jpg> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Image> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Hugo_w_(cropped).jpg?width=300> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Image> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Hugo_w_(cropped).jpg> <http://purl.org/dc/elements/1.1/rights> <http://en.wikipedia.org/wiki/File:Hugo_w_(cropped).jpg> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Hugo_w_(cropped).jpg?width=300> <http://purl.org/dc/elements/1.1/rights> <http://en.wikipedia.org/wiki/File:Hugo_w_(cropped).jpg> .
+<http://dbpedia.org/resource/Hugo_Weaving> <http://xmlns.com/foaf/0.1/depiction> <http://commons.wikimedia.org/wiki/Special:FilePath/Hugo_Weaving_(8957650533).jpg> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Hugo_Weaving_(8957650533).jpg> <http://xmlns.com/foaf/0.1/thumbnail> <http://commons.wikimedia.org/wiki/Special:FilePath/Hugo_Weaving_(8957650533).jpg?width=300> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Hugo_Weaving_(8957650533).jpg> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Image> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Hugo_Weaving_(8957650533).jpg?width=300> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Image> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Hugo_Weaving_(8957650533).jpg> <http://purl.org/dc/elements/1.1/rights> <http://en.wikipedia.org/wiki/File:Hugo_Weaving_(8957650533).jpg> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Hugo_Weaving_(8957650533).jpg?width=300> <http://purl.org/dc/elements/1.1/rights> <http://en.wikipedia.org/wiki/File:Hugo_Weaving_(8957650533).jpg> .
+<http://dbpedia.org/resource/Hugo_Weaving> <http://xmlns.com/foaf/0.1/depiction> <http://commons.wikimedia.org/wiki/Special:FilePath/MJK_08925_Hugo_Weaving_(Berlinale_2018)_bw43.jpg> .
+# completed 2025-06-30T11:12:41Z
