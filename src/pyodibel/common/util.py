@@ -1,12 +1,17 @@
-#!/usr/bin/env python3
-"""
-PyOdibel Utilities - Helper functions for working with PyOdibel data.
-"""
-
+import hashlib
 import re
 from pathlib import Path
 from typing import Optional, Tuple, Dict, Any
 import json
+
+def hash_uri(uri: str) -> str:
+    """Hash a URI to create a filename-safe string."""
+    return hashlib.md5(uri.encode('utf-8')).hexdigest()
+
+    """
+PyOdibel Utilities - Helper functions for working with PyOdibel data.
+"""
+
 
 
 def filename_to_uri(filename: str) -> Optional[str]:

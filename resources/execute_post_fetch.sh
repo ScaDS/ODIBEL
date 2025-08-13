@@ -42,9 +42,9 @@ done
 
 # create rdf source
 DBO_FILE_LIST=$(mktemp)
-find data/final/split_1/ -type f | grep dbp/ > $DBO_FILE_LIST
-find data/final/split_2/ -type f | grep dbp/ >> $DBO_FILE_LIST
-find data/final/split_5/ -type f | grep dbp/ >> $DBO_FILE_LIST
+find data/final/split_1/ -type f | grep dbo/ > $DBO_FILE_LIST
+find data/final/split_2/ -type f | grep dbo/ >> $DBO_FILE_LIST
+find data/final/split_5/ -type f | grep dbo/ >> $DBO_FILE_LIST
 
 DBO_FILE="data/final/source.nt"
 rm $DBO_FILE

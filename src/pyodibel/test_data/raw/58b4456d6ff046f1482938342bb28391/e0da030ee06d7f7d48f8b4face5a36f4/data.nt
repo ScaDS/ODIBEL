@@ -1,0 +1,169 @@
+# started 2025-06-30T16:48:58Z
+<http://dbpedia.org/resource/Roadshow_Entertainment> <http://www.w3.org/2000/01/rdf-schema#label> "Roadshow Entertainment"@en .
+<http://dbpedia.org/resource/Roadshow_Entertainment> <http://dbpedia.org/ontology/wikiPageID> "15921699"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://dbpedia.org/resource/Roadshow_Entertainment> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://en.wikipedia.org/wiki/Roadshow_Entertainment?oldid=1295201994&ns=0> .
+<http://dbpedia.org/resource/Roadshow_Entertainment> <http://dbpedia.org/ontology/wikiPageRevisionID> "1295201994"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://dbpedia.org/resource/Roadshow_Entertainment> <http://dbpedia.org/ontology/wikiPageLength> "17567"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://dbpedia.org/resource/Roadshow_Entertainment> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Mass_media_companies_of_Australia> .
+<http://dbpedia.org/resource/Roadshow_Entertainment> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Home_video_distributors> .
+<http://dbpedia.org/resource/Roadshow_Entertainment> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Home_video_companies_of_Australia> .
+<http://dbpedia.org/resource/Roadshow_Entertainment> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Entertainment_companies_established_in_1982> .
+<http://dbpedia.org/resource/Roadshow_Entertainment> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Mass_media_companies_established_in_1982> .
+<http://dbpedia.org/resource/Roadshow_Entertainment> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:1982_establishments_in_Australia> .
+<http://dbpedia.org/resource/Roadshow_Entertainment> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Companies_based_in_Sydney> .
+<http://dbpedia.org/resource/Roadshow_Entertainment> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Film_distributors_of_Australia> .
+<http://dbpedia.org/resource/Roadshow_Entertainment> <http://xmlns.com/foaf/0.1/isPrimaryTopicOf> <http://en.wikipedia.org/wiki/Roadshow_Entertainment> .
+<http://en.wikipedia.org/wiki/Roadshow_Entertainment> <http://xmlns.com/foaf/0.1/primaryTopic> <http://dbpedia.org/resource/Roadshow_Entertainment> .
+<http://en.wikipedia.org/wiki/Roadshow_Entertainment> <http://purl.org/dc/elements/1.1/language> "en" .
+<http://en.wikipedia.org/wiki/Roadshow_Entertainment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Document> .
+<http://dbpedia.org/resource/Roadshow_Entertainment> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Short_description> .
+<http://dbpedia.org/resource/Roadshow_Entertainment> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Use_dmy_dates> .
+<http://dbpedia.org/resource/Roadshow_Entertainment> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Use_Australian_English> .
+<http://dbpedia.org/resource/Roadshow_Entertainment> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Infobox_company> .
+<http://dbpedia.org/resource/Roadshow_Entertainment> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Reflist> .
+<http://dbpedia.org/resource/Roadshow_Entertainment> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Authority_control> .
+<http://dbpedia.org/resource/Roadshow_Entertainment> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Start_date_and_age> .
+<http://dbpedia.org/resource/Roadshow_Entertainment> <http://dbpedia.org/ontology/wikiPageExternalLink> <https://ent.roadshow.com.au/main/> .
+<http://dbpedia.org/resource/Roadshow_Entertainment> <http://dbpedia.org/ontology/wikiPageExternalLink> <https://www.imdb.com/company/co0006451/> .
+<http://dbpedia.org/resource/Roadshow_Entertainment> <http://dbpedia.org/ontology/wikiPageExternalLink> <https://ent.roadshow.com.au/main/> .
+<http://dbpedia.org/resource/Roadshow_Entertainment> <http://dbpedia.org/property/name> "Roadshow Entertainment"@en .
+<http://dbpedia.org/resource/Roadshow_Entertainment> <http://dbpedia.org/property/formerName> "Roadshow Home Video"@en .
+<http://dbpedia.org/resource/Roadshow_Entertainment> <http://dbpedia.org/property/logo> "Roadshow Entertainment logo.png"@en .
+<http://dbpedia.org/resource/Roadshow_Entertainment> <http://dbpedia.org/property/type> <http://dbpedia.org/resource/Subsidiary> .
+<http://dbpedia.org/resource/Roadshow_Entertainment> <http://dbpedia.org/property/parent> <http://dbpedia.org/resource/Village_Roadshow> .
+<http://dbpedia.org/resource/Roadshow_Entertainment> <http://dbpedia.org/property/foundation> "1982-04-16"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://dbpedia.org/resource/Roadshow_Entertainment> <http://dbpedia.org/property/locationCity> <http://dbpedia.org/resource/Sydney> .
+<http://dbpedia.org/resource/Roadshow_Entertainment> <http://dbpedia.org/property/locationCity> <http://dbpedia.org/resource/New_South_Wales> .
+<http://dbpedia.org/resource/Roadshow_Entertainment> <http://dbpedia.org/property/locationCountry> "Australia"@en .
+<http://dbpedia.org/resource/Roadshow_Entertainment> <http://dbpedia.org/property/areaServed> <http://dbpedia.org/resource/Australia> .
+<http://dbpedia.org/resource/Roadshow_Entertainment> <http://dbpedia.org/property/areaServed> <http://dbpedia.org/resource/New_Zealand> .
+<http://dbpedia.org/resource/Roadshow_Entertainment> <http://dbpedia.org/property/industry> <http://dbpedia.org/resource/Film_distribution> .
+<http://dbpedia.org/resource/Roadshow_Entertainment> <http://dbpedia.org/property/products> <http://dbpedia.org/resource/Home_video> .
+<http://dbpedia.org/resource/Roadshow_Entertainment> <http://dbpedia.org/property/products> <http://dbpedia.org/resource/Film> .
+<http://dbpedia.org/resource/Roadshow_Entertainment> <http://dbpedia.org/property/divisions> "Roadshow Films"@en .
+<http://dbpedia.org/resource/Roadshow_Entertainment> <http://dbpedia.org/property/website> <https://ent.roadshow.com.au/main/> .
+<http://dbpedia.org/resource/Roadshow_Entertainment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Company> .
+<http://dbpedia.org/resource/Roadshow_Entertainment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q4830453> .
+<http://dbpedia.org/resource/Roadshow_Entertainment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Organisation> .
+<http://dbpedia.org/resource/Roadshow_Entertainment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Organization> .
+<http://dbpedia.org/resource/Roadshow_Entertainment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#SocialPerson> .
+<http://dbpedia.org/resource/Roadshow_Entertainment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q43229> .
+<http://dbpedia.org/resource/Roadshow_Entertainment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Agent> .
+<http://dbpedia.org/resource/Roadshow_Entertainment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent> .
+<http://dbpedia.org/resource/Roadshow_Entertainment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q24229398> .
+<http://dbpedia.org/resource/Roadshow_Entertainment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Thing> .
+<http://dbpedia.org/resource/Roadshow_Entertainment> <http://xmlns.com/foaf/0.1/name> "Roadshow Entertainment"@en .
+<http://dbpedia.org/resource/Roadshow_Entertainment> <http://dbpedia.org/ontology/formerName> "Roadshow Home Video (1982–1993)"@en .
+<http://dbpedia.org/resource/Roadshow_Entertainment> <http://dbpedia.org/ontology/type> <http://dbpedia.org/resource/Subsidiary> .
+<http://dbpedia.org/resource/Roadshow_Entertainment> <http://dbpedia.org/ontology/foundingDate> "1982-04-16"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://dbpedia.org/resource/Roadshow_Entertainment> <http://dbpedia.org/ontology/foundingYear> "1982"^^<http://www.w3.org/2001/XMLSchema#gYear> .
+<http://dbpedia.org/resource/Roadshow_Entertainment> <http://dbpedia.org/ontology/regionServed> <http://dbpedia.org/resource/Australia> .
+<http://dbpedia.org/resource/Roadshow_Entertainment> <http://dbpedia.org/ontology/regionServed> <http://dbpedia.org/resource/New_Zealand> .
+<http://dbpedia.org/resource/Roadshow_Entertainment> <http://dbpedia.org/ontology/industry> <http://dbpedia.org/resource/Film_distribution> .
+<http://dbpedia.org/resource/Roadshow_Entertainment> <http://dbpedia.org/ontology/product> <http://dbpedia.org/resource/Home_video> .
+<http://dbpedia.org/resource/Roadshow_Entertainment> <http://dbpedia.org/ontology/product> <http://dbpedia.org/resource/Film> .
+<http://dbpedia.org/resource/Roadshow_Entertainment> <http://dbpedia.org/ontology/parentCompany> <http://dbpedia.org/resource/Village_Roadshow> .
+<http://dbpedia.org/resource/Roadshow_Entertainment> <http://xmlns.com/foaf/0.1/homepage> <https://ent.roadshow.com.au/main/> .
+<http://dbpedia.org/resource/Roadshow_Entertainment> <http://dbpedia.org/ontology/wikiPageOutDegree> "100"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://dbpedia.org/resource/Subsidiary> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Subsidiary"@en .
+<http://dbpedia.org/resource/Village_Roadshow> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Village Roadshow"@en .
+<http://dbpedia.org/resource/Sydney> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Sydney"@en .
+<http://dbpedia.org/resource/New_South_Wales> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "New South Wales"@en .
+<http://dbpedia.org/resource/Australia> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Australia"@en .
+<http://dbpedia.org/resource/New_Zealand> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "New Zealand"@en .
+<http://dbpedia.org/resource/Film_distribution> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Film distribution"@en .
+<http://dbpedia.org/resource/Home_video> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Home video"@en .
+<http://dbpedia.org/resource/Film> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Cinematic"@en .
+<http://dbpedia.org/resource/Home_video> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "home video"@en .
+<http://dbpedia.org/resource/Production_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "production"@en .
+<http://dbpedia.org/resource/Distribution_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "distribution"@en .
+<http://dbpedia.org/resource/Village_Roadshow> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Village Roadshow"@en .
+<http://dbpedia.org/resource/Mad_Max_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Mad Max"@en .
+<http://dbpedia.org/resource/Village_Roadshow> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Village Roadshow"@en .
+<http://dbpedia.org/resource/Sex_World> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Sex World"@en .
+<http://dbpedia.org/resource/Phantasm_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Phantasm"@en .
+<http://dbpedia.org/resource/Mad_Max_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Mad Max"@en .
+<http://dbpedia.org/resource/Insatiable_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Insatiable"@en .
+<http://dbpedia.org/resource/Little_Lord_Fauntleroy_(1980_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Little Lord Fauntleroy"@en .
+<http://dbpedia.org/resource/A_Change_of_Seasons_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "A Change of Seasons"@en .
+<http://dbpedia.org/resource/Atlantic_City_(1980_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Atlantic City"@en .
+<http://dbpedia.org/resource/Scanners> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Scanners"@en .
+<http://dbpedia.org/resource/King_of_the_Mountain_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "King of the Mountain"@en .
+<http://dbpedia.org/resource/Montenegro_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Montenegro"@en .
+<http://dbpedia.org/resource/Endless_Love_(1981_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Endless Love"@en .
+<http://dbpedia.org/resource/Palace_Cinemas_(Australia)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Palace Films"@en .
+<http://dbpedia.org/resource/Walt_Disney_Studios_Home_Entertainment> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Walt Disney Home Video"@en .
+<http://dbpedia.org/resource/Syme_Home_Video> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Syme Home Video"@en .
+<http://dbpedia.org/resource/Babette's_Feast> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Babette's Feast"@en .
+<http://dbpedia.org/resource/20th_Century_Home_Entertainment> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "20th Century Fox Home Entertainment"@en .
+<http://dbpedia.org/resource/Evita_(1996_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Evita"@en .
+<http://dbpedia.org/resource/Warner_Bros.> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Warner Bros."@en .
+<http://dbpedia.org/resource/Universal_Pictures> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Universal Pictures International"@en .
+<http://dbpedia.org/resource/Festival_Records> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Festival Mushroom Records"@en .
+<http://dbpedia.org/resource/Reel_Corporation> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Reel Corporation"@en .
+<http://dbpedia.org/resource/Entertainment_One> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "eOne"@en .
+<http://dbpedia.org/resource/Village_Cinemas> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Village Cinemas"@en .
+<http://dbpedia.org/resource/South_Pacific_(1958_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "South Pacific"@en .
+<http://dbpedia.org/resource/American_International_Pictures> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "American International Pictures"@en .
+<http://dbpedia.org/resource/Warner_Bros.> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Warner Bros."@en .
+<http://dbpedia.org/resource/Stork_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Stork"@en .
+<http://dbpedia.org/resource/Hexagon_Productions> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Hexagon Productions"@en .
+<http://dbpedia.org/resource/Tim_Burstall> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Tim Burstall"@en .
+<http://dbpedia.org/resource/Alvin_Purple> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Alvin Purple"@en .
+<http://dbpedia.org/resource/Mad_Max_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Mad Max"@en .
+<http://dbpedia.org/resource/Kennedy_Miller_Mitchell> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Kennedy Miller"@en .
+<http://dbpedia.org/resource/Rebel_(1985_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Rebel"@en .
+<http://dbpedia.org/resource/Phillip_Emanuel> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Phillip Emanuel"@en .
+<http://dbpedia.org/resource/Event_Cinemas> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Greater Union Film Distributors"@en .
+<http://dbpedia.org/resource/Walt_Disney_Studios_Motion_Pictures> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Buena Vista Pictures Distribution"@en .
+<http://dbpedia.org/resource/Walt_Disney_Pictures> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Walt Disney Pictures"@en .
+<http://dbpedia.org/resource/Touchstone_Pictures> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Touchstone Pictures"@en .
+<http://dbpedia.org/resource/Hollywood_Pictures> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Hollywood Pictures"@en .
+<http://dbpedia.org/resource/Village_Roadshow_Pictures> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Village Roadshow Pictures"@en .
+<http://dbpedia.org/resource/Walt_Disney_Studios_Motion_Pictures> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Buena Vista International"@en .
+<http://dbpedia.org/resource/Beyond_International> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Beyond Films"@en .
+<http://dbpedia.org/resource/United_States> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "American"@en .
+<http://dbpedia.org/resource/FilmNation_Entertainment> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "FilmNation Entertainment"@en .
+<http://dbpedia.org/resource/Australian_Broadcasting_Corporation> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "ABC"@en .
+<http://dbpedia.org/resource/ABC_Music> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "ABC Music"@en .
+<http://dbpedia.org/resource/Foxtel> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Foxtel Original"@en .
+<http://dbpedia.org/resource/Lantern_Entertainment> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Lantern Entertainment"@en .
+<http://dbpedia.org/resource/Dimension_Films> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Dimension Films"@en .
+<http://dbpedia.org/resource/Lionsgate_Studios> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Lionsgate"@en .
+<http://dbpedia.org/resource/Nine_Network> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Nine Network"@en .
+<http://dbpedia.org/resource/Fremantle_(company)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Fremantle"@en .
+<http://dbpedia.org/resource/Village_Roadshow_Pictures> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Village Roadshow Pictures"@en .
+<http://dbpedia.org/resource/Warner_Bros._Home_Entertainment> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Warner Bros. Home Entertainment"@en .
+<http://dbpedia.org/resource/MGM_Home_Entertainment> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "MGM Home Entertainment"@en .
+<http://dbpedia.org/resource/Reel_Corporation> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Reel Corporation"@en .
+<http://dbpedia.org/resource/ITV_Studios> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "ITV Studios Home Entertainment"@en .
+<http://dbpedia.org/resource/FilmNation_Entertainment> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "FilmNation Entertainment"@en .
+<http://dbpedia.org/resource/Mandalay_Pictures> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Mandalay Pictures"@en .
+<http://dbpedia.org/resource/STX_Entertainment> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "STX Entertainment"@en .
+<http://dbpedia.org/resource/Walt_Disney_Studios_Home_Entertainment> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Walt Disney Studios Home Entertainment"@en .
+<http://dbpedia.org/resource/New_World_Pictures> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "New World International"@en .
+<http://dbpedia.org/resource/BBC> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "BBC"@en .
+<http://dbpedia.org/resource/Focus_Features> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Focus Features"@en .
+<http://dbpedia.org/resource/Warner_Bros._Pictures> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Warner Bros. Pictures"@en .
+<http://dbpedia.org/resource/Universal_Pictures_International> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Universal Pictures International"@en .
+<http://dbpedia.org/resource/Miramax> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Miramax"@en .
+<http://dbpedia.org/resource/Paramount_Pictures> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Paramount Pictures International"@en .
+<http://dbpedia.org/resource/American_International_Pictures> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "American International Pictures"@en .
+<http://dbpedia.org/resource/Filmways> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Filmways Pictures"@en .
+<http://dbpedia.org/resource/Orion_Pictures> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Orion Pictures"@en .
+<http://dbpedia.org/resource/Sony_Pictures_Motion_Picture_Group> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Columbia TriStar Film Distributors International"@en .
+<http://dbpedia.org/resource/Producers_Sales_Organization> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Producers Sales Organization"@en .
+<http://dbpedia.org/resource/Carolco_Pictures> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Carolco Pictures"@en .
+<http://dbpedia.org/resource/Walt_Disney_Studios_Motion_Pictures> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Walt Disney Studios Motion Pictures"@en .
+<http://dbpedia.org/resource/New_Line_Cinema> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "New Line Cinema"@en .
+<http://dbpedia.org/resource/Network_10> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Network 10"@en .
+<http://dbpedia.org/resource/Roadshow_Entertainment> <http://xmlns.com/foaf/0.1/homepage> <https://ent.roadshow.com.au/main/> .
+<http://dbpedia.org/resource/Roadshow_Entertainment> <http://xmlns.com/foaf/0.1/depiction> <http://commons.wikimedia.org/wiki/Special:FilePath/Roadshow_Entertainment_logo.png> .
+<http://dbpedia.org/resource/Roadshow_Entertainment> <http://dbpedia.org/ontology/thumbnail> <http://commons.wikimedia.org/wiki/Special:FilePath/Roadshow_Entertainment_logo.png?width=300> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Roadshow_Entertainment_logo.png> <http://xmlns.com/foaf/0.1/thumbnail> <http://commons.wikimedia.org/wiki/Special:FilePath/Roadshow_Entertainment_logo.png?width=300> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Roadshow_Entertainment_logo.png> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Image> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Roadshow_Entertainment_logo.png?width=300> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Image> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Roadshow_Entertainment_logo.png> <http://purl.org/dc/elements/1.1/rights> <http://en.wikipedia.org/wiki/File:Roadshow_Entertainment_logo.png> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Roadshow_Entertainment_logo.png?width=300> <http://purl.org/dc/elements/1.1/rights> <http://en.wikipedia.org/wiki/File:Roadshow_Entertainment_logo.png> .
+<http://dbpedia.org/resource/Roadshow_Entertainment> <http://xmlns.com/foaf/0.1/depiction> <http://commons.wikimedia.org/wiki/Special:FilePath/Roadshow_Entertainment_logo.png> .
+# completed 2025-06-30T16:48:58Z

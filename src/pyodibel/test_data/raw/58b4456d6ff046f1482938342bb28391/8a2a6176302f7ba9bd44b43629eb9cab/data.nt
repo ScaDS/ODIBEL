@@ -1,0 +1,336 @@
+# started 2025-06-30T11:14:10Z
+<http://dbpedia.org/resource/Joe_Pantoliano> <http://www.w3.org/2000/01/rdf-schema#label> "Joe Pantoliano"@en .
+<http://dbpedia.org/resource/Joe_Pantoliano> <http://dbpedia.org/ontology/wikiPageID> "192381"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://dbpedia.org/resource/Joe_Pantoliano> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://en.wikipedia.org/wiki/Joe_Pantoliano?oldid=1296086962&ns=0> .
+<http://dbpedia.org/resource/Joe_Pantoliano> <http://dbpedia.org/ontology/wikiPageRevisionID> "1296086962"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://dbpedia.org/resource/Joe_Pantoliano> <http://dbpedia.org/ontology/wikiPageLength> "29892"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://dbpedia.org/resource/Joe_Pantoliano> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:1951_births> .
+<http://dbpedia.org/resource/Joe_Pantoliano> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Living_people> .
+<http://dbpedia.org/resource/Joe_Pantoliano> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:American_people_of_Italian_descent> .
+<http://dbpedia.org/resource/Joe_Pantoliano> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Cliffside_Park_High_School_alumni> .
+<http://dbpedia.org/resource/Joe_Pantoliano> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Male_actors_from_Connecticut> .
+<http://dbpedia.org/resource/Joe_Pantoliano> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Male_actors_from_New_Jersey> .
+<http://dbpedia.org/resource/Joe_Pantoliano> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:American_male_film_actors> .
+<http://dbpedia.org/resource/Joe_Pantoliano> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:American_male_television_actors> .
+<http://dbpedia.org/resource/Joe_Pantoliano> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:American_male_video_game_actors> .
+<http://dbpedia.org/resource/Joe_Pantoliano> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:American_male_voice_actors> .
+<http://dbpedia.org/resource/Joe_Pantoliano> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Mental_health_activists> .
+<http://dbpedia.org/resource/Joe_Pantoliano> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:People_from_Cliffside_Park,_New_Jersey> .
+<http://dbpedia.org/resource/Joe_Pantoliano> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Actors_from_Hoboken,_New_Jersey> .
+<http://dbpedia.org/resource/Joe_Pantoliano> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:People_from_Wilton,_Connecticut> .
+<http://dbpedia.org/resource/Joe_Pantoliano> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:20th-century_American_male_actors> .
+<http://dbpedia.org/resource/Joe_Pantoliano> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:21st-century_American_male_actors> .
+<http://dbpedia.org/resource/Joe_Pantoliano> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Outstanding_Performance_by_a_Supporting_Actor_in_a_Drama_Series_Primetime_Emmy_Award_winners> .
+<http://dbpedia.org/resource/Joe_Pantoliano> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Actors_with_dyslexia> .
+<http://dbpedia.org/resource/Joe_Pantoliano> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:American_actors_with_disabilities> .
+<http://dbpedia.org/resource/Joe_Pantoliano> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Actors_from_Bergen_County,_New_Jersey> .
+<http://dbpedia.org/resource/Joe_Pantoliano> <http://xmlns.com/foaf/0.1/isPrimaryTopicOf> <http://en.wikipedia.org/wiki/Joe_Pantoliano> .
+<http://en.wikipedia.org/wiki/Joe_Pantoliano> <http://xmlns.com/foaf/0.1/primaryTopic> <http://dbpedia.org/resource/Joe_Pantoliano> .
+<http://en.wikipedia.org/wiki/Joe_Pantoliano> <http://purl.org/dc/elements/1.1/language> "en" .
+<http://en.wikipedia.org/wiki/Joe_Pantoliano> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Document> .
+<http://dbpedia.org/resource/Joe_Pantoliano> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Short_description> .
+<http://dbpedia.org/resource/Joe_Pantoliano> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Redirect> .
+<http://dbpedia.org/resource/Joe_Pantoliano> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Use_mdy_dates> .
+<http://dbpedia.org/resource/Joe_Pantoliano> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Infobox_person> .
+<http://dbpedia.org/resource/Joe_Pantoliano> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Citation_needed> .
+<http://dbpedia.org/resource/Joe_Pantoliano> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Citation_needed> .
+<http://dbpedia.org/resource/Joe_Pantoliano> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Nom> .
+<http://dbpedia.org/resource/Joe_Pantoliano> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Nom> .
+<http://dbpedia.org/resource/Joe_Pantoliano> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Nom> .
+<http://dbpedia.org/resource/Joe_Pantoliano> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Nom> .
+<http://dbpedia.org/resource/Joe_Pantoliano> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Won> .
+<http://dbpedia.org/resource/Joe_Pantoliano> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Nom> .
+<http://dbpedia.org/resource/Joe_Pantoliano> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:ISBN> .
+<http://dbpedia.org/resource/Joe_Pantoliano> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:ISBN> .
+<http://dbpedia.org/resource/Joe_Pantoliano> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Reflist> .
+<http://dbpedia.org/resource/Joe_Pantoliano> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Commons_category> .
+<http://dbpedia.org/resource/Joe_Pantoliano> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:IMDb_name> .
+<http://dbpedia.org/resource/Joe_Pantoliano> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:EmmyAward_DramaSupportingActor_2001–2025> .
+<http://dbpedia.org/resource/Joe_Pantoliano> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Authority_control> .
+<http://dbpedia.org/resource/Joe_Pantoliano> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Birth_date_and_age> .
+<http://dbpedia.org/resource/Joe_Pantoliano> <http://dbpedia.org/ontology/wikiPageExternalLink> <http://abilitymagazine.com/Joey-Pants-Interview.html> .
+<http://dbpedia.org/resource/Joe_Pantoliano> <http://dbpedia.org/property/caption> "Pantoliano in 2009"@en .
+<http://dbpedia.org/resource/Joe_Pantoliano> <http://dbpedia.org/property/birthName> "Joseph Peter Pantoliano"@en .
+<http://dbpedia.org/resource/Joe_Pantoliano> <http://dbpedia.org/property/birthDate> "1951-09-12"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://dbpedia.org/resource/Joe_Pantoliano> <http://dbpedia.org/property/birthPlace> "Hoboken, New Jersey, U.S."@en .
+<http://dbpedia.org/resource/Joe_Pantoliano> <http://dbpedia.org/property/otherNames> "Joey Pants"@en .
+<http://dbpedia.org/resource/Joe_Pantoliano> <http://dbpedia.org/property/occupation> "Actor"@en .
+<http://dbpedia.org/resource/Joe_Pantoliano> <http://dbpedia.org/property/yearsActive> "1974"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://dbpedia.org/resource/Joe_Pantoliano> <http://dbpedia.org/property/spouse> "1994"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://dbpedia.org/resource/Joe_Pantoliano> <http://dbpedia.org/property/spouse> "Nancy Sheppard"@en .
+<http://dbpedia.org/resource/Joe_Pantoliano> <http://dbpedia.org/property/spouse> "divorced"@en .
+<http://dbpedia.org/resource/Joe_Pantoliano> <http://dbpedia.org/property/spouse> "1985"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://dbpedia.org/resource/Joe_Pantoliano> <http://dbpedia.org/property/spouse> "1979"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://dbpedia.org/resource/Joe_Pantoliano> <http://dbpedia.org/property/spouse> "Morgan Kester"@en .
+<http://dbpedia.org/resource/Joe_Pantoliano> <http://dbpedia.org/property/spouse> ""@en .
+<http://dbpedia.org/resource/Joe_Pantoliano> <http://dbpedia.org/property/children> "4"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://dbpedia.org/resource/Joe_Pantoliano> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Person> .
+<http://dbpedia.org/resource/Joe_Pantoliano> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q5> .
+<http://dbpedia.org/resource/Joe_Pantoliano> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://dbpedia.org/resource/Joe_Pantoliano> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Thing> .
+<http://dbpedia.org/resource/Joe_Pantoliano> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Person> .
+<http://dbpedia.org/resource/Joe_Pantoliano> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q215627> .
+<http://dbpedia.org/resource/Joe_Pantoliano> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#NaturalPerson> .
+<http://dbpedia.org/resource/Joe_Pantoliano> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Animal> .
+<http://dbpedia.org/resource/Joe_Pantoliano> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q729> .
+<http://dbpedia.org/resource/Joe_Pantoliano> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Eukaryote> .
+<http://dbpedia.org/resource/Joe_Pantoliano> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q19088> .
+<http://dbpedia.org/resource/Joe_Pantoliano> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Species> .
+<http://dbpedia.org/resource/Joe_Pantoliano> <http://dbpedia.org/ontology/birthDate> "1951-09-12"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://dbpedia.org/resource/Joe_Pantoliano> <http://dbpedia.org/ontology/birthYear> "1951"^^<http://www.w3.org/2001/XMLSchema#gYear> .
+<http://dbpedia.org/resource/Joe_Pantoliano> <http://dbpedia.org/ontology/birthPlace> <http://dbpedia.org/resource/Hoboken,_New_Jersey> .
+<http://dbpedia.org/resource/Joe_Pantoliano> <http://dbpedia.org/ontology/alias> "Joey Pants"@en .
+<http://dbpedia.org/resource/Joe_Pantoliano> <http://dbpedia.org/ontology/occupation> <http://dbpedia.org/resource/Joe_Pantoliano__PersonFunction__1> .
+<http://dbpedia.org/resource/Joe_Pantoliano__PersonFunction__1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/PersonFunction> .
+<http://dbpedia.org/resource/Joe_Pantoliano__PersonFunction__1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Thing> .
+<http://dbpedia.org/resource/Joe_Pantoliano__PersonFunction__1> <http://dbpedia.org/ontology/title> "Actor"@en .
+<http://dbpedia.org/resource/Joe_Pantoliano> <http://dbpedia.org/ontology/activeYearsStartYear> "1974"^^<http://www.w3.org/2001/XMLSchema#gYear> .
+<http://dbpedia.org/resource/Joe_Pantoliano> <http://dbpedia.org/ontology/birthName> "Joseph Peter Pantoliano"@en .
+<http://dbpedia.org/resource/Joe_Pantoliano> <http://dbpedia.org/ontology/wikiPageOutDegree> "253"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://dbpedia.org/resource/Hoboken,_New_Jersey> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Hoboken, New Jersey"@en .
+<http://dbpedia.org/resource/The_Goonies> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Goonies"@en .
+<http://dbpedia.org/resource/Bad_Boys_(franchise)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "''Bad Boys'' film series"@en .
+<http://dbpedia.org/resource/List_of_minor_characters_in_the_Matrix_series> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Cypher"@en .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "the Wachowskis"@en .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Matrix"@en .
+<http://dbpedia.org/resource/Christopher_Nolan> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Christopher Nolan"@en .
+<http://dbpedia.org/resource/Memento_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Memento"@en .
+<http://dbpedia.org/resource/List_of_The_Sopranos_characters> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Ralph \"Ralphie\" Cifaretto"@en .
+<http://dbpedia.org/resource/HBO> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "HBO"@en .
+<http://dbpedia.org/resource/The_Sopranos> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Sopranos"@en .
+<http://dbpedia.org/resource/Primetime_Emmy_Award_for_Outstanding_Supporting_Actor_in_a_Drama_Series> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Primetime Emmy Award for Outstanding Supporting Actor in a Drama Series"@en .
+<http://dbpedia.org/resource/Risky_Business> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Risky Business"@en .
+<http://dbpedia.org/resource/Empire_of_the_Sun_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Empire of the Sun"@en .
+<http://dbpedia.org/resource/La_Bamba_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "La Bamba"@en .
+<http://dbpedia.org/resource/Midnight_Run> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Midnight Run"@en .
+<http://dbpedia.org/resource/The_Fugitive_(1993_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Fugitive"@en .
+<http://dbpedia.org/resource/Baby's_Day_Out> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Baby's Day Out"@en .
+<http://dbpedia.org/resource/Bound_(1996_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Bound"@en .
+<http://dbpedia.org/resource/Percy_Jackson_&_the_Olympians:_The_Lightning_Thief> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Percy Jackson & the Olympians: The Lightning Thief"@en .
+<http://dbpedia.org/resource/Hoboken,_New_Jersey> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Hoboken, New Jersey"@en .
+<http://dbpedia.org/resource/Cliffside_Park,_New_Jersey> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Cliffside Park, New Jersey"@en .
+<http://dbpedia.org/resource/Cliffside_Park_High_School> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Cliffside Park High School"@en .
+<http://dbpedia.org/resource/HB_Studio> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "HB Studio"@en .
+<http://dbpedia.org/resource/Herbert_Berghof> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Herbert Berghof"@en .
+<http://dbpedia.org/resource/Risky_Business> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Risky Business"@en .
+<http://dbpedia.org/resource/The_Goonies> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Goonies"@en .
+<http://dbpedia.org/resource/List_of_minor_characters_in_the_Matrix_series> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Cypher"@en .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Matrix"@en .
+<http://dbpedia.org/resource/Primetime_Emmy_Award_for_Outstanding_Supporting_Actor_in_a_Drama_Series> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Primetime Emmy Award for Outstanding Supporting Actor in a Drama Series"@en .
+<http://dbpedia.org/resource/Ralph_Cifaretto> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Ralph Cifaretto"@en .
+<http://dbpedia.org/resource/HBO> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "HBO"@en .
+<http://dbpedia.org/resource/The_Sopranos> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Sopranos"@en .
+<http://dbpedia.org/resource/Bail_bondsman> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "bail bondsman"@en .
+<http://dbpedia.org/resource/Robert_De_Niro> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Robert De Niro"@en .
+<http://dbpedia.org/resource/Midnight_Run> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Midnight Run"@en .
+<http://dbpedia.org/resource/Bad_Boys_(1995_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Bad Boys"@en .
+<http://dbpedia.org/resource/Bad_Boys_II> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Bad Boys II"@en .
+<http://dbpedia.org/resource/Bad_Boys_for_Life> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Bad Boys for Life"@en .
+<http://dbpedia.org/resource/Bad_Boys:_Ride_or_Die> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Bad Boys: Ride or Die"@en .
+<http://dbpedia.org/resource/Sicilian_Mafia> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "mafioso"@en .
+<http://dbpedia.org/resource/Bound_(1996_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Bound"@en .
+<http://dbpedia.org/resource/Memento_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Memento"@en .
+<http://dbpedia.org/resource/Investigative_journalist> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "investigative journalist"@en .
+<http://dbpedia.org/resource/Ben_Urich> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Ben Urich"@en .
+<http://dbpedia.org/resource/Mark_Steven_Johnson> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Mark Steven Johnson"@en .
+<http://dbpedia.org/resource/Daredevil_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Daredevil"@en .
+<http://dbpedia.org/resource/The_Fugitive_(1993_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Fugitive"@en .
+<http://dbpedia.org/resource/Tommy_Lee_Jones> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Tommy Lee Jones"@en .
+<http://dbpedia.org/resource/U.S._Marshals_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "U.S. Marshals"@en .
+<http://dbpedia.org/resource/Stanley_Tucci> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Stanley Tucci"@en .
+<http://dbpedia.org/resource/Broadway_theatre> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Broadway"@en .
+<http://dbpedia.org/resource/Frankie_and_Johnny_in_the_Clair_de_Lune> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Frankie and Johnny in the Clair de Lune"@en .
+<http://dbpedia.org/resource/Wendy_Mass> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Wendy Mass"@en .
+<http://dbpedia.org/resource/Jeremy_Fink_and_the_Meaning_of_Life> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Jeremy Fink and the Meaning of Life"@en .
+<http://dbpedia.org/resource/Tamar_Halpern> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Tamar Halpern"@en .
+<http://dbpedia.org/resource/Yogi_Berra> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Yogi Berra"@en .
+<http://dbpedia.org/resource/Broadway_theatre> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Broadway"@en .
+<http://dbpedia.org/resource/Bronx_Bombers_(play)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Bronx Bombers"@en .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "the Wachowskis"@en .
+<http://dbpedia.org/resource/Sense8> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Sense8"@en .
+<http://dbpedia.org/resource/Wilton,_Connecticut> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Wilton, Connecticut"@en .
+<http://dbpedia.org/resource/Samantha_Phillips> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Samantha Phillips"@en .
+<http://dbpedia.org/resource/The_Sopranos> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Sopranos"@en .
+<http://dbpedia.org/resource/New_Jersey> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "New Jersey"@en .
+<http://dbpedia.org/resource/Christopher_Nolan> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Christopher Nolan"@en .
+<http://dbpedia.org/resource/Memento_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Memento"@en .
+<http://dbpedia.org/resource/National_Alliance_on_Mental_Illness> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "National Alliance on Mental Illness"@en .
+<http://dbpedia.org/resource/Clinical_depression> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "clinical depression"@en .
+<http://dbpedia.org/resource/Dyslexia> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "dyslexia"@en .
+<http://dbpedia.org/resource/Canvas_(2006_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Canvas"@en .
+<http://dbpedia.org/resource/Social_stigma> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "stigma"@en .
+<http://dbpedia.org/resource/Alcoholism> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "alcoholism"@en .
+<http://dbpedia.org/resource/Food_addiction> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "food addiction"@en .
+<http://dbpedia.org/resource/Sex_addiction> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "sex addiction"@en .
+<http://dbpedia.org/resource/Vicodin> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Vicodin"@en .
+<http://dbpedia.org/resource/Percocet> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Percocet"@en .
+<http://dbpedia.org/resource/For_Pete's_Sake_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "For Pete's Sake"@en .
+<http://dbpedia.org/resource/The_Idolmaker> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Idolmaker"@en .
+<http://dbpedia.org/resource/Monsignor_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Monsignor"@en .
+<http://dbpedia.org/resource/The_Final_Terror> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Final Terror"@en .
+<http://dbpedia.org/resource/Risky_Business> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Risky Business"@en .
+<http://dbpedia.org/resource/Eddie_and_the_Cruisers> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Eddie and the Cruisers"@en .
+<http://dbpedia.org/resource/The_Mean_Season> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Mean Season"@en .
+<http://dbpedia.org/resource/The_Goonies> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Goonies"@en .
+<http://dbpedia.org/resource/Running_Scared_(1986_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Running Scared"@en .
+<http://dbpedia.org/resource/Scenes_from_the_Goldmine> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Scenes from the Goldmine"@en .
+<http://dbpedia.org/resource/La_Bamba_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "La Bamba"@en .
+<http://dbpedia.org/resource/Bob_Keane> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Bob Keane"@en .
+<http://dbpedia.org/resource/The_Squeeze_(1987_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Squeeze"@en .
+<http://dbpedia.org/resource/Amazon_Women_on_the_Moon> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Amazon Women on the Moon"@en .
+<http://dbpedia.org/resource/Empire_of_the_Sun_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Empire of the Sun"@en .
+<http://dbpedia.org/resource/The_In_Crowd_(1988_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The In Crowd"@en .
+<http://dbpedia.org/resource/Midnight_Run> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Midnight Run"@en .
+<http://dbpedia.org/resource/Downtown_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Downtown"@en .
+<http://dbpedia.org/resource/The_Last_of_the_Finest> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Blue Heat"@en .
+<http://dbpedia.org/resource/Short_Time> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Short Time"@en .
+<http://dbpedia.org/resource/Backstreet_Dreams_(1990_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Backstreet Dreams"@en .
+<http://dbpedia.org/resource/Zandalee> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Zandalee"@en .
+<http://dbpedia.org/resource/Used_People> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Used People"@en .
+<http://dbpedia.org/resource/Three_of_Hearts_(1993_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Three of Hearts"@en .
+<http://dbpedia.org/resource/The_Fugitive_(1993_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Fugitive"@en .
+<http://dbpedia.org/resource/Calendar_Girl_(1993_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Calendar Girl"@en .
+<http://dbpedia.org/resource/Me_and_the_Kid> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Me and the Kid"@en .
+<http://dbpedia.org/resource/Robot_in_the_Family> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Robot in the Family"@en .
+<http://dbpedia.org/resource/Teresa's_Tattoo> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Teresa's Tattoo"@en .
+<http://dbpedia.org/resource/Baby's_Day_Out> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Baby's Day Out"@en .
+<http://dbpedia.org/resource/Bad_Boys_(1995_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Bad Boys"@en .
+<http://dbpedia.org/resource/Congo_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Congo"@en .
+<http://dbpedia.org/resource/The_Last_Word_(1995_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Last Word"@en .
+<http://dbpedia.org/resource/Steal_Big_Steal_Little> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Steal Big Steal Little"@en .
+<http://dbpedia.org/resource/The_Immortals_(1995_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Immortals"@en .
+<http://dbpedia.org/resource/Bound_(1996_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Bound"@en .
+<http://dbpedia.org/resource/Top_of_the_World_(1997_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Top of the World"@en .
+<http://dbpedia.org/resource/Natural_Enemy_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Natural Enemy"@en .
+<http://dbpedia.org/resource/U.S._Marshals_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "U.S. Marshals"@en .
+<http://dbpedia.org/resource/Taxman_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Taxman"@en .
+<http://dbpedia.org/resource/Forces_of_Nature_(1999_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Forces of Nature"@en .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Matrix"@en .
+<http://dbpedia.org/resource/Black_and_White_(1999_drama_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Black and White"@en .
+<http://dbpedia.org/resource/The_Life_Before_This> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Life Before This"@en .
+<http://dbpedia.org/resource/New_Blood_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "New Blood"@en .
+<http://dbpedia.org/resource/Ready_to_Rumble> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Ready to Rumble"@en .
+<http://dbpedia.org/resource/Memento_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Memento"@en .
+<http://dbpedia.org/resource/Cats_&_Dogs> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Cats & Dogs"@en .
+<http://dbpedia.org/resource/The_Adventures_of_Pluto_Nash> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Adventures of Pluto Nash"@en .
+<http://dbpedia.org/resource/Daredevil_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Daredevil"@en .
+<http://dbpedia.org/resource/Ben_Urich> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Ben Urich"@en .
+<http://dbpedia.org/resource/Bad_Boys_II> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Bad Boys II"@en .
+<http://dbpedia.org/resource/Second_Best_(2004_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Second Best"@en .
+<http://dbpedia.org/resource/Racing_Stripes> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Racing Stripes"@en .
+<http://dbpedia.org/resource/The_Amateurs> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Amateurs"@en .
+<http://dbpedia.org/resource/Larry_the_Cable_Guy:_Health_Inspector> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Larry the Cable Guy: Health Inspector"@en .
+<http://dbpedia.org/resource/Wedding_Daze> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Wedding Daze"@en .
+<http://dbpedia.org/resource/Canvas_(2006_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Canvas"@en .
+<http://dbpedia.org/resource/Unknown_(2006_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Unknown"@en .
+<http://dbpedia.org/resource/The_Job_(2009_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Job"@en .
+<http://dbpedia.org/resource/Deadly_Impact> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Deadly Impact"@en .
+<http://dbpedia.org/resource/Falling_Up_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Falling Up"@en .
+<http://dbpedia.org/resource/Percy_Jackson_&_the_Olympians:_The_Lightning_Thief> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Percy Jackson & the Olympians: The Lightning Thief"@en .
+<http://dbpedia.org/resource/Cats_&_Dogs:_The_Revenge_of_Kitty_Galore> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Cats & Dogs: The Revenge of Kitty Galore"@en .
+<http://dbpedia.org/resource/New_York_Street_Games_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "New York Street Games"@en .
+<http://dbpedia.org/resource/Loosies> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Loosies"@en .
+<http://dbpedia.org/resource/The_Identical> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Identical"@en .
+<http://dbpedia.org/resource/The_Perfect_Match_(2016_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Perfect Match"@en .
+<http://dbpedia.org/resource/Just_Getting_Started_(2017_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Just Getting Started"@en .
+<http://dbpedia.org/resource/Happy_Anniversary_(2018_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Happy Anniversary"@en .
+<http://dbpedia.org/resource/Feast_of_the_Seven_Fishes_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Feast of the Seven Fishes"@en .
+<http://dbpedia.org/resource/The_Brawler> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Brawler"@en .
+<http://dbpedia.org/resource/From_the_Vine> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "From the Vine"@en .
+<http://dbpedia.org/resource/Bad_Boys_for_Life> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Bad Boys for Life"@en .
+<http://dbpedia.org/resource/Hide_and_Seek_(2021_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Hide and Seek"@en .
+<http://dbpedia.org/resource/Bad_Boys:_Ride_or_Die> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Bad Boys: Ride or Die"@en .
+<http://dbpedia.org/resource/Free_Country_(TV_series)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Free Country"@en .
+<http://dbpedia.org/resource/From_Here_to_Eternity_(TV_series)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "From Here to Eternity"@en .
+<http://dbpedia.org/resource/Alcatraz:_The_Whole_Shocking_Story> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Alcatraz: The Whole Shocking Story"@en .
+<http://dbpedia.org/resource/Hart_to_Hart> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Hart to Hart"@en .
+<http://dbpedia.org/resource/M*A*S*H_(TV_series)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "M*A*S*H"@en .
+<http://dbpedia.org/resource/Chicago_Story> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Chicago Story"@en .
+<http://dbpedia.org/resource/Hardcastle_and_McCormick> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Hardcastle and McCormick"@en .
+<http://dbpedia.org/resource/Mister_Roberts_(1984_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Mister Roberts"@en .
+<http://dbpedia.org/resource/Hill_Street_Blues> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Hill Street Blues"@en .
+<http://dbpedia.org/resource/Trapper_John,_M.D.> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Trapper John, M.D."@en .
+<http://dbpedia.org/resource/Simon_&_Simon> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Simon & Simon"@en .
+<http://dbpedia.org/resource/Robert_Kennedy_&_His_Times> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Robert Kennedy & His Times"@en .
+<http://dbpedia.org/resource/Roy_Cohn> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Roy Cohn"@en .
+<http://dbpedia.org/resource/Amazing_Stories_(1985_TV_series)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Amazing Stories"@en .
+<http://dbpedia.org/resource/L.A._Law> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "L.A. Law"@en .
+<http://dbpedia.org/resource/Beverly_Hills_Buntz> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Beverly Hills Buntz"@en .
+<http://dbpedia.org/resource/Nightbreaker_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Nightbreaker"@en .
+<http://dbpedia.org/resource/The_Hitchhiker_(TV_series)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Hitchhiker"@en .
+<http://dbpedia.org/resource/Tales_from_the_Crypt_(TV_series)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Tales from the Crypt"@en .
+<http://dbpedia.org/resource/El_Diablo_(1990_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "El Diablo"@en .
+<http://dbpedia.org/resource/The_Fanelli_Boys> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Fanelli Boys"@en .
+<http://dbpedia.org/resource/Through_the_Eyes_of_a_Killer> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Through the Eyes of a Killer"@en .
+<http://dbpedia.org/resource/Highlander:_The_Series> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Highlander: The Series"@en .
+<http://dbpedia.org/resource/Beethoven_(TV_series)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Beethoven"@en .
+<http://dbpedia.org/resource/The_Marshal> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Marshal"@en .
+<http://dbpedia.org/resource/NYPD_Blue> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "NYPD Blue"@en .
+<http://dbpedia.org/resource/Life_with_Louie> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Life with Louie"@en .
+<http://dbpedia.org/resource/Arliss_(TV_series)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Arliss"@en .
+<http://dbpedia.org/resource/EZ_Streets> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "EZ Streets"@en .
+<http://dbpedia.org/resource/Godzilla:_The_Series> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Godzilla: The Series"@en .
+<http://dbpedia.org/resource/Hercules_(1998_TV_series)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Hercules"@en .
+<http://dbpedia.org/resource/Pan_(god)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "King Pan"@en .
+<http://dbpedia.org/resource/The_Lionhearts> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Lionhearts"@en .
+<http://dbpedia.org/resource/Sugar_Hill_(TV_pilot)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Sugar Hill"@en .
+<http://dbpedia.org/resource/The_Outer_Limits_(1995_TV_series)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Outer Limits"@en .
+<http://dbpedia.org/resource/List_of_The_Outer_Limits_(1995_TV_series)_episodes> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Alien Radio"@en .
+<http://dbpedia.org/resource/Olive,_the_Other_Reindeer> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Olive, the Other Reindeer"@en .
+<http://dbpedia.org/resource/The_Sopranos> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Sopranos"@en .
+<http://dbpedia.org/resource/Ralph_Cifaretto> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Ralph Cifaretto"@en .
+<http://dbpedia.org/resource/Roswell_(TV_series)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Roswell"@en .
+<http://dbpedia.org/resource/The_Nick_Cannon_Show> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Nick Cannon Show"@en .
+<http://dbpedia.org/resource/The_Handler_(TV_series)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Handler"@en .
+<http://dbpedia.org/resource/Gary_the_Rat> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Gary the Rat"@en .
+<http://dbpedia.org/resource/Dr._Vegas> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Dr. Vegas"@en .
+<http://dbpedia.org/resource/The_Simpsons> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Simpsons"@en .
+<http://dbpedia.org/resource/The_Mook,_the_Chef,_the_Wife_and_Her_Homer> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Mook, the Chef, the Wife and Her Homer"@en .
+<http://dbpedia.org/resource/How_to_Make_it_in_America> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "How to Make it in America"@en .
+<http://dbpedia.org/resource/Deadbeat_(TV_series)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Deadbeat"@en .
+<http://dbpedia.org/resource/Sense8> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Sense8"@en .
+<http://dbpedia.org/resource/SpongeBob_SquarePants> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "SpongeBob SquarePants"@en .
+<http://dbpedia.org/resource/List_of_SpongeBob_SquarePants_characters> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Stickyfins Whiting"@en .
+<http://dbpedia.org/resource/The_Getaway_(SpongeBob_SquarePants)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Getaway"@en .
+<http://dbpedia.org/resource/Lake_Placid:_Legacy> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Lake Placid: Legacy"@en .
+<http://dbpedia.org/resource/Tacoma_FD> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Tacoma FD"@en .
+<http://dbpedia.org/resource/MacGyver_(2016_TV_series)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "MacGyver"@en .
+<http://dbpedia.org/resource/Chucky_(TV_series)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Chucky"@en .
+<http://dbpedia.org/resource/The_Patrick_Star_Show> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Patrick Star Show"@en .
+<http://dbpedia.org/resource/Dexter:_Original_Sin> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Dexter: Original Sin"@en .
+<http://dbpedia.org/resource/Fender_Bender_(Dexter:_Original_Sin)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Fender Bender"@en .
+<http://dbpedia.org/resource/The_Last_of_Us_(TV_series)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Last of Us"@en .
+<http://dbpedia.org/resource/Characters_of_The_Last_of_Us_(TV_series)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Eugene Lynden"@en .
+<http://dbpedia.org/resource/The_Price_(The_Last_of_Us)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Price"@en .
+<http://dbpedia.org/resource/Majestic_(video_game)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Majestic"@en .
+<http://dbpedia.org/resource/Grand_Theft_Auto_III> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Grand Theft Auto III"@en .
+<http://dbpedia.org/resource/Call_of_Duty:_Black_Ops_II> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Call of Duty: Black Ops II"@en .
+<http://dbpedia.org/resource/Saturn_Awards> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Saturn Awards"@en .
+<http://dbpedia.org/resource/Saturn_Award_for_Best_Supporting_Actor> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Best Supporting Actor"@en .
+<http://dbpedia.org/resource/Bound_(1996_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Bound"@en .
+<http://dbpedia.org/resource/TCA_Awards> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Television Critics Association"@en .
+<http://dbpedia.org/resource/TCA_Award_for_Individual_Achievement_in_Drama> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Individual Achievement in Drama"@en .
+<http://dbpedia.org/resource/EZ_Streets> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "EZ Streets"@en .
+<http://dbpedia.org/resource/Viewers_for_Quality_Television> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Viewers for Quality Television"@en .
+<http://dbpedia.org/resource/Screen_Actors_Guild_Awards> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Screen Actors Guild Awards"@en .
+<http://dbpedia.org/resource/Screen_Actors_Guild_Award_for_Outstanding_Performance_by_an_Ensemble_in_a_Drama_Series> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Outstanding Performance by an Ensemble in a Drama Series"@en .
+<http://dbpedia.org/resource/The_Sopranos> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Sopranos"@en .
+<http://dbpedia.org/resource/Primetime_Emmy_Awards> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Primetime Emmy Awards"@en .
+<http://dbpedia.org/resource/Primetime_Emmy_Award_for_Outstanding_Supporting_Actor_in_a_Drama_Series> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Outstanding Supporting Actor in a Drama Series"@en .
+<http://dbpedia.org/resource/Screen_Actors_Guild_Awards> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Screen Actors Guild Awards"@en .
+<http://dbpedia.org/resource/Screen_Actors_Guild_Award_for_Outstanding_Performance_by_an_Ensemble_in_a_Drama_Series> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Outstanding Performance by an Ensemble in a Drama Series"@en .
+<http://dbpedia.org/resource/Joe_Pantoliano> <http://xmlns.com/foaf/0.1/depiction> <http://commons.wikimedia.org/wiki/Special:FilePath/JoePantolianoFeb2009_(cropped).jpg> .
+<http://dbpedia.org/resource/Joe_Pantoliano> <http://dbpedia.org/ontology/thumbnail> <http://commons.wikimedia.org/wiki/Special:FilePath/JoePantolianoFeb2009_(cropped).jpg?width=300> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/JoePantolianoFeb2009_(cropped).jpg> <http://xmlns.com/foaf/0.1/thumbnail> <http://commons.wikimedia.org/wiki/Special:FilePath/JoePantolianoFeb2009_(cropped).jpg?width=300> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/JoePantolianoFeb2009_(cropped).jpg> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Image> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/JoePantolianoFeb2009_(cropped).jpg?width=300> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Image> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/JoePantolianoFeb2009_(cropped).jpg> <http://purl.org/dc/elements/1.1/rights> <http://en.wikipedia.org/wiki/File:JoePantolianoFeb2009_(cropped).jpg> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/JoePantolianoFeb2009_(cropped).jpg?width=300> <http://purl.org/dc/elements/1.1/rights> <http://en.wikipedia.org/wiki/File:JoePantolianoFeb2009_(cropped).jpg> .
+<http://dbpedia.org/resource/Joe_Pantoliano> <http://xmlns.com/foaf/0.1/depiction> <http://commons.wikimedia.org/wiki/Special:FilePath/JoePantolianonavy.jpg> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/JoePantolianonavy.jpg> <http://xmlns.com/foaf/0.1/thumbnail> <http://commons.wikimedia.org/wiki/Special:FilePath/JoePantolianonavy.jpg?width=300> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/JoePantolianonavy.jpg> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Image> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/JoePantolianonavy.jpg?width=300> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Image> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/JoePantolianonavy.jpg> <http://purl.org/dc/elements/1.1/rights> <http://en.wikipedia.org/wiki/File:JoePantolianonavy.jpg> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/JoePantolianonavy.jpg?width=300> <http://purl.org/dc/elements/1.1/rights> <http://en.wikipedia.org/wiki/File:JoePantolianonavy.jpg> .
+<http://dbpedia.org/resource/Joe_Pantoliano> <http://xmlns.com/foaf/0.1/depiction> <http://commons.wikimedia.org/wiki/Special:FilePath/JoePantolianoFeb2009_(cropped).jpg> .
+# completed 2025-06-30T11:14:10Z

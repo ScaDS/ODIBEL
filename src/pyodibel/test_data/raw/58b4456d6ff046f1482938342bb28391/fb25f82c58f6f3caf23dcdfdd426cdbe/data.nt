@@ -1,0 +1,644 @@
+# started 2025-06-30T11:58:21Z
+<http://dbpedia.org/resource/Village_Roadshow_Pictures> <http://www.w3.org/2000/01/rdf-schema#label> "Village Roadshow Pictures"@en .
+<http://dbpedia.org/resource/Village_Roadshow_Pictures> <http://dbpedia.org/ontology/wikiPageID> "1104368"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://dbpedia.org/resource/Village_Roadshow_Pictures> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://en.wikipedia.org/wiki/Village_Roadshow_Pictures?oldid=1296518932&ns=0> .
+<http://dbpedia.org/resource/Village_Roadshow_Pictures> <http://dbpedia.org/ontology/wikiPageRevisionID> "1296518932"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://dbpedia.org/resource/Village_Roadshow_Pictures> <http://dbpedia.org/ontology/wikiPageLength> "58316"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://dbpedia.org/resource/Village_Roadshow_Pictures> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:1989_establishments_in_California> .
+<http://dbpedia.org/resource/Village_Roadshow_Pictures> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:American_companies_established_in_1989> .
+<http://dbpedia.org/resource/Village_Roadshow_Pictures> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Mass_media_companies_established_in_1989> .
+<http://dbpedia.org/resource/Village_Roadshow_Pictures> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:American_subsidiaries_of_foreign_companies> .
+<http://dbpedia.org/resource/Village_Roadshow_Pictures> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Companies_based_in_Los_Angeles> .
+<http://dbpedia.org/resource/Village_Roadshow_Pictures> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Entertainment_companies_based_in_California> .
+<http://dbpedia.org/resource/Village_Roadshow_Pictures> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Film_production_companies_of_the_United_States> .
+<http://dbpedia.org/resource/Village_Roadshow_Pictures> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Companies_that_filed_for_Chapter_11_bankruptcy_in_2025> .
+<http://dbpedia.org/resource/Village_Roadshow_Pictures> <http://xmlns.com/foaf/0.1/isPrimaryTopicOf> <http://en.wikipedia.org/wiki/Village_Roadshow_Pictures> .
+<http://en.wikipedia.org/wiki/Village_Roadshow_Pictures> <http://xmlns.com/foaf/0.1/primaryTopic> <http://dbpedia.org/resource/Village_Roadshow_Pictures> .
+<http://en.wikipedia.org/wiki/Village_Roadshow_Pictures> <http://purl.org/dc/elements/1.1/language> "en" .
+<http://en.wikipedia.org/wiki/Village_Roadshow_Pictures> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Document> .
+<http://dbpedia.org/resource/Village_Roadshow_Pictures> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Short_description> .
+<http://dbpedia.org/resource/Village_Roadshow_Pictures> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Use_dmy_dates> .
+<http://dbpedia.org/resource/Village_Roadshow_Pictures> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Use_American_English> .
+<http://dbpedia.org/resource/Village_Roadshow_Pictures> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Infobox_company> .
+<http://dbpedia.org/resource/Village_Roadshow_Pictures> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Fact> .
+<http://dbpedia.org/resource/Village_Roadshow_Pictures> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Fact> .
+<http://dbpedia.org/resource/Village_Roadshow_Pictures> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Fact> .
+<http://dbpedia.org/resource/Village_Roadshow_Pictures> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Fact> .
+<http://dbpedia.org/resource/Village_Roadshow_Pictures> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Fact> .
+<http://dbpedia.org/resource/Village_Roadshow_Pictures> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Fact> .
+<http://dbpedia.org/resource/Village_Roadshow_Pictures> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Fact> .
+<http://dbpedia.org/resource/Village_Roadshow_Pictures> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Fact> .
+<http://dbpedia.org/resource/Village_Roadshow_Pictures> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Reflist> .
+<http://dbpedia.org/resource/Village_Roadshow_Pictures> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Film_Studio> .
+<http://dbpedia.org/resource/Village_Roadshow_Pictures> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Start_date_and_age> .
+<http://dbpedia.org/resource/Village_Roadshow_Pictures> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:URL> .
+<http://dbpedia.org/resource/Village_Roadshow_Pictures> <http://dbpedia.org/ontology/wikiPageExternalLink> <http://vreg.com> .
+<http://dbpedia.org/resource/Village_Roadshow_Pictures> <http://dbpedia.org/property/name> "Village Roadshow Pictures"@en .
+<http://dbpedia.org/resource/Village_Roadshow_Pictures> <http://dbpedia.org/property/logo> "250"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://dbpedia.org/resource/Village_Roadshow_Pictures> <http://dbpedia.org/property/logoCaption> "Logo used since 2019"@en .
+<http://dbpedia.org/resource/Village_Roadshow_Pictures> <http://dbpedia.org/property/type> <http://dbpedia.org/resource/Subsidiary> .
+<http://dbpedia.org/resource/Village_Roadshow_Pictures> <http://dbpedia.org/property/industry> <http://dbpedia.org/resource/Film_industry> .
+<http://dbpedia.org/resource/Village_Roadshow_Pictures> <http://dbpedia.org/property/founder> "Greg Coote"@en .
+<http://dbpedia.org/resource/Village_Roadshow_Pictures> <http://dbpedia.org/property/areaServed> "Worldwide"@en .
+<http://dbpedia.org/resource/Village_Roadshow_Pictures> <http://dbpedia.org/property/products> <http://dbpedia.org/resource/Motion_pictures> .
+<http://dbpedia.org/resource/Village_Roadshow_Pictures> <http://dbpedia.org/property/fate> "Chapter 11 bankruptcy; library sold to Alcon Entertainment"@en .
+<http://dbpedia.org/resource/Village_Roadshow_Pictures> <http://dbpedia.org/property/predecessor> <http://dbpedia.org/resource/De_Laurentiis_Entertainment_Limited> .
+<http://dbpedia.org/resource/Village_Roadshow_Pictures> <http://dbpedia.org/property/parent> "Vine Alternative Investments and Falcon Investment Advisors"@en .
+<http://dbpedia.org/resource/Village_Roadshow_Pictures> <http://dbpedia.org/property/parent> <http://dbpedia.org/resource/Village_Roadshow> .
+<http://dbpedia.org/resource/Village_Roadshow_Pictures> <http://dbpedia.org/property/location> "Los Angeles, California, U.S."@en .
+<http://dbpedia.org/resource/Village_Roadshow_Pictures> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Company> .
+<http://dbpedia.org/resource/Village_Roadshow_Pictures> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q4830453> .
+<http://dbpedia.org/resource/Village_Roadshow_Pictures> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Organisation> .
+<http://dbpedia.org/resource/Village_Roadshow_Pictures> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Organization> .
+<http://dbpedia.org/resource/Village_Roadshow_Pictures> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#SocialPerson> .
+<http://dbpedia.org/resource/Village_Roadshow_Pictures> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q43229> .
+<http://dbpedia.org/resource/Village_Roadshow_Pictures> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Agent> .
+<http://dbpedia.org/resource/Village_Roadshow_Pictures> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent> .
+<http://dbpedia.org/resource/Village_Roadshow_Pictures> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q24229398> .
+<http://dbpedia.org/resource/Village_Roadshow_Pictures> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Thing> .
+<http://dbpedia.org/resource/Village_Roadshow_Pictures> <http://xmlns.com/foaf/0.1/name> "Village Roadshow Pictures"@en .
+<http://dbpedia.org/resource/Village_Roadshow_Pictures> <http://dbpedia.org/ontology/type> <http://dbpedia.org/resource/Subsidiary> .
+<http://dbpedia.org/resource/Village_Roadshow_Pictures> <http://dbpedia.org/ontology/fate> "Chapter 11 bankruptcy; library sold toAlcon Entertainment"@en .
+<http://dbpedia.org/resource/Village_Roadshow_Pictures> <http://dbpedia.org/ontology/predecessor> <http://dbpedia.org/resource/De_Laurentiis_Entertainment_Limited> .
+<http://dbpedia.org/resource/Village_Roadshow_Pictures> <http://dbpedia.org/ontology/foundingYear> "1989"^^<http://www.w3.org/2001/XMLSchema#gYear> .
+<http://dbpedia.org/resource/Village_Roadshow_Pictures> <http://dbpedia.org/ontology/location> <http://dbpedia.org/resource/Los_Angeles,_California> .
+<http://dbpedia.org/resource/Village_Roadshow_Pictures> <http://dbpedia.org/ontology/industry> <http://dbpedia.org/resource/Film_industry> .
+<http://dbpedia.org/resource/Village_Roadshow_Pictures> <http://dbpedia.org/ontology/product> <http://dbpedia.org/resource/Motion_pictures> .
+<http://dbpedia.org/resource/Village_Roadshow_Pictures> <http://dbpedia.org/ontology/parentCompany> <http://dbpedia.org/resource/Village_Roadshow> .
+<http://dbpedia.org/resource/Village_Roadshow_Pictures> <http://dbpedia.org/ontology/wikiPageOutDegree> "576"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://dbpedia.org/resource/Subsidiary> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Subsidiary"@en .
+<http://dbpedia.org/resource/Film_industry> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Film"@en .
+<http://dbpedia.org/resource/Motion_pictures> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Motion pictures"@en .
+<http://dbpedia.org/resource/Chapter_11_bankruptcy> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Chapter 11 bankruptcy"@en .
+<http://dbpedia.org/resource/Alcon_Entertainment> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Alcon Entertainment"@en .
+<http://dbpedia.org/resource/De_Laurentiis_Entertainment_Limited> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "De Laurentiis Entertainment Limited"@en .
+<http://dbpedia.org/resource/Village_Roadshow> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Village Roadshow"@en .
+<http://dbpedia.org/resource/Los_Angeles,_California> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Los Angeles, California"@en .
+<http://dbpedia.org/resource/Film_production> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "film production"@en .
+<http://dbpedia.org/resource/Village_Roadshow> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Village Roadshow"@en .
+<http://dbpedia.org/resource/Warner_Bros._Pictures> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Warner Bros."@en .
+<http://dbpedia.org/resource/The_Matrix_(franchise)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Matrix"@en .
+<http://dbpedia.org/resource/Ocean's_(film_series)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Ocean's"@en .
+<http://dbpedia.org/resource/The_Lego_Movie> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Lego Movie"@en .
+<http://dbpedia.org/resource/Happy_Feet> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Happy Feet"@en .
+<http://dbpedia.org/resource/Mad_Max:_Fury_Road> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Mad Max: Fury Road"@en .
+<http://dbpedia.org/resource/American_Sniper> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "American Sniper"@en .
+<http://dbpedia.org/resource/Sherlock_Holmes_(2009_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Sherlock Holmes"@en .
+<http://dbpedia.org/resource/Cats_&_Dogs> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Cats & Dogs"@en .
+<http://dbpedia.org/resource/Joker_(2019_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Joker"@en .
+<http://dbpedia.org/resource/Academy_Awards> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Academy Awards"@en .
+<http://dbpedia.org/resource/Golden_Globe_Awards> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Golden Globe Awards"@en .
+<http://dbpedia.org/resource/Australia> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Australia"@en .
+<http://dbpedia.org/resource/New_Zealand> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "New Zealand"@en .
+<http://dbpedia.org/resource/Singapore> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Singapore"@en .
+<http://dbpedia.org/resource/Golden_Village> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Golden Village"@en .
+<http://dbpedia.org/resource/JPMorgan_Chase> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "JPMorgan Chase"@en .
+<http://dbpedia.org/resource/Rabobank> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Rabobank"@en .
+<http://dbpedia.org/resource/Sony_Pictures> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Sony Pictures"@en .
+<http://dbpedia.org/resource/Chapter_11_bankruptcy> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Chapter 11 bankruptcy"@en .
+<http://dbpedia.org/resource/Alcon_Entertainment> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Alcon Entertainment"@en .
+<http://dbpedia.org/resource/De_Laurentiis_Entertainment_Group> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "De Laurentiis Entertainment Group"@en .
+<http://dbpedia.org/resource/The_Delinquents_(1989_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Delinquents"@en .
+<http://dbpedia.org/resource/Fortress_(1992_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Fortress"@en .
+<http://dbpedia.org/resource/Paradise_Beach> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Paradise Beach"@en .
+<http://dbpedia.org/resource/Yoram_Gross> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Yoram Gross"@en .
+<http://dbpedia.org/resource/Intermedia_(company)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Intermedia"@en .
+<http://dbpedia.org/resource/EM.TV_&_Merchandising_AG> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "EM.TV & Merchandising"@en .
+<http://dbpedia.org/resource/Warner_Bros._Pictures> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Warner Bros."@en .
+<http://dbpedia.org/resource/Bruce_Berman> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Bruce Berman"@en .
+<http://dbpedia.org/resource/Icon_Productions> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Icon Entertainment International"@en .
+<http://dbpedia.org/resource/Beyond_International> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Beyond Films Limited"@en .
+<http://dbpedia.org/resource/Act_III_Communications> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Act III Communications"@en .
+<http://dbpedia.org/resource/Norman_Lear> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Norman Lear"@en .
+<http://dbpedia.org/resource/Hal_Gaba> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Hal Gaba"@en .
+<http://dbpedia.org/resource/Concord_Music_Group> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Concord Music Group"@en .
+<http://dbpedia.org/resource/Warner_Bros._Pictures> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Warner Bros. Pictures"@en .
+<http://dbpedia.org/resource/Sony_Pictures> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Sony Pictures Entertainment"@en .
+<http://dbpedia.org/resource/The_Equalizer_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Equalizer"@en .
+<http://dbpedia.org/resource/Annie_(2014_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Annie"@en .
+<http://dbpedia.org/resource/MassMutual> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "MassMutual"@en .
+<http://dbpedia.org/resource/Fox_Entertainment> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Fox Entertainment"@en .
+<http://dbpedia.org/resource/Tubi> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Tubi"@en .
+<http://dbpedia.org/resource/Chapter_11_bankruptcy> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Chapter 11 bankruptcy"@en .
+<http://dbpedia.org/resource/Warner_Bros.> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Warner Bros."@en .
+<http://dbpedia.org/resource/Simultaneous_release> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "simultaneous release"@en .
+<http://dbpedia.org/resource/The_Matrix_Resurrections> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Matrix Resurrections"@en .
+<http://dbpedia.org/resource/Stalking_horse_offer> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "stalking horse offer"@en .
+<http://dbpedia.org/resource/Alcon_Entertainment> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Alcon Entertainment"@en .
+<http://dbpedia.org/resource/The_Delinquents_(1989_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Delinquents"@en .
+<http://dbpedia.org/resource/Warner_Bros._Pictures> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Warner Bros. Pictures"@en .
+<http://dbpedia.org/resource/Bloodmoon_(1990_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Bloodmoon"@en .
+<http://dbpedia.org/resource/Carolco_Pictures> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Carolco Pictures"@en .
+<http://dbpedia.org/resource/Blood_Oath_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Blood Oath"@en .
+<http://dbpedia.org/resource/Skouras_Pictures> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Skouras Pictures"@en .
+<http://dbpedia.org/resource/Until_the_End_of_the_World> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Until the End of the World"@en .
+<http://dbpedia.org/resource/Warner_Bros._Pictures> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Warner Bros."@en .
+<http://dbpedia.org/resource/Dead_Sleep> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Dead Sleep"@en .
+<http://dbpedia.org/resource/Vestron_Video> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Vestron Video"@en .
+<http://dbpedia.org/resource/Hurricane_Smith_(1992_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Hurricane Smith"@en .
+<http://dbpedia.org/resource/Warner_Bros._Pictures> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Warner Bros."@en .
+<http://dbpedia.org/resource/The_Power_of_One_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Power of One"@en .
+<http://dbpedia.org/resource/Regency_Enterprises> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Regency Enterprises"@en .
+<http://dbpedia.org/resource/StudioCanal> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Le Studio Canal+"@en .
+<http://dbpedia.org/resource/Turtle_Beach_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Turtle Beach"@en .
+<http://dbpedia.org/resource/Regency_Enterprises> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Regency Enterprises"@en .
+<http://dbpedia.org/resource/StudioCanal> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Le Studio Canal+"@en .
+<http://dbpedia.org/resource/Over_the_Hill_(1992_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Over the Hill"@en .
+<http://dbpedia.org/resource/New_Line_Home_Entertainment> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "New Line Home Video"@en .
+<http://dbpedia.org/resource/Fortress_(1992_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Fortress"@en .
+<http://dbpedia.org/resource/Dimension_Films> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Dimension Films"@en .
+<http://dbpedia.org/resource/Davis_Entertainment> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Davis Entertainment"@en .
+<http://dbpedia.org/resource/Lightning_Jack> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Lightning Jack"@en .
+<http://dbpedia.org/resource/Savoy_Pictures> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Savoy Pictures"@en .
+<http://dbpedia.org/resource/The_Phantom_(1996_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Phantom"@en .
+<http://dbpedia.org/resource/Paramount_Pictures> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Paramount Pictures"@en .
+<http://dbpedia.org/resource/The_Ladd_Company> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Ladd Company"@en .
+<http://dbpedia.org/resource/Hotel_de_Love> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Hotel de Love"@en .
+<http://dbpedia.org/resource/Artisan_Entertainment> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "LIVE Entertainment"@en .
+<http://dbpedia.org/resource/Bullet_(1996_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Bullet"@en .
+<http://dbpedia.org/resource/New_Line_Home_Entertainment> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "New Line Home Video"@en .
+<http://dbpedia.org/resource/Paradise_Road_(1997_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Paradise Road"@en .
+<http://dbpedia.org/resource/Searchlight_Pictures> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Fox Searchlight Pictures"@en .
+<http://dbpedia.org/resource/Broken_English_(1996_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Broken English"@en .
+<http://dbpedia.org/resource/Sony_Pictures_Classics> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Sony Pictures Classics"@en .
+<http://dbpedia.org/resource/The_Winner_(1996_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Winner"@en .
+<http://dbpedia.org/resource/Artisan_Entertainment> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "LIVE Entertainment"@en .
+<http://dbpedia.org/resource/Critical_Care_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Critical Care"@en .
+<http://dbpedia.org/resource/Diana_&_Me> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Diana & Me"@en .
+<http://dbpedia.org/resource/Hollywood_Pictures> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Hollywood Pictures Home Video"@en .
+<http://dbpedia.org/resource/Joey_(1997_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Joey"@en .
+<http://dbpedia.org/resource/Metro-Goldwyn-Mayer> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Metro-Goldwyn-Mayer"@en .
+<http://dbpedia.org/resource/Tarzan_and_the_Lost_City> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Tarzan and the Lost City"@en .
+<http://dbpedia.org/resource/Warner_Bros._Pictures> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Warner Bros."@en .
+<http://dbpedia.org/resource/Disturbing_Behavior> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Disturbing Behavior"@en .
+<http://dbpedia.org/resource/Metro-Goldwyn-Mayer> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Metro-Goldwyn-Mayer"@en .
+<http://dbpedia.org/resource/Sony_Pictures_Releasing> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Sony Pictures Releasing"@en .
+<http://dbpedia.org/resource/Beacon_Pictures> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Beacon Pictures"@en .
+<http://dbpedia.org/resource/Practical_Magic> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Practical Magic"@en .
+<http://dbpedia.org/resource/Warner_Bros._Pictures> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Warner Bros."@en .
+<http://dbpedia.org/resource/Fortis_Films> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Fortis Films"@en .
+<http://dbpedia.org/resource/Denise_Di_Novi> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Di Novi Pictures"@en .
+<http://dbpedia.org/resource/Occasional_Coarse_Language> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Occasional Coarse Language"@en .
+<http://dbpedia.org/resource/Roadshow_Entertainment> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Roadshow Film Distributors"@en .
+<http://dbpedia.org/resource/Analyze_This> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Analyze This"@en .
+<http://dbpedia.org/resource/Warner_Bros._Pictures> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Warner Bros."@en .
+<http://dbpedia.org/resource/Barry_Levinson> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Baltimore Spring Creek Pictures"@en .
+<http://dbpedia.org/resource/Billy_Crystal> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Face Productions"@en .
+<http://dbpedia.org/resource/TriBeCa_Productions> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "TriBeCa Productions"@en .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Matrix"@en .
+<http://dbpedia.org/resource/Silver_Pictures> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Silver Pictures"@en .
+<http://dbpedia.org/resource/A_Walk_on_the_Moon> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "A Walk on the Moon"@en .
+<http://dbpedia.org/resource/Miramax> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Miramax Films"@en .
+<http://dbpedia.org/resource/Love_Lies_Bleeding_(1999_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Love Lies Bleeding"@en .
+<http://dbpedia.org/resource/Warner_Bros._Pictures> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Warner Bros."@en .
+<http://dbpedia.org/resource/Deep_Blue_Sea_(1999_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Deep Blue Sea"@en .
+<http://dbpedia.org/resource/Three_Kings_(1999_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Three Kings"@en .
+<http://dbpedia.org/resource/Atlas_Entertainment> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Atlas Entertainment"@en .
+<http://dbpedia.org/resource/Three_to_Tango> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Three to Tango"@en .
+<http://dbpedia.org/resource/Robert_Newmyer> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Outlaw Productions"@en .
+<http://dbpedia.org/resource/Eye_of_the_Beholder_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Eye of the Beholder"@en .
+<http://dbpedia.org/resource/Destination_Films> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Destination Films"@en .
+<http://dbpedia.org/resource/Bloom_(company)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Behaviour Worldwide"@en .
+<http://dbpedia.org/resource/Gossip_(2000_American_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Gossip"@en .
+<http://dbpedia.org/resource/Warner_Bros._Pictures> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Warner Bros. Pictures"@en .
+<http://dbpedia.org/resource/Robert_Newmyer> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Outlaw Productions"@en .
+<http://dbpedia.org/resource/Space_Cowboys> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Space Cowboys"@en .
+<http://dbpedia.org/resource/Andrew_Lazar> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Mad Chance Productions"@en .
+<http://dbpedia.org/resource/Malpaso_Productions> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Malpaso Productions"@en .
+<http://dbpedia.org/resource/Red_Planet_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Red Planet"@en .
+<http://dbpedia.org/resource/Mark_Canton> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Canton Company"@en .
+<http://dbpedia.org/resource/Miss_Congeniality_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Miss Congeniality"@en .
+<http://dbpedia.org/resource/Fortis_Films> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Fortis Films"@en .
+<http://dbpedia.org/resource/Castle_Rock_Entertainment> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Castle Rock Entertainment"@en .
+<http://dbpedia.org/resource/Valentine_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Valentine"@en .
+<http://dbpedia.org/resource/Saving_Silverman> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Saving Silverman"@en .
+<http://dbpedia.org/resource/Sony_Pictures_Motion_Picture_Group> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Sony Pictures Releasing"@en .
+<http://dbpedia.org/resource/Columbia_Pictures> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Columbia Pictures"@en .
+<http://dbpedia.org/resource/Original_Film> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Original Film"@en .
+<http://dbpedia.org/resource/Down_to_Earth_(2001_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Down to Earth"@en .
+<http://dbpedia.org/resource/Paramount_Pictures> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Paramount Pictures"@en .
+<http://dbpedia.org/resource/3_Arts_Entertainment> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "3 Arts Entertainment"@en .
+<http://dbpedia.org/resource/See_Spot_Run> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "See Spot Run"@en .
+<http://dbpedia.org/resource/Warner_Bros._Pictures> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Warner Bros. Pictures"@en .
+<http://dbpedia.org/resource/Robert_Simonds> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Robert Simonds Productions"@en .
+<http://dbpedia.org/resource/Exit_Wounds> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Exit Wounds"@en .
+<http://dbpedia.org/resource/Silver_Pictures> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Silver Pictures"@en .
+<http://dbpedia.org/resource/Swordfish_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Swordfish"@en .
+<http://dbpedia.org/resource/Silver_Pictures> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Silver Pictures"@en .
+<http://dbpedia.org/resource/Jonathan_D._Krane> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Jonathan D. Krane Productions"@en .
+<http://dbpedia.org/resource/Cats_&_Dogs> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Cats & Dogs"@en .
+<http://dbpedia.org/resource/Andrew_Lazar> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Mad Chance Productions"@en .
+<http://dbpedia.org/resource/Don't_Say_a_Word> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Don't Say a Word"@en .
+<http://dbpedia.org/resource/20th_Century_Studios> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "20th Century Fox"@en .
+<http://dbpedia.org/resource/Regency_Enterprises> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Regency Enterprises"@en .
+<http://dbpedia.org/resource/Further_Films> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Further Films"@en .
+<http://dbpedia.org/resource/Arnold_Kopelson> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Kopelson Entertainment"@en .
+<http://dbpedia.org/resource/Zoolander> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Zoolander"@en .
+<http://dbpedia.org/resource/Paramount_Pictures> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Paramount Pictures"@en .
+<http://dbpedia.org/resource/VH1> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "VH1 Films"@en .
+<http://dbpedia.org/resource/Red_Hour_Productions> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Red Hour Films"@en .
+<http://dbpedia.org/resource/Scott_Rudin> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Scott Rudin Productions"@en .
+<http://dbpedia.org/resource/Hearts_in_Atlantis_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Hearts in Atlantis"@en .
+<http://dbpedia.org/resource/Warner_Bros._Pictures> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Warner Bros. Pictures"@en .
+<http://dbpedia.org/resource/Castle_Rock_Entertainment> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Castle Rock Entertainment"@en .
+<http://dbpedia.org/resource/Training_Day> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Training Day"@en .
+<http://dbpedia.org/resource/Robert_Newmyer> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Outlaw Productions"@en .
+<http://dbpedia.org/resource/Ocean's_Eleven> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Ocean's Eleven"@en .
+<http://dbpedia.org/resource/Jerry_Weintraub> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Jerry Weintraub Productions"@en .
+<http://dbpedia.org/resource/Section_Eight_Productions> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Section Eight Productions"@en .
+<http://dbpedia.org/resource/The_Majestic_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Majestic"@en .
+<http://dbpedia.org/resource/Castle_Rock_Entertainment> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Castle Rock Entertainment"@en .
+<http://dbpedia.org/resource/Queen_of_the_Damned> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Queen of the Damned"@en .
+<http://dbpedia.org/resource/Showtime_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Showtime"@en .
+<http://dbpedia.org/resource/TriBeCa_Productions> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "TriBeCa Productions"@en .
+<http://dbpedia.org/resource/Eight_Legged_Freaks> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Eight Legged Freaks"@en .
+<http://dbpedia.org/resource/Electric_Entertainment> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Electric Entertainment"@en .
+<http://dbpedia.org/resource/The_Adventures_of_Pluto_Nash> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Adventures of Pluto Nash"@en .
+<http://dbpedia.org/resource/Castle_Rock_Entertainment> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Castle Rock Entertainment"@en .
+<http://dbpedia.org/resource/Martin_Bregman> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Bregman Productions"@en .
+<http://dbpedia.org/resource/Ghost_Ship_(2002_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Ghost Ship"@en .
+<http://dbpedia.org/resource/Dark_Castle_Entertainment> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Dark Castle Entertainment"@en .
+<http://dbpedia.org/resource/Analyze_That> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Analyze That"@en .
+<http://dbpedia.org/resource/Billy_Crystal> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Face Productions"@en .
+<http://dbpedia.org/resource/TriBeCa_Productions> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "TriBeCa Productions"@en .
+<http://dbpedia.org/resource/Two_Weeks_Notice> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Two Weeks Notice"@en .
+<http://dbpedia.org/resource/Castle_Rock_Entertainment> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Castle Rock Entertainment"@en .
+<http://dbpedia.org/resource/Fortis_Films> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Fortis Films"@en .
+<http://dbpedia.org/resource/Dreamcatcher_(2003_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Dreamcatcher"@en .
+<http://dbpedia.org/resource/Castle_Rock_Entertainment> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Castle Rock Entertainment"@en .
+<http://dbpedia.org/resource/Lawrence_Kasdan> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Kasdan Pictures"@en .
+<http://dbpedia.org/resource/Fat_Pizza> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Fat Pizza"@en .
+<http://dbpedia.org/resource/Roadshow_Entertainment> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Roadshow Films"@en .
+<http://dbpedia.org/resource/The_Matrix_Reloaded> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Matrix Reloaded"@en .
+<http://dbpedia.org/resource/Warner_Bros._Pictures> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Warner Bros. Pictures"@en .
+<http://dbpedia.org/resource/Silver_Pictures> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Silver Pictures"@en .
+<http://dbpedia.org/resource/Mystic_River_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Mystic River"@en .
+<http://dbpedia.org/resource/Malpaso_Productions> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Malpaso Productions"@en .
+<http://dbpedia.org/resource/The_Matrix_Revolutions> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Matrix Revolutions"@en .
+<http://dbpedia.org/resource/Silver_Pictures> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Silver Pictures"@en .
+<http://dbpedia.org/resource/Torque_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Torque"@en .
+<http://dbpedia.org/resource/Original_Film> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Original Film"@en .
+<http://dbpedia.org/resource/Taking_Lives_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Taking Lives"@en .
+<http://dbpedia.org/resource/Mark_Canton> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Atmosphere Pictures"@en .
+<http://dbpedia.org/resource/Catwoman_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Catwoman"@en .
+<http://dbpedia.org/resource/Denise_Di_Novi> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Di Novi Pictures"@en .
+<http://dbpedia.org/resource/Frantic_Films> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Frantic Films"@en .
+<http://dbpedia.org/resource/Ocean's_Twelve> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Ocean's Twelve"@en .
+<http://dbpedia.org/resource/Jerry_Weintraub> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Jerry Weintraub Productions"@en .
+<http://dbpedia.org/resource/Section_Eight_Productions> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Section Eight Productions"@en .
+<http://dbpedia.org/resource/Constantine_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Constantine"@en .
+<http://dbpedia.org/resource/Vertigo_Comics> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Vertigo DC Comics"@en .
+<http://dbpedia.org/resource/The_Donners'_Company> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Donners' Company"@en .
+<http://dbpedia.org/resource/Akiva_Goldsman> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Weed Road Pictures"@en .
+<http://dbpedia.org/resource/3_Arts_Entertainment> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "3 Arts Entertainment"@en .
+<http://dbpedia.org/resource/Miss_Congeniality_2:_Armed_and_Fabulous> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Miss Congeniality 2: Armed and Fabulous"@en .
+<http://dbpedia.org/resource/Castle_Rock_Entertainment> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Castle Rock Entertainment"@en .
+<http://dbpedia.org/resource/Fortis_Films> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Fortis Films"@en .
+<http://dbpedia.org/resource/House_of_Wax_(2005_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "House of Wax"@en .
+<http://dbpedia.org/resource/Dark_Castle_Entertainment> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Dark Castle Entertainment"@en .
+<http://dbpedia.org/resource/Charlie_and_the_Chocolate_Factory_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Charlie and the Chocolate Factory"@en .
+<http://dbpedia.org/resource/The_Zanuck_Company> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Zanuck Company"@en .
+<http://dbpedia.org/resource/Plan_B_Entertainment> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Plan B Entertainment"@en .
+<http://dbpedia.org/resource/The_Dukes_of_Hazzard_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Dukes of Hazzard"@en .
+<http://dbpedia.org/resource/Bill_Gerber> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Gerber Pictures"@en .
+<http://dbpedia.org/resource/Rumor_Has_It_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Rumor Has It..."@en .
+<http://dbpedia.org/resource/Section_Eight_Productions> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Section Eight Productions"@en .
+<http://dbpedia.org/resource/Paula_Weinstein> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Spring Creek Productions"@en .
+<http://dbpedia.org/resource/Firewall_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Firewall"@en .
+<http://dbpedia.org/resource/Beacon_Pictures> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Beacon Pictures"@en .
+<http://dbpedia.org/resource/Thunder_Road_Films> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Thunder Road Pictures"@en .
+<http://dbpedia.org/resource/The_Lake_House_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Lake House"@en .
+<http://dbpedia.org/resource/Vertigo_Entertainment> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Vertigo Entertainment"@en .
+<http://dbpedia.org/resource/Sidus_Pictures> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Sidus Pictures"@en .
+<http://dbpedia.org/resource/Happy_Feet> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Happy Feet"@en .
+<http://dbpedia.org/resource/Animal_Logic> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Animal Logic"@en .
+<http://dbpedia.org/resource/Kennedy_Miller_Mitchell> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Kennedy Miller Productions"@en .
+<http://dbpedia.org/resource/Unaccompanied_Minors> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Unaccompanied Minors"@en .
+<http://dbpedia.org/resource/The_Donners'_Company> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Donners' Company"@en .
+<http://dbpedia.org/resource/Music_and_Lyrics> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Music and Lyrics"@en .
+<http://dbpedia.org/resource/Marc_Lawrence_(filmmaker)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Reserve Room Productions"@en .
+<http://dbpedia.org/resource/Castle_Rock_Entertainment> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Castle Rock Entertainment"@en .
+<http://dbpedia.org/resource/The_Reaping> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Reaping"@en .
+<http://dbpedia.org/resource/Dark_Castle_Entertainment> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Dark Castle Entertainment"@en .
+<http://dbpedia.org/resource/Lucky_You_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Lucky You"@en .
+<http://dbpedia.org/resource/Flower_Films> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Flower Films"@en .
+<http://dbpedia.org/resource/Denise_Di_Novi> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Di Novi Pictures"@en .
+<http://dbpedia.org/resource/Ocean's_Thirteen> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Ocean's Thirteen"@en .
+<http://dbpedia.org/resource/Jerry_Weintraub> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Jerry Weintraub Productions"@en .
+<http://dbpedia.org/resource/Section_Eight_Productions> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Section Eight Productions"@en .
+<http://dbpedia.org/resource/License_to_Wed> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "License to Wed"@en .
+<http://dbpedia.org/resource/Phoenix_Pictures> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Phoenix Pictures"@en .
+<http://dbpedia.org/resource/Robert_Simonds> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Robert Simonds Productions"@en .
+<http://dbpedia.org/resource/No_Reservations_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "No Reservations"@en .
+<http://dbpedia.org/resource/Castle_Rock_Entertainment> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Castle Rock Entertainment"@en .
+<http://dbpedia.org/resource/The_Invasion_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Invasion"@en .
+<http://dbpedia.org/resource/Silver_Pictures> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Silver Pictures"@en .
+<http://dbpedia.org/resource/Vertigo_Entertainment> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Vertigo Entertainment"@en .
+<http://dbpedia.org/resource/The_Brave_One_(2007_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Brave One"@en .
+<http://dbpedia.org/resource/Silver_Pictures> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Silver Pictures"@en .
+<http://dbpedia.org/resource/December_Boys> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "December Boys"@en .
+<http://dbpedia.org/resource/Warner_Independent_Pictures> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Warner Independent Pictures"@en .
+<http://dbpedia.org/resource/Becker_Entertainment> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Becker Entertainment"@en .
+<http://dbpedia.org/resource/Rogue_(2007_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Rogue"@en .
+<http://dbpedia.org/resource/Dimension_Films> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Dimension Films"@en .
+<http://dbpedia.org/resource/I_Am_Legend_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "I Am Legend"@en .
+<http://dbpedia.org/resource/Warner_Bros._Pictures> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Warner Bros. Pictures"@en .
+<http://dbpedia.org/resource/Akiva_Goldsman> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Weed Road Pictures"@en .
+<http://dbpedia.org/resource/Overbrook_Entertainment> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Overbrook Entertainment"@en .
+<http://dbpedia.org/resource/Heyday_Films> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Heyday Films"@en .
+<http://dbpedia.org/resource/Original_Film> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Original Film"@en .
+<http://dbpedia.org/resource/Speed_Racer_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Speed Racer"@en .
+<http://dbpedia.org/resource/Silver_Pictures> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Silver Pictures"@en .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Anarchos Productions"@en .
+<http://dbpedia.org/resource/Get_Smart_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Get Smart"@en .
+<http://dbpedia.org/resource/Allen_Shapiro> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Mosaic Media Group"@en .
+<http://dbpedia.org/resource/Atlas_Entertainment> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Atlas Entertainment"@en .
+<http://dbpedia.org/resource/Andrew_Lazar> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Mad Chance Productions"@en .
+<http://dbpedia.org/resource/Nights_in_Rodanthe> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Nights in Rodanthe"@en .
+<http://dbpedia.org/resource/Denise_Di_Novi> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Di Novi Pictures"@en .
+<http://dbpedia.org/resource/Gran_Torino> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Gran Torino"@en .
+<http://dbpedia.org/resource/Malpaso_Productions> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Malpaso Productions"@en .
+<http://dbpedia.org/resource/Yes_Man_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Yes Man"@en .
+<http://dbpedia.org/resource/The_Zanuck_Company> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Zanuck Company"@en .
+<http://dbpedia.org/resource/Heyday_Films> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Heyday Films"@en .
+<http://dbpedia.org/resource/Where_the_Wild_Things_Are_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Where the Wild Things Are"@en .
+<http://dbpedia.org/resource/Legendary_Entertainment> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Legendary Pictures"@en .
+<http://dbpedia.org/resource/Playtone> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Playtone"@en .
+<http://dbpedia.org/resource/Sherlock_Holmes_(2009_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Sherlock Holmes"@en .
+<http://dbpedia.org/resource/Silver_Pictures> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Silver Pictures"@en .
+<http://dbpedia.org/resource/Lionel_Wigram_(film_producer)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Wigram Productions"@en .
+<http://dbpedia.org/resource/Sex_and_the_City_2> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Sex and the City 2"@en .
+<http://dbpedia.org/resource/Warner_Bros._Pictures> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Warner Bros. Pictures"@en .
+<http://dbpedia.org/resource/New_Line_Cinema> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "New Line Cinema"@en .
+<http://dbpedia.org/resource/HBO_Films> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "HBO Films"@en .
+<http://dbpedia.org/resource/Cats_&_Dogs:_The_Revenge_of_Kitty_Galore> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Cats & Dogs: The Revenge of Kitty Galore"@en .
+<http://dbpedia.org/resource/Andrew_Lazar> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Mad Chance Productions"@en .
+<http://dbpedia.org/resource/Legend_of_the_Guardians:_The_Owls_of_Ga'Hoole> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Legend of the Guardians: The Owls of Ga'Hoole"@en .
+<http://dbpedia.org/resource/Animal_Logic> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Animal Logic"@en .
+<http://dbpedia.org/resource/Life_as_We_Know_It_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Life as We Know It"@en .
+<http://dbpedia.org/resource/Gold_Circle_Films> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Gold Circle Films"@en .
+<http://dbpedia.org/resource/Barry_Josephson> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Josephson Entertainment"@en .
+<http://dbpedia.org/resource/Happy_Feet_Two> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Happy Feet Two"@en .
+<http://dbpedia.org/resource/George_Miller_(filmmaker)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Dr. D Studios"@en .
+<http://dbpedia.org/resource/Kennedy_Miller_Mitchell> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Kennedy Miller Mitchell"@en .
+<http://dbpedia.org/resource/Sherlock_Holmes:_A_Game_of_Shadows> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Sherlock Holmes: A Game of Shadows"@en .
+<http://dbpedia.org/resource/Silver_Pictures> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Silver Pictures"@en .
+<http://dbpedia.org/resource/Lionel_Wigram_(film_producer)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Wigram Productions"@en .
+<http://dbpedia.org/resource/The_Lucky_One_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Lucky One"@en .
+<http://dbpedia.org/resource/Denise_Di_Novi> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Di Novi Pictures"@en .
+<http://dbpedia.org/resource/Dark_Shadows_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Dark Shadows"@en .
+<http://dbpedia.org/resource/Infinitum_Nihil> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Infinitum Nihil"@en .
+<http://dbpedia.org/resource/GK_Films> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "GK Films"@en .
+<http://dbpedia.org/resource/The_Zanuck_Company> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Zanuck Company"@en .
+<http://dbpedia.org/resource/Gangster_Squad_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Gangster Squad"@en .
+<http://dbpedia.org/resource/Rideback_(production_company)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Lin Pictures"@en .
+<http://dbpedia.org/resource/Journey_to_the_West:_Conquering_the_Demons> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Journey to the West"@en .
+<http://dbpedia.org/resource/Huayi_Brothers> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Huayi Brothers"@en .
+<http://dbpedia.org/resource/Alibaba_Pictures> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Chinavision Media Group"@en .
+<http://dbpedia.org/resource/China_Film_Group_Corporation> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "China Film Group"@en .
+<http://dbpedia.org/resource/Huayi_Brothers> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Huayi Brothers"@en .
+<http://dbpedia.org/resource/China_Film_Group_Corporation> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "China Film Group"@en .
+<http://dbpedia.org/resource/The_Great_Gatsby_(2013_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Great Gatsby"@en .
+<http://dbpedia.org/resource/Warner_Bros._Pictures> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Warner Bros. Pictures"@en .
+<http://dbpedia.org/resource/A&E_(TV_network)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "A&E Television"@en .
+<http://dbpedia.org/resource/Baz_Luhrmann> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Bazmark Productions"@en .
+<http://dbpedia.org/resource/Douglas_Wick> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Red Wagon Entertainment"@en .
+<http://dbpedia.org/resource/Man_of_Tai_Chi> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Man of Tai Chi"@en .
+<http://dbpedia.org/resource/The_Weinstein_Company> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "RADiUS-TWC"@en .
+<http://dbpedia.org/resource/Universal_Pictures> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Universal Pictures"@en .
+<http://dbpedia.org/resource/China_Film_Group_Corporation> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "China Film Group"@en .
+<http://dbpedia.org/resource/Wanda_Media> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Wanda Media"@en .
+<http://dbpedia.org/resource/The_Lego_Movie> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Lego Movie"@en .
+<http://dbpedia.org/resource/Warner_Bros._Pictures> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Warner Bros. Pictures"@en .
+<http://dbpedia.org/resource/Warner_Bros._Pictures_Animation> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Warner Animation Group"@en .
+<http://dbpedia.org/resource/RatPac_Entertainment> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "RatPac-Dune Entertainment"@en .
+<http://dbpedia.org/resource/The_Lego_Group> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Lego System A/S"@en .
+<http://dbpedia.org/resource/Vertigo_Entertainment> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Vertigo Entertainment"@en .
+<http://dbpedia.org/resource/Rideback_(production_company)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Lin Pictures"@en .
+<http://dbpedia.org/resource/Winter's_Tale_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Winter's Tale"@en .
+<http://dbpedia.org/resource/RatPac_Entertainment> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "RatPac-Dune Entertainment"@en .
+<http://dbpedia.org/resource/Akiva_Goldsman> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Weed Road Pictures"@en .
+<http://dbpedia.org/resource/Marc_Platt_(producer)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Marc Platt Productions"@en .
+<http://dbpedia.org/resource/Edge_of_Tomorrow> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Edge of Tomorrow"@en .
+<http://dbpedia.org/resource/RatPac_Entertainment> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "RatPac-Dune Entertainment"@en .
+<http://dbpedia.org/resource/3_Arts_Entertainment> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "3 Arts Entertainment"@en .
+<http://dbpedia.org/resource/Viz_Media> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Viz Productions"@en .
+<http://dbpedia.org/resource/Tom_Cruise> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "TC Productions"@en .
+<http://dbpedia.org/resource/Into_the_Storm_(2014_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Into the Storm"@en .
+<http://dbpedia.org/resource/New_Line_Cinema> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "New Line Cinema"@en .
+<http://dbpedia.org/resource/RatPac_Entertainment> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "RatPac-Dune Entertainment"@en .
+<http://dbpedia.org/resource/The_Equalizer_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Equalizer"@en .
+<http://dbpedia.org/resource/Sony_Pictures_Motion_Picture_Group> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Sony Pictures Releasing"@en .
+<http://dbpedia.org/resource/Columbia_Pictures> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Columbia Pictures"@en .
+<http://dbpedia.org/resource/Lone_Star_Funds> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "LStar Capital"@en .
+<http://dbpedia.org/resource/Escape_Artists> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Escape Artists"@en .
+<http://dbpedia.org/resource/Mace_Neufeld> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Mace Neufeld Productions"@en .
+<http://dbpedia.org/resource/The_Judge_(2014_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Judge"@en .
+<http://dbpedia.org/resource/Warner_Bros._Pictures> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Warner Bros. Pictures"@en .
+<http://dbpedia.org/resource/RatPac_Entertainment> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "RatPac-Dune Entertainment"@en .
+<http://dbpedia.org/resource/Team_Downey> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Team Downey"@en .
+<http://dbpedia.org/resource/David_Dobkin_(director)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Big Kid Pictures"@en .
+<http://dbpedia.org/resource/Annie_(2014_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Annie"@en .
+<http://dbpedia.org/resource/Sony_Pictures_Motion_Picture_Group> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Sony Pictures Releasing"@en .
+<http://dbpedia.org/resource/Columbia_Pictures> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Columbia Pictures"@en .
+<http://dbpedia.org/resource/Overbrook_Entertainment> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Overbrook Entertainment"@en .
+<http://dbpedia.org/resource/Will_Gluck> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Olive Bridge Entertainment"@en .
+<http://dbpedia.org/resource/American_Sniper> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "American Sniper"@en .
+<http://dbpedia.org/resource/Warner_Bros._Pictures> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Warner Bros. Pictures"@en .
+<http://dbpedia.org/resource/RatPac_Entertainment> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "RatPac-Dune Entertainment"@en .
+<http://dbpedia.org/resource/Andrew_Lazar> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Mad Chance Productions"@en .
+<http://dbpedia.org/resource/Bradley_Cooper> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "22nd & Indiana Pictures"@en .
+<http://dbpedia.org/resource/Malpaso_Productions> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Malpaso Productions"@en .
+<http://dbpedia.org/resource/Jupiter_Ascending> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Jupiter Ascending"@en .
+<http://dbpedia.org/resource/RatPac_Entertainment> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "RatPac-Dune Entertainment"@en .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Anarchos Productions"@en .
+<http://dbpedia.org/resource/Zhong_Kui:_Snow_Girl_and_the_Dark_Crystal> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Zhong Kui: Snow Girl and the Dark Crystal"@en .
+<http://dbpedia.org/resource/Well_Go_USA_Entertainment> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Well Go USA Entertainment"@en .
+<http://dbpedia.org/resource/Warner_Bros._Pictures> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Warner Bros. Pictures"@en .
+<http://dbpedia.org/resource/Mad_Max:_Fury_Road> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Mad Max: Fury Road"@en .
+<http://dbpedia.org/resource/Warner_Bros._Pictures> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Warner Bros. Pictures"@en .
+<http://dbpedia.org/resource/RatPac_Entertainment> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "RatPac-Dune Entertainment"@en .
+<http://dbpedia.org/resource/Kennedy_Miller_Mitchell> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Kennedy Miller Mitchell"@en .
+<http://dbpedia.org/resource/San_Andreas_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "San Andreas"@en .
+<http://dbpedia.org/resource/New_Line_Cinema> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "New Line Cinema"@en .
+<http://dbpedia.org/resource/RatPac_Entertainment> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "RatPac-Dune Entertainment"@en .
+<http://dbpedia.org/resource/Beau_Flynn> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Flynn Picture Company"@en .
+<http://dbpedia.org/resource/Mountain_Cry> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Mountain Cry"@en .
+<http://dbpedia.org/resource/Goosebumps_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Goosebumps"@en .
+<http://dbpedia.org/resource/Sony_Pictures_Motion_Picture_Group> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Sony Pictures Releasing"@en .
+<http://dbpedia.org/resource/Columbia_Pictures> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Columbia Pictures"@en .
+<http://dbpedia.org/resource/Sony_Pictures_Animation> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Sony Pictures Animation"@en .
+<http://dbpedia.org/resource/Lone_Star_Funds> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "LStar Capital"@en .
+<http://dbpedia.org/resource/Original_Film> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Original Film"@en .
+<http://dbpedia.org/resource/Scholastic_Corporation> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Scholastic Entertainment"@en .
+<http://dbpedia.org/resource/In_the_Heart_of_the_Sea_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "In the Heart of the Sea"@en .
+<http://dbpedia.org/resource/Warner_Bros._Pictures> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Warner Bros. Pictures"@en .
+<http://dbpedia.org/resource/Imagine_Entertainment> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Imagine Entertainment"@en .
+<http://dbpedia.org/resource/RatPac_Entertainment> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "RatPac-Dune Entertainment"@en .
+<http://dbpedia.org/resource/Roth/Kirschenbaum_Films> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Roth Films"@en .
+<http://dbpedia.org/resource/Paula_Weinstein> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Spring Creek Pictures"@en .
+<http://dbpedia.org/resource/Concussion_(2015_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Concussion"@en .
+<http://dbpedia.org/resource/Sony_Pictures_Motion_Picture_Group> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Sony Pictures Releasing"@en .
+<http://dbpedia.org/resource/Columbia_Pictures> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Columbia Pictures"@en .
+<http://dbpedia.org/resource/Lone_Star_Funds> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "LStar Capital"@en .
+<http://dbpedia.org/resource/Scott_Free_Productions> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Scott Free Productions"@en .
+<http://dbpedia.org/resource/Grimsby_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Brothers Grimsby"@en .
+<http://dbpedia.org/resource/Columbia_Pictures> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Columbia Pictures"@en .
+<http://dbpedia.org/resource/Lone_Star_Funds> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "LStar Capital"@en .
+<http://dbpedia.org/resource/Sacha_Baron_Cohen> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Four by Two Films"@en .
+<http://dbpedia.org/resource/Big_Talk_Studios> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Big Talk Productions"@en .
+<http://dbpedia.org/resource/Working_Title_Films> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Working Title Films"@en .
+<http://dbpedia.org/resource/The_Legend_of_Tarzan_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Legend of Tarzan"@en .
+<http://dbpedia.org/resource/Warner_Bros._Pictures> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Warner Bros. Pictures"@en .
+<http://dbpedia.org/resource/RatPac_Entertainment> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "RatPac-Dune Entertainment"@en .
+<http://dbpedia.org/resource/Jerry_Weintraub> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Jerry Weintraub Productions"@en .
+<http://dbpedia.org/resource/David_Barron_(film_producer)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Beaglepug Films"@en .
+<http://dbpedia.org/resource/Ghostbusters_(2016_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Ghostbusters"@en .
+<http://dbpedia.org/resource/Sony_Pictures_Motion_Picture_Group> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Sony Pictures Releasing"@en .
+<http://dbpedia.org/resource/Columbia_Pictures> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Columbia Pictures"@en .
+<http://dbpedia.org/resource/The_Montecito_Picture_Company> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Montecito Picture Company"@en .
+<http://dbpedia.org/resource/Amy_Pascal> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Pascal Pictures"@en .
+<http://dbpedia.org/resource/Paul_Feig> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Feigco Entertainment"@en .
+<http://dbpedia.org/resource/Ghost_Corps> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Ghost Corps"@en .
+<http://dbpedia.org/resource/Sully_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Sully"@en .
+<http://dbpedia.org/resource/Warner_Bros._Pictures> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Warner Bros. Pictures"@en .
+<http://dbpedia.org/resource/The_Kennedy/Marshall_Company> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Kennedy/Marshall Company"@en .
+<http://dbpedia.org/resource/Malpaso_Productions> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Malpaso Productions"@en .
+<http://dbpedia.org/resource/The_Magnificent_Seven_(2016_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Magnificent Seven"@en .
+<http://dbpedia.org/resource/Sony_Pictures_Motion_Picture_Group> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Sony Pictures Releasing"@en .
+<http://dbpedia.org/resource/Metro-Goldwyn-Mayer> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Metro-Goldwyn-Mayer Pictures"@en .
+<http://dbpedia.org/resource/Columbia_Pictures> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Columbia Pictures"@en .
+<http://dbpedia.org/resource/Lone_Star_Funds> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "LStar Capital"@en .
+<http://dbpedia.org/resource/Roger_Birnbaum> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Pin High Productions"@en .
+<http://dbpedia.org/resource/Escape_Artists> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Escape Artists"@en .
+<http://dbpedia.org/resource/Antoine_Fuqua> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Fuqua Films"@en .
+<http://dbpedia.org/resource/Collateral_Beauty> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Collateral Beauty"@en .
+<http://dbpedia.org/resource/Warner_Bros._Pictures> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Warner Bros. Pictures"@en .
+<http://dbpedia.org/resource/New_Line_Cinema> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "New Line Cinema"@en .
+<http://dbpedia.org/resource/RatPac_Entertainment> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "RatPac-Dune Entertainment"@en .
+<http://dbpedia.org/resource/Overbrook_Entertainment> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Overbrook Entertainment"@en .
+<http://dbpedia.org/resource/Anonymous_Content> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Anonymous Content"@en .
+<http://dbpedia.org/resource/PalmStar_Media> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "PalmStar Media"@en .
+<http://dbpedia.org/resource/Likely_Story> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Likely Story"@en .
+<http://dbpedia.org/resource/Passengers_(2016_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Passengers"@en .
+<http://dbpedia.org/resource/Sony_Pictures_Motion_Picture_Group> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Sony Pictures Releasing"@en .
+<http://dbpedia.org/resource/Columbia_Pictures> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Columbia Pictures"@en .
+<http://dbpedia.org/resource/Lone_Star_Funds> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "LStar Capital"@en .
+<http://dbpedia.org/resource/Wanda_Media> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Wanda Pictures"@en .
+<http://dbpedia.org/resource/Original_Film> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Original Film"@en .
+<http://dbpedia.org/resource/Fist_Fight> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Fist Fight"@en .
+<http://dbpedia.org/resource/Warner_Bros._Pictures> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Warner Bros. Pictures"@en .
+<http://dbpedia.org/resource/New_Line_Cinema> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "New Line Cinema"@en .
+<http://dbpedia.org/resource/21_Laps_Entertainment> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "21 Laps Entertainment"@en .
+<http://dbpedia.org/resource/RatPac_Entertainment> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "RatPac-Dune Entertainment"@en .
+<http://dbpedia.org/resource/Going_in_Style_(2017_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Going in Style"@en .
+<http://dbpedia.org/resource/New_Line_Cinema> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "New Line Cinema"@en .
+<http://dbpedia.org/resource/RatPac_Entertainment> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "RatPac-Dune Entertainment"@en .
+<http://dbpedia.org/resource/Donald_De_Line> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "De Line Pictures"@en .
+<http://dbpedia.org/resource/King_Arthur:_Legend_of_the_Sword> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "King Arthur: Legend of the Sword"@en .
+<http://dbpedia.org/resource/RatPac_Entertainment> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "RatPac-Dune Entertainment"@en .
+<http://dbpedia.org/resource/Akiva_Goldsman> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Weed Road Pictures"@en .
+<http://dbpedia.org/resource/Tory_Tunnell> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Safehouse Pictures"@en .
+<http://dbpedia.org/resource/The_House_(2017_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The House"@en .
+<http://dbpedia.org/resource/New_Line_Cinema> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "New Line Cinema"@en .
+<http://dbpedia.org/resource/Gary_Sanchez_Productions> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Gary Sanchez Productions"@en .
+<http://dbpedia.org/resource/Good_Universe> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Good Universe"@en .
+<http://dbpedia.org/resource/Bleeding_Steel> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Bleeding Steel"@en .
+<http://dbpedia.org/resource/Lionsgate_Films> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Lionsgate Films"@en .
+<http://dbpedia.org/resource/Heyi_Pictures> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Heyi Pictures"@en .
+<http://dbpedia.org/resource/Perfect_World_Pictures> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Perfect World Pictures"@en .
+<http://dbpedia.org/resource/The_15:17_to_Paris> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The 15:17 to Paris"@en .
+<http://dbpedia.org/resource/Warner_Bros._Pictures> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Warner Bros. Pictures"@en .
+<http://dbpedia.org/resource/Malpaso_Productions> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Malpaso Productions"@en .
+<http://dbpedia.org/resource/Access_Industries> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Access Entertainment"@en .
+<http://dbpedia.org/resource/Ready_Player_One_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Ready Player One"@en .
+<http://dbpedia.org/resource/Amblin_Partners> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Amblin Partners"@en .
+<http://dbpedia.org/resource/Amblin_Entertainment> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Amblin Entertainment"@en .
+<http://dbpedia.org/resource/Access_Industries> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Access Entertainment"@en .
+<http://dbpedia.org/resource/Donald_De_Line> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "De Line Pictures"@en .
+<http://dbpedia.org/resource/Ocean's_8> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Ocean's 8"@en .
+<http://dbpedia.org/resource/Smokehouse_Pictures> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Smokehouse Pictures"@en .
+<http://dbpedia.org/resource/Joker_(2019_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Joker"@en .
+<http://dbpedia.org/resource/Bron_Studios> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Bron Creative"@en .
+<http://dbpedia.org/resource/DC_Studios> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "DC Films"@en .
+<http://dbpedia.org/resource/The_Matrix_Resurrections> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Matrix Resurrections"@en .
+<http://dbpedia.org/resource/Warner_Bros._Pictures> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Warner Bros. Pictures"@en .
+<http://dbpedia.org/resource/Cinnamon_(2023_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Cinnamon"@en .
+<http://dbpedia.org/resource/Tubi> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Tubi"@en .
+<http://dbpedia.org/resource/Fox_Entertainment> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Fox Entertainment Studios"@en .
+<http://dbpedia.org/resource/Wonka_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Wonka"@en .
+<http://dbpedia.org/resource/Warner_Bros._Pictures> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Warner Bros. Pictures"@en .
+<http://dbpedia.org/resource/Heyday_Films> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Heyday Films"@en .
+<http://dbpedia.org/resource/The_Gutter_(2024_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Gutter"@en .
+<http://dbpedia.org/resource/Magnolia_Pictures> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Magnolia Pictures"@en .
+<http://dbpedia.org/resource/Eternal_Return_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Eternal Return"@en .
+<http://dbpedia.org/resource/Moby> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Little Walnut"@en .
+<http://dbpedia.org/resource/Paradise_Beach> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Paradise Beach"@en .
+<http://dbpedia.org/resource/Nine_Network> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Nine Network"@en .
+<http://dbpedia.org/resource/New_World_Pictures> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Genesis Entertainment"@en .
+<http://dbpedia.org/resource/Flipper_(1995_TV_series)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Flipper"@en .
+<http://dbpedia.org/resource/Broadcast_syndication> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Syndication"@en .
+<http://dbpedia.org/resource/Ion_Television> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "PAX"@en .
+<http://dbpedia.org/resource/Samuel_Goldwyn_Television> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Samuel Goldwyn Television"@en .
+<http://dbpedia.org/resource/Tribune_Entertainment> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Tribune Entertainment"@en .
+<http://dbpedia.org/resource/MGM_Television> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "MGM Television"@en .
+<http://dbpedia.org/resource/Space:_Above_and_Beyond> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Space: Above and Beyond"@en .
+<http://dbpedia.org/resource/Fox_Broadcasting_Company> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Fox"@en .
+<http://dbpedia.org/resource/James_Wong_(filmmaker)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Hard Eight Pictures"@en .
+<http://dbpedia.org/resource/20th_Television> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "20th Century Fox Television"@en .
+<http://dbpedia.org/resource/Pacific_Drive_(TV_series)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Pacific Drive"@en .
+<http://dbpedia.org/resource/Nine_Network> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Nine Network"@en .
+<http://dbpedia.org/resource/New_World_Pictures> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "New World Entertainment"@en .
+<http://dbpedia.org/resource/Night_Man_(TV_series)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Night Man"@en .
+<http://dbpedia.org/resource/Broadcast_syndication> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Syndication"@en .
+<http://dbpedia.org/resource/ProSieben> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "ProSieben Media"@en .
+<http://dbpedia.org/resource/Glen_A._Larson> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Glen Larson Entertainment Network"@en .
+<http://dbpedia.org/resource/Alliance_Atlantis> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Atlantis Films"@en .
+<http://dbpedia.org/resource/Tribune_Entertainment> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Tribune Entertainment"@en .
+<http://dbpedia.org/resource/Tales_of_the_South_Seas> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Tales of the South Seas"@en .
+<http://dbpedia.org/resource/Network_10> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Network Ten"@en .
+<http://dbpedia.org/resource/RTL_Group> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "CLT-UFA"@en .
+<http://dbpedia.org/resource/Gaumont_(company)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Gaumont Télévision"@en .
+<http://dbpedia.org/resource/South_Pacific_Pictures> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "South Pacific Pictures"@en .
+<http://dbpedia.org/resource/Skippy:_Adventures_in_Bushtown> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Skippy: Adventures in Bushtown"@en .
+<http://dbpedia.org/resource/Nine_Network> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Nine Network"@en .
+<http://dbpedia.org/resource/Flying_Bark_Productions> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Yoram Gross-Village Roadshow"@en .
+<http://dbpedia.org/resource/Tele_Images_Productions> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "International Tele Images"@en .
+<http://dbpedia.org/resource/Dumb_Bunnies> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Dumb Bunnies"@en .
+<http://dbpedia.org/resource/CBS> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "CBS"@en .
+<http://dbpedia.org/resource/Flying_Bark_Productions> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Yoram Gross-Village Roadshow"@en .
+<http://dbpedia.org/resource/Nelvana> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Nelvana"@en .
+<http://dbpedia.org/resource/STV_Studios> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Scottish Television Enterprises"@en .
+<http://dbpedia.org/resource/Syfy> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Sci-Fi Channel"@en .
+<http://dbpedia.org/resource/Paramount_Television> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Wilshire Court Productions"@en .
+<http://dbpedia.org/resource/Sahara_(1995_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Sahara"@en .
+<http://dbpedia.org/resource/TriStar_Television> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "TriStar Television"@en .
+<http://dbpedia.org/resource/The_Ticket_(1997_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Ticket"@en .
+<http://dbpedia.org/resource/USA_Network> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "USA Network"@en .
+<http://dbpedia.org/resource/Paramount_Television> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Wilshire Court Productions"@en .
+<http://dbpedia.org/resource/Paramount_Television> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Wilshire Court Productions"@en .
+<http://dbpedia.org/resource/Alien_Cargo> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Alien Cargo"@en .
+<http://dbpedia.org/resource/UPN> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "UPN"@en .
+<http://dbpedia.org/resource/The_Lost_World_(TV_series)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Sir Arthur Conan Doyle's The Lost World"@en .
+<http://dbpedia.org/resource/TNT_(American_TV_network)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "TNT"@en .
+<http://dbpedia.org/resource/St._Clare_Entertainment> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "St. Clare Entertainment"@en .
+<http://dbpedia.org/resource/UPN> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "UPN"@en .
+<http://dbpedia.org/resource/Paramount_Television> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Wilshire Court Productions"@en .
+<http://dbpedia.org/resource/CBS> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "CBS"@en .
+<http://dbpedia.org/resource/Paramount_Television> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Wilshire Court Productions"@en .
+<http://dbpedia.org/resource/ITV_Studios> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Carlton America"@en .
+<http://dbpedia.org/resource/The_Thorn_Birds:_The_Missing_Years> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Thorn Birds: The Missing Years"@en .
+<http://dbpedia.org/resource/CBS> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "CBS"@en .
+<http://dbpedia.org/resource/David_L._Wolper> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Wolper Organization"@en .
+<http://dbpedia.org/resource/Warner_Bros._Television_Studios> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Warner Bros. Television"@en .
+<http://dbpedia.org/resource/20,000_Leagues_Under_the_Sea_(1997_miniseries)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "20,000 Leagues Under the Sea"@en .
+<http://dbpedia.org/resource/American_Broadcasting_Company> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "ABC"@en .
+<http://dbpedia.org/resource/Village_Roadshow_Pictures> <http://xmlns.com/foaf/0.1/depiction> <http://commons.wikimedia.org/wiki/Special:FilePath/Village-Roadshow-Pictures-Logo.svg> .
+<http://dbpedia.org/resource/Village_Roadshow_Pictures> <http://dbpedia.org/ontology/thumbnail> <http://commons.wikimedia.org/wiki/Special:FilePath/Village-Roadshow-Pictures-Logo.svg?width=300> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Village-Roadshow-Pictures-Logo.svg> <http://xmlns.com/foaf/0.1/thumbnail> <http://commons.wikimedia.org/wiki/Special:FilePath/Village-Roadshow-Pictures-Logo.svg?width=300> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Village-Roadshow-Pictures-Logo.svg> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Image> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Village-Roadshow-Pictures-Logo.svg?width=300> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Image> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Village-Roadshow-Pictures-Logo.svg> <http://purl.org/dc/elements/1.1/rights> <http://en.wikipedia.org/wiki/File:Village-Roadshow-Pictures-Logo.svg> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Village-Roadshow-Pictures-Logo.svg?width=300> <http://purl.org/dc/elements/1.1/rights> <http://en.wikipedia.org/wiki/File:Village-Roadshow-Pictures-Logo.svg> .
+<http://dbpedia.org/resource/Village_Roadshow_Pictures> <http://xmlns.com/foaf/0.1/depiction> <http://commons.wikimedia.org/wiki/Special:FilePath/Village-Roadshow-Pictures-Logo.svg> .
+# completed 2025-06-30T11:58:21Z

@@ -1,0 +1,35 @@
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/starring> "Hugo Weaving"@en .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/budget> "6.3E7"^^<http://dbpedia.org/datatype/usDollar> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/starring> "Laurence Fishburne"@en .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/starring> "Joe Pantoliano"@en .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/cinematography> <http://dbpedia.org/resource/Bill_Pope> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/starring> "Carrie-Anne Moss"@en .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/ontology/producer> <http://dbpedia.org/resource/Joel_Silver> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/ontology/starring> <http://dbpedia.org/resource/Laurence_Fishburne> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/ontology/director> <http://dbpedia.org/resource/The_Wachowskis> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/ontology/starring> <http://dbpedia.org/resource/Hugo_Weaving> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/distributor> "Warner Bros."@en .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/ontology/productionCompany> <http://dbpedia.org/resource/Village_Roadshow_Pictures> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/ontology/productionCompany> <http://dbpedia.org/resource/Warner_Bros._Pictures> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/ontology/starring> <http://dbpedia.org/resource/Carrie-Anne_Moss> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/ontology/runtime> "8160.0"^^<http://www.w3.org/2001/XMLSchema#double> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/starring> "Keanu Reeves"@en .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/distributor> "Roadshow Entertainment"@en .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/ontology/distributor> <http://dbpedia.org/resource/Roadshow_Entertainment> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/ontology/starring> <http://dbpedia.org/resource/Keanu_Reeves> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/ontology/productionCompany> <http://dbpedia.org/resource/Silver_Pictures> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/music> <http://dbpedia.org/resource/Don_Davis_(composer)> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/director> "The Wachowskis"@en .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/ontology/cinematography> <http://dbpedia.org/resource/Bill_Pope> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/starring> ""@en .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/runtime> "8160.0"^^<http://dbpedia.org/datatype/second> .
+<http://dbpedia.org/resource/The_Matrix> <http://www.w3.org/2000/01/rdf-schema#label> "The Matrix"@en .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/writer> "The Wachowskis"@en .
+<http://dbpedia.org/resource/The_Matrix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Film> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/gross> "4.676E8"^^<http://dbpedia.org/datatype/usDollar> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/ontology/budget> "6.3E7"^^<http://dbpedia.org/datatype/usDollar> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/distributor> ""@en .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/producer> <http://dbpedia.org/resource/Joel_Silver> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/ontology/musicComposer> <http://dbpedia.org/resource/Don_Davis_(composer)> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/title> "Awards for The Matrix"@en .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/ontology/starring> <http://dbpedia.org/resource/Joe_Pantoliano> .

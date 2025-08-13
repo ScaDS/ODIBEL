@@ -1,0 +1,6 @@
+<http://dbpedia.org/resource/Village_Roadshow_Pictures> <http://www.w3.org/2000/01/rdf-schema#label> "Village Roadshow Pictures"@en .
+<http://dbpedia.org/resource/Village_Roadshow_Pictures> <http://dbpedia.org/ontology/industry> <http://dbpedia.org/resource/Film_industry> .
+<http://dbpedia.org/resource/Village_Roadshow_Pictures> <http://dbpedia.org/property/name> "Village Roadshow Pictures"@en .
+<http://dbpedia.org/resource/Village_Roadshow_Pictures> <http://dbpedia.org/property/products> <http://dbpedia.org/resource/Motion_pictures> .
+<http://dbpedia.org/resource/Village_Roadshow_Pictures> <http://dbpedia.org/property/industry> <http://dbpedia.org/resource/Film_industry> .
+<http://dbpedia.org/resource/Village_Roadshow_Pictures> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Organisation> .

@@ -1,21 +1,51 @@
-# Open Data Integration Benchmark Lab
+# Open Data Benchmark Evaluation Lab
 
-This repository contains reusable code to generate reusable benchmark datasets for data integration tasks.
+## Generating a Mulit-Source Knowledge Graph Integration Tests
 
-Currently it contains code to:
+The goal is to generate a benchmark dataset for a specific domain of this form.
+- A seed KG
+- An RDF source
+- A JSON source
+- A Text source
 
-* **Generate DBpedia-TKG:** A temporal Knowledge Graph by extraction multiple revisions of Wikipedia pages with the DBpedia Extraction Framework (DIEF) and annotating triples with their lifespan diffing triple revision versions.
+## Idea is to derive the data from Wikidata, DBpedia and Wikipedia
 
-# DBpedia Temporal Graph Extraction
+Input: Ontology and equivalentClass equivalentProperty definitons, see odibel/ontology.ttl
 
-Documentation was moved to [dbpedia/dbpedia-temporal](https://github.com/dbpedia/dbpedia-temporal).
+Given a list of URIs from a main entity type (e.g., Film)
+we fetch the RDF data for these URIs filter the 
 
-# Multi Source KG Benchmark
+## Splits
 
-Steps
-1. fetching data
-2. deriving a stable graph
+The sources and the seed share a data for sepcific sets of entities, for providing a good foundation for evaluatinf different aspects.
+
+Based on 5 splits we have the following data composition
+- seed:        s1
+- rdf_source:  s1+s2+s5
+- json_source: s1+s3+s5
+- text_source: s1+s4+s5
+- reference:   s1+s2+s3+s4+s5
+
+## Hierachical KG
+
+We start with a main entity and the object data for the given 
+
+output_dir
+  hash
+    data.nt
+    hop_1/
+      data.nt
+
+## Construct/Clean Data
 
 
-## Issues
--
+## What we have 
+- dbaccess.py
+
+
+1. Fetch 
+2. Filter
+3. Fetch Connected
+4. Filter
+5. Splits (on main entity)
+

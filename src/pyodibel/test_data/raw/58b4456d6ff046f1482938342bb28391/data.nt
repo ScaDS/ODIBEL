@@ -1,0 +1,819 @@
+# started 2025-06-30T10:59:45Z
+<http://dbpedia.org/resource/The_Matrix> <http://www.w3.org/2000/01/rdf-schema#label> "The Matrix"@en .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/ontology/wikiPageID> "30007"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://dbpedia.org/resource/The_Matrix> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://en.wikipedia.org/wiki/The_Matrix?oldid=1294683702&ns=0> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/ontology/wikiPageRevisionID> "1294683702"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/ontology/wikiPageLength> "174559"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://dbpedia.org/resource/The_Matrix> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:1990s_American_films> .
+<http://dbpedia.org/resource/The_Matrix> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:1990s_chase_films> .
+<http://dbpedia.org/resource/The_Matrix> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:1990s_dystopian_films> .
+<http://dbpedia.org/resource/The_Matrix> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:1990s_English-language_films> .
+<http://dbpedia.org/resource/The_Matrix> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:1999_science_fiction_action_films> .
+<http://dbpedia.org/resource/The_Matrix> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:1999_action_thriller_films> .
+<http://dbpedia.org/resource/The_Matrix> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:1999_films> .
+<http://dbpedia.org/resource/The_Matrix> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:1999_science_fiction_films> .
+<http://dbpedia.org/resource/The_Matrix> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:American_action_thriller_films> .
+<http://dbpedia.org/resource/The_Matrix> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:American_chase_films> .
+<http://dbpedia.org/resource/The_Matrix> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:American_dystopian_films> .
+<http://dbpedia.org/resource/The_Matrix> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:American_neo-noir_films> .
+<http://dbpedia.org/resource/The_Matrix> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:American_post-apocalyptic_films> .
+<http://dbpedia.org/resource/The_Matrix> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:American_science_fiction_action_films> .
+<http://dbpedia.org/resource/The_Matrix> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Australian_action_thriller_films> .
+<http://dbpedia.org/resource/The_Matrix> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Australian_neo-noir_films> .
+<http://dbpedia.org/resource/The_Matrix> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Australian_post-apocalyptic_films> .
+<http://dbpedia.org/resource/The_Matrix> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Australian_science_fiction_action_films> .
+<http://dbpedia.org/resource/The_Matrix> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Articles_containing_video_clips> .
+<http://dbpedia.org/resource/The_Matrix> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:BAFTA_winners_(films)> .
+<http://dbpedia.org/resource/The_Matrix> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Cyberpunk_films> .
+<http://dbpedia.org/resource/The_Matrix> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Films_about_drones> .
+<http://dbpedia.org/resource/The_Matrix> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Films_about_computer_hacking> .
+<http://dbpedia.org/resource/The_Matrix> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Films_about_ectogenesis> .
+<http://dbpedia.org/resource/The_Matrix> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Films_about_rebellions> .
+<http://dbpedia.org/resource/The_Matrix> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Films_directed_by_The_Wachowskis> .
+<http://dbpedia.org/resource/The_Matrix> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Films_produced_by_Joel_Silver> .
+<http://dbpedia.org/resource/The_Matrix> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Films_scored_by_Don_Davis_(composer)> .
+<http://dbpedia.org/resource/The_Matrix> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Films_shot_at_Culver_Studios> .
+<http://dbpedia.org/resource/The_Matrix> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Films_shot_in_Sydney> .
+<http://dbpedia.org/resource/The_Matrix> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Films_that_won_the_Best_Sound_Editing_Academy_Award> .
+<http://dbpedia.org/resource/The_Matrix> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Films_that_won_the_Best_Sound_Mixing_Academy_Award> .
+<http://dbpedia.org/resource/The_Matrix> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Films_that_won_the_Best_Visual_Effects_Academy_Award> .
+<http://dbpedia.org/resource/The_Matrix> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Films_whose_editor_won_the_Best_Film_Editing_Academy_Award> .
+<http://dbpedia.org/resource/The_Matrix> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Films_with_screenplays_by_The_Wachowskis> .
+<http://dbpedia.org/resource/The_Matrix> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Gnosticism_in_popular_culture> .
+<http://dbpedia.org/resource/The_Matrix> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Gun_fu_films> .
+<http://dbpedia.org/resource/The_Matrix> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Kung_fu_films> .
+<http://dbpedia.org/resource/The_Matrix> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Martial_arts_science_fiction_films> .
+<http://dbpedia.org/resource/The_Matrix> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Philosophical_fiction> .
+<http://dbpedia.org/resource/The_Matrix> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Existentialist_films> .
+<http://dbpedia.org/resource/The_Matrix> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Postmodern_films> .
+<http://dbpedia.org/resource/The_Matrix> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Resurrection_in_film> .
+<http://dbpedia.org/resource/The_Matrix> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Saturn_Award–winning_films> .
+<http://dbpedia.org/resource/The_Matrix> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Silver_Pictures_films> .
+<http://dbpedia.org/resource/The_Matrix> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:The_Matrix_(franchise)_films> .
+<http://dbpedia.org/resource/The_Matrix> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Transgender-related_films> .
+<http://dbpedia.org/resource/The_Matrix> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:United_States_National_Film_Registry_films> .
+<http://dbpedia.org/resource/The_Matrix> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Village_Roadshow_Pictures_films> .
+<http://dbpedia.org/resource/The_Matrix> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Warner_Bros._films> .
+<http://dbpedia.org/resource/The_Matrix> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:Films_based_on_Allegory_of_the_Cave> .
+<http://dbpedia.org/resource/The_Matrix> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:English-language_science_fiction_action_films> .
+<http://dbpedia.org/resource/The_Matrix> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Category:English-language_action_thriller_films> .
+<http://dbpedia.org/resource/The_Matrix> <http://xmlns.com/foaf/0.1/isPrimaryTopicOf> <http://en.wikipedia.org/wiki/The_Matrix> .
+<http://en.wikipedia.org/wiki/The_Matrix> <http://xmlns.com/foaf/0.1/primaryTopic> <http://dbpedia.org/resource/The_Matrix> .
+<http://en.wikipedia.org/wiki/The_Matrix> <http://purl.org/dc/elements/1.1/language> "en" .
+<http://en.wikipedia.org/wiki/The_Matrix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Document> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Short_description> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:About> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Use_American_English> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Use_mdy_dates> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Infobox_film> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Efn> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:See_also> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Multiple_image> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Convert> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:See_also> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:See_also> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:'> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Blockquote> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Citation_needed> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:'> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:'> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:'> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:'> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Anchor> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Main> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Won> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Won> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Won> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Won> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Nom> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Nom> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Nom> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Won> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Won> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Won> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Efn> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Won> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Nom> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Nom> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Nom> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Nom> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Nom> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Nom> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Nom> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Quote_box> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:See_also> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Efn> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Nbsp> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Efn> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Sic> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:'> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:'> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:'> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:'> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Main> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Main> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Cols> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Colend> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Cols> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Colend> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Notelist> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Reflist> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Cite_book> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Cite_book> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Cite_book> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Cite_book> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Cite_book> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Cite_book> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Cite_book> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Cite_book> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Cite_book> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:IMDb_title> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:IMFDB_title> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:YouTube> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:The_Matrix> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:The_Wachowskis> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Extended_reality> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Navboxes> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Subject_bar> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Authority_control> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:!> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:!> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Efn> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Film_date> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Ubl> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Academy_Award_Best_Sound_Editing> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Academy_Award_Best_Visual_Effects> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:BAFTA_Award_for_Best_Special_Visual_Effects> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Empire_Award_for_Best_Film> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:MTV_Movie_Award_for_Best_Movie> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:MTV_Movie_Award_for_Best_Fight> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/wikiPageUsesTemplate> <http://dbpedia.org/resource/Template:Saturn_Award_for_Best_Science_Fiction_Film_1991–2010> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/ontology/wikiPageExternalLink> <https://books.google.com/books%3Fid=XPY--YwYmMgC> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/ontology/wikiPageExternalLink> <https://archive.org/details/matrix0000clov> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/ontology/wikiPageExternalLink> <https://archive.org/details/matrixphilosophy00irwi> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/ontology/wikiPageExternalLink> <https://books.google.com/books%3Fid=wOazyEaidDYC> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/ontology/wikiPageExternalLink> <https://www.warnerbros.com/movies/matrix/> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/ontology/wikiPageExternalLink> <http://www.whatisthematrix.com/> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/alt> "--04-02"^^<http://www.w3.org/2001/XMLSchema#gMonthDay> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/caption> "Theatrical release poster"@en .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/director> "The Wachowskis"@en .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/producer> <http://dbpedia.org/resource/Joel_Silver> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/writer> "The Wachowskis"@en .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/starring> "Keanu Reeves"@en .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/starring> "Laurence Fishburne"@en .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/starring> "Carrie-Anne Moss"@en .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/starring> "Hugo Weaving"@en .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/starring> "Joe Pantoliano"@en .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/starring> ""@en .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/music> <http://dbpedia.org/resource/Don_Davis_(composer)> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/cinematography> <http://dbpedia.org/resource/Bill_Pope> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/editing> <http://dbpedia.org/resource/Zach_Staenberg> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/studio> "Warner Bros."@en .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/studio> "Village Roadshow Pictures"@en .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/studio> "Groucho II Film Partnership"@en .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/studio> "Silver Pictures"@en .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/studio> ""@en .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/distributor> "Warner Bros."@en .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/distributor> "Roadshow Entertainment"@en .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/distributor> ""@en .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/runtime> "8160.0"^^<http://dbpedia.org/datatype/second> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/language> "English"@en .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/budget> "6.3E7"^^<http://dbpedia.org/datatype/usDollar> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/gross> "4.676E8"^^<http://dbpedia.org/datatype/usDollar> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/direction> "vertical"@en .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/width> "150"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/footer> "Top to bottom: Keanu Reeves, Laurence Fishburne, and Carrie-Anne Moss star in the film as Neo, Morpheus and Trinity respectively."@en .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/image> "Keanu_Reeves_2019_.jpg"@en .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/image> "National_Memorial_Day_Concert_2017__.jpg"@en .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/image> "Carrie-Anne_Moss_May_2016.jpg"@en .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/quote> "The Matrix is arguably the ultimate cyberpunk artifact."@en .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/source> "—William Gibson"@en .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/width> "33.0"^^<http://dbpedia.org/datatype/perCent> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/align> "right"@en .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/title> "Awards for The Matrix"@en .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/portal> "1990.0"^^<http://dbpedia.org/datatype/second> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/portal> "Film"@en .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/portal> "United States"@en .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/portal> "Australia"@en .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/portal> "Science fiction"@en .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/commons> "yes"@en .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/n> "yes"@en .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/wikt> "yes"@en .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/q> "yes"@en .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/d> "yes"@en .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/property/dSearch> "Q83495"@en .
+<http://dbpedia.org/resource/The_Matrix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Film> .
+<http://dbpedia.org/resource/The_Matrix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Movie> .
+<http://dbpedia.org/resource/The_Matrix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q11424> .
+<http://dbpedia.org/resource/The_Matrix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Work> .
+<http://dbpedia.org/resource/The_Matrix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/CreativeWork> .
+<http://dbpedia.org/resource/The_Matrix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.wikidata.org/entity/Q386724> .
+<http://dbpedia.org/resource/The_Matrix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Thing> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/ontology/director> <http://dbpedia.org/resource/The_Wachowskis> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/ontology/producer> <http://dbpedia.org/resource/Joel_Silver> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/ontology/writer> <http://dbpedia.org/resource/The_Wachowskis> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/ontology/starring> <http://dbpedia.org/resource/Keanu_Reeves> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/ontology/starring> <http://dbpedia.org/resource/Laurence_Fishburne> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/ontology/starring> <http://dbpedia.org/resource/Carrie-Anne_Moss> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/ontology/starring> <http://dbpedia.org/resource/Hugo_Weaving> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/ontology/starring> <http://dbpedia.org/resource/Joe_Pantoliano> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/ontology/musicComposer> <http://dbpedia.org/resource/Don_Davis_(composer)> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/ontology/cinematography> <http://dbpedia.org/resource/Bill_Pope> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/ontology/editing> <http://dbpedia.org/resource/Zach_Staenberg> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/ontology/distributor> <http://dbpedia.org/resource/Roadshow_Entertainment> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/ontology/budget> "6.3E7"^^<http://dbpedia.org/datatype/usDollar> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/ontology/gross> "4.676E8"^^<http://dbpedia.org/datatype/usDollar> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/ontology/runtime> "8160.0"^^<http://www.w3.org/2001/XMLSchema#double> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/ontology/Work/runtime> "136.0"^^<http://dbpedia.org/datatype/minute> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/ontology/productionCompany> <http://dbpedia.org/resource/Warner_Bros._Pictures> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/ontology/productionCompany> <http://dbpedia.org/resource/Village_Roadshow_Pictures> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/ontology/productionCompany> <http://dbpedia.org/resource/Silver_Pictures> .
+<http://dbpedia.org/resource/The_Matrix> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://dbpedia.org/resource/List_of_Matrix_series_characters> .
+<http://dbpedia.org/resource/The_Matrix> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://dbpedia.org/resource/The_Matrix:_Original_Motion_Picture_Score> .
+<http://dbpedia.org/resource/The_Matrix> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://dbpedia.org/resource/Matrix_digital_rain> .
+<http://dbpedia.org/resource/The_Matrix> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://dbpedia.org/resource/The_Matrix_(franchise)> .
+<http://dbpedia.org/resource/The_Matrix> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://dbpedia.org/resource/Interpretations> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/ontology/wikiPageOutDegree> "600"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Wachowskis"@en .
+<http://dbpedia.org/resource/Joel_Silver> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Joel Silver"@en .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Keanu Reeves"@en .
+<http://dbpedia.org/resource/Laurence_Fishburne> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Laurence Fishburne"@en .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Carrie-Anne Moss"@en .
+<http://dbpedia.org/resource/Hugo_Weaving> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Hugo Weaving"@en .
+<http://dbpedia.org/resource/Joe_Pantoliano> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Joe Pantoliano"@en .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Don Davis"@en .
+<http://dbpedia.org/resource/Bill_Pope> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Bill Pope"@en .
+<http://dbpedia.org/resource/Zach_Staenberg> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Zach Staenberg"@en .
+<http://dbpedia.org/resource/Warner_Bros._Pictures> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Warner Bros."@en .
+<http://dbpedia.org/resource/Village_Roadshow_Pictures> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Village Roadshow Pictures"@en .
+<http://dbpedia.org/resource/Silver_Pictures> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Silver Pictures"@en .
+<http://dbpedia.org/resource/Roadshow_Entertainment> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Roadshow Entertainment"@en .
+<http://dbpedia.org/resource/Mann_Village_Theater> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Mann Village Theater"@en .
+<http://dbpedia.org/resource/Science_fiction_film> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "science fiction"@en .
+<http://dbpedia.org/resource/Action_film> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "action film"@en .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "the Wachowskis"@en .
+<http://dbpedia.org/resource/The_Matrix_(franchise)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "''Matrix'' film series"@en .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Keanu Reeves"@en .
+<http://dbpedia.org/resource/Laurence_Fishburne> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Laurence Fishburne"@en .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Carrie-Anne Moss"@en .
+<http://dbpedia.org/resource/Hugo_Weaving> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Hugo Weaving"@en .
+<http://dbpedia.org/resource/Joe_Pantoliano> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Joe Pantoliano"@en .
+<http://dbpedia.org/resource/Dystopia> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "dystopia"@en .
+<http://dbpedia.org/resource/Simulated_reality> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "simulated reality"@en .
+<http://dbpedia.org/resource/Artificial_intelligence> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "intelligent machines"@en .
+<http://dbpedia.org/resource/Neo_(The_Matrix)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Neo"@en .
+<http://dbpedia.org/resource/Morpheus_(The_Matrix)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Morpheus"@en .
+<http://dbpedia.org/resource/Bound_(1996_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "''Bound''"@en .
+<http://dbpedia.org/resource/Warner_Bros.> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Warner Bros."@en .
+<http://dbpedia.org/resource/Anime> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "anime"@en .
+<http://dbpedia.org/resource/Martial_arts_film> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "martial arts film"@en .
+<http://dbpedia.org/resource/Fight_choreography> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "fight choreographers"@en .
+<http://dbpedia.org/resource/Wire_fu> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "wire fu"@en .
+<http://dbpedia.org/resource/Hong_Kong_action_cinema> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Hong Kong action cinema"@en .
+<http://dbpedia.org/resource/Allegory_of_the_cave> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Plato's cave"@en .
+<http://dbpedia.org/resource/Telnet> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Telnet"@en .
+<http://dbpedia.org/resource/Red_pill> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "red pill"@en .
+<http://dbpedia.org/resource/Bullet_time> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "bullet time"@en .
+<http://dbpedia.org/resource/Shot_(filmmaking)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "shot"@en .
+<http://dbpedia.org/resource/Slow_motion> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "slow motion"@en .
+<http://dbpedia.org/resource/1999_in_film> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "fourth-highest-grossing film of that year"@en .
+<http://dbpedia.org/resource/72nd_Academy_Awards> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "72nd Academy Awards"@en .
+<http://dbpedia.org/resource/Academy_Award_for_Best_Visual_Effects> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Best Visual Effects"@en .
+<http://dbpedia.org/resource/Academy_Award_for_Best_Film_Editing> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Best Film Editing"@en .
+<http://dbpedia.org/resource/Academy_Award_for_Best_Sound> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Best Sound"@en .
+<http://dbpedia.org/resource/BAFTA_Award_for_Best_Sound> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Best Sound"@en .
+<http://dbpedia.org/resource/BAFTA_Award_for_Best_Special_Visual_Effects> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Best Special Visual Effects"@en .
+<http://dbpedia.org/resource/53rd_British_Academy_Film_Awards> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "53rd British Academy Film Awards"@en .
+<http://dbpedia.org/resource/Saturn_Award_for_Best_Director> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Best Director"@en .
+<http://dbpedia.org/resource/Saturn_Award_for_Best_Science_Fiction_Film> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Best Science Fiction Film"@en .
+<http://dbpedia.org/resource/26th_Saturn_Awards> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "26th Saturn Awards"@en .
+<http://dbpedia.org/resource/National_Film_Registry> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "National Film Registry"@en .
+<http://dbpedia.org/resource/Library_of_Congress> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Library of Congress"@en .
+<http://dbpedia.org/resource/The_Matrix_Reloaded> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Matrix Reloaded"@en .
+<http://dbpedia.org/resource/The_Matrix_Revolutions> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Matrix Revolutions"@en .
+<http://dbpedia.org/resource/Anthology_film> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "anthology film"@en .
+<http://dbpedia.org/resource/The_Animatrix> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Animatrix"@en .
+<http://dbpedia.org/resource/The_Matrix_Resurrections> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Matrix Resurrections"@en .
+<http://dbpedia.org/resource/Lana_Wachowski> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Lana Wachowski"@en .
+<http://dbpedia.org/resource/Neo_(The_Matrix)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Neo"@en .
+<http://dbpedia.org/resource/Trinity_(The_Matrix)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Trinity"@en .
+<http://dbpedia.org/resource/Morpheus_(The_Matrix)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Morpheus"@en .
+<http://dbpedia.org/resource/Agent_(The_Matrix)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Agents"@en .
+<http://dbpedia.org/resource/Agent_Smith> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Agent Smith"@en .
+<http://dbpedia.org/resource/Nebuchadnezzar_(The_Matrix)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Nebuchadnezzar"@en .
+<http://dbpedia.org/resource/The_Oracle_(The_Matrix)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "the Oracle"@en .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Keanu Reeves"@en .
+<http://dbpedia.org/resource/Laurence_Fishburne> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Laurence Fishburne"@en .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Carrie-Anne Moss"@en .
+<http://dbpedia.org/resource/Neo_(The_Matrix)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Neo"@en .
+<http://dbpedia.org/resource/Morpheus_(The_Matrix)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Morpheus"@en .
+<http://dbpedia.org/resource/Trinity_(The_Matrix)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Trinity"@en .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Keanu Reeves"@en .
+<http://dbpedia.org/resource/Neo_(The_Matrix)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Neo"@en .
+<http://dbpedia.org/resource/Will_Smith> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Will Smith"@en .
+<http://dbpedia.org/resource/Wild_Wild_West> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Wild Wild West"@en .
+<http://dbpedia.org/resource/Nicolas_Cage> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Nicolas Cage"@en .
+<http://dbpedia.org/resource/Brad_Pitt> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Brad Pitt"@en .
+<http://dbpedia.org/resource/Val_Kilmer> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Val Kilmer"@en .
+<http://dbpedia.org/resource/Leonardo_DiCaprio> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Leonardo DiCaprio"@en .
+<http://dbpedia.org/resource/Titanic_(1997_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Titanic"@en .
+<http://dbpedia.org/resource/Johnny_Depp> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Johnny Depp"@en .
+<http://dbpedia.org/resource/Lorenzo_di_Bonaventura> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Lorenzo di Bonaventura"@en .
+<http://dbpedia.org/resource/Sandra_Bullock> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Sandra Bullock"@en .
+<http://dbpedia.org/resource/Laurence_Fishburne> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Laurence Fishburne"@en .
+<http://dbpedia.org/resource/Morpheus_(The_Matrix)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Morpheus"@en .
+<http://dbpedia.org/resource/Dream_(comics)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Morpheus"@en .
+<http://dbpedia.org/resource/Neil_Gaiman> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Neil Gaiman"@en .
+<http://dbpedia.org/resource/The_Sandman_(comic_book)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Sandman"@en .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Carrie-Anne Moss"@en .
+<http://dbpedia.org/resource/Trinity_(The_Matrix)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Trinity"@en .
+<http://dbpedia.org/resource/Janet_Jackson> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Janet Jackson"@en .
+<http://dbpedia.org/resource/Discipline_(Janet_Jackson_album)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Discipline"@en .
+<http://dbpedia.org/resource/Sandra_Bullock> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Sandra Bullock"@en .
+<http://dbpedia.org/resource/Rosie_Perez> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Rosie Perez"@en .
+<http://dbpedia.org/resource/Salma_Hayek> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Salma Hayek"@en .
+<http://dbpedia.org/resource/Jada_Pinkett_Smith> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Jada Pinkett Smith"@en .
+<http://dbpedia.org/resource/Niobe_(The_Matrix)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Niobe"@en .
+<http://dbpedia.org/resource/Hugo_Weaving> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Hugo Weaving"@en .
+<http://dbpedia.org/resource/Agent_Smith> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Agent Smith"@en .
+<http://dbpedia.org/resource/Jean_Reno> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Jean Reno"@en .
+<http://dbpedia.org/resource/Australia> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Australia"@en .
+<http://dbpedia.org/resource/Gloria_Foster> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Gloria Foster"@en .
+<http://dbpedia.org/resource/The_Oracle_(The_Matrix)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Oracle"@en .
+<http://dbpedia.org/resource/Joe_Pantoliano> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Joe Pantoliano"@en .
+<http://dbpedia.org/resource/Bound_(1996_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Bound"@en .
+<http://dbpedia.org/resource/Marcus_Chong> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Marcus Chong"@en .
+<http://dbpedia.org/resource/Paul_Goddard_(actor)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Paul Goddard"@en .
+<http://dbpedia.org/resource/Robert_Taylor_(Australian_actor)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Robert Taylor"@en .
+<http://dbpedia.org/resource/Julian_Arahanga> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Julian Arahanga"@en .
+<http://dbpedia.org/resource/Matt_Doran> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Matt Doran"@en .
+<http://dbpedia.org/resource/Belinda_McClory> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Belinda McClory"@en .
+<http://dbpedia.org/resource/Anthony_Ray_Parker> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Anthony Ray Parker"@en .
+<http://dbpedia.org/resource/Rowan_Witt> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Rowan Witt"@en .
+<http://dbpedia.org/resource/Ada_Nicodemou> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Ada Nicodemou"@en .
+<http://dbpedia.org/resource/White_Rabbit> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "White Rabbit"@en .
+<http://dbpedia.org/resource/Alice's_Adventures_in_Wonderland> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Alice's Adventures in Wonderland"@en .
+<http://dbpedia.org/resource/Assassins_(1995_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Assassins"@en .
+<http://dbpedia.org/resource/Warner_Bros._Pictures> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Warner Bros. Pictures"@en .
+<http://dbpedia.org/resource/Lorenzo_di_Bonaventura> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Lorenzo di Bonaventura"@en .
+<http://dbpedia.org/resource/Bound_(1996_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Bound"@en .
+<http://dbpedia.org/resource/Will_Smith> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Will Smith"@en .
+<http://dbpedia.org/resource/YouTube> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "YouTube"@en .
+<http://dbpedia.org/resource/Val_Kilmer> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Val Kilmer"@en .
+<http://dbpedia.org/resource/Wild_Wild_West> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Wild Wild West"@en .
+<http://dbpedia.org/resource/Madonna> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Madonna"@en .
+<http://dbpedia.org/resource/Joel_Silver> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Joel Silver"@en .
+<http://dbpedia.org/resource/Geof_Darrow> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Geof Darrow"@en .
+<http://dbpedia.org/resource/Steve_Skroce> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Steve Skroce"@en .
+<http://dbpedia.org/resource/Village_Roadshow_Pictures> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Village Roadshow Pictures"@en .
+<http://dbpedia.org/resource/Zach_Staenberg> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Zach Staenberg"@en .
+<http://dbpedia.org/resource/Jean_Baudrillard> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Jean Baudrillard"@en .
+<http://dbpedia.org/resource/Simulacra_and_Simulation> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Simulacra and Simulation"@en .
+<http://dbpedia.org/resource/Kevin_Kelly_(editor)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Kevin Kelly"@en .
+<http://dbpedia.org/resource/Out_of_Control:_The_New_Biology_of_Machines,_Social_Systems,_and_the_Economic_World> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Out of Control: The New Biology of Machines, Social Systems, and the Economic World"@en .
+<http://dbpedia.org/resource/Dylan_Evans> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Dylan Evans"@en .
+<http://dbpedia.org/resource/Evolutionary_psychology> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "evolutionary psychology"@en .
+<http://dbpedia.org/resource/Hong_Kong_action_cinema> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Hong Kong action cinema"@en .
+<http://dbpedia.org/resource/Fight_choreography> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "martial arts choreographer"@en .
+<http://dbpedia.org/resource/Yuen_Woo-ping> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Yuen Woo-ping"@en .
+<http://dbpedia.org/resource/Wire_fu> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "wire fu"@en .
+<http://dbpedia.org/resource/Hip_replacement> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "hip surgery"@en .
+<http://dbpedia.org/resource/Fox_Studios_Australia> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Fox Studios"@en .
+<http://dbpedia.org/resource/New_South_Wales> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "New South Wales"@en .
+<http://dbpedia.org/resource/Principal_photography> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "principal photography"@en .
+<http://dbpedia.org/resource/Culver_Studios> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Culver Studios"@en .
+<http://dbpedia.org/resource/Martin_Place,_Sydney> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Martin Place's"@en .
+<http://dbpedia.org/resource/Bullet_time> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "bullet time"@en .
+<http://dbpedia.org/resource/NortonLifeLock> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Symantec"@en .
+<http://dbpedia.org/resource/Sussex_Street,_Sydney> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Sussex Street"@en .
+<http://dbpedia.org/resource/Dark_City_(1998_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Dark City"@en .
+<http://dbpedia.org/resource/Dōjō> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "dojo"@en .
+<http://dbpedia.org/resource/Metro_station> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "subway station"@en .
+<http://dbpedia.org/resource/Chad_Stahelski> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Chad Stahelski"@en .
+<http://dbpedia.org/resource/Rib_fracture> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "broken ribs"@en .
+<http://dbpedia.org/resource/Dislocated_shoulder> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "dislocated shoulder"@en .
+<http://dbpedia.org/resource/Cyclorama> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "cyclorama"@en .
+<http://dbpedia.org/resource/Dane_A._Davis> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Dane A. Davis"@en .
+<http://dbpedia.org/resource/Film_score> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "score"@en .
+<http://dbpedia.org/resource/The_Matrix:_Original_Motion_Picture_Score> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Matrix: Original Motion Picture Score"@en .
+<http://dbpedia.org/resource/Don_Davis_(composer)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Don Davis"@en .
+<http://dbpedia.org/resource/Counterpoint> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "contrapuntal"@en .
+<http://dbpedia.org/resource/The_Matrix:_Music_from_the_Motion_Picture> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Matrix: Music from the Motion Picture"@en .
+<http://dbpedia.org/resource/Rammstein> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Rammstein"@en .
+<http://dbpedia.org/resource/Rob_Dougan> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Rob Dougan"@en .
+<http://dbpedia.org/resource/Rage_Against_the_Machine> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Rage Against the Machine"@en .
+<http://dbpedia.org/resource/Propellerheads> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Propellerheads"@en .
+<http://dbpedia.org/resource/Ministry_(band)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Ministry"@en .
+<http://dbpedia.org/resource/Lunatic_Calm> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Lunatic Calm"@en .
+<http://dbpedia.org/resource/Deftones> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Deftones"@en .
+<http://dbpedia.org/resource/Monster_Magnet> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Monster Magnet"@en .
+<http://dbpedia.org/resource/The_Prodigy> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Prodigy"@en .
+<http://dbpedia.org/resource/Rob_Zombie> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Rob Zombie"@en .
+<http://dbpedia.org/resource/Meat_Beat_Manifesto> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Meat Beat Manifesto"@en .
+<http://dbpedia.org/resource/Marilyn_Manson_(band)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Marilyn Manson"@en .
+<http://dbpedia.org/resource/Half-width_kana> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "half-width kana"@en .
+<http://dbpedia.org/resource/CNET> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "CNET"@en .
+<http://dbpedia.org/resource/Monochrome_monitor> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "monochrome computer monitors"@en .
+<http://dbpedia.org/resource/Animal_Logic> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Animal Logic"@en .
+<http://dbpedia.org/resource/Japanese_cyberpunk> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Japanese cyberpunk"@en .
+<http://dbpedia.org/resource/Ghost_in_the_Shell_(1995_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Ghost in the Shell"@en .
+<http://dbpedia.org/resource/The_Matrix:_Path_of_Neo> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Matrix: Path of Neo"@en .
+<http://dbpedia.org/resource/Production_design> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "production design"@en .
+<http://dbpedia.org/resource/Owen_Paterson_(production_designer)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Owen Paterson"@en .
+<http://dbpedia.org/resource/Nebuchadnezzar_(The_Matrix)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Nebuchadnezzar"@en .
+<http://dbpedia.org/resource/Star_Trek> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Star Trek"@en .
+<http://dbpedia.org/resource/Kym_Barrett> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Kym Barrett"@en .
+<http://dbpedia.org/resource/JFK_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "JFK"@en .
+<http://dbpedia.org/resource/Men_in_black> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "men in black"@en .
+<http://dbpedia.org/resource/Otomo_Katsuhiro> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Otomo Katsuhiro"@en .
+<http://dbpedia.org/resource/Akira_(1988_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Akira"@en .
+<http://dbpedia.org/resource/Michel_Gondry> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Michel Gondry"@en .
+<http://dbpedia.org/resource/John_Gaeta> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "John Gaeta"@en .
+<http://dbpedia.org/resource/Visual_effect> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "visual effect"@en .
+<http://dbpedia.org/resource/Bullet_time> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "bullet time"@en .
+<http://dbpedia.org/resource/Shot_(filmmaking)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "shot"@en .
+<http://dbpedia.org/resource/Slow_motion> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "slow motion"@en .
+<http://dbpedia.org/resource/John_Gaeta> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "John Gaeta"@en .
+<http://dbpedia.org/resource/Manex_Visual_Effects> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Mass.Illusion"@en .
+<http://dbpedia.org/resource/Previsualization> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "previsualized"@en .
+<http://dbpedia.org/resource/Frame_frequency> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "frame frequency"@en .
+<http://dbpedia.org/resource/Optical_flow> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "optical flow"@en .
+<http://dbpedia.org/resource/Cluster_(computing)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "cluster"@en .
+<http://dbpedia.org/resource/Unix-like> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Unix-like"@en .
+<http://dbpedia.org/resource/Operating_system> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "operating system"@en .
+<http://dbpedia.org/resource/FreeBSD> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "FreeBSD"@en .
+<http://dbpedia.org/resource/Animal_Logic> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Animal Logic"@en .
+<http://dbpedia.org/resource/Photogrammetry> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "photogrammetric"@en .
+<http://dbpedia.org/resource/Computer-generated_imagery> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "computer-generated"@en .
+<http://dbpedia.org/resource/The_Matrix_Reloaded> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Matrix Reloaded"@en .
+<http://dbpedia.org/resource/The_Matrix_Revolutions> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Matrix Revolutions"@en .
+<http://dbpedia.org/resource/DVD-Video> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "DVD"@en .
+<http://dbpedia.org/resource/Laserdisc> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Laserdisc"@en .
+<http://dbpedia.org/resource/Aspect_ratio> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "aspect ratio"@en .
+<http://dbpedia.org/resource/2.39:1> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "2.39:1"@en .
+<http://dbpedia.org/resource/Warner_Home_Video> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Warner Home Video"@en .
+<http://dbpedia.org/resource/Aspect_ratio_(image)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "1.33:1"@en .
+<http://dbpedia.org/resource/Hong_Kong> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Hong Kong"@en .
+<http://dbpedia.org/resource/VHS> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "VHS"@en .
+<http://dbpedia.org/resource/Fullscreen_(filmmaking)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "full screen"@en .
+<http://dbpedia.org/resource/Widescreen> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "widescreen"@en .
+<http://dbpedia.org/resource/Gladiator_(2000_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Gladiator"@en .
+<http://dbpedia.org/resource/Armageddon_(1998_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Armageddon"@en .
+<http://dbpedia.org/resource/The_Ultimate_Matrix_Collection> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Ultimate Matrix Collection"@en .
+<http://dbpedia.org/resource/HD_DVD> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "HD DVD"@en .
+<http://dbpedia.org/resource/Blu-ray> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Blu-ray"@en .
+<http://dbpedia.org/resource/4K_resolution> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "4K"@en .
+<http://dbpedia.org/resource/Ultra_HD_Blu-ray> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Ultra HD Blu-ray"@en .
+<http://dbpedia.org/resource/Enter_the_Matrix> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Enter the Matrix"@en .
+<http://dbpedia.org/resource/The_Matrix_Reloaded> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Matrix Reloaded"@en .
+<http://dbpedia.org/resource/The_Matrix_Online> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Matrix Online"@en .
+<http://dbpedia.org/resource/MMORPG> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "MMORPG"@en .
+<http://dbpedia.org/resource/The_Matrix:_Path_of_Neo> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Matrix: Path of Neo"@en .
+<http://dbpedia.org/resource/The_Matrix_Awakens> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Matrix Awakens"@en .
+<http://dbpedia.org/resource/Epic_Games> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Epic Games"@en .
+<http://dbpedia.org/resource/Unreal_Engine_5> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Unreal Engine 5"@en .
+<http://dbpedia.org/resource/The_Matrix_Comics> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Matrix Comics"@en .
+<http://dbpedia.org/resource/Comic_book> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "comics"@en .
+<http://dbpedia.org/resource/Trade_paperback_(comics)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "trade paperback"@en .
+<http://dbpedia.org/resource/Lost_in_Space_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Lost in Space"@en .
+<http://dbpedia.org/resource/Indecent_Proposal> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Indecent Proposal"@en .
+<http://dbpedia.org/resource/Easter> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Easter"@en .
+<http://dbpedia.org/resource/Liar_Liar> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Liar Liar"@en .
+<http://dbpedia.org/resource/The_Scorpion_King> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Scorpion King"@en .
+<http://dbpedia.org/resource/Panic_Room> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Panic Room"@en .
+<http://dbpedia.org/resource/Payback_(1999_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Payback"@en .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Keanu Reeves"@en .
+<http://dbpedia.org/resource/Speed_(1994_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Speed"@en .
+<http://dbpedia.org/resource/Forces_of_Nature_(1999_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Forces of Nature"@en .
+<http://dbpedia.org/resource/10_Things_I_Hate_About_You> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "10 Things I Hate About You"@en .
+<http://dbpedia.org/resource/The_Out-of-Towners_(1999_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Out-of-Towners"@en .
+<http://dbpedia.org/resource/Analyze_This> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Analyze This"@en .
+<http://dbpedia.org/resource/EDtv> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "EDtv"@en .
+<http://dbpedia.org/resource/Life_(1999_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Life"@en .
+<http://dbpedia.org/resource/Entrapment_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Entrapment"@en .
+<http://dbpedia.org/resource/Warner_Bros.> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Warner Bros."@en .
+<http://dbpedia.org/resource/Batman_Forever> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Batman Forever"@en .
+<http://dbpedia.org/resource/Batman_&_Robin_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Batman & Robin"@en .
+<http://dbpedia.org/resource/A_Bug's_Life> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "A Bug's Life"@en .
+<http://dbpedia.org/resource/Notting_Hill_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Notting Hill"@en .
+<http://dbpedia.org/resource/Armageddon_(1998_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Armageddon"@en .
+<http://dbpedia.org/resource/The_Lost_World:_Jurassic_Park> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Lost World: Jurassic Park"@en .
+<http://dbpedia.org/resource/Lethal_Weapon_4> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Lethal Weapon 4"@en .
+<http://dbpedia.org/resource/Eraser_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Eraser"@en .
+<http://dbpedia.org/resource/North_America> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "North America"@en .
+<http://dbpedia.org/resource/Star_Wars:_Episode_I_–_The_Phantom_Menace> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Star Wars: Episode I – The Phantom Menace"@en .
+<http://dbpedia.org/resource/The_Sixth_Sense> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Sixth Sense"@en .
+<http://dbpedia.org/resource/Toy_Story_2> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Toy Story 2"@en .
+<http://dbpedia.org/resource/Twister_(1996_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Twister"@en .
+<http://dbpedia.org/resource/Saving_Private_Ryan> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Saving Private Ryan"@en .
+<http://dbpedia.org/resource/Terminator_2:_Judgment_Day> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Terminator 2: Judgment Day"@en .
+<http://dbpedia.org/resource/Science_fiction_film> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "science fiction film"@en .
+<http://dbpedia.org/resource/Entertainment_Weekly> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Entertainment Weekly"@en .
+<http://dbpedia.org/resource/William_Irwin_(philosopher)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "William Irwin"@en .
+<http://dbpedia.org/resource/Review_aggregator> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "review aggregator"@en .
+<http://dbpedia.org/resource/Rotten_Tomatoes> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Rotten Tomatoes"@en .
+<http://dbpedia.org/resource/Metacritic> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Metacritic"@en .
+<http://dbpedia.org/resource/CinemaScore> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "CinemaScore"@en .
+<http://dbpedia.org/resource/The_Sight_&_Sound_Top_50_Greatest_Films_of_All_Time> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "2012 ''Sight & Sound'' polls of the greatest films ever made"@en .
+<http://dbpedia.org/resource/Sight_&_Sound> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Sight & Sound"@en .
+<http://dbpedia.org/resource/Roger_Ebert> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Roger Ebert"@en .
+<http://dbpedia.org/resource/Three-act_structure> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "third act"@en .
+<http://dbpedia.org/resource/Time_Out_Group> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Time Out"@en .
+<http://dbpedia.org/resource/Hugo_Weaving> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Hugo Weaving"@en .
+<http://dbpedia.org/resource/Jonathan_Rosenbaum> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Jonathan Rosenbaum"@en .
+<http://dbpedia.org/resource/Chicago_Reader> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Chicago Reader"@en .
+<http://dbpedia.org/resource/Empire_(magazine)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Empire"@en .
+<http://dbpedia.org/resource/Maitland_McDonagh> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Maitland McDonagh"@en .
+<http://dbpedia.org/resource/TV_Guide> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "TV Guide"@en .
+<http://dbpedia.org/resource/Salon_(website)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Salon"@en .
+<http://dbpedia.org/resource/Bound_(1996_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Bound"@en .
+<http://dbpedia.org/resource/William_Gibson> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "William Gibson"@en .
+<http://dbpedia.org/resource/Joss_Whedon> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Joss Whedon"@en .
+<http://dbpedia.org/resource/Darren_Aronofsky> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Darren Aronofsky"@en .
+<http://dbpedia.org/resource/M._Night_Shyamalan> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "M. Night Shyamalan"@en .
+<http://dbpedia.org/resource/Simon_Pegg> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Simon Pegg"@en .
+<http://dbpedia.org/resource/The_Phantom_Menace> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Phantom Menace"@en .
+<http://dbpedia.org/resource/Quentin_Tarantino> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Quentin Tarantino"@en .
+<http://dbpedia.org/resource/James_Cameron> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "James Cameron"@en .
+<http://dbpedia.org/resource/Christopher_Nolan> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Christopher Nolan"@en .
+<http://dbpedia.org/resource/Academy_Awards> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Academy Awards"@en .
+<http://dbpedia.org/resource/Academy_Award_for_Best_Film_Editing> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Best Film Editing"@en .
+<http://dbpedia.org/resource/Academy_Award_for_Best_Visual_Effects> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Best Visual Effects"@en .
+<http://dbpedia.org/resource/Academy_Award_for_Best_Sound> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Best Sound"@en .
+<http://dbpedia.org/resource/Star_Wars:_Episode_I_–_The_Phantom_Menace> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Star Wars: Episode I – The Phantom Menace"@en .
+<http://dbpedia.org/resource/BAFTA> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "BAFTA"@en .
+<http://dbpedia.org/resource/BAFTA_Award_for_Best_Sound> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Best Sound"@en .
+<http://dbpedia.org/resource/BAFTA_Award_for_Best_Special_Visual_Effects> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Best Achievement in Special Visual Effects"@en .
+<http://dbpedia.org/resource/BAFTA_Award_for_Best_Cinematography> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "cinematography"@en .
+<http://dbpedia.org/resource/BAFTA_Award_for_Best_Production_Design> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "production design"@en .
+<http://dbpedia.org/resource/BAFTA_Award_for_Best_Editing> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "editing"@en .
+<http://dbpedia.org/resource/Saturn_Awards> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Saturn Awards"@en .
+<http://dbpedia.org/resource/Saturn_Award_for_Best_Science_Fiction_Film> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Best Science Fiction Film"@en .
+<http://dbpedia.org/resource/Saturn_Award_for_Best_Director> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Best Direction"@en .
+<http://dbpedia.org/resource/Academy_of_Motion_Picture_Arts_and_Sciences> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Academy of Motion Picture Arts and Sciences"@en .
+<http://dbpedia.org/resource/Oscars_Fan_Favorite> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Oscars Fan Favorite"@en .
+<http://dbpedia.org/resource/72nd_Academy_Awards> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Academy Awards"@en .
+<http://dbpedia.org/resource/Academy_Award_for_Best_Film_Editing> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Best Film Editing"@en .
+<http://dbpedia.org/resource/Zach_Staenberg> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Zach Staenberg"@en .
+<http://dbpedia.org/resource/Academy_Award_for_Best_Sound> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Best Sound"@en .
+<http://dbpedia.org/resource/John_T._Reitz> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "John Reitz"@en .
+<http://dbpedia.org/resource/Gregg_Rudloff> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Gregg Rudloff"@en .
+<http://dbpedia.org/resource/David_E._Campbell_(sound_engineer)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "David Campbell"@en .
+<http://dbpedia.org/resource/David_Lee_(Australian_sound_engineer)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "David Lee"@en .
+<http://dbpedia.org/resource/Academy_Award_for_Best_Sound> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Best Sound Effects Editing"@en .
+<http://dbpedia.org/resource/Dane_A._Davis> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Dane A. Davis"@en .
+<http://dbpedia.org/resource/Academy_Award_for_Best_Visual_Effects> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Best Visual Effects"@en .
+<http://dbpedia.org/resource/John_Gaeta> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "John Gaeta"@en .
+<http://dbpedia.org/resource/Janek_Sirrs> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Janek Sirrs"@en .
+<http://dbpedia.org/resource/Steve_Courtley> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Steve Courtley"@en .
+<http://dbpedia.org/resource/Jon_Thum> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Jon Thum"@en .
+<http://dbpedia.org/resource/53rd_British_Academy_Film_Awards> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "British Academy Film Awards"@en .
+<http://dbpedia.org/resource/BAFTA_Award_for_Best_Cinematography> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Best Cinematography"@en .
+<http://dbpedia.org/resource/Bill_Pope> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Bill Pope"@en .
+<http://dbpedia.org/resource/BAFTA_Award_for_Best_Editing> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Best Editing"@en .
+<http://dbpedia.org/resource/BAFTA_Award_for_Best_Production_Design> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Best Production Design"@en .
+<http://dbpedia.org/resource/Owen_Paterson_(production_designer)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Owen Paterson"@en .
+<http://dbpedia.org/resource/BAFTA_Award_for_Best_Sound> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Best Sound"@en .
+<http://dbpedia.org/resource/BAFTA_Award_for_Best_Special_Visual_Effects> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Best Special Visual Effects"@en .
+<http://dbpedia.org/resource/26th_Saturn_Awards> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Saturn Awards"@en .
+<http://dbpedia.org/resource/Saturn_Award_for_Best_Science_Fiction_Film> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Best Science Fiction Film"@en .
+<http://dbpedia.org/resource/Saturn_Award_for_Best_Director> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Best Director"@en .
+<http://dbpedia.org/resource/The_Wachowskis> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Wachowskis"@en .
+<http://dbpedia.org/resource/Saturn_Award_for_Best_Writing> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Best Writer"@en .
+<http://dbpedia.org/resource/Saturn_Award_for_Best_Actor> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Best Actor"@en .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Keanu Reeves"@en .
+<http://dbpedia.org/resource/Saturn_Award_for_Best_Actress> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Best Actress"@en .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Carrie-Anne Moss"@en .
+<http://dbpedia.org/resource/Saturn_Award_for_Best_Supporting_Actor> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Best Supporting Actor"@en .
+<http://dbpedia.org/resource/Laurence_Fishburne> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Laurence Fishburne"@en .
+<http://dbpedia.org/resource/Saturn_Award_for_Best_Costume_Design> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Best Costumes"@en .
+<http://dbpedia.org/resource/Kym_Barrett> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Kym Barrett"@en .
+<http://dbpedia.org/resource/Saturn_Award_for_Best_Make-up> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Best Make-up"@en .
+<http://dbpedia.org/resource/Nikki_Gooley> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Nikki Gooley"@en .
+<http://dbpedia.org/resource/Bob_McCarron> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Bob McCarron"@en .
+<http://dbpedia.org/resource/Saturn_Award_for_Best_Special_Effects> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Best Special Effects"@en .
+<http://dbpedia.org/resource/Cyberpunk> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "cyberpunk"@en .
+<http://dbpedia.org/resource/William_Gibson> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "William Gibson"@en .
+<http://dbpedia.org/resource/Buddhism> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Buddhism"@en .
+<http://dbpedia.org/resource/Christianity> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Christianity"@en .
+<http://dbpedia.org/resource/Gnosticism> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Gnosticism"@en .
+<http://dbpedia.org/resource/Hinduism> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Hinduism"@en .
+<http://dbpedia.org/resource/Judaism> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Judaism"@en .
+<http://dbpedia.org/resource/Metropolis_(1927_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Metropolis"@en .
+<http://dbpedia.org/resource/M._C._Escher> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "M. C. Escher"@en .
+<http://dbpedia.org/resource/H._R._Giger> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "H. R. Giger"@en .
+<http://dbpedia.org/resource/Welcome_to_Paradox> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Welcome to Paradox"@en .
+<http://dbpedia.org/resource/Andrew_Weiner_(writer)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Andrew Weiner"@en .
+<http://dbpedia.org/resource/Syfy_(TV_channel)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "SYFY Channel"@en .
+<http://dbpedia.org/resource/Stanley_Kubrick> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Stanley Kubrick"@en .
+<http://dbpedia.org/resource/2001:_A_Space_Odyssey_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "2001: A Space Odyssey"@en .
+<http://dbpedia.org/resource/Strange_Days_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Strange Days"@en .
+<http://dbpedia.org/resource/Dark_City_(1998_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Dark City"@en .
+<http://dbpedia.org/resource/The_Truman_Show> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Truman Show"@en .
+<http://dbpedia.org/resource/Doctor_Who> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Doctor Who"@en .
+<http://dbpedia.org/resource/Matrix_(Doctor_Who)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Matrix"@en .
+<http://dbpedia.org/resource/The_Deadly_Assassin> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Deadly Assassin"@en .
+<http://dbpedia.org/resource/John_Woo> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "John Woo"@en .
+<http://dbpedia.org/resource/Fist_of_Legend> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Fist of Legend"@en .
+<http://dbpedia.org/resource/Jet_Li> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Jet Li"@en .
+<http://dbpedia.org/resource/Anime> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Japanese animation"@en .
+<http://dbpedia.org/resource/Ninja_Scroll> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Ninja Scroll"@en .
+<http://dbpedia.org/resource/Akira_(1988_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Akira"@en .
+<http://dbpedia.org/resource/Mamoru_Oshii> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Mamoru Oshii"@en .
+<http://dbpedia.org/resource/Ghost_in_the_Shell_(1995_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Ghost in the Shell"@en .
+<http://dbpedia.org/resource/Joel_Silver> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Joel Silver"@en .
+<http://dbpedia.org/resource/Mitsuhisa_Ishikawa> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Mitsuhisa Ishikawa"@en .
+<http://dbpedia.org/resource/Production_I.G> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Production I.G"@en .
+<http://dbpedia.org/resource/Lewis_Carroll> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Lewis Carroll"@en .
+<http://dbpedia.org/resource/Alice's_Adventures_in_Wonderland> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Alice's Adventures in Wonderland"@en .
+<http://dbpedia.org/resource/Grant_Morrison> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Grant Morrison"@en .
+<http://dbpedia.org/resource/The_Invisibles> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Invisibles"@en .
+<http://dbpedia.org/resource/Carlos_Castaneda> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Carlos Castaneda"@en .
+<http://dbpedia.org/resource/Cyberpunk> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "cyberpunk"@en .
+<http://dbpedia.org/resource/Neuromancer> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Neuromancer"@en .
+<http://dbpedia.org/resource/William_Gibson> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "William Gibson"@en .
+<http://dbpedia.org/resource/L._P._Davies> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "L. P. Davies"@en .
+<http://dbpedia.org/resource/The_White_Room_(novel)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The White Room"@en .
+<http://dbpedia.org/resource/Gnosticism> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Gnostic"@en .
+<http://dbpedia.org/resource/Philip_K._Dick> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Philip K. Dick"@en .
+<http://dbpedia.org/resource/Jean_Baudrillard> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Jean Baudrillard"@en .
+<http://dbpedia.org/resource/Simulacra_and_Simulation> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Simulacra and Simulation"@en .
+<http://dbpedia.org/resource/Concealing_objects_in_a_book> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "\"the book used to conceal"@en .
+<http://dbpedia.org/resource/Allegory> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "allegory"@en .
+<http://dbpedia.org/resource/The_Matrixial_Gaze> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Matrixial Gaze"@en .
+<http://dbpedia.org/resource/Bracha_L._Ettinger> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Bracha L. Ettinger"@en .
+<http://dbpedia.org/resource/Griselda_Pollock> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Griselda Pollock"@en .
+<http://dbpedia.org/resource/Kevin_Kelly_(editor)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Kevin Kelly"@en .
+<http://dbpedia.org/resource/Out_of_Control:_The_New_Biology_of_Machines,_Social_Systems,_and_the_Economic_World> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Out of Control: The New Biology of Machines, Social Systems, and the Economic World"@en .
+<http://dbpedia.org/resource/Dylan_Evans> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Dylan Evans"@en .
+<http://dbpedia.org/resource/Evolutionary_psychology> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "evolutionary psychology"@en .
+<http://dbpedia.org/resource/William_Irwin_(philosopher)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "William Irwin"@en .
+<http://dbpedia.org/resource/Descartes> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Descartes"@en .
+<http://dbpedia.org/resource/First_Meditation> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "First Meditation"@en .
+<http://dbpedia.org/resource/Evil_demon> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "evil demon"@en .
+<http://dbpedia.org/resource/Hilary_Putnam> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Hilary Putnam"@en .
+<http://dbpedia.org/resource/Brain_in_a_vat> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "brain in a vat"@en .
+<http://dbpedia.org/resource/Plato> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Plato"@en .
+<http://dbpedia.org/resource/Allegory_of_the_Cave> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Allegory of the Cave"@en .
+<http://dbpedia.org/resource/Theory_of_Forms> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "theory of Forms"@en .
+<http://dbpedia.org/resource/Immanuel_Kant> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Immanuel Kant"@en .
+<http://dbpedia.org/resource/Critique_of_Pure_Reason> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Critique of Pure Reason"@en .
+<http://dbpedia.org/resource/Utopia> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "utopia"@en .
+<http://dbpedia.org/resource/Christ> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Christ"@en .
+<http://dbpedia.org/resource/Miraculous_births> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "virgin birth"@en .
+<http://dbpedia.org/resource/Christianity> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Christian"@en .
+<http://dbpedia.org/resource/Trinity_(The_Matrix)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Trinity"@en .
+<http://dbpedia.org/resource/Trinity> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Trinity"@en .
+<http://dbpedia.org/resource/Taoist> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Taoist"@en .
+<http://dbpedia.org/resource/Zhuang_Zhou> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Zhuangzi"@en .
+<http://dbpedia.org/resource/Matrixism> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Matrixism"@en .
+<http://dbpedia.org/resource/Transgender> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "transgender"@en .
+<http://dbpedia.org/resource/Trans_woman> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "women"@en .
+<http://dbpedia.org/resource/Estrogen> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "estrogen"@en .
+<http://dbpedia.org/resource/Gender_dysphoria> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "gender dysphoria"@en .
+<http://dbpedia.org/resource/GLAAD_Media_Award> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "GLAAD Media Award"@en .
+<http://dbpedia.org/resource/Variety_(magazine)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Variety"@en .
+<http://dbpedia.org/resource/Bullet_time> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "bullet time"@en .
+<http://dbpedia.org/resource/Max_Payne_(video_game)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Max Payne"@en .
+<http://dbpedia.org/resource/Superhot> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Superhot"@en .
+<http://dbpedia.org/resource/Parody> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "parodied"@en .
+<http://dbpedia.org/resource/Deuce_Bigalow:_Male_Gigolo> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Deuce Bigalow: Male Gigolo"@en .
+<http://dbpedia.org/resource/Scary_Movie> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Scary Movie"@en .
+<http://dbpedia.org/resource/Shrek> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Shrek"@en .
+<http://dbpedia.org/resource/Kung_Pow!_Enter_the_Fist> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Kung Pow! Enter the Fist"@en .
+<http://dbpedia.org/resource/Lastikman_(2003_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Lastikman"@en .
+<http://dbpedia.org/resource/Marx_Reloaded> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Marx Reloaded"@en .
+<http://dbpedia.org/resource/Karl_Marx> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Karl Marx"@en .
+<http://dbpedia.org/resource/Leon_Trotsky> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Leon Trotsky"@en .
+<http://dbpedia.org/resource/Conker's_Bad_Fur_Day> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Conker's Bad Fur Day"@en .
+<http://dbpedia.org/resource/Charlie's_Angels_(2000_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Charlie's Angels"@en .
+<http://dbpedia.org/resource/Cameron_Diaz> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Cameron Diaz"@en .
+<http://dbpedia.org/resource/Equilibrium_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Equilibrium"@en .
+<http://dbpedia.org/resource/Christian_Bale> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Christian Bale"@en .
+<http://dbpedia.org/resource/Night_Watch_(2004_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Night Watch"@en .
+<http://dbpedia.org/resource/Russia> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Russia"@en .
+<http://dbpedia.org/resource/Timur_Bekmambetov> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Timur Bekmambetov"@en .
+<http://dbpedia.org/resource/Wanted_(2008_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Wanted"@en .
+<http://dbpedia.org/resource/Inception> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Inception"@en .
+<http://dbpedia.org/resource/Tron> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Tron"@en .
+<http://dbpedia.org/resource/Disney> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Disney"@en .
+<http://dbpedia.org/resource/Tron:_Legacy> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Tron: Legacy"@en .
+<http://dbpedia.org/resource/Awara_Paagal_Deewana> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Awara Paagal Deewana"@en .
+<http://dbpedia.org/resource/Wire_fu> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "wire fu"@en .
+<http://dbpedia.org/resource/Fight_choreography> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "fight choreographer"@en .
+<http://dbpedia.org/resource/Yuen_Woo-ping> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Yuen Woo-ping"@en .
+<http://dbpedia.org/resource/Hong_Kong_action_cinema> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Hong Kong action cinema"@en .
+<http://dbpedia.org/resource/X-Men_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "X-Men"@en .
+<http://dbpedia.org/resource/Charlie's_Angels_(2000_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Charlie's Angels"@en .
+<http://dbpedia.org/resource/Yuen_Cheung-yan> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Yuen Cheung-yan"@en .
+<http://dbpedia.org/resource/Daredevil_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Daredevil"@en .
+<http://dbpedia.org/resource/Crouching_Tiger,_Hidden_Dragon> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Crouching Tiger, Hidden Dragon"@en .
+<http://dbpedia.org/resource/John_Wick> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "''John Wick'' series"@en .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Carrie-Anne Moss"@en .
+<http://dbpedia.org/resource/New_York_Daily_News> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "New York Daily News"@en .
+<http://dbpedia.org/resource/Star_Wars> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Star Wars"@en .
+<http://dbpedia.org/resource/The_Lord_of_the_Rings_(film_series)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "''Lord of the Rings'' films"@en .
+<http://dbpedia.org/resource/Prequel_trilogy> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "''Star Wars'' prequels"@en .
+<http://dbpedia.org/resource/BBC> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "BBC"@en .
+<http://dbpedia.org/resource/Superhero_films> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "superhero films"@en .
+<http://dbpedia.org/resource/Comic-book> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "comic-book"@en .
+<http://dbpedia.org/resource/Superheroes> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "superheroes"@en .
+<http://dbpedia.org/resource/Vulture.com> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Vulture.com"@en .
+<http://dbpedia.org/resource/American_Film_Institute> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "American Film Institute"@en .
+<http://dbpedia.org/resource/AFI's_100_Years...100_Thrills> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "100 Years...100 Thrills"@en .
+<http://dbpedia.org/resource/Entertainment_Weekly> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Entertainment Weekly"@en .
+<http://dbpedia.org/resource/Empire_(magazine)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Empire"@en .
+<http://dbpedia.org/resource/American_Broadcasting_Company> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "ABC"@en .
+<http://dbpedia.org/resource/People_(American_magazine)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "People"@en .
+<http://dbpedia.org/resource/National_Film_Registry> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "National Film Registry"@en .
+<http://dbpedia.org/resource/Library_of_Congress> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Library of Congress"@en .
+<http://dbpedia.org/resource/Total_Recall_(1990_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Total Recall"@en .
+<http://dbpedia.org/resource/Arnold_Schwarzenegger> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Arnold Schwarzenegger"@en .
+<http://dbpedia.org/resource/Conspiracy_theories> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "conspiracy theories"@en .
+<http://dbpedia.org/resource/Alt-right> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "alt-right"@en .
+<http://dbpedia.org/resource/Men's_rights> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "men's rights groups"@en .
+<http://dbpedia.org/resource/Gamergate_(harassment_campaign)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Gamergate"@en .
+<http://dbpedia.org/resource/White_supremacy> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "white supremacy"@en .
+<http://dbpedia.org/resource/Incel> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "incel"@en .
+<http://dbpedia.org/resource/QAnon> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "QAnon"@en .
+<http://dbpedia.org/resource/The_Matrix_Reloaded> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Matrix Reloaded"@en .
+<http://dbpedia.org/resource/The_Matrix_Revolutions> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Matrix Revolutions"@en .
+<http://dbpedia.org/resource/Back_to_back_film_production> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "filmed back-to-back"@en .
+<http://dbpedia.org/resource/Production_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "shoot"@en .
+<http://dbpedia.org/resource/Zion_(The_Matrix)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Zion"@en .
+<http://dbpedia.org/resource/The_Animatrix> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Animatrix"@en .
+<http://dbpedia.org/resource/Anime> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Japanese animation"@en .
+<http://dbpedia.org/resource/Zak_Penn> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Zak Penn"@en .
+<http://dbpedia.org/resource/Michael_B._Jordan> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Michael B. Jordan"@en .
+<http://dbpedia.org/resource/The_Hollywood_Reporter> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Hollywood Reporter"@en .
+<http://dbpedia.org/resource/Toby_Emmerich> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Toby Emmerich"@en .
+<http://dbpedia.org/resource/Keanu_Reeves> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Keanu Reeves"@en .
+<http://dbpedia.org/resource/Carrie-Anne_Moss> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Carrie-Anne Moss"@en .
+<http://dbpedia.org/resource/The_Matrix_Resurrections> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Matrix Resurrections"@en .
+<http://dbpedia.org/resource/Danny_Boyle> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Danny Boyle"@en .
+<http://dbpedia.org/resource/Manchester> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Manchester"@en .
+<http://dbpedia.org/resource/Cyberspace> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Cyberspace"@en .
+<http://dbpedia.org/resource/Dialectical_materialism> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Dialectical materialism"@en .
+<http://dbpedia.org/resource/Henosis> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Henosis"@en .
+<http://dbpedia.org/resource/Know_thyself> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Know thyself"@en .
+<http://dbpedia.org/resource/List_of_films_featuring_hallucinogens> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "List of films featuring hallucinogens"@en .
+<http://dbpedia.org/resource/Metaverse> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Metaverse"@en .
+<http://dbpedia.org/resource/Nineteen_Eighty-Four> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Nineteen Eighty-Four"@en .
+<http://dbpedia.org/resource/Simulated_reality> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Simulated reality"@en .
+<http://dbpedia.org/resource/Thought_experiment> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Thought experiment"@en .
+<http://dbpedia.org/resource/Virtual_reality> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Virtual reality"@en .
+<http://dbpedia.org/resource/Virtual_world> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Virtual world"@en .
+<http://dbpedia.org/resource/We_(novel)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "We"@en .
+<http://dbpedia.org/resource/Yevgeny_Zamyatin> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Yevgeny Zamyatin"@en .
+<http://dbpedia.org/resource/The_Deadly_Assassin> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Deadly Assassin"@en .
+<http://dbpedia.org/resource/Doctor_Who> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Doctor Who"@en .
+<http://dbpedia.org/resource/World_on_a_Wire> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "World on a Wire"@en .
+<http://dbpedia.org/resource/Tron_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Tron"@en .
+<http://dbpedia.org/resource/Strange_Days_(film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Strange Days"@en .
+<http://dbpedia.org/resource/Dark_City_(1998_film)> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Dark City"@en .
+<http://dbpedia.org/resource/The_Thirteenth_Floor> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Thirteenth Floor"@en .
+<http://dbpedia.org/resource/Existenz> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Existenz"@en .
+<http://dbpedia.org/resource/Computer_Boy> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Computer Boy"@en .
+<http://dbpedia.org/resource/The_Meatrix> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "The Meatrix"@en .
+<http://dbpedia.org/resource/Code_Lyoko> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Code Lyoko"@en .
+<http://dbpedia.org/resource/Infinity_Train> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Infinity Train"@en .
+<http://dbpedia.org/resource/Contender_Books> <http://dbpedia.org/ontology/wikiPageWikiLinkText> "Contender Books"@en .
+<http://dbpedia.org/resource/The_Matrix> <http://xmlns.com/foaf/0.1/depiction> <http://commons.wikimedia.org/wiki/Special:FilePath/The_Matrix.jpg> .
+<http://dbpedia.org/resource/The_Matrix> <http://dbpedia.org/ontology/thumbnail> <http://commons.wikimedia.org/wiki/Special:FilePath/The_Matrix.jpg?width=300> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/The_Matrix.jpg> <http://xmlns.com/foaf/0.1/thumbnail> <http://commons.wikimedia.org/wiki/Special:FilePath/The_Matrix.jpg?width=300> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/The_Matrix.jpg> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Image> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/The_Matrix.jpg?width=300> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Image> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/The_Matrix.jpg> <http://purl.org/dc/elements/1.1/rights> <http://en.wikipedia.org/wiki/File:The_Matrix.jpg> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/The_Matrix.jpg?width=300> <http://purl.org/dc/elements/1.1/rights> <http://en.wikipedia.org/wiki/File:The_Matrix.jpg> .
+<http://dbpedia.org/resource/The_Matrix> <http://xmlns.com/foaf/0.1/depiction> <http://commons.wikimedia.org/wiki/Special:FilePath/Keanu_Reeves_2019_(cropped).jpg> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Keanu_Reeves_2019_(cropped).jpg> <http://xmlns.com/foaf/0.1/thumbnail> <http://commons.wikimedia.org/wiki/Special:FilePath/Keanu_Reeves_2019_(cropped).jpg?width=300> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Keanu_Reeves_2019_(cropped).jpg> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Image> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Keanu_Reeves_2019_(cropped).jpg?width=300> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Image> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Keanu_Reeves_2019_(cropped).jpg> <http://purl.org/dc/elements/1.1/rights> <http://en.wikipedia.org/wiki/File:Keanu_Reeves_2019_(cropped).jpg> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Keanu_Reeves_2019_(cropped).jpg?width=300> <http://purl.org/dc/elements/1.1/rights> <http://en.wikipedia.org/wiki/File:Keanu_Reeves_2019_(cropped).jpg> .
+<http://dbpedia.org/resource/The_Matrix> <http://xmlns.com/foaf/0.1/depiction> <http://commons.wikimedia.org/wiki/Special:FilePath/National_Memorial_Day_Concert_2017_(34117818524)_(cropped).jpg> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/National_Memorial_Day_Concert_2017_(34117818524)_(cropped).jpg> <http://xmlns.com/foaf/0.1/thumbnail> <http://commons.wikimedia.org/wiki/Special:FilePath/National_Memorial_Day_Concert_2017_(34117818524)_(cropped).jpg?width=300> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/National_Memorial_Day_Concert_2017_(34117818524)_(cropped).jpg> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Image> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/National_Memorial_Day_Concert_2017_(34117818524)_(cropped).jpg?width=300> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Image> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/National_Memorial_Day_Concert_2017_(34117818524)_(cropped).jpg> <http://purl.org/dc/elements/1.1/rights> <http://en.wikipedia.org/wiki/File:National_Memorial_Day_Concert_2017_(34117818524)_(cropped).jpg> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/National_Memorial_Day_Concert_2017_(34117818524)_(cropped).jpg?width=300> <http://purl.org/dc/elements/1.1/rights> <http://en.wikipedia.org/wiki/File:National_Memorial_Day_Concert_2017_(34117818524)_(cropped).jpg> .
+<http://dbpedia.org/resource/The_Matrix> <http://xmlns.com/foaf/0.1/depiction> <http://commons.wikimedia.org/wiki/Special:FilePath/Carrie-Anne_Moss_May_2016.jpg> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Carrie-Anne_Moss_May_2016.jpg> <http://xmlns.com/foaf/0.1/thumbnail> <http://commons.wikimedia.org/wiki/Special:FilePath/Carrie-Anne_Moss_May_2016.jpg?width=300> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Carrie-Anne_Moss_May_2016.jpg> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Image> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Carrie-Anne_Moss_May_2016.jpg?width=300> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Image> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Carrie-Anne_Moss_May_2016.jpg> <http://purl.org/dc/elements/1.1/rights> <http://en.wikipedia.org/wiki/File:Carrie-Anne_Moss_May_2016.jpg> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Carrie-Anne_Moss_May_2016.jpg?width=300> <http://purl.org/dc/elements/1.1/rights> <http://en.wikipedia.org/wiki/File:Carrie-Anne_Moss_May_2016.jpg> .
+<http://dbpedia.org/resource/The_Matrix> <http://xmlns.com/foaf/0.1/depiction> <http://commons.wikimedia.org/wiki/Special:FilePath/Campbell_Street_train_bridge_at_intersection_of_Elizabeth_Street.jpg> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Campbell_Street_train_bridge_at_intersection_of_Elizabeth_Street.jpg> <http://xmlns.com/foaf/0.1/thumbnail> <http://commons.wikimedia.org/wiki/Special:FilePath/Campbell_Street_train_bridge_at_intersection_of_Elizabeth_Street.jpg?width=300> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Campbell_Street_train_bridge_at_intersection_of_Elizabeth_Street.jpg> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Image> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Campbell_Street_train_bridge_at_intersection_of_Elizabeth_Street.jpg?width=300> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Image> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Campbell_Street_train_bridge_at_intersection_of_Elizabeth_Street.jpg> <http://purl.org/dc/elements/1.1/rights> <http://en.wikipedia.org/wiki/File:Campbell_Street_train_bridge_at_intersection_of_Elizabeth_Street.jpg> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Campbell_Street_train_bridge_at_intersection_of_Elizabeth_Street.jpg?width=300> <http://purl.org/dc/elements/1.1/rights> <http://en.wikipedia.org/wiki/File:Campbell_Street_train_bridge_at_intersection_of_Elizabeth_Street.jpg> .
+<http://dbpedia.org/resource/The_Matrix> <http://xmlns.com/foaf/0.1/depiction> <http://commons.wikimedia.org/wiki/Special:FilePath/Screenshot_from_1990_film_Total_Recall,_which_scholars_connect_to_The_Matrix.(1999).png> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Screenshot_from_1990_film_Total_Recall,_which_scholars_connect_to_The_Matrix.(1999).png> <http://xmlns.com/foaf/0.1/thumbnail> <http://commons.wikimedia.org/wiki/Special:FilePath/Screenshot_from_1990_film_Total_Recall,_which_scholars_connect_to_The_Matrix.(1999).png?width=300> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Screenshot_from_1990_film_Total_Recall,_which_scholars_connect_to_The_Matrix.(1999).png> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Image> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Screenshot_from_1990_film_Total_Recall,_which_scholars_connect_to_The_Matrix.(1999).png?width=300> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Image> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Screenshot_from_1990_film_Total_Recall,_which_scholars_connect_to_The_Matrix.(1999).png> <http://purl.org/dc/elements/1.1/rights> <http://en.wikipedia.org/wiki/File:Screenshot_from_1990_film_Total_Recall,_which_scholars_connect_to_The_Matrix.(1999).png> .
+<http://commons.wikimedia.org/wiki/Special:FilePath/Screenshot_from_1990_film_Total_Recall,_which_scholars_connect_to_The_Matrix.(1999).png?width=300> <http://purl.org/dc/elements/1.1/rights> <http://en.wikipedia.org/wiki/File:Screenshot_from_1990_film_Total_Recall,_which_scholars_connect_to_The_Matrix.(1999).png> .
+<http://dbpedia.org/resource/The_Matrix> <http://xmlns.com/foaf/0.1/depiction> <http://commons.wikimedia.org/wiki/Special:FilePath/The_Matrix.jpg> .
+# completed 2025-06-30T10:59:45Z
