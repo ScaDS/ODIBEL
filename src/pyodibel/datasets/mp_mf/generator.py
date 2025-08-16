@@ -47,5 +47,5 @@ if __name__ == "__main__":
 
     ds2 = load_dataset(ds.root)
     print(ds2.splits["split_0"].index.entities_csv.as_posix())
-    print(ds2.splits["split_0"].sources[SourceType.rdf].data.dir.as_posix())
+    print(ds2.splits["split_0"].sources[SourceType.rdf].data.parts[0])
 

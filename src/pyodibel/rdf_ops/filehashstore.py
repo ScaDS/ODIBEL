@@ -54,6 +54,7 @@ class FileHashStore2:
             return Graph().parse(file_path, format='nt')
         except Exception as e:
             logger.error(f"File not found: {uri} {file_path} {e}")
+            # print(f"File not found: {uri} {file_path} {e}")
             return Graph()
 
     def exists(self, uri: str) -> bool:
