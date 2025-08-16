@@ -38,7 +38,7 @@ EXPECTED_HEADERS = {
 
 def read_csv_header(path: Path) -> List[str]:
     with path.open("r", encoding="utf-8") as f:
-        reader = csv.reader(f)
+        reader = csv.reader(f, delimiter="\t")
         header = next(reader, [])
     return header
 
@@ -94,6 +94,9 @@ class VerifiedEntities(BaseModel):
         ensure_headers(self.file, EXPECTED_HEADERS["verified_entities.csv"])
         return self
 
+    def read_csv(self) -> List[EntitiesRow]:
+        return [EntitiesRow(entity_id=row["entity_id"], entity_type=row["entity_type"], dataset=row["dataset"]) for row in csv.DictReader(self.file.open("r"), delimiter="\t")]
+
 class VerifiedLinks(BaseModel):
     model_config = ConfigDict(arbitrary_types_allowed=True)
     file: Path
@@ -118,25 +121,25 @@ class SourceMeta(BaseModel):
     def set_entities(self, entities: List[EntitiesRow]):
         path = self.root / "verified_entities.csv"
         with path.open("w") as f:
-            f.write("dataset,entity_id,entity_type\n")
+            f.write("dataset\tentity_id\tentity_type\n")
             for entity in entities:
-                f.write(f"{entity.dataset},{entity.entity_id},{entity.entity_type}\n")
+                f.write(f"{entity.dataset}\t{entity.entity_id}\t{entity.entity_type}\n")
         self.entities = VerifiedEntities(file=path)
 
     def set_links(self, links: List[LinksRow]):
         path = self.root / "verified_links.csv"
         with path.open("w") as f:
-            f.write("doc_id,entity_id,entity_type,dataset\n")
+            f.write("doc_id\tentity_id\tentity_type\tdataset\n")
             for link in links:
-                f.write(f"{link.doc_id},{link.entity_id},{link.entity_type},{link.dataset}\n")
+                f.write(f"{link.doc_id}\t{link.entity_id}\t{link.entity_type}\t{link.dataset}\n")
         self.links = VerifiedLinks(file=path)
 
     def set_matches(self, matches: List[MatchesRow]):
         path = self.root / "verified_matches.csv"
         with path.open("w") as f:
-            f.write("left_dataset,right_dataset,left_id,right_id,match_type\n")
+            f.write("left_dataset\tright_dataset\tleft_id\tright_id\tmatch_type\n")
             for match in matches:
-                f.write(f"{match.left_dataset},{match.right_dataset},{match.left_id},{match.right_id},{match.match_type}\n")
+                f.write(f"{match.left_dataset}\t{match.right_dataset}\t{match.left_id}\t{match.right_id}\t{match.match_type}\n")
         self.matches = VerifiedMatches(file=path)
 
 class SourceData(BaseModel):
@@ -181,6 +184,8 @@ class SplitIndex(BaseModel):
     dir: Path
     entities_csv: Path
 
+    # def read_csv(self) -> List[str]:
+
     # @model_validator(mode="after")
     # def _check(self):
     #     if not self.entities_csv.exists():
@@ -206,6 +211,32 @@ class Split(BaseModel):
             f.write("entity_id\n")
             for entity in entities:
                 f.write(f"{entity.entity_id}\n")
+
+    def set_empty_reference(self):
+        ref_root = self.root / "kg" / "reference"
+        ref_data_dir = ref_root / "data"
+        ref_meta_dir = ref_root / "meta"
+        ref_data_dir.mkdir(parents=True, exist_ok=True)
+        ref_meta_dir.mkdir(parents=True, exist_ok=True)
+        self.kg_reference = KGBundle(
+            kind="reference",
+            root=ref_root,
+            data=SourceData(dir=ref_data_dir, parts=[]),
+            meta=SourceMeta(root=ref_meta_dir)
+        )
+    
+    def set_empty_seed(self):
+        seed_root = self.root / "kg" / "seed"
+        seed_data_dir = seed_root / "data"
+        seed_meta_dir = seed_root / "meta"
+        seed_data_dir.mkdir(parents=True, exist_ok=True)
+        seed_meta_dir.mkdir(parents=True, exist_ok=True)
+        self.kg_seed = KGBundle(
+            kind="seed",
+            root=seed_root,
+            data=SourceData(dir=seed_data_dir, parts=[]),
+            meta=SourceMeta(root=seed_meta_dir)
+        )
 
     def set_sources(self, sources: List[SourceType]):
         source_dir = self.root / "sources"
@@ -293,7 +324,7 @@ class Dataset(BaseModel):
 
     # -------- utilities --------
 
-    def overlap_matrix(self) -> Dict[Tuple[str,str], int]:
+    def overlap_matrix(self) -> Dict[Tuple[str,str], Dict[str, int | float]]:
         """Compute pairwise overlap counts based on index/entities.csv for each split."""
         index_sets: Dict[str, set] = {}
         for sid, split in self.splits.items():
@@ -303,7 +334,7 @@ class Dataset(BaseModel):
                 for row in reader:
                     ids.add(row["entity_id"])
             index_sets[sid] = ids
-        pairs: Dict[Tuple[str,str], int] = {}
+        pairs: Dict[Tuple[str,str], Dict[str, int | float]] = {}
         for a, b in itertools.combinations(sorted(index_sets.keys()), 2):
             pairs[(a,b)] = {
                 "cnt": len(index_sets[a] & index_sets[b]),
@@ -485,6 +516,9 @@ def load_dataset(root: Path) -> Dataset:
                 vm = ref_meta_dir / "verified_matches.csv"
                 if vm.exists():
                     ref_meta.matches = VerifiedMatches(file=vm)
+                ve = ref_meta_dir / "verified_entities.csv"
+                if ve.exists():
+                    ref_meta.entities = VerifiedEntities(file=ve)
                 kg_ref = KGBundle(
                     kind="reference",
                     root=ref_dir,
@@ -555,34 +589,6 @@ def load_dataset(root: Path) -> Dataset:
 # CLI (optional helper)
 # -----------------------------
 
-def _fmt_pct(x: float) -> str:
-    return f"{x*100:.2f}%"
-
-def main():
-    import argparse
-    ap = argparse.ArgumentParser(description="Validate KG benchmark directory with Pydantic models.")
-    ap.add_argument("root", type=str, help="Path to dataset root")
-    ap.add_argument("--check-plan", action="store_true", help="Validate pairwise overlaps against provenance plan")
-    args = ap.parse_args()
-
-    ds = load_dataset(Path(args.root))
-
-    print(f"Loaded dataset at: {ds.root}")
-    print(f" - splits: {', '.join(sorted(ds.splits.keys()))}")
-    if ds.ontology:
-        print(f" - ontology: {ds.ontology}")
-    if ds.entities_master:
-        print(f" - master entities: {ds.entities_master}")
-    if ds.provenance and ds.provenance.plan:
-        p = ds.provenance.plan
-        print(f" - overlap plan: global={_fmt_pct(p.overlapGlobalPct)}, tol={_fmt_pct(p.tolerancePct)}, seed={p.randomSeed}")
-    else:
-        print(" - overlap plan: (none)")
-
-    if args.check_plan:
-        ds.validate_against_plan()
-        print("Overlap plan validation: OK")
-
 def test_multipart_multisource():
 
     # temp dir
@@ -601,9 +607,6 @@ def test_multipart_multisource():
 
     for split_id in range(range_start, range_end):
         split = ds.splits[f"split_{split_id}"]
-
-
-
 
         # Prepare reusable entity/link/match rows
         entities_1 = [

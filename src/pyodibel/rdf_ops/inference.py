@@ -21,7 +21,7 @@ def enrich_type_information(graph: Graph, ontology: Ontology, type_property: URI
 
     new_graph = Graph()
 
-    for s, p, o in graph, desc="Enriching type information":
+    for s, p, o in graph:
         domain, range = ontology.get_domain_range(str(p))
         if domain and isinstance(s, URIRef):
             if str(s) not in type_dict:

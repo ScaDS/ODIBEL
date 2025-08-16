@@ -88,6 +88,8 @@ def construct_graph_from_root_uris(uris: list[str], base_dir: str, output_dir: s
     input_store = FileHashStore2(base_dir=base_dir)
     output_store = FileHashStore2(base_dir=output_dir)
 
+    empty_graphs = 0
+
     for uri in tqdm(uris):
         graph = input_store.retrieve(uri)
         new_graph = Graph()
@@ -99,6 +101,10 @@ def construct_graph_from_root_uris(uris: list[str], base_dir: str, output_dir: s
         
         if len(new_graph) > 0:
             output_store.store(uri, new_graph)
+        else:
+            empty_graphs += 1
+    
+    print(f"Empty graphs: {empty_graphs}")
 
 
 
