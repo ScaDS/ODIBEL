@@ -5,6 +5,14 @@ from numpy import sort
 from pyodibel.rdf_ops.construct import DirectMappingType
 import logging
 
+import shutil
+from rdflib import URIRef, RDF
+
+from pyodibel.datasets.mp_mf.multipart_multisource import Dataset, EntitiesRow, MatchesRow, KGBundle, LinksRow, SourceBundle, SourceType, load_dataset
+from pyodibel.datasets.mp_mf.overlap_util import build_exact_subsets, validate_overlaps
+
+from pathlib import Path
+
 def setup_logging(log_file='pyodibel.log', level=logging.INFO):
     # Get the root logger
     root_logger = logging.getLogger()
@@ -212,27 +220,48 @@ from pyodibel.rdf_ops.construct import construct_graph_from_root_uris
 from pyodibel.rdf_ops.inference import enrich_type_information
 from kgbench_extras.common.ontology import OntologyUtil
 
-def generate_rdf(split_file_path):
+# def generate_rdf(split_file_path):
 
-    split_name = os.path.basename(split_file_path).split(".")[0]
-    output_dir_tmp = os.path.join(DIR_OUTPUT, split_name, "rdf_tmp")
-    os.makedirs(output_dir_tmp, exist_ok=True)
+#     split_name = os.path.basename(split_file_path).split(".")[0]
+#     output_dir_tmp = os.path.join(DIR_OUTPUT, split_name, "rdf_tmp")
+#     os.makedirs(output_dir_tmp, exist_ok=True)
 
 
 
-    uri_list = read_uri_list_file(split_file_path)
-    print(f"Generating RDF for {split_name} with {len(uri_list)} URIs")
-    construct_graph_from_root_uris(uri_list, DIR_RAW_DATA, output_dir_tmp, DBOnto_DIRECT_MAPPINGS)
+#     uri_list = read_uri_list_file(split_file_path)
+#     print(f"Generating RDF for {split_name} with {len(uri_list)} URIs")
+#     construct_graph_from_root_uris(uri_list, DIR_RAW_DATA, output_dir_tmp, DBOnto_DIRECT_MAPPINGS)
 
-    output_dir = os.path.join(DIR_OUTPUT, split_name, "rdf")
-    os.makedirs(output_dir, exist_ok=True)
+#     output_dir = os.path.join(DIR_OUTPUT, split_name, "rdf")
+#     os.makedirs(output_dir, exist_ok=True)
 
-    ontology = OntologyUtil.load_ontology_from_file(os.getenv("ONTOLOGY_PATH"))
-    for file in tqdm(os.listdir(output_dir_tmp), desc="Enriching type information"):
+#     ontology = OntologyUtil.load_ontology_from_file(os.getenv("ONTOLOGY_PATH"))
+#     for file in tqdm(os.listdir(output_dir_tmp), desc="Enriching type information"):
+#         graph = Graph()
+#         graph.parse(os.path.join(output_dir_tmp, file), format="nt")
+#         graph = enrich_type_information(graph, ontology)
+#         graph.serialize(os.path.join(output_dir, file), format="nt")
+
+import tempfile
+
+def generate_rdf(entity_list, acq_dir, output_dir, mappings):
+
+    tempdir = tempfile.mkdtemp()
+
+    construct_graph_from_root_uris(entity_list, acq_dir, tempdir, mappings)
+
+    ontology_path = os.getenv("ONTOLOGY_PATH")
+    if ontology_path is None:
+        raise ValueError("ONTOLOGY_PATH is not set")
+
+    ontology = OntologyUtil.load_ontology_from_file(Path(ontology_path))
+    for file in tqdm(os.listdir(tempdir), desc="Enriching type information"):
         graph = Graph()
-        graph.parse(os.path.join(output_dir_tmp, file), format="nt")
+        graph.parse(os.path.join(tempdir, file), format="nt")
         graph = enrich_type_information(graph, ontology)
         graph.serialize(os.path.join(output_dir, file), format="nt")
+    
+    shutil.rmtree(tempdir)
 
 from pyodibel.rdf_ops.construct import build_recursive_json, hash_uri
 import json
@@ -264,214 +293,286 @@ def generate_json(split_file_path):
         with open(os.path.join(output_dir, hash_uri(uri)+".json"), "w") as f:
             json.dump(jsondata, f, indent=4)
 
-import shutil
-from rdflib import URIRef
 
-def generate_text(split_file_path): 
 
-    split_name = os.path.basename(split_file_path).split(".")[0]
-    output_dir = os.path.join(DIR_OUTPUT, split_name, "text")
-    os.makedirs(output_dir, exist_ok=True)
+# ================================================
 
-    uri_list = read_uri_list_file(split_file_path)
-    print(f"Generating Text for {split_name} with {len(uri_list)} URIs")
 
-    for root_uri in tqdm(uri_list):
+def generate_overlap_xyz(entity_list_path, num_subsets, overlap_ratio, subset_size):
+    with open(entity_list_path, "r") as f:
+        entity_list = [line.strip() for line in f]
+
+    subsets = build_exact_subsets(entity_list, num_subsets, overlap_ratio, subset_size)
+    return subsets
+
+# ================================================
+
+def bundle_text_source(bundle: SourceBundle, entity_selection, entity_acq_dir):
+
+    output_dir = bundle.data.dir.as_posix()
+    missing_files = []
+    empty_files = []
+    verfied_uris = []
+
+
+    for root_uri in tqdm(entity_selection):
         hash = hash_uri(root_uri)
         # copy file from input_dir to output_dir
         try:
-            shutil.copy(os.path.join("/home/marvin/project/data/current/workdir/summaries", hash+".txt"), os.path.join(output_dir, hash+".txt"))
+            # check input file size > 0
+            if os.path.getsize(os.path.join(entity_acq_dir, "text",hash+".txt")) == 0:
+                empty_files.append(hash)
+                continue
+            input_file = os.path.join(entity_acq_dir, "text",hash+".txt")
+            output_file = os.path.join(output_dir, hash+".txt")
+            shutil.copy(input_file, output_file)
+            verfied_uris.append((root_uri, hash))
         except FileNotFoundError:
-            print(f"File not found: {hash+'.txt'}")
+            missing_files.append(hash)
 
-def generate_metadata(split_file_path):
-
-    split_name = os.path.basename(split_file_path).split(".")[0]
-    output_dir = os.path.join(DIR_OUTPUT, split_name, "metadata")
-    os.makedirs(output_dir, exist_ok=True)
-
-    uri_list = read_uri_list_file(split_file_path)
-    print(f"Generating Metadata for {split_name} with {len(uri_list)} URIs")
-
-    shutil.copy(split_file_path, os.path.join(output_dir, "rdf_film_entities.txt"))
-
-    # read rdf dir into a graph
-    graph = Graph()
-    for file in tqdm(os.listdir(os.path.join(DIR_OUTPUT, split_name, "rdf"))):
-        graph.parse(os.path.join(DIR_OUTPUT, split_name, "rdf", file), format="nt")
-
-    # get set of all entities
-    entities = set()
-    for s, p, o in graph:
-        entities.add(str(s))
-        if isinstance(o, URIRef):
-            entities.add(str(o))
+    if len(missing_files) > 0:
+        print(f"Missing text files: {len(missing_files)}")
+    if len(empty_files) > 0:
+        print(f"Empty text files: {len(empty_files)}")
     
-    hash_to_uri_map = {}
-    for uri in entities:
-        hash_to_uri_map[hash_uri(uri)] = uri
-
-    # create a csv file with the following columns: uri, label, type
-    with open(os.path.join(output_dir, "all_entities.csv"), "w") as f:
-        f.write("uri,label,type\n")
-        for uri in entities:
-            f.write(f"{uri},,\n")
-
-    # get json dir root uri hashes from file name
-    json_dir = os.path.join(DIR_OUTPUT, split_name, "json")
-    json_file_names = os.listdir(json_dir)
-    json_root_uri_hashes = [os.path.basename(file).split(".")[0] for file in json_file_names]
-
-    # write list of uris to file json entities
-    with open(os.path.join(output_dir, "json_film_entities.txt"), "w") as f:
-        for uri in json_root_uri_hashes:
-            if uri in hash_to_uri_map:
-                f.write(f"{hash_to_uri_map[uri]}\n")
-            else:
-                print(f"URI not found: {uri}")
-
-    # get text dir root uri hashes from file name
-    text_dir = os.path.join(DIR_OUTPUT, split_name, "text")
-    text_file_names = os.listdir(text_dir)
-    text_root_uri_hashes = [os.path.basename(file).split(".")[0] for file in text_file_names]
-
-    # write list of uris to file text entities
-    with open(os.path.join(output_dir, "text_film_entities.txt"), "w") as f:
-        for uri in text_root_uri_hashes:
-            if uri in hash_to_uri_map:
-                f.write(f"{hash_to_uri_map[uri]}\n")
-            else:
-                print(f"URI not found: {uri}")
+    bundle.meta.set_entities([EntitiesRow(entity_id=uri, entity_type="dbo:Film", dataset="dataset") for uri, _ in verfied_uris])
+    bundle.meta.set_links([LinksRow(doc_id=hash+".txt", entity_id=uri, entity_type="dbo:Film", dataset="dataset") for uri, hash in verfied_uris])
 
 
-def generate_reference(split_file_path): pass
+def copy_and_shade_rdf_file(input_file, output_file):
+    shutil.copy(input_file, output_file)
+    # TODO implement shade
+    # TODO cleanup
+    #    infere missing types 
+    #    remove low covered entities
 
-def process_split(split_file_path):
+def bundle_rdf_source(bundle, entity_selection, entity_acq_dir):
+    # missing_files = []
+    # empty_files = []
+    # verfied_uris = []
+    
+    generate_rdf(entity_selection, entity_acq_dir + "/reference", bundle.data.dir.as_posix(), DBOnto_DIRECT_MAPPINGS)
+    
+    graph = Graph()
+    for file in os.listdir(bundle.data.dir):
+        if file.endswith(".nt"):
+            graph.parse(os.path.join(bundle.data.dir, file), format="nt")
 
-    print(f"Generating data for {split_file_path}")
-    generate_rdf(os.path.join(DIR_SPLIT_FILES, split_file_path))
-    generate_json(os.path.join(DIR_SPLIT_FILES, split_file_path))
-    generate_text(os.path.join(DIR_SPLIT_FILES, split_file_path))
-    generate_metadata(os.path.join(DIR_SPLIT_FILES, split_file_path))
-    print(f"Done generating data for {split_file_path}")
-    print("-"*100)
+    graph.serialize(bundle.root / "data.nt", format="nt")
 
-def generate_overlaps(split_file_paths, overlap_size, overlap_count):
-    """
-    split_file_paths: list of split file paths
-    overlap_size: number of splits to overlap
-    overlap_count: number of generated overlaps
-    TODO implement
-    """
+    entities_with_types = {}
+    for s, _, t in graph.triples((None, RDF.type, None)):
+        entities_with_types[str(s)] = str(t)
+    
+    bundle.meta.set_entities([EntitiesRow(entity_id=uri, entity_type=entities_with_types[uri], dataset="dataset") for uri in entities_with_types])
 
-    raise NotImplementedError("Not implemented")
-    overlaps = []
-    for i in range(overlap_count):
-        overlaps.append(split_file_paths[i*overlap_size:(i+1)*overlap_size])
-    return overlaps
+def bundle_json_source(bundle, entity_selection, entity_acq_dir):
+    missing_files = []
+    empty_files = []
+    verfied_uris = []
+    
+    for root_uri in tqdm(entity_selection):
+        hash = hash_uri(root_uri)
+        input_file = os.path.join(entity_acq_dir, "json", hash+".json")
+        output_file = os.path.join(bundle.data.dir.as_posix(), hash+".json")
+        if not os.path.exists(input_file):
+            missing_files.append(hash)
+            continue
+        if os.path.getsize(input_file) == 2: # can conain emtpy {}
+            empty_files.append(hash)
+            continue
+        shutil.copy(input_file, output_file)
+        verfied_uris.append((root_uri, hash))
 
-def aggregate(splits, subdir, name=None):
-    """
-    splits: list of split file paths
-    subdir: subdirectory of output dir
-    name: name of the aggregate
-    """
+    if len(missing_files) > 0:
+        print(f"Missing json files: {len(missing_files)}")
+    if len(empty_files) > 0:
+        print(f"Empty json files: {len(empty_files)}")
 
-    if name is None:
-        name = subdir
+    bundle.meta.set_entities([EntitiesRow(entity_id=uri, entity_type="dbo:Film", dataset="dataset") for uri, _ in verfied_uris])
 
-    output_dir = os.path.join(DIR_OUTPUT, "aggregated", name)
-    os.makedirs(output_dir, exist_ok=True)
+def bundle_reference(bundle: KGBundle, entity_selection, entity_acq_dir):
+    # missing_files = []
+    # empty_files = []
+    # verfied_uris = []
 
-    # entities
-    entities = set()
+    generate_rdf(entity_selection, entity_acq_dir + "/reference", bundle.data.dir.as_posix(), DBOnto_DIRECT_MAPPINGS)
+    
+    graph = Graph()
+    for file in os.listdir(bundle.data.dir):
+        if file.endswith(".nt"):
+            graph.parse(os.path.join(bundle.data.dir, file), format="nt")
 
-    for split in splits:
-        realsub = "root" if subdir == "rdf" else subdir
-        split_dir = os.path.join(DIR_OUTPUT, "splited", split)
-        split_metadata_dir = os.path.join(split_dir, "metadata")
-        split_subdir = os.path.join(split_dir, subdir)
-        with open(os.path.join(split_metadata_dir, f"{realsub}_film_entities.txt"), "r") as f:
-            for line in f:
-                entities.add(line.strip())
+    graph.serialize(bundle.root / "data.nt", format="nt")
 
-        for file in os.listdir(split_subdir):
-            shutil.copy(os.path.join(split_subdir, file), output_dir)
+    entities_with_types = {}
+    for s, _, t in graph.triples((None, RDF.type, None)):
+        entities_with_types[str(s)] = str(t)
+    
+    bundle.meta.set_entities([EntitiesRow(entity_id=uri, entity_type=entities_with_types[uri], dataset="dataset") for uri in entities_with_types])
 
-    # aggregate metadata
-    metadata_dir = os.path.join(os.path.join(DIR_OUTPUT, "aggregated"), f"{name}_film_entities.txt")
-    with open(metadata_dir, "w") as f:
-        for entity in entities:
-            f.write(f"{entity}\n")
+
+def bundle_seed(bundle: KGBundle, entity_selection, entity_acq_dir):
+
+    # missing_files = []
+    # empty_files = []
+    # verfied_uris = []
+    
+    generate_rdf(entity_selection, entity_acq_dir + "/reference", bundle.data.dir.as_posix(), DBOnto_DIRECT_MAPPINGS)
+
+    graph = Graph()
+    for file in os.listdir(bundle.data.dir):
+        if file.endswith(".nt"):
+            graph.parse(os.path.join(bundle.data.dir, file), format="nt")
+    
+    graph.serialize(bundle.root / "data.nt", format="nt")
+
+    entities_with_types = {}
+    for s, _, t in graph.triples((None, RDF.type, None)):
+        entities_with_types[str(s)] = str(t)
+    
+    bundle.meta.set_entities([EntitiesRow(entity_id=uri, entity_type=entities_with_types[uri], dataset="dataset") for uri in entities_with_types])
+
+# ================================================
 
 def generate_inc_movie_kgb():
 
-    split_file_paths = sorted(os.listdir(DIR_SPLIT_FILES))
+    entity_list_path = "/home/marvin/project/data/acquisiton/final_dbp_1k.txt"
+    entity_acq_dir = "/home/marvin/project/data/acquisiton/film1k_acq"
 
-    # generate all data for each split
-    for split_file_path in split_file_paths:
-        process_split(split_file_path)
+    subsets = generate_overlap_xyz(entity_list_path, 4, 0.04, 250)
 
-    # overlaps = generate_overlaps(split_file_paths, overlap_size=5, overlap_count=3)
+    ds = Dataset(root=Path("/home/marvin/project/data/acquisiton/film1k_bundle"))
+    ds.set_entities_master(open(entity_list_path, "r").readlines())
 
-    # overlaps = [
-    #     [1,2,3,4,5],
-    #     [5,6,7,8,9,10],
-    #     [5,10,11,12,13,14,15],
-    #     [5,10,15,16,17,18,19,20],
-    # ]
-    # overlaps = [[ f"split{int(i):02d}" for i in o] for o in overlaps]
+    ds.set_splits(0, len(subsets))
 
-    # # aggregate with overlap
-    # for idx, overlap in enumerate(overlaps):
-    #     print(f"Aggregating with overlap {overlap}")
-    #     aggregate(overlap, "rdf", f"rdf_{idx}") # done for every overlap
-    #     aggregate(overlap, "json", f"json_{idx}")
-    #     aggregate(overlap, "text", f"text_{idx}")
+    for idx, subset in enumerate(subsets):
+        split = ds.splits[f"split_{idx}"]
+        split.set_empty_reference()
+        split.set_empty_seed()
 
-    # aggregate without overlap
-    # aggregate([s.split(".")[0] for s in split_file_paths], "rdf", "reference")
+        entity_selection = subset
+        split.set_index([EntitiesRow(entity_id=uri, entity_type="entity", dataset="dataset") for uri in entity_selection])
 
-    """
-    output/
-        split1/
-            entities.csv # uri, label, type
-            rdf/
-                film1.nt
-            json/
-                film1.json
-            text/
-                film1.txt
-            reference/
-                entities.csv # uri, label, type 
-                film1.nt # mapped to dbpedia if not possible wikidata
-        splitN/
-            entities.csv
-            rdf/
-            json/
-            text/
-            reference/
-    """
+        # bundle seed
+        if split.kg_seed is not None: 
+            bundle_seed(split.kg_seed, entity_selection, entity_acq_dir)
+        else:
+            raise ValueError("kg_seed is None")
 
-    # 0 [~] ingest data into raw store (allows storing both wikdiata and dbpedia)
-    # 1. split film entities | 
-    # 2. generate rdf | filter | 
-    # 3. generate reference | map to dbpedia if not possible wikidata (person company) |
+        # bundle reference
+        if split.kg_reference is not None:
+            bundle_reference(split.kg_reference, entity_selection, entity_acq_dir)
+        else:
+            raise ValueError("kg_reference is None")
 
-    # all splits with
-    #  - rdf
-    #  - json
-    #  - text
-    #  - root films
-    #  - full reference graph
-    #  - related persons / companies
-    pass
+        # bundle sources
+        source_types = [SourceType.rdf, SourceType.json, SourceType.text]
+        split.set_sources(source_types)
+
+        bundle_text_source(split.sources[SourceType.text], entity_selection, entity_acq_dir)
+        bundle_rdf_source(split.sources[SourceType.rdf], entity_selection, entity_acq_dir)
+        bundle_json_source(split.sources[SourceType.json], entity_selection, entity_acq_dir)
 
 def test_generate_inc_movie_kgb():
     generate_inc_movie_kgb()
 
 def evaluate_inc_movie_kgb():
     pass
+
+def test_convert_to_json():
+    uri_list = read_uri_list_file("/home/marvin/project/data/acquisiton/final_dbp_1k.txt")
+    output_dir_tmp = "/home/marvin/project/data/acquisiton/film1k_acq/json_tmp/"
+    output_dir = "/home/marvin/project/data/acquisiton/film1k_acq/json/"
+    os.makedirs(output_dir_tmp, exist_ok=True)
+
+    construct_graph_from_root_uris(
+        uri_list, 
+        DIR_RAW_DATA, 
+        output_dir_tmp, 
+        DBProp_DIRECT_MAPPINGS
+    )
+
+    tmp_store = FileHashStore2(base_dir=output_dir_tmp)
+    for uri in tqdm(uri_list):
+        graph = tmp_store.retrieve(uri)
+        jsondata = build_recursive_json(uri, graph)
+        with open(os.path.join(output_dir, hash_uri(uri)+".json"), "w") as f:
+            json.dump(jsondata, f, indent=4)
+
+
+from pyodibel.rdf_ops.extract import extract_subgraph_recursive
+
+
+def get_all_entities_with_types(film_subset, seed_dir) -> dict[str, str]:
+    entities_with_types = {}
+    graph = Graph()
+    for file in os.listdir(seed_dir):
+        if file.endswith(".nt"):
+            graph.parse(os.path.join(seed_dir, file), format="nt")
+
+    for uri in film_subset:
+        subgraph = extract_subgraph_recursive(uri,graph)
+        s, _, t = list(subgraph.triples((None, RDF.type, None)))[0]
+        entities_with_types[str(s)] = str(t)
+
+    return entities_with_types
+
+def test_generate_split_matches():
+    # TODO get all entities from reference and calculate overlap with each split
+
+    ds = load_dataset(Path("/home/marvin/project/data/acquisiton/film1k_bundle"))
+
+    full_subsets_named: dict[str, dict[str, str]] = {}
+
+    film_subsets_named: dict[str, list[str]] = {}
+
+    for split in ds.splits.values():
+
+        print(split.index.entities_csv.as_posix())
+        film_subsets_named[split.root.name] = list(open(split.index.entities_csv.as_posix()).readlines())
+
+        reference = split.kg_reference
+        if reference is None:
+            raise ValueError("kg_reference is None")
+        
+
+        pos_entities = reference.meta.entities
+        if pos_entities is None:
+            raise ValueError("pos_entities is None")
+        
+        entities = [e.entity_id for e in pos_entities.read_csv()]
+        
+        subset = get_all_entities_with_types(entities, reference.data.dir)
+        full_subsets_named[split.root.name] = subset
+
+    film_subsets = [film_subsets_named[f"split_{i}"] for i in range(len(film_subsets_named))]
+
+    print(validate_overlaps(film_subsets))
+
+    from itertools import combinations
+
+    overlap_ratios = {}
+
+    matches = []
+
+    keys = list(full_subsets_named.keys())
+
+    for i, j in combinations(range(len(keys)), 2):
+        overlap = set(full_subsets_named[keys[i]]) & set(full_subsets_named[keys[j]])
+        for uri in overlap:
+            matches.append(MatchesRow(left_dataset=keys[i], left_id=uri, right_dataset=keys[j], right_id=uri, match_type="exact"))
+
+        ratio = len(overlap) / len(full_subsets_named[keys[i]])
+        overlap_ratios[f"{keys[i]}-{keys[j]}"] = ratio
+    
+    with open("/home/marvin/project/data/acquisiton/film1k_bundle/split_match_entities.csv", "w") as f:
+        f.write("left_dataset\tleft_id\tright_dataset\tright_id\n")
+        for match in matches:
+            f.write(f"{match.left_dataset}\t{match.left_id}\t{match.right_dataset}\t{match.right_id}\n")
+
+    print(overlap_ratios)
 
 def test_evaluate_inc_movie_kgb():
     evaluate_inc_movie_kgb()
