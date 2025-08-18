@@ -13,6 +13,13 @@ from pyodibel.datasets.mp_mf.overlap_util import build_exact_subsets, validate_o
 
 from pathlib import Path
 
+load_dotenv()
+
+opt_ontology_path = os.getenv("ONTOLOGY_PATH")
+if opt_ontology_path is None:
+    raise ValueError("ONTOLOGY_PATH is not set")
+ontology_path: Path = Path(opt_ontology_path)
+
 def setup_logging(log_file='pyodibel.log', level=logging.INFO):
     # Get the root logger
     root_logger = logging.getLogger()
@@ -197,7 +204,7 @@ from rdflib import Graph
 
 def get_all_properties_from_ontology():
     graph = Graph()
-    graph.parse("/home/marvin/project/data/ontology.ttl", format="turtle")
+    graph.parse(ontology_path, format="turtle")
     
     results = graph.query("SELECT ?p WHERE { VALUES ?type { owl:ObjectProperty owl:DatatypeProperty } ?p a ?type }")
     equivalent_properties = graph.query("SELECT ?p WHERE { ?p0 owl:equivalentProperty ?p }")
@@ -244,21 +251,23 @@ from kgbench_extras.common.ontology import OntologyUtil
 
 import tempfile
 
-def generate_rdf(entity_list, acq_dir, output_dir, mappings):
+from pyodibel.rdf_ops.replacer import replace_to_namespace, __load_match_clusters_from_Ontology, replace_namespace
+
+def generate_rdf(entity_list, acq_dir, output_dir, mappings, ns_mapping: dict[str, str] = {}):
 
     tempdir = tempfile.mkdtemp()
 
     construct_graph_from_root_uris(entity_list, acq_dir, tempdir, mappings)
 
-    ontology_path = os.getenv("ONTOLOGY_PATH")
-    if ontology_path is None:
-        raise ValueError("ONTOLOGY_PATH is not set")
-
-    ontology = OntologyUtil.load_ontology_from_file(Path(ontology_path))
+    ontology = OntologyUtil.load_ontology_from_file(ontology_path)
+    clusters = __load_match_clusters_from_Ontology(ontology)
     for file in tqdm(os.listdir(tempdir), desc="Enriching type information"):
         graph = Graph()
         graph.parse(os.path.join(tempdir, file), format="nt")
         graph = enrich_type_information(graph, ontology)
+        graph = replace_to_namespace(graph, clusters, "http://kg.org/ontology/")
+        for old_namespace, new_namespace in ns_mapping.items():
+            graph = replace_namespace(graph, old_namespace, new_namespace)
         graph.serialize(os.path.join(output_dir, file), format="nt")
     
     shutil.rmtree(tempdir)
@@ -313,6 +322,7 @@ def bundle_text_source(bundle: SourceBundle, entity_selection, entity_acq_dir):
     missing_files = []
     empty_files = []
     verfied_uris = []
+    verfied_labels = []
 
 
     for root_uri in tqdm(entity_selection):
@@ -327,6 +337,7 @@ def bundle_text_source(bundle: SourceBundle, entity_selection, entity_acq_dir):
             output_file = os.path.join(output_dir, hash+".txt")
             shutil.copy(input_file, output_file)
             verfied_uris.append((root_uri, hash))
+            # verfied_labels.append((root_uri, label))
         except FileNotFoundError:
             missing_files.append(hash)
 
@@ -335,7 +346,7 @@ def bundle_text_source(bundle: SourceBundle, entity_selection, entity_acq_dir):
     if len(empty_files) > 0:
         print(f"Empty text files: {len(empty_files)}")
     
-    bundle.meta.set_entities([EntitiesRow(entity_id=uri, entity_type="dbo:Film", dataset="dataset") for uri, _ in verfied_uris])
+    bundle.meta.set_entities([EntitiesRow(entity_id=uri, entity_label=uri, entity_type="dbo:Film", dataset="dataset") for uri, _ in verfied_uris])
     bundle.meta.set_links([LinksRow(doc_id=hash+".txt", entity_id=uri, entity_type="dbo:Film", dataset="dataset") for uri, hash in verfied_uris])
 
 
@@ -346,12 +357,21 @@ def copy_and_shade_rdf_file(input_file, output_file):
     #    infere missing types 
     #    remove low covered entities
 
-def bundle_rdf_source(bundle, entity_selection, entity_acq_dir):
+def bundle_rdf_source(bundle, entity_selection, entity_acq_dir, split_id):
     # missing_files = []
     # empty_files = []
     # verfied_uris = []
     
-    generate_rdf(entity_selection, entity_acq_dir + "/reference", bundle.data.dir.as_posix(), DBOnto_DIRECT_MAPPINGS)
+    generate_rdf(
+        entity_selection, 
+        entity_acq_dir + "/reference", 
+        bundle.data.dir.as_posix(), 
+        DBOnto_DIRECT_MAPPINGS,
+        ns_mapping={
+            "http://dbpedia.org/resource/": f"http://kg.org/rdf/{split_id}/",
+            "http://kg.org/ontology/": f"http://kg.org/rdf/{split_id}/ontology/"
+        }
+    )
     
     graph = Graph()
     for file in os.listdir(bundle.data.dir):
@@ -364,7 +384,7 @@ def bundle_rdf_source(bundle, entity_selection, entity_acq_dir):
     for s, _, t in graph.triples((None, RDF.type, None)):
         entities_with_types[str(s)] = str(t)
     
-    bundle.meta.set_entities([EntitiesRow(entity_id=uri, entity_type=entities_with_types[uri], dataset="dataset") for uri in entities_with_types])
+    bundle.meta.set_entities([EntitiesRow(entity_id=uri, entity_label=uri, entity_type=entities_with_types[uri], dataset="dataset") for uri in entities_with_types])
 
 def bundle_json_source(bundle, entity_selection, entity_acq_dir):
     missing_files = []
@@ -389,7 +409,7 @@ def bundle_json_source(bundle, entity_selection, entity_acq_dir):
     if len(empty_files) > 0:
         print(f"Empty json files: {len(empty_files)}")
 
-    bundle.meta.set_entities([EntitiesRow(entity_id=uri, entity_type="dbo:Film", dataset="dataset") for uri, _ in verfied_uris])
+    bundle.meta.set_entities([EntitiesRow(entity_id=uri, entity_label=uri, entity_type="dbo:Film", dataset="dataset") for uri, _ in verfied_uris])
 
 def bundle_reference(bundle: KGBundle, entity_selection, entity_acq_dir):
     # missing_files = []
@@ -409,7 +429,7 @@ def bundle_reference(bundle: KGBundle, entity_selection, entity_acq_dir):
     for s, _, t in graph.triples((None, RDF.type, None)):
         entities_with_types[str(s)] = str(t)
     
-    bundle.meta.set_entities([EntitiesRow(entity_id=uri, entity_type=entities_with_types[uri], dataset="dataset") for uri in entities_with_types])
+    bundle.meta.set_entities([EntitiesRow(entity_id=uri, entity_label=uri, entity_type=entities_with_types[uri], dataset="dataset") for uri in entities_with_types])
 
 
 def bundle_seed(bundle: KGBundle, entity_selection, entity_acq_dir):
@@ -431,7 +451,7 @@ def bundle_seed(bundle: KGBundle, entity_selection, entity_acq_dir):
     for s, _, t in graph.triples((None, RDF.type, None)):
         entities_with_types[str(s)] = str(t)
     
-    bundle.meta.set_entities([EntitiesRow(entity_id=uri, entity_type=entities_with_types[uri], dataset="dataset") for uri in entities_with_types])
+    bundle.meta.set_entities([EntitiesRow(entity_id=uri, entity_label=uri, entity_type=entities_with_types[uri], dataset="dataset") for uri in entities_with_types])
 
 # ================================================
 
@@ -453,7 +473,7 @@ def generate_inc_movie_kgb():
         split.set_empty_seed()
 
         entity_selection = subset
-        split.set_index([EntitiesRow(entity_id=uri, entity_type="entity", dataset="dataset") for uri in entity_selection])
+        split.set_index([EntitiesRow(entity_id=uri, entity_label=uri, entity_type="entity", dataset="dataset") for uri in entity_selection])
 
         # bundle seed
         if split.kg_seed is not None: 
@@ -472,7 +492,7 @@ def generate_inc_movie_kgb():
         split.set_sources(source_types)
 
         bundle_text_source(split.sources[SourceType.text], entity_selection, entity_acq_dir)
-        bundle_rdf_source(split.sources[SourceType.rdf], entity_selection, entity_acq_dir)
+        bundle_rdf_source(split.sources[SourceType.rdf], entity_selection, entity_acq_dir, idx)
         bundle_json_source(split.sources[SourceType.json], entity_selection, entity_acq_dir)
 
 def test_generate_inc_movie_kgb():

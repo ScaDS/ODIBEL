@@ -32,7 +32,7 @@ class MatchType(str, Enum):
 
 EXPECTED_HEADERS = {
     "verified_matches.csv": ["left_dataset","right_dataset","left_id","right_id","match_type"],
-    "verified_entities.csv": ["dataset","entity_id","entity_type"],
+    "verified_entities.csv": ["dataset","entity_id","entity_label","entity_type"],
     "verified_links.csv": ["doc_id","entity_id","entity_type","dataset"],
 }
 
@@ -56,6 +56,7 @@ def list_parts(dirpath: Path, exts: Tuple[str, ...]) -> List[Path]:
 
 class EntitiesRow(BaseModel):
     entity_id: str
+    entity_label: str
     entity_type: str
     dataset: str
 
@@ -72,6 +73,9 @@ class MatchesRow(BaseModel):
     right_id: str
     match_type: str
 
+def read_matches_csv(path: Path) -> List[MatchesRow]:
+    return [MatchesRow(left_dataset=row["left_dataset"], right_dataset=row["right_dataset"], left_id=row["left_id"], right_id=row["right_id"], match_type=row["match_type"]) for row in csv.DictReader(path.open("r"), delimiter="\t")]
+
 class VerifiedMatches(BaseModel):
     model_config = ConfigDict(arbitrary_types_allowed=True)
     file: Path
@@ -82,6 +86,12 @@ class VerifiedMatches(BaseModel):
             raise ValueError(f"verified_matches file not found: {self.file}")
         ensure_headers(self.file, EXPECTED_HEADERS["verified_matches.csv"])
         return self
+
+    def read_csv(self) -> List[MatchesRow]:
+        return read_matches_csv(self.file)
+
+def read_entities_csv(path: Path) -> List[EntitiesRow]:
+    return [EntitiesRow(entity_id=row["entity_id"], entity_label=row["entity_label"], entity_type=row["entity_type"], dataset=row["dataset"]) for row in csv.DictReader(path.open("r"), delimiter="\t")]
 
 class VerifiedEntities(BaseModel):
     model_config = ConfigDict(arbitrary_types_allowed=True)
@@ -95,7 +105,10 @@ class VerifiedEntities(BaseModel):
         return self
 
     def read_csv(self) -> List[EntitiesRow]:
-        return [EntitiesRow(entity_id=row["entity_id"], entity_type=row["entity_type"], dataset=row["dataset"]) for row in csv.DictReader(self.file.open("r"), delimiter="\t")]
+        return read_entities_csv(self.file)
+
+def read_links_csv(path: Path) -> List[LinksRow]:
+    return [LinksRow(doc_id=row["doc_id"], entity_id=row["entity_id"], entity_type=row["entity_type"], dataset=row["dataset"]) for row in csv.DictReader(path.open("r"), delimiter="\t")]
 
 class VerifiedLinks(BaseModel):
     model_config = ConfigDict(arbitrary_types_allowed=True)
@@ -121,9 +134,9 @@ class SourceMeta(BaseModel):
     def set_entities(self, entities: List[EntitiesRow]):
         path = self.root / "verified_entities.csv"
         with path.open("w") as f:
-            f.write("dataset\tentity_id\tentity_type\n")
+            f.write("dataset\tentity_id\tentity_label\tentity_type\n")
             for entity in entities:
-                f.write(f"{entity.dataset}\t{entity.entity_id}\t{entity.entity_type}\n")
+                f.write(f"{entity.dataset}\t{entity.entity_id}\t{entity.entity_label}\t{entity.entity_type}\n")
         self.entities = VerifiedEntities(file=path)
 
     def set_links(self, links: List[LinksRow]):
@@ -610,16 +623,16 @@ def test_multipart_multisource():
 
         # Prepare reusable entity/link/match rows
         entities_1 = [
-            EntitiesRow(entity_id="a", entity_type="a", dataset="a"),
-            EntitiesRow(entity_id="b", entity_type="b", dataset="b"),
-            EntitiesRow(entity_id="c", entity_type="c", dataset="c"),
-            EntitiesRow(entity_id="d", entity_type="d", dataset="d"),
-            EntitiesRow(entity_id="e", entity_type="e", dataset="e"),
+            EntitiesRow(entity_id="a", entity_label="a", entity_type="a", dataset="a"),
+            EntitiesRow(entity_id="b", entity_label="b", entity_type="b", dataset="b"),
+            EntitiesRow(entity_id="c", entity_label="c", entity_type="c", dataset="c"),
+            EntitiesRow(entity_id="d", entity_label="d", entity_type="d", dataset="d"),
+            EntitiesRow(entity_id="e", entity_label="e", entity_type="e", dataset="e"),
         ]
         entities_2 = [
-            EntitiesRow(entity_id="a", entity_type="a", dataset="a"),
-            EntitiesRow(entity_id="b", entity_type="b", dataset="b"),
-            EntitiesRow(entity_id="c", entity_type="c", dataset="c"),
+            EntitiesRow(entity_id="a", entity_label="a", entity_type="a", dataset="a"),
+            EntitiesRow(entity_id="b", entity_label="b", entity_type="b", dataset="b"),
+            EntitiesRow(entity_id="c", entity_label="c", entity_type="c", dataset="c"),
         ]
         links = [
             LinksRow(doc_id="a", entity_id="a", entity_type="a", dataset="a"),
