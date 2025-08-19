@@ -251,7 +251,11 @@ from kgbench_extras.common.ontology import OntologyUtil
 
 import tempfile
 
-from pyodibel.rdf_ops.replacer import replace_to_namespace, __load_match_clusters_from_Ontology, replace_namespace
+from pyodibel.rdf_ops.replacer import replace_to_namespace, __load_match_clusters_from_Ontology, replace_namespace, replace_with_func_on_namespace
+
+import hashlib
+def generat_hashed_shade(uri: str) -> str:
+    return "http://kg.org/resource/" + hashlib.md5(uri.encode()).hexdigest()
 
 def generate_rdf(entity_list, acq_dir, output_dir, mappings, ns_mapping: dict[str, str] = {}):
 
@@ -266,6 +270,7 @@ def generate_rdf(entity_list, acq_dir, output_dir, mappings, ns_mapping: dict[st
         graph.parse(os.path.join(tempdir, file), format="nt")
         graph = enrich_type_information(graph, ontology)
         graph = replace_to_namespace(graph, clusters, "http://kg.org/ontology/")
+        graph = replace_with_func_on_namespace(graph, generat_hashed_shade, "http://dbpedia.org/resource/")
         for old_namespace, new_namespace in ns_mapping.items():
             graph = replace_namespace(graph, old_namespace, new_namespace)
         graph.serialize(os.path.join(output_dir, file), format="nt")
@@ -368,7 +373,7 @@ def bundle_rdf_source(bundle, entity_selection, entity_acq_dir, split_id):
         bundle.data.dir.as_posix(), 
         DBOnto_DIRECT_MAPPINGS,
         ns_mapping={
-            "http://dbpedia.org/resource/": f"http://kg.org/rdf/{split_id}/",
+            "http://kg.org/resource/": f"http://kg.org/rdf/{split_id}/resource/",
             "http://kg.org/ontology/": f"http://kg.org/rdf/{split_id}/ontology/"
         }
     )
@@ -411,7 +416,7 @@ def bundle_json_source(bundle, entity_selection, entity_acq_dir):
 
     bundle.meta.set_entities([EntitiesRow(entity_id=uri, entity_label=uri, entity_type="dbo:Film", dataset="dataset") for uri, _ in verfied_uris])
 
-def bundle_reference(bundle: KGBundle, entity_selection, entity_acq_dir):
+def bundle_reference(bundle: KGBundle, entity_selection, entity_acq_dir, split_id):
     # missing_files = []
     # empty_files = []
     # verfied_uris = []
@@ -424,6 +429,13 @@ def bundle_reference(bundle: KGBundle, entity_selection, entity_acq_dir):
             graph.parse(os.path.join(bundle.data.dir, file), format="nt")
 
     graph.serialize(bundle.root / "data.nt", format="nt")
+    if split_id == 0:
+        graph.serialize(bundle.root / "data_agg.nt", format="nt")
+    else:
+        # agg with previous split
+        previouse_reference_data = bundle.root / ".." / ".." / ".." / f"split_{split_id-1}" / "kg/reference/data_agg.nt"
+        graph.parse(previouse_reference_data, format="nt")
+        graph.serialize(bundle.root / "data_agg.nt", format="nt")
 
     entities_with_types = {}
     for s, _, t in graph.triples((None, RDF.type, None)):
@@ -483,7 +495,7 @@ def generate_inc_movie_kgb():
 
         # bundle reference
         if split.kg_reference is not None:
-            bundle_reference(split.kg_reference, entity_selection, entity_acq_dir)
+            bundle_reference(split.kg_reference, entity_selection, entity_acq_dir, idx)
         else:
             raise ValueError("kg_reference is None")
 
