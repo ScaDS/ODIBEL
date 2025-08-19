@@ -4,6 +4,7 @@ from rdflib import Graph, URIRef, Literal, RDF, OWL
 from kgbench.evaluation.cluster import MatchCluster
 from kgbench_extras.common.ontology import Ontology, OntologyUtil
 from pathlib import Path
+from typing import Callable
 
 def __load_match_clusters_from_Ontology(ontology: Ontology) -> MatchCluster:
     """
@@ -69,6 +70,22 @@ def replace_to_namespace(graph: Graph, clusters: MatchCluster, equivalent_namesp
 
     return new_graph
 
+def replace_with_func_on_namespace(graph: Graph, func: Callable[[str], str], selected_namespace: str) -> Graph:
+    """
+    Replace all URIs in a graph that start with a given namespace with the equivalent namespace.
+    """
+    new_graph = Graph()
+    
+    for s, p, o in graph:
+        if isinstance(s, URIRef) and s.startswith(selected_namespace):
+            s = URIRef(func(str(s)))
+        if isinstance(p, URIRef) and p.startswith(selected_namespace):
+            p = URIRef(func(str(p)))
+        if isinstance(o, URIRef) and o.startswith(selected_namespace):
+            o = URIRef(func(str(o)))
+        new_graph.add((s, p, o))
+    
+    return new_graph
 
 def test_replace_namespace():
     graph = Graph()
@@ -87,7 +104,19 @@ def test_replace_to_namespace():
     graph = replace_to_namespace(graph, match_clusters, "http://kg.org/ontology/")
     print(graph.serialize(format="nt"))
 
+def test_replace_with_func_on_namespace():
+    graph = Graph()
+    graph.parse("/home/marvin/project/data/acquisiton/film1k_bundle/split_0/kg/seed/data.nt", format="nt")
+
+    import hashlib
+    def generat_hashed_shade(uri: str) -> str:
+        return "http://kg.org/resource/" + hashlib.md5(uri.encode()).hexdigest()
+
+    graph = replace_with_func_on_namespace(graph, generat_hashed_shade, "http://dbpedia.org/resource/")
+    print(graph.serialize(format="nt"))
+
 if __name__ == "__main__":
-    test_replace_namespace()
-    test_replace_to_namespace()
+    # test_replace_namespace()
+    # test_replace_to_namespace()
+    test_replace_with_func_on_namespace()
 
