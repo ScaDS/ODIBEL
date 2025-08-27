@@ -15,6 +15,14 @@ from pathlib import Path
 
 load_dotenv()
 
+BUNDLE_DIR = Path("/home/marvin/project/data/final/film_10k")
+ENTITY_LIST_PATH = Path("/home/marvin/project/data/acq/selection_10k_dbpedia_film")
+ACQ_DIR = Path("/home/marvin/project/data/work/")
+NUM_SUBSETS = 4
+OVERLAP_RATIO = 0.04
+SUBSET_SIZE = 2500
+#250
+
 opt_ontology_path = os.getenv("ONTOLOGY_PATH")
 if opt_ontology_path is None:
     raise ValueError("ONTOLOGY_PATH is not set")
@@ -91,7 +99,7 @@ DBProp_DIRECT_MAPPINGS = {
 # dbp:music
     f"{NAMESPACE_DBProp}music": DirectMappingType.LITERAL,
 # dbp:title # TODO check if this is correct
-    f"{NAMESPACE_DBProp}title": DirectMappingType.LITERAL,
+    # f"{NAMESPACE_DBProp}title": DirectMappingType.LITERAL,
 # dbp:birthDate
     f"{NAMESPACE_DBProp}birthDate": DirectMappingType.LITERAL,
 # dbp:deathDate
@@ -101,7 +109,7 @@ DBProp_DIRECT_MAPPINGS = {
 # dbp:deathPlace
     f"{NAMESPACE_DBProp}deathPlace": DirectMappingType.LITERAL,
 # dbp:occupation
-    f"{NAMESPACE_DBProp}occupation": DirectMappingType.LITERAL,
+    # f"{NAMESPACE_DBProp}occupation": DirectMappingType.LITERAL,
 # dbp:nationality
     f"{NAMESPACE_DBProp}nationality": DirectMappingType.LITERAL,
 # dbp:spouse
@@ -112,7 +120,7 @@ DBProp_DIRECT_MAPPINGS = {
     f"{NAMESPACE_DBProp}award": DirectMappingType.LITERAL,
 
 # dbp:name
-    f"{NAMESPACE_DBProp}name": DirectMappingType.LITERAL,
+    # f"{NAMESPACE_DBProp}name": DirectMappingType.LITERAL,
 # dbp:founded
     f"{NAMESPACE_DBProp}founded": DirectMappingType.LITERAL,
 # dbp:products
@@ -131,7 +139,7 @@ DBOnto_DIRECT_MAPPINGS = {
 # rdfs:label
     f"{NAMESPACE_RDFS}label": DirectMappingType.LITERAL,
 # foaf:name
-    f"{NAMESPACE_FOAF}name": DirectMappingType.LITERAL,
+    # f"{NAMESPACE_FOAF}name": DirectMappingType.LITERAL,
 
 # dbo:writer
     f"{NAMESPACE_DBOnto}writer": DirectMappingType.OBJECT,
@@ -154,7 +162,7 @@ DBOnto_DIRECT_MAPPINGS = {
 # dbo:musicComposer
     f"{NAMESPACE_DBOnto}musicComposer": DirectMappingType.OBJECT,
 # dbo:title
-    f"{NAMESPACE_DBOnto}title": DirectMappingType.OBJECT,
+    # f"{NAMESPACE_DBOnto}title": DirectMappingType.OBJECT,
 # dbo:birthDate
     f"{NAMESPACE_DBOnto}birthDate": DirectMappingType.OBJECT,
 # dbo:deathDate
@@ -164,7 +172,7 @@ DBOnto_DIRECT_MAPPINGS = {
 # dbo:deathPlace
     f"{NAMESPACE_DBOnto}deathPlace": DirectMappingType.OBJECT,
 # dbo:occupation
-    f"{NAMESPACE_DBOnto}occupation": DirectMappingType.OBJECT,
+    # f"{NAMESPACE_DBOnto}occupation": DirectMappingType.OBJECT,
 # dbo:nationality
     f"{NAMESPACE_DBOnto}nationality": DirectMappingType.OBJECT,
 # dbo:spouse
@@ -172,7 +180,7 @@ DBOnto_DIRECT_MAPPINGS = {
 # dbo:child
     f"{NAMESPACE_DBOnto}child": DirectMappingType.OBJECT,
 # dbo:award
-    f"{NAMESPACE_DBOnto}award": DirectMappingType.OBJECT,
+    f"{NAMESPACE_DBOnto}award": DirectMappingType.OBJECT, # TODO
 
 # dbo:foundingDate
     f"{NAMESPACE_DBOnto}foundingDate": DirectMappingType.OBJECT,
@@ -190,9 +198,9 @@ DBOnto_DIRECT_MAPPINGS = {
 # DIR_OUTPUT = os.getenv("DIR_OUTPUT")
 # DIR_SPLIT_FILES = os.getenv("DIR_SPLIT_FILES")
 
-DIR_RAW_DATA = "/home/marvin/project/data/filehash_raw_data"
-DIR_OUTPUT = "/home/marvin/project/data/inc-movie-1k"
-DIR_SPLIT_FILES = "/home/marvin/project/data/acquisiton/splits1k20n"
+DIR_RAW_DATA = ACQ_DIR / "reference"
+# DIR_OUTPUT = "/home/marvin/project/data/inc-movie-1k"
+# DIR_SPLIT_FILES = "/home/marvin/project/data/acquisiton/splits1k20n"
 
 def generate_split_files():
     # split -l 200 --numeric-suffixes=1 --suffix-length=1 --additional-suffix=.txt ../final_dbp_1k.txt split
@@ -281,31 +289,31 @@ from pyodibel.rdf_ops.construct import build_recursive_json, hash_uri
 import json
 from tqdm import tqdm
 
-def generate_json(split_file_path): 
+# def generate_json(split_file_path): 
 
-    split_name = os.path.basename(split_file_path).split(".")[0]
-    output_dir = os.path.join(DIR_OUTPUT, split_name, "json")
-    output_dir_tmp = os.path.join(DIR_OUTPUT, split_name, "json_tmp")
-    os.makedirs(output_dir, exist_ok=True)
-    os.makedirs(output_dir_tmp, exist_ok=True)
+#     split_name = os.path.basename(split_file_path).split(".")[0]
+#     output_dir = os.path.join(DIR_OUTPUT, split_name, "json")
+#     output_dir_tmp = os.path.join(DIR_OUTPUT, split_name, "json_tmp")
+#     os.makedirs(output_dir, exist_ok=True)
+#     os.makedirs(output_dir_tmp, exist_ok=True)
 
-    uri_list = read_uri_list_file(split_file_path)
-    print(f"Generating JSON tmp RDF for {split_name} with {len(uri_list)} URIs")
+#     uri_list = read_uri_list_file(split_file_path)
+#     print(f"Generating JSON tmp RDF for {split_name} with {len(uri_list)} URIs")
 
-    construct_graph_from_root_uris(
-        uri_list, 
-        DIR_RAW_DATA, 
-        output_dir_tmp, 
-        DBProp_DIRECT_MAPPINGS
-    )
+#     construct_graph_from_root_uris(
+#         uri_list, 
+#         DIR_RAW_DATA, 
+#         output_dir_tmp, 
+#         DBProp_DIRECT_MAPPINGS
+#     )
 
-    tmp_store = FileHashStore2(base_dir=output_dir_tmp)
-    print(f"Generating JSON for {split_name} with {len(uri_list)} URIs")
-    for uri in tqdm(uri_list):
-        graph = tmp_store.retrieve(uri)
-        jsondata = build_recursive_json(uri, graph)
-        with open(os.path.join(output_dir, hash_uri(uri)+".json"), "w") as f:
-            json.dump(jsondata, f, indent=4)
+#     tmp_store = FileHashStore2(base_dir=output_dir_tmp)
+#     print(f"Generating JSON for {split_name} with {len(uri_list)} URIs")
+#     for uri in tqdm(uri_list):
+#         graph = tmp_store.retrieve(uri)
+#         jsondata = build_recursive_json(uri, graph)
+#         with open(os.path.join(output_dir, hash_uri(uri)+".json"), "w") as f:
+#             json.dump(jsondata, f, indent=4)
 
 
 
@@ -469,12 +477,12 @@ def bundle_seed(bundle: KGBundle, entity_selection, entity_acq_dir):
 
 def generate_inc_movie_kgb():
 
-    entity_list_path = "/home/marvin/project/data/acquisiton/final_dbp_1k.txt"
-    entity_acq_dir = "/home/marvin/project/data/acquisiton/film1k_acq"
+    entity_list_path = ENTITY_LIST_PATH
+    entity_acq_dir = ACQ_DIR
 
-    subsets = generate_overlap_xyz(entity_list_path, 4, 0.04, 250)
+    subsets = generate_overlap_xyz(entity_list_path, NUM_SUBSETS, OVERLAP_RATIO, SUBSET_SIZE)
 
-    ds = Dataset(root=Path("/home/marvin/project/data/acquisiton/film1k_bundle"))
+    ds = Dataset(root=BUNDLE_DIR)
     ds.set_entities_master(open(entity_list_path, "r").readlines())
 
     ds.set_splits(0, len(subsets))
@@ -489,13 +497,13 @@ def generate_inc_movie_kgb():
 
         # bundle seed
         if split.kg_seed is not None: 
-            bundle_seed(split.kg_seed, entity_selection, entity_acq_dir)
+            bundle_seed(split.kg_seed, entity_selection, entity_acq_dir.as_posix())
         else:
             raise ValueError("kg_seed is None")
 
         # bundle reference
         if split.kg_reference is not None:
-            bundle_reference(split.kg_reference, entity_selection, entity_acq_dir, idx)
+            bundle_reference(split.kg_reference, entity_selection, entity_acq_dir.as_posix(), idx)
         else:
             raise ValueError("kg_reference is None")
 
@@ -503,9 +511,9 @@ def generate_inc_movie_kgb():
         source_types = [SourceType.rdf, SourceType.json, SourceType.text]
         split.set_sources(source_types)
 
-        bundle_text_source(split.sources[SourceType.text], entity_selection, entity_acq_dir)
-        bundle_rdf_source(split.sources[SourceType.rdf], entity_selection, entity_acq_dir, idx)
-        bundle_json_source(split.sources[SourceType.json], entity_selection, entity_acq_dir)
+        bundle_text_source(split.sources[SourceType.text], entity_selection, entity_acq_dir.as_posix())
+        bundle_rdf_source(split.sources[SourceType.rdf], entity_selection, entity_acq_dir.as_posix(), idx)
+        bundle_json_source(split.sources[SourceType.json], entity_selection, entity_acq_dir.as_posix())
 
 def test_generate_inc_movie_kgb():
     generate_inc_movie_kgb()
@@ -514,19 +522,19 @@ def evaluate_inc_movie_kgb():
     pass
 
 def test_convert_to_json():
-    uri_list = read_uri_list_file("/home/marvin/project/data/acquisiton/final_dbp_1k.txt")
-    output_dir_tmp = "/home/marvin/project/data/acquisiton/film1k_acq/json_tmp/"
-    output_dir = "/home/marvin/project/data/acquisiton/film1k_acq/json/"
+    uri_list = read_uri_list_file(ENTITY_LIST_PATH)
+    output_dir_tmp = ACQ_DIR / "json_tmp"
+    output_dir = ACQ_DIR / "json"
     os.makedirs(output_dir_tmp, exist_ok=True)
 
     construct_graph_from_root_uris(
         uri_list, 
-        DIR_RAW_DATA, 
-        output_dir_tmp, 
+        DIR_RAW_DATA.as_posix(), 
+        output_dir_tmp.as_posix(), 
         DBProp_DIRECT_MAPPINGS
     )
 
-    tmp_store = FileHashStore2(base_dir=output_dir_tmp)
+    tmp_store = FileHashStore2(base_dir=output_dir_tmp.as_posix())
     for uri in tqdm(uri_list):
         graph = tmp_store.retrieve(uri)
         jsondata = build_recursive_json(uri, graph)
@@ -554,7 +562,7 @@ def get_all_entities_with_types(film_subset, seed_dir) -> dict[str, str]:
 def test_generate_split_matches():
     # TODO get all entities from reference and calculate overlap with each split
 
-    ds = load_dataset(Path("/home/marvin/project/data/acquisiton/film1k_bundle"))
+    ds = load_dataset(BUNDLE_DIR)
 
     full_subsets_named: dict[str, dict[str, str]] = {}
 
@@ -599,7 +607,7 @@ def test_generate_split_matches():
         ratio = len(overlap) / len(full_subsets_named[keys[i]])
         overlap_ratios[f"{keys[i]}-{keys[j]}"] = ratio
     
-    with open("/home/marvin/project/data/acquisiton/film1k_bundle/split_match_entities.csv", "w") as f:
+    with open(BUNDLE_DIR / "split_match_entities.csv", "w") as f:
         f.write("left_dataset\tleft_id\tright_dataset\tright_id\n")
         for match in matches:
             f.write(f"{match.left_dataset}\t{match.left_id}\t{match.right_dataset}\t{match.right_id}\n")
