@@ -15,12 +15,12 @@ from pathlib import Path
 
 load_dotenv()
 
-BUNDLE_DIR = Path("/home/marvin/project/data/final/film_10k")
-ENTITY_LIST_PATH = Path("/home/marvin/project/data/acq/selection_10k_dbpedia_film")
+BUNDLE_DIR = Path("/home/marvin/project/data/final/film_100")
+ENTITY_LIST_PATH = Path("/home/marvin/project/data/acq/selection_100_dbpedia_film")
 ACQ_DIR = Path("/home/marvin/project/data/work/")
 NUM_SUBSETS = 4
 OVERLAP_RATIO = 0.04
-SUBSET_SIZE = 2500
+SUBSET_SIZE = 25
 #250
 
 opt_ontology_path = os.getenv("ONTOLOGY_PATH")
@@ -117,7 +117,7 @@ DBProp_DIRECT_MAPPINGS = {
 # dbp:child
     f"{NAMESPACE_DBProp}child": DirectMappingType.LITERAL,
 # dbp:award
-    f"{NAMESPACE_DBProp}award": DirectMappingType.LITERAL,
+    # f"{NAMESPACE_DBProp}award": DirectMappingType.LITERAL,
 
 # dbp:name
     # f"{NAMESPACE_DBProp}name": DirectMappingType.LITERAL,
@@ -141,6 +141,8 @@ DBOnto_DIRECT_MAPPINGS = {
 # foaf:name
     # f"{NAMESPACE_FOAF}name": DirectMappingType.LITERAL,
 
+# === Film ===
+
 # dbo:writer
     f"{NAMESPACE_DBOnto}writer": DirectMappingType.OBJECT,
 # dbo:starring
@@ -152,46 +154,53 @@ DBOnto_DIRECT_MAPPINGS = {
 # dbo:distributor
     f"{NAMESPACE_DBOnto}distributor": DirectMappingType.OBJECT,
 # dbo:runtime
-    f"{NAMESPACE_DBOnto}runtime": DirectMappingType.OBJECT,
+    f"{NAMESPACE_DBOnto}runtime": DirectMappingType.LITERAL,
 # dbo:producer
     f"{NAMESPACE_DBOnto}producer": DirectMappingType.OBJECT,
 # dbo:budget
-    f"{NAMESPACE_DBOnto}budget": DirectMappingType.OBJECT,
+    f"{NAMESPACE_DBOnto}budget": DirectMappingType.LITERAL,
+# dbo:gross
+    f"{NAMESPACE_DBOnto}gross": DirectMappingType.LITERAL,
 # dbo:cinematography
     f"{NAMESPACE_DBOnto}cinematography": DirectMappingType.OBJECT,
 # dbo:musicComposer
     f"{NAMESPACE_DBOnto}musicComposer": DirectMappingType.OBJECT,
+
+# === Person ===
+
 # dbo:title
     # f"{NAMESPACE_DBOnto}title": DirectMappingType.OBJECT,
 # dbo:birthDate
-    f"{NAMESPACE_DBOnto}birthDate": DirectMappingType.OBJECT,
+    f"{NAMESPACE_DBOnto}birthDate": DirectMappingType.LITERAL,
 # dbo:deathDate
-    f"{NAMESPACE_DBOnto}deathDate": DirectMappingType.OBJECT,
+    f"{NAMESPACE_DBOnto}deathDate": DirectMappingType.LITERAL,
 # dbo:birthPlace
-    f"{NAMESPACE_DBOnto}birthPlace": DirectMappingType.OBJECT,
+    f"{NAMESPACE_DBOnto}birthPlace": DirectMappingType.LITERAL,
 # dbo:deathPlace
-    f"{NAMESPACE_DBOnto}deathPlace": DirectMappingType.OBJECT,
+    f"{NAMESPACE_DBOnto}deathPlace": DirectMappingType.LITERAL,
 # dbo:occupation
     # f"{NAMESPACE_DBOnto}occupation": DirectMappingType.OBJECT,
 # dbo:nationality
-    f"{NAMESPACE_DBOnto}nationality": DirectMappingType.OBJECT,
+    f"{NAMESPACE_DBOnto}nationality": DirectMappingType.LITERAL,
 # dbo:spouse
     f"{NAMESPACE_DBOnto}spouse": DirectMappingType.OBJECT,
 # dbo:child
     f"{NAMESPACE_DBOnto}child": DirectMappingType.OBJECT,
 # dbo:award
-    f"{NAMESPACE_DBOnto}award": DirectMappingType.OBJECT, # TODO
+    # f"{NAMESPACE_DBOnto}award": DirectMappingType.LITERAL, 
+
+# === Company ===
 
 # dbo:foundingDate
-    f"{NAMESPACE_DBOnto}foundingDate": DirectMappingType.OBJECT,
+    f"{NAMESPACE_DBOnto}foundingDate": DirectMappingType.LITERAL,
 # dbo:industry
-    f"{NAMESPACE_DBOnto}industry": DirectMappingType.OBJECT,
+    f"{NAMESPACE_DBOnto}industry": DirectMappingType.LITERAL,
 # dbo:revenue
-    f"{NAMESPACE_DBOnto}revenue": DirectMappingType.OBJECT,
+    f"{NAMESPACE_DBOnto}revenue": DirectMappingType.LITERAL,
 # dbo:numberOfEmployees
-    f"{NAMESPACE_DBOnto}numberOfEmployees": DirectMappingType.OBJECT,
+    f"{NAMESPACE_DBOnto}numberOfEmployees": DirectMappingType.LITERAL,
 # dbo:headquarter
-    f"{NAMESPACE_DBOnto}headquarter": DirectMappingType.OBJECT,
+    f"{NAMESPACE_DBOnto}headquarter": DirectMappingType.LITERAL,
 }
 
 # DIR_RAW_DATA = os.getenv("DIR_RAW_DATA")
