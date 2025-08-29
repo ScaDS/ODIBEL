@@ -90,7 +90,7 @@ def construct_graph_from_root_uris(uris: list[str], base_dir: str, output_dir: s
 
     empty_graphs = 0
 
-    for uri in tqdm(uris):
+    for uri in tqdm(uris, desc="Constructing graph from root URIs"):
         graph = input_store.retrieve(uri)
         new_graph = Graph()
         
