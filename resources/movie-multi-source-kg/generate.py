@@ -484,6 +484,35 @@ def bundle_seed(bundle: KGBundle, entity_selection, entity_acq_dir):
 
 # ================================================
 
+def generate_split_bundles(subset, idx, ds, entity_acq_dir):
+    split = ds.splits[f"split_{idx}"]
+    split.set_empty_reference()
+    split.set_empty_seed()
+
+    entity_selection = subset
+    split.set_index([EntitiesRow(entity_id=uri, entity_label=uri, entity_type="entity", dataset="dataset") for uri in entity_selection])
+
+    # bundle seed
+    if split.kg_seed is not None: 
+        bundle_seed(split.kg_seed, entity_selection, entity_acq_dir.as_posix())
+    else:
+        raise ValueError("kg_seed is None")
+
+    # bundle reference
+    if split.kg_reference is not None:
+        bundle_reference(split.kg_reference, entity_selection, entity_acq_dir.as_posix(), idx)
+    else:
+        raise ValueError("kg_reference is None")
+
+    # bundle sources
+    source_types = [SourceType.rdf, SourceType.json, SourceType.text]
+    split.set_sources(source_types)
+
+    bundle_text_source(split.sources[SourceType.text], entity_selection, entity_acq_dir.as_posix())
+    bundle_rdf_source(split.sources[SourceType.rdf], entity_selection, entity_acq_dir.as_posix(), idx)
+    bundle_json_source(split.sources[SourceType.json], entity_selection, entity_acq_dir.as_posix())
+
+
 def generate_inc_movie_kgb():
 
     entity_list_path = ENTITY_LIST_PATH
@@ -496,33 +525,9 @@ def generate_inc_movie_kgb():
 
     ds.set_splits(0, len(subsets))
 
+    # TODO parallelize
     for idx, subset in enumerate(subsets):
-        split = ds.splits[f"split_{idx}"]
-        split.set_empty_reference()
-        split.set_empty_seed()
-
-        entity_selection = subset
-        split.set_index([EntitiesRow(entity_id=uri, entity_label=uri, entity_type="entity", dataset="dataset") for uri in entity_selection])
-
-        # bundle seed
-        if split.kg_seed is not None: 
-            bundle_seed(split.kg_seed, entity_selection, entity_acq_dir.as_posix())
-        else:
-            raise ValueError("kg_seed is None")
-
-        # bundle reference
-        if split.kg_reference is not None:
-            bundle_reference(split.kg_reference, entity_selection, entity_acq_dir.as_posix(), idx)
-        else:
-            raise ValueError("kg_reference is None")
-
-        # bundle sources
-        source_types = [SourceType.rdf, SourceType.json, SourceType.text]
-        split.set_sources(source_types)
-
-        bundle_text_source(split.sources[SourceType.text], entity_selection, entity_acq_dir.as_posix())
-        bundle_rdf_source(split.sources[SourceType.rdf], entity_selection, entity_acq_dir.as_posix(), idx)
-        bundle_json_source(split.sources[SourceType.json], entity_selection, entity_acq_dir.as_posix())
+        generate_split_bundles(subset, idx, ds, entity_acq_dir)
 
 def test_generate_inc_movie_kgb():
     generate_inc_movie_kgb()
