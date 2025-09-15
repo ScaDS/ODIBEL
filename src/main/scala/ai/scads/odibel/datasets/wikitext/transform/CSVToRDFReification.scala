@@ -1,6 +1,7 @@
 package ai.scads.odibel.datasets.wikitext.transform
 
 import ai.scads.odibel.datasets.wikitext.transform.SerUtil
+import org.apache.spark.sql.Row
 
 import java.io.{BufferedReader, FileReader}
 
@@ -39,10 +40,10 @@ object CSVToRDFReification {
       .getOrCreate()
 
     try {
-      val df = spark.read.option("header", "true").csv(inputPath)
-      val rdfData = df.rdd.mapPartitions { rows =>
-        rows.map(row => convertRowToRDF(row.mkString(",")))
-      }
+      val lines = spark.read.textFile(inputPath)
+      val rdfData = lines.rdd
+        .map(line => convertRowToRDF(line))
+        .filter(_.nonEmpty)
 
       spark.sparkContext.parallelize(Seq(PREFIXES)).saveAsTextFile(outputPath + "_prefixes")
       rdfData.saveAsTextFile(outputPath + "_data")
@@ -53,6 +54,7 @@ object CSVToRDFReification {
     }
   }
 
+
   private def runWithoutSpark(inputPath: String, outputPath: String): Unit = {
     println("Using Java Streams (no Spark)...")
     val writer = new java.io.PrintWriter(outputPath)
@@ -60,7 +62,7 @@ object CSVToRDFReification {
 
     try {
       val reader = new BufferedReader(new FileReader(inputPath))
-      var line: String = null
+      var line: String = reader.readLine() // Skip header line
       var count = 0
 
       while ({line = reader.readLine(); line != null}) {
@@ -75,23 +77,48 @@ object CSVToRDFReification {
     }
   }
 
-  private def convertRowToRDF(line:String): String = {
-    SerUtil.readCsvLine(line) match {
-      case Some(SerUtil.RDFTriple(head, rel, literal, langTagOpt, tStart, tEnd, rStart, rEnd)) =>
-        val langTagStr = langTagOpt.getOrElse("")
-        s"""_:b${System.nanoTime()} a rdf:Statement ;
-                     |    rdf:subject <$head> ;
-                     |    rdf:predicate <$rel> ;
-                     |    rdf:object "$literal"$langTagStr ;
-                     |    rel:tStart "$tStart"^^xsd:dateTime ;
-                     |    rel:tEnd "$tEnd"^^xsd:dateTime ;
-                     |    rel:rStart $rStart^^xsd:dateTime ;
-                     |    rel:rEnd $rEnd^^xsd:dateTime .
-                     |""".stripMargin
 
-      case None => ""
+  private def convertRowToRDF(line:String): String = {
+    try{
+
+      val cleanedLine = line.replace("\\\"\"", "")
+
+      SerUtil.readCsvLine(cleanedLine) match {
+        case Some(SerUtil.RDFTriple(head, rel, literal, langTagOpt, tStart, tEnd, rStart, rEnd)) =>
+
+
+          val objectPart = langTagOpt match {
+            case Some(tag) if tag.nonEmpty => s""""$literal"$tag"""
+            case _ if isUri(literal)       => s"<$literal>"
+            case _                         => s""""$literal""""
+          }
+
+          s"""_:b${System.nanoTime()} a rdf:Statement ;
+             |    rdf:subject <$head> ;
+             |    rdf:predicate <$rel> ;
+             |    rdf:object $objectPart ;
+             |    rel:tStart "$tStart"^^xsd:dateTime ;
+             |    rel:tEnd "$tEnd"^^xsd:dateTime ;
+             |    rel:rStart $rStart^^xsd:dateTime ;
+             |    rel:rEnd $rEnd^^xsd:dateTime .
+             |""".stripMargin
+
+        case None => ""
+      }
+
+    } catch {
+      case _: NumberFormatException =>
+        println("Error reading row - SKIP")
+        ""
+      case e: Exception =>
+        println(s"Unexpected error: ${e.getMessage}")
+        ""
     }
   }
 
+  def isUri(s: String): Boolean = {
+    val uriRegex = "^[a-zA-Z][a-zA-Z0-9+.-]*:.*".r  // begins with http://, https://, ftp:, urn:, ...
+    uriRegex.pattern.matcher(s).matches
+  }
 
 }
