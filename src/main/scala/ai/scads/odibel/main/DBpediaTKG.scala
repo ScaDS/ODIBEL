@@ -5,10 +5,9 @@ import ai.scads.odibel.datasets.wikitext.transform.SerUtil
 import ai.scads.odibel.datasets.wikitext.utils.{FlatPageRevisionPartitioner, WikiDumpFlatter}
 import ai.scads.odibel.datasets.wikitext.{DBpediaTKGExtraction, DBpediaTKGExtractionSpark}
 import ai.scads.odibel.main.DBpediaTKG.{FlatRepartitioner, TemporalExtraction, WikidumpRevisionSplit}
-import ai.scads.odibel.utils.HDFSUtil
 import picocli.CommandLine.{Command, Option}
 
-import java.io.{File, OutputStreamWriter, StringWriter}
+import java.io.{File, FileInputStream, FileOutputStream, InputStream, OutputStream, OutputStreamWriter, StringWriter}
 import java.nio.charset.StandardCharsets
 import java.util.concurrent.Callable
 import scala.io.Source
@@ -93,57 +92,77 @@ object DBpediaTKG {
     var diefEndpoints: java.util.ArrayList[String] = _
 
     override def call(): Int = {
-      System.err.println(s"in: ${in} out: ${out}")
+      System.err.println(s"in: $in out: $out")
 
       val extraction = new DBpediaTKGExtraction
 
-      if (in == "-") {
-        val inSource = Source.stdin
-        val ters: Iterator[TemporalExtractionResult] = extraction.processStream(inSource.getLines(), diefEndpoints.asScala.head)
+      def inputStreamFrom(path: String): InputStream = {
+        path match {
+          case "-" =>
+            System.in
+          case p if p.startsWith("hdfs://") =>
+            val fs = new org.apache.hadoop.fs.Path(p)
+            val conf = new org.apache.hadoop.conf.Configuration()
+            val fileSystem = fs.getFileSystem(conf)
+            fileSystem.open(fs)
+          case p =>
+            new FileInputStream(p)
+        }
+      }
+
+      def outputStreamTo(path: String): OutputStream = {
+        path match {
+          case "-" =>
+            System.out
+          case p if p.startsWith("hdfs://") =>
+            val fs = new org.apache.hadoop.fs.Path(p)
+            val conf = new org.apache.hadoop.conf.Configuration()
+            val fileSystem = fs.getFileSystem(conf)
+            if (fileSystem.exists(fs)) fileSystem.delete(fs, true)
+            fileSystem.create(fs, true)
+          case p =>
+            new FileOutputStream(p)
+        }
+      }
+
+      val inStream = inputStreamFrom(in)
+      val outStream = outputStreamTo(out)
+
+      try {
+        val ters: Iterator[TemporalExtractionResult] =
+          extraction.processStream(Source.fromInputStream(inStream).getLines(), diefEndpoints.asScala.head)
 
         format match {
           case "csv" =>
             import com.univocity.parsers.csv._
-            // Create a CSV writer
             val writerSettings = new CsvWriterSettings()
-            writerSettings.setHeaderWritingEnabled(true) // Include headers
+            writerSettings.setHeaderWritingEnabled(true)
 
-            //        val stringWriter = new OutputStreamWriter(System.out)
-            val csvWriter = new CsvWriter(System.out, writerSettings)
-
-            // Write header row
+            val csvWriter = new CsvWriter(new OutputStreamWriter(outStream, StandardCharsets.UTF_8), writerSettings)
             csvWriter.writeHeaders("head", "rel", "tail", "rStart", "rEnd", "tStart", "tEnd")
 
-            ters.foreach(ter => {
+            ters.foreach(ter =>
               csvWriter.writeRow(ter.head, ter.rel, ter.tail, ter.rFrom, ter.rUntil, ter.tFrom, ter.tUntil)
-            })
+            )
             csvWriter.flush()
+
           case "ngraph" =>
-            val os = System.out
             ters.flatMap(SerUtil.buildQuads).grouped(100).foreach(rows => {
-              os.write((rows.mkString("\n")+"\n").getBytes(StandardCharsets.UTF_8))
-              os.flush()
+              outStream.write((rows.mkString("\n") + "\n").getBytes(StandardCharsets.UTF_8))
+              outStream.flush()
             })
+
           case value =>
-            System.err.println(s"format ${value} not implemented")
+            System.err.println(s"format $value not implemented")
         }
-
-      } else {
-        val urls = parseEndpointPatternList(diefEndpoints)
-
-        val hdfs = new HDFSUtil(out)
-        hdfs.createDir(out)
-        hdfs.getFs.close()
-
-        System.err.println(urls)
-
-        val extraction = new DBpediaTKGExtraction
-        extraction.process(in, out, urls)
+      } finally {
+        if (in != "-") inStream.close()
+        if (out != "-") outStream.close()
       }
+
       0
     }
   }
-
   @Command(name = "partition")
   class FlatRepartitioner extends Callable[Int] {
 
@@ -178,3 +197,4 @@ class DBpediaTKG extends Callable[Int] {
     0
   }
 }
+
