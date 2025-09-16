@@ -19,10 +19,10 @@ class OutputEval extends Callable[Int] {
   // Type Changes (requires join)
 
   @Option(names = Array("--in", "-i"), required = true)
-  var in: File = _
+  var in: String = _
 
   @Option(names = Array("--out", "-o"), required = true)
-  var out: File = _
+  var out: String = _
 
   @Option(names = Array("--functions", "-f"), split = ",", required = false)
   var functionNamesToExecute: java.util.ArrayList[String] = _
@@ -35,7 +35,7 @@ class OutputEval extends Callable[Int] {
       .write
       .mode("overwrite")
       .option("header", "true")
-      .csv(new File(out, name).getPath)
+      .csv(out)
   }
   // start end triple stats
 
@@ -47,7 +47,7 @@ class OutputEval extends Callable[Int] {
   // count types (classes used)
   // count relations (predicate vocabulary)
   def summary(): DataFrame = {
-    val df = sql.read.parquet(in.getPath)
+    val df = sql.read.parquet(in)
 //        .withColumn("tFrom", $"tFrom".cast("long"))
 //        .withColumn("tUntil", $"tUntil".cast("long"))
 //        .as[TemporalExtractionResult]
@@ -69,7 +69,7 @@ class OutputEval extends Callable[Int] {
 
   // TODO Marvin, Max
   def dailyWindowCounts(): Unit = {
-    val df = sql.read.json(in.getPath)
+    val df = sql.read.json(in)
       .withColumn("tFrom", date_format(to_date(from_unixtime($"tFrom".cast("long"))),"yyyy-MM-dd"))
       .withColumn("tUntil",date_format(to_date(from_unixtime($"tUntil".cast("long"))), "yyyy-MM-dd"))
       .select("tFrom","tUntil").groupBy("tFrom","tUntil").count().orderBy(desc("count")).show()
@@ -82,7 +82,7 @@ class OutputEval extends Callable[Int] {
   }
 
   def hourWindowDistribution(): DataFrame = {
-    val df = sql.read.parquet(in.getPath)
+    val df = sql.read.parquet(in)
 //      .withColumn("tFrom", date_format(to_date(from_unixtime($"tFrom".cast("long"))),"yyyy-MM-dd hh"))
 //      .withColumn("tUntil",date_format(to_date(from_unixtime($"tUntil".cast("long"))), "yyyy-MM-dd hh"))
       .withColumn("tFrom", $"tFrom".cast("long"))
@@ -104,7 +104,7 @@ class OutputEval extends Callable[Int] {
         writeOut("hourWindowDistribution",hourWindowDistribution())
       }),
       "countStartTriplesOverTime" -> (() => {
-        val df = sql.read.parquet(in.getPath)
+        val df = sql.read.parquet(in)
           .withColumn("tFrom", $"tFrom".cast("long"))
           .withColumn("tUntil", $"tUntil".cast("long"))
           .as[TemporalExtractionResult]
@@ -118,7 +118,7 @@ class OutputEval extends Callable[Int] {
 //        writeOut("countStartTriplesOverTime",EvalFunctions.countStartTriplesOverTime(df))
 //      }),
       "countEndTriplesOverTime" -> (() => {
-        val df = sql.read.parquet(in.getPath)
+        val df = sql.read.parquet(in)
           .withColumn("tFrom", $"tFrom".cast("long"))
           .withColumn("tUntil", $"tUntil".cast("long"))
           .as[TemporalExtractionResult]
