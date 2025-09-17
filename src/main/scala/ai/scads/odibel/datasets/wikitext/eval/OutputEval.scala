@@ -48,8 +48,8 @@ class OutputEval extends Callable[Int] {
   // count relations (predicate vocabulary)
   def summary(): DataFrame = {
     val df = sql.read.parquet(in)
-//        .withColumn("tFrom", $"tFrom".cast("long"))
-//        .withColumn("tUntil", $"tUntil".cast("long"))
+//        .withColumn("tStart", $"tStart".cast("long"))
+//        .withColumn("tEnd", $"tEnd".cast("long"))
 //        .as[TemporalExtractionResult]
 
     val triples = df.distinct().count()
@@ -57,7 +57,7 @@ class OutputEval extends Callable[Int] {
     val distinctEntities = df.select("head").distinct().count()
     val distinctTypes = df.filter(col("rel") === VOCAB.RDFType).select("tail").distinct().count()
     val distinctRelations = df.select(col("rel")).distinct().count()
-    val distinctVersions = df.select("tFrom").union(df.select("tUntil")).distinct().count()
+    val distinctVersions = df.select("tStart").union(df.select("tEnd")).distinct().count()
 
     sql.sparkContext.parallelize(Seq(TKGSummary(triples,distinctTriples,distinctEntities, distinctTypes,distinctRelations, distinctVersions))).toDF()
   }
@@ -70,26 +70,26 @@ class OutputEval extends Callable[Int] {
   // TODO Marvin, Max
   def dailyWindowCounts(): Unit = {
     val df = sql.read.json(in)
-      .withColumn("tFrom", date_format(to_date(from_unixtime($"tFrom".cast("long"))),"yyyy-MM-dd"))
-      .withColumn("tUntil",date_format(to_date(from_unixtime($"tUntil".cast("long"))), "yyyy-MM-dd"))
-      .select("tFrom","tUntil").groupBy("tFrom","tUntil").count().orderBy(desc("count")).show()
+      .withColumn("tStart", date_format(to_date(from_unixtime($"tStart".cast("long"))),"yyyy-MM-dd"))
+      .withColumn("tEnd",date_format(to_date(from_unixtime($"tEnd".cast("long"))), "yyyy-MM-dd"))
+      .select("tStart","tEnd").groupBy("tStart","tEnd").count().orderBy(desc("count")).show()
 
-    //      .withColumn("tFrom", $"tFrom".cast("long"))00
-    //      .withColumn("tUntil", $"tUntil".cast("long"))
+    //      .withColumn("tStart", $"tStart".cast("long"))00
+    //      .withColumn("tEnd", $"tEnd".cast("long"))
     //      .as[TemporalExtractionResult]
-    //      .withColumn("tFrom",to_date($"tFrom"))
-    //      .withColumn("tUntil",to_date($"tUntil"))
+    //      .withColumn("tStart",to_date($"tStart"))
+    //      .withColumn("tEnd",to_date($"tEnd"))
   }
 
   def hourWindowDistribution(): DataFrame = {
     val df = sql.read.parquet(in)
-//      .withColumn("tFrom", date_format(to_date(from_unixtime($"tFrom".cast("long"))),"yyyy-MM-dd hh"))
-//      .withColumn("tUntil",date_format(to_date(from_unixtime($"tUntil".cast("long"))), "yyyy-MM-dd hh"))
-      .withColumn("tFrom", $"tFrom".cast("long"))
-      .withColumn("tUntil", $"tUntil".cast("long"))
-      .filter($"tUntil" =!= Long.MaxValue)
-      .select("tFrom","tUntil") //.select("tFrom","tUntil").count().orderBy(desc("count")).show()
-      .withColumn("duration_hours", floor(($"tUntil" - $"tFrom") / 3600))
+//      .withColumn("tStart", date_format(to_date(from_unixtime($"tStart".cast("long"))),"yyyy-MM-dd hh"))
+//      .withColumn("tEnd",date_format(to_date(from_unixtime($"tEnd".cast("long"))), "yyyy-MM-dd hh"))
+      .withColumn("tStart", $"tStart".cast("long"))
+      .withColumn("tEnd", $"tEnd".cast("long"))
+      .filter($"tEnd" =!= Long.MaxValue)
+      .select("tStart","tEnd") //.select("tStart","tEnd").count().orderBy(desc("count")).show()
+      .withColumn("duration_hours", floor(($"tEnd" - $"tStart") / 3600))
       .filter($"duration_hours" >= 0)
       .groupBy("duration_hours").count()
     df.orderBy("duration_hours")
@@ -105,22 +105,22 @@ class OutputEval extends Callable[Int] {
       }),
       "countStartTriplesOverTime" -> (() => {
         val df = sql.read.parquet(in)
-          .withColumn("tFrom", $"tFrom".cast("long"))
-          .withColumn("tUntil", $"tUntil".cast("long"))
+          .withColumn("tStart", $"tStart".cast("long"))
+          .withColumn("tEnd", $"tEnd".cast("long"))
           .as[TemporalExtractionResult]
         writeOut("countStartTriplesOverTime",EvalFunctions.countStartTriplesOverTime(df))
       }),
 //      "countStartTriplesOverTime" -> (() => {
 //        val df = sql.read.parquet(in.getPath)
-//          .withColumn("tFrom", $"tFrom".cast("long"))
-//          .withColumn("tUntil", $"tUntil".cast("long"))
+//          .withColumn("tStart", $"tStart".cast("long"))
+//          .withColumn("tEnd", $"tEnd".cast("long"))
 //          .as[TemporalExtractionResult]
 //        writeOut("countStartTriplesOverTime",EvalFunctions.countStartTriplesOverTime(df))
 //      }),
       "countEndTriplesOverTime" -> (() => {
         val df = sql.read.parquet(in)
-          .withColumn("tFrom", $"tFrom".cast("long"))
-          .withColumn("tUntil", $"tUntil".cast("long"))
+          .withColumn("tStart", $"tStart".cast("long"))
+          .withColumn("tEnd", $"tEnd".cast("long"))
           .as[TemporalExtractionResult]
         writeOut("countEndTriplesOverTime",EvalFunctions.countEndTriplesOverTime(df))
       })
