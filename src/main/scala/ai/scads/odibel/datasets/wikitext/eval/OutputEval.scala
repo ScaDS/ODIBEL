@@ -31,7 +31,7 @@ class OutputEval extends Callable[Int] {
   import sql.implicits._
 
   def writeOut(name: String, ds: DataFrame): Unit = {
-    ds
+    ds.repartition(100)
       .write
       .mode("overwrite")
       .option("header", "true")
