@@ -28,6 +28,7 @@ class OutputEval extends Callable[Int] {
   var functionNamesToExecute: java.util.ArrayList[String] = _
 
   private val sql = SparkSessionUtil.sql
+  sql.setConf("spark.local.dir", "/local/d1/data/workspace/dbpedia-tkg/tmp")
   import sql.implicits._
 
   def writeOut(name: String, ds: DataFrame): Unit = {
