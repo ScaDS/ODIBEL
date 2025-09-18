@@ -10,4 +10,4 @@ package ai.scads.odibel.datasets.wikitext.data
  * @param tStart
  * @param tEnd
  */
-case class TemporalExtractionResult(head: String, rel: String, tail: String, rStart: String, rEnd: String, tStart: Long, tEnd: Long)
+case class TemporalExtractionResult(head: String, rel: String, tail: String, rStart: String, rEnd: String, tStart: java.lang.Long, tEnd: java.lang.Long)
