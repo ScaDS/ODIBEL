@@ -182,7 +182,7 @@ class SnapshotEval extends Callable[Int] {
   override def call(): Int = {
     val functions: Map[String, () => Unit] = Map(
       "genYearlySnapshots" -> (() => {
-        genYearlySnapshots(2000, 2025)
+        genYearlySnapshots(2023, 2025)
       }),
       "yearlyTripleDiffStats" -> (() => {
         val df = yearlyTripleDiffStats(2000,2025)
