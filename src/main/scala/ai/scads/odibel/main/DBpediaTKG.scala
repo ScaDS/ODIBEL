@@ -142,7 +142,7 @@ object DBpediaTKG {
             csvWriter.writeHeaders("head", "rel", "tail", "rStart", "rEnd", "tStart", "tEnd")
 
             ters.foreach(ter =>
-              csvWriter.writeRow(ter.head, ter.rel, ter.tail, ter.rFrom, ter.rUntil, ter.tFrom, ter.tUntil)
+              csvWriter.writeRow(ter.head, ter.rel, ter.tail, ter.rStart, ter.rEnd, ter.tStart, ter.tEnd)
             )
             csvWriter.flush()
 
