@@ -37,7 +37,7 @@ class InputEval extends Callable[Int] {
       .write
       .mode("overwrite")
       .option("header", "true")
-      .csv(new File(out, name).getPath)
+      .csv(out)
   }
 
   def extractPageMetaTable(): Unit = {
