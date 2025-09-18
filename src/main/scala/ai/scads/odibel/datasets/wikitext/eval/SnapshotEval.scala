@@ -201,10 +201,10 @@ class SnapshotEval extends Callable[Int] {
         genCATsubgraph().write.parquet(out+"/CAT")
       }),
       "yearlyOutDegreeDistribution" -> (() => {
-        writeOut("yearlyOutDegreeDistribution",yearlyOutDegreeDistribution(2000,2025))
+        writeOut("yearlyOutDegreeDistribution",yearlyOutDegreeDistribution(2023,2025))
       }),
       "yearlyOutDegreeDistributionOnlyObjects" -> (() => {
-        writeOut("yearlyOutDegreeDistributionOnlyObjects",yearlyOutDegreeDistributionOnlyObjects(2000,2025))
+        writeOut("yearlyOutDegreeDistributionOnlyObjects",yearlyOutDegreeDistributionOnlyObjects(2023,2025))
       })
     )
 
