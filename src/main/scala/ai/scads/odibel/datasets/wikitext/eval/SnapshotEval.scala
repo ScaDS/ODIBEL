@@ -39,32 +39,32 @@ class SnapshotEval extends Callable[Int] {
 
   def genWPLsubgraph(): Dataset[TemporalExtractionResult] = {
     val df = sql.read.parquet(in.getPath)
-    df.withColumn("tFrom", $"tFrom".cast("long"))
-      .withColumn("tUntil", $"tUntil".cast("long"))
+    df.withColumn("tStart", $"tStart".cast("long"))
+      .withColumn("tEnd", $"tEnd".cast("long"))
       .as[TemporalExtractionResult]
       .filter(ter => ter.rel == DBO_WPWL)
   }
 
   def genDBOsubgraph(): Dataset[TemporalExtractionResult] = {
     val df = sql.read.parquet(in.getPath)
-    df.withColumn("tFrom", $"tFrom".cast("long"))
-      .withColumn("tUntil", $"tUntil".cast("long"))
+    df.withColumn("tStart", $"tStart".cast("long"))
+      .withColumn("tEnd", $"tEnd".cast("long"))
       .as[TemporalExtractionResult]
       .filter(ter => (ter.rel == RDFType && ter.tail.startsWith(DBO)) || ter.rel.startsWith(DBO))
   }
 
   def genDBOsubgraphNoWPL(): Dataset[TemporalExtractionResult] = {
     val df = sql.read.parquet(in.getPath)
-    df.withColumn("tFrom", $"tFrom".cast("long"))
-      .withColumn("tUntil", $"tUntil".cast("long"))
+    df.withColumn("tStart", $"tStart".cast("long"))
+      .withColumn("tEnd", $"tEnd".cast("long"))
       .as[TemporalExtractionResult]
       .filter(ter => ((ter.rel == RDFType && ter.tail.startsWith(DBO)) || ter.rel.startsWith(DBO) && ter.rel != VOCAB.DBO_WPWL))
   }
 
   def genCATsubgraph(): Dataset[TemporalExtractionResult] = {
     val df = sql.read.parquet(in.getPath)
-    df.withColumn("tFrom", $"tFrom".cast("long"))
-      .withColumn("tUntil", $"tUntil".cast("long"))
+    df.withColumn("tStart", $"tStart".cast("long"))
+      .withColumn("tEnd", $"tEnd".cast("long"))
       .as[TemporalExtractionResult]
       .filter(ter => ter.tail == SKOS_CONCEPT + ">" || Set(SKOS_BROADER, SKOS_SUBJECT, SKOS_PREFLABEL).contains(ter.rel))
   }
@@ -79,14 +79,14 @@ class SnapshotEval extends Callable[Int] {
   def genSnapshot(unix_timestamp: Long, dataset: Dataset[TemporalExtractionResult]): Dataset[TemporalExtractionResult] = {
     dataset.filter({
       ter =>
-        ter.tFrom <= unix_timestamp && unix_timestamp <= ter.tUntil
+        ter.tStart <= unix_timestamp && unix_timestamp <= ter.tEnd
     })
   }
 
   def genYearlySnapshots(start: Int, end: Int, monthDayPart: String = "-06-01"): Unit = {
     val df = sql.read.parquet(in.getPath)
-      .withColumn("tFrom", $"tFrom".cast("long"))
-      .withColumn("tUntil", $"tUntil".cast("long"))
+      .withColumn("tStart", $"tStart".cast("long"))
+      .withColumn("tEnd", $"tEnd".cast("long"))
       .as[TemporalExtractionResult]
 
     (start to end) foreach {

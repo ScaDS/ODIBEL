@@ -33,9 +33,9 @@ object SerUtil {
 
   def buildQuads(ter: TemporalExtractionResult): List[String] = {
     List(
-      buildQuad(ter.head, ter.rel, ter.tail, s"${ter.rFrom}-${ter.rUntil}"),
-      buildQuad(s"$TKG/${ter.rFrom}-${ter.rUntil}", s"$TKG/start", s"\"${formatDate(ter.tFrom)}\"^^<http://www.w3.org/2001/XMLSchema#dateTime>", ""),
-      buildQuad(s"$TKG/${ter.rFrom}-${ter.rUntil}", s"$TKG/end", s"\"${formatDate(ter.tUntil)}\"^^<http://www.w3.org/2001/XMLSchema#dateTime>", "")
+      buildQuad(ter.head, ter.rel, ter.tail, s"${ter.rStart}-${ter.rEnd}"),
+      buildQuad(s"$TKG/${ter.rStart}-${ter.rEnd}", s"$TKG/start", s"\"${formatDate(ter.tStart)}\"^^<http://www.w3.org/2001/XMLSchema#dateTime>", ""),
+      buildQuad(s"$TKG/${ter.rStart}-${ter.rEnd}", s"$TKG/end", s"\"${formatDate(ter.tEnd)}\"^^<http://www.w3.org/2001/XMLSchema#dateTime>", "")
     )
   }
 

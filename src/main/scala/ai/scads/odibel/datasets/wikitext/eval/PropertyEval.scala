@@ -25,8 +25,8 @@ object PropertyEval extends App {
   val df = sql.read.parquet("/user/hofer/dbpedia-tkg/tmp/tkg_all_20240601.parquet")
 
   // Step 1: Count distinct windows and compute "changes - 1" per head-rel
-  val changesDF = df.select("head", "rel", "tFrom", "tUntil").groupBy("head", "rel")
-    .agg((countDistinct("tFrom", "tUntil") - 1).alias("changes"))
+  val changesDF = df.select("head", "rel", "tStart", "tEnd").groupBy("head", "rel")
+    .agg((countDistinct("tStart", "tEnd") - 1).alias("changes"))
 
   // Step 2: Count the total number of distinct heads for each relation
   val totalHeadsPerRel = changesDF.select("rel","changes")
