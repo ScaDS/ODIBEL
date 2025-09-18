@@ -185,7 +185,7 @@ class SnapshotEval extends Callable[Int] {
         genYearlySnapshots(2023, 2025)
       }),
       "yearlyTripleDiffStats" -> (() => {
-        val df = yearlyTripleDiffStats(2000,2025)
+        val df = yearlyTripleDiffStats(2023,2025)
         writeOut("yearlyTripleDiffStats", df.toDF())
       }),
       "genWPLsubgraph" -> (() => {
