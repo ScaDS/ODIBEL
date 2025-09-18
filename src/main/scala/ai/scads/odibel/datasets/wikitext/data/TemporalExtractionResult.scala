@@ -5,9 +5,9 @@ package ai.scads.odibel.datasets.wikitext.data
  * @param head
  * @param rel
  * @param tail
- * @param rFrom
- * @param rUntil
- * @param tFrom
- * @param tUntil
+ * @param rStart
+ * @param rEnd
+ * @param tStart
+ * @param tEnd
  */
-case class TemporalExtractionResult(head: String, rel: String, tail: String, rFrom: String, rUntil: String, tFrom: Long, tUntil: Long)
+case class TemporalExtractionResult(head: String, rel: String, tail: String, rStart: String, rEnd: String, tStart: Long, tEnd: Long)

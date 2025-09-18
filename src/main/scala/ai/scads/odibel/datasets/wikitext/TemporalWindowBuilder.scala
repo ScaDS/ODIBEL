@@ -67,8 +67,8 @@ class TemporalWindowBuilder(trackResults: Boolean = false) {
 
   def closeWindow(ntstring: String, timestamp: Long, version: String): TemporalExtractionResult = {
     val metaObject = currentTriplesWithStart.remove(ntstring)
-    val rUntil = version
-    val tUntil = timestamp
+    val rEnd = version
+    val tEnd = timestamp
 
     val (head, rel, tail) = unwrapNTriple(ntstring)
 
@@ -77,10 +77,10 @@ class TemporalWindowBuilder(trackResults: Boolean = false) {
       head = head,
       rel = rel,
       tail = tail,
-      rFrom = metaObject.version,
-      rUntil = rUntil,
-      tFrom = metaObject.timestamp,
-      tUntil = tUntil
+      rStart = metaObject.version,
+      rEnd = rEnd,
+      tStart = metaObject.timestamp,
+      tEnd = tEnd
     )
     //    temporalExtractionResults.append(ter)
     // TODO stream as output?

@@ -17,9 +17,9 @@ object ToNQuads extends App {
     System.err.println("usage -- inputPath OutputPath")
 
   sql.read.parquet(args(0))
-    .withColumn("tFrom", $"tFrom".cast("long"))
-    .withColumn("tUntil", $"tUntil".cast("long"))
-    .repartition(2048,$"head", $"tFrom")
+    .withColumn("tStart", $"tStart".cast("long"))
+    .withColumn("tEnd", $"tEnd".cast("long"))
+    .repartition(2048,$"head", $"tStart")
     .as[TemporalExtractionResult]
     .flatMap({
       ter =>
