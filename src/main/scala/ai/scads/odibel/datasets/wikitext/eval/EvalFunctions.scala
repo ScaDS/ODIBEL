@@ -106,7 +106,7 @@ object EvalFunctions {
   def countStartTriplesOverTime(data: Dataset[TemporalExtractionResult]): DataFrame = {
     import data.sparkSession.implicits._
     data.withColumn("start_time", from_unixtime($"tStart"))
-      .select($"year", $"head", $"rel", $"tail")
+      .select($"start_time", $"head", $"rel", $"tail")
       .distinct()
       .withColumn("year", year($"start_time"))
       .groupBy("year")
@@ -117,7 +117,7 @@ object EvalFunctions {
   def countEndTriplesOverTime(data: Dataset[TemporalExtractionResult]): DataFrame = {
     import data.sparkSession.implicits._
     data.withColumn("end_time", from_unixtime($"tEnd"))
-      .select($"year", $"head", $"rel", $"tail")
+      .select($"end_time", $"head", $"rel", $"tail")
       .distinct()
       .withColumn("year", year($"end_time"))
       .groupBy("year")
