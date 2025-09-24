@@ -182,10 +182,10 @@ class SnapshotEval extends Callable[Int] {
   override def call(): Int = {
     val functions: Map[String, () => Unit] = Map(
       "genYearlySnapshots" -> (() => {
-        genYearlySnapshots(2023, 2025)
+        genYearlySnapshots(2023, 2026)
       }),
       "yearlyTripleDiffStats" -> (() => {
-        val df = yearlyTripleDiffStats(2023,2025)
+        val df = yearlyTripleDiffStats(2023,2026)
         writeOut("yearlyTripleDiffStats", df.toDF())
       }),
       "genWPLsubgraph" -> (() => {
@@ -201,10 +201,10 @@ class SnapshotEval extends Callable[Int] {
         genCATsubgraph().write.parquet(out+"/CAT")
       }),
       "yearlyOutDegreeDistribution" -> (() => {
-        writeOut("yearlyOutDegreeDistribution",yearlyOutDegreeDistribution(2023,2025))
+        writeOut("yearlyOutDegreeDistribution",yearlyOutDegreeDistribution(2023,2026))
       }),
       "yearlyOutDegreeDistributionOnlyObjects" -> (() => {
-        writeOut("yearlyOutDegreeDistributionOnlyObjects",yearlyOutDegreeDistributionOnlyObjects(2023,2025))
+        writeOut("yearlyOutDegreeDistributionOnlyObjects",yearlyOutDegreeDistributionOnlyObjects(2023,2026))
       })
     )
 
