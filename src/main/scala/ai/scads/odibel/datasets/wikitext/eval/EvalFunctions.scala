@@ -106,21 +106,23 @@ object EvalFunctions {
   def countStartTriplesOverTime(data: Dataset[TemporalExtractionResult]): DataFrame = {
     import data.sparkSession.implicits._
     data.withColumn("start_time", from_unixtime($"tStart"))
-      .select($"start_time", $"head", $"rel", $"tail")
+      .select($"year", $"head", $"rel", $"tail")
       .distinct()
-      .groupBy("start_time")
+      .withColumn("year", year($"start_time"))
+      .groupBy("year")
       .agg(count("*").alias("count_start_triples"))
-      .orderBy("start_time")
+      .orderBy("year")
   }
   // Function: Count ending triples over time
   def countEndTriplesOverTime(data: Dataset[TemporalExtractionResult]): DataFrame = {
     import data.sparkSession.implicits._
     data.withColumn("end_time", from_unixtime($"tEnd"))
-      .select($"end_time", $"head", $"rel", $"tail")
+      .select($"year", $"head", $"rel", $"tail")
       .distinct()
-      .groupBy("end_time")
+      .withColumn("year", year($"end_time"))
+      .groupBy("year")
       .agg(count("*").alias("count_end_triples"))
-      .orderBy("end_time")
+      .orderBy("year")
   }
 
   // Function: Count changes of triples over time (new and deleted triples)
