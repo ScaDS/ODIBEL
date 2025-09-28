@@ -6,7 +6,7 @@ from pyodibel.rdf_ops.construct import DirectMappingType
 import logging
 
 import shutil
-from rdflib import URIRef, RDF
+from rdflib import URIRef, RDF, RDFS, OWL, SKOS
 
 from pyodibel.datasets.mp_mf.multipart_multisource import Dataset, EntitiesRow, MatchesRow, KGBundle, LinksRow, SourceBundle, SourceType, load_dataset
 from pyodibel.datasets.mp_mf.overlap_util import build_exact_subsets, validate_overlaps
@@ -15,13 +15,31 @@ from pathlib import Path
 
 load_dotenv()
 
-BUNDLE_DIR = Path("/home/marvin/project/data/final/film_100")
-ENTITY_LIST_PATH = Path("/home/marvin/project/data/acq/selection_100_dbpedia_film")
-ACQ_DIR = Path("/home/marvin/project/data/work/")
-NUM_SUBSETS = 4
-OVERLAP_RATIO = 0.04
-SUBSET_SIZE = 25
-#250
+DATASET_SELECT=os.getenv("DATASET_SELECT", "not set")
+
+if DATASET_SELECT == "small":
+    BUNDLE_DIR = Path("/home/marvin/project/data/final/film_100")
+    ENTITY_LIST_PATH = Path("/home/marvin/project/data/acq/selection_100_dbpedia_film")
+    ACQ_DIR = Path("/home/marvin/project/data/work/")
+    NUM_SUBSETS = 4
+    OVERLAP_RATIO = 0.04
+    SUBSET_SIZE = 25
+elif DATASET_SELECT == "medium":
+    BUNDLE_DIR = Path("/home/marvin/project/data/final/film_1k")
+    ENTITY_LIST_PATH = Path("/home/marvin/project/data/acq/selection_1k_dbpedia_film")
+    ACQ_DIR = Path("/home/marvin/project/data/work/")
+    NUM_SUBSETS = 4
+    OVERLAP_RATIO = 0.04
+    SUBSET_SIZE = 250
+elif DATASET_SELECT == "large":
+    BUNDLE_DIR = Path("/home/marvin/project/data/final/film_10k")
+    ENTITY_LIST_PATH = Path("/home/marvin/project/data/acq/selection_10k_dbpedia_film")
+    ACQ_DIR = Path("/home/marvin/project/data/work/")
+    NUM_SUBSETS = 4
+    OVERLAP_RATIO = 0.04
+    SUBSET_SIZE = 2500
+else:
+    raise ValueError(f"Invalid dataset select: {DATASET_SELECT}")
 
 opt_ontology_path = os.getenv("ONTOLOGY_PATH")
 if opt_ontology_path is None:
@@ -109,7 +127,7 @@ DBProp_DIRECT_MAPPINGS = {
 # dbp:deathPlace
     f"{NAMESPACE_DBProp}deathPlace": DirectMappingType.LITERAL,
 # dbp:occupation
-    # f"{NAMESPACE_DBProp}occupation": DirectMappingType.LITERAL,
+    f"{NAMESPACE_DBProp}occupation": DirectMappingType.LITERAL,
 # dbp:nationality
     f"{NAMESPACE_DBProp}nationality": DirectMappingType.LITERAL,
 # dbp:spouse
@@ -161,6 +179,9 @@ DBOnto_DIRECT_MAPPINGS = {
     f"{NAMESPACE_DBOnto}budget": DirectMappingType.LITERAL,
 # dbo:gross
     f"{NAMESPACE_DBOnto}gross": DirectMappingType.LITERAL,
+    f"{NAMESPACE_DBOnto}genre": DirectMappingType.LITERAL,
+# # dbp:genre removed because of bad quality (mostly music genres...)
+# f"{NAMESPACE_DBProp}genre": DirectMappingType.LITERAL,
 # dbo:cinematography
     f"{NAMESPACE_DBOnto}cinematography": DirectMappingType.OBJECT,
 # dbo:musicComposer
@@ -179,13 +200,13 @@ DBOnto_DIRECT_MAPPINGS = {
 # dbo:deathPlace
     f"{NAMESPACE_DBOnto}deathPlace": DirectMappingType.LITERAL,
 # dbo:occupation
-    # f"{NAMESPACE_DBOnto}occupation": DirectMappingType.OBJECT,
+    f"{NAMESPACE_DBOnto}occupation": DirectMappingType.LITERAL,
 # dbo:nationality
     f"{NAMESPACE_DBOnto}nationality": DirectMappingType.LITERAL,
 # dbo:spouse
-    f"{NAMESPACE_DBOnto}spouse": DirectMappingType.OBJECT,
+    # f"{NAMESPACE_DBOnto}spouse": DirectMappingType.OBJECT,
 # dbo:child
-    f"{NAMESPACE_DBOnto}child": DirectMappingType.OBJECT,
+    # f"{NAMESPACE_DBOnto}child": DirectMappingType.OBJECT,
 # dbo:award
     # f"{NAMESPACE_DBOnto}award": DirectMappingType.LITERAL, 
 
@@ -207,7 +228,7 @@ DBOnto_DIRECT_MAPPINGS = {
 # DIR_OUTPUT = os.getenv("DIR_OUTPUT")
 # DIR_SPLIT_FILES = os.getenv("DIR_SPLIT_FILES")
 
-DIR_RAW_DATA = ACQ_DIR / "reference"
+# DIR_RAW_DATA = ACQ_DIR / "reference"
 # DIR_OUTPUT = "/home/marvin/project/data/inc-movie-1k"
 # DIR_SPLIT_FILES = "/home/marvin/project/data/acquisiton/splits1k20n"
 
@@ -274,22 +295,47 @@ import hashlib
 def generat_hashed_shade(uri: str) -> str:
     return "http://kg.org/resource/" + hashlib.md5(uri.encode()).hexdigest()
 
-def generate_rdf(entity_list, acq_dir, output_dir, mappings, ns_mapping: dict[str, str] = {}):
+    
+def copy_label_to_skos_alt_label(graph: Graph):
+    for s, _, l in graph.triples((None, RDFS.label, None)):
+        graph.add((s, SKOS.altLabel, l))
+    return graph
+
+def generate_rdf(entity_list, input_store: FileHashStore2, output_dir, mappings, ns_mapping: dict[str, str] = {}):
 
     tempdir = tempfile.mkdtemp()
+    output_store = FileHashStore2(base_dir=tempdir)
+    
+    # print(tempdir)
 
-    construct_graph_from_root_uris(entity_list, acq_dir, tempdir, mappings)
+    # for mapping in mappings.items():
+    #     print(mapping)
 
     ontology = OntologyUtil.load_ontology_from_file(ontology_path)
+
+    # for prop in ontology.properties:
+    #     print(prop.uri)
+
     clusters = __load_match_clusters_from_Ontology(ontology)
-    for file in tqdm(os.listdir(tempdir), desc="Enriching type information"):
+
+    # for ck, cv in clusters.clusters.items():
+    #     print(ck, cv)
+
+
+    construct_graph_from_root_uris(entity_list, mappings, input_store, output_store)
+
+    for file in tqdm(os.listdir(tempdir), desc="Postprocessing"):
         graph = Graph()
         graph.parse(os.path.join(tempdir, file), format="nt")
-        graph = enrich_type_information(graph, ontology)
+
         graph = replace_to_namespace(graph, clusters, "http://kg.org/ontology/")
         graph = replace_with_func_on_namespace(graph, generat_hashed_shade, "http://dbpedia.org/resource/")
+
         for old_namespace, new_namespace in ns_mapping.items():
             graph = replace_namespace(graph, old_namespace, new_namespace)
+        
+        graph = enrich_type_information(graph, ontology)
+        graph = copy_label_to_skos_alt_label(graph) # skos:altLabel for provenance can be removed for comparison
         graph.serialize(os.path.join(output_dir, file), format="nt")
     
     shutil.rmtree(tempdir)
@@ -368,25 +414,25 @@ def bundle_text_source(bundle: SourceBundle, entity_selection, entity_acq_dir):
     if len(empty_files) > 0:
         print(f"Empty text files: {len(empty_files)}")
     
-    bundle.meta.set_entities([EntitiesRow(entity_id=uri, entity_label=uri, entity_type="dbo:Film", dataset="dataset") for uri, _ in verfied_uris])
-    bundle.meta.set_links([LinksRow(doc_id=hash+".txt", entity_id=uri, entity_type="dbo:Film", dataset="dataset") for uri, hash in verfied_uris])
+    bundle.meta.set_entities([EntitiesRow(entity_id=uri, entity_label=uri, entity_type="http://kg.org/ontology/Film", dataset="dataset") for uri, _ in verfied_uris])
+    bundle.meta.set_links([LinksRow(doc_id=hash+".txt", entity_id=uri, entity_type="http://kg.org/ontology/Film", dataset="dataset") for uri, hash in verfied_uris])
 
 
-def copy_and_shade_rdf_file(input_file, output_file):
-    shutil.copy(input_file, output_file)
+# def copy_and_shade_rdf_file(input_file, output_file):
+#     shutil.copy(input_file, output_file)
     # TODO implement shade
     # TODO cleanup
     #    infere missing types 
     #    remove low covered entities
 
-def bundle_rdf_source(bundle, entity_selection, entity_acq_dir, split_id):
+def bundle_rdf_source(bundle, entity_selection, input_store: FileHashStore2, split_id):
     # missing_files = []
     # empty_files = []
     # verfied_uris = []
     
     generate_rdf(
         entity_selection, 
-        entity_acq_dir + "/reference", 
+        input_store, 
         bundle.data.dir.as_posix(), 
         DBOnto_DIRECT_MAPPINGS,
         ns_mapping={
@@ -406,7 +452,7 @@ def bundle_rdf_source(bundle, entity_selection, entity_acq_dir, split_id):
     for s, _, t in graph.triples((None, RDF.type, None)):
         entities_with_types[str(s)] = str(t)
     
-    bundle.meta.set_entities([EntitiesRow(entity_id=uri, entity_label=uri, entity_type=entities_with_types[uri], dataset="dataset") for uri in entities_with_types])
+    # bundle.meta.set_entities([EntitiesRow(entity_id=uri, entity_label=uri, entity_type=entities_with_types[uri], dataset="dataset") for uri in entities_with_types])
 
 def bundle_json_source(bundle, entity_selection, entity_acq_dir):
     missing_files = []
@@ -431,19 +477,28 @@ def bundle_json_source(bundle, entity_selection, entity_acq_dir):
     if len(empty_files) > 0:
         print(f"Empty json files: {len(empty_files)}")
 
-    bundle.meta.set_entities([EntitiesRow(entity_id=uri, entity_label=uri, entity_type="dbo:Film", dataset="dataset") for uri, _ in verfied_uris])
+    # TODO use from seed split instead
+    # bundle.meta.set_entities([EntitiesRow(entity_id=uri, entity_label=uri, entity_type="http://kg.org/ontology/Film", dataset="dataset") for uri, _ in verfied_uris])
+    bundle.meta.set_links([LinksRow(doc_id=hash+".json", entity_id=uri, entity_type="http://kg.org/ontology/Film", dataset="dataset") for uri, hash in verfied_uris])
 
-def bundle_reference(bundle: KGBundle, entity_selection, entity_acq_dir, split_id):
+def bundle_reference(bundle: KGBundle, entity_selection, input_store: FileHashStore2, split_id):
     # missing_files = []
     # empty_files = []
     # verfied_uris = []
 
-    generate_rdf(entity_selection, entity_acq_dir + "/reference", bundle.data.dir.as_posix(), DBOnto_DIRECT_MAPPINGS)
+    combined_mappings = DBOnto_DIRECT_MAPPINGS.copy()
+    # combined_mappings.update(DBProp_DIRECT_MAPPINGS)
+
+    generate_rdf(entity_selection, input_store, bundle.data.dir.as_posix(), combined_mappings, ns_mapping={
+        "http://dbpedia.org/property/": f"http://kg.org/ontology/",
+    })
     
     graph = Graph()
     for file in os.listdir(bundle.data.dir):
         if file.endswith(".nt"):
             graph.parse(os.path.join(bundle.data.dir, file), format="nt")
+
+    
 
     graph.serialize(bundle.root / "data.nt", format="nt")
     if split_id == 0:
@@ -457,17 +512,21 @@ def bundle_reference(bundle: KGBundle, entity_selection, entity_acq_dir, split_i
     entities_with_types = {}
     for s, _, t in graph.triples((None, RDF.type, None)):
         entities_with_types[str(s)] = str(t)
+
+    entities_with_labels = {}
+    for s, _, l in graph.triples((None, RDFS.label, None)):
+        entities_with_labels[str(s)] = str(l)
     
-    bundle.meta.set_entities([EntitiesRow(entity_id=uri, entity_label=uri, entity_type=entities_with_types[uri], dataset="dataset") for uri in entities_with_types])
+    bundle.meta.set_entities([EntitiesRow(entity_id=uri, entity_label=entities_with_labels[uri], entity_type=entities_with_types.get(uri, OWL.Thing), dataset="dataset") for uri in entities_with_labels])
 
 
-def bundle_seed(bundle: KGBundle, entity_selection, entity_acq_dir):
+def bundle_seed(bundle: KGBundle, entity_selection, input_store):
 
     # missing_files = []
     # empty_files = []
     # verfied_uris = []
     
-    generate_rdf(entity_selection, entity_acq_dir + "/reference", bundle.data.dir.as_posix(), DBOnto_DIRECT_MAPPINGS)
+    generate_rdf(entity_selection, input_store, bundle.data.dir.as_posix(), DBOnto_DIRECT_MAPPINGS)
 
     graph = Graph()
     for file in os.listdir(bundle.data.dir):
@@ -479,8 +538,12 @@ def bundle_seed(bundle: KGBundle, entity_selection, entity_acq_dir):
     entities_with_types = {}
     for s, _, t in graph.triples((None, RDF.type, None)):
         entities_with_types[str(s)] = str(t)
+
+    entities_with_labels = {}
+    for s, _, l in graph.triples((None, RDFS.label, None)):
+        entities_with_labels[str(s)] = str(l)
     
-    bundle.meta.set_entities([EntitiesRow(entity_id=uri, entity_label=uri, entity_type=entities_with_types[uri], dataset="dataset") for uri in entities_with_types])
+    bundle.meta.set_entities([EntitiesRow(entity_id=uri, entity_label=entities_with_labels[uri], entity_type=entities_with_types.get(uri, OWL.Thing), dataset="dataset") for uri in entities_with_labels])
 
 # ================================================
 
@@ -492,24 +555,31 @@ def generate_split_bundles(subset, idx, ds, entity_acq_dir):
     entity_selection = subset
     split.set_index([EntitiesRow(entity_id=uri, entity_label=uri, entity_type="entity", dataset="dataset") for uri in entity_selection])
 
-    # bundle seed
-    if split.kg_seed is not None: 
-        bundle_seed(split.kg_seed, entity_selection, entity_acq_dir.as_posix())
-    else:
-        raise ValueError("kg_seed is None")
+    print("Total DBProp mappings:", len(DBProp_DIRECT_MAPPINGS))
+    print("Total DBOnto mappings:", len(DBOnto_DIRECT_MAPPINGS))
+
+    print(entity_acq_dir / "reference")
+
+    input_store = FileHashStore2(base_dir=entity_acq_dir / "reference", cache_enabled=True, cache_maxsize=100_000, cache_return_copy=False)
 
     # bundle reference
-    if split.kg_reference is not None:
-        bundle_reference(split.kg_reference, entity_selection, entity_acq_dir.as_posix(), idx)
+    if split.kg_reference is not None: 
+        bundle_reference(split.kg_reference, entity_selection, input_store, idx)
     else:
         raise ValueError("kg_reference is None")
+
+    # bundle reference
+    if split.kg_seed is not None:
+        bundle_seed(split.kg_seed, entity_selection, input_store)
+    else:
+        raise ValueError("kg_seed is None")
 
     # bundle sources
     source_types = [SourceType.rdf, SourceType.json, SourceType.text]
     split.set_sources(source_types)
 
     bundle_text_source(split.sources[SourceType.text], entity_selection, entity_acq_dir.as_posix())
-    bundle_rdf_source(split.sources[SourceType.rdf], entity_selection, entity_acq_dir.as_posix(), idx)
+    bundle_rdf_source(split.sources[SourceType.rdf], entity_selection, input_store, idx)
     bundle_json_source(split.sources[SourceType.json], entity_selection, entity_acq_dir.as_posix())
 
 
@@ -525,8 +595,10 @@ def generate_inc_movie_kgb():
 
     ds.set_splits(0, len(subsets))
 
-    # TODO parallelize
     for idx, subset in enumerate(subsets):
+        print(f"doing split {idx}")
+        if idx >     4:
+            continue
         generate_split_bundles(subset, idx, ds, entity_acq_dir)
 
 def test_generate_inc_movie_kgb():
@@ -537,15 +609,24 @@ def evaluate_inc_movie_kgb():
 
 def test_convert_to_json():
     uri_list = read_uri_list_file(ENTITY_LIST_PATH)
+    input_store = FileHashStore2(base_dir=(ACQ_DIR / "reference").as_posix(), cache_enabled=True, cache_maxsize=100_000, cache_return_copy=False)
     output_dir_tmp = ACQ_DIR / "json_tmp"
     output_dir = ACQ_DIR / "json"
+
+    shutil.rmtree(output_dir_tmp, ignore_errors=True)
+    shutil.rmtree(output_dir, ignore_errors=True)
+
     os.makedirs(output_dir_tmp, exist_ok=True)
+    os.makedirs(output_dir, exist_ok=True)
+
+    mappings = DBProp_DIRECT_MAPPINGS
+    # mappings[f"{NAMESPACE_FOAF}name"] = DirectMappingType.LITERAL
 
     construct_graph_from_root_uris(
-        uri_list, 
-        DIR_RAW_DATA.as_posix(), 
-        output_dir_tmp.as_posix(), 
-        DBProp_DIRECT_MAPPINGS
+        uri_list,
+        mappings, 
+        input_store, 
+        FileHashStore2(base_dir=output_dir_tmp.as_posix()), 
     )
 
     tmp_store = FileHashStore2(base_dir=output_dir_tmp.as_posix())
@@ -573,63 +654,136 @@ def get_all_entities_with_types(film_subset, seed_dir) -> dict[str, str]:
 
     return entities_with_types
 
-def test_generate_split_matches():
-    # TODO get all entities from reference and calculate overlap with each split
+# def test_generate_split_matches():
+#     # TODO get all entities from reference and calculate overlap with each split
+
+#     ds = load_dataset(BUNDLE_DIR)
+
+#     full_subsets_named: dict[str, dict[str, str]] = {}
+
+#     film_subsets_named: dict[str, list[str]] = {}
+
+#     for split in ds.splits.values():
+
+#         print(split.index.entities_csv.as_posix())
+#         film_subsets_named[split.root.name] = list(open(split.index.entities_csv.as_posix()).readlines())
+
+#         reference = split.kg_reference
+#         if reference is None:
+#             raise ValueError("kg_reference is None")
+        
+
+#         pos_entities = reference.meta.entities
+#         if pos_entities is None:
+#             raise ValueError("pos_entities is None")
+        
+#         entities = [e.entity_id for e in pos_entities.read_csv()]
+        
+#         subset = get_all_entities_with_types(entities, reference.data.dir)
+#         full_subsets_named[split.root.name] = subset
+
+#     film_subsets = [film_subsets_named[f"split_{i}"] for i in range(len(film_subsets_named))]
+
+#     print(validate_overlaps(film_subsets))
+
+#     from itertools import combinations
+
+#     overlap_ratios = {}
+
+#     matches = []
+
+#     keys = list(full_subsets_named.keys())
+
+#     for i, j in combinations(range(len(keys)), 2):
+#         overlap = set(full_subsets_named[keys[i]]) & set(full_subsets_named[keys[j]])
+#         for uri in overlap:
+#             matches.append(MatchesRow(left_dataset=keys[i], left_id=uri, right_dataset=keys[j], right_id=uri, match_type="exact"))
+
+#         ratio = len(overlap) / len(full_subsets_named[keys[i]])
+#         overlap_ratios[f"{keys[i]}-{keys[j]}"] = ratio
+    
+#     with open(BUNDLE_DIR / "split_match_entities.csv", "w") as f:
+#         f.write("left_dataset\tleft_id\tright_dataset\tright_id\n")
+#         for match in matches:
+#             f.write(f"{match.left_dataset}\t{match.left_id}\t{match.right_dataset}\t{match.right_id}\n")
+
+#     print(overlap_ratios)
+
+def test_generate_meta_matches():
 
     ds = load_dataset(BUNDLE_DIR)
 
-    full_subsets_named: dict[str, dict[str, str]] = {}
+    splits = ds.splits.values()
 
-    film_subsets_named: dict[str, list[str]] = {}
+    def get_split_idx(split):
+        return int(split.root.name.split("_")[1])
 
-    for split in ds.splits.values():
+    for left_split in splits:
 
-        print(split.index.entities_csv.as_posix())
-        film_subsets_named[split.root.name] = list(open(split.index.entities_csv.as_posix()).readlines())
+        match_rows = []
 
-        reference = split.kg_reference
-        if reference is None:
-            raise ValueError("kg_reference is None")
+        for right_split in splits:
+            if left_split.root.name == right_split.root.name:
+                continue
+
+            if left_split.kg_seed is None or right_split.kg_seed is None:
+                continue
+
+            from_rdf_graph_path = left_split.kg_seed.root / "data.nt"
+            to_rdf_graph_path = right_split.kg_seed.root / "data.nt"
+
+            from_rdf_graph = Graph()
+            from_rdf_graph.parse(from_rdf_graph_path.as_posix(), format="nt")
+            to_rdf_graph = Graph()
+            to_rdf_graph.parse(to_rdf_graph_path.as_posix(), format="nt")
+
+            from_entities = [str(s) for s in from_rdf_graph.subjects(unique=True)]
+            to_entities = [str(s) for s in to_rdf_graph.subjects(unique=True)]
         
 
-        pos_entities = reference.meta.entities
-        if pos_entities is None:
-            raise ValueError("pos_entities is None")
-        
-        entities = [e.entity_id for e in pos_entities.read_csv()]
-        
-        subset = get_all_entities_with_types(entities, reference.data.dir)
-        full_subsets_named[split.root.name] = subset
+            intersect = set(from_entities) & set(to_entities)
 
-    film_subsets = [film_subsets_named[f"split_{i}"] for i in range(len(film_subsets_named))]
+            intersect_types = {}
 
-    print(validate_overlaps(film_subsets))
+            for intersect_entity in intersect:
+                et = from_rdf_graph.value(URIRef(intersect_entity), RDF.type)
+                if et is None:
+                    intersect_types[intersect_entity] = OWL.Thing
+                else:
+                    intersect_types[intersect_entity] = str(et)
 
-    from itertools import combinations
+            intersect_film_entites = [e for e in intersect_types.keys() if "http://kg.org/ontology/Film" == intersect_types[e]]
+                
+            print(len(from_entities), len(to_entities))
+            all_ratio = len(intersect) / len(from_entities)
+            film_ratio = len(intersect_film_entites) / len(from_entities)
+            print(f"{left_split.root.name} -> {right_split.root.name}: {all_ratio} {film_ratio}")
 
-    overlap_ratios = {}
+            for uri in intersect_types:
+                match_rows.append(MatchesRow(
+                    left_dataset=left_split.root.name+"/kg/seed", 
+                    left_id=uri, 
+                    right_dataset=right_split.root.name+"/kg/seed", 
+                    right_id=uri,
+                    entity_type=intersect_types[uri]))
+            
 
-    matches = []
+        # seed to seed
+        left_split.kg_seed.meta.set_matches(match_rows)
 
-    keys = list(full_subsets_named.keys())
+        # workaround to set for rdf dataset to seed
 
-    for i, j in combinations(range(len(keys)), 2):
-        overlap = set(full_subsets_named[keys[i]]) & set(full_subsets_named[keys[j]])
-        for uri in overlap:
-            matches.append(MatchesRow(left_dataset=keys[i], left_id=uri, right_dataset=keys[j], right_id=uri, match_type="exact"))
+        adapted_match_rows = []
+        for mr in match_rows:
+            idx = left_split.root.name.split("/")[0].split("_")[1]
 
-        ratio = len(overlap) / len(full_subsets_named[keys[i]])
-        overlap_ratios[f"{keys[i]}-{keys[j]}"] = ratio
-    
-    with open(BUNDLE_DIR / "split_match_entities.csv", "w") as f:
-        f.write("left_dataset\tleft_id\tright_dataset\tright_id\n")
-        for match in matches:
-            f.write(f"{match.left_dataset}\t{match.left_id}\t{match.right_dataset}\t{match.right_id}\n")
+            amr = MatchesRow(
+                left_dataset=mr.left_dataset.replace("kg/seed", "kg/rdf"),
+                left_id=mr.left_id.replace("kg.org/resource/", f"kg.org/rdf/{idx}/resource/"),
+                right_dataset=mr.right_dataset,
+                right_id=mr.right_id,
+                entity_type=mr.entity_type)
 
-    print(overlap_ratios)
+            adapted_match_rows.append(amr)
 
-def test_evaluate_inc_movie_kgb():
-    evaluate_inc_movie_kgb()
-
-def test_full_reference_graph(): 
-    pass
+        left_split.sources[SourceType.rdf].meta.set_matches(adapted_match_rows)

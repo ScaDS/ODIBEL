@@ -8,14 +8,6 @@ from tqdm import tqdm
 enriches type information for entities in the RDF graph based on domain and range of relations
 """
 
-BASE_DIR = Path("/home/marvin/project/odibel/data_1k/") # Path(__file__).parent
-
-SEED_SOURCE_PATH = BASE_DIR / "seed.nt"
-RDF_SOURCE_PATH = BASE_DIR / "source.nt"
-REFERENCE_PATH = BASE_DIR / "full.nt"
-
-ONTOLOGY_PATH = "/home/marvin/project/data/ontology.ttl"
-
 def enrich_type_information(graph: Graph, ontology: Ontology, type_property: URIRef = RDF.type) -> Graph:
     type_dict = {}
 
@@ -37,24 +29,3 @@ def enrich_type_information(graph: Graph, ontology: Ontology, type_property: URI
         for type in types:
             new_graph.add((URIRef(uri), type_property, URIRef(type)))
     return new_graph
-
-
-
-
-if __name__ == "__main__":
-    ontology = OntologyUtil.load_ontology_from_file(ONTOLOGY_PATH)
-
-    seed_graph = Graph()
-    seed_graph.parse(SEED_SOURCE_PATH)
-    seed_graph = enrich_type_information(seed_graph, ontology)
-    seed_graph.serialize(destination=str(SEED_SOURCE_PATH)+".enriched.nt", format="nt")
-
-    rdf_graph = Graph()
-    rdf_graph.parse(RDF_SOURCE_PATH)
-    rdf_graph = enrich_type_information(rdf_graph, ontology)
-    rdf_graph.serialize(destination=str(RDF_SOURCE_PATH)+".enriched.nt", format="nt")
-
-    reference_graph = Graph()
-    reference_graph.parse(REFERENCE_PATH)
-    reference_graph = enrich_type_information(reference_graph, ontology)
-    reference_graph.serialize(destination=str(REFERENCE_PATH)+".enriched.nt", format="nt")
