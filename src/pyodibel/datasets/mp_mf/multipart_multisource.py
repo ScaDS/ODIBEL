@@ -31,7 +31,7 @@ class MatchType(str, Enum):
     related = "related"
 
 EXPECTED_HEADERS = {
-    "verified_matches.csv": ["left_dataset","right_dataset","left_id","right_id","match_type"],
+    "verified_matches.csv": ["left_dataset","right_dataset","left_id","right_id","entity_type"],
     "verified_entities.csv": ["dataset","entity_id","entity_label","entity_type"],
     "verified_links.csv": ["doc_id","entity_id","entity_type","dataset"],
 }
@@ -71,10 +71,10 @@ class MatchesRow(BaseModel):
     right_dataset: str
     left_id: str
     right_id: str
-    match_type: str
+    entity_type: str
 
 def read_matches_csv(path: Path) -> List[MatchesRow]:
-    return [MatchesRow(left_dataset=row["left_dataset"], right_dataset=row["right_dataset"], left_id=row["left_id"], right_id=row["right_id"], match_type=row["match_type"]) for row in csv.DictReader(path.open("r"), delimiter="\t")]
+    return [MatchesRow(left_dataset=row["left_dataset"], right_dataset=row["right_dataset"], left_id=row["left_id"], right_id=row["right_id"], entity_type=row["entity_type"]) for row in csv.DictReader(path.open("r"), delimiter="\t")]
 
 class VerifiedMatches(BaseModel):
     model_config = ConfigDict(arbitrary_types_allowed=True)
@@ -150,9 +150,9 @@ class SourceMeta(BaseModel):
     def set_matches(self, matches: List[MatchesRow]):
         path = self.root / "verified_matches.csv"
         with path.open("w") as f:
-            f.write("left_dataset\tright_dataset\tleft_id\tright_id\tmatch_type\n")
+            f.write("left_dataset\tright_dataset\tleft_id\tright_id\tentity_type\n")
             for match in matches:
-                f.write(f"{match.left_dataset}\t{match.right_dataset}\t{match.left_id}\t{match.right_id}\t{match.match_type}\n")
+                f.write(f"{match.left_dataset}\t{match.right_dataset}\t{match.left_id}\t{match.right_id}\t{match.entity_type}\n")
         self.matches = VerifiedMatches(file=path)
 
 class SourceData(BaseModel):
@@ -541,11 +541,13 @@ def load_dataset(root: Path) -> Dataset:
             seed_dir = kg_dir / "seed"
             if seed_dir.exists():
                 seed_data_dir = seed_dir / "data"
+                seed_meta_dir = seed_dir / "meta"
                 seed_parts = list_parts(seed_data_dir, (".nt", ".ttl", ".nq"))
                 kg_seed = KGBundle(
                     kind="seed",
                     root=seed_dir,
                     data=SourceData(dir=seed_data_dir, parts=seed_parts),
+                    meta=SourceMeta(root=seed_meta_dir)
                 )
 
         # sources
