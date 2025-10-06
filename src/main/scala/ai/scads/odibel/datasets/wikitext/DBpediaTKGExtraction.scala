@@ -149,7 +149,7 @@ object DBpediaTKGExtraction {
           failedExtractions += 1
           logger.warn(s"[WARN] No triples extracted for revisionId=${pageRevision.rId} (pageId=${pageRevision.pId})")
         } else {
-          logger.info(s"[OK] Extracted ${tripleDoc.size} triples for revisionId=${pageRevision.rId}")
+          // logger.info(s"[OK] Extracted ${tripleDoc.size} triples for revisionId=${pageRevision.rId}")
           totalTriplesExtracted += tripleDoc.size
         }
 
@@ -160,14 +160,14 @@ object DBpediaTKGExtraction {
 
           val addedTriples = diffAndAppendWindow(tripleDoc, pageRevision)
           if (addedTriples.nonEmpty) {
-            logger.info(s"[NEW] ${addedTriples.size} new triples for pageId=${pageRevision.pId}, revisionId=${pageRevision.rId}")
+            //logger.info(s"[NEW] ${addedTriples.size} new triples for pageId=${pageRevision.pId}, revisionId=${pageRevision.rId}")
           }
 
           temporalResults
         } else {
           val addedTriples = diffAndAppendWindow(tripleDoc, pageRevision)
           if (addedTriples.nonEmpty) {
-            logger.debug(s"[DIFF] ${addedTriples.size} triples changed for revisionId=${pageRevision.rId}")
+            //logger.debug(s"[DIFF] ${addedTriples.size} triples changed for revisionId=${pageRevision.rId}")
           }
           addedTriples
         }
