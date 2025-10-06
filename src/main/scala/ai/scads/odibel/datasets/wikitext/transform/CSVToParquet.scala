@@ -14,28 +14,19 @@ object CSVToParquet extends App {
 
   private val sql = SparkSessionUtil.sql
 
-  /*
-  sql.read
+
+  val csvDf = sql.read
     .option("header", "true")
     .option("inferSchema", "false")
     .option("unescapedQuoteHandling", "BACK_TO_DELIMITER")
     .csv(inputPath)
-    .write
-    .parquet(outputPath)
 
 
-   */
-  val corrupt = sql.read
-    .option("header", "true")
-    .option("inferSchema", "false")
-    .option("unescapedQuoteHandling", "BACK_TO_DELIMITER")
-    .option("mode", "PERMISSIVE")
-    .option("columnNameOfCorruptRecord", "_corrupt_record")
-    .csv(inputPath)
-    .filter("_corrupt_record IS NOT NULL")
+  println(s"CSV Lines: ${csvDf.count()}")
 
-  corrupt.select("_corrupt_record").show(false)
-  println(s"Corrupt Lines: ${corrupt.count()}")
+  csvDf.write.mode("overwrite").parquet(outputPath)
 
+  val parquetDF = sql.read.parquet(outputPath)
+  println(s"Parquet Lines: ${parquetDF.count()}")
 }
 
