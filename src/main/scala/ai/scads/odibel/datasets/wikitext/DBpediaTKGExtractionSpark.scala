@@ -37,7 +37,8 @@ object DBpediaTKGExtractionSpark {
         if (rowList.nonEmpty) {
           val diefEndpoint = rowList.head.getAs[String]("dief")
           val orderedPageRevisionIterator = IOUtil.readFilesSequentially(rowList.map(_.getAs[String]("dumpPath")))
-          processPageRevisionIterator(orderedPageRevisionIterator, diefEndpoint)
+          val (ters, count) = processPageRevisionIterator(orderedPageRevisionIterator, diefEndpoint)
+          ters
         } else {
           Iterator.empty
         }

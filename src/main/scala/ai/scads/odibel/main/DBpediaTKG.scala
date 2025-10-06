@@ -17,8 +17,6 @@ import scala.jdk.CollectionConverters._
 
 object DBpediaTKG {
 
-  private val logger = LoggerFactory.getLogger(classOf[DBpediaTKG])
-
   @Command(name = "split")
   class WikidumpRevisionSplit extends Callable[Int] {
 
@@ -96,6 +94,9 @@ object DBpediaTKG {
     var diefEndpoints: java.util.ArrayList[String] = _
 
     override def call(): Int = {
+
+      val logger = LoggerFactory.getLogger(classOf[DBpediaTKG])
+
       System.err.println(s"in: $in out: $out")
 
       logger.debug(s"in: $in out: $out")
