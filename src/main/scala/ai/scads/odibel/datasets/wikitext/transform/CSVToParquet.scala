@@ -21,7 +21,7 @@ object CSVToParquet extends App {
     .option("columnNameOfCorruptRecord", "_corrupt_record")
     .csv(inputPath)
     .write
-    .parquet(outputPath)
+    .csv(outputPath)
 
 }
 
