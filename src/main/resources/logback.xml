@@ -15,6 +15,15 @@
         </encoder>
     </appender>
 
+
+    <appender name="DBPEDIA_FILE" class="ch.qos.logback.core.FileAppender">
+        <file>logs/dbpedia-extraction.log</file>
+        <append>true</append>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
     <!-- Specific logger configuration for EventLogger -->
     <logger name="ai.scads.odibel.datasets.wikitext.log.EventLogger" level="debug" additivity="false">
         <appender-ref ref="FILE" />
@@ -27,8 +36,19 @@
         <appender-ref ref="CONSOLE" />
     </logger>
 
+    <logger name="ai.scads.odibel.main.DBpediaTKG" level="info">
+        <appender-ref ref="DBPEDIA_FILE"/>
+        <appender-ref ref="CONSOLE"/>
+    </logger>
+
+    <logger name="ai.scads.odibel.datasets.wikitext.DBpediaTKGExtraction" level="info">
+        <appender-ref ref="DBPEDIA_FILE"/>
+        <appender-ref ref="CONSOLE"/>
+    </logger>
+
     <!-- Root logger configuration -->
     <root level="info">
         <appender-ref ref="CONSOLE" />
     </root>
+
 </configuration>
