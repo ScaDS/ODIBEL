@@ -18,10 +18,9 @@ object CSVToParquet extends App {
     .option("header", "true")
     .option("inferSchema", "false")
     .option("unescapedQuoteHandling", "BACK_TO_DELIMITER")
-    .option("columnNameOfCorruptRecord", "_corrupt_record")
     .csv(inputPath)
     .write
-    .csv(outputPath)
+    .parquet(outputPath)
 
 }
 
