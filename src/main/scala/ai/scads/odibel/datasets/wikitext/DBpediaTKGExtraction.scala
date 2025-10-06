@@ -127,9 +127,10 @@ class DBpediaTKGExtraction {
 
 object DBpediaTKGExtraction {
 
-  private val logger = LoggerFactory.getLogger(getClass)
+  private val logger = LoggerFactory.getLogger(classOf[DBpediaTKGExtraction])
 
   def processPageRevisionIterator(pageRevisionIterator: Iterator[PageRevision], diefEndpoint: String): (Iterator[TemporalExtractionResult], Int) = {
+    logger.debug("Started processPageRevisionIterator")
     val rc = new RCDiefServer(diefEndpoint)
     implicit var twb: TemporalWindowBuilder = new TemporalWindowBuilder()
     var oPageId = -1L

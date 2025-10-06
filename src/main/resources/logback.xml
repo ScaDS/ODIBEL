@@ -36,12 +36,12 @@
         <appender-ref ref="CONSOLE" />
     </logger>
 
-    <logger name="ai.scads.odibel.main.DBpediaTKG" level="info">
+    <logger name="ai.scads.odibel.main.DBpediaTKG" level="debug">
         <appender-ref ref="DBPEDIA_FILE"/>
         <appender-ref ref="CONSOLE"/>
     </logger>
 
-    <logger name="ai.scads.odibel.datasets.wikitext.DBpediaTKGExtraction" level="info">
+    <logger name="ai.scads.odibel.datasets.wikitext.DBpediaTKGExtraction" level="debug">
         <appender-ref ref="DBPEDIA_FILE"/>
         <appender-ref ref="CONSOLE"/>
     </logger>
