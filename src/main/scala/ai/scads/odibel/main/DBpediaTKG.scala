@@ -1,10 +1,12 @@
 package ai.scads.odibel.main
 
+import ai.scads.odibel.datasets.wikitext.DBpediaTKGExtraction.getClass
 import ai.scads.odibel.datasets.wikitext.data.TemporalExtractionResult
 import ai.scads.odibel.datasets.wikitext.transform.SerUtil
 import ai.scads.odibel.datasets.wikitext.utils.{FlatPageRevisionPartitioner, WikiDumpFlatter}
 import ai.scads.odibel.datasets.wikitext.{DBpediaTKGExtraction, DBpediaTKGExtractionSpark}
 import ai.scads.odibel.main.DBpediaTKG.{FlatRepartitioner, TemporalExtraction, WikidumpRevisionSplit}
+import org.slf4j.LoggerFactory
 import picocli.CommandLine.{Command, Option}
 
 import java.io.{File, FileInputStream, FileOutputStream, InputStream, OutputStream, OutputStreamWriter, StringWriter}
@@ -14,6 +16,8 @@ import scala.io.Source
 import scala.jdk.CollectionConverters._
 
 object DBpediaTKG {
+
+  private val logger = LoggerFactory.getLogger(getClass)
 
   @Command(name = "split")
   class WikidumpRevisionSplit extends Callable[Int] {
@@ -129,8 +133,11 @@ object DBpediaTKG {
       val outStream = outputStreamTo(out)
 
       try {
-        val ters: Iterator[TemporalExtractionResult] =
+        val (ters, failedCount) =
           extraction.processStream(Source.fromInputStream(inStream).getLines(), diefEndpoints.asScala.head)
+
+        logger.info(s"Number of revisions failed to extract: $failedCount")
+
 
         format match {
           case "csv" =>
