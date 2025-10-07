@@ -176,12 +176,13 @@ object DBpediaTKGExtraction {
       }
     }
 
+    val materialized = results.toList
     logger.info(s"=== Extraction finished ===")
     logger.info(s"Total revisions processed: $totalRevisions")
     logger.info(s"Failed extractions: $failedExtractions")
     logger.info(s"Total triples extracted: $totalTriplesExtracted")
 
-    ((results ++ twb.addGraphVersion(List(), Long.MaxValue)(Long.MaxValue.toString)), failedExtractions)
+    ((materialized.iterator ++ twb.addGraphVersion(List(), Long.MaxValue)(Long.MaxValue.toString)), failedExtractions)
   }
 
 
