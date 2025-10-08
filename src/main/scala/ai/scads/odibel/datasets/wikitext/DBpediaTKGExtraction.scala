@@ -9,15 +9,14 @@ import ai.scads.odibel.datasets.wikitext.utils.WikiUtil
 import ai.scads.odibel.utils.HDFSUtil
 import org.slf4j.LoggerFactory
 
-import java.nio.file.{Path, Paths}
-import scala.collection.mutable.ListBuffer
+import java.nio.file.Paths
 
 /**
  * Simple class to extract a DBpedia TKG without SPARK using multiple threads of a single JVM
  */
 class DBpediaTKGExtraction {
 
-  def processStream(iterator: Iterator[String], diefUrl: String): (Iterator[TemporalExtractionResult], Int) = {
+  def processStream(iterator: Iterator[String], diefUrl: String): Iterator[TemporalExtractionResult] = {
     processPageRevisionIterator(
       WikiUtil.splitToItem(iterator).map(WikiUtil.enrichFlatRawPageRevision),
       diefUrl
@@ -60,28 +59,21 @@ object DBpediaTKGExtraction {
 
   private val logger = LoggerFactory.getLogger(classOf[DBpediaTKGExtraction])
 
-  def processPageRevisionIterator(pageRevisionIterator: Iterator[PageRevision], diefEndpoint: String): (Iterator[TemporalExtractionResult], Int) = {
+  def processPageRevisionIterator(pageRevisionIterator: Iterator[PageRevision], diefEndpoint: String): Iterator[TemporalExtractionResult] = {
     logger.debug("Started processPageRevisionIterator")
     val rc = new RCDiefServer(diefEndpoint)
     implicit var twb: TemporalWindowBuilder = new TemporalWindowBuilder()
     var oPageId = -1L
 
-    var totalRevisions = 0
-    var failedExtractions = 0
-    var totalTriplesExtracted = 0
-
     val results = pageRevisionIterator.flatMap { pageRevision =>
-      totalRevisions += 1
 
       if (ProfileConfig.wikiNamespaceFilter.contains(pageRevision.ns.getOrElse(-1))) {
         val tripleDoc = extractTripleDoc(rc, pageRevision)
 
         if (tripleDoc.isEmpty) {
-          failedExtractions += 1
           logger.warn(s"[WARN] No triples extracted for revisionId=${pageRevision.rId} (pageId=${pageRevision.pId})")
         } else {
           // logger.info(s"[OK] Extracted ${tripleDoc.size} triples for revisionId=${pageRevision.rId}")
-          totalTriplesExtracted += tripleDoc.size
         }
 
         if (oPageId != pageRevision.pId) {
@@ -107,13 +99,7 @@ object DBpediaTKGExtraction {
       }
     }
 
-    val materialized = results.toList
-    logger.info(s"=== Extraction finished ===")
-    logger.info(s"Total revisions processed: $totalRevisions")
-    logger.info(s"Failed extractions: $failedExtractions")
-    logger.info(s"Total triples extracted: $totalTriplesExtracted")
-
-    ((materialized.iterator ++ twb.addGraphVersion(List(), Long.MaxValue)(Long.MaxValue.toString)), failedExtractions)
+    results ++ twb.addGraphVersion(List(), Long.MaxValue)(Long.MaxValue.toString)
   }
 
 
