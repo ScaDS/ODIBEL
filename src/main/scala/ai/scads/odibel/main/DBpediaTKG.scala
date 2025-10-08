@@ -136,11 +136,7 @@ object DBpediaTKG {
       val outStream = outputStreamTo(out)
 
       try {
-        val (ters, failedCount) =
-          extraction.processStream(Source.fromInputStream(inStream).getLines(), diefEndpoints.asScala.head)
-
-        logger.info(s"Number of revisions failed to extract: $failedCount")
-
+        val ters = extraction.processStream(Source.fromInputStream(inStream).getLines(), diefEndpoints.asScala.head)
 
         format match {
           case "csv" =>
@@ -154,6 +150,7 @@ object DBpediaTKG {
             ters.foreach(ter =>
               csvWriter.writeRow(ter.head, ter.rel, ter.tail, ter.rStart, ter.rEnd, ter.tStart, ter.tEnd)
             )
+            logger.info(s"Done extracting $in  ---  Saved Output to $out")
             csvWriter.flush()
 
           case "ngraph" =>
