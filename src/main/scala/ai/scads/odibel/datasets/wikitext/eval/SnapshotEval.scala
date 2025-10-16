@@ -49,16 +49,24 @@ class SnapshotEval extends Callable[Int] {
     val df = sql.read.parquet(in)
     df.withColumn("tStart", $"tStart".cast("long"))
       .withColumn("tEnd", $"tEnd".cast("long"))
+      .filter(
+        (col("rel") === lit(RDFType) && col("tail").startsWith(DBO)) ||
+          col("rel").startsWith(DBO)
+      )
       .as[TemporalExtractionResult]
-      .filter(ter => (ter.rel == RDFType && ter.tail.startsWith(DBO)) || ter.rel.startsWith(DBO))
   }
 
   def genDBOsubgraphNoWPL(): Dataset[TemporalExtractionResult] = {
     val df = sql.read.parquet(in)
     df.withColumn("tStart", $"tStart".cast("long"))
       .withColumn("tEnd", $"tEnd".cast("long"))
+      .filter(
+        (
+          (col("rel") === lit(RDFType) && col("tail").startsWith(DBO)) ||
+            (col("rel").startsWith(DBO) && col("rel") =!= lit(VOCAB.DBO_WPWL))
+          )
+      )
       .as[TemporalExtractionResult]
-      .filter(ter => ((ter.rel == RDFType && ter.tail.startsWith(DBO)) || ter.rel.startsWith(DBO) && ter.rel != VOCAB.DBO_WPWL))
   }
 
   def genCATsubgraph(): Dataset[TemporalExtractionResult] = {
