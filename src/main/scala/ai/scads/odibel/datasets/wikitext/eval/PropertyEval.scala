@@ -17,12 +17,12 @@ object PropertyEval extends App {
       .write
       .mode("overwrite")
       .option("header", "true")
-      .csv(new File("/user/hofer/dbpedia-tkg/stats/FULL/", name).getPath)
+      .csv("hdfs://athena1.informatik.intern.uni-leipzig.de:9000/dbpedia-tkg/output/2025-07-01/statistics/" + name)
   }
 
   val start = System.nanoTime()
 
-  val df = sql.read.parquet("/user/hofer/dbpedia-tkg/tmp/tkg_all_20240601.parquet")
+  val df = sql.read.parquet("hdfs://athena1.informatik.intern.uni-leipzig.de:9000/dbpedia-tkg/output/2025-07-01/combined.parquet")
 
   // Step 1: Count distinct windows and compute "changes - 1" per head-rel
   val changesDF = df.select("head", "rel", "tStart", "tEnd").groupBy("head", "rel")
@@ -46,7 +46,7 @@ object PropertyEval extends App {
 
   val results = statsDF.join(totalHeadsPerRel, "rel").filter(!col("rel").startsWith("http://dbpedia.org/property")).orderBy(desc("avg_changes"))
 
-  writeOut("propertyChangesAll", results)
+  writeOut("metric_all_properties.csv", results)
 
   println(Duration.ofNanos(System.nanoTime() - start))
   // PT30M37.772128091S on AMD Ryzen 9 7945HX for full extraction
