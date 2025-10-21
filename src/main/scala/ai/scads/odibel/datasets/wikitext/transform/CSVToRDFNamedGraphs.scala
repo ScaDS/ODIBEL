@@ -1,9 +1,6 @@
 package ai.scads.odibel.datasets.wikitext.transform
 
-import ai.scads.odibel.datasets.wikitext.transform.CSVToRDFReification.{PREFIXES, convertRowToRDF}
-import ai.scads.odibel.datasets.wikitext.transform.SerUtil
 import ai.scads.odibel.datasets.wikitext.utils.SparkSessionUtil
-import org.apache.spark.sql.Row
 
 import java.io.{BufferedReader, FileReader}
 
