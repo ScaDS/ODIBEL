@@ -7,13 +7,6 @@ import java.io.{BufferedReader, FileReader}
 
 object CSVToRDFReification {
 
-  private val PREFIXES =
-    """@prefix dbo: <http://dbpedia.org/ontology/> .
-      |@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-      |@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-      |@prefix rel: <http://example.org/relation/> .
-      |""".stripMargin
-
   def main(args: Array[String]): Unit = {
 
     if (args.length < 2) {
@@ -45,7 +38,6 @@ object CSVToRDFReification {
         .map(line => convertRowToRDF(line))
         .filter(_.nonEmpty)
 
-      spark.sparkContext.parallelize(Seq(PREFIXES)).saveAsTextFile(outputPath + "_prefixes")
       rdfData.saveAsTextFile(outputPath + "_data")
       println(s"Spark output saved to $outputPath (merge with hadoop fs -cat)")
 
@@ -58,7 +50,6 @@ object CSVToRDFReification {
   private def runWithoutSpark(inputPath: String, outputPath: String): Unit = {
     println("Using Java Streams (no Spark)...")
     val writer = new java.io.PrintWriter(outputPath)
-    writer.write(PREFIXES)
 
     try {
       val reader = new BufferedReader(new FileReader(inputPath))
