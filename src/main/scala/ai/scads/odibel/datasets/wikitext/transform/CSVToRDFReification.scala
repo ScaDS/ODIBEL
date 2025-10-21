@@ -77,7 +77,6 @@ object CSVToRDFReification {
     }
   }
 
-
   private def convertRowToRDF(line:String): String = {
     try{
 
@@ -93,14 +92,28 @@ object CSVToRDFReification {
             case _                         => s""""$literal""""
           }
 
+          /*
           s"""_:b${System.nanoTime()} a rdf:Statement ;
              |    rdf:subject <$head> ;
              |    rdf:predicate <$rel> ;
              |    rdf:object $objectPart ;
              |    rel:tStart "$tStart"^^xsd:dateTime ;
              |    rel:tEnd "$tEnd"^^xsd:dateTime ;
-             |    rel:rStart $rStart^^xsd:dateTime ;
-             |    rel:rEnd $rEnd^^xsd:dateTime .
+             |    rel:rStart "$rStart"^^xsd:long ;
+             |    rel:rEnd "$rEnd"^^xsd:long .
+             |""".stripMargin
+           */
+
+          val b_node = s"_:b${System.nanoTime()}"
+
+          s"""$b_node <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement> .
+             |$b_node <http://www.w3.org/1999/02/22-rdf-syntax-ns#subject> <$head> .
+             |$b_node <http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate> <$rel> .
+             |$b_node <http://www.w3.org/1999/02/22-rdf-syntax-ns#object> $objectPart .
+             |$b_node <http://example.org/relation/tStart> "$tStart"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+             |$b_node <http://example.org/relation/tEnd> "$tEnd"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+             |$b_node <http://example.org/relation/rStart> "$rStart"^^<http://www.w3.org/2001/XMLSchema#long> .
+             |$b_node <http://example.org/relation/rEnd> "$rEnd"^^<http://www.w3.org/2001/XMLSchema#long> .
              |""".stripMargin
 
         case None => ""
