@@ -9,13 +9,6 @@ import java.io.{BufferedReader, FileReader}
 
 object CSVToRDFNamedGraphs {
 
-  private val PREFIXES =
-    """@prefix dbo: <http://dbpedia.org/ontology/> .
-      |@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-      |@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-      |@prefix rel: <http://example.org/relation/> .
-      |""".stripMargin
-
   def main(args: Array[String]): Unit = {
 
     if (args.length != 2) {
@@ -41,7 +34,6 @@ object CSVToRDFNamedGraphs {
       .map { case (line, idx) => convertRowToRDF(line, idx.toInt) }
       .filter(_.nonEmpty)
 
-    sql.sparkContext.parallelize(Seq(PREFIXES)).saveAsTextFile(outputPath + "_prefixes")
     rdfData.saveAsTextFile(outputPath + "_data")
     println(s"Spark output saved to $outputPath (merge with hadoop fs -cat)")
 
@@ -53,7 +45,6 @@ object CSVToRDFNamedGraphs {
     val writer = new java.io.PrintWriter(outputPath)
 
     val spark = SparkSessionUtil
-    writer.write(PREFIXES)
 
     try {
       val reader = new BufferedReader(new FileReader(inputPath))
@@ -87,14 +78,15 @@ object CSVToRDFNamedGraphs {
             case _                         => s""""$literal""""
           }
 
-          s"""graph:population$count {
-             |    $head $rel $objectPart;
-             |        rel:tStart "$tStart"^^xsd:date;
-             |        rel:tEnd "$tEnd"^^xsd:date;
-             |        rel:rStart $rStart;
-             |        rel:rEnd $rEnd.
-             |}
-             |""".stripMargin
+          val graphUri = s"<http://example.org/graph/population$count>"
+
+          s"""
+             |$head $rel $objectPart $graphUri .
+             |$head <http://example.org/relation/tStart> "$tStart"^^<http://www.w3.org/2001/XMLSchema#date> $graphUri .
+             |$head <http://example.org/relation/tEnd> "$tEnd"^^<http://www.w3.org/2001/XMLSchema#date> $graphUri .
+             |$head <http://example.org/relation/rStart> "$rStart"^^<http://www.w3.org/2001/XMLSchema#long> $graphUri .
+             |$head <http://example.org/relation/rEnd> "$rEnd"^^<http://www.w3.org/2001/XMLSchema#long> $graphUri .
+             |""".stripMargin.trim
 
         case None => ""
       }
