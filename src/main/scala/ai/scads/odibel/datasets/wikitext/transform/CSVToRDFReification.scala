@@ -83,7 +83,7 @@ object CSVToRDFReification {
       val cleanedLine = line.replace("\\\"\"", "")
 
       SerUtil.readCsvLine(cleanedLine) match {
-        case Some(SerUtil.RDFTriple(head, rel, literal, langTagOpt, tStart, tEnd, rStart, rEnd)) =>
+        case Some(SerUtil.RDFTriple(head, rel, literal, langTagOpt, rStart, rEnd, tStart, tEnd)) =>
 
 
           val objectPart = langTagOpt match {
