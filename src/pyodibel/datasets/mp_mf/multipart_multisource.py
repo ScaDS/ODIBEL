@@ -155,6 +155,12 @@ class SourceMeta(BaseModel):
                 f.write(f"{match.left_dataset}\t{match.right_dataset}\t{match.left_id}\t{match.right_id}\t{match.entity_type}\n")
         self.matches = VerifiedMatches(file=path)
 
+    # def set_provenance(self, provenance: Provenance):
+    #     path = self.root / "provenance.json"
+    #     with path.open("w") as f:
+    #         json.dump(provenance.model_dump(), f, indent=4)
+    #     self.provenance = Provenance(file=path)
+
 class SourceData(BaseModel):
     dir: Path
     parts: List[Path] = Field(default_factory=list)

@@ -39,3 +39,6 @@ Derive Wikidata
     - [x] getMatchToNs
 - load.py with /home/marvin/project/data/acquisiton/final_dbp_1k.txt
 - get the dbpedia uris with not match to wikidata as matches are only 954
+
+
+    # split -l 200 --numeric-suffixes=1 --suffix-length=1 --additional-suffix=.txt ../final_dbp_1k.txt split

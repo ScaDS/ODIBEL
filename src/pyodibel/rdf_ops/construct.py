@@ -12,7 +12,6 @@ from typing import Dict, List, Optional
 from enum import Enum
 
 from tqdm import tqdm
-from pyodibel.rdf_ops.utils import build_recursive_json
 
 class DirectMappingType(Enum):
     OBJECT = "object"

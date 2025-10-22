@@ -1,6 +1,6 @@
 from pathlib import Path
 from rdflib import Graph, URIRef, RDF
-from kgbench_extras.common.ontology import Ontology, OntologyUtil
+from kgcore.model.ontology import Ontology
 # BIG TODO: change location of ontology code
 from tqdm import tqdm
 
