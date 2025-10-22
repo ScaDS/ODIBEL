@@ -78,11 +78,11 @@ object CSVToRDFNamedGraphs {
           val graphUri = s"<http://example.org/graph/population$count>"
 
           s"""
-             |$head $rel $objectPart $graphUri .
-             |$head <http://example.org/relation/tStart> "$tStart"^^<http://www.w3.org/2001/XMLSchema#date> $graphUri .
-             |$head <http://example.org/relation/tEnd> "$tEnd"^^<http://www.w3.org/2001/XMLSchema#date> $graphUri .
-             |$head <http://example.org/relation/rStart> "$rStart"^^<http://www.w3.org/2001/XMLSchema#long> $graphUri .
-             |$head <http://example.org/relation/rEnd> "$rEnd"^^<http://www.w3.org/2001/XMLSchema#long> $graphUri .
+             |<$head> <$head> $objectPart $graphUri .
+             |<$head> <http://example.org/relation/tStart> "$tStart"^^<http://www.w3.org/2001/XMLSchema#date> $graphUri .
+             |<$head> <http://example.org/relation/tEnd> "$tEnd"^^<http://www.w3.org/2001/XMLSchema#date> $graphUri .
+             |<$head> <http://example.org/relation/rStart> "$rStart"^^<http://www.w3.org/2001/XMLSchema#long> $graphUri .
+             |<$head> <http://example.org/relation/rEnd> "$rEnd"^^<http://www.w3.org/2001/XMLSchema#long> $graphUri .
              |""".stripMargin.trim
 
         case None => ""
