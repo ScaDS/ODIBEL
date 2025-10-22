@@ -7,9 +7,14 @@ import ai.scads.odibel.datasets.wikitext.extraction.{Executor, ExtractionJob}
 import ai.scads.odibel.datasets.wikitext.log.{EventLogger, HeartbeatMonitor}
 import ai.scads.odibel.datasets.wikitext.utils.WikiUtil
 import ai.scads.odibel.utils.HDFSUtil
+import org.apache.hadoop.conf.Configuration
+import org.apache.hadoop.fs.{FileStatus, FileSystem, Path}
+import org.apache.hadoop.io.compress.CompressionCodecFactory
 
-import java.nio.file.{Path, Paths}
+import java.io.{BufferedReader, File, InputStream}
+import java.nio.file.Paths
 import scala.collection.mutable.ListBuffer
+import scala.io.{BufferedSource, Source}
 
 /**
  * Simple class to extract a DBpedia TKG without SPARK using multiple threads of a single JVM
@@ -22,16 +27,41 @@ class DBpediaTKGExtraction {
 
   def process(source: String, sink: String, endpoints: List[String]): Unit = {
 
-    val sourceFiles =
+    val iterator =
       if(source.startsWith("hdfs")){
         val hdfs = new HDFSUtil(source)
-        val files = hdfs.listHDFSFiles(source)
-        hdfs.getFs.close()
-        files
+        val fs: FileSystem = hdfs.getFs
+        val path = new Path(source)
+
+        val files = if (fs.getFileStatus(path).isDirectory) {
+          fs.listStatus(path).filter(_.isFile).map(_.getPath)
+        } else {
+          Array(path)
+        }
+
+        def openStream(p: Path): InputStream = {
+          val codecFactory = new CompressionCodecFactory(new Configuration())
+          val codec = codecFactory.getCodec(p)
+          val inputStream = fs.open(p)
+          if (codec != null) codec.createInputStream(inputStream) else inputStream
+        }
+
+        files.iterator.flatMap(p => safelyIterate(Source.fromInputStream(openStream(p))))
+
       } else {
-        Paths.get(source).toFile.list().toList
+        val file = new File(source)
+        val files = if (file.isDirectory) {
+          file.listFiles().filter(_.isFile)
+        } else {
+          Array(file)
+        }
+
+        files.iterator.flatMap(f => safelyIterate(Source.fromFile(f))
+        )
+
       }
 
+    /*
     val jobs = sourceFiles.map({
       sourceFile =>
         ExtractionJob(sourceFile,sink+"/"+sourceFile.split("/").last)
@@ -48,7 +78,43 @@ class DBpediaTKGExtraction {
 
     monitor.show()
     executor.waitForCompletion()
+
+     */
+
+
+    val ters: Iterator[TemporalExtractionResult] = processStream(iterator, endpoints.head)
+
+    import com.univocity.parsers.csv._
+    // Create a CSV writer
+    val writerSettings = new CsvWriterSettings()
+    writerSettings.setHeaderWritingEnabled(true) // Include headers
+
+    //        val stringWriter = new OutputStreamWriter(System.out)
+    val csvWriter = new CsvWriter(System.out, writerSettings)
+
+    // Write header row
+    csvWriter.writeHeaders("head", "rel", "tail", "rStart", "rEnd", "tStart", "tEnd")
+
+    ters.foreach(ter => {
+      csvWriter.writeRow(ter.head, ter.rel, ter.tail, ter.rFrom, ter.rUntil, ter.tFrom, ter.tUntil)
+    })
+    csvWriter.flush()
   }
+
+  private def safelyIterate(source: BufferedSource): Iterator[String] = {
+    val it = source.getLines()
+    new Iterator[String] {
+      override def hasNext: Boolean = {
+        val hn = it.hasNext
+        if (!hn) {
+          source.close()
+        }
+        hn
+      }
+      override def next(): String = it.next()
+    }
+  }
+
 }
 
 object DBpediaTKGExtraction {
