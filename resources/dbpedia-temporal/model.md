@@ -1,5 +1,7 @@
 # model.md
 
+The Transformation Scripts can be found in the [transform](https://github.com/ScaDS/ODIBEL/tree/main/src/main/scala/ai/scads/odibel/datasets/wikitext/transform) folder.
+
 ## 1. CSV
 ```
 head,       rel,                tail,                   tStart,      tEnd,     rStart, rEnd
