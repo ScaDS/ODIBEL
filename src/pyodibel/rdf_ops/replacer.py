@@ -1,8 +1,8 @@
 # Replace (map) URIs in a graph
 
 from rdflib import Graph, URIRef, Literal, RDF, OWL
-from kgbench.evaluation.cluster import MatchCluster
-from kgbench_extras.common.ontology import Ontology, OntologyUtil
+from pyodibel.rdf_ops.cluster import MatchCluster
+from kgcore.model.ontology import Ontology, OntologyUtil
 from pathlib import Path
 from typing import Callable
 
