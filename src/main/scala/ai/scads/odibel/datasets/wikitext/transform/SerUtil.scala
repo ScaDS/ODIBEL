@@ -58,7 +58,7 @@ object SerUtil {
       return None
     }
 
-    val Array(headRaw, relRaw, tailRaw, tStart, tEnd, rStart, rEnd) = fields
+    val Array(headRaw, relRaw, tailRaw, rStart, rEnd, tStart, tEnd) = fields
 
     val head = headRaw.stripPrefix("\"").stripSuffix("\"")
     val rel = relRaw.stripPrefix("\"").stripSuffix("\"")
