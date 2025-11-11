@@ -21,10 +21,10 @@ class SnapshotEval extends Callable[Int] {
   import sql.implicits._
 
   @Option(names = Array("--in", "-i"), required = true)
-  var in: File = _
+  var in: String = _
 
   @Option(names = Array("--out", "-o"), required = true)
-  var out: File = _
+  var out: String = _
 
   @Option(names = Array("--functions", "-f"), split = ",", required = false)
   var functionNamesToExecute: java.util.ArrayList[String] = _
@@ -34,37 +34,45 @@ class SnapshotEval extends Callable[Int] {
       .write
       .mode("overwrite")
       .option("header", "true")
-      .csv(new File(out, name).getPath)
+      .csv(out)
   }
 
   def genWPLsubgraph(): Dataset[TemporalExtractionResult] = {
-    val df = sql.read.parquet(in.getPath)
-    df.withColumn("tFrom", $"tFrom".cast("long"))
-      .withColumn("tUntil", $"tUntil".cast("long"))
+    val df = sql.read.parquet(in)
+    df.withColumn("tStart", $"tStart".cast("long"))
+      .withColumn("tEnd", $"tEnd".cast("long"))
       .as[TemporalExtractionResult]
       .filter(ter => ter.rel == DBO_WPWL)
   }
 
   def genDBOsubgraph(): Dataset[TemporalExtractionResult] = {
-    val df = sql.read.parquet(in.getPath)
-    df.withColumn("tFrom", $"tFrom".cast("long"))
-      .withColumn("tUntil", $"tUntil".cast("long"))
+    val df = sql.read.parquet(in)
+    df.withColumn("tStart", $"tStart".cast("long"))
+      .withColumn("tEnd", $"tEnd".cast("long"))
+      .filter(
+        (col("rel") === lit(RDFType) && col("tail").startsWith(DBO)) ||
+          col("rel").startsWith(DBO)
+      )
       .as[TemporalExtractionResult]
-      .filter(ter => (ter.rel == RDFType && ter.tail.startsWith(DBO)) || ter.rel.startsWith(DBO))
   }
 
   def genDBOsubgraphNoWPL(): Dataset[TemporalExtractionResult] = {
-    val df = sql.read.parquet(in.getPath)
-    df.withColumn("tFrom", $"tFrom".cast("long"))
-      .withColumn("tUntil", $"tUntil".cast("long"))
+    val df = sql.read.parquet(in)
+    df.withColumn("tStart", $"tStart".cast("long"))
+      .withColumn("tEnd", $"tEnd".cast("long"))
+      .filter(
+        (
+          (col("rel") === lit(RDFType) && col("tail").startsWith(DBO)) ||
+            (col("rel").startsWith(DBO) && col("rel") =!= lit(VOCAB.DBO_WPWL))
+          )
+      )
       .as[TemporalExtractionResult]
-      .filter(ter => ((ter.rel == RDFType && ter.tail.startsWith(DBO)) || ter.rel.startsWith(DBO) && ter.rel != VOCAB.DBO_WPWL))
   }
 
   def genCATsubgraph(): Dataset[TemporalExtractionResult] = {
-    val df = sql.read.parquet(in.getPath)
-    df.withColumn("tFrom", $"tFrom".cast("long"))
-      .withColumn("tUntil", $"tUntil".cast("long"))
+    val df = sql.read.parquet(in)
+    df.withColumn("tStart", $"tStart".cast("long"))
+      .withColumn("tEnd", $"tEnd".cast("long"))
       .as[TemporalExtractionResult]
       .filter(ter => ter.tail == SKOS_CONCEPT + ">" || Set(SKOS_BROADER, SKOS_SUBJECT, SKOS_PREFLABEL).contains(ter.rel))
   }
@@ -79,21 +87,21 @@ class SnapshotEval extends Callable[Int] {
   def genSnapshot(unix_timestamp: Long, dataset: Dataset[TemporalExtractionResult]): Dataset[TemporalExtractionResult] = {
     dataset.filter({
       ter =>
-        ter.tFrom <= unix_timestamp && unix_timestamp <= ter.tUntil
+        ter.tStart <= unix_timestamp && unix_timestamp <= ter.tEnd
     })
   }
 
   def genYearlySnapshots(start: Int, end: Int, monthDayPart: String = "-06-01"): Unit = {
-    val df = sql.read.parquet(in.getPath)
-      .withColumn("tFrom", $"tFrom".cast("long"))
-      .withColumn("tUntil", $"tUntil".cast("long"))
+    val df = sql.read.parquet(in)
+      .withColumn("tStart", $"tStart".cast("long"))
+      .withColumn("tEnd", $"tEnd".cast("long"))
       .as[TemporalExtractionResult]
 
     (start to end) foreach {
       year =>
         val date = year + "-06-01"
         val snap = genSnapshot(getUnixTimestampFromDate(date), df)
-        snap.write.parquet(out.getPath + "/" + date)
+        snap.write.parquet(out + "/" + date)
     }
   }
 
@@ -104,8 +112,8 @@ class SnapshotEval extends Callable[Int] {
 
     val stat = (start to end).sliding(2).map({
       case IndexedSeq(prev, curr) =>
-        val previousDF = sql.read.parquet(s"${in.getPath}/$prev-06-01")
-        val currentDf = sql.read.parquet(s"${in.getPath}/$curr-06-01")
+        val previousDF = sql.read.parquet(s"${in}/$prev-06-01")
+        val currentDf = sql.read.parquet(s"${in}/$curr-06-01")
 
         val diff = calculateDiffDF(currentDf, previousDF, keys)
 
@@ -162,7 +170,7 @@ class SnapshotEval extends Callable[Int] {
     (start to end).map({
       year =>
         val date = s"$year-06-01"
-        val df = sql.read.parquet(s"${in.getPath}/$date").as[TemporalExtractionResult]
+        val df = sql.read.parquet(s"${in}/$date").as[TemporalExtractionResult]
           .select("head", "rel", "tail")
         outDegreeDistribution(df).withColumn("year",lit(year))
     }).reduce(_ union _)
@@ -172,7 +180,7 @@ class SnapshotEval extends Callable[Int] {
     (start to end).map({
       year =>
         val date = s"$year-06-01"
-        val df = sql.read.parquet(s"${in.getPath}/$date").as[TemporalExtractionResult]
+        val df = sql.read.parquet(s"${in}/$date").as[TemporalExtractionResult]
           .filter(! _.tail.startsWith("\""))
           .select("head", "rel", "tail")
         outDegreeDistribution(df).withColumn("year",lit(year))
@@ -182,29 +190,29 @@ class SnapshotEval extends Callable[Int] {
   override def call(): Int = {
     val functions: Map[String, () => Unit] = Map(
       "genYearlySnapshots" -> (() => {
-        genYearlySnapshots(2000, 2025)
+        genYearlySnapshots(2023, 2026)
       }),
       "yearlyTripleDiffStats" -> (() => {
-        val df = yearlyTripleDiffStats(2000,2025)
+        val df = yearlyTripleDiffStats(2023,2026)
         writeOut("yearlyTripleDiffStats", df.toDF())
       }),
       "genWPLsubgraph" -> (() => {
-        genWPLsubgraph().write.parquet(out.getPath+"/WPL")
+        genWPLsubgraph().write.parquet(out+"/WPL")
       }),
       "genDBOsubgraph" -> (() => {
-        genDBOsubgraph().write.parquet(out.getPath+"/DBO")
+        genDBOsubgraph().write.parquet(out+"/DBO")
       }),
       "genDBOsubgraphNoWPL" -> (() => {
-        genDBOsubgraphNoWPL().write.parquet(out.getPath+"/DBOnoWPL")
+        genDBOsubgraphNoWPL().write.parquet(out+"/DBOnoWPL")
       }),
       "genCATsubgraph" -> (() => {
-        genCATsubgraph().write.parquet(out.getPath+"/CAT")
+        genCATsubgraph().write.parquet(out+"/CAT")
       }),
       "yearlyOutDegreeDistribution" -> (() => {
-        writeOut("yearlyOutDegreeDistribution",yearlyOutDegreeDistribution(2000,2025))
+        writeOut("yearlyOutDegreeDistribution",yearlyOutDegreeDistribution(2023,2026))
       }),
       "yearlyOutDegreeDistributionOnlyObjects" -> (() => {
-        writeOut("yearlyOutDegreeDistributionOnlyObjects",yearlyOutDegreeDistributionOnlyObjects(2000,2025))
+        writeOut("yearlyOutDegreeDistributionOnlyObjects",yearlyOutDegreeDistributionOnlyObjects(2023,2026))
       })
     )
 

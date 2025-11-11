@@ -60,7 +60,6 @@ class RCDiefServer(endpoint: String) {
           lastException = new IOException(s"Unexpected response status: $statusCode")
           val responseEntity = response.getEntity
           responseContent = EntityUtils.toString(responseEntity, StandardCharsets.UTF_8)
-//          println(responseContent) // TODO
         }
       } catch {
         case e: IOException =>
@@ -88,6 +87,7 @@ class RCDiefServer(endpoint: String) {
 
     if (!success) {
       logger.error(s"All $maxRetries attempts failed.")
+      logger.error(responseContent)
       Right(lastException)
     } else {
       Left(responseContent)
