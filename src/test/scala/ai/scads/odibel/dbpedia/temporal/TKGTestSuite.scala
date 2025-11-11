@@ -17,8 +17,8 @@ class TKGTestSuite extends AnyFunSuite {
 
   // Testdaten laden
   lazy val testData: Dataset[TemporalExtractionResult] = spark.read.json("src/test/resources/tkg/")
-    .withColumn("tFrom", $"tFrom".cast("long"))
-    .withColumn("tUntil", $"tUntil".cast("long"))
+    .withColumn("tStart", $"tStart".cast("long"))
+    .withColumn("tEnd", $"tEnd".cast("long"))
     .as[TemporalExtractionResult]
 
   test("SparkSession is initialized") {
@@ -101,20 +101,20 @@ class TKGTestSuite extends AnyFunSuite {
       ("http://dbpedia.org/resource/subject1","http://dbpedia.org/ontology/relation1","http://dbpedia.org/resource/tail2>","1002","1003",2000,3000),
       ("http://dbpedia.org/resource/subject2","http://dbpedia.org/ontology/relation1","http://dbpedia.org/resource/tail1>","2002","2003",2000,3000),
       ("http://dbpedia.org/resource/subject3","http://dbpedia.org/ontology/relation1","http://dbpedia.org/resource/tail2>","3002","3003",2000,4000),
-    ).toDF("head", "rel", "tail", "rFrom", "rUntil", "tFrom", "tUntil")
+    ).toDF("head", "rel", "tail", "rStart", "rEnd", "tStart", "tEnd")
     val timestamp2 = 4500
     val expectedData2 = Seq(
     ("http://dbpedia.org/resource/subject1","http://dbpedia.org/ontology/relation2","http://dbpedia.org/resource/tail4>","1003","1004",3000,99000),
     ("http://dbpedia.org/resource/subject2","http://dbpedia.org/ontology/relation1","http://dbpedia.org/resource/tail1>","2004","2005",4000,99000)
-    ).toDF("head", "rel", "tail", "rFrom", "rUntil", "tFrom", "tUntil")
+    ).toDF("head", "rel", "tail", "rStart", "rEnd", "tStart", "tEnd")
 
-    EvalFunctions.createSnapshot(data = testData, timestamp = timestamp1).orderBy("head", "rel", "rFrom","rUntil").show(false)
-    EvalFunctions.createSnapshot(data = testData, timestamp = timestamp2).orderBy("head", "rel", "rFrom","rUntil").show(false)
+    EvalFunctions.createSnapshot(data = testData, timestamp = timestamp1).orderBy("head", "rel", "rStart","rEnd").show(false)
+    EvalFunctions.createSnapshot(data = testData, timestamp = timestamp2).orderBy("head", "rel", "rStart","rEnd").show(false)
 
-    val actual1 = EvalFunctions.createSnapshot(data = testData, timestamp = timestamp1).orderBy("head", "rel", "rFrom","rUntil").collect()
-    val expected1 = expectedData1.orderBy("head", "rel", "rFrom","rUntil").collect()
-    val actual2 = EvalFunctions.createSnapshot(data = testData, timestamp = timestamp2).orderBy("head", "rel", "rFrom","rUntil").collect()
-    val expected2 = expectedData2.orderBy("head", "rel", "rFrom","rUntil").collect()
+    val actual1 = EvalFunctions.createSnapshot(data = testData, timestamp = timestamp1).orderBy("head", "rel", "rStart","rEnd").collect()
+    val expected1 = expectedData1.orderBy("head", "rel", "rStart","rEnd").collect()
+    val actual2 = EvalFunctions.createSnapshot(data = testData, timestamp = timestamp2).orderBy("head", "rel", "rStart","rEnd").collect()
+    val expected2 = expectedData2.orderBy("head", "rel", "rStart","rEnd").collect()
 
     assert(actual1.length == expected1.length, s"Expected ${expected1.length} rows, but got ${actual1.length}")
     assert(actual2.length == expected2.length, s"Expected ${expected2.length} rows, but got ${actual2.length}")
@@ -129,11 +129,11 @@ class TKGTestSuite extends AnyFunSuite {
 
   test("countStartRevisionsOverTime") {
     val data = spark.read.json(spark.createDataset(Seq(
-      "{\"head\": \"http://dbpedia.org/resource/subject1\", \"rel\": \"http://dbpedia.org/ontology/relation1\", \"tail\": \"http://dbpedia.org/resource/tail1>\", \"rFrom\": \"1000\", \"rUntil\": \"1001\", \"tFrom\": 1607558400000, \"tUntil\": 1702166400000}",
-      "{\"head\": \"http://dbpedia.org/resource/subject2\", \"rel\": \"http://dbpedia.org/ontology/relation1\", \"tail\": \"\\\"none\\\"@en\", \"rFrom\": \"1000\", \"rUntil\": \"1002\", \"tFrom\": 1607558400000, \"tUntil\": 1607558400000}",
-      "{\"head\": \"http://dbpedia.org/resource/subject2\", \"rel\": \"http://dbpedia.org/ontology/relation1\", \"tail\": \"\\\"none\\\"@en\", \"rFrom\": \"1002\", \"rUntil\": \"1003\", \"tFrom\": 1607558400000, \"tUntil\": 1702166400000}",
-      "{\"head\": \"http://dbpedia.org/resource/subject2\", \"rel\": \"http://dbpedia.org/ontology/relation1\", \"tail\": \"\\\"none\\\"@en\", \"rFrom\": \"1003\", \"rUntil\": \"1004\", \"tFrom\": 1702166400000, \"tUntil\": 1733788800000}",
-      "{\"head\": \"http://dbpedia.org/resource/subject2\", \"rel\": \"http://dbpedia.org/ontology/relation1\", \"tail\": \"\\\"none\\\"@en\", \"rFrom\": \"1002\", \"rUntil\": \"1004\", \"tFrom\": 1702166400000, \"tUntil\": 1733788800000}"
+      "{\"head\": \"http://dbpedia.org/resource/subject1\", \"rel\": \"http://dbpedia.org/ontology/relation1\", \"tail\": \"http://dbpedia.org/resource/tail1>\", \"rStart\": \"1000\", \"rEnd\": \"1001\", \"tStart\": 1607558400000, \"tEnd\": 1702166400000}",
+      "{\"head\": \"http://dbpedia.org/resource/subject2\", \"rel\": \"http://dbpedia.org/ontology/relation1\", \"tail\": \"\\\"none\\\"@en\", \"rStart\": \"1000\", \"rEnd\": \"1002\", \"tStart\": 1607558400000, \"tEnd\": 1607558400000}",
+      "{\"head\": \"http://dbpedia.org/resource/subject2\", \"rel\": \"http://dbpedia.org/ontology/relation1\", \"tail\": \"\\\"none\\\"@en\", \"rStart\": \"1002\", \"rEnd\": \"1003\", \"tStart\": 1607558400000, \"tEnd\": 1702166400000}",
+      "{\"head\": \"http://dbpedia.org/resource/subject2\", \"rel\": \"http://dbpedia.org/ontology/relation1\", \"tail\": \"\\\"none\\\"@en\", \"rStart\": \"1003\", \"rEnd\": \"1004\", \"tStart\": 1702166400000, \"tEnd\": 1733788800000}",
+      "{\"head\": \"http://dbpedia.org/resource/subject2\", \"rel\": \"http://dbpedia.org/ontology/relation1\", \"tail\": \"\\\"none\\\"@en\", \"rStart\": \"1002\", \"rEnd\": \"1004\", \"tStart\": 1702166400000, \"tEnd\": 1733788800000}"
     ))).as[TemporalExtractionResult]
     val result = EvalFunctions.countStartRevisionsOverTime(data).collect()
     val expected = Array(
@@ -145,11 +145,11 @@ class TKGTestSuite extends AnyFunSuite {
 
   test("countEndRevisionsOverTime") {
     val data = spark.read.json(spark.createDataset(Seq(
-      "{\"head\": \"http://dbpedia.org/resource/subject1\", \"rel\": \"http://dbpedia.org/ontology/relation1\", \"tail\": \"http://dbpedia.org/resource/tail1>\", \"rFrom\": \"1000\", \"rUntil\": \"1001\", \"tFrom\": 1607558400000, \"tUntil\": 1702166400000}",
-      "{\"head\": \"http://dbpedia.org/resource/subject2\", \"rel\": \"http://dbpedia.org/ontology/relation1\", \"tail\": \"\\\"none\\\"@en\", \"rFrom\": \"1000\", \"rUntil\": \"1002\", \"tFrom\": 1607558400000, \"tUntil\": 1607558400000}",
-      "{\"head\": \"http://dbpedia.org/resource/subject2\", \"rel\": \"http://dbpedia.org/ontology/relation1\", \"tail\": \"\\\"none\\\"@en\", \"rFrom\": \"1002\", \"rUntil\": \"1003\", \"tFrom\": 1607558400000, \"tUntil\": 1702166400000}",
-      "{\"head\": \"http://dbpedia.org/resource/subject2\", \"rel\": \"http://dbpedia.org/ontology/relation1\", \"tail\": \"\\\"none\\\"@en\", \"rFrom\": \"1003\", \"rUntil\": \"1004\", \"tFrom\": 1702166400000, \"tUntil\": 1733788800000}",
-      "{\"head\": \"http://dbpedia.org/resource/subject2\", \"rel\": \"http://dbpedia.org/ontology/relation1\", \"tail\": \"\\\"none\\\"@en\", \"rFrom\": \"1002\", \"rUntil\": \"1004\", \"tFrom\": 1702166400000, \"tUntil\": 1733788800000}"
+      "{\"head\": \"http://dbpedia.org/resource/subject1\", \"rel\": \"http://dbpedia.org/ontology/relation1\", \"tail\": \"http://dbpedia.org/resource/tail1>\", \"rStart\": \"1000\", \"rEnd\": \"1001\", \"tStart\": 1607558400000, \"tEnd\": 1702166400000}",
+      "{\"head\": \"http://dbpedia.org/resource/subject2\", \"rel\": \"http://dbpedia.org/ontology/relation1\", \"tail\": \"\\\"none\\\"@en\", \"rStart\": \"1000\", \"rEnd\": \"1002\", \"tStart\": 1607558400000, \"tEnd\": 1607558400000}",
+      "{\"head\": \"http://dbpedia.org/resource/subject2\", \"rel\": \"http://dbpedia.org/ontology/relation1\", \"tail\": \"\\\"none\\\"@en\", \"rStart\": \"1002\", \"rEnd\": \"1003\", \"tStart\": 1607558400000, \"tEnd\": 1702166400000}",
+      "{\"head\": \"http://dbpedia.org/resource/subject2\", \"rel\": \"http://dbpedia.org/ontology/relation1\", \"tail\": \"\\\"none\\\"@en\", \"rStart\": \"1003\", \"rEnd\": \"1004\", \"tStart\": 1702166400000, \"tEnd\": 1733788800000}",
+      "{\"head\": \"http://dbpedia.org/resource/subject2\", \"rel\": \"http://dbpedia.org/ontology/relation1\", \"tail\": \"\\\"none\\\"@en\", \"rStart\": \"1002\", \"rEnd\": \"1004\", \"tStart\": 1702166400000, \"tEnd\": 1733788800000}"
     ))).as[TemporalExtractionResult]
     val result = EvalFunctions.countEndRevisionsOverTime(data).collect()
     val expected = Array(
@@ -162,11 +162,11 @@ class TKGTestSuite extends AnyFunSuite {
 
   test("countStartTriplesOverTime") {
     val data = spark.read.json(spark.createDataset(Seq(
-      "{\"head\": \"http://dbpedia.org/resource/subject1\", \"rel\": \"http://dbpedia.org/ontology/relation1\", \"tail\": \"http://dbpedia.org/resource/tail1>\", \"rFrom\": \"1000\", \"rUntil\": \"1001\", \"tFrom\": 1607558400000, \"tUntil\": 1702166400000}",
-      "{\"head\": \"http://dbpedia.org/resource/subject2\", \"rel\": \"http://dbpedia.org/ontology/relation1\", \"tail\": \"\\\"none\\\"@en\", \"rFrom\": \"1000\", \"rUntil\": \"1002\", \"tFrom\": 1607558400000, \"tUntil\": 1607558400000}",
-      "{\"head\": \"http://dbpedia.org/resource/subject2\", \"rel\": \"http://dbpedia.org/ontology/relation1\", \"tail\": \"\\\"none\\\"@en\", \"rFrom\": \"1002\", \"rUntil\": \"1003\", \"tFrom\": 1607558400000, \"tUntil\": 1702166400000}",
-      "{\"head\": \"http://dbpedia.org/resource/subject2\", \"rel\": \"http://dbpedia.org/ontology/relation1\", \"tail\": \"\\\"none\\\"@en\", \"rFrom\": \"1003\", \"rUntil\": \"1004\", \"tFrom\": 1702166400000, \"tUntil\": 1733788800000}",
-      "{\"head\": \"http://dbpedia.org/resource/subject2\", \"rel\": \"http://dbpedia.org/ontology/relation1\", \"tail\": \"\\\"none\\\"@en\", \"rFrom\": \"1002\", \"rUntil\": \"1004\", \"tFrom\": 1702166400000, \"tUntil\": 1733788800000}"
+      "{\"head\": \"http://dbpedia.org/resource/subject1\", \"rel\": \"http://dbpedia.org/ontology/relation1\", \"tail\": \"http://dbpedia.org/resource/tail1>\", \"rStart\": \"1000\", \"rEnd\": \"1001\", \"tStart\": 1607558400000, \"tEnd\": 1702166400000}",
+      "{\"head\": \"http://dbpedia.org/resource/subject2\", \"rel\": \"http://dbpedia.org/ontology/relation1\", \"tail\": \"\\\"none\\\"@en\", \"rStart\": \"1000\", \"rEnd\": \"1002\", \"tStart\": 1607558400000, \"tEnd\": 1607558400000}",
+      "{\"head\": \"http://dbpedia.org/resource/subject2\", \"rel\": \"http://dbpedia.org/ontology/relation1\", \"tail\": \"\\\"none\\\"@en\", \"rStart\": \"1002\", \"rEnd\": \"1003\", \"tStart\": 1607558400000, \"tEnd\": 1702166400000}",
+      "{\"head\": \"http://dbpedia.org/resource/subject2\", \"rel\": \"http://dbpedia.org/ontology/relation1\", \"tail\": \"\\\"none\\\"@en\", \"rStart\": \"1003\", \"rEnd\": \"1004\", \"tStart\": 1702166400000, \"tEnd\": 1733788800000}",
+      "{\"head\": \"http://dbpedia.org/resource/subject2\", \"rel\": \"http://dbpedia.org/ontology/relation1\", \"tail\": \"\\\"none\\\"@en\", \"rStart\": \"1002\", \"rEnd\": \"1004\", \"tStart\": 1702166400000, \"tEnd\": 1733788800000}"
     ))).as[TemporalExtractionResult]
     val result = EvalFunctions.countStartTriplesOverTime(data).collect()
     val expected = Array(
@@ -178,11 +178,11 @@ class TKGTestSuite extends AnyFunSuite {
 
   test("countEndTriplesOverTime") {
     val data = spark.read.json(spark.createDataset(Seq(
-      "{\"head\": \"http://dbpedia.org/resource/subject1\", \"rel\": \"http://dbpedia.org/ontology/relation1\", \"tail\": \"http://dbpedia.org/resource/tail1>\", \"rFrom\": \"1000\", \"rUntil\": \"1001\", \"tFrom\": 1607558400000, \"tUntil\": 1702166400000}",
-      "{\"head\": \"http://dbpedia.org/resource/subject2\", \"rel\": \"http://dbpedia.org/ontology/relation1\", \"tail\": \"\\\"none\\\"@en\", \"rFrom\": \"1000\", \"rUntil\": \"1002\", \"tFrom\": 1607558400000, \"tUntil\": 1607558400000}",
-      "{\"head\": \"http://dbpedia.org/resource/subject2\", \"rel\": \"http://dbpedia.org/ontology/relation1\", \"tail\": \"\\\"none\\\"@en\", \"rFrom\": \"1002\", \"rUntil\": \"1003\", \"tFrom\": 1607558400000, \"tUntil\": 1702166400000}",
-      "{\"head\": \"http://dbpedia.org/resource/subject2\", \"rel\": \"http://dbpedia.org/ontology/relation1\", \"tail\": \"\\\"none\\\"@en\", \"rFrom\": \"1003\", \"rUntil\": \"1004\", \"tFrom\": 1702166400000, \"tUntil\": 1733788800000}",
-      "{\"head\": \"http://dbpedia.org/resource/subject2\", \"rel\": \"http://dbpedia.org/ontology/relation1\", \"tail\": \"\\\"none\\\"@en\", \"rFrom\": \"1002\", \"rUntil\": \"1004\", \"tFrom\": 1702166400000, \"tUntil\": 1733788800000}"
+      "{\"head\": \"http://dbpedia.org/resource/subject1\", \"rel\": \"http://dbpedia.org/ontology/relation1\", \"tail\": \"http://dbpedia.org/resource/tail1>\", \"rStart\": \"1000\", \"rEnd\": \"1001\", \"tStart\": 1607558400000, \"tEnd\": 1702166400000}",
+      "{\"head\": \"http://dbpedia.org/resource/subject2\", \"rel\": \"http://dbpedia.org/ontology/relation1\", \"tail\": \"\\\"none\\\"@en\", \"rStart\": \"1000\", \"rEnd\": \"1002\", \"tStart\": 1607558400000, \"tEnd\": 1607558400000}",
+      "{\"head\": \"http://dbpedia.org/resource/subject2\", \"rel\": \"http://dbpedia.org/ontology/relation1\", \"tail\": \"\\\"none\\\"@en\", \"rStart\": \"1002\", \"rEnd\": \"1003\", \"tStart\": 1607558400000, \"tEnd\": 1702166400000}",
+      "{\"head\": \"http://dbpedia.org/resource/subject2\", \"rel\": \"http://dbpedia.org/ontology/relation1\", \"tail\": \"\\\"none\\\"@en\", \"rStart\": \"1003\", \"rEnd\": \"1004\", \"tStart\": 1702166400000, \"tEnd\": 1733788800000}",
+      "{\"head\": \"http://dbpedia.org/resource/subject2\", \"rel\": \"http://dbpedia.org/ontology/relation1\", \"tail\": \"\\\"none\\\"@en\", \"rStart\": \"1002\", \"rEnd\": \"1004\", \"tStart\": 1702166400000, \"tEnd\": 1733788800000}"
     ))).as[TemporalExtractionResult]
     val result = EvalFunctions.countEndTriplesOverTime(data).collect()
     val expected = Array(
@@ -195,11 +195,11 @@ class TKGTestSuite extends AnyFunSuite {
 
   test("countChangesOverTime") {
     val data = spark.read.json(spark.createDataset(Seq(
-      "{\"head\": \"http://dbpedia.org/resource/subject1\", \"rel\": \"http://dbpedia.org/ontology/relation1\", \"tail\": \"http://dbpedia.org/resource/tail1>\", \"rFrom\": \"1000\", \"rUntil\": \"1001\", \"tFrom\": 1607558400000, \"tUntil\": 1702166400000}",
-      "{\"head\": \"http://dbpedia.org/resource/subject2\", \"rel\": \"http://dbpedia.org/ontology/relation1\", \"tail\": \"\\\"none\\\"@en\", \"rFrom\": \"1000\", \"rUntil\": \"1002\", \"tFrom\": 1607558400000, \"tUntil\": 1607558400000}",
-      "{\"head\": \"http://dbpedia.org/resource/subject2\", \"rel\": \"http://dbpedia.org/ontology/relation1\", \"tail\": \"\\\"none\\\"@en\", \"rFrom\": \"1002\", \"rUntil\": \"1003\", \"tFrom\": 1607558400000, \"tUntil\": 1702166400000}",
-      "{\"head\": \"http://dbpedia.org/resource/subject2\", \"rel\": \"http://dbpedia.org/ontology/relation1\", \"tail\": \"\\\"none\\\"@en\", \"rFrom\": \"1003\", \"rUntil\": \"1004\", \"tFrom\": 1702166400000, \"tUntil\": 1733788800000}",
-      "{\"head\": \"http://dbpedia.org/resource/subject2\", \"rel\": \"http://dbpedia.org/ontology/relation1\", \"tail\": \"\\\"none\\\"@en\", \"rFrom\": \"1002\", \"rUntil\": \"1004\", \"tFrom\": 1702166400000, \"tUntil\": 1733788800000}"
+      "{\"head\": \"http://dbpedia.org/resource/subject1\", \"rel\": \"http://dbpedia.org/ontology/relation1\", \"tail\": \"http://dbpedia.org/resource/tail1>\", \"rStart\": \"1000\", \"rEnd\": \"1001\", \"tStart\": 1607558400000, \"tEnd\": 1702166400000}",
+      "{\"head\": \"http://dbpedia.org/resource/subject2\", \"rel\": \"http://dbpedia.org/ontology/relation1\", \"tail\": \"\\\"none\\\"@en\", \"rStart\": \"1000\", \"rEnd\": \"1002\", \"tStart\": 1607558400000, \"tEnd\": 1607558400000}",
+      "{\"head\": \"http://dbpedia.org/resource/subject2\", \"rel\": \"http://dbpedia.org/ontology/relation1\", \"tail\": \"\\\"none\\\"@en\", \"rStart\": \"1002\", \"rEnd\": \"1003\", \"tStart\": 1607558400000, \"tEnd\": 1702166400000}",
+      "{\"head\": \"http://dbpedia.org/resource/subject2\", \"rel\": \"http://dbpedia.org/ontology/relation1\", \"tail\": \"\\\"none\\\"@en\", \"rStart\": \"1003\", \"rEnd\": \"1004\", \"tStart\": 1702166400000, \"tEnd\": 1733788800000}",
+      "{\"head\": \"http://dbpedia.org/resource/subject2\", \"rel\": \"http://dbpedia.org/ontology/relation1\", \"tail\": \"\\\"none\\\"@en\", \"rStart\": \"1002\", \"rEnd\": \"1004\", \"tStart\": 1702166400000, \"tEnd\": 1733788800000}"
     ))).as[TemporalExtractionResult]
     val result = EvalFunctions.countChangesOverTime(data).collect()
     val expected = Array(
@@ -212,12 +212,12 @@ class TKGTestSuite extends AnyFunSuite {
 
   test("calculateInDegreeDistributionPerYear") {
     val data = spark.read.json(spark.createDataset(Seq(
-      "{\"head\": \"http://dbpedia.org/resource/subject1\", \"rel\": \"http://dbpedia.org/ontology/relation1\", \"tail\": \"http://dbpedia.org/resource/tail1\", \"rFrom\": \"1000\", \"rUntil\": \"1001\", \"tFrom\": 1607558400000, \"tUntil\": 1702166400000}",
-      "{\"head\": \"http://dbpedia.org/resource/subject2\", \"rel\": \"http://dbpedia.org/ontology/relation1\", \"tail\": \"http://dbpedia.org/resource/subject1\", \"rFrom\": \"1000\", \"rUntil\": \"1002\", \"tFrom\": 1607558400000, \"tUntil\": 1607558400000}",
-      "{\"head\": \"http://dbpedia.org/resource/subject2\", \"rel\": \"http://dbpedia.org/ontology/relation1\", \"tail\": \"http://dbpedia.org/resource/subject2\", \"rFrom\": \"1002\", \"rUntil\": \"1003\", \"tFrom\": 1607558400000, \"tUntil\": 1702166400000}",
-      "{\"head\": \"http://dbpedia.org/resource/subject2\", \"rel\": \"http://dbpedia.org/ontology/relation2\", \"tail\": \"http://dbpedia.org/resource/subject2\", \"rFrom\": \"1003\", \"rUntil\": \"1004\", \"tFrom\": 1702166400000, \"tUntil\": 1733788800000}",
-      "{\"head\": \"http://dbpedia.org/resource/subject2\", \"rel\": \"http://dbpedia.org/ontology/relation3\", \"tail\": \"http://dbpedia.org/resource/subject3\", \"rFrom\": \"1002\", \"rUntil\": \"1004\", \"tFrom\": 1702166400000, \"tUntil\": 1733788800000}",
-      "{\"head\": \"http://dbpedia.org/resource/subject3\", \"rel\": \"http://dbpedia.org/ontology/relation3\", \"tail\": \"http://dbpedia.org/resource/subject3\", \"rFrom\": \"1002\", \"rUntil\": \"1004\", \"tFrom\": 1702166400000, \"tUntil\": 1733788800000}"
+      "{\"head\": \"http://dbpedia.org/resource/subject1\", \"rel\": \"http://dbpedia.org/ontology/relation1\", \"tail\": \"http://dbpedia.org/resource/tail1\", \"rStart\": \"1000\", \"rEnd\": \"1001\", \"tStart\": 1607558400000, \"tEnd\": 1702166400000}",
+      "{\"head\": \"http://dbpedia.org/resource/subject2\", \"rel\": \"http://dbpedia.org/ontology/relation1\", \"tail\": \"http://dbpedia.org/resource/subject1\", \"rStart\": \"1000\", \"rEnd\": \"1002\", \"tStart\": 1607558400000, \"tEnd\": 1607558400000}",
+      "{\"head\": \"http://dbpedia.org/resource/subject2\", \"rel\": \"http://dbpedia.org/ontology/relation1\", \"tail\": \"http://dbpedia.org/resource/subject2\", \"rStart\": \"1002\", \"rEnd\": \"1003\", \"tStart\": 1607558400000, \"tEnd\": 1702166400000}",
+      "{\"head\": \"http://dbpedia.org/resource/subject2\", \"rel\": \"http://dbpedia.org/ontology/relation2\", \"tail\": \"http://dbpedia.org/resource/subject2\", \"rStart\": \"1003\", \"rEnd\": \"1004\", \"tStart\": 1702166400000, \"tEnd\": 1733788800000}",
+      "{\"head\": \"http://dbpedia.org/resource/subject2\", \"rel\": \"http://dbpedia.org/ontology/relation3\", \"tail\": \"http://dbpedia.org/resource/subject3\", \"rStart\": \"1002\", \"rEnd\": \"1004\", \"tStart\": 1702166400000, \"tEnd\": 1733788800000}",
+      "{\"head\": \"http://dbpedia.org/resource/subject3\", \"rel\": \"http://dbpedia.org/ontology/relation3\", \"tail\": \"http://dbpedia.org/resource/subject3\", \"rStart\": \"1002\", \"rEnd\": \"1004\", \"tStart\": 1702166400000, \"tEnd\": 1733788800000}"
     ))).as[TemporalExtractionResult]
     val actual = EvalFunctions.calculateInDegreeDistributionPerYear(data).collect()
 
@@ -238,13 +238,13 @@ class TKGTestSuite extends AnyFunSuite {
 
   test("calculateOutDegreeDistributionPerYear") {
     val data = spark.read.json(spark.createDataset(Seq(
-      "{\"head\": \"http://dbpedia.org/resource/subject1\", \"rel\": \"http://dbpedia.org/ontology/relation1\", \"tail\": \"http://dbpedia.org/resource/tail1\", \"rFrom\": \"1000\", \"rUntil\": \"1001\", \"tFrom\": 1607558400000, \"tUntil\": 1702166400000}",
-      "{\"head\": \"http://dbpedia.org/resource/subject2\", \"rel\": \"http://dbpedia.org/ontology/relation1\", \"tail\": \"http://dbpedia.org/resource/subject1\", \"rFrom\": \"1000\", \"rUntil\": \"1002\", \"tFrom\": 1607558400000, \"tUntil\": 1607558400000}",
-      "{\"head\": \"http://dbpedia.org/resource/subject2\", \"rel\": \"http://dbpedia.org/ontology/relation1\", \"tail\": \"http://dbpedia.org/resource/subject2\", \"rFrom\": \"1002\", \"rUntil\": \"1003\", \"tFrom\": 1607558400000, \"tUntil\": 1702166400000}",
-      "{\"head\": \"http://dbpedia.org/resource/subject2\", \"rel\": \"http://dbpedia.org/ontology/relation2\", \"tail\": \"http://dbpedia.org/resource/subject2\", \"rFrom\": \"1003\", \"rUntil\": \"1004\", \"tFrom\": 1702166400000, \"tUntil\": 1733788800000}",
-      "{\"head\": \"http://dbpedia.org/resource/subject2\", \"rel\": \"http://dbpedia.org/ontology/relation3\", \"tail\": \"http://dbpedia.org/resource/subject3\", \"rFrom\": \"1002\", \"rUntil\": \"1004\", \"tFrom\": 1702166400000, \"tUntil\": 1733788800000}",
-      "{\"head\": \"http://dbpedia.org/resource/subject3\", \"rel\": \"http://dbpedia.org/ontology/relation3\", \"tail\": \"http://dbpedia.org/resource/subject3\", \"rFrom\": \"1002\", \"rUntil\": \"1004\", \"tFrom\": 1702166400000, \"tUntil\": 1733788800000}",
-      "{\"head\": \"http://dbpedia.org/resource/subject3\", \"rel\": \"http://dbpedia.org/ontology/relation4\", \"tail\": \"http://dbpedia.org/resource/subject3\", \"rFrom\": \"1002\", \"rUntil\": \"1004\", \"tFrom\": 1702166400000, \"tUntil\": 1733788800000}"
+      "{\"head\": \"http://dbpedia.org/resource/subject1\", \"rel\": \"http://dbpedia.org/ontology/relation1\", \"tail\": \"http://dbpedia.org/resource/tail1\", \"rStart\": \"1000\", \"rEnd\": \"1001\", \"tStart\": 1607558400000, \"tEnd\": 1702166400000}",
+      "{\"head\": \"http://dbpedia.org/resource/subject2\", \"rel\": \"http://dbpedia.org/ontology/relation1\", \"tail\": \"http://dbpedia.org/resource/subject1\", \"rStart\": \"1000\", \"rEnd\": \"1002\", \"tStart\": 1607558400000, \"tEnd\": 1607558400000}",
+      "{\"head\": \"http://dbpedia.org/resource/subject2\", \"rel\": \"http://dbpedia.org/ontology/relation1\", \"tail\": \"http://dbpedia.org/resource/subject2\", \"rStart\": \"1002\", \"rEnd\": \"1003\", \"tStart\": 1607558400000, \"tEnd\": 1702166400000}",
+      "{\"head\": \"http://dbpedia.org/resource/subject2\", \"rel\": \"http://dbpedia.org/ontology/relation2\", \"tail\": \"http://dbpedia.org/resource/subject2\", \"rStart\": \"1003\", \"rEnd\": \"1004\", \"tStart\": 1702166400000, \"tEnd\": 1733788800000}",
+      "{\"head\": \"http://dbpedia.org/resource/subject2\", \"rel\": \"http://dbpedia.org/ontology/relation3\", \"tail\": \"http://dbpedia.org/resource/subject3\", \"rStart\": \"1002\", \"rEnd\": \"1004\", \"tStart\": 1702166400000, \"tEnd\": 1733788800000}",
+      "{\"head\": \"http://dbpedia.org/resource/subject3\", \"rel\": \"http://dbpedia.org/ontology/relation3\", \"tail\": \"http://dbpedia.org/resource/subject3\", \"rStart\": \"1002\", \"rEnd\": \"1004\", \"tStart\": 1702166400000, \"tEnd\": 1733788800000}",
+      "{\"head\": \"http://dbpedia.org/resource/subject3\", \"rel\": \"http://dbpedia.org/ontology/relation4\", \"tail\": \"http://dbpedia.org/resource/subject3\", \"rStart\": \"1002\", \"rEnd\": \"1004\", \"tStart\": 1702166400000, \"tEnd\": 1733788800000}"
     ))).as[TemporalExtractionResult]
     val actual = EvalFunctions.calculateOutDegreeDistributionPerYear(data).collect()
 

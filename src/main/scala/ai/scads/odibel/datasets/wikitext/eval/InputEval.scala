@@ -20,10 +20,10 @@ class InputEval extends Callable[Int] {
   // - [x] total revisions, article revisions, category revisions
 
   @Option(names = Array("--in", "-i"), required = true)
-  var in: File = _
+  var in: String = _
 
   @Option(names = Array("--out", "-o"), required = true)
-  var out: File = _
+  var out: String = _
 
   @Option(names = Array("--functions", "-f"), split = ",", required = false)
   var functionNamesToExecute: java.util.ArrayList[String] = _
@@ -37,40 +37,40 @@ class InputEval extends Callable[Int] {
       .write
       .mode("overwrite")
       .option("header", "true")
-      .csv(new File(out, name).getPath)
+      .csv(out)
   }
 
   def extractPageMetaTable(): Unit = {
-    val df = sql.read.json(in.getPath)
+    val df = sql.read.json(in)
     val mapped = df.as[PageRevisionXmlSplit].map({
       raw =>
         val enriched = WikiUtil.enrichFlatRawPageRevision(raw)
         RevisionMetadata(enriched.pId, enriched.rId, enriched.rTimestamp, enriched.ns.get)
     })
-    mapped.repartition(64).write.mode("overwrite").parquet(out.getPath)
+    mapped.repartition(64).write.mode("overwrite").parquet(out)
   }
 
   final val timestampFormat = "yyyy-MM-dd'T'HH:mm:ss'Z'"
 
 
   def namespaceRevisionCount(): DataFrame = {
-    val df = sql.read.parquet(in.getPath).select(col("id").as("rid"),col("pageid").as("pid"),col("timestamp"),col("namespace").as("ns"))
+    val df = sql.read.parquet(in).select(col("id").as("rid"),col("pageid").as("pid"),col("timestamp"),col("namespace").as("ns"))
     df.select("rid", "ns").distinct().select("ns").groupBy("ns").count()
   }
 
   def namespacePageCount(): DataFrame = {
-    val df = sql.read.parquet(in.getPath).select(col("id").as("rid"),col("pageid").as("pid"),col("timestamp"),col("namespace").as("ns"))
+    val df = sql.read.parquet(in).select(col("id").as("rid"),col("pageid").as("pid"),col("timestamp"),col("namespace").as("ns"))
     df.select("pid", "ns").distinct().select("ns").groupBy("ns").count()
   }
 
   def revisionsPerYear(): DataFrame = {
-    val df = sql.read.parquet(in.getPath).select(col("id").as("rid"),col("pageid").as("pid"),col("timestamp"),col("namespace").as("ns"))
+    val df = sql.read.parquet(in).select(col("id").as("rid"),col("pageid").as("pid"),col("timestamp"),col("namespace").as("ns"))
       .withColumn("year", date_format(to_date(to_timestamp($"timestamp"),timestampFormat), "yyyy"))
     df.select("year","ns").groupBy("year","ns").count()
   }
 
   def pagesPerYear(): DataFrame = {
-    val df = sql.read.parquet(in.getPath).select(col("id").as("rid"),col("pageid").as("pid"),col("timestamp"),col("namespace").as("ns"))
+    val df = sql.read.parquet(in).select(col("id").as("rid"),col("pageid").as("pid"),col("timestamp"),col("namespace").as("ns"))
       .withColumn("year", date_format(to_date(to_timestamp($"timestamp"),timestampFormat), "yyyy"))
     df.select("pid", "year", "ns").groupBy("pid", "ns").agg(min("year").alias("min_year")).select(col("min_year").as("year"),col("ns")).groupBy("year", "ns").count()
 

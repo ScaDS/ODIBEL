@@ -33,20 +33,21 @@ object SerUtil {
 
   def buildQuads(ter: TemporalExtractionResult): List[String] = {
     List(
-      buildQuad(ter.head, ter.rel, ter.tail, s"${ter.rFrom}-${ter.rUntil}"),
-      buildQuad(s"$TKG/${ter.rFrom}-${ter.rUntil}", s"$TKG/start", s"\"${formatDate(ter.tFrom)}\"^^<http://www.w3.org/2001/XMLSchema#dateTime>", ""),
-      buildQuad(s"$TKG/${ter.rFrom}-${ter.rUntil}", s"$TKG/end", s"\"${formatDate(ter.tUntil)}\"^^<http://www.w3.org/2001/XMLSchema#dateTime>", "")
+      buildQuad(ter.head, ter.rel, ter.tail, s"${ter.rStart}-${ter.rEnd}"),
+      buildQuad(s"$TKG/${ter.rStart}-${ter.rEnd}", s"$TKG/start", s"\"${formatDate(ter.tStart)}\"^^<http://www.w3.org/2001/XMLSchema#dateTime>", ""),
+      buildQuad(s"$TKG/${ter.rStart}-${ter.rEnd}", s"$TKG/end", s"\"${formatDate(ter.tEnd)}\"^^<http://www.w3.org/2001/XMLSchema#dateTime>", "")
     )
   }
 
   case class RDFTriple(
                         head: String,
                         rel: String,
-                        obj: String,
+                        literal: String,
+                        langTag: Option[String],
+                        rStart: Long,
+                        rEnd: Long,
                         tStart: String,
-                        tEnd: String,
-                        rStart: String,
-                        rEnd: String
+                        tEnd: String
                       )
 
   def readCsvLine(line: String): Option[RDFTriple] = {
@@ -57,7 +58,7 @@ object SerUtil {
       return None
     }
 
-    val Array(headRaw, relRaw, tailRaw, tStart, tEnd, rStart, rEnd) = fields
+    val Array(headRaw, relRaw, tailRaw, rStart, rEnd, tStart, tEnd) = fields
 
     val head = headRaw.stripPrefix("\"").stripSuffix("\"")
     val rel = relRaw.stripPrefix("\"").stripSuffix("\"")
@@ -77,11 +78,7 @@ object SerUtil {
       .replace("\\t", "\t")
       .replace("\\\"", "\"")
 
-
-    val langTagStr = langTagOpt.getOrElse("")
-    val obj = if (literal.contains("http")) s"<$literal>" else s""""$literal"$langTagStr"""
-
-    Some(RDFTriple(head, rel, obj, formatDate(tStart.toLong), formatDate(tEnd.toLong), formatDate(rStart.toLong), formatDate(rEnd.toLong)))
+    Some(RDFTriple(head, rel, literal, langTagOpt, rStart.toLong, rEnd.toLong, formatDate(tStart.toLong), formatDate(tEnd.toLong)))
   }
 
   private def parseCsvLine(line: String): Array[String] = {

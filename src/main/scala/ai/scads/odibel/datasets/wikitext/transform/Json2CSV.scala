@@ -12,8 +12,8 @@ object Json2CSV extends App {
     System.err.println("usage -- inputPath OutputPath")
 
   sql.read.parquet(args(0))
-    .withColumn("tFrom", $"tFrom".cast("long"))
-    .withColumn("tUntil", $"tUntil".cast("long"))
+    .withColumn("tStart", $"tStart".cast("long"))
+    .withColumn("tEnd", $"tEnd".cast("long"))
     .as[TemporalExtractionResult]
     .map({
       ter =>
