@@ -7,22 +7,15 @@ import ai.scads.odibel.datasets.wikitext.extraction.{Executor, ExtractionJob}
 import ai.scads.odibel.datasets.wikitext.log.{EventLogger, HeartbeatMonitor}
 import ai.scads.odibel.datasets.wikitext.utils.WikiUtil
 import ai.scads.odibel.utils.HDFSUtil
-<<<<<<< HEAD
 import org.apache.hadoop.conf.Configuration
 import org.apache.hadoop.fs.{FileStatus, FileSystem, Path}
 import org.apache.hadoop.io.compress.CompressionCodecFactory
-=======
 import org.slf4j.LoggerFactory
->>>>>>> 1316b45 (added some logging for DBpediaTKGExtraction)
-
-<<<<<<< HEAD
 import java.io.{BufferedReader, File, InputStream}
 import java.nio.file.Paths
 import scala.collection.mutable.ListBuffer
 import scala.io.{BufferedSource, Source}
-=======
 import java.nio.file.Paths
->>>>>>> 4e0574d (removed detailed logging)
 
 /**
  * Simple class to extract a DBpedia TKG without SPARK using multiple threads of a single JVM
@@ -108,7 +101,7 @@ class DBpediaTKGExtraction {
     csvWriter.writeHeaders("head", "rel", "tail", "rStart", "rEnd", "tStart", "tEnd")
 
     ters.foreach(ter => {
-      csvWriter.writeRow(ter.head, ter.rel, ter.tail, ter.rFrom, ter.rUntil, ter.tFrom, ter.tUntil)
+      csvWriter.writeRow(ter.head, ter.rel, ter.tail, ter.rStart, ter.rEnd, ter.tStart, ter.tEnd)
     })
     csvWriter.flush()
   }

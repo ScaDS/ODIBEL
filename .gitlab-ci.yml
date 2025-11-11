@@ -1,0 +1,12 @@
+
+stages:
+  - build
+
+paris:
+  stage: build
+  image: docker:24.0.5
+  script:
+    - echo "TODO"
+  rules:
+    - changes:
+        - src/**/*
