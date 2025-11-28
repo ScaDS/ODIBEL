@@ -3,9 +3,9 @@ requires = ["setuptools>=61.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "pyodible"
+name = "pyodibel"
 version = "0.1.0"
-description = "Ontology and acquisition utilities for movie knowledge graphs."
+description = "Open Data Integration Benchmark Evaluation Lab - Generate and evaluate benchmark datasets for data integration tasks."
 authors = [
     {name = "Odibel Team", email = "team@odibel.org"}
 ]
@@ -19,6 +19,7 @@ dependencies = [
     "SQLAlchemy>=2.0.0",
     "click>=8.1.8",
     "tqdm>=4.67.1",
+    "pyspark>=3.5.7",
 ]
 
 [project.optional-dependencies]
