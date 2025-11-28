@@ -1,7 +1,7 @@
 import click
 from typing import Optional
 
-from pyodibel.rdf_ops.extract import extract_subgraph_recursive
+from pyodibel.ops.rdf_ops.extract import extract_subgraph_recursive
 
 import rdflib
 

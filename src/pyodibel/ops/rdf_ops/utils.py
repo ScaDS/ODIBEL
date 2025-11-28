@@ -3,6 +3,8 @@ from rdflib import Graph, URIRef, BNode, Literal
 from rdflib.namespace import RDFS
 from pyodibel.rdf_ops.construct import DirectMappingType
 
+# TODO move to construct.rdf_json.py
+
 JsonDict = Dict[str, Any]
 Provenance = Dict[str, str]  # json_path -> source_uri_or_bnode
 
