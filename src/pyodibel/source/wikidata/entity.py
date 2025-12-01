@@ -112,3 +112,8 @@ class WikidataEntity(BaseModel):
         """Convert to dictionary."""
         return self.model_dump(exclude_none=True)
 
+class ExternalIDClaim(BaseModel):
+    id: str
+    type: str
+    property: str
+    value: str

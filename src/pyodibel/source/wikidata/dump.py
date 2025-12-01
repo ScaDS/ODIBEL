@@ -78,9 +78,284 @@ class WikidataDumpSource(StreamingDataSource):
             )
         return self._backend
     
+    def fetch_backend(self, dump_path: str, **kwargs) -> Any:
+        """
+        Fetch entities from Wikidata dump and return backend-native data structure.
+        
+        This method does NOT collect data to the driver. It returns the backend's
+        native data structure (e.g., Spark DataFrame/RDD, Pandas DataFrame) which
+        can be used for chaining operations without materialization.
+        
+        Args:
+            dump_path: Path to Wikidata dump file (JSON or JSONL)
+            **kwargs: Additional parameters:
+                - filters: Dictionary of filters to apply (on entity fields)
+                - limit: Maximum number of entities (NOTE: limit is NOT applied here,
+                         it's stored and applied during materialize() to keep data lazy)
+        
+        Returns:
+            Backend-native data structure:
+            - Spark: RDD of entity dictionaries (lazy, not collected)
+            - Pandas: DataFrame with entity dictionaries (NOTE: Pandas requires
+                      collection, so this will collect data. Use Spark for truly lazy operations)
+            - Native: Iterator of dictionaries (lazy)
+        
+        Example:
+            # Get Spark RDD without collecting
+            entities_rdd = source.fetch_backend("dump.json")
+            
+            # Chain operations
+            filtered = entities_rdd.filter(lambda e: e.get("type") == "item")
+            
+            # Only collect when needed
+            entities = source.materialize(filtered, limit=100)
+        """
+        dump_path_obj = Path(dump_path)
+        if not dump_path_obj.exists():
+            raise FileNotFoundError(f"Wikidata dump not found: {dump_path}")
+        
+        backend = self._get_backend()
+        backend_type = self.backend_config.backend_type
+        filters = kwargs.get("filters", {})
+        limit = kwargs.get("limit")
+        
+        logger.info(f"Loading Wikidata dump from: {dump_path} (backend-native, backend={backend_type.value})")
+        
+        # For now, Spark backend is the primary implementation for scalable processing
+        # Other backends can be added later
+        if backend_type == BackendType.SPARK:
+            # Read as text file (line by line)
+            text_df = backend.load_data(dump_path, format="text")
+            
+            # Map each line to entity dict (work with dicts in Spark for serialization)
+            parse_func = WikidataDumpSource._parse_json_line_to_dict
+            entities_dict_rdd = text_df.rdd.flatMap(
+                lambda row: parse_func(row.value)
+            )
+            
+            # Apply filters if provided
+            if filters:
+                entities_dict_rdd = self._apply_filters_rdd(entities_dict_rdd, filters)
+            
+            # Note: Limit is applied lazily in materialize(), not here
+            # This keeps the RDD lazy and scalable
+            
+            # Return RDD of dictionaries (lazy, not collected)
+            return entities_dict_rdd
+        
+        elif backend_type == BackendType.PANDAS:
+            # For Pandas, we need to read line by line and parse
+            # This will collect data (Pandas limitation), but we return DataFrame
+            import pandas as pd
+            
+            entities_dicts = []
+            with open(dump_path, 'r', encoding='utf-8') as f:
+                for line in f:
+                    line = line.strip()
+                    if not line or line in ["[", "]"]:
+                        continue
+                    if line.endswith(","):
+                        line = line.rstrip(",")
+                    try:
+                        entity_dict = json.loads(line)
+                        # Apply filters if provided
+                        if filters:
+                            if not self._check_filter_dict_static(entity_dict, filters):
+                                continue
+                        entities_dicts.append(entity_dict)
+                    except json.JSONDecodeError:
+                        continue
+            
+            return pd.DataFrame(entities_dicts)
+        
+        else:
+            # Native backend - return lazy iterator
+            def _read_entities():
+                with open(dump_path, 'r', encoding='utf-8') as f:
+                    for line in f:
+                        line = line.strip()
+                        if not line or line in ["[", "]"]:
+                            continue
+                        if line.endswith(","):
+                            line = line.rstrip(",")
+                        try:
+                            entity_dict = json.loads(line)
+                            # Apply filters if provided
+                            if filters:
+                                if not self._check_filter_dict_static(entity_dict, filters):
+                                    continue
+                            yield entity_dict
+                        except json.JSONDecodeError:
+                            continue
+            
+            return iter(_read_entities())
+    
+    def materialize(self, backend_data: Any, validate: bool = True, limit: Optional[int] = None) -> Iterator[WikidataEntity]:
+        """
+        Convert backend-native data to Pydantic WikidataEntity models.
+        
+        This method materializes backend data (collects if needed) and converts
+        to Pydantic models. Use this when you need to work with entity objects
+        or when switching backends.
+        
+        Args:
+            backend_data: Backend-native data structure:
+                - Spark: RDD of dictionaries
+                - Pandas: DataFrame with entity dictionaries
+                - Native: Iterator of dictionaries
+            validate: Whether to validate Pydantic models (default: True)
+            limit: Maximum number of entities to materialize (None for all)
+        
+        Yields:
+            WikidataEntity instances
+        
+        Example:
+            # Fetch with Spark backend
+            entities_rdd = source.fetch_backend("dump.json")
+            
+            # Apply operations in Spark
+            filtered = entities_rdd.filter(lambda e: e.get("type") == "item")
+            
+            # Materialize to Pydantic models when needed
+            for entity in source.materialize(filtered, limit=100):
+                print(entity.id)
+        """
+        backend_type = self.backend_config.backend_type
+        entities_dicts = []
+        
+        if backend_type == BackendType.SPARK:
+            # Spark RDD - collect to list of dicts
+            # Check if it's an RDD (has take/collect methods)
+            if hasattr(backend_data, 'take') and hasattr(backend_data, 'collect'):
+                if limit:
+                    entities_dicts = backend_data.take(limit)
+                else:
+                    entities_dicts = backend_data.collect()
+            else:
+                # Already a list or iterable
+                entities_dicts = list(backend_data)
+        elif backend_type == BackendType.PANDAS:
+            # Pandas DataFrame - convert to list of dicts
+            import pandas as pd
+            if isinstance(backend_data, pd.DataFrame):
+                if limit:
+                    entities_dicts = backend_data.head(limit).to_dict('records')
+                else:
+                    entities_dicts = backend_data.to_dict('records')
+            else:
+                # Already a list or iterable
+                entities_dicts = list(backend_data)
+        else:
+            # Native - already an iterator
+            if limit:
+                entities_dicts = list(backend_data)[:limit]
+            else:
+                entities_dicts = list(backend_data)
+        
+        logger.info(f"Materializing {len(entities_dicts)} entities")
+        
+        # Convert dicts to WikidataEntity on driver side
+        for entity_dict in entities_dicts:
+            if entity_dict is None:
+                continue
+            if validate:
+                entity = WikidataEntity(**entity_dict)
+            else:
+                # Create without validation (faster but less safe)
+                entity = WikidataEntity.model_construct(**entity_dict)
+            yield entity
+    
+    def convert_backend(self, backend_data: Any, target_backend_type: BackendType, target_backend_config: Optional[BackendConfig] = None) -> Any:
+        """
+        Convert backend-native data from one backend to another.
+        
+        This enables backend interoperability, e.g., fetching with Spark
+        and then filtering with Pandas.
+        
+        Args:
+            backend_data: Backend-native data from source backend
+            target_backend_type: Target backend type
+            target_backend_config: Optional configuration for target backend
+        
+        Returns:
+            Data in target backend's native format
+        
+        Example:
+            # Fetch with Spark
+            spark_data = source.fetch_backend("dump.json")
+            
+            # Convert to Pandas for filtering
+            pandas_data = source.convert_backend(spark_data, BackendType.PANDAS)
+            
+            # Now can use Pandas operations
+            filtered = pandas_data[pandas_data['type'] == 'item']
+        """
+        source_backend_type = self.backend_config.backend_type
+        
+        # If same backend, return as-is
+        if source_backend_type == target_backend_type:
+            return backend_data
+        
+        # Get target backend
+        if target_backend_config is None:
+            target_backend_config = BackendConfig(backend_type=target_backend_type)
+        
+        registry = get_backend_registry()
+        target_backend = registry.get_backend(target_backend_type, target_backend_config)
+        
+        # Convert based on source and target types
+        if source_backend_type == BackendType.SPARK and target_backend_type == BackendType.PANDAS:
+            # Spark RDD → Pandas DataFrame
+            entities_dicts = backend_data.collect()
+            import pandas as pd
+            return pd.DataFrame(entities_dicts)
+        
+        elif source_backend_type == BackendType.SPARK and target_backend_type == BackendType.NATIVE:
+            # Spark RDD → Iterator
+            return iter(backend_data.collect())
+        
+        elif source_backend_type == BackendType.PANDAS and target_backend_type == BackendType.SPARK:
+            # Pandas DataFrame → Spark RDD
+            import pandas as pd
+            if isinstance(backend_data, pd.DataFrame):
+                entities_dicts = backend_data.to_dict('records')
+            else:
+                entities_dicts = list(backend_data)
+            
+            spark_session = target_backend.get_session()
+            return spark_session.sparkContext.parallelize(entities_dicts)
+        
+        elif source_backend_type == BackendType.PANDAS and target_backend_type == BackendType.NATIVE:
+            # Pandas DataFrame → Iterator
+            import pandas as pd
+            if isinstance(backend_data, pd.DataFrame):
+                return iter(backend_data.to_dict('records'))
+            else:
+                return iter(backend_data)
+        
+        elif source_backend_type == BackendType.NATIVE:
+            # Native → Spark or Pandas
+            entities_dicts = list(backend_data)
+            
+            if target_backend_type == BackendType.SPARK:
+                spark_session = target_backend.get_session()
+                return spark_session.sparkContext.parallelize(entities_dicts)
+            elif target_backend_type == BackendType.PANDAS:
+                import pandas as pd
+                return pd.DataFrame(entities_dicts)
+        
+        raise ValueError(f"Backend conversion from {source_backend_type} to {target_backend_type} not yet implemented")
+    
     def fetch(self, dump_path: str, **kwargs) -> Iterator[WikidataEntity]:
         """
         Fetch entities from Wikidata dump.
+        
+        This method is a convenience wrapper that:
+        1. Calls fetch_backend() to get backend-native data
+        2. Calls materialize() to convert to Pydantic models
+        
+        For scalable operations, use fetch_backend() directly and only
+        materialize when needed.
         
         Args:
             dump_path: Path to Wikidata dump file (JSON or JSONL)
@@ -91,50 +366,19 @@ class WikidataDumpSource(StreamingDataSource):
         
         Yields:
             WikidataEntity instances
-        """
-        dump_path_obj = Path(dump_path)
-        if not dump_path_obj.exists():
-            raise FileNotFoundError(f"Wikidata dump not found: {dump_path}")
         
-        backend = self._get_backend()
+        Note:
+            This method collects all data to the driver. For large datasets,
+            use fetch_backend() instead and materialize only when needed.
+        """
         validate = kwargs.get("validate", True)
         limit = kwargs.get("limit")
-        filters = kwargs.get("filters", {})
         
-        logger.info(f"Loading Wikidata dump from: {dump_path}")
+        # Get backend-native data (doesn't collect yet)
+        backend_data = self.fetch_backend(dump_path, **kwargs)
         
-        # Read as text file (line by line)
-        text_df = backend.load_data(dump_path, format="text")
-        
-        # Map each line to entity dict (work with dicts in Spark for serialization)
-        # Spark text files return Row objects with 'value' field containing the line
-        # Use a pure Python function that doesn't access SparkContext
-        # Import the function at module level to avoid capturing self
-        parse_func = WikidataDumpSource._parse_json_line_to_dict
-        entities_dict_rdd = text_df.rdd.flatMap(
-            lambda row: parse_func(row.value)
-        )
-        
-        # Apply filters if provided
-        if filters:
-            entities_dict_rdd = self._apply_filters_rdd(entities_dict_rdd, filters)
-        
-        # Apply limit if specified
-        if limit:
-            entities_dicts = entities_dict_rdd.take(limit)
-        else:
-            entities_dicts = entities_dict_rdd.collect()
-        
-        logger.info(f"Fetched {len(entities_dicts)} entities from Wikidata dump")
-        
-        # Convert dicts to WikidataEntity on driver side (not in Spark transformation)
-        for entity_dict in entities_dicts:
-            if validate:
-                entity = WikidataEntity(**entity_dict)
-            else:
-                # Create without validation (faster but less safe)
-                entity = WikidataEntity.model_construct(**entity_dict)
-            yield entity
+        # Materialize to Pydantic models (this collects)
+        yield from self.materialize(backend_data, validate=validate, limit=limit)
     
     def fetch_stream(self, dump_path: str, chunk_size: int = 1000, **kwargs) -> Iterator[List[WikidataEntity]]:
         """
@@ -267,6 +511,14 @@ class WikidataDumpSource(StreamingDataSource):
             return True
         
         return entities_dict_rdd.filter(matches_filters)
+    
+    @staticmethod
+    def _check_filter_dict_static(entity_dict: Dict[str, Any], filters: Dict[str, Any]) -> bool:
+        """Check if entity dict matches all filters (for non-Spark backends)."""
+        for field, value in filters.items():
+            if not WikidataDumpSource._check_filter_dict(entity_dict, field, value):
+                return False
+        return True
     
     @staticmethod
     def _check_filter_dict(entity_dict: Dict[str, Any], field: str, value: Any) -> bool:

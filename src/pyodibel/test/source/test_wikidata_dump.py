@@ -9,6 +9,7 @@ Note: These tests require:
 - Java 17+ available (if using SDKMAN: `sdk use java 17.0.15-tem`)
 """
 
+from pydantic import BaseModel
 import pytest
 import subprocess
 import os
@@ -22,6 +23,7 @@ from pyodibel.storage import SparkBackend
 from pyodibel.operations.json_handler import SparkJSONFormatHandler
 
 
+
 # Path to test data file
 # Calculate path relative to project root
 # From: src/pyodibel/test/source/test_wikidata_dump.py
@@ -30,6 +32,7 @@ from pyodibel.operations.json_handler import SparkJSONFormatHandler
 _current_file = Path(__file__).resolve()
 _project_root = _current_file.parent.parent.parent.parent.parent  # 5 levels up
 TEST_DATA_FILE = _project_root / "data" / "wikidata-20251103-all.json-1-100.json"
+TEST_DATA_OUTPUT_PATH = _project_root / "data" / "external_ids.csv"
 
 
 @pytest.fixture
@@ -471,4 +474,6 @@ if not PYSPARK_AVAILABLE:
                 # Apply skip marker while preserving other markers
                 skipped_test = pytest.mark.skip(reason=skip_reason)(original_test)
                 setattr(test_class, attr_name, skipped_test)
+
+
 
