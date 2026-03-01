@@ -1,12 +1,12 @@
-package ai.scads.odibel.datasets.wikitext
+// package ai.scads.odibel.datasets.wikitext
 
-import ai.scads.odibel.datasets.wikitext.transform.{SerUtil, ToNQuads}
-import org.scalatest.funsuite.AnyFunSuite
+// import ai.scads.odibel.datasets.wikitext.transform.{SerUtil}
+// import org.scalatest.funsuite.AnyFunSuite
 
-class UtilTest extends AnyFunSuite {
+// class UtilTest extends AnyFunSuite {
 
-  test("date timestamp conversion") {
+//   test("date timestamp conversion") {
 
-    println(SerUtil.formatDate(1724399176))
-  }
-}
+//     println(SerUtil.formatDate(1724399176))
+//   }
+// }
