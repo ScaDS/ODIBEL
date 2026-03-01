@@ -6,7 +6,9 @@ tmp/
 target/ 
 
 *.egg-info/
+**.egg-info/
 *.pyc
+**__pycache__/
 
 # Gradle and Maven with auto-import
 # When using Gradle or Maven with auto-import, you should exclude module files,
