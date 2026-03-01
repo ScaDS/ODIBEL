@@ -1,0 +1,4 @@
+"""
+Entity fusion benchmark module.
+"""
+
