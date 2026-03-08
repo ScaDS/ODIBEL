@@ -6,12 +6,15 @@ and data integration tasks.
 """
 
 import click
+from pyodibel.cli.rdf_cmd import rdf_group
 
 @click.group()
 def cli():
     """PyODIBEL CLI"""
-    click.echo("TODO: Implement PyODIBEL CLI")
     pass
+
+
+cli.add_command(rdf_group)
 
 if __name__ == "__main__":
     cli()
