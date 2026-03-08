@@ -42,6 +42,20 @@ def _parse_type_targets(raw_targets: tuple[str, ...]) -> dict[str, int]:
     return parsed
 
 
+def _parse_classes(raw_classes: tuple[str, ...], classes_csv: str | None) -> tuple[str, ...]:
+    values = list(raw_classes)
+    if classes_csv:
+        values.extend(part.strip() for part in classes_csv.split(","))
+
+    normalized: list[str] = []
+    for raw in values:
+        if not raw or not raw.strip():
+            continue
+        normalized.append(_normalize_uri(raw))
+
+    return tuple(dict.fromkeys(normalized))
+
+
 @click.group("rdf")
 def rdf_group():
     """Run RDF pipelines."""
@@ -64,6 +78,18 @@ def rdf_group():
         "Sample target per type in the form TYPE_URI=COUNT. "
         "Can be repeated and runs rarity-first iterative sampling."
     ),
+)
+@click.option(
+    "--class",
+    "classes",
+    multiple=True,
+    help="Allowed class URI. Repeat this option for multiple classes.",
+)
+@click.option(
+    "--classes",
+    "classes_csv",
+    default=None,
+    help="Comma-separated allowed class URIs, e.g. URI1,URI2,URI3.",
 )
 @click.option(
     "--global-sample-size",
@@ -105,6 +131,8 @@ def run_pipeline(
     output_path: str,
     subject_types: tuple[str, ...],
     type_targets: tuple[str, ...],
+    classes: tuple[str, ...],
+    classes_csv: str | None,
     global_sample_size: int | None,
     all_types_target: int | None,
     related_per_seed: int | None,
@@ -119,6 +147,8 @@ def run_pipeline(
     skew_join_enabled: bool,
 ):
     """Execute RDF pipeline: parse -> filters -> write."""
+    parsed_classes = _parse_classes(classes, classes_csv)
+
     if related_per_seed is not None and related_per_seed < 0:
         raise click.BadParameter("--related-per-seed must be >= 0")
 
@@ -130,12 +160,13 @@ def run_pipeline(
     mode_count = (
         int(bool(subject_types))
         + int(bool(type_targets))
+        + int(bool(parsed_classes))
         + int(global_sample_size is not None)
         + int(all_types_target is not None)
     )
     if mode_count > 1:
         raise click.UsageError(
-            "Use only one sampling mode: --filter-s-type OR --type-target OR --global-sample-size OR --all-types-target."
+            "Use only one sampling mode: --filter-s-type OR --type-target OR --class/--classes OR --global-sample-size OR --all-types-target."
         )
 
     effective_related_per_seed = related_per_seed
@@ -175,6 +206,8 @@ def run_pipeline(
                 related_per_seed=effective_related_per_seed,
                 seed=sample_seed,
             )
+        elif parsed_classes:
+            pipeline = pipeline.filter_subgraph_by_entity_classes(list(parsed_classes))
         else:
             for subject_type in subject_types:
                 pipeline = pipeline.filter_triples_by_s_type(_normalize_uri(subject_type))

@@ -98,6 +98,90 @@ class rDF2:
     def filter_triples_by_p_type(self, p: str) -> "rDF2":
         pass
 
+    def filter_subgraph_by_entity_classes(self, classes: list[str]) -> "rDF2":
+        """
+        Keep only a class-scoped entity subgraph.
+
+        Rules:
+          1) Keep entities that have rdf:type in `classes`.
+          2) Keep triples with subjects in that entity set where:
+             - object is a literal, OR
+             - object is also in that entity set, OR
+             - triple is rdf:type and object is one of `classes`.
+        """
+        normalized_classes = [c.strip() for c in classes if c and c.strip()]
+        if not normalized_classes:
+            raise ValueError("classes must not be empty")
+
+        spark = self.df.sparkSession
+        allowed_classes = (
+            spark.createDataFrame([(c,) for c in normalized_classes], "type string")
+            .dropDuplicates(["type"])
+            .cache()
+        )
+
+        entity_types = (
+            self.df
+            .filter(self._type_filter_expr())
+            .select(F.col("s").alias("entity"), F.col("o").alias("type"))
+            .dropDuplicates(["entity", "type"])
+        )
+
+        selected_entities = (
+            entity_types.alias("et")
+            .join(
+                allowed_classes.alias("ac"),
+                F.col("et.type") == F.col("ac.type"),
+                "inner",
+            )
+            .select(F.col("et.entity").alias("entity"))
+            .dropDuplicates(["entity"])
+            .cache()
+        )
+
+        subject_scoped = (
+            self.df.alias("d")
+            .join(
+                selected_entities.alias("se"),
+                F.col("d.s") == F.col("se.entity"),
+                "inner",
+            )
+            .select("d.s", "d.p", "d.o", "d.isLiteral")
+        )
+
+        literal_triples = subject_scoped.filter(F.col("isLiteral"))
+
+        entity_to_entity_triples = (
+            subject_scoped
+            .filter(~F.col("isLiteral"))
+            .join(
+                selected_entities.alias("oe"),
+                F.col("o") == F.col("oe.entity"),
+                "inner",
+            )
+            .select("s", "p", "o", "isLiteral")
+        )
+
+        allowed_type_triples = (
+            subject_scoped
+            .filter(self._type_filter_expr())
+            .join(
+                allowed_classes.alias("ac"),
+                F.col("o") == F.col("ac.type"),
+                "inner",
+            )
+            .select("s", "p", "o", "isLiteral")
+        )
+
+        filtered = (
+            literal_triples
+            .unionByName(entity_to_entity_triples)
+            .unionByName(allowed_type_triples)
+            .dropDuplicates(["s", "p", "o", "isLiteral"])
+        )
+
+        return rDF2(filtered)
+
     def sample_entities_by_type_targets(
         self,
         type_targets: dict[str, int],
