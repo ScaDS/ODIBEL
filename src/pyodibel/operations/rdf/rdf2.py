@@ -1,12 +1,15 @@
-from rdflib import RDF
+from rdflib import RDF, RDFS
 from pyspark.sql import DataFrame, functions as F
 from pyspark.sql import Window
 import os
+from typing import Iterable
 from pyodibel.management.spark_mgr import get_spark_session
 
 NT_RE = r'^\s*(<[^>]*>|_:[A-Za-z0-9_]+|[^\s]+)\s+' \
         r'(<[^>]*>|[^\s]+)\s+' \
         r'((?:"(?:\\.|[^"\\])*"(?:@[A-Za-z-]+|\^\^<[^>]*>|\^\^[^\s]+)?)|(?:<[^>]*>|_:[A-Za-z0-9_]+|[^\s]+))\s*\.\s*$'
+DBPEDIA_ONTOLOGY_PREFIX = "<http://dbpedia.org/ontology/"
+RDFS_LABEL = f"<{str(RDFS.label)}>"
 
 
 class rDF2:
@@ -66,6 +69,21 @@ class rDF2:
     @staticmethod
     def _type_filter_expr() -> F.Column:
         return (F.col("p") == f"<{str(RDF.type)}>") | (F.col("p") == F.lit("a"))
+
+    @staticmethod
+    def _schema_graph_property_filter_expr(property_filters: Iterable[str] | None) -> F.Column:
+        filters = [f.strip() for f in (property_filters or []) if f and f.strip()]
+        if not filters:
+            return (F.col("p") == RDFS_LABEL) | (F.col("p").startswith(DBPEDIA_ONTOLOGY_PREFIX))
+
+        expr = None
+        for raw_filter in filters:
+            if raw_filter.endswith("*"):
+                token_expr = F.col("p").startswith(raw_filter[:-1])
+            else:
+                token_expr = F.col("p") == raw_filter
+            expr = token_expr if expr is None else (expr | token_expr)
+        return expr
 
     def serialize(self) -> DataFrame:
         return self.df.select(
@@ -470,6 +488,74 @@ class rDF2:
             .select("d.s", "d.p", "d.o", "d.isLiteral")
         )
         return rDF2(sampled_df)
+
+    def build_schema_graph_df(self, property_filters: Iterable[str] | None = None) -> DataFrame:
+        """
+        Build schema-level edge frequencies from triple-level RDF data.
+
+        Produces columns: SourceType, Relation, TargetType, Count.
+        """
+        df_data = self.df.filter(self._schema_graph_property_filter_expr(property_filters))
+
+        df_types = (
+            self.df
+            .filter(self._type_filter_expr())
+            .select(F.col("s").alias("entity"), F.col("o").alias("type"))
+            .dropDuplicates(["entity", "type"])
+        )
+
+        with_source = (
+            df_data.alias("d")
+            .join(df_types.alias("ts"), F.col("d.s") == F.col("ts.entity"), "inner")
+            .select(
+                F.col("d.p").alias("Relation"),
+                F.col("d.o").alias("o"),
+                F.col("d.isLiteral").alias("isLiteral"),
+                F.col("ts.type").alias("SourceType"),
+            )
+        )
+
+        non_literal_edges = (
+            with_source
+            .filter(~F.col("isLiteral"))
+            .alias("x")
+            .join(df_types.alias("to"), F.col("x.o") == F.col("to.entity"), "inner")
+            .select(
+                "SourceType",
+                "Relation",
+                F.col("to.type").alias("TargetType"),
+            )
+        )
+
+        literal_edges = with_source.filter(F.col("isLiteral")).select(
+            "SourceType",
+            "Relation",
+            F.lit("Literal").alias("TargetType"),
+        )
+
+        return (
+            non_literal_edges
+            .unionByName(literal_edges)
+            .groupBy("SourceType", "Relation", "TargetType")
+            .count()
+            .withColumnRenamed("count", "Count")
+            .orderBy(F.desc("Count"))
+        )
+
+    def write_schema_graph_csv(
+        self,
+        output_path: str,
+        property_filters: Iterable[str] | None = None,
+    ) -> None:
+        """Write schema-graph aggregation as CSV with header."""
+        (
+            self.build_schema_graph_df(property_filters=property_filters)
+            .coalesce(1)
+            .write
+            .mode("overwrite")
+            .option("header", True)
+            .csv(output_path)
+        )
 
 
 if __name__ == "__main__":

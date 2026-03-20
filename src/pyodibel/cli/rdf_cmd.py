@@ -56,6 +56,55 @@ def _parse_classes(raw_classes: tuple[str, ...], classes_csv: str | None) -> tup
     return tuple(dict.fromkeys(normalized))
 
 
+def _normalize_property_filter(raw_filter: str) -> str:
+    """
+    Normalize predicate filter.
+
+    - exact: URI -> <URI>
+    - prefix: URI* -> <URI*
+    - shorthand token: TOKEN -> <TOKEN*
+    """
+    value = raw_filter.strip()
+    if not value:
+        raise click.BadParameter("--property-filter values must not be empty")
+
+    if value.endswith("*"):
+        base = value[:-1].strip()
+        if not base:
+            raise click.BadParameter("Invalid --property-filter '*'. Missing prefix.")
+        if base.startswith("<"):
+            normalized = base
+        else:
+            normalized = f"<{base}"
+        if normalized.endswith(">"):
+            normalized = normalized[:-1]
+        return f"{normalized}*"
+
+    if value.startswith("<") and value.endswith(">"):
+        return value
+
+    if "://" in value:
+        return _normalize_uri(value)
+
+    # Shorthand token (for example "http"): interpret as prefix.
+    token = value
+    if token.startswith("<"):
+        token = token[1:]
+    if token.endswith(">"):
+        token = token[:-1]
+    token = token.strip()
+    if not token:
+        raise click.BadParameter(f"Invalid --property-filter '{raw_filter}'.")
+    return f"<{token}*"
+
+
+def _parse_property_filters(raw_filters: tuple[str, ...]) -> tuple[str, ...]:
+    if not raw_filters:
+        return tuple()
+    normalized = [_normalize_property_filter(raw_filter) for raw_filter in raw_filters]
+    return tuple(dict.fromkeys(normalized))
+
+
 @click.group("rdf")
 def rdf_group():
     """Run RDF pipelines."""
@@ -214,5 +263,67 @@ def run_pipeline(
 
         pipeline.write_nt(output_path)
         click.echo(f"Wrote RDF output to: {output_path}")
+    finally:
+        spark.stop()
+
+
+@rdf_group.command("schema-graph")
+@click.option("--input", "input_path", required=True, type=click.Path(exists=True, dir_okay=False))
+@click.option("--output", "output_path", required=True, type=click.Path())
+@click.option("--app-name", default="SchemaGraphGenerator", show_default=True)
+@click.option("--master", default="local[*]", show_default=True)
+@click.option("--driver-memory", default="8g", show_default=True)
+@click.option(
+    "--executor-memory",
+    default="8g",
+    show_default=True,
+    help="Only relevant for non-local Spark masters.",
+)
+@click.option("--shuffle-partitions", default=2000, show_default=True, type=int)
+@click.option("--local-dir", default="/tmp/spark", show_default=True)
+@click.option("--adaptive-enabled/--no-adaptive-enabled", default=True, show_default=True)
+@click.option("--skew-join-enabled/--no-skew-join-enabled", default=True, show_default=True)
+@click.option(
+    "--property-filter",
+    "property_filters",
+    multiple=True,
+    help=(
+        "Predicate filter for schema graph. Repeat option to include more filters. "
+        "Use URI for exact match, URI* for prefix match, or a shorthand token (e.g. http) for prefix match."
+    ),
+)
+def build_schema_graph_cmd(
+    input_path: str,
+    output_path: str,
+    app_name: str,
+    master: str,
+    driver_memory: str,
+    executor_memory: str,
+    shuffle_partitions: int,
+    local_dir: str,
+    adaptive_enabled: bool,
+    skew_join_enabled: bool,
+    property_filters: tuple[str, ...],
+):
+    """Build a schema-level SourceType-Relation-TargetType graph CSV from N-Triples."""
+    parsed_property_filters = _parse_property_filters(property_filters)
+
+    spark = get_spark_session(
+        app_name=app_name,
+        master=master,
+        executor_memory=executor_memory,
+        driver_memory=driver_memory,
+        shuffle_partitions=shuffle_partitions,
+        local_dir=local_dir,
+        adaptive_enabled=adaptive_enabled,
+        skew_join_enabled=skew_join_enabled,
+    )
+
+    try:
+        rDF2.parse(spark, input_path).write_schema_graph_csv(
+            output_path,
+            property_filters=parsed_property_filters,
+        )
+        click.echo(f"Wrote schema graph CSV to: {output_path}")
     finally:
         spark.stop()
