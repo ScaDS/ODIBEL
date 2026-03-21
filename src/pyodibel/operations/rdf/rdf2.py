@@ -67,8 +67,13 @@ class rDF2:
         return rDF2(parsed)
 
     @staticmethod
+    def _type_predicate_on_p(p: F.Column) -> F.Column:
+        """True when predicate is ``rdf:type`` or Turtle shortcut ``a``."""
+        return (p == f"<{str(RDF.type)}>") | (p == F.lit("a"))
+
+    @staticmethod
     def _type_filter_expr() -> F.Column:
-        return (F.col("p") == f"<{str(RDF.type)}>") | (F.col("p") == F.lit("a"))
+        return rDF2._type_predicate_on_p(F.col("p"))
 
     @staticmethod
     def _schema_graph_property_filter_expr(property_filters: Iterable[str] | None) -> F.Column:
@@ -112,6 +117,57 @@ class rDF2:
         )
 
         return rDF2(filtered)
+
+    def filter_triples_by_s_types(self, o: list[str]) -> "rDF2":
+
+        
+        df_types = (
+            self.df
+            .filter((F.col("p") == f"<{str(RDF.type)}>") & (F.col("o").isin(o)))
+            .select("s")
+            .distinct()
+        )
+
+        filtered = (
+            self.df.alias("d")
+            .join(df_types.alias("t"), F.col("d.s") == F.col("t.s"), "inner")
+            .select("d.s", "d.p", "d.o", "d.isLiteral")
+        )
+
+        return rDF2(filtered)
+
+    def keep_triples_with_object_subject(self) -> "rDF2":
+        """
+        Keep triples whose non-literal object appears as a subject in the dataset,
+        and keep all literal-object triples (literals are not subjects).
+
+        Also keep ``rdf:type`` / ``a`` triples: class IRIs need not appear as subjects.
+
+        Other non-literal edges to objects that never occur as ``s`` are dropped.
+        """
+        type_edge = self._type_predicate_on_p(F.col("d.p"))
+        subjects = self.df.select(F.col("s").alias("subject")).dropDuplicates(["subject"])
+        filtered = (
+            self.df.alias("d")
+            .join(subjects.alias("subj"), F.col("d.o") == F.col("subj.subject"), "left")
+            .filter(F.col("d.isLiteral") | F.col("subj.subject").isNotNull() | type_edge)
+            .select("d.s", "d.p", "d.o", "d.isLiteral")
+        )
+        return rDF2(filtered)
+
+
+    def clean_rdf_types(self, o: list[str]) -> "rDF2":
+        """
+        For rdf:type only keep if is in the list of o
+        For all other triples, keep
+        """
+
+        rdf_types = self.df.filter(F.col("p") == f"<{str(RDF.type)}>")
+        other_triples = self.df.filter(F.col("p") != f"<{str(RDF.type)}>")
+
+        rdf_types = rdf_types.filter(F.col("o").isin(o))
+
+        return rDF2(rdf_types.unionByName(other_triples))
 
     def filter_triples_by_p_type(self, p: str) -> "rDF2":
         pass
@@ -504,14 +560,15 @@ class rDF2:
             .dropDuplicates(["entity", "type"])
         )
 
+        # Left joins: keep edges whose subject/object has no rdf:type (label as Untyped).
         with_source = (
             df_data.alias("d")
-            .join(df_types.alias("ts"), F.col("d.s") == F.col("ts.entity"), "inner")
+            .join(df_types.alias("ts"), F.col("d.s") == F.col("ts.entity"), "left")
             .select(
                 F.col("d.p").alias("Relation"),
                 F.col("d.o").alias("o"),
                 F.col("d.isLiteral").alias("isLiteral"),
-                F.col("ts.type").alias("SourceType"),
+                F.coalesce(F.col("ts.type"), F.lit("Untyped")).alias("SourceType"),
             )
         )
 
@@ -519,11 +576,11 @@ class rDF2:
             with_source
             .filter(~F.col("isLiteral"))
             .alias("x")
-            .join(df_types.alias("to"), F.col("x.o") == F.col("to.entity"), "inner")
+            .join(df_types.alias("to"), F.col("x.o") == F.col("to.entity"), "left")
             .select(
                 "SourceType",
                 "Relation",
-                F.col("to.type").alias("TargetType"),
+                F.coalesce(F.col("to.type"), F.lit("Untyped")).alias("TargetType"),
             )
         )
 
