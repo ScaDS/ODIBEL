@@ -169,6 +169,15 @@ class rDF2:
 
         return rDF2(rdf_types.unionByName(other_triples))
 
+
+    def remove_duplicate_triples(self) -> "rDF2":
+        """
+        Remove all duplicate triples
+        """
+        cleaned_df = self.df.dropDuplicates()
+        return rDF2(cleaned_df)
+
+
     def filter_triples_by_p_type(self, p: str) -> "rDF2":
         pass
 

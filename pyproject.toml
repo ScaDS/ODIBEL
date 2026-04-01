@@ -10,7 +10,7 @@ authors = [
     {name = "Odibel Team", email = "team@odibel.org"}
 ]
 readme = "README.md"
-requires-python = ">=3.8"
+requires-python = ">=3.10"
 dependencies = [
     "pyyaml>=6.0",
     "pydantic>=2.0.0",
@@ -21,6 +21,7 @@ dependencies = [
     "tqdm>=4.67.1",
     "pyspark>=3.5.7",
     "networkx>=3.1",
+    "dotenv",
 ]
 
 [project.optional-dependencies]
