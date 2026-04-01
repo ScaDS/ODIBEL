@@ -47,7 +47,7 @@ classes = [
     "dbo:WomensTennisAssociationTournament",
 ]
 
-generate(classes)
+generate(classes, "events")
 
 
 

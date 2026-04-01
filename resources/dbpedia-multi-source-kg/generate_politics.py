@@ -14,4 +14,4 @@ classes = [
     "dbo:Treaty"
 ]
 
-generate(classes)
+generate(classes, "politics")
