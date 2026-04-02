@@ -3,7 +3,7 @@ from pyspark.sql import SparkSession
 def get_spark_session(
     app_name: str, 
     master: str = "local[*]", 
-    executor_memory: str = "8g", 
+    executor_memory: str = "16g",
     driver_memory: str = "8g", 
     shuffle_partitions: int = 210, 
     local_dir: str = "/tmp/spark",
