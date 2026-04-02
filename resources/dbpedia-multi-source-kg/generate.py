@@ -47,13 +47,13 @@ def generate(classes: list, name:str="", input_path: str=None, output_path: str=
         (
             rDF2.parse(spark, selected_path)
             .remove_duplicate_triples()
-            .write_nt(cleaned_types_path)
+            .write_nt(distinct_path)
         )
             
     # Clean rdf:type triples
     if not os.path.exists(cleaned_types_path):
         (
-            rDF2.parse(spark, selected_path)
+            rDF2.parse(spark, distinct_path)
             .clean_rdf_types(classes)
             .write_nt(cleaned_types_path)
         )
