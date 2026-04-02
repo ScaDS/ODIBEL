@@ -46,7 +46,7 @@ def generate(classes: list, name:str="", input_path: str=None, output_path: str=
     if not os.path.exists(distinct_path):
         (
             rDF2.parse(spark, selected_path)
-            .remove_duplicate_triples(classes)
+            .remove_duplicate_triples()
             .write_nt(cleaned_types_path)
         )
             
