@@ -27,12 +27,12 @@ def generate(classes: list, name:str="", input_path: str=None, output_path: str=
     if name != "":
         name = "_" + name
         
-    selected_path = os.path.join(output_path, "/dbpedia" + name + "_subgraph/selected.nt.bz2")
-    distinct_path = os.path.join(output_path, "/dbpedia" + name + "_subgraph/distinct.nt.bz2")
-    cleaned_types_path = os.path.join(output_path, "/dbpedia" + name + "_subgraph/cleaned_types.nt.bz2")
-    schema_graph_path = os.path.join(output_path, "/dbpedia" + name + "_subgraph/schema_graph_all.csv")
-    cleaned_subgraph_path = os.path.join(output_path, "/dbpedia" + name + "_subgraph/cleaned_subgraph.nt.bz2")
-    final_schema_graph_path = os.path.join(output_path, "/dbpedia" + name + "_subgraph/schema_graph_final.csv")
+    selected_path = os.path.join(output_path, "dbpedia" + name + "_subgraph/selected.nt.bz2")
+    distinct_path = os.path.join(output_path, "dbpedia" + name + "_subgraph/distinct.nt.bz2")
+    cleaned_types_path = os.path.join(output_path, "dbpedia" + name + "_subgraph/cleaned_types.nt.bz2")
+    schema_graph_path = os.path.join(output_path, "dbpedia" + name + "_subgraph/schema_graph_all.csv")
+    cleaned_subgraph_path = os.path.join(output_path, "dbpedia" + name + "_subgraph/cleaned_subgraph.nt.bz2")
+    final_schema_graph_path = os.path.join(output_path, "dbpedia" + name + "_subgraph/schema_graph_final.csv")
     
     # Generate selected subgraph
     if not os.path.exists(selected_path):
