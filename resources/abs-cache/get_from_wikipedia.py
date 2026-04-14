@@ -2,6 +2,7 @@ import argparse
 import logging
 import sys
 import time
+from collections import Counter
 
 import requests
 from pyspark.sql import SparkSession
@@ -13,18 +14,20 @@ logging.basicConfig(
 log = logging.getLogger(__name__)
 
 WIKIPEDIA_API = "https://en.wikipedia.org/api/rest_v1/page/summary/%s"
-MIN_INTERVAL = 1.0 / 10
+MIN_INTERVAL = 1.0
 
+base_url = ""
 
-def parse_subject(line):
-    line = line.strip()
-    if not line or line.startswith("#"):
-        return None
-    if not line.startswith("<http://dbpedia.org/resource/"):
-        return None
-    end = line.index(">", 1)
-    uri = line[1:end]
-    return uri.rsplit("/", 1)[-1]
+def parse_subject(iterator):
+    for line in iterator:
+        line = line.strip()
+        if not line or line.startswith("#"):
+            continue
+        if not line.startswith("<http://dbpedia.org/resource/"):
+            continue
+        end = line.index(">", 1)
+        uri = line[1:end]
+        yield uri.rsplit("/", 1)[-1]
 
 
 def make_session():
@@ -72,56 +75,27 @@ def write_to_db(session, entity, abstract, base_url):
     except Exception:
         return False
 
-
-def main():
-    parser = argparse.ArgumentParser(description="NT/HDFS -> Wikipedia -> RocksDB enricher")
-    parser.add_argument("--file",    required=True,          help="HDFS or local path to NT file")
-    parser.add_argument("--host",    default="localhost",     help="RocksDB server host")
-    parser.add_argument("--port",    type=int, default=5000,  help="RocksDB server port")
-    args = parser.parse_args()
-
-    base_url = "http://%s:%d" % (args.host, args.port)
-
-    try:
-        r = requests.get("%s/health" % base_url, timeout=5)
-        r.raise_for_status()
-        log.info("RocksDB server reachable: %s", r.json())
-    except Exception as e:
-        log.error("RocksDB server not reachable: %s", e)
-        sys.exit(1)
-
-    spark = SparkSession.builder \
-        .appName("NT Wikipedia Enricher") \
-        .getOrCreate()
-    spark.sparkContext.setLogLevel("WARN")
-
-    log.info("Extracting unique entities from: %s", args.file)
-
-    entity_iterator = (
-        spark.sparkContext
-        .textFile(args.file)
-        .mapPartitions(parse_subject)
-        .filter(lambda x: x is not None)
-        .distinct()
-        .toLocalIterator()
-    )
-
+def process_partition(iterator):
     session = make_session()
-    counters = {"written": 0, "skip": 0, "not_found": 0, "error": 0}
-    start = time.time()
     last_request = 0.0
 
-    for entity in entity_iterator:
+    counters = {"written": 0, "skip": 0, "not_found": 0, "error": 0}
+
+    for entity in iterator:
+        if entity is None:
+            continue
+
         if already_in_db(session, entity, base_url):
             counters["skip"] += 1
             continue
 
-        # rate limit: ensure at least MIN_INTERVAL between wikipedia requests
-        elapsed_since_last = time.time() - last_request
-        if elapsed_since_last < MIN_INTERVAL:
-            time.sleep(MIN_INTERVAL - elapsed_since_last)
+        # Rate limit pro Worker!
+        elapsed = time.time() - last_request
+        if elapsed < MIN_INTERVAL:
+            time.sleep(MIN_INTERVAL - elapsed)
 
         last_request = time.time()
+
         abstract = fetch_wikipedia_abstract(session, entity)
 
         if not abstract:
@@ -133,15 +107,49 @@ def main():
         else:
             counters["error"] += 1
 
-        total = sum(counters.values())
-        if total % 100 == 0:
-            elapsed = time.time() - start
-            rate = total / elapsed if elapsed > 0 else 0
-            log.info(
-                "progress: processed=%d written=%d skipped=%d not_found=%d errors=%d rate=%.1f/s",
-                total, counters["written"], counters["skip"],
-                counters["not_found"], counters["error"], rate,
-            )
+    yield counters
+
+def main():
+    parser = argparse.ArgumentParser(description="NT/HDFS -> Wikipedia -> RocksDB enricher")
+    parser.add_argument("--file",    required=True,          help="HDFS or local path to NT file")
+    parser.add_argument("--host",    default="localhost",     help="RocksDB server host")
+    parser.add_argument("--port",    type=int, default=5000,  help="RocksDB server port")
+    args = parser.parse_args()
+
+    base_url = "http://%s:%d" % (args.host, args.port)
+
+    start = time.time()
+
+    try:
+        r = requests.get("%s/health" % base_url, timeout=5)
+        r.raise_for_status()
+        log.info("RocksDB server reachable: %s", r.json())
+    except Exception as e:
+        log.error("RocksDB server not reachable: %s", e)
+        sys.exit(1)
+
+    spark = (SparkSession.builder
+        .appName("NT Wikipedia Enricher")
+        .config("spark.driver.memory", "32g")
+        .config("spark.executor.memory", "16g")
+        .getOrCreate()
+             )
+
+    log.info("Extracting unique entities from: %s", args.file)
+
+    rdd = (
+        spark.sparkContext
+        .textFile(args.file)
+        .mapPartitions(parse_subject)
+        .filter(lambda x: x is not None)
+        .distinct()
+    )
+
+    results = rdd.mapPartitions(process_partition).collect()
+
+    counters = Counter()
+    for r in results:
+        counters.update(r)
 
     spark.stop()
     elapsed = time.time() - start
