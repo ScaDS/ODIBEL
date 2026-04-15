@@ -13,10 +13,21 @@ logging.basicConfig(
 )
 log = logging.getLogger(__name__)
 
-WIKIPEDIA_API = "https://en.wikipedia.org/api/rest_v1/page/summary/%s"
+WIKIPEDIA_API = "https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro=&explaintext=&titles=%s"
 MIN_INTERVAL = 1.0
 
-base_url = ""
+base_url = "http://%s:%d" % ("localhost", 5000)
+
+def batch_iterator(iterator, batch_size=20):
+    batch = []
+    for item in iterator:
+        if item:
+            batch.append(item)
+            if len(batch) >= batch_size:
+                yield batch
+                batch = []
+    if batch:
+        yield batch
 
 def parse_subject(iterator):
     for line in iterator:
@@ -32,11 +43,22 @@ def parse_subject(iterator):
 
 def make_session():
     s = requests.Session()
+
     adapter = requests.adapters.HTTPAdapter(
-        max_retries=requests.adapters.Retry(total=3, backoff_factor=1.0)
+        max_retries=requests.adapters.Retry(
+            total=3,
+            backoff_factor=1.0,
+            status_forcelist=[429, 500, 502, 503, 504],
+        )
     )
+
     s.mount("http://", adapter)
     s.mount("https://", adapter)
+
+    s.headers.update({
+        "User-Agent": "WikipediaEnricher/1.0 (theo.hahn@uni-leipzig.de)"
+    })
+
     return s
 
 
@@ -51,17 +73,35 @@ def already_in_db(session, entity, base_url):
         return False
 
 
-def fetch_wikipedia_abstract(session, entity):
+def fetch_wikipedia_abstracts(session, entities):
     try:
-        r = session.get(
-            WIKIPEDIA_API % requests.utils.quote(entity, safe=""),
-            timeout=10,
-        )
-        if r.status_code == 200:
-            return r.json().get("extract", "") or None
-        return None
-    except Exception:
-        return None
+        titles = "|".join(requests.utils.quote(e, safe="") for e in entities)
+
+        url = WIKIPEDIA_API % titles
+
+        r = session.get(url, timeout=10)
+
+        if r.status_code != 200:
+            log.warning("HTTP %s for batch %s", r.status_code, entities[:3])
+            return {}
+
+        data = r.json()
+        pages = data.get("query", {}).get("pages", {})
+
+        results = {}
+
+        for page in pages.values():
+            title = page.get("title")
+            extract = page.get("extract")
+
+            if title and extract:
+                results[title] = extract
+
+        return results
+
+    except Exception as e:
+        log.error("Batch exception: %s", e)
+        return {}
 
 
 def write_to_db(session, entity, abstract, base_url):
@@ -80,34 +120,40 @@ def process_partition(iterator):
     last_request = 0.0
 
     counters = {"written": 0, "skip": 0, "not_found": 0, "error": 0}
+    failed_entities = []
 
-    for entity in iterator:
-        if entity is None:
+    for batch in batch_iterator(iterator, batch_size=20):
+
+        batch = [e for e in batch if not already_in_db(session, e, base_url)]
+
+        counters["skip"] += (len(batch) - len(batch))
+
+        if not batch:
             continue
 
-        if already_in_db(session, entity, base_url):
-            counters["skip"] += 1
-            continue
-
-        # Rate limit pro Worker!
         elapsed = time.time() - last_request
         if elapsed < MIN_INTERVAL:
             time.sleep(MIN_INTERVAL - elapsed)
 
         last_request = time.time()
 
-        abstract = fetch_wikipedia_abstract(session, entity)
+        abstracts = fetch_wikipedia_abstracts(session, batch)
 
-        if not abstract:
-            counters["not_found"] += 1
-            continue
+        for entity in batch:
+            abstract = abstracts.get(entity) or abstracts.get(entity.replace("_", " "))
 
-        if write_to_db(session, entity, abstract, base_url):
-            counters["written"] += 1
-        else:
-            counters["error"] += 1
+            if not abstract:
+                counters["not_found"] += 1
+                failed_entities.append(entity)
+                continue
 
-    yield counters
+            if write_to_db(session, entity, abstract, base_url):
+                counters["written"] += 1
+            else:
+                counters["error"] += 1
+                failed_entities.append(entity)
+
+    yield {"counters": counters, "failed": failed_entities}
 
 def main():
     parser = argparse.ArgumentParser(description="NT/HDFS -> Wikipedia -> RocksDB enricher")
@@ -115,8 +161,6 @@ def main():
     parser.add_argument("--host",    default="localhost",     help="RocksDB server host")
     parser.add_argument("--port",    type=int, default=5000,  help="RocksDB server port")
     args = parser.parse_args()
-
-    base_url = "http://%s:%d" % (args.host, args.port)
 
     start = time.time()
 
@@ -141,18 +185,26 @@ def main():
         spark.sparkContext
         .textFile(args.file)
         .mapPartitions(parse_subject)
-        .filter(lambda x: x is not None)
+        .filter(lambda x: x is not None and "__" not in x)
         .distinct()
+        .coalesce(2)
     )
 
     results = rdd.mapPartitions(process_partition).collect()
 
     counters = Counter()
+    failed_all = []
     for r in results:
-        counters.update(r)
+        counters.update(r["counters"])
+        failed_all.extend(r["failed"])
+
+    elapsed = time.time() - start
+    if failed_all:
+        spark.sparkContext.parallelize(failed_all).saveAsTextFile("failed_uris")
+        log.info("Wrote %d failed URIs to failed_uris.txt", len(failed_all))
 
     spark.stop()
-    elapsed = time.time() - start
+
     log.info(
         "Done! written=%d skipped=%d not_found=%d errors=%d - %.1f seconds",
         counters["written"], counters["skip"],
