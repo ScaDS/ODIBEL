@@ -4,6 +4,19 @@ Two scripts for building a RocksDB key-value store that maps DBpedia entity name
 
 ---
 
+## Dependencies
+
+- **Python**: 3.13 (tested)
+
+Install all dependencies via:
+
+```bash
+pip install -r requirements.txt
+```
+- `requests` – for interacting with the Wikipedia API
+- `pyspark` – for distributed data processing
+- `rocksdb-py` – Python bindings for RocksDB
+
 ## Scripts
 
 ### `load_abstracts.py` — NT dump → RocksDB

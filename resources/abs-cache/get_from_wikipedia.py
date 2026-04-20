@@ -128,65 +128,62 @@ def _run_partition(iterator, already_in_db_fn, write_fn):
     batch_count = 0
     entity_count = 0
 
-    try:
-        for batch in batch_iterator(iterator, batch_size=20):
+    for batch in batch_iterator(iterator, batch_size=20):
 
-            original_size = len(batch)
-            batch = [e for e in batch if not already_in_db_fn(e)]
-            counters["skip"] += original_size - len(batch)
+        original_size = len(batch)
+        batch = [e for e in batch if not already_in_db_fn(e)]
+        counters["skip"] += original_size - len(batch)
 
-            # Log skip progress every 10000 entities, even if nothing is fetched
-            if counters["skip"] - last_logged_skip >= 10000:
-                log.info("DB lookup progress: %d entities skipped (already in db)", counters["skip"])
-                last_logged_skip = counters["skip"]
+        if counters["skip"] - last_logged_skip >= 10000:
+            log.info("DB lookup progress: %d entities skipped (already in db)", counters["skip"])
+            last_logged_skip = counters["skip"]
 
-            if not batch:
+        if not batch:
+            continue
+
+        elapsed = time.time() - last_request
+        if elapsed < MIN_INTERVAL:
+            time.sleep(MIN_INTERVAL - elapsed)
+        last_request = time.time()
+
+        batch_count += 1
+        entity_count += len(batch)
+
+        if batch_count % 10 == 0:
+            log.info(
+                "Wikipedia: %d batches sent, %d entities fetched "
+                "(written=%d skipped=%d not_found=%d errors=%d)",
+                batch_count, entity_count,
+                counters["written"], counters["skip"],
+                counters["not_found"], counters["error"],
+            )
+
+        abstracts = fetch_wikipedia_abstracts(session, batch)
+
+        for entity in batch:
+            abstract = abstracts.get(entity) or abstracts.get(entity.replace("_", " "))
+            if not abstract:
+                counters["not_found"] += 1
+                failed_entities.append(entity)
                 continue
-
-            elapsed = time.time() - last_request
-            if elapsed < MIN_INTERVAL:
-                time.sleep(MIN_INTERVAL - elapsed)
-            last_request = time.time()
-
-            batch_count += 1
-            entity_count += len(batch)
-
-            if batch_count % 10 == 0:
-                log.info(
-                    "Wikipedia: %d batches sent, %d entities fetched "
-                    "(written=%d skipped=%d not_found=%d errors=%d)",
-                    batch_count, entity_count,
-                    counters["written"], counters["skip"],
-                    counters["not_found"], counters["error"],
-                )
-
-            abstracts = fetch_wikipedia_abstracts(session, batch)
-
-            for entity in batch:
-                abstract = abstracts.get(entity) or abstracts.get(entity.replace("_", " "))
-                if not abstract:
-                    counters["not_found"] += 1
-                    failed_entities.append(entity)
-                    continue
-                if write_fn(entity, abstract):
-                    counters["written"] += 1
-                else:
-                    counters["error"] += 1
-                    failed_entities.append(entity)
-
-    finally:
-        log.info(
-            "Partition done: %d batches, %d entities fetched "
-            "(written=%d skipped=%d not_found=%d errors=%d)",
-            batch_count, entity_count,
-            counters["written"], counters["skip"],
-            counters["not_found"], counters["error"],
-        )
+            if write_fn(entity, abstract):
+                counters["written"] += 1
+            else:
+                counters["error"] += 1
+                failed_entities.append(entity)
+    log.info(
+        "Partition done: %d batches, %d entities fetched "
+        "(written=%d skipped=%d not_found=%d errors=%d)",
+        batch_count, entity_count,
+        counters["written"], counters["skip"],
+        counters["not_found"], counters["error"],
+    )
+    return {"counters": counters, "failed": failed_entities}
 
 
 def process_partition_http(iterator):
     session = make_session()
-    yield from _run_partition(
+    yield _run_partition(
         iterator,
         already_in_db_fn=lambda e: already_in_db_http(session, e),
         write_fn=lambda e, a: write_to_db_http(session, e, a),
@@ -207,7 +204,7 @@ def make_process_partition_direct(db_path):
             return
 
         try:
-            yield from _run_partition(
+            yield _run_partition(
                 iterator,
                 already_in_db_fn=lambda e: already_in_db_direct(db, e),
                 write_fn=lambda e, a: write_to_db_direct(db, e, a),
