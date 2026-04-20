@@ -164,7 +164,6 @@ def _run_partition(iterator, already_in_db_fn, write_fn):
             abstract = abstracts.get(entity) or abstracts.get(entity.replace("_", " "))
             if not abstract:
                 counters["not_found"] += 1
-                failed_entities.append(entity)
                 continue
             if write_fn(entity, abstract):
                 counters["written"] += 1
@@ -282,6 +281,13 @@ def main():
         failed_all.extend(r["failed"])
 
     spark.stop()
+
+    if failed_all:
+        failed_file = "user/hadena/abs-cache/failed_uris.txt"
+        with open(failed_file, "a", encoding="utf-8") as f:
+            for entity in failed_all:
+                f.write(entity + "\n")
+        log.info("Appended %d failed URIs to %s", len(failed_all), failed_file)
 
     log.info(
         "Done! written=%d skipped=%d not_found=%d errors=%d — %.1fs total",
