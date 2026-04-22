@@ -265,7 +265,7 @@ class rDF2:
 
             valid.append(row)
 
-        return rDF2(self.df.sparkSession.createDataFrame(valid, schema=self.df.schema()))
+        return rDF2(self.df.sparkSession.createDataFrame(valid))
 
     def filter_triples_by_p_type(self, p: str) -> "rDF2":
         pass
