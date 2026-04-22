@@ -29,6 +29,7 @@ def generate(classes: list, name:str="", input_path: str=None, output_path: str=
         
     selected_path = os.path.join(output_path, "dbpedia" + name + "_subgraph/selected.nt.bz2")
     distinct_path = os.path.join(output_path, "dbpedia" + name + "_subgraph/distinct.nt.bz2")
+    consistent_path = os.path.join(output_path, "dbpedia" + name + "_subgraph/consistent.nt.bz2")
     cleaned_types_path = os.path.join(output_path, "dbpedia" + name + "_subgraph/cleaned_types.nt.bz2")
     schema_graph_path = os.path.join(output_path, "dbpedia" + name + "_subgraph/schema_graph_all.csv")
     cleaned_subgraph_path = os.path.join(output_path, "dbpedia" + name + "_subgraph/cleaned_subgraph.nt.bz2")
@@ -49,11 +50,19 @@ def generate(classes: list, name:str="", input_path: str=None, output_path: str=
             .remove_duplicate_triples()
             .write_nt(distinct_path)
         )
-            
+
+    # Remove uncosistent ontology triples
+    if not os.path.exists(consistent_path):
+        (
+            rDF2.parse(spark, distinct_path)
+            .clean_domain_range_violations()
+            .write_nt(consistent_path)
+        )
+
     # Clean rdf:type triples
     if not os.path.exists(cleaned_types_path):
         (
-            rDF2.parse(spark, distinct_path)
+            rDF2.parse(spark, consistent_path)
             .clean_rdf_types(classes)
             .write_nt(cleaned_types_path)
         )
@@ -74,7 +83,7 @@ def generate(classes: list, name:str="", input_path: str=None, output_path: str=
             .keep_triples_with_object_subject()
             .write_nt(cleaned_subgraph_path)
         )
-    
+
     # Generate schema graph for final subgraph
     if not os.path.exists(final_schema_graph_path):
         (

@@ -1,9 +1,13 @@
-from rdflib import RDF, RDFS
-from pyspark.sql import DataFrame, functions as F
-from pyspark.sql import Window
 import os
+from collections import defaultdict
+from functools import lru_cache
 from typing import Iterable
+
 from pyodibel.management.spark_mgr import get_spark_session
+from pyspark.sql import DataFrame
+from pyspark.sql import Window
+from pyspark.sql import functions as F
+from rdflib import Graph, Namespace, RDF, RDFS, URIRef
 
 NT_RE = r'^\s*(<[^>]*>|_:[A-Za-z0-9_]+|[^\s]+)\s+' \
         r'(<[^>]*>|[^\s]+)\s+' \
@@ -177,6 +181,91 @@ class rDF2:
         cleaned_df = self.df.dropDuplicates()
         return rDF2(cleaned_df)
 
+
+    def clean_domain_range_violations(self) -> "rDF2":
+
+        @lru_cache(maxsize=None)
+        def get_parents(cls: str) -> frozenset:
+            return frozenset(
+                str(parent)
+                for _, _, parent in g.triples((URIRef(cls), RDFS_NS.subClassOf, None))
+            )
+
+        @lru_cache(maxsize=None)
+        def ancestors(cls: str) -> frozenset:
+            result = {cls}
+            for parent in get_parents(cls):
+                result |= ancestors(parent)
+            return frozenset(result)
+
+        @lru_cache(maxsize=None)
+        def get_domains(pred: str) -> frozenset:
+            return frozenset(
+                str(d)
+                for _, _, d in g.triples((URIRef(pred), RDFS_NS.domain, None))
+            )
+
+        @lru_cache(maxsize=None)
+        def get_ranges(pred: str) -> frozenset:
+            return frozenset(
+                str(r)
+                for _, _, r in g.triples((URIRef(pred), RDFS_NS.range, None))
+            )
+
+        def in_range(o: str, ranges: frozenset) -> bool:
+            if o.startswith("<"):
+                return bool(ranges & ancestors(o.strip("<>")))
+            if "^^<" in o:
+                datatype = o.split("^^<")[1].rstrip(">")
+                return any(
+                    r in (RDFS_LITERAL, datatype)
+                    or (r.startswith(XSD_PREFIX) and datatype.startswith(XSD_PREFIX))
+                    for r in ranges
+                )
+            return bool(ranges & {RDFS_LITERAL, LANG_STRING})
+
+        ONT_URL = (
+            "https://raw.githubusercontent.com/dbpedia/ontology-tracker/"
+            "master/databus/dbpedia/ontology/dbo-snapshots/dbo-snapshots.ttl"
+        )
+        g = Graph()
+        g.parse(ONT_URL, format="turtle")
+
+        RDFS_NS = Namespace("http://www.w3.org/2000/01/rdf-schema#")
+        RDFS_LITERAL = "http://www.w3.org/2000/01/rdf-schema#Literal"
+        LANG_STRING = "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        XSD_PREFIX = "http://www.w3.org/2001/XMLSchema#"
+        RDF_TYPE = f"<{str(RDF.type)}>"
+
+        all_rows = self.df.collect()
+
+        subject_types: dict[str, set[str]] = defaultdict(set)
+        for row in all_rows:
+            if row["p"] == RDF_TYPE:
+                subject_types[row["s"]].add(row["o"].strip("<>"))
+
+        valid = []
+        for row in all_rows:
+            s, p, o = row["s"], row["p"], row["o"]
+            pred = p.strip("<>")
+
+            domains = get_domains(pred)
+            if domains:
+                valid_domain = False
+                for t in subject_types.get(s, set()):
+                    if domains & ancestors(t):
+                        valid_domain = True
+                        break
+                if not valid_domain:
+                    continue
+
+            ranges = get_ranges(pred)
+            if ranges and not in_range(o, ranges):
+                continue
+
+            valid.append(row)
+
+        return rDF2(self.df.sparkSession.createDataFrame(valid, schema=self.df.schema()))
 
     def filter_triples_by_p_type(self, p: str) -> "rDF2":
         pass
