@@ -71,3 +71,39 @@ Each entry now includes:
 
 Current snapshot generation produced mappings for 790 ontology classes.
 
+## Schema Graph
+
+Provides tools to generate a schema graph and compute statistics based on it.
+
+### Requirements
+
+* Python 3.11
+* Java 17
+* built pyodibel
+
+```bash
+pip install -r requirements.txt
+```
+
+ Prepare the environment file:
+
+   * Edit the provided environment file
+   * Rename it to `.env`
+
+### Generate Schema Graph
+
+Run the corresponding script to generate a schema graph for a specific domain:
+
+```bash
+python generate_<domain>.py
+```
+
+### Calculate Statistics
+
+Compute statistics based on a generated N-Triples file:
+
+```bash
+python statistics.py <input_path>
+```
+
+* `<input_path>`: Path to a `.nt` file generated in the previous step
