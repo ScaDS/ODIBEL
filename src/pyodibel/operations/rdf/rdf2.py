@@ -183,6 +183,15 @@ class rDF2:
 
 
     def clean_domain_range_violations(self) -> "rDF2":
+        ONT_URL = (
+            "https://raw.githubusercontent.com/dbpedia/ontology-tracker/"
+            "master/databus/dbpedia/ontology/dbo-snapshots/dbo-snapshots.ttl"
+        )
+        RDFS_NS = Namespace("http://www.w3.org/2000/01/rdf-schema#")
+        RDFS_LITERAL = "http://www.w3.org/2000/01/rdf-schema#Literal"
+        LANG_STRING = "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+        XSD_PREFIX = "http://www.w3.org/2001/XMLSchema#"
+        RDF_TYPE = f"<{str(RDF.type)}>"
 
         @lru_cache(maxsize=None)
         def get_parents(cls: str) -> frozenset:
@@ -224,18 +233,8 @@ class rDF2:
                 )
             return bool(ranges & {RDFS_LITERAL, LANG_STRING})
 
-        ONT_URL = (
-            "https://raw.githubusercontent.com/dbpedia/ontology-tracker/"
-            "master/databus/dbpedia/ontology/dbo-snapshots/dbo-snapshots.ttl"
-        )
         g = Graph()
         g.parse(ONT_URL, format="turtle")
-
-        RDFS_NS = Namespace("http://www.w3.org/2000/01/rdf-schema#")
-        RDFS_LITERAL = "http://www.w3.org/2000/01/rdf-schema#Literal"
-        LANG_STRING = "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
-        XSD_PREFIX = "http://www.w3.org/2001/XMLSchema#"
-        RDF_TYPE = f"<{str(RDF.type)}>"
 
         all_rows = self.df.collect()
 
