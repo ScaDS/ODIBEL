@@ -17,6 +17,7 @@ def get_spark_session(
         SparkSession.builder
         .appName(app_name)
         .master(master)
+        .config("spark.driver.maxResultSize", "2g")
         .config("spark.driver.memory", driver_memory)
         .config("spark.sql.shuffle.partitions", str(shuffle_partitions))
         .config("spark.local.dir", local_dir)
