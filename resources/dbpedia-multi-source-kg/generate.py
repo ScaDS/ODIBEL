@@ -26,71 +26,88 @@ def generate(classes: list, name:str="", input_path: str=None, output_path: str=
     
     if name != "":
         name = "_" + name
-        
-    selected_path = os.path.join(output_path, "dbpedia" + name + "_subgraph/selected.nt.bz2")
-    distinct_path = os.path.join(output_path, "dbpedia" + name + "_subgraph/distinct.nt.bz2")
-    consistent_path = os.path.join(output_path, "dbpedia" + name + "_subgraph/consistent.nt.bz2")
-    cleaned_types_path = os.path.join(output_path, "dbpedia" + name + "_subgraph/cleaned_types.nt.bz2")
-    schema_graph_path = os.path.join(output_path, "dbpedia" + name + "_subgraph/schema_graph_all.csv")
-    cleaned_subgraph_path = os.path.join(output_path, "dbpedia" + name + "_subgraph/cleaned_subgraph.nt.bz2")
-    final_schema_graph_path = os.path.join(output_path, "dbpedia" + name + "_subgraph/schema_graph_final.csv")
-    
-    # Generate selected subgraph
-    if not os.path.exists(selected_path):
-        (
-            rDF2.parse(spark, input_path)
-            .filter_triples_by_s_types(classes)
-            .write_nt(selected_path)
-        )
 
-    # Remove duplicate triples
-    if not os.path.exists(distinct_path):
-        (
-            rDF2.parse(spark, selected_path)
-            .remove_duplicate_triples()
-            .write_nt(distinct_path)
-        )
+    for en in ["_en", ""]:
+        selected_path = os.path.join(output_path, "dbpedia" + name + en + "_subgraph/selected.nt.bz2")
+        distinct_path = os.path.join(output_path, "dbpedia" + name + en + "_subgraph/distinct.nt.bz2")
+        consistent_path = os.path.join(output_path, "dbpedia" + name + en + "_subgraph/consistent.nt.bz2")
+        cleaned_types_path = os.path.join(output_path, "dbpedia" + name + en + "_subgraph/cleaned_types.nt.bz2")
+        schema_graph_path = os.path.join(output_path, "dbpedia" + name + en + "_subgraph/schema_graph_all.csv")
+        cleaned_subgraph_path = os.path.join(output_path, "dbpedia" + name + en + "_subgraph/cleaned_subgraph.nt.bz2")
+        final_schema_graph_path = os.path.join(output_path, "dbpedia" + name + en + "_subgraph/schema_graph_final.csv")
+        final_schema_graph_100_path = os.path.join(output_path, "dbpedia" + name + en + "_subgraph/schema_graph_100_final.csv")
 
-    # Remove uncosistent ontology triples
-    if not os.path.exists(consistent_path):
-        (
-            rDF2.parse(spark, distinct_path)
-            .clean_domain_range_violations()
-            .write_nt(consistent_path)
-        )
+        # Generate selected subgraph
+        if not os.path.exists(selected_path):
+            if en:
+                (
+                    rDF2.parse(spark, input_path)
+                    .filter_triples_by_s_types(classes, True)
+                    .write_nt(selected_path)
+                )
+            else:
+                (
+                    rDF2.parse(spark, input_path)
+                    .filter_triples_by_s_types(classes, False)
+                    .write_nt(selected_path)
+                )
 
-    # Clean rdf:type triples
-    if not os.path.exists(cleaned_types_path):
-        (
-            rDF2.parse(spark, consistent_path)
-            .clean_rdf_types(classes)
-            .write_nt(cleaned_types_path)
-        )
-    
-    # Generate schema graph for all triples
-    if not os.path.exists(schema_graph_path):
-        (
-            rDF2.parse(spark, cleaned_types_path)
-            .build_schema_graph_df()
-            .coalesce(1)
-            .write.csv(schema_graph_path, header=True)
-        )
-    
-    # Only keep triples where the object is found as subject
-    if not os.path.exists(cleaned_subgraph_path):
-        (
-            rDF2.parse(spark, cleaned_types_path)
-            .keep_triples_with_object_subject()
-            .write_nt(cleaned_subgraph_path)
-        )
+        # Remove duplicate triples
+        if not os.path.exists(distinct_path):
+            (
+                rDF2.parse(spark, selected_path)
+                .remove_duplicate_triples()
+                .write_nt(distinct_path)
+            )
 
-    # Generate schema graph for final subgraph
-    if not os.path.exists(final_schema_graph_path):
-        (
-            rDF2.parse(spark, cleaned_subgraph_path)
-            .build_schema_graph_df()
-            .coalesce(1)
-            .write.csv(final_schema_graph_path, header=True)
-        )
-    
+        # Remove uncosistent ontology triples
+        if not os.path.exists(consistent_path):
+            (
+                rDF2.parse(spark, distinct_path)
+                .clean_domain_range_violations()
+                .write_nt(consistent_path)
+            )
+
+        # Clean rdf:type triples
+        if not os.path.exists(cleaned_types_path):
+            (
+                rDF2.parse(spark, consistent_path)
+                .clean_rdf_types(classes)
+                .write_nt(cleaned_types_path)
+            )
+
+        # Generate schema graph for all triples
+        if not os.path.exists(schema_graph_path):
+            (
+                rDF2.parse(spark, cleaned_types_path)
+                .build_schema_graph_df()
+                .coalesce(1)
+                .write.csv(schema_graph_path, header=True)
+            )
+
+        # Only keep triples where the object is found as subject
+        if not os.path.exists(cleaned_subgraph_path):
+            (
+                rDF2.parse(spark, cleaned_types_path)
+                .keep_triples_with_object_subject()
+                .write_nt(cleaned_subgraph_path)
+            )
+
+        # Generate schema graph for final subgraph
+        if not os.path.exists(final_schema_graph_path):
+            (
+                rDF2.parse(spark, cleaned_subgraph_path)
+                .build_schema_graph_df()
+                .coalesce(1)
+                .write.csv(final_schema_graph_path, header=True)
+            )
+
+        if not os.path.exists(final_schema_graph_100_path):
+            (
+                rDF2.parse(spark, cleaned_subgraph_path)
+                .build_schema_graph_100_df()
+                .coalesce(1)
+                .write.csv(final_schema_graph_path, header=True)
+            )
+
     spark.stop()

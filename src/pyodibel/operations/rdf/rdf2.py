@@ -122,9 +122,8 @@ class rDF2:
 
         return rDF2(filtered)
 
-    def filter_triples_by_s_types(self, o: list[str]) -> "rDF2":
+    def filter_triples_by_s_types(self, o: list[str], only_en: bool = False) -> "rDF2":
 
-        
         df_types = (
             self.df
             .filter((F.col("p") == f"<{str(RDF.type)}>") & (F.col("o").isin(o)))
@@ -137,6 +136,8 @@ class rDF2:
             .join(df_types.alias("t"), F.col("d.s") == F.col("t.s"), "inner")
             .select("d.s", "d.p", "d.o", "d.isLiteral")
         )
+        if only_en:
+            filtered = filtered.filter(F.col("o").rlike(r'(@en$)|(^[^@]*$)'))
 
         return rDF2(filtered)
 
@@ -692,6 +693,60 @@ class rDF2:
             .unionByName(literal_edges)
             .groupBy("SourceType", "Relation", "TargetType")
             .count()
+            .withColumnRenamed("count", "Count")
+            .orderBy(F.desc("Count"))
+        )
+    def build_schema_graph_100_df(self, property_filters: Iterable[str] | None = None) -> DataFrame:
+        """
+        Build schema-level edge frequencies from triple-level RDF data.
+
+        Produces columns: SourceType, Relation, TargetType, Count.
+        """
+        df_data = self.df.filter(self._schema_graph_property_filter_expr(property_filters))
+
+        df_types = (
+            self.df
+            .filter(self._type_filter_expr())
+            .select(F.col("s").alias("entity"), F.col("o").alias("type"))
+            .dropDuplicates(["entity", "type"])
+        )
+
+        # Left joins: keep edges whose subject/object has no rdf:type (label as Untyped).
+        with_source = (
+            df_data.alias("d")
+            .join(df_types.alias("ts"), F.col("d.s") == F.col("ts.entity"), "left")
+            .select(
+                F.col("d.p").alias("Relation"),
+                F.col("d.o").alias("o"),
+                F.col("d.isLiteral").alias("isLiteral"),
+                F.coalesce(F.col("ts.type"), F.lit("Untyped")).alias("SourceType"),
+            )
+        )
+
+        non_literal_edges = (
+            with_source
+            .filter(~F.col("isLiteral"))
+            .alias("x")
+            .join(df_types.alias("to"), F.col("x.o") == F.col("to.entity"), "left")
+            .select(
+                "SourceType",
+                "Relation",
+                F.coalesce(F.col("to.type"), F.lit("Untyped")).alias("TargetType"),
+            )
+        )
+
+        literal_edges = with_source.filter(F.col("isLiteral")).select(
+            "SourceType",
+            "Relation",
+            F.lit("Literal").alias("TargetType"),
+        )
+
+        return (
+            non_literal_edges
+            .unionByName(literal_edges)
+            .groupBy("SourceType", "Relation", "TargetType")
+            .count()
+            .filter(F.col("count") >= 100)
             .withColumnRenamed("count", "Count")
             .orderBy(F.desc("Count"))
         )
