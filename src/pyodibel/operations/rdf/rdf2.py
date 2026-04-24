@@ -247,8 +247,7 @@ class rDF2:
             .mapValues(frozenset)
             .collectAsMap()
         )
-
-        bc_subject_types = spark.sparkContext.broadcast(subject_types)
+        bc_subject_types = self.df.sparkSession.sparkContext.broadcast(subject_types)
 
         def is_valid(s: str, p: str, o: str) -> bool:
             pred = p.strip("<>")
