@@ -1,5 +1,4 @@
 import os
-from collections import defaultdict
 from functools import lru_cache
 from typing import Iterable
 
@@ -7,6 +6,7 @@ from pyodibel.management.spark_mgr import get_spark_session
 from pyspark.sql import DataFrame
 from pyspark.sql import Window
 from pyspark.sql import functions as F
+from pyspark.sql.types import BooleanType
 from rdflib import Graph, Namespace, RDF, RDFS, URIRef
 
 NT_RE = r'^\s*(<[^>]*>|_:[A-Za-z0-9_]+|[^\s]+)\s+' \
@@ -237,35 +237,41 @@ class rDF2:
         g = Graph()
         g.parse(ONT_URL, format="turtle")
 
-        all_rows = self.df.collect()
+        subject_types: dict[str, frozenset] = (
+            self.df
+            .filter(F.col("p") == RDF_TYPE)
+            .select("s", "o")
+            .rdd
+            .map(lambda r: (r["s"], r["o"].strip("<>")))
+            .groupByKey()
+            .mapValues(frozenset)
+            .collectAsMap()
+        )
 
-        subject_types: dict[str, set[str]] = defaultdict(set)
-        for row in all_rows:
-            if row["p"] == RDF_TYPE:
-                subject_types[row["s"]].add(row["o"].strip("<>"))
+        bc_subject_types = spark.sparkContext.broadcast(subject_types)
 
-        valid = []
-        for row in all_rows:
-            s, p, o = row["s"], row["p"], row["o"]
+        def is_valid(s: str, p: str, o: str) -> bool:
             pred = p.strip("<>")
 
             domains = get_domains(pred)
             if domains:
                 valid_domain = False
-                for t in subject_types.get(s, set()):
+                for t in bc_subject_types.value.get(s, set()):
                     if domains & ancestors(t):
                         valid_domain = True
                         break
                 if not valid_domain:
-                    continue
+                    return False
 
             ranges = get_ranges(pred)
             if ranges and not in_range(o, ranges):
-                continue
+                return False
 
-            valid.append(row)
+            return True
 
-        return rDF2(self.df.sparkSession.createDataFrame(valid))
+        is_valid_udf = F.udf(is_valid, BooleanType())
+        cleaned_df = self.df.filter(is_valid_udf(F.col("s"), F.col("p"), F.col("o")))
+        return rDF2(cleaned_df)
 
     def filter_triples_by_p_type(self, p: str) -> "rDF2":
         pass
