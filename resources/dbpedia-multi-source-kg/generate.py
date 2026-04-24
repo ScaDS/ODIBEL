@@ -107,7 +107,7 @@ def generate(classes: list, name:str="", input_path: str=None, output_path: str=
                 rDF2.parse(spark, cleaned_subgraph_path)
                 .build_schema_graph_100_df()
                 .coalesce(1)
-                .write.csv(final_schema_graph_path, header=True)
+                .write.csv(final_schema_graph_100_path, header=True)
             )
 
     spark.stop()
