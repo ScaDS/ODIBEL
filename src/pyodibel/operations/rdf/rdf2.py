@@ -1,13 +1,11 @@
 import os
-from functools import lru_cache
 from typing import Iterable
 
 from pyodibel.management.spark_mgr import get_spark_session
-from pyspark.sql import DataFrame
-from pyspark.sql import Window
+from pyspark.sql import DataFrame, Window
 from pyspark.sql import functions as F
 from pyspark.sql.types import BooleanType
-from rdflib import Graph, Namespace, RDF, RDFS, URIRef
+from rdflib import Graph, Namespace, RDF, RDFS
 
 NT_RE = r'^\s*(<[^>]*>|_:[A-Za-z0-9_]+|[^\s]+)\s+' \
         r'(<[^>]*>|[^\s]+)\s+' \
@@ -182,7 +180,6 @@ class rDF2:
         cleaned_df = self.df.dropDuplicates()
         return rDF2(cleaned_df)
 
-
     def clean_domain_range_violations(self) -> "rDF2":
         ONT_URL = (
             "https://raw.githubusercontent.com/dbpedia/ontology-tracker/"
@@ -194,83 +191,98 @@ class rDF2:
         XSD_PREFIX = "http://www.w3.org/2001/XMLSchema#"
         RDF_TYPE = f"<{str(RDF.type)}>"
 
-        @lru_cache(maxsize=None)
-        def get_parents(cls: str) -> frozenset:
-            return frozenset(
-                str(parent)
-                for _, _, parent in g.triples((URIRef(cls), RDFS_NS.subClassOf, None))
-            )
-
-        @lru_cache(maxsize=None)
-        def ancestors(cls: str) -> frozenset:
-            result = {cls}
-            for parent in get_parents(cls):
-                result |= ancestors(parent)
-            return frozenset(result)
-
-        @lru_cache(maxsize=None)
-        def get_domains(pred: str) -> frozenset:
-            return frozenset(
-                str(d)
-                for _, _, d in g.triples((URIRef(pred), RDFS_NS.domain, None))
-            )
-
-        @lru_cache(maxsize=None)
-        def get_ranges(pred: str) -> frozenset:
-            return frozenset(
-                str(r)
-                for _, _, r in g.triples((URIRef(pred), RDFS_NS.range, None))
-            )
-
-        def in_range(o: str, ranges: frozenset) -> bool:
-            if o.startswith("<"):
-                return bool(ranges & ancestors(o.strip("<>")))
-            if "^^<" in o:
-                datatype = o.split("^^<")[1].rstrip(">")
-                return any(
-                    r in (RDFS_LITERAL, datatype)
-                    or (r.startswith(XSD_PREFIX) and datatype.startswith(XSD_PREFIX))
-                    for r in ranges
-                )
-            return bool(ranges & {RDFS_LITERAL, LANG_STRING})
-
         g = Graph()
         g.parse(ONT_URL, format="turtle")
 
-        subject_types: dict[str, frozenset] = (
+        parents_map: dict[str, set[str]] = {}
+        for s, _, o in g.triples((None, RDFS_NS.subClassOf, None)):
+            parents_map.setdefault(str(s), set()).add(str(o))
+
+        domains_map: dict[str, set[str]] = {}
+        for s, _, o in g.triples((None, RDFS_NS.domain, None)):
+            domains_map.setdefault(str(s), set()).add(str(o))
+
+        ranges_map: dict[str, set[str]] = {}
+        for s, _, o in g.triples((None, RDFS_NS.range, None)):
+            ranges_map.setdefault(str(s), set()).add(str(o))
+
+        def compute_ancestors(cls: str, parents: dict[str, set[str]]) -> frozenset:
+            visited, queue = set(), [cls]
+            while queue:
+                cur = queue.pop()
+                if cur in visited:
+                    continue
+                visited.add(cur)
+                queue.extend(parents.get(cur, set()))
+            return frozenset(visited)
+
+        all_classes = set(parents_map.keys()) | {p for ps in parents_map.values() for p in ps}
+        ancestors_map: dict[str, set[str]] = {
+            cls: set(compute_ancestors(cls, parents_map))
+            for cls in all_classes
+        }
+
+        spark = self.df.sparkSession
+        bc_ancestors = spark.sparkContext.broadcast(ancestors_map)
+        bc_domains = spark.sparkContext.broadcast(domains_map)
+        bc_ranges = spark.sparkContext.broadcast(ranges_map)
+
+        subject_types_df = (
             self.df
             .filter(F.col("p") == RDF_TYPE)
-            .select("s", "o")
-            .rdd
-            .map(lambda r: (r["s"], r["o"].strip("<>")))
-            .groupByKey()
-            .mapValues(frozenset)
-            .collectAsMap()
+            .withColumn("type", F.regexp_extract("o", r"<(.+?)>", 1))
+            .groupBy("s")
+            .agg(F.collect_set("type").alias("types"))
         )
-        bc_subject_types = self.df.sparkSession.sparkContext.broadcast(subject_types)
 
-        def is_valid(s: str, p: str, o: str) -> bool:
+        df = self.df.join(subject_types_df, on="s", how="left")
+
+        def is_valid(p: str, o: str, types) -> bool:
+            ancestors = bc_ancestors.value
+            domains = bc_domains.value
+            ranges = bc_ranges.value
+
             pred = p.strip("<>")
+            subject_types = set(types) if types else set()
 
-            domains = get_domains(pred)
-            if domains:
-                valid_domain = False
-                for t in bc_subject_types.value.get(s, set()):
-                    if domains & ancestors(t):
-                        valid_domain = True
-                        break
-                if not valid_domain:
+            pred_domains = domains.get(pred)
+            if pred_domains:
+                subject_ancestors = set()
+                for t in subject_types:
+                    subject_ancestors |= ancestors.get(t, {t})
+                if not pred_domains & subject_ancestors:
                     return False
 
-            ranges = get_ranges(pred)
-            if ranges and not in_range(o, ranges):
-                return False
+            pred_ranges = ranges.get(pred)
+            if pred_ranges:
+                if o.startswith("<"):
+                    obj_cls = o.strip("<>")
+                    obj_ancestors = ancestors.get(obj_cls, {obj_cls})
+                    if not pred_ranges & obj_ancestors:
+                        return False
+                elif "^^<" in o:
+                    datatype = o.split("^^<")[1].rstrip(">")
+                    if not any(
+                            r in (RDFS_LITERAL, datatype)
+                            or (r.startswith(XSD_PREFIX) and datatype.startswith(XSD_PREFIX))
+                            for r in pred_ranges
+                    ):
+                        return False
+                else:
+                    if not pred_ranges & {RDFS_LITERAL, LANG_STRING}:
+                        return False
 
             return True
 
         is_valid_udf = F.udf(is_valid, BooleanType())
-        cleaned_df = self.df.filter(is_valid_udf(F.col("s"), F.col("p"), F.col("o")))
-        return rDF2(cleaned_df)
+
+        filtered_df = (
+            df
+            .filter(is_valid_udf(F.col("p"), F.col("o"), F.col("types")))
+            .drop("types")
+        )
+
+        return rDF2(filtered_df)
 
     def filter_triples_by_p_type(self, p: str) -> "rDF2":
         pass
