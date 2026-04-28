@@ -182,8 +182,8 @@ class rDF2:
 
     def clean_domain_range_violations(self) -> "rDF2":
         ONT_URL = (
-            "https://raw.githubusercontent.com/dbpedia/ontology-tracker/"
-            "master/databus/dbpedia/ontology/dbo-snapshots/dbo-snapshots.ttl"
+            "https://akswnc7.informatik.uni-leipzig.de/dstreitmatter/archivo/dbpedia.org/"
+            "ontology--DEV/2024.07.29-001000/ontology--DEV_type=parsed.ttl"
         )
         RDFS_NS = Namespace("http://www.w3.org/2000/01/rdf-schema#")
         RDFS_LITERAL = "http://www.w3.org/2000/01/rdf-schema#Literal"
