@@ -87,9 +87,9 @@ class TestCleanDomainRangeViolations:
         Triple (Dog, hasPet, Dog) Domain violation
         """
         rows = [
-            ("<{EX}rex>",  RDF_TYPE_URI, f"<{EX}Dog>", False),
-            ("<{EX}buddy>", RDF_TYPE_URI, f"<{EX}Dog>", False),
-            ("<{EX}rex>", f"<{EX}hasPet>", "<{EX}buddy>", False),
+            (f"<{EX}rex>",  RDF_TYPE_URI, f"<{EX}Dog>", False),
+            (f"<{EX}buddy>", RDF_TYPE_URI, f"<{EX}Dog>", False),
+            (f"<{EX}rex>", f"<{EX}hasPet>", f"<{EX}buddy>", False),
         ]
         with patch_ontology():
             result = make_rdf2(spark, rows).clean_domain_range_violations()
@@ -103,9 +103,9 @@ class TestCleanDomainRangeViolations:
         Triple (Person, hasPet, Person) violates Range
         """
         rows = [
-            ("<{EX}alice>", RDF_TYPE_URI, f"<{EX}Person>", False),
-            ("<{EX}bob>",   RDF_TYPE_URI, f"<{EX}Person>", False),
-            ("<{EX}alice>", f"<{EX}hasPet>", "<{EX}bob>", False),
+            (f"<{EX}alice>", RDF_TYPE_URI, f"<{EX}Person>", False),
+            (f"<{EX}bob>",   RDF_TYPE_URI, f"<{EX}Person>", False),
+            (f"<{EX}alice>", f"<{EX}hasPet>", f"<{EX}bob>", False),
         ]
         with patch_ontology():
             result = make_rdf2(spark, rows).clean_domain_range_violations()
@@ -119,8 +119,8 @@ class TestCleanDomainRangeViolations:
         Triple (Dog, name, "Rex") is valid
         """
         rows = [
-            ("<{EX}rex>", RDF_TYPE_URI, f"<{EX}Dog>", False),
-            ("<{EX}rex>", f"<{EX}name>", '"Rex"', True),
+            (f"<{EX}rex>", RDF_TYPE_URI, f"<{EX}Dog>", False),
+            (f"<{EX}rex>", f"<{EX}name>", '"Rex"', True),
         ]
         with patch_ontology():
             result = make_rdf2(spark, rows).clean_domain_range_violations()
@@ -134,8 +134,8 @@ class TestCleanDomainRangeViolations:
         Triple with IRI as Objekt violates Range
         """
         rows = [
-            ("<{EX}rex>", RDF_TYPE_URI, f"<{EX}Dog>", False),
-            ("<{EX}rex>", f"<{EX}name>", f"<{EX}SomeThing>", False),
+            (f"<{EX}rex>", RDF_TYPE_URI, f"<{EX}Dog>", False),
+            (f"<{EX}rex>", f"<{EX}name>", f"<{EX}SomeThing>", False),
         ]
         with patch_ontology():
             result = make_rdf2(spark, rows).clean_domain_range_violations()
@@ -150,8 +150,8 @@ class TestCleanDomainRangeViolations:
         ex:name property for Dog is valid
         """
         rows = [
-            ("<{EX}rex>", RDF_TYPE_URI, f"<{EX}Dog>", False),
-            ("<{EX}rex>", f"<{EX}name>", '"Rex"', True),
+            (f"<{EX}rex>", RDF_TYPE_URI, f"<{EX}Dog>", False),
+            (f"<{EX}rex>", f"<{EX}name>", '"Rex"', True),
         ]
         with patch_ontology():
             result = make_rdf2(spark, rows).clean_domain_range_violations()
@@ -164,8 +164,8 @@ class TestCleanDomainRangeViolations:
         Predicates without Domain/Range should be kept
         """
         rows = [
-            ("<{EX}alice>", RDF_TYPE_URI, f"<{EX}Person>", False),
-            ("<{EX}alice>", f"<{EX}unknownProp>", '"some value"', True),
+            (f"<{EX}alice>", RDF_TYPE_URI, f"<{EX}Person>", False),
+            (f"<{EX}alice>", f"<{EX}unknownProp>", '"some value"', True),
         ]
         with patch_ontology():
             result = make_rdf2(spark, rows).clean_domain_range_violations()
@@ -179,8 +179,8 @@ class TestCleanDomainRangeViolations:
         all type-Triple should be kept
         """
         rows = [
-            ("<{EX}alice>", RDF_TYPE_URI, f"<{EX}Person>", False),
-            ("<{EX}rex>",   RDF_TYPE_URI, f"<{EX}Dog>", False),
+            (f"<{EX}alice>", RDF_TYPE_URI, f"<{EX}Person>", False),
+            (f"<{EX}rex>",   RDF_TYPE_URI, f"<{EX}Dog>", False),
         ]
         with patch_ontology():
             result = make_rdf2(spark, rows).clean_domain_range_violations()
@@ -199,7 +199,7 @@ class TestCleanDomainRangeViolations:
         from pyodibel.operations.rdf.rdf2 import rDF2
 
         rows = [
-            ("<{EX}alice>", RDF_TYPE_URI, f"<{EX}Person>", False),
+            (f"<{EX}alice>", RDF_TYPE_URI, f"<{EX}Person>", False),
         ]
         with patch_ontology():
             result = make_rdf2(spark, rows).clean_domain_range_violations()
