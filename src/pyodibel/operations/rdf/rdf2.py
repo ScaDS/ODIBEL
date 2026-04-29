@@ -206,6 +206,16 @@ class rDF2:
         for s, _, o in g.triples((None, RDFS_NS.range, None)):
             ranges_map.setdefault(str(s), set()).add(str(o))
 
+        object_types_map = (
+            self.df
+            .filter(F.col("p") == RDF_TYPE)
+            .withColumn("type", F.regexp_extract("o", r"<(.+?)>", 1))
+            .groupBy("s")
+            .agg(F.collect_set("type").alias("types"))
+            .rdd.map(lambda r: (r["s"], set(r["types"])))
+            .collectAsMap()
+        )
+
         def compute_ancestors(cls: str, parents: dict[str, set[str]]) -> frozenset:
             visited, queue = set(), [cls]
             while queue:
@@ -226,6 +236,7 @@ class rDF2:
         bc_ancestors = spark.sparkContext.broadcast(ancestors_map)
         bc_domains = spark.sparkContext.broadcast(domains_map)
         bc_ranges = spark.sparkContext.broadcast(ranges_map)
+        bc_object_types = spark.sparkContext.broadcast(object_types_map)
 
         subject_types_df = (
             self.df
@@ -256,8 +267,11 @@ class rDF2:
             pred_ranges = ranges.get(pred)
             if pred_ranges:
                 if o.startswith("<"):
-                    obj_cls = o.strip("<>")
-                    obj_ancestors = ancestors.get(obj_cls, {obj_cls})
+                    obj_iri = o.strip("<>")
+                    obj_classes = bc_object_types.value.get(f"<{obj_iri}>", {obj_iri})
+                    obj_ancestors = set()
+                    for cls in obj_classes:
+                        obj_ancestors |= ancestors.get(cls, {cls})
                     if not pred_ranges & obj_ancestors:
                         return False
                 elif "^^<" in o:
