@@ -28,33 +28,57 @@ def generate(classes: list, properties:list, name:str="", input_path: str=None, 
         if not output_path:
             raise ValueError("OUTPUT_PATH not set in .env file")
 
-    selected_path = os.path.join(output_path, name + "_subgraph/selected.nt")
+    class_filter_path = os.path.join(output_path, name + "_subgraph/class_filter.nt")
     property_filter_path =  os.path.join(output_path, name + "_subgraph/property_filter.nt")
-    final_schema_graph_path = os.path.join(output_path, name + "_subgraph/schema_graph_final.csv")
 
-    # Generate selected subgraph
-    if not os.path.exists(selected_path):
+    property_class_filter_path =  os.path.join(output_path, name + "_subgraph/property_class_filter.nt")
+
+    c_filter_schema_graph_path = os.path.join(output_path, name + "_subgraph/c_filter_schema_graph.csv")
+    p_c_filter_schema_graph_path = os.path.join(output_path, name + "_subgraph/p_c_filter_schema_graph.csv")
+
+    # Class Filter
+    if not os.path.exists(class_filter_path):
         (
             rDF2.parse(spark, input_path)
             .filter_triples_by_s_types(classes, False)
-            .write_nt(selected_path)
+            .write_nt(class_filter_path)
         )
 
     # Property Filter
     if not os.path.exists(property_filter_path):
         (
-            rDF2.parse(spark, selected_path)
+            rDF2.parse(spark, input_path)
             .property_filter(properties)
             .write_nt(property_filter_path)
         )
-        
-    # Generate schema graph for final subgraph
-    if not os.path.exists(final_schema_graph_path):
+
+    # Property Filter
+    # On Filtered Classes
+    if not os.path.exists(property_class_filter_path):
         (
-            rDF2.parse(spark, selected_path)
+            rDF2.parse(spark, class_filter_path)
+            .property_filter(properties)
+            .write_nt(property_class_filter_path)
+        )
+        
+    # Generate schema graph
+    # Property + Class Filter
+    if not os.path.exists(p_c_filter_schema_graph_path):
+        (
+            rDF2.parse(spark, property_class_filter_path)
             .build_schema_graph_df(properties)
             .coalesce(1)
-            .write.csv(final_schema_graph_path, header=True)
+            .write.csv(p_c_filter_schema_graph_path, header=True)
+        )
+
+    # Generate schema graph
+    # Property Only Filter
+    if not os.path.exists(c_filter_schema_graph_path):
+        (
+            rDF2.parse(spark, property_filter_path)
+            .build_schema_graph_df(properties)
+            .coalesce(1)
+            .write.csv(c_filter_schema_graph_path, header=True)
         )
 
     spark.stop()
