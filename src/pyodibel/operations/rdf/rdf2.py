@@ -180,11 +180,7 @@ class rDF2:
         cleaned_df = self.df.dropDuplicates()
         return rDF2(cleaned_df)
 
-    def clean_domain_range_violations(self) -> "rDF2":
-        ONT_URL = (
-            "https://akswnc7.informatik.uni-leipzig.de/dstreitmatter/archivo/dbpedia.org/"
-            "ontology--DEV/2024.07.29-001000/ontology--DEV_type=parsed.ttl"
-        )
+    def clean_domain_range_violations(self, ont_path) -> "rDF2":
         RDFS_NS = Namespace("http://www.w3.org/2000/01/rdf-schema#")
         RDFS_LITERAL = "http://www.w3.org/2000/01/rdf-schema#Literal"
         LANG_STRING = "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
@@ -192,7 +188,7 @@ class rDF2:
         RDF_TYPE = f"<{str(RDF.type)}>"
 
         g = Graph()
-        g.parse(ONT_URL, format="turtle")
+        g.parse(ont_path, format="turtle")
 
         parents_map: dict[str, set[str]] = {}
         for s, _, o in g.triples((None, RDFS_NS.subClassOf, None)):
@@ -673,6 +669,10 @@ class rDF2:
             .select("d.s", "d.p", "d.o", "d.isLiteral")
         )
         return rDF2(sampled_df)
+
+    def property_filter(self, property_filters: Iterable[str] | None = None) -> "rDF2":
+        df_data = self.df.filter(self._schema_graph_property_filter_expr(property_filters))
+        return rDF2(df_data)
 
     def build_schema_graph_df(self, property_filters: Iterable[str] | None = None) -> DataFrame:
         """
