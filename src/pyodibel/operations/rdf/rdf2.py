@@ -1,11 +1,13 @@
 import os
-from typing import Iterable
+from typing import Iterable, Literal
 
 from pyodibel.management.spark_mgr import get_spark_session
 from pyspark.sql import DataFrame, Window
 from pyspark.sql import functions as F
 from pyspark.sql.types import BooleanType
 from rdflib import Graph, Namespace, RDF, RDFS
+
+from pyodibel.operations.rdf.uris import normalize_class_uri as _normalize_class_uri
 
 NT_RE = r'^\s*(<[^>]*>|_:[A-Za-z0-9_]+|[^\s]+)\s+' \
         r'(<[^>]*>|[^\s]+)\s+' \
@@ -297,43 +299,19 @@ class rDF2:
     def filter_triples_by_p_type(self, p: str) -> "rDF2":
         pass
 
-    def filter_subgraph_by_entity_classes(self, classes: list[str]) -> "rDF2":
-        """
-        Keep only a class-scoped entity subgraph.
+    @staticmethod
+    def normalize_class_uri(value: str) -> str:
+        return _normalize_class_uri(value)
 
-        Rules:
-          1) Keep entities that have rdf:type in `classes`.
-          2) Keep triples with subjects in that entity set where:
-             - object is a literal, OR
-             - object is also in that entity set, OR
-             - triple is rdf:type and object is one of `classes`.
-        """
-        normalized_classes = [c.strip() for c in classes if c and c.strip()]
-        if not normalized_classes:
-            raise ValueError("classes must not be empty")
-
-        spark = self.df.sparkSession
-        allowed_classes = (
-            spark.createDataFrame([(c,) for c in normalized_classes], "type string")
-            .dropDuplicates(["type"])
-            .cache()
-        )
-
-        entity_types = (
-            self.df
-            .filter(self._type_filter_expr())
-            .select(F.col("s").alias("entity"), F.col("o").alias("type"))
-            .dropDuplicates(["entity", "type"])
-        )
-
+    def _induce_subgraph_from_entities(
+        self,
+        selected_entities: DataFrame,
+        *,
+        allowed_type_objects: Iterable[str] | None = None,
+    ) -> "rDF2":
         selected_entities = (
-            entity_types.alias("et")
-            .join(
-                allowed_classes.alias("ac"),
-                F.col("et.type") == F.col("ac.type"),
-                "inner",
-            )
-            .select(F.col("et.entity").alias("entity"))
+            selected_entities
+            .select(F.col("entity").alias("entity"))
             .dropDuplicates(["entity"])
             .cache()
         )
@@ -361,25 +339,261 @@ class rDF2:
             .select("s", "p", "o", "isLiteral")
         )
 
-        allowed_type_triples = (
-            subject_scoped
-            .filter(self._type_filter_expr())
-            .join(
-                allowed_classes.alias("ac"),
-                F.col("o") == F.col("ac.type"),
-                "inner",
+        type_triples = subject_scoped.filter(self._type_filter_expr())
+        if allowed_type_objects is not None:
+            allowed = [t.strip() for t in allowed_type_objects if t and t.strip()]
+            allowed_df = (
+                self.df.sparkSession
+                .createDataFrame([(t,) for t in allowed], "type string")
+                .dropDuplicates(["type"])
             )
-            .select("s", "p", "o", "isLiteral")
-        )
+            type_triples = (
+                type_triples
+                .join(allowed_df.alias("ac"), F.col("o") == F.col("ac.type"), "inner")
+                .select("s", "p", "o", "isLiteral")
+            )
 
         filtered = (
             literal_triples
             .unionByName(entity_to_entity_triples)
-            .unionByName(allowed_type_triples)
+            .unionByName(type_triples)
             .dropDuplicates(["s", "p", "o", "isLiteral"])
         )
-
+        selected_entities.unpersist()
         return rDF2(filtered)
+
+    def filter_reachable_from_classes(
+        self,
+        root_classes: str | list[str],
+        *,
+        max_hops: int | None = None,
+        direction: Literal["forward", "backward", "both"] = "forward",
+    ) -> "rDF2":
+        """
+        Keep the entity subgraph reachable from entities of the given root class(es).
+
+        Seeds are entities with ``rdf:type`` in ``root_classes``. The reachable set
+        is expanded by following non-literal resource edges (forward along subject
+        to object by default), then all triples whose subject is reachable are kept.
+        """
+        if isinstance(root_classes, str):
+            normalized_classes = [self.normalize_class_uri(root_classes)]
+        else:
+            normalized_classes = [self.normalize_class_uri(c) for c in root_classes]
+        if not normalized_classes:
+            raise ValueError("root_classes must not be empty")
+        if max_hops is not None and max_hops < 0:
+            raise ValueError("max_hops must be >= 0")
+
+        entity_types = (
+            self.df
+            .filter(self._type_filter_expr())
+            .select(F.col("s").alias("entity"), F.col("o").alias("type"))
+            .dropDuplicates(["entity", "type"])
+        )
+
+        seeds = (
+            entity_types
+            .filter(F.col("type").isin(normalized_classes))
+            .select("entity")
+            .dropDuplicates(["entity"])
+        )
+
+        if seeds.limit(1).count() == 0:
+            return rDF2(self.df.limit(0))
+
+        forward_edges = (
+            self.df
+            .filter(~F.col("isLiteral"))
+            .select(F.col("s").alias("src"), F.col("o").alias("dst"))
+            .where(F.col("src") != F.col("dst"))
+            .dropDuplicates(["src", "dst"])
+            .cache()
+        )
+
+        reachable = seeds.cache()
+        hop = 0
+        while True:
+            if max_hops is not None and hop >= max_hops:
+                break
+
+            neighbor_parts = []
+            if direction in ("forward", "both"):
+                neighbor_parts.append(
+                    forward_edges.alias("e")
+                    .join(reachable.alias("r"), F.col("e.src") == F.col("r.entity"), "inner")
+                    .select(F.col("e.dst").alias("entity"))
+                )
+            if direction in ("backward", "both"):
+                neighbor_parts.append(
+                    forward_edges.alias("e")
+                    .join(reachable.alias("r"), F.col("e.dst") == F.col("r.entity"), "inner")
+                    .select(F.col("e.src").alias("entity"))
+                )
+
+            neighbors = neighbor_parts[0]
+            for part in neighbor_parts[1:]:
+                neighbors = neighbors.unionByName(part)
+            neighbors = neighbors.dropDuplicates(["entity"])
+
+            new_entities = neighbors.join(reachable, on="entity", how="left_anti")
+            if new_entities.limit(1).count() == 0:
+                break
+
+            previous = reachable
+            reachable = reachable.unionByName(new_entities).dropDuplicates(["entity"]).cache()
+            previous.unpersist()
+            hop += 1
+
+        forward_edges.unpersist()
+        result = self._induce_subgraph_from_entities(reachable, allowed_type_objects=None)
+        reachable.unpersist()
+        return result
+
+    def filter_reachable_from_entities(
+        self,
+        seeds: str | list[str],
+        *,
+        max_hops: int | None = None,
+        direction: Literal["forward", "backward", "both"] = "forward",
+        main_class: str | None = None,
+        main_class_scope: Literal["reachable", "seeds"] = "reachable",
+    ) -> "rDF2":
+        """
+        Keep the entity subgraph reachable from explicit seed entity URIs.
+
+        Seeds are given directly (not resolved via rdf:type). The reachable set
+        is expanded by following non-literal resource edges, then all triples whose
+        subject is reachable are kept.
+
+        When ``main_class_scope`` is ``seeds``, reachable entities typed as
+        ``main_class`` are limited to the seed set; other classes still expand
+        normally.
+        """
+        if main_class_scope == "seeds" and main_class is None:
+            raise ValueError("main_class is required when main_class_scope is 'seeds'")
+        if isinstance(seeds, str):
+            seed_list = [seeds]
+        else:
+            seed_list = list(seeds)
+        if not seed_list:
+            raise ValueError("seeds must not be empty")
+        if max_hops is not None and max_hops < 0:
+            raise ValueError("max_hops must be >= 0")
+
+        seeds_df = (
+            self.df.sparkSession
+            .createDataFrame([(entity,) for entity in seed_list], "entity string")
+            .dropDuplicates(["entity"])
+        )
+
+        if seeds_df.limit(1).count() == 0:
+            return rDF2(self.df.limit(0))
+
+        forward_edges = (
+            self.df
+            .filter(~F.col("isLiteral"))
+            .select(F.col("s").alias("src"), F.col("o").alias("dst"))
+            .where(F.col("src") != F.col("dst"))
+            .dropDuplicates(["src", "dst"])
+            .cache()
+        )
+
+        reachable = seeds_df.cache()
+        hop = 0
+        while True:
+            if max_hops is not None and hop >= max_hops:
+                break
+
+            neighbor_parts = []
+            if direction in ("forward", "both"):
+                neighbor_parts.append(
+                    forward_edges.alias("e")
+                    .join(reachable.alias("r"), F.col("e.src") == F.col("r.entity"), "inner")
+                    .select(F.col("e.dst").alias("entity"))
+                )
+            if direction in ("backward", "both"):
+                neighbor_parts.append(
+                    forward_edges.alias("e")
+                    .join(reachable.alias("r"), F.col("e.dst") == F.col("r.entity"), "inner")
+                    .select(F.col("e.src").alias("entity"))
+                )
+
+            neighbors = neighbor_parts[0]
+            for part in neighbor_parts[1:]:
+                neighbors = neighbors.unionByName(part)
+            neighbors = neighbors.dropDuplicates(["entity"])
+
+            new_entities = neighbors.join(reachable, on="entity", how="left_anti")
+            if new_entities.limit(1).count() == 0:
+                break
+
+            previous = reachable
+            reachable = reachable.unionByName(new_entities).dropDuplicates(["entity"]).cache()
+            previous.unpersist()
+            hop += 1
+
+        forward_edges.unpersist()
+
+        if main_class_scope == "seeds":
+            normalized_class = self.normalize_class_uri(main_class)
+            type_expr = self._type_filter_expr()
+            non_seed_main_class = (
+                self.df
+                .filter(type_expr & (F.col("o") == normalized_class))
+                .select(F.col("s").alias("entity"))
+                .dropDuplicates(["entity"])
+                .join(seeds_df, on="entity", how="left_anti")
+            )
+            reachable = reachable.join(non_seed_main_class, on="entity", how="left_anti")
+
+        result = self._induce_subgraph_from_entities(reachable, allowed_type_objects=None)
+        reachable.unpersist()
+        return result
+
+    def filter_subgraph_by_entity_classes(self, classes: list[str]) -> "rDF2":
+        """
+        Keep only a class-scoped entity subgraph.
+
+        Rules:
+          1) Keep entities that have rdf:type in `classes`.
+          2) Keep triples with subjects in that entity set where:
+             - object is a literal, OR
+             - object is also in that entity set, OR
+             - triple is rdf:type and object is one of `classes`.
+        """
+        normalized_classes = [c.strip() for c in classes if c and c.strip()]
+        if not normalized_classes:
+            raise ValueError("classes must not be empty")
+
+        entity_types = (
+            self.df
+            .filter(self._type_filter_expr())
+            .select(F.col("s").alias("entity"), F.col("o").alias("type"))
+            .dropDuplicates(["entity", "type"])
+        )
+
+        allowed_classes = (
+            self.df.sparkSession
+            .createDataFrame([(c,) for c in normalized_classes], "type string")
+            .dropDuplicates(["type"])
+        )
+
+        selected_entities = (
+            entity_types.alias("et")
+            .join(
+                allowed_classes.alias("ac"),
+                F.col("et.type") == F.col("ac.type"),
+                "inner",
+            )
+            .select(F.col("et.entity").alias("entity"))
+            .dropDuplicates(["entity"])
+        )
+
+        return self._induce_subgraph_from_entities(
+            selected_entities,
+            allowed_type_objects=normalized_classes,
+        )
 
     def sample_entities_by_type_targets(
         self,

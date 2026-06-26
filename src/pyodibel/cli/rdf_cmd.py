@@ -7,6 +7,7 @@ Provides thin CLI wrappers around RDF pipeline operations implemented in
 
 import click
 
+from pyodibel.cli.path_types import SPARK_INPUT_PATH, SPARK_OUTPUT_PATH
 from pyodibel.management.spark_mgr import get_spark_session
 from pyodibel.operations.rdf.rdf2 import rDF2
 
@@ -111,8 +112,8 @@ def rdf_group():
 
 
 @rdf_group.command("run")
-@click.option("--input", "input_path", required=True, type=click.Path(exists=True, dir_okay=False))
-@click.option("--output", "output_path", required=True, type=click.Path())
+@click.option("--input", "input_path", required=True, type=SPARK_INPUT_PATH)
+@click.option("--output", "output_path", required=True, type=SPARK_OUTPUT_PATH)
 @click.option(
     "--filter-s-type",
     "subject_types",
@@ -268,8 +269,8 @@ def run_pipeline(
 
 
 @rdf_group.command("schema-graph")
-@click.option("--input", "input_path", required=True, type=click.Path(exists=True, dir_okay=False))
-@click.option("--output", "output_path", required=True, type=click.Path())
+@click.option("--input", "input_path", required=True, type=SPARK_INPUT_PATH)
+@click.option("--output", "output_path", required=True, type=SPARK_OUTPUT_PATH)
 @click.option("--app-name", default="SchemaGraphGenerator", show_default=True)
 @click.option("--master", default="local[*]", show_default=True)
 @click.option("--driver-memory", default="8g", show_default=True)
