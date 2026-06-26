@@ -4,6 +4,8 @@ This document describes how to build **domain-specific KGI-Bench** (Knowledge Gr
 
 The pipeline lives in [`resources/text2kgbench/`](../resources/text2kgbench/) and produces overlapping multi-source benchmark bundles in the same style as the movie-KG integration benchmark: a hidden reference graph per split, plus shaded seed and RDF source graphs for integration evaluation.
 
+[Development Versions](https://service.scadsai.uni-leipzig.de/kgs/data/kgi-bench/text2kg%2B/latest/)
+
 ## Overview
 
 ```mermaid
