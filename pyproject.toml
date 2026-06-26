@@ -30,6 +30,10 @@ test = [
     "pytest>=7.0.0",
     "pytest-mock>=3.10.0"
 ]
+docs = [
+    "mkdocs>=1.6",
+    "mkdocs-material>=9.5",
+]
 
 [project.scripts]
 pyodibel = "pyodibel.cli.main:cli"
