@@ -8,7 +8,7 @@ TODO
 
 ## Feature List
 
-- RDF processing with [rdf2](rdf2)
+- RDF processing with [rdf2](rdf2.md)
 
 ## Dataset List
 

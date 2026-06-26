@@ -1,0 +1,48 @@
+site_name: ODIBEL
+site_description: Open Data Integration Benchmark Evaluation Lab
+site_url: https://scads.github.io/ODIBEL/
+repo_url: https://github.com/ScaDS/ODIBEL
+repo_name: ScaDS/ODIBEL
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.sections
+    - navigation.expand
+    - content.code.copy
+    - toc.integrate
+
+plugins:
+  - search
+
+markdown_extensions:
+  - pymdownx.highlight
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - tables
+  - toc:
+      permalink: true
+
+nav:
+  - Home: index.md
+  - KGI-Bench Data: kgi_data.md
+  - rDF2: rdf2.md
+  - API: api.md
+  - Generate: Generate.md
+
+docs_dir: docs
