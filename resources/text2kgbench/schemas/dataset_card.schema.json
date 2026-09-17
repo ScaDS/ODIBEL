@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://scads.ai/kgi-bench/schemas/dataset_card.schema.json",
+  "title": "KGI-Bench DatasetCard",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "dataset_id",
+    "display_name",
+    "created_at",
+    "status",
+    "identity",
+    "inputs",
+    "recipe",
+    "artifacts",
+    "measured",
+    "intended_use",
+    "limitations",
+    "lineage"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": { "type": "string", "const": "1.0.0" },
+    "dataset_id": { "type": "string" },
+    "display_name": { "type": "string" },
+    "created_at": { "type": "string" },
+    "status": { "type": "string", "enum": ["draft", "published", "deprecated"] },
+    "motivation": { "type": ["string", "null"] },
+    "identity": {
+      "type": "object",
+      "required": ["config_hash"],
+      "properties": {
+        "config_hash": { "type": "string" },
+        "config_path": { "type": "string" },
+        "card_path": { "type": "string" }
+      }
+    },
+    "inputs": { "type": "object" },
+    "recipe": { "type": "object" },
+    "artifacts": { "type": "object" },
+    "measured": { "type": "object" },
+    "intended_use": { "type": "string" },
+    "limitations": { "type": "array", "items": { "type": "string" } },
+    "lineage": {
+      "type": "object",
+      "properties": {
+        "parent_subgraph_id": { "type": ["string", "null"] },
+        "parent_dataset_id": { "type": ["string", "null"] },
+        "related_experiment_ids": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "software": { "type": "object" },
+    "legacy": { "type": "boolean" }
+  }
+}

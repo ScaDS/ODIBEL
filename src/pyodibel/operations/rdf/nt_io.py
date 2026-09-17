@@ -12,6 +12,28 @@ Triple = tuple[str, str, str, bool]
 NtParser = Literal["stream", "rdflib"]
 
 
+def _is_spark_metadata(name: str) -> bool:
+    return name.startswith("_") or name.startswith(".")
+
+
+def nt_input_paths(path: str | os.PathLike[str]) -> list[Path]:
+    """Resolve a file or Spark ``write.text`` directory to concrete NT files."""
+    path_obj = Path(path)
+    if path_obj.is_file():
+        return [path_obj]
+    if not path_obj.is_dir():
+        raise FileNotFoundError(f"NT input not found: {path_obj}")
+
+    parts = sorted(
+        child
+        for child in path_obj.iterdir()
+        if child.is_file() and not _is_spark_metadata(child.name)
+    )
+    if not parts:
+        raise FileNotFoundError(f"no NT part files in directory: {path_obj}")
+    return parts
+
+
 def open_nt_text(path: str | os.PathLike[str]):
     path_str = os.fspath(path)
     if path_str.endswith(".bz2"):
@@ -44,11 +66,12 @@ def parse_nt_line(line: str) -> Triple | None:
 
 def load_nt_stream(path: str | os.PathLike[str]) -> list[Triple]:
     triples: list[Triple] = []
-    with open_nt_text(path) as handle:
-        for line in handle:
-            triple = parse_nt_line(line)
-            if triple is not None:
-                triples.append(triple)
+    for part in nt_input_paths(path):
+        with open_nt_text(part) as handle:
+            for line in handle:
+                triple = parse_nt_line(line)
+                if triple is not None:
+                    triples.append(triple)
     return triples
 
 
@@ -67,7 +90,8 @@ def load_nt_rdflib(path: str | os.PathLike[str]) -> list[Triple]:
     from rdflib.term import Literal
 
     graph = Graph()
-    graph.parse(os.fspath(path), format="nt")
+    for part in nt_input_paths(path):
+        graph.parse(os.fspath(part), format="nt")
     triples: list[Triple] = []
     for subject, predicate, obj in graph:
         triples.append(

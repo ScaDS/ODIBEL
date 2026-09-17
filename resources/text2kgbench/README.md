@@ -1,5 +1,9 @@
 # Building Multi Source Format KG Integration Benchmark Datasets using DBpedia and Ontologies of Text2KGBench
 
+Operator docs: [`docs/kgi_data.md`](../../docs/kgi_data.md)  
+Provenance / dataset cards: [`PROVENANCE.md`](PROVENANCE.md)  
+Domain selection: [`DOMAIN_SELECTION.md`](DOMAIN_SELECTION.md)
+
 ## Ontologies
 
 1_university_ontology.json

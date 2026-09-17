@@ -303,5 +303,6 @@ Scripts accept paths via CLI arguments or a `.env` file in `resources/text2kgben
 
 - **`sampling.py`**: optional downsampling of an NT file while preserving class/degree or relation distributions. Use when a reachable subgraph is still too large before splitting.
 - **`crawl.py`**: fetches web resources for source acquisition (separate from the RDF pipeline above).
+- **`run_domain.py`**: end-to-end RDF-path runner that also emits `generation_config.yaml`, `dataset_card.json`, and updates `registry.json` (see [`PROVENANCE.md`](../resources/text2kgbench/PROVENANCE.md)).
 
 Further cluster-specific notes are in [`resources/text2kgbench/athena-ops/README.md`](../resources/text2kgbench/athena-ops/README.md).

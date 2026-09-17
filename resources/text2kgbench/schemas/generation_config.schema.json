@@ -1,0 +1,92 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://scads.ai/kgi-bench/schemas/generation_config.schema.json",
+  "title": "KGI-Bench GenerationConfig",
+  "type": "object",
+  "required": ["schema_version", "inputs", "recipe"],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": { "type": "string", "const": "1.0.0" },
+    "inputs": {
+      "type": "object",
+      "required": [
+        "domain",
+        "ontology_id",
+        "ontology_content_sha256",
+        "root_class",
+        "dump_content_sha256"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "domain": { "type": "string" },
+        "ontology_id": { "type": "string" },
+        "ontology_content_sha256": { "type": "string", "minLength": 64, "maxLength": 64 },
+        "root_class": { "type": "string" },
+        "dump_content_sha256": { "type": "string", "minLength": 64, "maxLength": 64 },
+        "dump_uri": { "type": ["string", "null"] },
+        "dump_version": { "type": ["string", "null"] },
+        "language_filter": { "type": ["string", "null"] },
+        "link_sources": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "recipe": {
+      "type": "object",
+      "required": [
+        "num_subsets",
+        "subset_size",
+        "overlap_ratio",
+        "target_root_budget",
+        "seed",
+        "formats"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "num_subsets": { "type": "integer", "minimum": 1 },
+        "subset_size": { "type": "integer", "minimum": 1 },
+        "overlap_ratio": { "type": "number", "minimum": 0, "maximum": 1 },
+        "target_root_budget": { "type": "integer", "minimum": 1 },
+        "seed": { "type": "integer" },
+        "max_hops": { "type": ["integer", "null"], "minimum": 0 },
+        "direction": { "type": "string", "enum": ["forward", "backward", "both"] },
+        "main_class_scope": { "type": "string", "enum": ["reachable", "seeds"] },
+        "sample_method": { "type": ["string", "null"] },
+        "sample_n": { "type": ["integer", "null"] },
+        "sample_fraction": { "type": ["number", "null"] },
+        "formats": {
+          "type": "object",
+          "required": ["rdf", "json", "text"],
+          "additionalProperties": false,
+          "properties": {
+            "rdf": { "type": "boolean" },
+            "json": { "type": "boolean" },
+            "text": { "type": "boolean" }
+          }
+        },
+        "include_rdfs_label": { "type": "boolean" },
+        "include_rdf_type": { "type": "boolean" },
+        "shading_resource_ns": { "type": "string" },
+        "shading_ontology_ns": { "type": "string" },
+        "gold_entities": { "type": "boolean" },
+        "gold_matches": { "type": "boolean" },
+        "gold_links": { "type": "boolean" },
+        "gold_relation_matches": { "type": "boolean" }
+      }
+    },
+    "software": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "pyodibel_version": { "type": ["string", "null"] },
+        "git_commit": { "type": ["string", "null"] },
+        "entrypoint": { "type": ["string", "null"] },
+        "stages": { "type": "array", "items": { "type": "string" } },
+        "engine": { "type": ["string", "null"] }
+      }
+    },
+    "parent_subgraph_id": { "type": ["string", "null"] },
+    "notes": { "type": ["string", "null"] }
+  }
+}

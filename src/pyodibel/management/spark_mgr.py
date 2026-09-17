@@ -27,28 +27,28 @@ def get_spark_session(
     adaptive_enabled: bool = True,
     skew_join_enabled: bool = True,
 ):
-    # active_context = SparkContext._active_spark_context
-    # submitted = os.getenv("PYSPARK_SUBMIT_VERSION") is not None
-    # effective_master = _normalize_optional(master) or _normalize_optional(os.getenv("MASTER"))
-    # effective_local_dir = _normalize_optional(local_dir) or _normalize_optional(
-    #     os.getenv("SPARK_LOCAL_DIR")
-    # )
+    active_context = SparkContext._active_spark_context
+    submitted = os.getenv("PYSPARK_SUBMIT_VERSION") is not None
+    effective_master = _normalize_optional(master) or _normalize_optional(os.getenv("MASTER"))
+    effective_local_dir = _normalize_optional(local_dir) or _normalize_optional(
+        os.getenv("SPARK_LOCAL_DIR")
+    )
 
     builder = SparkSession.builder.appName(app_name)
 
-    # # Only set master when explicitly provided. Under spark-submit, or when a
-    # # SparkContext already exists, leave master unset and inherit configuration.
-    # if active_context is None and effective_master is not None:
-    #     builder = builder.master(effective_master)
-    #     if _is_local_master(effective_master):
-    #         executor_memory = None
-    #         builder = builder.config("spark.hadoop.fs.defaultFS", "file:///")
-    # elif active_context is None and effective_master is None and not submitted:
-    #     builder = builder.master("local[*]")
-    #     executor_memory = None
-    #     builder = builder.config("spark.hadoop.fs.defaultFS", "file:///")
-    #     if effective_local_dir is None:
-    #         effective_local_dir = "/tmp/spark"
+    # Only set master when explicitly provided. Under spark-submit, or when a
+    # SparkContext already exists, leave master unset and inherit configuration.
+    if active_context is None and effective_master is not None:
+        builder = builder.master(effective_master)
+        if _is_local_master(effective_master):
+            executor_memory = None
+            builder = builder.config("spark.hadoop.fs.defaultFS", "file:///")
+    elif active_context is None and effective_master is None and not submitted:
+        builder = builder.master("local[*]")
+        executor_memory = None
+        builder = builder.config("spark.hadoop.fs.defaultFS", "file:///")
+        if effective_local_dir is None:
+            effective_local_dir = "/tmp/spark"
 
     builder = (
         builder
@@ -61,8 +61,8 @@ def get_spark_session(
         .config("spark.eventLog.enabled", "false")
     )
 
-    # if effective_local_dir is not None:
-    #     builder = builder.config("spark.local.dir", effective_local_dir)
+    if effective_local_dir is not None:
+        builder = builder.config("spark.local.dir", effective_local_dir)
 
     if executor_memory:
         builder = builder.config("spark.executor.memory", executor_memory)
