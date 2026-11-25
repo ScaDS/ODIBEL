@@ -104,13 +104,13 @@ Profiling in the library is `operations/sample/distributions.py` (class, propert
 | --- | --- | --- |
 | `text2kgbench/` | supported | KGI-Bench domain sets from a DBpedia NT dump and a Text2KGBench ontology: `generate_refac.py`, `subgraph.py`, `splits.py`, `sources.py`, plus `crawl.py` and `sampling.py`. Operator doc: [KGI-Bench data](kgi_data.md). Tests call `crawl.py`. |
 | `movie-multi-source-kg/` | experimental | Movie KG notes, `generate.py`, `evaluate.py`, `movie.conf`. Reproduction and reference checks are [#11](https://github.com/ScaDS/ODIBEL/issues/11)–[#14](https://github.com/ScaDS/ODIBEL/issues/14). |
-| `dbpedia-multi-source-kg/` | experimental | DBpedia ontology class-to-subdomain classifier (`src/multi_source_kg/`). Own README. LLM mode needs an OpenAI-compatible key. `generate.py` still calls `clean_domain_range_violations()` with no ontology path, so that step raises `TypeError` on current `main`. |
+| `dbpedia-multi-source-kg/` | experimental | DBpedia ontology class-to-subdomain classifier (`src/multi_source_kg/`). Own README. LLM mode needs an OpenAI-compatible key. On `main`, `generate.py` calls `clean_domain_range_violations()` with no ontology path. `cleanup/stale-callers` passes `ont_path` (`ONTOLOGY_PATH`, otherwise the old DBpedia snapshot URL). That change was syntax-checked only. This script is the multi-source subgraph generator, not the DBpedia temporal Scala pipeline. |
 | `dbpedia-temporal/` | experimental | Temporal KG model note and Python plot scripts. Generation itself is the Scala pipeline under `src/main/scala/.../wikitext`. `plot_yearlyDiff.py` and `plot_yearly_diff.py` overlap. |
 | `kgflex-eval/` | experimental | DBpedia fetch scripts for KGFlex-style film/person/company extracts. README still has open TODOs. |
-| `dexter-kg/generate.py` | experimental | Imports `pyodibel.api.data_source.DataSourceConfig` and `GradoopDataSource`. Those names are gone; the live names are `SourceConfig` and `GradoopSource`. |
+| `dexter-kg/generate.py` | experimental | On `main`, imports `DataSourceConfig` and `GradoopDataSource`. `cleanup/stale-callers` uses `SourceConfig` and `GradoopSource`. |
 | `examples/dexter_kg_mapping.py` | experimental | Uses the current Gradoop adapter. Hard-coded paths. |
 | `examples/entity_resolution_benchset.py` | experimental | Standalone benchset sketch. Imports `pandas`, which is not a project dependency. |
-| `em-data-eval/abt-buy.py` | experimental | Imports `EntityResolutionBenchData` (not defined) and subclasses `DataSource` without importing it. |
+| `em-data-eval/abt-buy.py` | experimental | On `main`, imports `EntityResolutionBenchData` and uses `DataSource`. `cleanup/stale-callers` subclasses `Source`. Pair labels still belong in `EntityResolutionData`. |
 | `product-multi-source-kg/README.md` | deprecated | Empty file. |
 | `wikidata_externalids.py`, `uris.txt`, `predicates.txt` | experimental | Loose helpers and URI lists at the resources root. |
 | `studies/experiments/rdf-part/` | experimental | Partitioning notes and a notebook. Outside the supported layout. |
@@ -183,7 +183,9 @@ Recorded on 2026-11-25 with `uv.lock` PySpark 4.1.2:
 | `uv run pyodibel rdf --help` | Lists `run` and `schema-graph`. |
 | `uv run mkdocs build` | Built `site/` with existing warnings in `kgi_data.md` for links that point at `resources/` (outside `docs/`). |
 
-The test update passes the URL the existing rdflib patch already intercepts (`http://example.org/mini-ontology.ttl`). Production behavior of `clean_domain_range_violations` is unchanged. Combined with the untouched modules, the non-network suite is 118 passed and 1 deselected. `resources/dbpedia-multi-source-kg/generate.py` still omits `ont_path` and will raise at that step.
+The test update passes the URL the existing rdflib patch already intercepts (`http://example.org/mini-ontology.ttl`). Production behavior of `clean_domain_range_violations` is unchanged. Combined with the untouched modules, the non-network suite is 118 passed and 1 deselected.
+
+End-to-end generator runs were not part of this smoke test. `resources/dbpedia-multi-source-kg/generate.py` is the multi-source subgraph script, not the DBpedia temporal jobs under `src/main/scala/.../wikitext`. On `main` that script still calls `clean_domain_range_violations()` with no ontology path. `cleanup/stale-callers` passes `ont_path` and was syntax-checked only; a real run still needs a dump and Spark. The same is true for `resources/text2kgbench` and `resources/movie-multi-source-kg`. MovieKG reproduction is already [#12](https://github.com/ScaDS/ODIBEL/issues/12). No open issue covers an end-to-end run of the DBpedia multi-source generator or text2kgbench. Those runs belong in a new issue, not in this audit.
 
 Scala `mvn test` was not run. The default `JAVA_HOME` on this machine points at Java 8; the commands above override it to 17.0.15-tem.
 
@@ -196,10 +198,11 @@ These are the gaps to open as issues. They are listed here so the cleanup does n
 3. **Land `resources/abs-cache`.** New branch from `main`, merge `origin/abs-cache`, then align the README with Python `<3.13` and `rocksdict` (or document `rocksdb-py` as a script-local extra). Suggested branch: `resources/wikipedia-abstract-cache`.
 4. **Review the KG corruption package on its own PR.** It already matches `main` plus one additive commit. Keep it under `resources/kg-corruption` and out of the supported import list. Suggested branch: a new branch from `origin/kg-corruption` only if review fixes are required.
 5. **Leave KGI provenance on `kgi-bench-dbp-subonto`.** The gap checklist on that branch is the working list for multi-domain generation. MovieKG inputs, reproduction, reference audit, and entailment checks stay on #11–#14.
-6. **Quarantine stale callers.** Update or mark broken: `resources/dexter-kg/generate.py`, `resources/em-data-eval/abt-buy.py`, the pandas import in `resources/examples/entity_resolution_benchset.py`, and `resources/dbpedia-multi-source-kg/generate.py` (calls `clean_domain_range_violations()` without `ont_path`).
+6. **Quarantine stale callers.** On `cleanup/stale-callers`: Dexter uses `GradoopSource`, Abt-Buy subclasses `Source`, and `resources/dbpedia-multi-source-kg/generate.py` passes `ont_path`. Still open: the pandas import in `resources/examples/entity_resolution_benchset.py`. Running that DBpedia generator is follow-up 13, not this item.
 7. **Make `systemkg` importable.** Move the `kgcore` import behind an optional extra, or drop the module until the dependency exists.
 8. **Trim unused dependencies and package tests.** `SQLAlchemy` has no caller. Exclude `pyodibel.test` from the installed distribution. Decide whether the Python lock should stay on PySpark 4.1.2 while the Scala build stays on Spark 3.5.1.
 9. **Add a Python test workflow.** Run `pytest -m "not network"` on Java 17. Mark Spark tests so a non-Spark smoke path is explicit.
 10. **Stop advertising missing adapters.** `WikidataDumpSource`, `LinkedDataSource`, storage, and partition symbols in `pyodibel/__init__.py` do not exist. `setup_logging()` on import writes `pyodibel.log` as a side effect.
 11. **Blank-node IDs.** Track on #5 only.
 12. **Remove or fill empty placeholders.** `resources/product-multi-source-kg/`, `docs/Generate.md`, and the duplicate yearly-diff plot scripts under `resources/dbpedia-temporal`.
+13. **Run the dataset generators as their own issue.** End-to-end runs of `resources/movie-multi-source-kg`, `resources/dbpedia-multi-source-kg/generate.py`, and `resources/text2kgbench` need a dump and Spark. MovieKG reproduction is already [#12](https://github.com/ScaDS/ODIBEL/issues/12). No open issue covers the DBpedia multi-source generator or text2kgbench. The DBpedia temporal Scala pipeline is separate and was not part of this check.
