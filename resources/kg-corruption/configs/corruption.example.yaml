@@ -2,7 +2,7 @@
 # Relative paths resolve against this file's directory.
 
 input:
-  root_reference: ../data/example/root_reference.ttl
+  root_reference: ../fixtures/example/root_reference.ttl
   format: turtle
 
 output:
@@ -49,7 +49,7 @@ families:
 
   source:
     enabled: true
-    provenance_file: ../data/example/provenance.jsonl
+    provenance_file: ../fixtures/example/provenance.jsonl
     multi_source_policy: remove_if_all_selected  # remove_if_all_selected | remove_if_any_selected
     named_graph_as_source: true
 

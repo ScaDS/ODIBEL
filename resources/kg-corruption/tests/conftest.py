@@ -10,8 +10,8 @@ from kg_corrupt.eligibility import build_eligibility_sets
 from kg_corrupt.provenance import ProvenanceIndex, build_provenance_index
 
 PKG_ROOT = Path(__file__).resolve().parents[1]
-EXAMPLE_TTL = PKG_ROOT / "data" / "example" / "root_reference.ttl"
-EXAMPLE_PROV = PKG_ROOT / "data" / "example" / "provenance.jsonl"
+EXAMPLE_TTL = PKG_ROOT / "fixtures" / "example" / "root_reference.ttl"
+EXAMPLE_PROV = PKG_ROOT / "fixtures" / "example" / "provenance.jsonl"
 
 
 @pytest.fixture
