@@ -1,32 +1,32 @@
 """
-Load Gradoop/FAMER export data using GradoopDataSource.
+Load Gradoop/FAMER export data using GradoopSource.
 
 This script demonstrates loading entity resolution results from a Gradoop export folder
-using the new entity-based API and generating RDF graphs per source.
+and generating RDF graphs per source.
 """
 
 from pathlib import Path
 from urllib.parse import quote
-from typing import Dict, List
 
 from rdflib import Graph, URIRef, Literal, Namespace
 from rdflib.namespace import RDF, RDFS
 
-from pyodibel.api.data_source import DataSourceConfig
-from pyodibel.source.gradoop.source import GradoopDataSource
-from pyodibel.source.gradoop.entity import GradoopEntity
+from pyodibel.api.source import SourceConfig
+from pyodibel.source.gradoop.source import GradoopSource
 
 if __name__ == "__main__":
     # Create data source with default path to the Gradoop export
-    source = GradoopDataSource(
-        DataSourceConfig(name="ds-c0"),
-        default_path="/d/repo/MA Lerm/Datensammlungen/DS-C/DS-C0/SW_0.3",
-        default_format="csv"
+    source = GradoopSource(
+        SourceConfig(
+            name="ds-c0",
+            source_type="gradoop",
+            location="/d/repo/MA Lerm/Datensammlungen/DS-C/DS-C0/SW_0.3",
+            format="csv",
+        )
     )
-    
-    # Fetch entities using the new entity-based API
+
     print("Loading Gradoop data...")
-    entities = list(source.fetch())
+    entities = list(source.read_entities())
     
     # Display summary
     print(f"\nLoaded data summary:")
@@ -67,8 +67,8 @@ if __name__ == "__main__":
         print(f"  Source: {example.source}")
         print(f"  Get property: {example.get_property('recId', 'N/A')}")
         print(f"  Has property 'recId': {example.has_property('recId')}")
-        print(f"  All properties count: {len(example.get_all_properties())}")
-        print(f"  To dict: {list(example.to_dict().keys())}")
+        print(f"  All properties count: {len(example.get_properties())}")
+        print(f"  To dict: {list(example.model_dump().keys())}")
     
     print("\nData loaded successfully!")
     print("Entities are now GradoopEntity objects with a clean, type-safe API.")
