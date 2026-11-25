@@ -12,16 +12,18 @@ Specification: [`IDEA_controlled_kg_corruption_benchmark.md`](IDEA_controlled_kg
 ```text
 resources/kg-corruption/
 ├── configs/corruption.example.yaml
-├── data/example/
-│   ├── ontology.ttl          # complete OWL class and property vocabulary
-│   ├── root_reference.ttl    # TBox + instance graph
-│   ├── provenance.jsonl
-│   ├── movie1.txt            # Wikipedia-style abstract for One / Movie 1
-│   └── movie2.txt            # Wikipedia-style abstract for Two / Movie 2
+├── fixtures/example/
+│   ├── ontology.ttl          # OWL class and property vocabulary
+│   ├── root_reference.ttl    # TBox + instance graph the generator reads
+│   ├── provenance.jsonl      # triple → source unit, required by the source family
+│   ├── movie1.txt            # abstract for One / Movie 1
+│   └── movie2.txt            # abstract for Two / Movie 2
 ├── src/kg_corrupt/
 │   └── corruptions/          # one module per family
 └── tests/
 ```
+
+The example lives in `fixtures/example/` because the repository gitignore ignores every directory named `data/`. `ontology.ttl` and the abstracts document the source bundle. Generation reads `root_reference.ttl` and `provenance.jsonl`.
 
 ## Setup
 
@@ -46,12 +48,12 @@ Or from this directory:
 kg-corrupt generate --config configs/corruption.example.yaml
 kg-corrupt generate --config configs/corruption.example.yaml --family entity
 kg-corrupt generate-one \
-  --root-reference data/example/root_reference.ttl \
+  --root-reference fixtures/example/root_reference.ttl \
   --family long_tail \
   --remove-fraction 0.30 \
   --seed 42 \
   --output /tmp/out.nt
-kg-corrupt stats --root-reference data/example/root_reference.ttl
+kg-corrupt stats --root-reference fixtures/example/root_reference.ttl
 kg-corrupt validate --manifest outputs/example-corruptions/benchmark_manifest.csv
 kg-corrupt summarize --manifest outputs/example-corruptions/benchmark_manifest.csv
 ```

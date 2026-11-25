@@ -1,0 +1,30 @@
+@prefix ex: <http://example.org/kg/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ex:Film a owl:Class ;
+    rdfs:label "Film" .
+
+ex:Person a owl:Class ;
+    rdfs:label "Person" .
+
+ex:title a owl:DatatypeProperty ;
+    rdfs:label "title" ;
+    rdfs:domain ex:Film ;
+    rdfs:range xsd:string .
+
+ex:director a owl:ObjectProperty ;
+    rdfs:label "director" ;
+    rdfs:domain ex:Film ;
+    rdfs:range ex:Person .
+
+ex:starring a owl:ObjectProperty ;
+    rdfs:label "starring" ;
+    rdfs:domain ex:Film ;
+    rdfs:range ex:Person .
+
+ex:sequel a owl:ObjectProperty ;
+    rdfs:label "sequel" ;
+    rdfs:domain ex:Film ;
+    rdfs:range ex:Film .
