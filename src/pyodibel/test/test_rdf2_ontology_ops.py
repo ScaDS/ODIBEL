@@ -23,6 +23,7 @@ ex:name rdfs:domain ex:Animal ;
 
 RDF_TYPE_URI = "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>"
 EX = "http://example.org/"
+ONTOLOGY_URL = "http://example.org/mini-ontology.ttl"
 
 
 @pytest.fixture(scope="session")
@@ -76,7 +77,7 @@ class TestCleanDomainRangeViolations:
             (f"<{EX}alice>", f"<{EX}hasPet>", f"<{EX}rex>", False),
         ]
         with patch_ontology():
-            result = make_rdf2(spark, rows).clean_domain_range_violations()
+            result = make_rdf2(spark, rows).clean_domain_range_violations(ONTOLOGY_URL)
 
         output = result.df.filter(F.col("p") == f"<{EX}hasPet>").collect()
         assert len(output) == 1, "Valid Triple was deleted"
@@ -92,7 +93,7 @@ class TestCleanDomainRangeViolations:
             (f"<{EX}rex>", f"<{EX}hasPet>", f"<{EX}buddy>", False),
         ]
         with patch_ontology():
-            result = make_rdf2(spark, rows).clean_domain_range_violations()
+            result = make_rdf2(spark, rows).clean_domain_range_violations(ONTOLOGY_URL)
 
         output = result.df.filter(F.col("p") == f"<{EX}hasPet>").collect()
         assert len(output) == 0, "Domain-violating Triple should be removed"
@@ -108,7 +109,7 @@ class TestCleanDomainRangeViolations:
             (f"<{EX}alice>", f"<{EX}hasPet>", f"<{EX}bob>", False),
         ]
         with patch_ontology():
-            result = make_rdf2(spark, rows).clean_domain_range_violations()
+            result = make_rdf2(spark, rows).clean_domain_range_violations(ONTOLOGY_URL)
 
         output = result.df.filter(F.col("p") == f"<{EX}hasPet>").collect()
         assert len(output) == 0, "Range-violating Triple should be removed"
@@ -123,7 +124,7 @@ class TestCleanDomainRangeViolations:
             (f"<{EX}rex>", f"<{EX}name>", '"Rex"', True),
         ]
         with patch_ontology():
-            result = make_rdf2(spark, rows).clean_domain_range_violations()
+            result = make_rdf2(spark, rows).clean_domain_range_violations(ONTOLOGY_URL)
 
         output = result.df.filter(F.col("p") == f"<{EX}name>").collect()
         assert len(output) == 1, "Valid Literal-Triple should be kept"
@@ -138,7 +139,7 @@ class TestCleanDomainRangeViolations:
             (f"<{EX}rex>", f"<{EX}name>", f"<{EX}SomeThing>", False),
         ]
         with patch_ontology():
-            result = make_rdf2(spark, rows).clean_domain_range_violations()
+            result = make_rdf2(spark, rows).clean_domain_range_violations(ONTOLOGY_URL)
 
         output = result.df.filter(F.col("p") == f"<{EX}name>").collect()
         assert len(output) == 0, "Range-violating Triple should be removed"
@@ -154,7 +155,7 @@ class TestCleanDomainRangeViolations:
             (f"<{EX}rex>", f"<{EX}name>", '"Rex"', True),
         ]
         with patch_ontology():
-            result = make_rdf2(spark, rows).clean_domain_range_violations()
+            result = make_rdf2(spark, rows).clean_domain_range_violations(ONTOLOGY_URL)
 
         output = result.df.filter(F.col("p") == f"<{EX}name>").collect()
         assert len(output) == 1, "Dog is an Animal, Triple should be kept"
@@ -168,7 +169,7 @@ class TestCleanDomainRangeViolations:
             (f"<{EX}alice>", f"<{EX}unknownProp>", '"some value"', True),
         ]
         with patch_ontology():
-            result = make_rdf2(spark, rows).clean_domain_range_violations()
+            result = make_rdf2(spark, rows).clean_domain_range_violations(ONTOLOGY_URL)
 
         output = result.df.filter(F.col("p") == f"<{EX}unknownProp>").collect()
         assert len(output) == 1, "Tripel with unknown predicate should be kept"
@@ -183,7 +184,7 @@ class TestCleanDomainRangeViolations:
             (f"<{EX}rex>",   RDF_TYPE_URI, f"<{EX}Dog>", False),
         ]
         with patch_ontology():
-            result = make_rdf2(spark, rows).clean_domain_range_violations()
+            result = make_rdf2(spark, rows).clean_domain_range_violations(ONTOLOGY_URL)
 
         output = result.df.filter(F.col("p") == RDF_TYPE_URI).collect()
         assert len(output) == 2, "rdf:type-Triple should be kept"
@@ -191,7 +192,7 @@ class TestCleanDomainRangeViolations:
     def test_empty_dataframe(self, spark):
         rows = []
         with patch_ontology():
-            result = make_rdf2(spark, rows).clean_domain_range_violations()
+            result = make_rdf2(spark, rows).clean_domain_range_violations(ONTOLOGY_URL)
 
         assert result.df.count() == 0, "Empty Input should return empty dataframe"
 
@@ -202,7 +203,7 @@ class TestCleanDomainRangeViolations:
             (f"<{EX}alice>", RDF_TYPE_URI, f"<{EX}Person>", False),
         ]
         with patch_ontology():
-            result = make_rdf2(spark, rows).clean_domain_range_violations()
+            result = make_rdf2(spark, rows).clean_domain_range_violations(ONTOLOGY_URL)
 
         assert isinstance(result, rDF2), "Returned object must be rDF2-Instance"
 
@@ -216,7 +217,7 @@ class TestCleanDomainRangeViolations:
             ("<{EX}mystery>", f"<{EX}hasPet>", "<{EX}rex>", False),
         ]
         with patch_ontology():
-            result = make_rdf2(spark, rows).clean_domain_range_violations()
+            result = make_rdf2(spark, rows).clean_domain_range_violations(ONTOLOGY_URL)
 
         output = result.df.filter(F.col("p") == f"<{EX}hasPet>").collect()
         assert len(output) == 0, "Subject without rdf:type should be removed if predicate has domain"
