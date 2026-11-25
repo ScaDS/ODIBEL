@@ -2,49 +2,64 @@
 
 **Open Data Integration Benchmark Evaluation Lab**
 
-PyODIBEL is a Python library for generating and evaluating benchmark datasets for data integration tasks—such as entity matching and entity linking—across different domains. These benchmarks are built from Linked Open Data (LOD) sources, large public dumps such as Wikipedia and Wikidata, or extending benchmark datasets.
+PyODIBEL generates and evaluates benchmark datasets for data integration tasks such as entity resolution, schema matching, and entity fusion. The datasets are built from Linked Open Data, public dumps (DBpedia, Wikipedia, Wikidata), and existing benchmark exports.
 
-## Features
+Version 0.1.0 is the alpha consolidation (OD-M0). The supported surface is the Python library under `src/pyodibel` and the workflows marked supported in the [inventory](docs/inventory.md). Abstract API types, the Scala temporal-KG jobs, and most scripts under `resources/` are experimental.
 
-- **Multi-Source Data Ingestion**: Support for SPARQL endpoints, REST APIs, web pages, and data dumps
-- **Flexible Storage**: File-based, database, or S3-compatible storage backends
-- **Format Support**: Work with CSV, JSON, RDF, and other formats seamlessly
-- **Benchmark Construction**: Create reproducible datasets with splits and ground-truth annotations
-- **Benchmark Evaluation** 
+## Install
 
-## Structure
+Python `>=3.10,<3.13`. Spark commands need Java 17 (the Dockerfile and `pom.xml` use 17; a Java 8 default will fail).
 
+```bash
+uv sync --extra test
 ```
-api/
-    benchmark.py # interface to define and describe benchmark data
-    entity.py # main class to define an wrapp other entities
-    evaluation.py # evaluation suite interface for a specific dataset or benchmark data to derive chraracterisitcs (e.g. size, missing values...)
-    operations.py # interface to define operations on enities, e.g., and impl would be a join of rdf data represented in an Spark dataframe
-    souce.py # interface to read in and process data in speciifc structure in odibel providing a typed interface to access it
-benchmark # definition of interfaces and evaluation functions for 
-    entity_resolution
-        data.py # describes the data artifacts of the entity resoltion benchmark task
-        eval.py # enables evaluation of benchmark data artifacts for the entity resolution tasks, creating metrics about the data not about the task results
-    schema_matching
-        data.py
-        eval.py
-    entity_fusion
-        data.py
-        eval.py
-cli
-    main.py
-    ...
-management # management of internal information for using odibel
-    systemkg.py # later connection to represent odibel actions and implementations as knowledge graph
-    clusters.py # manage same as clusters of entities
-    ...
-operations # collection of named operations often in use by the framework on specific data structures
-    base/
-        entity_ops.py #
-        entity_spark_ops.py
-    rdf/
-        rdf_spark_ops.py # rdf operations for RDF data (triples, or  quads) represented in a spark dataframe
-source
-    gradoop # reading in gradoop datastructure
-    wikidata # reading in wikidata json
+
+The console script is `pyodibel`. The Scala jobs are a separate Maven build: `mvn package` produces the jar used by the Dockerfile (`ai.scads.odibel.main.Main`).
+
+## Supported entry points
+
+RDF on Spark, documented in [docs/rdf2.md](docs/rdf2.md):
+
+```python
+from pyodibel.management.spark_mgr import get_spark_session
+from pyodibel.operations.rdf.rdf2 import rDF2
+
+spark = get_spark_session("example")
+rdf = rDF2.parse(spark, "/path/to/input.nt")
 ```
+
+CLI:
+
+```bash
+pyodibel rdf run --input /path/to/input.nt --output /path/to/output.nt --help
+pyodibel rdf schema-graph --input /path/to/input.nt --output /path/to/schema.csv --help
+```
+
+Also supported, with tests: N-Triples I/O and reachable subgraphs, shading and match clusters, stratified and representative sampling, in-memory entity filter/project/join, RocksDB and HTTP caches, entity-resolution benchmark data and evaluation, and overlapping subset construction (`pyodibel.datasets.mp_mf`).
+
+KGI-Bench domain datasets from DBpedia and Text2KGBench ontologies are documented in [docs/kgi_data.md](docs/kgi_data.md). The scripts live in `resources/text2kgbench/`.
+
+## Experimental
+
+These exist in the tree and are not a stable API:
+
+- `pyodibel.api` interfaces (`Entity`, `Source`, `Operation`, `Benchmark`, `Evaluator`) and the schema-matching and entity-fusion packages
+- `GradoopSource` for FAMER/Gradoop exports
+- Spark operation stubs that raise `NotImplementedError`
+- `pyodibel.management.systemkg` (imports `kgcore`, which is not a dependency)
+- Names re-exported as `None` from `pyodibel/__init__.py`: `WikidataDumpSource`, `LinkedDataSource`, `StorageBackend`, `PartitionStrategy`
+- Dataset scripts under `resources/` other than the text2kgbench path above, including MovieKG (tracked in issues #11–#14)
+- The Scala DBpedia temporal KG pipeline under `src/main/scala/`
+
+## Layout
+
+```text
+src/pyodibel/     installed library (api, operations, benchmark, cache, cli, source)
+src/main/scala/   Spark/Scala jobs (temporal KG)
+resources/        dataset generation workflows, not installed
+docs/             MkDocs site, including the OD-01 inventory
+pom.xml           Scala build
+pyproject.toml    Python build
+```
+
+New reusable code belongs in `src/pyodibel/`. A one-off generator stays in `resources/<workflow>/` until a second workflow needs it. Details, branch dispositions, and follow-up issues are in [docs/inventory.md](docs/inventory.md).

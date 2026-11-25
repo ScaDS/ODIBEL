@@ -40,6 +40,7 @@ markdown_extensions:
 
 nav:
   - Home: index.md
+  - Inventory: inventory.md
   - KGI-Bench Data: kgi_data.md
   - rDF2: rdf2.md
   - API: api.md
