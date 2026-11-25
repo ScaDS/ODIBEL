@@ -6,7 +6,7 @@ Two scripts for building a RocksDB key-value store that maps DBpedia entity name
 
 ## Dependencies
 
-- **Python**: 3.13 (tested)
+- **Python**: >=3.10,<3.13, the same range as the `pyodibel` package
 
 Install all dependencies via:
 
@@ -15,7 +15,7 @@ pip install -r requirements.txt
 ```
 - `requests` – for interacting with the Wikipedia API
 - `pyspark` – for distributed data processing
-- `rocksdb-py` – Python bindings for RocksDB
+- `rocksdict` – Python bindings for RocksDB in direct mode. This is the same library `pyodibel.cache` uses. HTTP mode talks to a RocksDB REST server and does not import it.
 
 ## Scripts
 
@@ -24,7 +24,7 @@ pip install -r requirements.txt
 Reads a DBpedia abstracts NT file and writes entity→abstract pairs into RocksDB. Supports two write modes:
 
 - **`http`** — writes via a REST server using parallel threads. Faster for remote or containerized RocksDB setups.
-- **`direct`** — writes directly into a local RocksDB instance via `rocksdbpy`. No server required, suitable for bulk imports on the same machine.
+- **`direct`** — writes directly into a local RocksDB instance via `rocksdict`. No server required, suitable for bulk imports on the same machine.
 
 ```
 usage: load_abstracts.py [-h] --file FILE [--mode {http,direct}]
@@ -33,7 +33,7 @@ usage: load_abstracts.py [-h] --file FILE [--mode {http,direct}]
 
 options:
   --file FILE          Path to NT file
-  --mode {http,direct} Write mode: http (via REST server) or direct (rocksdbpy) (default: http)
+  --mode {http,direct} Write mode: http (via REST server) or direct (rocksdict) (default: http)
   --host HOST          Server host, http mode only (default: localhost)
   --port PORT          Server port, http mode only (default: 5000)
   --db DB              Path to RocksDB directory, required for direct mode
@@ -65,7 +65,7 @@ usage: get_from_wikipedia.py [-h] --file FILE [--mode {http,direct}]
 
 options:
   --file FILE          HDFS or local path to NT file
-  --mode {http,direct} Write mode: http (via REST server) or direct (rocksdbpy) (default: http)
+  --mode {http,direct} Write mode: http (via REST server) or direct (rocksdict) (default: http)
   --host HOST          RocksDB server host, http mode only (default: localhost)
   --port PORT          RocksDB server port, http mode only (default: 5000)
   --db DB              Path to RocksDB directory, required for direct mode

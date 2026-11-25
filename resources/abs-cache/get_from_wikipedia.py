@@ -73,6 +73,8 @@ def already_in_db_http(session, entity):
 def already_in_db_direct(db, entity):
     try:
         return db.get(entity.encode()) is not None
+    except KeyError:
+        return False
     except Exception as e:
         log.error("Db exception: %s", e)
         return False
@@ -112,7 +114,7 @@ def write_to_db_http(session, entity, abstract):
 
 def write_to_db_direct(db, entity, abstract):
     try:
-        db.set(entity.encode(), abstract.encode())
+        db.put(entity.encode(), abstract.encode())
         return True
     except Exception:
         return False
@@ -189,14 +191,20 @@ def process_partition_http(iterator):
     )
 
 
+def open_db(path):
+    from rocksdict import AccessType, Options, Rdict
+
+    return Rdict(
+        path,
+        options=Options(raw_mode=True),
+        access_type=AccessType.read_write(),
+    )
+
+
 def make_process_partition_direct(db_path):
     def process_partition_direct(iterator):
-        import rocksdbpy
-
         try:
-            opts = rocksdbpy.Option()
-            opts.create_if_missing(True)
-            db = rocksdbpy.open(db_path, opts)
+            db = open_db(db_path)
         except Exception as e:
             log.error("Failed to open RocksDB in executor: %s", e)
             yield {"counters": {"written": 0, "skip": 0, "not_found": 0, "error": 0}, "failed": []}
@@ -220,7 +228,7 @@ def main():
     parser.add_argument("--host", default="localhost",       help="RocksDB server host (http mode)")
     parser.add_argument("--port", type=int, default=5000,   help="RocksDB server port (http mode)")
     parser.add_argument("--mode", choices=["http", "direct"], default="http",
-                        help="Write mode: 'http' (via REST server) or 'direct' (rocksdbpy)")
+                        help="Write mode: 'http' (via REST server) or 'direct' (rocksdict)")
     parser.add_argument("--db",   default=None,              help="Path to RocksDB directory (direct mode)")
     args = parser.parse_args()
 
@@ -243,10 +251,7 @@ def main():
             sys.exit(1)
     else:
         try:
-            import rocksdbpy
-            opts = rocksdbpy.Option()
-            opts.create_if_missing(True)
-            db = rocksdbpy.open(args.db, opts)
+            db = open_db(args.db)
             log.info("RocksDB opened (validation): %s", args.db)
             db.close()
         except Exception as e:

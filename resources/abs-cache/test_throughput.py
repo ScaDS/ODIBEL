@@ -4,8 +4,6 @@ import random
 import string
 import time
 
-import rocksdbpy
-
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s [%(levelname)s] %(message)s",
@@ -37,11 +35,14 @@ def main():
     parser.add_argument("--val-size", type=int, default=200,   help="Value length in bytes (default: 200)")
     args = parser.parse_args()
 
-    opts = rocksdbpy.Option()
-    opts.create_if_missing(True)
+    from rocksdict import AccessType, Options, Rdict
 
     try:
-        db = rocksdbpy.open(args.db, opts)
+        db = Rdict(
+            args.db,
+            options=Options(raw_mode=True),
+            access_type=AccessType.read_write(),
+        )
         log.info("RocksDB opened: %s", args.db)
     except Exception as e:
         log.error("Failed to open RocksDB: %s", e)
@@ -51,7 +52,7 @@ def main():
     keys = [random_string(args.key_size) for _ in range(args.entries)]
     values = [random_string(args.val_size) for _ in range(args.entries)]
 
-    bench("WRITE", lambda: [db.set(k.encode(), v.encode()) for k, v in zip(keys, values)], args.entries)
+    bench("WRITE", lambda: [db.put(k.encode(), v.encode()) for k, v in zip(keys, values)], args.entries)
 
     shuffled = keys[:]
     random.shuffle(shuffled)

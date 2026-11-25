@@ -122,14 +122,19 @@ def run_http(args, base_url, start):
 
 
 
+def open_db(path):
+    from rocksdict import AccessType, Options, Rdict
+
+    return Rdict(
+        path,
+        options=Options(raw_mode=True),
+        access_type=AccessType.read_write(),
+    )
+
+
 def run_direct(args, start):
-    import rocksdbpy
-
-    opts = rocksdbpy.Option()
-    opts.create_if_missing(True)
-
     try:
-        db = rocksdbpy.open(args.db, opts)
+        db = open_db(args.db)
         log.info("RocksDB opened: %s", args.db)
     except Exception as e:
         log.error("Failed to open RocksDB: %s", e)
@@ -143,7 +148,7 @@ def run_direct(args, start):
 
     for entity, abstract in parse_abstracts(args.file, args.encoding):
         try:
-            db.set(entity.encode(), abstract.encode())
+            db.put(entity.encode(), abstract.encode())
             total_ok[0] += 1
         except Exception as e:
             log.warning("RocksDB set failed key=%s error=%s", entity, e)
@@ -159,7 +164,7 @@ def main():
     parser = argparse.ArgumentParser(description="TTL -> RocksDB importer")
     parser.add_argument("--file",     required=True,               help="Path to TTL file")
     parser.add_argument("--mode",     choices=["http", "direct"],
-                        default="http",                            help="Write mode: http (via REST server) or direct (rocksdbpy) (default: http)")
+                        default="http",                            help="Write mode: http (via REST server) or direct (rocksdict) (default: http)")
     parser.add_argument("--host",     default="localhost",         help="Server host, http mode only (default: localhost)")
     parser.add_argument("--port",     type=int, default=5000,     help="Server port, http mode only (default: 5000)")
     parser.add_argument("--db",       default=None,               help="Path to RocksDB directory, required for direct mode")
