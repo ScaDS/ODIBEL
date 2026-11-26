@@ -105,13 +105,12 @@ Profiling in the library is `operations/sample/distributions.py` (class, propert
 | `text2kgbench/` | supported | KGI-Bench domain sets from a DBpedia NT dump and a Text2KGBench ontology: `generate_refac.py`, `subgraph.py`, `splits.py`, `sources.py`, plus `crawl.py` and `sampling.py`. Operator doc: [KGI-Bench data](kgi_data.md). Tests call `crawl.py`. |
 | `movie-multi-source-kg/` | experimental | Movie KG notes, `generate.py`, `evaluate.py`, `movie.conf`. Reproduction and reference checks are [#11](https://github.com/ScaDS/ODIBEL/issues/11)–[#14](https://github.com/ScaDS/ODIBEL/issues/14). |
 | `dbpedia-multi-source-kg/` | experimental | DBpedia ontology class-to-subdomain classifier (`src/multi_source_kg/`). Own README. LLM mode needs an OpenAI-compatible key. `generate.py` passes `ont_path` (`ONTOLOGY_PATH`, otherwise the old DBpedia snapshot URL). That call was syntax-checked only. This script is the multi-source subgraph generator, not the DBpedia temporal Scala pipeline. |
-| `dbpedia-temporal/` | experimental | Temporal KG model note and Python plot scripts. Generation itself is the Scala pipeline under `src/main/scala/.../wikitext`. `plot_yearlyDiff.py` and `plot_yearly_diff.py` overlap. |
+| `dbpedia-temporal/` | experimental | Temporal KG model note and Python plot scripts. Generation itself is the Scala pipeline under `src/main/scala/.../wikitext`. `python/dbpedia-tkg/plots/plot_snap_overtime.py` is the plot for the `SnapshotEval` `yearlyTripleDiffStats` output, together with the per-snapshot summaries. Input paths are hard-coded. |
 | `kgflex-eval/` | experimental | DBpedia fetch scripts for KGFlex-style film/person/company extracts. README still has open TODOs. |
 | `dexter-kg/generate.py` | experimental | Uses `SourceConfig` and `GradoopSource`. |
 | `examples/dexter_kg_mapping.py` | experimental | Uses the current Gradoop adapter. Hard-coded paths. |
 | `examples/entity_resolution_benchset.py` | experimental | Standalone benchset sketch. Needs the `examples` extra (pandas). |
 | `em-data-eval/abt-buy.py` | experimental | Subclasses `Source`. Pair labels still belong in `EntityResolutionData`. |
-| `product-multi-source-kg/README.md` | deprecated | Empty file. |
 | `wikidata_externalids.py`, `uris.txt`, `predicates.txt` | experimental | Loose helpers and URI lists at the resources root. |
 | `studies/experiments/rdf-part/` | experimental | Partitioning notes and a notebook. Outside the supported layout. |
 
@@ -153,7 +152,6 @@ Docs:
 | `docs/rdf2.md` | Supported `rDF2` guide. |
 | `docs/api.md` | Aligned in this branch. The previous page was an unimplemented design sketch; that sketch is kept at the bottom. |
 | `docs/index.md` | Points here. |
-| `docs/Generate.md` | Stub (two lines). |
 | `resources/README.md` | Index of workflows, added in this branch. |
 
 ## Identifier stability
@@ -192,7 +190,7 @@ Scala `mvn test` was not run. The default `JAVA_HOME` on this machine points at 
 
 ## Follow-ups
 
-Items 1–4 and 6–10 are commits on this branch. The remaining items are still open.
+Items 1–4, 6–10 and 12 are commits on this branch. The remaining items are still open.
 
 1. **Spark session inheritance.** Done here. An explicit master is applied only when no `SparkContext` exists.
 2. **Spark NT directories in `nt_io`.** Done here, with `test_nt_io.py`.
@@ -205,5 +203,5 @@ Items 1–4 and 6–10 are commits on this branch. The remaining items are still
 9. **Add a Python test workflow.** Done in [#18](https://github.com/ScaDS/ODIBEL/issues/18): `tests.yml` with smoke and Spark jobs, `spark` marker registered. Scala `mvn test` stays out of CI. Original item: Run `pytest -m "not network"` on Java 17. Mark Spark tests so a non-Spark smoke path is explicit.
 10. **Stop advertising missing adapters.** Done in [#16](https://github.com/ScaDS/ODIBEL/issues/16): the symbols are removed from `pyodibel/__init__.py` and logging is opt-in via `setup_logging()`. Original item: `WikidataDumpSource`, `LinkedDataSource`, storage, and partition symbols in `pyodibel/__init__.py` do not exist. `setup_logging()` on import writes `pyodibel.log` as a side effect.
 11. **Blank-node IDs.** Track on #5 only.
-12. **Remove or fill empty placeholders.** `resources/product-multi-source-kg/`, `docs/Generate.md`, and the duplicate yearly-diff plot scripts under `resources/dbpedia-temporal`.
+12. **Remove or fill empty placeholders.** Done in [#19](https://github.com/ScaDS/ODIBEL/issues/19): the empty product README, the `docs/Generate.md` stub and both yearly-diff placeholders are removed; generation is documented in `resources/README.md` and [KGI-Bench data](kgi_data.md). Original item: `resources/product-multi-source-kg/`, `docs/Generate.md`, and the duplicate yearly-diff plot scripts under `resources/dbpedia-temporal`.
 13. **Run the dataset generators as their own issue.** End-to-end runs of `resources/movie-multi-source-kg`, `resources/dbpedia-multi-source-kg/generate.py`, and `resources/text2kgbench` need a dump and Spark. MovieKG reproduction is already [#12](https://github.com/ScaDS/ODIBEL/issues/12). No open issue covers the DBpedia multi-source generator or text2kgbench. The DBpedia temporal Scala pipeline is separate and was not part of this check.
