@@ -7,6 +7,7 @@ Scripts in this directory are not part of the installed `pyodibel` package. Run 
 | `text2kgbench/` | supported | DBpedia + Text2KGBench ontology to KGI-Bench bundles. Operator doc: `docs/kgi_data.md`. |
 | `movie-multi-source-kg/` | experimental | Movie KG generator and notes. Reproduction is tracked in GitHub issues #11–#14. |
 | `dbpedia-multi-source-kg/` | experimental | DBpedia ontology class-to-subdomain classifier. See its own README. |
+| `dbpedia-slice/` | experimental | `slice.sh`: small entity-closed N-Triples input from a full DBpedia dump, for end-to-end generator runs. |
 | `dbpedia-temporal/` | experimental | Temporal KG model note and plot scripts. Extraction runs are the Scala jobs under `src/main/scala/`. Yearly triple diffs (`SnapshotEval` `yearlyTripleDiffStats`) are plotted by `python/dbpedia-tkg/plots/plot_snap_overtime.py`; input paths are hard-coded. |
 | `kgflex-eval/` | experimental | DBpedia fetch helpers for film, person, and company extracts. |
 | `dexter-kg/` | experimental | Gradoop-to-RDF script. Imports removed API names (`GradoopDataSource`). |

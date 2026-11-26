@@ -113,5 +113,9 @@ tags
 
 # End of https://www.toptal.com/developers/gitignore/api/vim,scala,java,intellij
 
-data/
+# Dataset payloads stay local; only data/<dataset>/.odibel/ is versioned.
+data/*
+!data/*/
+data/*/*
+!data/*/.odibel/
 site/

@@ -1,0 +1,34 @@
+odibel: '0.1'
+id: text2kgbench-v1-dbo
+title: Text2KGBench DBpedia-WebNLG ontologies linked to the DBpedia ontology
+status: draft
+kind: ontology-turtle
+license: CC-BY-SA-4.0
+created_at: '2026-11-26T17:40:45+00:00'
+derived_from:
+- id: text2kgbench-v1
+  sha256: 9d78510ff38b3eca72b7539ec67d389293bdc3463608d76bbe438a2e94bdc005
+- id: dbpedia-ontology-2022.12.05
+  file: dbo-snapshots.ttl
+  sha256: 8bc79b505a8037f94facfdeb6134a1ddafca59ba5f2707f2703ae779ae004596
+recipe:
+  script: resources/text2kgbench/align_ontologies.py
+  git_commit: 149dd5d8e57c09fee8f5e3a7a204768e2b2818a6
+  git_dirty: true
+  input: release/dbpedia_webnlg/ontologies/*_ontology.json
+  rule: link X to dbo:X when it exists in the DBpedia ontology; split relation names on '/'
+files:
+  ontologies/: <n>_<name>_ontology.ttl per Text2KGBench ontology (19)
+contract:
+  format: turtle
+  classes: https://cenguix.github.io/Text2KGBench/<ont_id>/concepts#<name>, owl:equivalentClass dbo:<name>
+    when linked
+  properties: https://cenguix.github.io/Text2KGBench/<ont_id>/relations#<name>, owl:ObjectProperty, owl:equivalentProperty
+    dbo:<name> when linked
+limitations:
+- 'Name matching only: no manual mapping of WebNLG wordings without a dbo term (for example elevationAboveTheSeaLevel);
+  those stay unlinked, see stats.json.'
+- Reconstruction of the lost kgpipe-ontologies; may differ from the ontologies behind earlier KGI-Bench
+  outputs.
+used_by:
+- resources/text2kgbench/generate_refac.py
