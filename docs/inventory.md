@@ -131,7 +131,7 @@ Merged history that already settled structure: #1 TKG evaluation, #2 and #6 clea
 
 ## Tests, packaging, and docs
 
-Python tests live in `src/pyodibel/test/` (11 modules plus `conftest.py`). `pytest` is an optional extra (`test`), together with `pytest-mock`. The `network` marker exists; Spark tests are unmarked, so a default run starts a JVM.
+Python tests live in `src/pyodibel/test/` (12 modules plus `conftest.py`). `pytest` is an optional extra (`test`), together with `pytest-mock`. Markers are registered in `pytest.ini` with `--strict-markers`: `network` (opt-in) and `spark` (starts a local JVM, needs Java 17). `conftest.py` rejects a test that uses the `spark` fixture without the `spark` marker. Spark fixtures fail instead of skipping when Spark cannot start ([#18](https://github.com/ScaDS/ODIBEL/issues/18)).
 
 Packaging:
 
@@ -141,8 +141,8 @@ Packaging:
 - `pandas` is the `examples` extra, used only by `resources/examples/entity_resolution_benchset.py`.
 - `uv.lock` installs PySpark 4.1.2. `pom.xml` pins Spark 3.5.1 for the Scala jobs. They stay separate runtimes: the Python code starts its own session and does not load the Scala jar. The pin `pyspark>=3.5.7` is unchanged; the non-network suite passes on PySpark 3.5.7 and 4.1.2 with Java 17 (2026-11-26). PySpark 4 needs Java 17 or newer.
 - `pyodibel.test` is excluded from the wheel ([#17](https://github.com/ScaDS/ODIBEL/issues/17)). Tests run from the checkout.
-- CI (`.github/workflows/docs.yml`) builds MkDocs on `main` only. There is no test workflow.
-- Scala tests are not wired into that workflow. The Dockerfile runs `mvn package` on Java 17.
+- CI: `.github/workflows/docs.yml` builds MkDocs on `main`. `.github/workflows/tests.yml` runs on pushes to `main` and on pull requests, with two jobs: a smoke job without Java (`-m "not network and not spark"`) and a Java 17 job (`-m "not network"`). Both use `uv sync --locked --extra test`.
+- Scala `mvn test` is not covered by CI; its coverage is a separate decision. The Dockerfile runs `mvn package` on Java 17.
 
 Docs:
 
@@ -192,7 +192,7 @@ Scala `mvn test` was not run. The default `JAVA_HOME` on this machine points at 
 
 ## Follow-ups
 
-Items 1–4, 6, 7, 8 and 10 are commits on this branch. The remaining items are still open.
+Items 1–4 and 6–10 are commits on this branch. The remaining items are still open.
 
 1. **Spark session inheritance.** Done here. An explicit master is applied only when no `SparkContext` exists.
 2. **Spark NT directories in `nt_io`.** Done here, with `test_nt_io.py`.
@@ -202,7 +202,7 @@ Items 1–4, 6, 7, 8 and 10 are commits on this branch. The remaining items are 
 6. **Quarantine stale callers.** Done here for Dexter (`GradoopSource`), Abt-Buy (`Source`), and `resources/dbpedia-multi-source-kg/generate.py` (`ont_path`). The pandas import in `resources/examples/entity_resolution_benchset.py` is now the `examples` extra ([#17](https://github.com/ScaDS/ODIBEL/issues/17)). Running that DBpedia generator is follow-up 13, not this item.
 7. **Make `systemkg` importable.** Done in [#16](https://github.com/ScaDS/ODIBEL/issues/16): the `kgcore` import is guarded and `require_kgcore()` raises a clear error. Original item: move the `kgcore` import behind an optional extra, or drop the module until the dependency exists.
 8. **Trim unused dependencies and package tests.** Done in [#17](https://github.com/ScaDS/ODIBEL/issues/17): SQLAlchemy removed, tests excluded from the wheel, Spark runtimes kept separate and documented above. Original item: `SQLAlchemy` has no caller. Exclude `pyodibel.test` from the installed distribution. Decide whether the Python lock should stay on PySpark 4.1.2 while the Scala build stays on Spark 3.5.1.
-9. **Add a Python test workflow.** Run `pytest -m "not network"` on Java 17. Mark Spark tests so a non-Spark smoke path is explicit.
+9. **Add a Python test workflow.** Done in [#18](https://github.com/ScaDS/ODIBEL/issues/18): `tests.yml` with smoke and Spark jobs, `spark` marker registered. Scala `mvn test` stays out of CI. Original item: Run `pytest -m "not network"` on Java 17. Mark Spark tests so a non-Spark smoke path is explicit.
 10. **Stop advertising missing adapters.** Done in [#16](https://github.com/ScaDS/ODIBEL/issues/16): the symbols are removed from `pyodibel/__init__.py` and logging is opt-in via `setup_logging()`. Original item: `WikidataDumpSource`, `LinkedDataSource`, storage, and partition symbols in `pyodibel/__init__.py` do not exist. `setup_logging()` on import writes `pyodibel.log` as a side effect.
 11. **Blank-node IDs.** Track on #5 only.
 12. **Remove or fill empty placeholders.** `resources/product-multi-source-kg/`, `docs/Generate.md`, and the duplicate yearly-diff plot scripts under `resources/dbpedia-temporal`.

@@ -59,19 +59,15 @@ class TestDegreeBins:
 
 @pytest.fixture(scope="session")
 def spark():
-    from pyspark.errors.exceptions.base import PySparkRuntimeError
     from pyspark.sql import SparkSession
 
-    try:
-        session = (
-            SparkSession.builder
-            .master("local[1]")
-            .appName("test_sample")
-            .config("spark.ui.enabled", "false")
-            .getOrCreate()
-        )
-    except PySparkRuntimeError as exc:
-        pytest.skip(f"Spark unavailable: {exc}")
+    session = (
+        SparkSession.builder
+        .master("local[1]")
+        .appName("test_sample")
+        .config("spark.ui.enabled", "false")
+        .getOrCreate()
+    )
 
     session.sparkContext.setLogLevel("ERROR")
     yield session
@@ -97,6 +93,7 @@ FOOD = "<http://example.org/Food>"
 COUNTRY = "<http://example.org/country>"
 
 
+@pytest.mark.spark
 class TestRepresentativeSubgraph:
     def test_keeps_all_triples_for_selected_entities(self, spark):
         rows = [

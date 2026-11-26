@@ -141,19 +141,15 @@ class TestNtIo:
 
 @pytest.fixture(scope="session")
 def spark():
-    from pyspark.errors.exceptions.base import PySparkRuntimeError
     from pyspark.sql import SparkSession
 
-    try:
-        session = (
-            SparkSession.builder
-            .master("local[1]")
-            .appName("test_reachable_subgraph")
-            .config("spark.ui.enabled", "false")
-            .getOrCreate()
-        )
-    except PySparkRuntimeError as exc:
-        pytest.skip(f"Spark unavailable: {exc}")
+    session = (
+        SparkSession.builder
+        .master("local[1]")
+        .appName("test_reachable_subgraph")
+        .config("spark.ui.enabled", "false")
+        .getOrCreate()
+    )
 
     session.sparkContext.setLogLevel("ERROR")
     yield session
@@ -172,6 +168,7 @@ def make_rdf2(spark, rows):
     return rDF2(spark.createDataFrame(rows, schema=schema))
 
 
+@pytest.mark.spark
 class TestFilterReachableFromClasses:
     def test_expands_along_object_edges(self, spark):
         rows = [
@@ -213,6 +210,7 @@ class TestFilterReachableFromClasses:
         assert entities == {"<food1>", "<city1>"}
 
 
+@pytest.mark.spark
 class TestFilterReachableFromEntities:
     def test_expands_only_from_given_seeds(self, spark):
         rows = [
@@ -250,6 +248,7 @@ class TestFilterReachableFromEntities:
         assert "<food3>" not in entities
 
 
+@pytest.mark.spark
 class TestFilterSubgraphByEntityClasses:
     def test_does_not_expand_to_other_classes(self, spark):
         rows = [

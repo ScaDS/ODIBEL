@@ -14,7 +14,14 @@ Python `>=3.10,<3.13`. Spark commands need Java 17 (the Dockerfile and `pom.xml`
 uv sync --extra test
 ```
 
-Optional extras: `test` (pytest), `docs` (MkDocs), `examples` (pandas, for `resources/examples/entity_resolution_benchset.py`). Tests are not part of the installed package; run them from a checkout with `uv run pytest src/pyodibel/test`.
+Optional extras: `test` (pytest), `docs` (MkDocs), `examples` (pandas, for `resources/examples/entity_resolution_benchset.py`). Tests are not part of the installed package; run them from a checkout:
+
+```bash
+uv run pytest src/pyodibel/test -m "not network and not spark"  # smoke, no Java needed
+uv run pytest src/pyodibel/test -m "not network"                # includes Spark, needs Java 17
+```
+
+Network tests (`-m network`) are opt-in. CI runs both commands in `.github/workflows/tests.yml` on pushes to `main` and on pull requests. Scala `mvn test` is not covered by CI.
 
 The console script is `pyodibel`. The Scala jobs are a separate Maven build: `mvn package` produces the jar used by the Dockerfile (`ai.scads.odibel.main.Main`).
 

@@ -6,6 +6,8 @@ from pyspark.sql import SparkSession
 import pyspark.sql.functions as F
 from pyspark.sql.types import StructType, StructField, StringType
 
+pytestmark = pytest.mark.spark
+
 MINI_ONTOLOGY = b"""
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix ex:   <http://example.org/> .

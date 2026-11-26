@@ -12,6 +12,10 @@ import sys
 import textwrap
 from pathlib import Path
 
+import pytest
+
+pytestmark = pytest.mark.spark
+
 ROOT = Path(__file__).resolve().parents[3]
 
 
