@@ -3,6 +3,10 @@ PyODIBEL: Open Data Integration Benchmark Evaluation Lab
 
 A library for generating and evaluating benchmark datasets for data integration tasks
 across different domains, built from Linked Open Data (LOD) sources and large public dumps.
+
+The top-level package re-exports the experimental ``pyodibel.api`` interfaces only.
+Import everything else from its own module (see docs/api.md). Importing the package
+has no side effects: it does not configure logging or write files.
 """
 
 import logging
@@ -28,36 +32,6 @@ from pyodibel.api import (
     EvaluationResult,
 )
 
-# Optional imports for modules that may not exist yet
-try:
-    from pyodibel.api.storage import StorageBackend, StorageConfig
-except ImportError:
-    StorageBackend = None
-    StorageConfig = None
-
-try:
-    from pyodibel.api.partition import PartitionStrategy, PartitionConfig
-except ImportError:
-    PartitionStrategy = None
-    PartitionConfig = None
-
-# Initialize backend registry (registers default backends and format handlers)
-try:
-    from pyodibel.api.backend import get_backend_registry, backend_registry
-except ImportError:
-    pass  # Backend registry will be initialized when needed
-
-# Data sources
-try:
-    from pyodibel.source.wikidata.dump import WikidataDumpSource
-except ImportError:
-    WikidataDumpSource = None
-
-try:
-    from pyodibel.source.linked_data.source import LinkedDataSource
-except ImportError:
-    LinkedDataSource = None
-
 __version__ = "0.1.0"
 
 __all__ = [
@@ -79,21 +53,18 @@ __all__ = [
     "Evaluator",
     "EvaluationConfig",
     "EvaluationResult",
-    # Optional interfaces
-    "StorageBackend",
-    "StorageConfig",
-    "PartitionStrategy",
-    "PartitionConfig",
-    # Data sources
-    "WikidataDumpSource",
-    "LinkedDataSource",
+    # Logging (opt-in)
+    "setup_logging",
 ]
 
 
 def setup_logging(log_file='pyodibel.log', level=logging.INFO):
     """
-    Setup logging configuration for PyODIBEL.
-    
+    Opt in to file logging for PyODIBEL.
+
+    Importing ``pyodibel`` does not call this and never creates a log file.
+    Call it explicitly from an application or script that wants one.
+
     Args:
         log_file: Path to log file
         level: Logging level
@@ -113,6 +84,3 @@ def setup_logging(log_file='pyodibel.log', level=logging.INFO):
 
         # Add the handler to the root logger
         root_logger.addHandler(file_handler)
-
-# Call this once at the start of your application
-setup_logging()

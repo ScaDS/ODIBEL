@@ -1,6 +1,6 @@
 # PyODIBEL API
 
-The supported calls are the ones below. Everything else in the package is experimental: it may be a stub, an untested task package, or a name that imports as `None`. The full module table is the [inventory](inventory.md).
+The supported calls are the ones below. Everything else in the package is experimental: it may be a stub, an untested task package or an adapter that does not exist yet. The full module table is the [inventory](inventory.md).
 
 ## Supported
 

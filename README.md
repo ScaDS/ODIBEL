@@ -46,8 +46,9 @@ These exist in the tree and are not a stable API:
 - `pyodibel.api` interfaces (`Entity`, `Source`, `Operation`, `Benchmark`, `Evaluator`) and the schema-matching and entity-fusion packages
 - `GradoopSource` for FAMER/Gradoop exports
 - Spark operation stubs that raise `NotImplementedError`
-- `pyodibel.management.systemkg` (imports `kgcore`, which is not a dependency)
-- Names re-exported as `None` from `pyodibel/__init__.py`: `WikidataDumpSource`, `LinkedDataSource`, `StorageBackend`, `PartitionStrategy`
+- `pyodibel.management.systemkg` (imports without `kgcore`; `require_kgcore()` raises a clear `ImportError` until the external package is installed)
+- Not implemented and no longer exported from `pyodibel`: `WikidataDumpSource`, `LinkedDataSource`, `StorageBackend`, `PartitionStrategy`
+- `import pyodibel` does not configure logging or write `pyodibel.log`; call `pyodibel.setup_logging()` to opt in
 - Dataset scripts under `resources/` other than the text2kgbench path above, including MovieKG (tracked in issues #11–#14)
 - The Scala DBpedia temporal KG pipeline under `src/main/scala/`
 
