@@ -118,4 +118,6 @@ data/*
 !data/*/
 data/*/*
 !data/*/.odibel/
+data/*/.odibel/cache/
 site/
+build/

@@ -97,8 +97,9 @@ def payload_files(root: str | Path) -> list[str]:
     return sorted(found)
 
 
-def read_checksums(root: str | Path) -> dict[str, str]:
-    path = Path(root) / META_DIR / CHECKSUM_FILE
+def read_checksums(root: str | Path, path: str | Path | None = None) -> dict[str, str]:
+    """Parse ``files.sha256`` of ``root``, or another file list in the same format."""
+    path = Path(path) if path is not None else Path(root) / META_DIR / CHECKSUM_FILE
     checksums: dict[str, str] = {}
     for line in path.read_text(encoding="utf-8").splitlines():
         if not line.strip():
@@ -113,13 +114,17 @@ def dataset_digest(root: str | Path) -> str:
     return sha256_file(Path(root) / META_DIR / CHECKSUM_FILE)
 
 
+def write_checksum_file(path: str | Path, checksums: dict[str, str]) -> None:
+    path = Path(path)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    lines = [f"{checksums[name]}  {name}\n" for name in sorted(checksums)]
+    path.write_text("".join(lines), encoding="utf-8")
+
+
 def write_checksums(root: str | Path) -> dict[str, str]:
     root = Path(root)
     checksums = {name: sha256_file(root / name) for name in payload_files(root)}
-    meta = root / META_DIR
-    meta.mkdir(exist_ok=True)
-    lines = [f"{digest}  {name}\n" for name, digest in checksums.items()]
-    (meta / CHECKSUM_FILE).write_text("".join(lines), encoding="utf-8")
+    write_checksum_file(root / META_DIR / CHECKSUM_FILE, checksums)
     return checksums
 
 

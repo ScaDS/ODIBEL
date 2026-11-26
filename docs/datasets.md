@@ -27,6 +27,9 @@ data/
 | `dataset.yaml` | Identity, source or lineage, recipe, contract, limitations |
 | `files.sha256` | `sha256sum` output for every payload file, paths relative to the dataset directory |
 | `stats.json` | Optional measured statistics (counts, top predicates and types, languages) |
+| `versions.yaml` | Optional version history and labels, written by `pyodibel data commit` |
+| `versions/<n>.sha256` | File list of version `n`, same format as `files.sha256` |
+| `cache/stat.json` | Local stat cache for `pyodibel data status`; not versioned |
 
 ## `dataset.yaml`
 
@@ -53,6 +56,34 @@ uv run pyodibel data verify --metadata-only data/*/       # without the payloads
 ```
 
 `files.sha256` also works with `sha256sum -c` from inside the dataset directory.
+
+## Versions
+
+```bash
+uv run pyodibel data status data/<dataset_id> ...         # added, removed, modified files
+uv run pyodibel data commit data/<dataset_id> -m "..." [--label stable]
+uv run pyodibel data log data/<dataset_id>
+```
+
+`status` compares the payload against the latest version, or against `files.sha256` if there is no version yet. It re-hashes only files whose size, modification time or inode differ from `.odibel/cache/stat.json`, and files modified within two seconds before the cache was written. `--checksum` re-hashes every file; `verify` always does.
+
+`commit` writes `versions/<n>.sha256`, updates `files.sha256` and appends an entry to `versions.yaml`:
+
+```yaml
+labels:
+  stable: 1
+versions:
+- version: 2
+  parent: 1
+  created: '2026-11-26T19:41:28+01:00'
+  message: test edit
+  sha256: 2ace9f79...   # sha256 of versions/2.sha256
+  files: 9
+  bytes: 8569797
+  changes: {added: 0, removed: 1, modified: 1}
+```
+
+The first commit creates version 1. Labels point at a version and can be moved by a later `commit --label`; `latest` is reserved for the newest version. Versions cover the payload only; changes to `dataset.yaml` or `stats.json` are tracked by Git. Payloads of older versions are not stored yet; only their file lists are.
 
 ## Minidumps
 
