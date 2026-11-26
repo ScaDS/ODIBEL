@@ -109,7 +109,7 @@ Profiling in the library is `operations/sample/distributions.py` (class, propert
 | `kgflex-eval/` | experimental | DBpedia fetch scripts for KGFlex-style film/person/company extracts. README still has open TODOs. |
 | `dexter-kg/generate.py` | experimental | Uses `SourceConfig` and `GradoopSource`. |
 | `examples/dexter_kg_mapping.py` | experimental | Uses the current Gradoop adapter. Hard-coded paths. |
-| `examples/entity_resolution_benchset.py` | experimental | Standalone benchset sketch. Imports `pandas`, which is not a project dependency. |
+| `examples/entity_resolution_benchset.py` | experimental | Standalone benchset sketch. Needs the `examples` extra (pandas). |
 | `em-data-eval/abt-buy.py` | experimental | Subclasses `Source`. Pair labels still belong in `EntityResolutionData`. |
 | `product-multi-source-kg/README.md` | deprecated | Empty file. |
 | `wikidata_externalids.py`, `uris.txt`, `predicates.txt` | experimental | Loose helpers and URI lists at the resources root. |
@@ -137,9 +137,10 @@ Packaging:
 
 - `requires-python` is `>=3.10,<3.13`. Console script: `pyodibel = pyodibel.cli.main:cli`.
 - Runtime dependencies that the tree imports: `pydantic`, `requests`, `rdflib`, `click`, `tqdm`, `pyspark`, `networkx`, `pyyaml`, `rocksdict`. `python-dotenv` is imported by the generators under `resources/`.
-- Declared and unused in the tree: `SQLAlchemy`.
-- `uv.lock` installs PySpark 4.1.2. `pom.xml` pins Spark 3.5.1 for the Scala jobs. The two runtimes are not the same Spark line.
-- `setuptools` package discovery installs `pyodibel.test` with the library.
+- `SQLAlchemy` was declared and unused; removed in [#17](https://github.com/ScaDS/ODIBEL/issues/17).
+- `pandas` is the `examples` extra, used only by `resources/examples/entity_resolution_benchset.py`.
+- `uv.lock` installs PySpark 4.1.2. `pom.xml` pins Spark 3.5.1 for the Scala jobs. They stay separate runtimes: the Python code starts its own session and does not load the Scala jar. The pin `pyspark>=3.5.7` is unchanged; the non-network suite passes on PySpark 3.5.7 and 4.1.2 with Java 17 (2026-11-26). PySpark 4 needs Java 17 or newer.
+- `pyodibel.test` is excluded from the wheel ([#17](https://github.com/ScaDS/ODIBEL/issues/17)). Tests run from the checkout.
 - CI (`.github/workflows/docs.yml`) builds MkDocs on `main` only. There is no test workflow.
 - Scala tests are not wired into that workflow. The Dockerfile runs `mvn package` on Java 17.
 
@@ -191,16 +192,16 @@ Scala `mvn test` was not run. The default `JAVA_HOME` on this machine points at 
 
 ## Follow-ups
 
-Items 1–4 and the caller updates in 6 are commits on this branch. The remaining items are still open.
+Items 1–4, 6, 7, 8 and 10 are commits on this branch. The remaining items are still open.
 
 1. **Spark session inheritance.** Done here. An explicit master is applied only when no `SparkContext` exists.
 2. **Spark NT directories in `nt_io`.** Done here, with `test_nt_io.py`.
 3. **Wikipedia abstract cache.** Done here under `resources/abs-cache`. Direct mode uses `rocksdict`. The README says Python `>=3.10,<3.13`.
 4. **KG corruption package.** Done here under `resources/kg-corruption`, outside the `pyodibel` import surface. Includes the example graph.
 5. **Leave KGI provenance on `kgi-bench-dbp-subonto`.** The gap checklist on that branch is the working list for multi-domain generation. MovieKG inputs, reproduction, reference audit, and entailment checks stay on #11–#14.
-6. **Quarantine stale callers.** Done here for Dexter (`GradoopSource`), Abt-Buy (`Source`), and `resources/dbpedia-multi-source-kg/generate.py` (`ont_path`). Still open: the pandas import in `resources/examples/entity_resolution_benchset.py`. Running that DBpedia generator is follow-up 13, not this item.
+6. **Quarantine stale callers.** Done here for Dexter (`GradoopSource`), Abt-Buy (`Source`), and `resources/dbpedia-multi-source-kg/generate.py` (`ont_path`). The pandas import in `resources/examples/entity_resolution_benchset.py` is now the `examples` extra ([#17](https://github.com/ScaDS/ODIBEL/issues/17)). Running that DBpedia generator is follow-up 13, not this item.
 7. **Make `systemkg` importable.** Done in [#16](https://github.com/ScaDS/ODIBEL/issues/16): the `kgcore` import is guarded and `require_kgcore()` raises a clear error. Original item: move the `kgcore` import behind an optional extra, or drop the module until the dependency exists.
-8. **Trim unused dependencies and package tests.** `SQLAlchemy` has no caller. Exclude `pyodibel.test` from the installed distribution. Decide whether the Python lock should stay on PySpark 4.1.2 while the Scala build stays on Spark 3.5.1.
+8. **Trim unused dependencies and package tests.** Done in [#17](https://github.com/ScaDS/ODIBEL/issues/17): SQLAlchemy removed, tests excluded from the wheel, Spark runtimes kept separate and documented above. Original item: `SQLAlchemy` has no caller. Exclude `pyodibel.test` from the installed distribution. Decide whether the Python lock should stay on PySpark 4.1.2 while the Scala build stays on Spark 3.5.1.
 9. **Add a Python test workflow.** Run `pytest -m "not network"` on Java 17. Mark Spark tests so a non-Spark smoke path is explicit.
 10. **Stop advertising missing adapters.** Done in [#16](https://github.com/ScaDS/ODIBEL/issues/16): the symbols are removed from `pyodibel/__init__.py` and logging is opt-in via `setup_logging()`. Original item: `WikidataDumpSource`, `LinkedDataSource`, storage, and partition symbols in `pyodibel/__init__.py` do not exist. `setup_logging()` on import writes `pyodibel.log` as a side effect.
 11. **Blank-node IDs.** Track on #5 only.

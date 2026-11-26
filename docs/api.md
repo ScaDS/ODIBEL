@@ -92,7 +92,7 @@ Older scripts that import `DataSourceConfig` or `GradoopDataSource` do not match
 
 ## Unimplemented design sketch
 
-The notes below were the previous contents of this page. They are not implemented. There is no `CoverageSampling` type, no `sp-construct`, and no `sparql_store` / `urihash_store` / `object_store` / `postgres_store` backend. `SQLAlchemy` is declared in `pyproject.toml` and unused.
+The notes below were the previous contents of this page. They are not implemented. There is no `CoverageSampling` type, no `sp-construct`, and no `sparql_store` / `urihash_store` / `object_store` / `postgres_store` backend. `SQLAlchemy` was declared and unused and has been removed.
 
 ```text
 sample

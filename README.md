@@ -14,7 +14,11 @@ Python `>=3.10,<3.13`. Spark commands need Java 17 (the Dockerfile and `pom.xml`
 uv sync --extra test
 ```
 
+Optional extras: `test` (pytest), `docs` (MkDocs), `examples` (pandas, for `resources/examples/entity_resolution_benchset.py`). Tests are not part of the installed package; run them from a checkout with `uv run pytest src/pyodibel/test`.
+
 The console script is `pyodibel`. The Scala jobs are a separate Maven build: `mvn package` produces the jar used by the Dockerfile (`ai.scads.odibel.main.Main`).
+
+The Python library and the Scala jobs are separate Spark runtimes and do not share a jar or a session. `uv.lock` resolves PySpark 4.1.2; `pyproject.toml` allows `pyspark>=3.5.7`, and the Python tests pass on both 3.5.7 and 4.1.2 with Java 17. `pom.xml` builds the Scala jobs against Spark 3.5.1 (Scala 2.13, Java 17). If you connect PySpark to an existing Spark 3.5 cluster, install a matching `pyspark==3.5.*`.
 
 ## Supported entry points
 

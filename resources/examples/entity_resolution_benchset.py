@@ -1,3 +1,4 @@
+"""Entity-resolution benchset sketch. Needs pandas: ``uv sync --extra examples``."""
 from typing import Literal, List, Tuple, Any, Dict
 from dataclasses import dataclass, field
 from pathlib import Path

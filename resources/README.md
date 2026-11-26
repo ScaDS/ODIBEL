@@ -10,7 +10,7 @@ Scripts in this directory are not part of the installed `pyodibel` package. Run 
 | `dbpedia-temporal/` | experimental | Temporal KG model note and plot scripts. Extraction runs are the Scala jobs under `src/main/scala/`. |
 | `kgflex-eval/` | experimental | DBpedia fetch helpers for film, person, and company extracts. |
 | `dexter-kg/` | experimental | Gradoop-to-RDF script. Imports removed API names (`GradoopDataSource`). |
-| `examples/` | experimental | `dexter_kg_mapping.py` uses the current `GradoopSource`. `entity_resolution_benchset.py` depends on pandas, which is not installed with the project. |
+| `examples/` | experimental | `dexter_kg_mapping.py` uses the current `GradoopSource`. `entity_resolution_benchset.py` needs pandas: `uv sync --extra examples`. |
 | `em-data-eval/` | experimental | Abt-Buy sketch. Imports classes that are not in the library. |
 | `product-multi-source-kg/` | deprecated | Empty README only. |
 
