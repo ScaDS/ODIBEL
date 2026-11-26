@@ -1,0 +1,30 @@
+odibel: "0.1"
+id: "dbpedia-2022.12.01-selected"
+title: "DBpedia 2022.12.01 merged selection (selected.nt.bz2)"
+status: draft
+kind: rdf-ntriples
+license: "CC-BY-SA-3.0"
+created_at: "2026-03-21"
+source:
+  name: DBpedia
+  release: "2022.12.01 (inferred, see limitations)"
+  url: https://databus.dbpedia.org/dbpedia
+  local_origin: /data/datasets/dbpedia/dbpedia_20221201
+files:
+  selected.nt.bz2: merged N-Triples dump; input of text2kgbench and dbpedia-multi-source-kg
+  some_types.nt: first 10,000 rdf:type triples of the same kind of data
+contract:
+  format: n-triples
+  compression: bzip2
+  subjects: http://dbpedia.org/resource/
+  predicates: dbo (http://dbpedia.org/ontology/), rdf:type, rdfs:label
+  type_triples: transitive (superclasses, owl:Thing, schema.org, DUL and Wikidata classes included)
+  literal_languages: multilingual (rdfs:label, dbo:description)
+  layout: dbo property and description triples grouped by subject, then rdf:type triples (from line 453,982,030), then labels
+limitations:
+  - "Build recipe unknown: which DBpedia Databus files were merged is not recorded. Release 2022.12.01 is inferred from the directory name and docs/rdf2.md."
+  - "No dbp: infobox properties, abstracts, page links or owl:sameAs."
+used_by:
+  - resources/text2kgbench/generate_refac.py
+  - resources/dbpedia-multi-source-kg/generate.py
+  - resources/dbpedia-slice/slice.sh

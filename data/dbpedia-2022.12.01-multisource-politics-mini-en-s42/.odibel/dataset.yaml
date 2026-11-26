@@ -1,0 +1,54 @@
+odibel: "0.1"
+id: "dbpedia-2022.12.01-multisource-politics-mini-en-s42"
+title: "DBpedia multi-source generator, politics domain, on the English minidump (issue #20 validation run)"
+status: draft
+kind: run-output
+license: "CC-BY-SA-3.0"
+created_at: "2026-11-26T18:16:00Z"
+derived_from:
+  - id: "dbpedia-2022.12.01-mini-food-celestial-politics-en-s42"
+    file: "data.nt.bz2"
+    sha256: "ddf6c18e096ee0a64d4e50621709c82a1d9931cfcccec5491bf7adf8db9a9bfb"
+  - id: "dbpedia-ontology-2022.12.05"
+    file: "dbo-snapshots.ttl"
+    sha256: "8bc79b505a8037f94facfdeb6134a1ddafca59ba5f2707f2703ae779ae004596"
+recipe:
+  script: resources/dbpedia-multi-source-kg/generate_politics.py
+  git_commit: "6f549a9"
+  git_dirty: false
+  command: >-
+    cd resources/dbpedia-multi-source-kg &&
+    INPUT_PATH=data/dbpedia-2022.12.01-mini-food-celestial-politics-en-s42/data.nt.bz2
+    OUTPUT_PATH=data/dbpedia-2022.12.01-multisource-politics-mini-en-s42
+    ONTOLOGY_PATH=data/dbpedia-ontology-2022.12.05/dbo-snapshots.ttl
+    uv run python generate_politics.py
+  started_at: "2026-11-26T18:15:43Z"
+  finished_at: "2026-11-26T18:16:00Z"
+  environment:
+    python: "CPython 3.12.11 (uv)"
+    pyspark: "4.1.2"
+    java: "OpenJDK 17.0.15 (Temurin)"
+    spark_master: "local[*]"
+  validation: >-
+    uv run resources/dbpedia-multi-source-kg/validate_run.py <this dir> <input data.nt.bz2>
+    <dbo-snapshots.ttl> resources/dbpedia-multi-source-kg/generate_politics.py > .odibel/stats.json
+files:
+  dbpedia_politics_subgraph/: all literals
+  dbpedia_politics_en_subgraph/: only @en and untagged literals (identical here, the input is English-only)
+  "*/selected.nt.bz2": triples whose subject has one of the 12 politics classes
+  "*/distinct.nt.bz2": duplicates removed
+  "*/consistent.nt.bz2": rdfs:domain / rdfs:range violations removed
+  "*/cleaned_types.nt.bz2": rdf:type restricted to the politics classes
+  "*/cleaned_subgraph.nt.bz2": IRI objects that are not subjects removed (final graph)
+  "*/schema_graph_*.csv": schema graphs (all, final, final top 100)
+contract:
+  format: Spark text part directories with N-Triples lines; the *.nt.bz2 names are not bzip2 files
+  identity: >-
+    Part-file names are random per run, so files.sha256 changes on rerun; content_sha256 in
+    stats.json (sorted triples per step) is stable and matched a second run.
+limitations:
+  - "clean_domain_range_violations removes valid triples: 4,713 of 5,186 removals are false positives. See report.md."
+  - "owl:disjointWith and owl:FunctionalProperty are not checked by the pipeline."
+  - "The English-only input makes the _en variant identical to the unfiltered one; the language filter is not exercised."
+used_by:
+  - "issue #20 (https://github.com/ScaDS/ODIBEL/issues/20)"

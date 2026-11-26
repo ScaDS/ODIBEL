@@ -1,0 +1,37 @@
+odibel: "0.1"
+id: "dbpedia-2022.12.01-mini-food-celestial-politics-en-s42"
+title: "DBpedia slice of dbpedia-2022.12.01-selected (500:dbo:Food 500:dbo:CelestialBody 500:dbo:Election,dbo:GovernmentAgency,dbo:GovernmentCabinet,dbo:GovernmentType,dbo:Ideology,dbo:LegalCase,dbo:SupremeCourtOfTheUnitedStatesCase,dbo:Legislature,dbo:PoliticalConcept,dbo:PoliticalParty,dbo:SystemOfLaw,dbo:Treaty)"
+status: draft
+kind: rdf-ntriples
+license: "CC-BY-SA-3.0"
+created_at: "2026-11-26T17:55:24Z"
+derived_from:
+  - id: "dbpedia-2022.12.01-selected"
+    file: "selected.nt.bz2"
+    sha256: "113deaa33deab98c28377b250047dec5ef7519a7dfa208445b11bd0ff42e8f72"
+recipe:
+  script: resources/dbpedia-slice/slice.sh
+  git_commit: "149dd5d8e57c09fee8f5e3a7a204768e2b2818a6"
+  git_dirty: true
+  seed: "42"
+  hops: 1
+  literal_language: "en"
+  groups:
+    - "500:dbo:Food"
+    - "500:dbo:CelestialBody"
+    - "500:dbo:Election,dbo:GovernmentAgency,dbo:GovernmentCabinet,dbo:GovernmentType,dbo:Ideology,dbo:LegalCase,dbo:SupremeCourtOfTheUnitedStatesCase,dbo:Legislature,dbo:PoliticalConcept,dbo:PoliticalParty,dbo:SystemOfLaw,dbo:Treaty"
+  started_at: "2026-11-26T17:45:52Z"
+  tools:
+    - "mawk 1.3.4 20240123"
+    - "shuf (GNU coreutils) 9.4"
+    - "OpenSSL 3.0.13 30 Jan 2024 (Library: OpenSSL 3.0.13 30 Jan 2024)"
+files:
+  data.nt.bz2: sorted, distinct N-Triples
+  entities.txt: final entity set
+  seeds/: sampled seeds per group (group_N.txt), union (seeds.txt), candidates per group
+contract:
+  format: n-triples
+  compression: bzip2
+  closure: every triple whose subject is in entities.txt is present (as in the parent), except literals tagged with a language other than en
+  type_triples: as in the parent
+  literal_languages: "en and untagged"

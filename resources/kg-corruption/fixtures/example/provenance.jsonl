@@ -1,0 +1,13 @@
+{"s": "<http://example.org/kg/ada>", "p": "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>", "o": "<http://example.org/kg/Person>", "source_id": "movie1.txt"}
+{"s": "<http://example.org/kg/bea>", "p": "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>", "o": "<http://example.org/kg/Person>", "source_id": "movie1.txt"}
+{"s": "<http://example.org/kg/cy>", "p": "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>", "o": "<http://example.org/kg/Person>", "source_id": "movie2.txt"}
+{"s": "<http://example.org/kg/one>", "p": "<http://example.org/kg/director>", "o": "<http://example.org/kg/ada>", "source_id": "movie1.txt"}
+{"s": "<http://example.org/kg/one>", "p": "<http://example.org/kg/starring>", "o": "<http://example.org/kg/bea>", "source_id": "movie1.txt"}
+{"s": "<http://example.org/kg/one>", "p": "<http://example.org/kg/starring>", "o": "<http://example.org/kg/cy>", "source_id": "movie1.txt"}
+{"s": "<http://example.org/kg/one>", "p": "<http://example.org/kg/title>", "o": "\"Movie 1\"", "source_id": "movie1.txt"}
+{"s": "<http://example.org/kg/one>", "p": "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>", "o": "<http://example.org/kg/Film>", "source_id": "movie1.txt"}
+{"s": "<http://example.org/kg/two>", "p": "<http://example.org/kg/director>", "o": "<http://example.org/kg/cy>", "source_id": "movie2.txt"}
+{"s": "<http://example.org/kg/two>", "p": "<http://example.org/kg/sequel>", "o": "<http://example.org/kg/one>", "source_id": "movie2.txt"}
+{"s": "<http://example.org/kg/two>", "p": "<http://example.org/kg/starring>", "o": "<http://example.org/kg/ada>", "source_id": "movie2.txt"}
+{"s": "<http://example.org/kg/two>", "p": "<http://example.org/kg/title>", "o": "\"Movie 2\"", "source_id": "movie2.txt"}
+{"s": "<http://example.org/kg/two>", "p": "<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>", "o": "<http://example.org/kg/Film>", "source_id": "movie2.txt"}

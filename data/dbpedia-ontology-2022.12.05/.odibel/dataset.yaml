@@ -1,0 +1,27 @@
+odibel: "0.1"
+id: "dbpedia-ontology-2022.12.05"
+title: "DBpedia ontology snapshot 2022.12.05 (dbo-snapshots.ttl)"
+status: draft
+kind: ontology-turtle
+license: "CC-BY-SA-3.0"
+created_at: "2022-12-05T18:38:58Z"
+source:
+  name: DBpedia ontology tracker
+  url: https://raw.githubusercontent.com/dbpedia/ontology-tracker/d3393052e6d977d3526273fbaa118d6456ec8545/databus/dbpedia/ontology/dbo-snapshots/dbo-snapshots.ttl
+  repository: https://github.com/dbpedia/ontology-tracker
+  commit: d3393052e6d977d3526273fbaa118d6456ec8545
+files:
+  dbo-snapshots.ttl: DBpedia ontology (classes, properties, rdfs:domain, rdfs:range, rdfs:subClassOf)
+contract:
+  format: turtle
+  namespace: http://dbpedia.org/ontology/
+selection: >-
+  First snapshot after the DBpedia 2022.12.01 release; the file was unchanged from
+  2020-12-01 to 2022-12-05. Against dbpedia-2022.12.01-selected it misses 5 of 573
+  dbo types and 1 of 1366 dbo predicates (2020-12-01 snapshot: 19 types, 1 predicate;
+  2026-07-22 snapshot: 5 types, 0 predicates).
+limitations:
+  - "Contains 781 spurious owl:Class entries with Urdu local names (1571 dbo classes vs 790 in later snapshots). They match no dump types."
+used_by:
+  - resources/dbpedia-multi-source-kg/generate.py (ONTOLOGY_PATH, clean_domain_range_violations)
+  - resources/text2kgbench/align_ontologies.py

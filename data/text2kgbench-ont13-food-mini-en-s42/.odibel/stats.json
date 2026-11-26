@@ -1,0 +1,137 @@
+{
+  "input_triples": 99358,
+  "ontology": {
+    "classes": 8,
+    "properties": 22
+  },
+  "main_class": "<http://dbpedia.org/ontology/Food>",
+  "property_filter": {
+    "triples": 8545,
+    "matches_recount": true,
+    "predicates_outside_ontology": []
+  },
+  "reachable": {
+    "triples": 5013,
+    "entities": 1096,
+    "matches_recount": true
+  },
+  "splits": {
+    "master_matches_main_class": true,
+    "master_entities": 789,
+    "splits": {
+      "split_0": {
+        "seeds": 100,
+        "seeds_are_main_class": true,
+        "reference_triples": 1389,
+        "reference_entities": 276,
+        "reference_main_class_entities": 130,
+        "reference_matches_reachability": true,
+        "data_agg_is_union_so_far": true,
+        "reference_content_sha256": "dea902505cbc2b6cdb35f098f010a7fb9657f570cc6c43277b3bd64c641a9c34"
+      },
+      "split_1": {
+        "seeds": 100,
+        "seeds_are_main_class": true,
+        "reference_triples": 1418,
+        "reference_entities": 285,
+        "reference_main_class_entities": 140,
+        "reference_matches_reachability": true,
+        "data_agg_is_union_so_far": true,
+        "reference_content_sha256": "69bcd6c4378e7c4e9fd51d07ab2a7d1efb1db413e50cbaac41ec1e21603bbfbc"
+      },
+      "split_2": {
+        "seeds": 100,
+        "seeds_are_main_class": true,
+        "reference_triples": 1387,
+        "reference_entities": 265,
+        "reference_main_class_entities": 131,
+        "reference_matches_reachability": true,
+        "data_agg_is_union_so_far": true,
+        "reference_content_sha256": "7ca17a809d5978740dff65ca4926353426f80335c9b85247d18f7324df8631d0"
+      },
+      "split_3": {
+        "seeds": 100,
+        "seeds_are_main_class": true,
+        "reference_triples": 1273,
+        "reference_entities": 255,
+        "reference_main_class_entities": 128,
+        "reference_matches_reachability": true,
+        "data_agg_is_union_so_far": true,
+        "reference_content_sha256": "7e23f1c7cf91c504c519f2f114645ef6c2f321200d739145b14e0039f6db6394"
+      }
+    },
+    "seed_overlap": {
+      "0-1": 4,
+      "0-2": 4,
+      "0-3": 4,
+      "1-2": 4,
+      "1-3": 4,
+      "2-3": 4
+    },
+    "seed_overlap_as_configured": true,
+    "reference_overlap_entities": {
+      "0-1": 0.4348,
+      "0-2": 0.4792,
+      "0-3": 0.451,
+      "1-2": 0.4981,
+      "1-3": 0.4706,
+      "2-3": 0.451
+    },
+    "reference_overlap_main_class": {
+      "0-1": 0.1692,
+      "0-2": 0.1846,
+      "0-3": 0.1484,
+      "1-2": 0.2214,
+      "1-3": 0.1797,
+      "2-3": 0.1719
+    }
+  },
+  "sources": {
+    "split_0": {
+      "seed_triples": 1760,
+      "rdf_triples": 1760,
+      "seed_matches_expected_shading": true,
+      "rdf_matches_expected_shading": true,
+      "dbpedia_iris_in_seed": 0,
+      "dbpedia_iris_in_rdf": 0
+    },
+    "split_1": {
+      "seed_triples": 1800,
+      "rdf_triples": 1800,
+      "seed_matches_expected_shading": true,
+      "rdf_matches_expected_shading": true,
+      "dbpedia_iris_in_seed": 0,
+      "dbpedia_iris_in_rdf": 0
+    },
+    "split_2": {
+      "seed_triples": 1750,
+      "rdf_triples": 1750,
+      "seed_matches_expected_shading": true,
+      "rdf_matches_expected_shading": true,
+      "dbpedia_iris_in_seed": 0,
+      "dbpedia_iris_in_rdf": 0
+    },
+    "split_3": {
+      "seed_triples": 1634,
+      "rdf_triples": 1634,
+      "seed_matches_expected_shading": true,
+      "rdf_matches_expected_shading": true,
+      "dbpedia_iris_in_seed": 0,
+      "dbpedia_iris_in_rdf": 0
+    },
+    "shared_local_names_seed_vs_rdf": {
+      "split_0": 1.0,
+      "split_1": 1.0,
+      "split_2": 1.0,
+      "split_3": 1.0
+    },
+    "shared_local_names_across_rdf_splits": {
+      "split_0-split_1": 120,
+      "split_0-split_2": 127,
+      "split_0-split_3": 115,
+      "split_1-split_2": 132,
+      "split_1-split_3": 120,
+      "split_2-split_3": 115
+    }
+  }
+}

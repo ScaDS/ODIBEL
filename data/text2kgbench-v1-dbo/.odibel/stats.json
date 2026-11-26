@@ -1,0 +1,365 @@
+{
+  "1_university_ontology.ttl": {
+    "classes": 15,
+    "properties": 46,
+    "linked_classes": 11,
+    "linked_properties": 37,
+    "unlinked_classes": [
+      "Anthem",
+      "Campus",
+      "Organization",
+      "Religion"
+    ],
+    "unlinked_properties": [
+      "academicStaffSize",
+      "elevationAboveTheSeaLevel",
+      "hasToItsNortheast",
+      "hasToItsNorthwest",
+      "hasToItsWest",
+      "nickname",
+      "outlookRanking",
+      "sportsOffered",
+      "wasGivenTheTechnicalCampusStatusBy"
+    ]
+  },
+  "2_musicalwork_ontology.ttl": {
+    "classes": 15,
+    "properties": 35,
+    "linked_classes": 11,
+    "linked_properties": 34,
+    "unlinked_classes": [
+      "Certification",
+      "Format",
+      "MusicType",
+      "Timezone"
+    ],
+    "unlinked_properties": [
+      "precededBy"
+    ]
+  },
+  "3_airport_ontology.ttl": {
+    "classes": 13,
+    "properties": 39,
+    "linked_classes": 6,
+    "linked_properties": 29,
+    "unlinked_classes": [
+      "Battle",
+      "Class",
+      "County",
+      "Demonym",
+      "Division",
+      "Party",
+      "RunwaySurfaceType"
+    ],
+    "unlinked_properties": [
+      "1stRunwaySurfaceType",
+      "2ndRunwaySurfaceType",
+      "3rdRunwaySurfaceType",
+      "cityServed",
+      "elevationAboveTheSeaLevel",
+      "elevationAboveTheSeaLevelInMetres",
+      "operatingOrganisation",
+      "runwayName",
+      "runwaySurfaceType",
+      "transportAircraft"
+    ]
+  },
+  "4_building_ontology.ttl": {
+    "classes": 14,
+    "properties": 38,
+    "linked_classes": 10,
+    "linked_properties": 33,
+    "unlinked_classes": [
+      "ArchitecturalStyle",
+      "Architecture",
+      "Demonym",
+      "Tenant"
+    ],
+    "unlinked_properties": [
+      "NationalRegisterOfHistoricPlacesReferenceNumber",
+      "addedToTheNationalRegisterOfHistoricPlaces",
+      "architecture",
+      "currentTenants",
+      "inaugurationDate"
+    ]
+  },
+  "5_athlete_ontology.ttl": {
+    "classes": 14,
+    "properties": 37,
+    "linked_classes": 7,
+    "linked_properties": 34,
+    "unlinked_classes": [
+      "Anthem",
+      "Club",
+      "Date",
+      "League",
+      "Season",
+      "Team",
+      "Timezone"
+    ],
+    "unlinked_properties": [
+      "currentclub",
+      "currentteam",
+      "youthclub"
+    ]
+  },
+  "6_politician_ontology.ttl": {
+    "classes": 19,
+    "properties": 40,
+    "linked_classes": 14,
+    "linked_properties": 34,
+    "unlinked_classes": [
+      "Battle",
+      "Commander",
+      "Office",
+      "Party",
+      "Religion"
+    ],
+    "unlinked_properties": [
+      "hasDeputy",
+      "inOfficeWhileGovernor",
+      "inOfficeWhileMonarch",
+      "inOfficeWhilePresident",
+      "inOfficeWhilePrimeMinister",
+      "inOfficeWhileVicePresident"
+    ]
+  },
+  "7_company_ontology.ttl": {
+    "classes": 10,
+    "properties": 28,
+    "linked_classes": 6,
+    "linked_properties": 27,
+    "unlinked_classes": [
+      "CompanyType",
+      "Industry",
+      "Product",
+      "Service"
+    ],
+    "unlinked_properties": [
+      "elevationAboveTheSeaLevel"
+    ]
+  },
+  "8_celestialbody_ontology.ttl": {
+    "classes": 8,
+    "properties": 27,
+    "linked_classes": 6,
+    "linked_properties": 27,
+    "unlinked_classes": [
+      "Cause",
+      "Periapsis"
+    ],
+    "unlinked_properties": []
+  },
+  "9_astronaut_ontology.ttl": {
+    "classes": 15,
+    "properties": 38,
+    "linked_classes": 9,
+    "linked_properties": 26,
+    "unlinked_classes": [
+      "Commander",
+      "Fossil",
+      "Gemstone",
+      "Mascot",
+      "Mission",
+      "PartsType"
+    ],
+    "unlinked_properties": [
+      "awards",
+      "backupPilot",
+      "competeIn",
+      "crewMembers",
+      "dateOfRetirement",
+      "gemstone",
+      "higher",
+      "partsType",
+      "ribbonAward",
+      "selectedByNasa",
+      "senators",
+      "servedAsChiefOfTheAstronautOfficeIn"
+    ]
+  },
+  "10_comicscharacter_ontology.ttl": {
+    "classes": 10,
+    "properties": 18,
+    "linked_classes": 8,
+    "linked_properties": 13,
+    "unlinked_classes": [
+      "Series",
+      "Voice"
+    ],
+    "unlinked_properties": [
+      "broadcastedBy",
+      "firstAired",
+      "firstAppearanceInFilm",
+      "fullName",
+      "lastAired"
+    ]
+  },
+  "11_meanoftransportation_ontology.ttl": {
+    "classes": 20,
+    "properties": 68,
+    "linked_classes": 10,
+    "linked_properties": 61,
+    "unlinked_classes": [
+      "Anthem",
+      "BodyStyle",
+      "Demonym",
+      "Division",
+      "Flight",
+      "Function",
+      "PowerType",
+      "Product",
+      "ShipClass",
+      "Wheelbase"
+    ],
+    "unlinked_properties": [
+      "buildDate",
+      "function",
+      "modelYears",
+      "shipClass",
+      "shipOrdered",
+      "site",
+      "totalProduction"
+    ]
+  },
+  "12_monument_ontology.ttl": {
+    "classes": 14,
+    "properties": 26,
+    "linked_classes": 11,
+    "linked_properties": 19,
+    "unlinked_classes": [
+      "Category",
+      "Material",
+      "Religion"
+    ],
+    "unlinked_properties": [
+      "dedicatedTo",
+      "hasToItsNorth",
+      "hasToItsSoutheast",
+      "hasToItsSouthwest",
+      "hasToItsWest",
+      "inaugurationDate",
+      "nativeName"
+    ]
+  },
+  "13_food_ontology.ttl": {
+    "classes": 12,
+    "properties": 24,
+    "linked_classes": 8,
+    "linked_properties": 22,
+    "unlinked_classes": [
+      "Demonym",
+      "Division",
+      "FoodFamily",
+      "Genus"
+    ],
+    "unlinked_properties": [
+      "dishVariation",
+      "mainIngredient"
+    ]
+  },
+  "14_writtenwork_ontology.ttl": {
+    "classes": 10,
+    "properties": 44,
+    "linked_classes": 8,
+    "linked_properties": 37,
+    "unlinked_classes": [
+      "AcademicDiscipline",
+      "MediaType"
+    ],
+    "unlinked_properties": [
+      "LCCN_number",
+      "codenCode",
+      "isbnNumber",
+      "issnNumber",
+      "libraryofCongressClassification",
+      "oclcNumber",
+      "precededBy"
+    ]
+  },
+  "15_sportsteam_ontology.ttl": {
+    "classes": 14,
+    "properties": 24,
+    "linked_classes": 9,
+    "linked_properties": 21,
+    "unlinked_classes": [
+      "Demonym",
+      "Ground",
+      "League",
+      "Season",
+      "Tenant"
+    ],
+    "unlinked_properties": [
+      "champions",
+      "fullName",
+      "nickname"
+    ]
+  },
+  "16_city_ontology.ttl": {
+    "classes": 11,
+    "properties": 23,
+    "linked_classes": 7,
+    "linked_properties": 21,
+    "unlinked_classes": [
+      "CityType",
+      "County",
+      "Demonym",
+      "Timezone"
+    ],
+    "unlinked_properties": [
+      "areaOfLand",
+      "elevationAboveTheSeaLevel"
+    ]
+  },
+  "17_artist_ontology.ttl": {
+    "classes": 19,
+    "properties": 39,
+    "linked_classes": 13,
+    "linked_properties": 37,
+    "unlinked_classes": [
+      "Anthem",
+      "Background",
+      "Demonym",
+      "Field",
+      "Occupation",
+      "Training"
+    ],
+    "unlinked_properties": [
+      "elevationAboveTheSeaLevel",
+      "professionalField"
+    ]
+  },
+  "18_scientist_ontology.ttl": {
+    "classes": 15,
+    "properties": 47,
+    "linked_classes": 12,
+    "linked_properties": 45,
+    "unlinked_classes": [
+      "Demonym",
+      "Field",
+      "Timezone"
+    ],
+    "unlinked_properties": [
+      "areaOfWater",
+      "professionalField"
+    ]
+  },
+  "19_film_ontology.ttl": {
+    "classes": 18,
+    "properties": 44,
+    "linked_classes": 11,
+    "linked_properties": 43,
+    "unlinked_classes": [
+      "Background",
+      "Channel",
+      "Cinematography",
+      "Club",
+      "Industry",
+      "Occupation",
+      "Service"
+    ],
+    "unlinked_properties": [
+      "broadcastedBy"
+    ]
+  }
+}

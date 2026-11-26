@@ -4,15 +4,30 @@ from dotenv import load_dotenv
 from pyodibel.management.spark_mgr import get_spark_session
 from pyodibel.operations.rdf.rdf2 import rDF2
 
+# Previous clean_domain_range_violations() fetched this snapshot itself.
+DEFAULT_ONTOLOGY_PATH = (
+    "https://raw.githubusercontent.com/dbpedia/ontology-tracker/"
+    "master/databus/dbpedia/ontology/dbo-snapshots/dbo-snapshots.ttl"
+)
 
-def generate(classes: list, name:str="", input_path: str=None, output_path: str=None):
+
+def generate(
+    classes: list,
+    name: str = "",
+    input_path: str = None,
+    output_path: str = None,
+    ontology_path: str = None,
+):
         
     spark = get_spark_session("CrossMultiSourceKGGenerator")
     
     classes = [ "<http://dbpedia.org/ontology/" + c.replace("dbo:", "") + ">" for c in classes]
     
-    if not input_path or not output_path:
+    if not input_path or not output_path or not ontology_path:
         load_dotenv(os.path.join(os.path.dirname(os.path.realpath(__file__)), ".env"))
+
+    if not ontology_path:
+        ontology_path = os.getenv("ONTOLOGY_PATH") or DEFAULT_ONTOLOGY_PATH
     
     if not input_path:
         input_path = os.getenv("INPUT_PATH")
@@ -64,7 +79,7 @@ def generate(classes: list, name:str="", input_path: str=None, output_path: str=
         if not os.path.exists(consistent_path):
             (
                 rDF2.parse(spark, distinct_path)
-                .clean_domain_range_violations()
+                .clean_domain_range_violations(ontology_path)
                 .write_nt(consistent_path)
             )
 

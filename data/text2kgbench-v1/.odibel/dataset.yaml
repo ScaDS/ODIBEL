@@ -1,0 +1,25 @@
+odibel: "0.1"
+id: "text2kgbench-v1"
+title: "Text2KGBench release (dbpedia_webnlg and wikidata_tekgen)"
+status: draft
+kind: benchmark-release
+license: "CC-BY-SA-4.0"
+created_at: "2023-05-09"
+source:
+  name: Text2KGBench
+  url: https://github.com/cenguix/Text2KGBench
+  authors: Nandana Mihindukulasooriya, Sanju Tiwari, Carlos F. Enguix, Kusum Lata
+  local_origin: /data/datasets/text2kgbench
+files:
+  Text2KGBench.zip: upstream archive
+  release/: extracted archive (data/ of the upstream repository)
+  release/dbpedia_webnlg/ontologies/owl/: 18 OWL ontologies (no ont_1_university)
+  release/dbpedia_webnlg/ontologies/*.json: 19 JSON ontologies
+contract:
+  ontology_namespace: https://cenguix.github.io/Text2KGBench/<ont_id>/{concepts,relations}#
+  dbo_alignment: none (no owl:equivalentClass or owl:equivalentProperty to http://dbpedia.org/ontology/)
+limitations:
+  - "Upstream commit not recorded; identified by the archive checksum only."
+  - "resources/text2kgbench/generate_refac.py needs dbo-aligned ontologies; these TTLs yield 0 classes and 0 properties."
+used_by:
+  - resources/text2kgbench

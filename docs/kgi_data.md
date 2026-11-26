@@ -32,8 +32,13 @@ Run scripts from the repository root with `uv run resources/text2kgbench/<script
 
 ## Prerequisites
 
-- **DBpedia dump** as N-Triples (`.nt` or `.nt.bz2`). A pre-filtered dump such as `selected.nt.bz2` from the DBpedia multi-source KG pipeline works well as input.
-- **Text2KGBench ontology** in Turtle (`.ttl`). Ontologies map OWL classes and properties to DBpedia URIs via `owl:equivalentClass` / `owl:equivalentProperty`. They are typically named like `13_food_ontology.ttl`.
+- **DBpedia dump** as N-Triples (`.nt` or `.nt.bz2`): dataset `dbpedia-2022.12.01-selected`, or for small validation runs the minidump `dbpedia-2022.12.01-mini-food-celestial-politics-en-s42` (see [Datasets](datasets.md) and `resources/dbpedia-slice/`).
+- **Text2KGBench ontology** in Turtle (`.ttl`) whose classes and properties map to DBpedia URIs via `owl:equivalentClass` / `owl:equivalentProperty`, named like `13_food_ontology.ttl`. The upstream Text2KGBench TTLs have no such mapping; dataset `text2kgbench-v1-dbo` adds it by name matching against the DBpedia ontology (`resources/text2kgbench/align_ontologies.py`):
+
+  ```bash
+  uv run resources/text2kgbench/align_ontologies.py \
+    data/text2kgbench-v1 data/dbpedia-ontology-2022.12.05 data/text2kgbench-v1-dbo
+  ```
 - **Java 17** for local Spark runs (`sdk use java 17.0.16-tem` or equivalent).
 - **Python environment** managed with `uv` from the ODIBEL project root.
 
@@ -84,9 +89,9 @@ uv run resources/text2kgbench/generate_refac.py \
 
 ```bash
 uv run resources/text2kgbench/generate_refac.py \
-  file://./data/dbpedia-multi-source-kg-data/selected.nt.bz2 \
+  data/dbpedia-2022.12.01-mini-food-celestial-politics-en-s42/data.nt.bz2 \
   ./data/text2kgbench/subgraphs \
-  ./data/text2kgbench/kgpipe-ontologies/dbpedia_webnlg/13_food_ontology.ttl
+  data/text2kgbench-v1-dbo/ontologies/13_food_ontology.ttl
 ```
 
 If `name_prefix` is omitted, it is derived from the ontology filename (e.g. `13_food_ontology.ttl` → `ont_13`).
@@ -226,9 +231,9 @@ Each split also gets `meta/verified_entities.csv` under `kg/seed/` and `sources/
 ```bash
 # 1. Filter DBpedia by ontology classes and properties (Spark; writes a part-file directory)
 uv run resources/text2kgbench/generate_refac.py \
-  file://./data/dbpedia-multi-source-kg-data/selected.nt.bz2 \
+  data/dbpedia-2022.12.01-selected/selected.nt.bz2 \
   ./data/text2kgbench/subgraphs \
-  ./data/text2kgbench/kgpipe-ontologies/dbpedia_webnlg/13_food_ontology.ttl
+  data/text2kgbench-v1-dbo/ontologies/13_food_ontology.ttl
 
 # 1b. Merge Spark part files into one NT for the in-memory engine (optional @en filter)
 cat ./data/text2kgbench/subgraphs/ont_13_subgraph/property_filter/* \
@@ -303,5 +308,6 @@ Scripts accept paths via CLI arguments or a `.env` file in `resources/text2kgben
 
 - **`sampling.py`**: optional downsampling of an NT file while preserving class/degree or relation distributions. Use when a reachable subgraph is still too large before splitting.
 - **`crawl.py`**: fetches web resources for source acquisition (separate from the RDF pipeline above).
+- **`validate_run.py`**: checks a small run of steps 1 to 4 against independent recomputations and writes overlap measurements as JSON. The validation run for issue #21 is `data/text2kgbench-ont13-food-mini-en-s42/.odibel/report.md`.
 
 Further cluster-specific notes are in [`resources/text2kgbench/athena-ops/README.md`](../resources/text2kgbench/athena-ops/README.md).
