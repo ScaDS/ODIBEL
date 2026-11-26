@@ -98,6 +98,8 @@ Run the corresponding script to generate a schema graph for a specific domain:
 python generate_<domain>.py
 ```
 
+`INPUT_PATH`, `OUTPUT_PATH` and `ONTOLOGY_PATH` can also be set in the environment. For a small run, use the minidump `data/dbpedia-2022.12.01-mini-food-celestial-politics-en-s42/data.nt.bz2` and the ontology `data/dbpedia-ontology-2022.12.05/dbo-snapshots.ttl` (see [docs/datasets.md](../../docs/datasets.md)).
+
 ### Calculate Statistics
 
 Compute statistics based on a generated N-Triples file:
@@ -107,3 +109,14 @@ python statistics.py <input_path>
 ```
 
 * `<input_path>`: Path to a `.nt` file generated in the previous step
+
+### Validate a run
+
+`validate_run.py` checks each step of a small run against an independent recount, classifies the triples removed by domain/range cleaning, and counts `owl:disjointWith` and `owl:FunctionalProperty` violations. It prints JSON:
+
+```bash
+uv run resources/dbpedia-multi-source-kg/validate_run.py \
+  <OUTPUT_PATH> <INPUT_PATH> <ONTOLOGY_PATH> resources/dbpedia-multi-source-kg/generate_<domain>.py
+```
+
+The validation run for issue #20 is `data/dbpedia-2022.12.01-multisource-politics-mini-en-s42/.odibel/report.md`.

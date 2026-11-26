@@ -308,5 +308,6 @@ Scripts accept paths via CLI arguments or a `.env` file in `resources/text2kgben
 
 - **`sampling.py`**: optional downsampling of an NT file while preserving class/degree or relation distributions. Use when a reachable subgraph is still too large before splitting.
 - **`crawl.py`**: fetches web resources for source acquisition (separate from the RDF pipeline above).
+- **`validate_run.py`**: checks a small run of steps 1 to 4 against independent recomputations and writes overlap measurements as JSON. The validation run for issue #21 is `data/text2kgbench-ont13-food-mini-en-s42/.odibel/report.md`.
 
 Further cluster-specific notes are in [`resources/text2kgbench/athena-ops/README.md`](../resources/text2kgbench/athena-ops/README.md).

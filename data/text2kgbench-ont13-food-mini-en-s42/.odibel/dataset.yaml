@@ -1,0 +1,75 @@
+odibel: "0.1"
+id: "text2kgbench-ont13-food-mini-en-s42"
+title: "KGI-Bench RDF bundle, Text2KGBench ontology 13 (Food), on the English minidump (issue #21 validation run)"
+status: draft
+kind: run-output
+license: "CC-BY-SA-3.0"
+created_at: "2026-11-26T18:19:14Z"
+derived_from:
+  - id: "dbpedia-2022.12.01-mini-food-celestial-politics-en-s42"
+    file: "data.nt.bz2"
+    sha256: "ddf6c18e096ee0a64d4e50621709c82a1d9931cfcccec5491bf7adf8db9a9bfb"
+  - id: "text2kgbench-v1-dbo"
+    file: "ontologies/13_food_ontology.ttl"
+    sha256: "797b07c6eefba08cad55ea48e4475b19eb995448a9deb8b08ae27c3e524fb574"
+recipe:
+  scripts:
+    - resources/text2kgbench/generate_refac.py
+    - resources/text2kgbench/subgraph.py
+    - resources/text2kgbench/splits.py
+    - resources/text2kgbench/sources.py
+  git_commit: "6f549a9"
+  git_dirty: false
+  commands:
+    - >-
+      uv run resources/text2kgbench/generate_refac.py
+      data/dbpedia-2022.12.01-mini-food-celestial-politics-en-s42/data.nt.bz2
+      data/text2kgbench-ont13-food-mini-en-s42/subgraphs
+      data/text2kgbench-v1-dbo/ontologies/13_food_ontology.ttl
+    - "cat subgraphs/ont_13_subgraph/property_filter/part-* > subgraphs/ont_13_subgraph/property_filter.nt"
+    - >-
+      uv run resources/text2kgbench/subgraph.py subgraphs/ont_13_subgraph/property_filter.nt
+      subgraphs/ont_13_subgraph/reachable.nt --root-class dbo:Food --engine memory
+    - >-
+      uv run resources/text2kgbench/splits.py subgraphs/ont_13_subgraph/reachable.nt splits
+      --main-class dbo:Food --num-subsets 4 --overlap-ratio 0.04 --subset-size 100 --engine memory --seed 42
+    - uv run resources/text2kgbench/sources.py splits
+  parameters:
+    main_class: dbo:Food
+    num_subsets: 4
+    subset_size: 100
+    overlap_ratio: 0.04
+    seed: 42
+    max_hops: null
+    direction: forward
+    main_class_scope: reachable
+  started_at: "2026-11-26T18:18:55Z"
+  finished_at: "2026-11-26T18:19:14Z"
+  environment:
+    python: "CPython 3.12.11 (uv)"
+    pyspark: "4.1.2 (generate_refac.py only)"
+    java: "OpenJDK 17.0.15 (Temurin)"
+  validation: >-
+    uv run resources/text2kgbench/validate_run.py <this dir> <input data.nt.bz2> <13_food_ontology.ttl>
+    --main-class dbo:Food --subset-size 100 > .odibel/stats.json
+files:
+  subgraphs/ont_13_subgraph/property_filter/: Spark output of generate_refac.py
+  subgraphs/ont_13_subgraph/property_filter_schema/: schema graph CSV
+  subgraphs/ont_13_subgraph/property_filter.nt: merged property filter (input is English-only, no @en filter needed)
+  subgraphs/ont_13_subgraph/reachable.nt: subgraph reachable from dbo:Food
+  splits/entities/master_entities.csv: all dbo:Food entities of reachable.nt
+  splits/split_N/index/entities.csv: seed entities of split N
+  splits/split_N/kg/reference/: reference graph (data.nt), cumulative reference (data_agg.nt), verified entities
+  splits/split_N/kg/seed/: shaded seed KG (http://kg.org/resource/{md5})
+  splits/split_N/sources/rdf/: shaded RDF source (http://kg.org/rdf/N/resource/{md5})
+contract:
+  layout: as in docs/kgi_data.md (steps 1 to 4)
+  determinism: >-
+    Same content on rerun; line order of entities.csv, data_agg.nt and the shaded sources differs
+    between runs. reference_content_sha256 in stats.json is order-independent.
+limitations:
+  - "RDF-only path; no JSON or text sources, no gold beyond verified_entities.csv."
+  - "Shaded IRIs keep the md5 of the DBpedia IRI, so seed and RDF sources share local names. See report.md."
+  - "entities.csv files are one unquoted IRI per line; IRIs with commas break CSV parsers. See report.md."
+used_by:
+  - "issue #21 (https://github.com/ScaDS/ODIBEL/issues/21)"

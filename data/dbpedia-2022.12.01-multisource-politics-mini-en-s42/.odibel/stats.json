@@ -1,0 +1,148 @@
+{
+  "input_triples": 99358,
+  "domain_classes": 12,
+  "variants": {
+    "dbpedia_politics_en_subgraph": {
+      "triples": {
+        "selected": 20822,
+        "distinct": 20822,
+        "consistent": 15636,
+        "cleaned_types": 7464,
+        "cleaned_subgraph": 6441
+      },
+      "content_sha256": {
+        "selected": "f9b773a074a81d823be66d88ab92fd407024bd2f36395a36f077d4969f435157",
+        "distinct": "f9b773a074a81d823be66d88ab92fd407024bd2f36395a36f077d4969f435157",
+        "consistent": "071f0539901783fd6b7605c130654aa76ed1bbe2d8724bd2a91c499ef64907b8",
+        "cleaned_types": "abc4a8e1a39aee6e78baa0b368ae9abeb2fea00b445aa39c0ec186bda7c7837f",
+        "cleaned_subgraph": "ce2b7a454f98a6bd00c7d790ef0fa6ed4abde7cc9fcc99429dcb3794b7a3c28e"
+      },
+      "checks": {
+        "selected_matches_recount": true,
+        "distinct_has_no_duplicates": true,
+        "consistent_is_subset": true,
+        "cleaned_types_keeps_non_type_triples": true,
+        "cleaned_types_only_domain_classes": true,
+        "cleaned_subgraph_no_dangling_objects": true
+      },
+      "domain_range_removed": {
+        "total": 5186,
+        "by_reason": {
+          "range: object has no type in step input (typed in input)": 2338,
+          "range: object has no type in step input (untyped in input)": 2133,
+          "domain: subject type not in domain": 410,
+          "range: untagged or language literal vs range": 242,
+          "range: object typed, not in range": 48,
+          "range: datatype not in range": 15
+        },
+        "top_predicates": {
+          "<http://dbpedia.org/ontology/country>": 1168,
+          "<http://dbpedia.org/ontology/ideology>": 987,
+          "<http://dbpedia.org/ontology/thumbnail>": 857,
+          "<http://dbpedia.org/ontology/headquarter>": 393,
+          "<http://dbpedia.org/ontology/member>": 179,
+          "<http://dbpedia.org/ontology/leader>": 167,
+          "<http://dbpedia.org/ontology/logo>": 162,
+          "<http://dbpedia.org/ontology/location>": 156,
+          "<http://dbpedia.org/ontology/firstLeader>": 126,
+          "<http://dbpedia.org/ontology/foundedBy>": 125,
+          "<http://dbpedia.org/ontology/secondLeader>": 120,
+          "<http://dbpedia.org/ontology/colour>": 110,
+          "<http://dbpedia.org/ontology/dissolutionYear>": 86,
+          "<http://dbpedia.org/ontology/affiliation>": 61,
+          "<http://dbpedia.org/ontology/personName>": 58
+        }
+      },
+      "final_types": {
+        "<http://dbpedia.org/ontology/Election>": 539,
+        "<http://dbpedia.org/ontology/PoliticalParty>": 328,
+        "<http://dbpedia.org/ontology/GovernmentAgency>": 89,
+        "<http://dbpedia.org/ontology/LegalCase>": 52,
+        "<http://dbpedia.org/ontology/Legislature>": 43,
+        "<http://dbpedia.org/ontology/SupremeCourtOfTheUnitedStatesCase>": 22,
+        "<http://dbpedia.org/ontology/Ideology>": 3
+      },
+      "unchecked_axioms": {
+        "distinct": {
+          "disjoint_class_entities": 1,
+          "functional_property_violations": {}
+        },
+        "cleaned_subgraph": {
+          "disjoint_class_entities": 0,
+          "functional_property_violations": {}
+        }
+      }
+    },
+    "dbpedia_politics_subgraph": {
+      "triples": {
+        "selected": 20822,
+        "distinct": 20822,
+        "consistent": 15636,
+        "cleaned_types": 7464,
+        "cleaned_subgraph": 6441
+      },
+      "content_sha256": {
+        "selected": "f9b773a074a81d823be66d88ab92fd407024bd2f36395a36f077d4969f435157",
+        "distinct": "f9b773a074a81d823be66d88ab92fd407024bd2f36395a36f077d4969f435157",
+        "consistent": "071f0539901783fd6b7605c130654aa76ed1bbe2d8724bd2a91c499ef64907b8",
+        "cleaned_types": "abc4a8e1a39aee6e78baa0b368ae9abeb2fea00b445aa39c0ec186bda7c7837f",
+        "cleaned_subgraph": "ce2b7a454f98a6bd00c7d790ef0fa6ed4abde7cc9fcc99429dcb3794b7a3c28e"
+      },
+      "checks": {
+        "selected_matches_recount": true,
+        "distinct_has_no_duplicates": true,
+        "consistent_is_subset": true,
+        "cleaned_types_keeps_non_type_triples": true,
+        "cleaned_types_only_domain_classes": true,
+        "cleaned_subgraph_no_dangling_objects": true
+      },
+      "domain_range_removed": {
+        "total": 5186,
+        "by_reason": {
+          "range: object has no type in step input (typed in input)": 2338,
+          "range: object has no type in step input (untyped in input)": 2133,
+          "domain: subject type not in domain": 410,
+          "range: untagged or language literal vs range": 242,
+          "range: object typed, not in range": 48,
+          "range: datatype not in range": 15
+        },
+        "top_predicates": {
+          "<http://dbpedia.org/ontology/country>": 1168,
+          "<http://dbpedia.org/ontology/ideology>": 987,
+          "<http://dbpedia.org/ontology/thumbnail>": 857,
+          "<http://dbpedia.org/ontology/headquarter>": 393,
+          "<http://dbpedia.org/ontology/member>": 179,
+          "<http://dbpedia.org/ontology/leader>": 167,
+          "<http://dbpedia.org/ontology/logo>": 162,
+          "<http://dbpedia.org/ontology/location>": 156,
+          "<http://dbpedia.org/ontology/firstLeader>": 126,
+          "<http://dbpedia.org/ontology/foundedBy>": 125,
+          "<http://dbpedia.org/ontology/secondLeader>": 120,
+          "<http://dbpedia.org/ontology/colour>": 110,
+          "<http://dbpedia.org/ontology/dissolutionYear>": 86,
+          "<http://dbpedia.org/ontology/affiliation>": 61,
+          "<http://dbpedia.org/ontology/personName>": 58
+        }
+      },
+      "final_types": {
+        "<http://dbpedia.org/ontology/Election>": 539,
+        "<http://dbpedia.org/ontology/PoliticalParty>": 328,
+        "<http://dbpedia.org/ontology/GovernmentAgency>": 89,
+        "<http://dbpedia.org/ontology/LegalCase>": 52,
+        "<http://dbpedia.org/ontology/Legislature>": 43,
+        "<http://dbpedia.org/ontology/SupremeCourtOfTheUnitedStatesCase>": 22,
+        "<http://dbpedia.org/ontology/Ideology>": 3
+      },
+      "unchecked_axioms": {
+        "distinct": {
+          "disjoint_class_entities": 1,
+          "functional_property_violations": {}
+        },
+        "cleaned_subgraph": {
+          "disjoint_class_entities": 0,
+          "functional_property_violations": {}
+        }
+      }
+    }
+  }
+}
