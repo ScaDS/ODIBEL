@@ -74,6 +74,16 @@ pyodibel rdf schema-graph --input INPUT --output OUTPUT
 
 `rdf run` chains subject-type filters, class filters, or entity sampling, then writes N-Triples. `rdf schema-graph` writes a source-type / relation / target-type CSV.
 
+The experimental `data` group manages `.odibel` dataset metadata (`pyodibel.datasets.manifest`, `pyodibel.datasets.versions`); see [Datasets](datasets.md):
+
+```bash
+pyodibel data hash DATASET_DIR
+pyodibel data verify [--metadata-only] DATASET_DIR...
+pyodibel data status [--checksum] DATASET_DIR...
+pyodibel data commit DATASET_DIR -m MESSAGE [--label LABEL]
+pyodibel data log DATASET_DIR
+```
+
 ### Gradoop import (experimental)
 
 ```python

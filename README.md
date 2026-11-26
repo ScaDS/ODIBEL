@@ -50,6 +50,8 @@ Also supported, with tests: N-Triples I/O and reachable subgraphs, shading and m
 
 KGI-Bench domain datasets from DBpedia and Text2KGBench ontologies are documented in [docs/kgi_data.md](docs/kgi_data.md). The scripts live in `resources/text2kgbench/`.
 
+Input datasets and validated runs are registered under `data/<dataset_id>/.odibel/` (metadata only; payloads stay local). The prototype `pyodibel data` commands (`hash`, `verify`, `status`, `commit`, `log`) check and version them; see [docs/datasets.md](docs/datasets.md).
+
 ## Experimental
 
 These exist in the tree and are not a stable API:
@@ -69,6 +71,7 @@ These exist in the tree and are not a stable API:
 src/pyodibel/     installed library (api, operations, benchmark, cache, cli, source)
 src/main/scala/   Spark/Scala jobs (temporal KG)
 resources/        dataset generation workflows, not installed
+data/             registered datasets; only .odibel/ metadata is versioned
 docs/             MkDocs site, including the OD-01 inventory
 pom.xml           Scala build
 pyproject.toml    Python build

@@ -17,6 +17,7 @@ Version 0.1.0 is an alpha. The [inventory](inventory.md) is the map of what is s
 - Movie multi-source KG (`resources/movie-multi-source-kg/`), tracked separately in issues #11–#14
 - DBpedia multi-source class selection, KGFlex fetch scripts, and the Scala DBpedia temporal KG pipeline
 - Gradoop/FAMER import (`GradoopSource`)
+- [Dataset metadata](datasets.md) under `data/<dataset_id>/.odibel/` and the `pyodibel data` commands
 
 ## Layout
 
@@ -24,6 +25,7 @@ Version 0.1.0 is an alpha. The [inventory](inventory.md) is the map of what is s
 src/pyodibel/     Python library
 src/main/scala/   Scala/Spark jobs
 resources/        generation workflows
+data/             registered datasets (.odibel/ metadata only)
 docs/             this site
 ```
 
